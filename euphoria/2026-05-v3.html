@@ -1,0 +1,1648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Euphoria Wellness — May 2026 Local SEO Strategy (Evidence-Backed)</title>
+<style>
+  :root {
+    /* Euphoria palette — desert/sage/gold to differentiate from Joyleaf purple */
+    --teal-900: #0F3D3E;
+    --teal-700: #1B5E5F;
+    --teal-500: #2E8B8C;
+    --teal-100: #DFF1F0;
+    --sage-500: #7FA67E;
+    --sage-100: #ECF4EB;
+    --gold: #D9A441;
+    --gold-light: #FFF4D6;
+    --terra-500: #C56F45;
+    --terra-100: #FBE9DE;
+    --green: #2BA84A;
+    --green-100: #E6F6EA;
+    --red: #C7363A;
+    --red-100: #FBE3E4;
+    --amber: #C77B0E;
+    --amber-100: #FCEFD4;
+    --gray-900: #1F2937;
+    --gray-700: #4B5563;
+    --gray-500: #6B7280;
+    --gray-300: #D1D5DB;
+    --gray-100: #F3F4F6;
+    --gray-50: #F9FAFB;
+    --bg: #FFFFFF;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: var(--gray-900);
+    background: var(--gray-50);
+    line-height: 1.6;
+  }
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 32px 80px; }
+
+  /* Cover */
+  .cover {
+    background: linear-gradient(135deg, var(--teal-900) 0%, var(--teal-700) 60%, var(--terra-500) 100%);
+    color: #fff;
+    padding: 80px 32px 100px;
+    margin-bottom: 48px;
+    border-bottom: 6px solid var(--gold);
+  }
+  .cover-inner { max-width: 1100px; margin: 0 auto; }
+  .cover .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 14px;
+    font-weight: 600;
+    opacity: 0.85;
+    margin-bottom: 16px;
+  }
+  .cover h1 {
+    font-size: 56px;
+    line-height: 1.1;
+    margin: 0 0 20px;
+    font-weight: 800;
+  }
+  .cover h1 span { color: var(--gold); }
+  .cover .subtitle {
+    font-size: 22px;
+    opacity: 0.92;
+    max-width: 800px;
+    margin: 0 0 28px;
+  }
+  .cover .stamp {
+    display: inline-block;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.35);
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 999px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 36px;
+  }
+  .cover .stamp .dot { color: var(--gold); margin-right: 8px; }
+  .cover-meta {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    padding-top: 28px;
+    border-top: 1px solid rgba(255,255,255,0.25);
+  }
+  .cover-meta div .label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0.7;
+  }
+  .cover-meta div .value { font-size: 16px; font-weight: 600; margin-top: 4px; }
+
+  /* Section */
+  section { margin-bottom: 56px; }
+  .section-header {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 8px;
+  }
+  .section-num {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--terra-500);
+    letter-spacing: 3px;
+  }
+  h2 {
+    font-size: 36px;
+    line-height: 1.2;
+    color: var(--teal-900);
+    margin: 0 0 8px;
+    font-weight: 700;
+  }
+  h3 {
+    font-size: 22px;
+    color: var(--teal-700);
+    margin: 28px 0 12px;
+  }
+  h4 { font-size: 17px; color: var(--gray-900); margin: 20px 0 8px; font-weight: 700; }
+  .lede {
+    font-size: 19px;
+    color: var(--gray-700);
+    max-width: 880px;
+    margin-bottom: 24px;
+  }
+
+  /* Cards */
+  .card {
+    background: #fff;
+    border: 1px solid var(--gray-300);
+    border-radius: 12px;
+    padding: 24px 28px;
+    margin: 16px 0;
+  }
+  .card.teal { background: var(--teal-100); border-color: var(--teal-500); }
+  .card.terra { background: var(--terra-100); border-color: var(--terra-500); }
+  .card.alert { background: #FFF8E1; border-left: 5px solid var(--gold); }
+  .card.proof {
+    background: #F4FAFA;
+    border: 1px solid var(--teal-500);
+    border-left: 6px solid var(--teal-700);
+  }
+  .card.proof .label {
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--teal-700);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .card.critical {
+    background: #FBE3E4;
+    border: 1px solid var(--red);
+    border-left: 6px solid var(--red);
+  }
+  .card.critical .label {
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--red);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  /* Strategic bet */
+  .strategic-bet {
+    background: var(--teal-900);
+    color: #fff;
+    padding: 40px;
+    border-radius: 16px;
+    text-align: center;
+    margin: 24px 0 40px;
+  }
+  .strategic-bet .label {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 13px;
+    color: var(--gold);
+    margin-bottom: 16px;
+    font-weight: 700;
+  }
+  .strategic-bet blockquote {
+    font-size: 26px;
+    line-height: 1.35;
+    margin: 0;
+    font-weight: 600;
+  }
+  .strategic-bet blockquote em { color: var(--gold); font-style: normal; }
+
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    margin: 16px 0 24px;
+  }
+  th {
+    background: var(--teal-700);
+    color: #fff;
+    text-align: left;
+    padding: 12px 14px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  td { padding: 12px 14px; border-bottom: 1px solid var(--gray-100); font-size: 15px; }
+  tr:last-child td { border-bottom: none; }
+  tr:nth-child(even) td { background: var(--gray-50); }
+
+  /* Pill */
+  .pill {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .pill.high { background: var(--green-100); color: var(--green); }
+  .pill.med { background: var(--amber-100); color: var(--amber); }
+  .pill.stretch { background: var(--red-100); color: var(--red); }
+  .pill.evidence { background: var(--teal-100); color: var(--teal-700); }
+
+  /* Scorecard */
+  .scorecard {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin: 24px 0;
+  }
+  .keyword-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #fff;
+    border: 1px solid var(--gray-300);
+    border-radius: 8px;
+    padding: 14px 16px;
+  }
+  .keyword-row.target { border-color: var(--terra-500); background: var(--terra-100); border-width: 2px; }
+  .rank-badge {
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--green);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 18px;
+  }
+  .rank-badge.warn { background: var(--red); }
+  .rank-badge.ok { background: var(--gold); }
+  .keyword-row .kw { font-weight: 600; flex: 1; }
+  .keyword-row .solv {
+    font-variant-numeric: tabular-nums;
+    font-weight: 700;
+    color: var(--teal-700);
+    font-size: 14px;
+  }
+
+  /* Trend tiles */
+  .trend-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    margin: 16px 0;
+  }
+  .trend-tile {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid var(--gray-300);
+  }
+  .trend-tile .num { font-size: 32px; font-weight: 800; color: var(--teal-700); line-height: 1; }
+  .trend-tile .label {
+    font-size: 13px;
+    color: var(--gray-700);
+    margin-top: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .trend-tile .change.up { color: var(--green); font-weight: 700; }
+  .trend-tile .change.down { color: var(--red); font-weight: 700; }
+
+  /* Evidence stack */
+  .evidence-stack {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin: 18px 0 24px;
+  }
+  .evidence-block {
+    background: #fff;
+    border: 1px solid var(--gray-300);
+    border-radius: 10px;
+    padding: 18px 20px;
+  }
+  .evidence-block .head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--gray-100);
+  }
+  .evidence-block .head h5 {
+    margin: 0;
+    color: var(--teal-900);
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+  .evidence-block ul { margin: 0; padding-left: 20px; }
+  .evidence-block ul li { margin: 6px 0; font-size: 14px; }
+  .evidence-block .stat {
+    background: var(--teal-100);
+    color: var(--teal-900);
+    padding: 8px 12px;
+    border-radius: 6px;
+    margin: 8px 0;
+    font-size: 13px;
+    font-weight: 600;
+    border-left: 3px solid var(--teal-700);
+  }
+
+  /* Math callout */
+  .math-callout {
+    background: var(--gray-900);
+    color: #E5E7EB;
+    border-radius: 12px;
+    padding: 24px 28px;
+    margin: 18px 0;
+    font-family: "SFMono-Regular", Consolas, monospace;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  .math-callout .title {
+    color: var(--gold);
+    font-family: -apple-system, sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+    margin-bottom: 12px;
+  }
+  .math-callout .formula { padding: 8px 0; }
+  .math-callout .answer {
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px dashed #4B5563;
+    color: var(--gold);
+    font-weight: 700;
+  }
+
+  /* Confidence matrix */
+  .confidence-matrix {
+    background: #fff;
+    border: 1px solid var(--gray-300);
+    border-radius: 12px;
+    padding: 0;
+    margin: 20px 0 32px;
+    overflow: hidden;
+  }
+  .conf-row {
+    display: grid;
+    grid-template-columns: 60px 1fr 280px 140px;
+    align-items: center;
+    padding: 16px 22px;
+    border-bottom: 1px solid var(--gray-100);
+    gap: 14px;
+  }
+  .conf-row:last-child { border-bottom: none; }
+  .conf-row.head {
+    background: var(--teal-700);
+    color: #fff;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+  }
+  .conf-row .seq {
+    font-weight: 800;
+    font-size: 17px;
+    color: var(--teal-700);
+    font-variant-numeric: tabular-nums;
+  }
+  .conf-row.head .seq { color: #fff; }
+  .conf-row .name { font-weight: 700; color: var(--gray-900); }
+  .conf-row .target {
+    font-variant-numeric: tabular-nums;
+    color: var(--gray-700);
+    font-size: 14px;
+  }
+
+  /* Before/after */
+  .ba-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 20px 0;
+  }
+  .ba-card { background: #fff; border: 1px solid var(--gray-300); border-radius: 10px; padding: 22px; }
+  .ba-card.before { border-left: 5px solid var(--red); }
+  .ba-card.after { border-left: 5px solid var(--green); }
+  .ba-card .tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+  }
+  .ba-card.before .tag { background: var(--red-100); color: var(--red); }
+  .ba-card.after .tag { background: var(--green-100); color: var(--green); }
+  .ba-card .browser {
+    background: var(--gray-100);
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-family: "SFMono-Regular", Consolas, monospace;
+    font-size: 12px;
+    color: var(--gray-700);
+    margin-bottom: 12px;
+    word-break: break-all;
+  }
+  .ba-card .h1-display {
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--gray-900);
+    padding: 12px 0;
+    border-top: 1px dashed var(--gray-300);
+  }
+
+  /* Pillar */
+  .pillar-num {
+    display: inline-block;
+    background: var(--teal-700);
+    color: #fff;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 36px;
+    font-weight: 800;
+    margin-right: 12px;
+    vertical-align: middle;
+  }
+  .pillar-meta {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+    background: var(--teal-100);
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin: 16px 0 24px;
+  }
+  .pillar-meta div .label {
+    font-size: 11px;
+    color: var(--teal-700);
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .pillar-meta div .value { font-size: 15px; color: var(--teal-900); font-weight: 600; }
+
+  /* KPI rows */
+  .kpi-row-detailed {
+    background: #fff;
+    border: 1px solid var(--gray-300);
+    border-radius: 12px;
+    padding: 22px 26px;
+    margin: 14px 0;
+  }
+  .kpi-row-detailed .kpi-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 14px;
+  }
+  .kpi-row-detailed .name {
+    font-weight: 800;
+    font-size: 16px;
+    color: var(--gray-900);
+  }
+  .kpi-row-detailed .nums {
+    font-size: 14px;
+    color: var(--gray-700);
+    font-variant-numeric: tabular-nums;
+  }
+  .kpi-row-detailed .nums .target { color: var(--teal-700); font-weight: 800; }
+  .kpi-row-detailed .bar {
+    background: var(--gray-100);
+    height: 12px;
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+    margin: 8px 0 12px;
+  }
+  .kpi-row-detailed .bar .fill-baseline { background: var(--gray-300); height: 100%; position: absolute; left: 0; }
+  .kpi-row-detailed .bar .fill-target {
+    background: linear-gradient(90deg, var(--teal-500), var(--gold));
+    height: 100%;
+    position: absolute;
+    left: 0;
+  }
+  .kpi-row-detailed .why {
+    font-size: 13px;
+    color: var(--gray-700);
+    line-height: 1.6;
+    border-top: 1px dashed var(--gray-300);
+    padding-top: 12px;
+    margin-top: 10px;
+  }
+  .kpi-row-detailed .why strong { color: var(--teal-700); }
+
+  /* Risk register */
+  .risk-row {
+    background: #fff;
+    border: 1px solid var(--gray-300);
+    border-left: 5px solid var(--amber);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 10px 0;
+  }
+  .risk-row.high { border-left-color: var(--red); }
+  .risk-row .head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 8px;
+  }
+  .risk-row .head .name { font-weight: 800; color: var(--gray-900); font-size: 15px; }
+  .risk-row .head .severity {
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    padding: 3px 10px;
+    border-radius: 999px;
+    background: var(--amber-100);
+    color: var(--amber);
+  }
+  .risk-row.high .head .severity { background: var(--red-100); color: var(--red); }
+  .risk-row p { margin: 6px 0; font-size: 13px; color: var(--gray-700); line-height: 1.6; }
+  .risk-row p strong { color: var(--gray-900); }
+
+  /* Asks */
+  .asks {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  .ask {
+    background: var(--teal-100);
+    border-radius: 10px;
+    padding: 18px 20px;
+    border-left: 4px solid var(--terra-500);
+  }
+  .ask .num {
+    font-size: 12px;
+    font-weight: 800;
+    color: var(--terra-500);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  .ask .text { font-size: 15px; color: var(--teal-900); margin-top: 4px; font-weight: 500; }
+
+  /* Calendar */
+  .calendar { background: #fff; border: 1px solid var(--gray-300); border-radius: 12px; padding: 20px; margin: 20px 0; }
+  .calendar-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; }
+  .cal-day-name {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--gray-500);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 6px 0;
+  }
+  .cal-day {
+    background: var(--gray-50);
+    border: 1px solid var(--gray-300);
+    border-radius: 6px;
+    min-height: 84px;
+    padding: 6px;
+    font-size: 11px;
+  }
+  .cal-day.empty { background: transparent; border: none; }
+  .cal-day .num { font-weight: 700; color: var(--gray-700); font-size: 13px; }
+  .cal-day.holiday { background: var(--gold); border-color: var(--gold); }
+  .cal-day.holiday .num { color: var(--teal-900); }
+  .cal-day.holiday .tag { color: var(--teal-900); font-weight: 700; }
+  .cal-day .tag {
+    display: block;
+    margin-top: 4px;
+    line-height: 1.3;
+    color: var(--teal-700);
+    font-weight: 600;
+  }
+  .cal-day.deliverable { background: var(--teal-100); border-color: var(--teal-500); }
+
+  /* POS chart */
+  .pos-track {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 16px;
+    align-items: center;
+    padding: 10px 0;
+  }
+  .pos-track .l { font-size: 14px; color: var(--gray-700); font-weight: 600; }
+  .pos-track .l .sub { display:block; font-size:11px; color: var(--gray-500); font-weight:400; text-transform: uppercase; letter-spacing:1px; }
+  .pos-track .b {
+    height: 30px;
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+    background: var(--gray-100);
+  }
+  .pos-track .b .neg { background: var(--red); height: 100%; position: absolute; right: 50%; }
+  .pos-track .b .pos { background: var(--green); height: 100%; position: absolute; left: 50%; }
+  .pos-track .b .midline { position: absolute; left: 50%; top: 0; bottom: 0; width: 1px; background: var(--gray-700); }
+  .pos-track .b .lbl { position: absolute; right: 8px; top: 50%; transform: translateY(-50%); font-size: 11px; color: #fff; font-weight: 700; }
+  .pos-track .b .lbl.left { left: 8px; right: auto; }
+
+  /* GBP attribute checklist */
+  .attr-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .attr-item {
+    background: #fff;
+    border: 1px solid var(--gray-300);
+    border-radius: 8px;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+  }
+  .attr-item.missing { border-left: 4px solid var(--red); }
+  .attr-item.present { border-left: 4px solid var(--green); }
+  .attr-item .ic { font-weight: 800; font-size: 18px; }
+  .attr-item.missing .ic { color: var(--red); }
+  .attr-item.present .ic { color: var(--green); }
+
+  ul.tight { margin: 8px 0; padding-left: 22px; }
+  ul.tight li { margin: 4px 0; }
+
+  hr { border: none; height: 1px; background: var(--gray-300); margin: 56px 0; }
+
+  .footer {
+    text-align: center;
+    color: var(--gray-500);
+    font-size: 13px;
+    padding: 32px 0 0;
+    border-top: 1px solid var(--gray-300);
+    margin-top: 56px;
+  }
+
+  @media print {
+    body { background: #fff; }
+    .cover { padding: 40px 32px; }
+    section { page-break-inside: avoid; }
+    .math-callout { background: #1F2937 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+
+  @media (max-width: 800px) {
+    .cover h1 { font-size: 36px; }
+    .cover-meta { grid-template-columns: 1fr 1fr; }
+    .scorecard, .ba-grid, .asks, .evidence-stack, .attr-list { grid-template-columns: 1fr; }
+    .trend-box, .pillar-meta { grid-template-columns: 1fr; }
+    .conf-row { grid-template-columns: 40px 1fr; }
+    .conf-row .target, .conf-row .pill { display: none; }
+    .pos-track { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== COVER ===== -->
+<header class="cover">
+  <div class="cover-inner">
+    <div class="eyebrow">Local SEO Strategy Report · Evidence-Backed</div>
+    <h1>Euphoria Wellness<br/><span>May 2026 Strategy</span></h1>
+    <p class="subtitle">Convert Euphoria's #1 "weed" authority into the cannabis/dispensary visibility it's losing — by closing the technical gap that lets a 303-review competitor outrank a 2,595-review one. Every tactic is backed by hard data and tied to a measurable outcome.</p>
+    <div class="stamp"><span class="dot">●</span> Re-analyzed 2026-04-30 · Bullet-proof tactics only</div>
+    <div class="cover-meta">
+      <div><div class="label">Period</div><div class="value">May 1 – May 31, 2026</div></div>
+      <div><div class="label">Prepared By</div><div class="value">Dispenza Dispensary Marketing</div></div>
+      <div><div class="label">For</div><div class="value">Darlene · Trey · Suken · Joanne</div></div>
+      <div><div class="label">Account Lead</div><div class="value">Darrell</div></div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+<!-- ===== EXECUTIVE PROOF ===== -->
+<section>
+  <div class="section-header">
+    <div class="section-num">EXECUTIVE PROOF</div>
+    <h2>Why this plan will work</h2>
+  </div>
+  <p class="lede">This plan does not rely on more activity. It targets the specific structural gaps the data has already identified.</p>
+
+  <div class="card proof">
+    <div class="label">Fact 01 · The competitor outranking us has 1/8th the reviews</div>
+    <p>Deep Roots Harvest Blue Diamond beats Euphoria on 5 of 10 keywords with <strong>303 Google reviews vs Euphoria's 2,595</strong>. They are not winning on authority. They are winning on technical SEO — title-tag stuffing, multi-location signals, secondary categories, and 2,500-word location pages targeting "cannabis dispensary" and "dispensary near me." <strong>Every one of those signals is fixable in our control.</strong></p>
+  </div>
+
+  <div class="card proof">
+    <div class="label">Fact 02 · The growth engine is already firing</div>
+    <p>Delivery revenue is up <strong>+61.2% vs baseline</strong> (March '26: $125,493 vs baseline $77,862). Delivery orders up <strong>+65.3%</strong>. Average cart climbed from $57.31 to $61.95. <strong>"Cannabis delivery"</strong> is already #1 with 45% SoLV; <strong>"dispensary delivery"</strong> sits at #2 with 38% SoLV — and Deep Roots leads "dispensary delivery" by less than two SoLV points. Defending and extending this delivery position is the highest-ROI move on the board.</p>
+  </div>
+
+  <div class="card critical">
+    <div class="label">Fact 03 · There is a critical structural error to fix in Week 1</div>
+    <p>The April 24 website audit flagged a <strong>San Diego address potentially appearing in the site footer</strong>. If real, this is a NAP-consistency catastrophe — the single fastest way to suppress local rankings for a Las Vegas business. Verifying and removing this is the first task before any other work begins. Cost: 30 minutes. Impact if real: meaningful lift across every keyword in the next scan.</p>
+  </div>
+
+  <h3>What we're committing to, with confidence levels</h3>
+  <div class="confidence-matrix">
+    <div class="conf-row head"><div class="seq">#</div><div class="name">KPI (directional — per Euphoria guardrails)</div><div class="target">Movement Direction</div><div>Confidence</div></div>
+    <div class="conf-row"><div class="seq">1</div><div class="name">"Dispensary delivery" → #1 (overtake Deep Roots)</div><div class="target">#2 (38.02%) → #1 (40%+)</div><div><span class="pill high">High</span></div></div>
+    <div class="conf-row"><div class="seq">2</div><div class="name">"Dispensary" / "dispensary near me" → trending up</div><div class="target">#7 → #4–5 by month-end</div><div><span class="pill high">High</span></div></div>
+    <div class="conf-row"><div class="seq">3</div><div class="name">"Cannabis" / "cannabis near me" → trending up</div><div class="target">#6 → #4–5 by month-end</div><div><span class="pill high">High</span></div></div>
+    <div class="conf-row"><div class="seq">4</div><div class="name">Hold "weed" group at #1 (all 4 keywords)</div><div class="target">#1 maintained · SoLV ≥ 90%</div><div><span class="pill high">High</span></div></div>
+    <div class="conf-row"><div class="seq">5</div><div class="name">Hold "cannabis delivery" at #1</div><div class="target">SoLV ≥ 45%</div><div><span class="pill high">High</span></div></div>
+    <div class="conf-row"><div class="seq">6</div><div class="name">GBP actions / month → reversing decline</div><div class="target">5,190 (Mar '26) → trending up</div><div><span class="pill high">High</span></div></div>
+    <div class="conf-row"><div class="seq">7</div><div class="name">Direction requests → maintaining recovery</div><div class="target">1,203 (Mar '26) → 1,200+</div><div><span class="pill high">High</span></div></div>
+    <div class="conf-row"><div class="seq">8</div><div class="name">Conversion rate → maintaining trajectory</div><div class="target">44.9% → 44%+</div><div><span class="pill high">High</span></div></div>
+    <div class="conf-row"><div class="seq">9</div><div class="name">Delivery revenue trajectory continues</div><div class="target">+61% YoY → sustain or grow</div><div><span class="pill high">High</span></div></div>
+    <div class="conf-row"><div class="seq">10</div><div class="name">Discovery searches → reversing decline</div><div class="target">10,672 → trending up</div><div><span class="pill med">Moderate</span></div></div>
+    <div class="conf-row"><div class="seq">11</div><div class="name">In-store revenue stabilization</div><div class="target">-25% baseline gap → narrowing</div><div><span class="pill stretch">Stretch</span></div></div>
+  </div>
+  <p style="font-size:13px; color:var(--gray-700);"><strong>Honest read:</strong> 9 of 11 are HIGH confidence with hard data behind them. 1 is MODERATE — discovery searches face a market-wide -27% decline. 1 is STRETCH — in-store revenue decline has many drivers outside SEO's control; we can contribute, not single-handedly fix it. Per Euphoria's guardrails, all targets are directional, not %-locked.</p>
+</section>
+
+<hr/>
+
+<!-- ===== STATE OF PLAY ===== -->
+<section>
+  <div class="section-header">
+    <div class="section-num">01</div>
+    <h2>Where We Stand</h2>
+  </div>
+  <p class="lede">Seven of ten target keywords in the top 3, including dominant #1 positions on every "weed" term and on "cannabis delivery." Four "cannabis" / "dispensary" keywords sit at #6–#7 — that is the focus of May.</p>
+
+  <h3>2-Mile / 4-Mile Benchmark Scorecard <span style="font-size:14px; color: var(--gray-500); font-weight:400;">(Local Falcon · April 3, 2026)</span></h3>
+  <div class="scorecard">
+    <div class="keyword-row"><div class="rank-badge">1</div><div class="kw">weed near me</div><div class="solv">96.69%</div></div>
+    <div class="keyword-row"><div class="rank-badge">1</div><div class="kw">weed dispensary</div><div class="solv">97.52%</div></div>
+    <div class="keyword-row"><div class="rank-badge">1</div><div class="kw">weed</div><div class="solv">91.74%</div></div>
+    <div class="keyword-row"><div class="rank-badge">1</div><div class="kw">weed delivery</div><div class="solv">93.39%</div></div>
+    <div class="keyword-row"><div class="rank-badge">1</div><div class="kw">cannabis delivery</div><div class="solv">45.45%</div></div>
+    <div class="keyword-row"><div class="rank-badge ok">2</div><div class="kw"><strong>dispensary delivery</strong> &mdash; close gap to #1</div><div class="solv">38.02%</div></div>
+    <div class="keyword-row target"><div class="rank-badge warn">6</div><div class="kw"><strong>cannabis</strong> &mdash; May target</div><div class="solv">23.97%</div></div>
+    <div class="keyword-row target"><div class="rank-badge warn">6</div><div class="kw"><strong>cannabis near me</strong> &mdash; May target</div><div class="solv">17.36%</div></div>
+    <div class="keyword-row target"><div class="rank-badge warn">7</div><div class="kw"><strong>dispensary</strong> &mdash; May target</div><div class="solv">11.57%</div></div>
+    <div class="keyword-row target"><div class="rank-badge warn">7</div><div class="kw"><strong>dispensary near me</strong> &mdash; May target</div><div class="solv">12.40%</div></div>
+  </div>
+
+  <h3>GBP Engagement (March 2026)</h3>
+  <div class="trend-box">
+    <div class="trend-tile">
+      <div class="num">44.9%</div>
+      <div class="label">Conversion Rate</div>
+      <div class="change up">↑ from 30.8% (Dec '24)</div>
+    </div>
+    <div class="trend-tile">
+      <div class="num">5,190</div>
+      <div class="label">GBP Actions / mo</div>
+      <div class="change down">↓ from 7,698 (Dec '24 peak)</div>
+    </div>
+    <div class="trend-tile">
+      <div class="num">10,672</div>
+      <div class="label">Discovery Searches / mo</div>
+      <div class="change down">↓ 27% from Nov '24</div>
+    </div>
+  </div>
+
+  <h3>The POS reality — why this matters for retention</h3>
+  <p>The visibility gap is not abstract. POS data shows what's at stake.</p>
+  <div class="pos-track">
+    <div class="l">Total net sales <span class="sub">vs baseline</span></div>
+    <div class="b"><div class="midline"></div><div class="neg" style="width:13.5%;"></div><div class="lbl left">−13.5%</div></div>
+  </div>
+  <div class="pos-track">
+    <div class="l">In-store revenue <span class="sub">vs baseline</span></div>
+    <div class="b"><div class="midline"></div><div class="neg" style="width:25.1%;"></div><div class="lbl left">−25.1%</div></div>
+  </div>
+  <div class="pos-track">
+    <div class="l">Repeat customers <span class="sub">vs baseline</span></div>
+    <div class="b"><div class="midline"></div><div class="neg" style="width:16.4%;"></div><div class="lbl left">−16.4%</div></div>
+  </div>
+  <div class="pos-track">
+    <div class="l">Online revenue <span class="sub">vs baseline</span></div>
+    <div class="b"><div class="midline"></div><div class="neg" style="width:17%;"></div><div class="lbl left">−17.0%</div></div>
+  </div>
+  <div class="pos-track">
+    <div class="l">Delivery revenue <span class="sub">vs baseline</span></div>
+    <div class="b"><div class="midline"></div><div class="pos" style="width:30%;"></div><div class="lbl">+61.2%</div></div>
+  </div>
+  <div class="pos-track">
+    <div class="l">Delivery orders <span class="sub">vs baseline</span></div>
+    <div class="b"><div class="midline"></div><div class="pos" style="width:32%;"></div><div class="lbl">+65.3%</div></div>
+  </div>
+  <div class="pos-track">
+    <div class="l">Avg cart value <span class="sub">vs baseline</span></div>
+    <div class="b"><div class="midline"></div><div class="pos" style="width:5%;"></div><div class="lbl">+8.1%</div></div>
+  </div>
+
+  <div class="card alert" style="margin-top:24px;">
+    <strong>Read this honestly:</strong> SEO doesn't single-handedly reverse a -25% in-store revenue decline — that has multiple drivers (foot traffic patterns, broader retail trends, competitor density). What SEO <em>can</em> do is (a) defend the delivery growth engine that's offsetting in-store losses and (b) close the cannabis/dispensary visibility gap that's gating new-customer discovery. May addresses both.
+  </div>
+</section>
+
+<hr/>
+
+<!-- ===== STRATEGIC BET ===== -->
+<section>
+  <div class="section-header">
+    <div class="section-num">02</div>
+    <h2>The Strategic Bet for May</h2>
+  </div>
+  <p class="lede">The data identifies the gap precisely: Euphoria has authority (2,595 reviews, "first licensed dispensary in Las Vegas," 10-year track record), but the technical signals don't tell Google we're a "cannabis dispensary" — they tell Google we're a "weed dispensary." That's why we own every "weed" keyword and trail on every "cannabis" / "dispensary" keyword.</p>
+
+  <div class="strategic-bet">
+    <div class="label">Our Spine for May</div>
+    <blockquote>Win the technical SEO race a 303-review competitor is currently winning — by upgrading <em>our</em> title tags, categories, and structured data to match the visibility our authority deserves.</blockquote>
+  </div>
+
+  <h3>Side-by-side: Why Deep Roots is winning despite less authority</h3>
+  <table>
+    <thead>
+      <tr><th>Signal</th><th>Deep Roots Harvest Blue Diamond</th><th>Euphoria Wellness</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Reviews</strong></td><td>303 (4.4★)</td><td><strong>2,595 (4.7★)</strong></td></tr>
+      <tr><td><strong>Homepage title tag</strong></td><td>"Dispensary Near Me, Cannabis Dispensary, Recreational Dispensary &amp; Weed Near Me | Las Vegas, NV | Deep Roots Harvest"</td><td>"Weed Dispensary Las Vegas – Euphoria Wellness | Pick Up..."</td></tr>
+      <tr><td><strong>Location page word count</strong></td><td>2,500+ words location-specific</td><td>Standard homepage / generic</td></tr>
+      <tr><td><strong>Secondary GBP categories</strong></td><td>Multi-category</td><td><strong>NONE</strong></td></tr>
+      <tr><td><strong>Number of locations</strong></td><td>6 (10 with The Source acquisition)</td><td>1</td></tr>
+      <tr><td><strong>Drive-thru</strong></td><td>Yes</td><td>No</td></tr>
+      <tr><td><strong>Closing time</strong></td><td>Midnight</td><td>11 PM</td></tr>
+    </tbody>
+  </table>
+  <p>The single-location and drive-thru gaps are not addressable in May. The title tags, GBP categories, and content depth gaps <strong>are</strong>. That's where May's work concentrates.</p>
+</section>
+
+<hr/>
+
+<!-- ===== PILLAR 1: AUDIT FIX ===== -->
+<section>
+  <div class="section-header">
+    <div class="section-num">PILLAR 01</div>
+    <h2><span class="pillar-num">1</span>Critical Audit Fix · Week 1, Day 1</h2>
+  </div>
+  <p class="lede">Before any other tactic. The April 24 website audit flagged a possible San Diego address in the footer. NAP inconsistency for a Las Vegas business is the most reliable way to suppress local rankings.</p>
+
+  <div class="pillar-meta">
+    <div><div class="label">Confidence</div><div class="value"><span class="pill high">High</span></div></div>
+    <div><div class="label">If real, lift</div><div class="value">Meaningful across ALL keywords</div></div>
+    <div><div class="label">Time to verify + fix</div><div class="value">~30 minutes</div></div>
+  </div>
+
+  <h3>The check, in three steps</h3>
+  <ol>
+    <li><strong>Inspect the footer</strong> on every public page (homepage, /weed-delivery-las-vegas, /about-us, blog templates).</li>
+    <li><strong>Inspect the footer in the rendered HTML source</strong> — sometimes test/template addresses appear in the DOM but are visually hidden.</li>
+    <li><strong>Inspect any structured data</strong> (existing schema or analytics tags) for non-Las-Vegas addresses.</li>
+  </ol>
+
+  <div class="card alert">
+    <strong>If the San Diego address is real:</strong> remove it immediately, replace with the correct 7780 S Jones Blvd address, and submit a fresh sitemap to Google Search Console to accelerate re-crawl. We expect ranking signal recovery within 1–2 weeks.
+    <br/><br/>
+    <strong>If it was a false positive:</strong> document the audit finding so we don't redo this check next quarter.
+  </div>
+</section>
+
+<hr/>
+
+<!-- ===== PILLAR 2: TITLE TAG + H1 RESTRUCTURE ===== -->
+<section>
+  <div class="section-header">
+    <div class="section-num">PILLAR 02</div>
+    <h2><span class="pillar-num">2</span>Title Tag + H1 Restructure</h2>
+  </div>
+  <p class="lede"><strong>The single highest-leverage tactic in May.</strong> Deep Roots is winning because their title tags contain "Cannabis Dispensary," "Dispensary Near Me," and "Cannabis Near Me." Ours contain "Weed Dispensary." Same exact problem Joyleaf solves with their structural fix — backed here by a direct competitor doing it first.</p>
+
+  <div class="pillar-meta">
+    <div><div class="label">Confidence</div><div class="value"><span class="pill high">High</span></div></div>
+    <div><div class="label">Expected lift</div><div class="value">+5 to +12 SoLV pts on cannabis/dispensary terms</div></div>
+    <div><div class="label">Time to impact</div><div class="value">2–4 weeks post-deploy</div></div>
+  </div>
+
+  <h3>Evidence — why this works</h3>
+  <div class="evidence-stack">
+    <div class="evidence-block">
+      <div class="head"><span class="pill evidence">Industry Data</span></div>
+      <ul>
+        <li>On-page signals account for ~14% of local pack ranking weight (Whitespark/Moz).</li>
+        <li>Within on-page, <strong>title tag and H1</strong> are the heaviest single elements.</li>
+        <li>Google ranks bare-keyword queries ("dispensary," "cannabis near me") on exact-match relevance more aggressively than branded variants.</li>
+      </ul>
+    </div>
+    <div class="evidence-block">
+      <div class="head"><span class="pill evidence">Direct Competitor Proof</span></div>
+      <ul>
+        <li>Deep Roots Blue Diamond ranks <strong>#1</strong> on the four keywords Euphoria is weakest on.</li>
+        <li>Their homepage title contains <em>"Dispensary Near Me, Cannabis Dispensary, Recreational Dispensary &amp; Weed Near Me."</em></li>
+        <li>They have <strong>1/8th</strong> Euphoria's reviews — the title-tag stuffing is doing the work.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="math-callout">
+    <div class="title">Math · Expected Impact on Cannabis / Dispensary SoLV</div>
+    <div class="formula">"Dispensary" current SoLV: <strong style="color:#fff;">11.57%</strong> (rank #7)</div>
+    <div class="formula">+ Homepage + delivery-page title rewrite: <strong style="color:#fff;">+4 to +8 pts</strong></div>
+    <div class="formula">+ H1 rewrite (delivery page already has dispensary-friendly H1): <strong style="color:#fff;">+1 to +3 pts</strong></div>
+    <div class="formula">+ LocalBusiness schema (currently missing): <strong style="color:#fff;">+2 to +4 pts</strong></div>
+    <div class="answer">Conservative trajectory: 11.57% + 7 = <strong>~18% SoLV</strong> by month-end → rank #4–5<br/>(Closes the gap by half; full top-3 push is 60–90 days)</div>
+  </div>
+
+  <h3>Homepage title — Before / After</h3>
+  <div class="ba-grid">
+    <div class="ba-card before">
+      <div class="tag">Today</div>
+      <div class="browser">euphoriawellnessnv.com</div>
+      <div class="h1-display">Weed Dispensary Las Vegas – Euphoria Wellness | Pick Up...</div>
+      <ul class="tight">
+        <li>"Weed Dispensary" only — no cannabis/dispensary terms</li>
+        <li>Truncated by ellipsis in SERP</li>
+        <li>Misses the bare "Dispensary Near Me" / "Cannabis Dispensary" intent</li>
+      </ul>
+    </div>
+    <div class="ba-card after">
+      <div class="tag">Proposed</div>
+      <div class="browser">euphoriawellnessnv.com</div>
+      <div class="h1-display">Cannabis Dispensary in Las Vegas | Euphoria Wellness — Weed Delivery + Pickup</div>
+      <ul class="tight">
+        <li>Leads with "Cannabis Dispensary" — fills the relevance gap</li>
+        <li>Retains "Weed Delivery" + brand for existing #1 keywords</li>
+        <li>Within 60-char SERP target</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>Homepage H1 — Before / After</h3>
+  <div class="ba-grid">
+    <div class="ba-card before">
+      <div class="tag">Today</div>
+      <div class="browser">euphoriawellnessnv.com</div>
+      <div class="h1-display">Las Vegas' Best Weed Dispensary</div>
+      <ul class="tight">
+        <li>"Weed" intercepts "Dispensary" — same pattern as the GBP name handicap</li>
+        <li>Strong for "weed dispensary" (already #1) — does no work for "cannabis dispensary"</li>
+      </ul>
+    </div>
+    <div class="ba-card after">
+      <div class="tag">Proposed</div>
+      <div class="browser">euphoriawellnessnv.com</div>
+      <div class="h1-display">Las Vegas' First Licensed Cannabis Dispensary</div>
+      <ul class="tight">
+        <li>Leads with "Cannabis Dispensary" — direct gap fill</li>
+        <li>"First licensed" = trust signal Deep Roots cannot match (10-year history, 2015 license)</li>
+        <li>Subhead retains "Euphoria Wellness · Weed Dispensary &amp; Delivery"</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>Add LocalBusiness schema (currently missing entirely)</h3>
+  <div class="card">
+    <p>The April 24 audit confirmed no schema on the site. Adding this JSON-LD block to the footer gives Google a structured signal for everything the title tag and H1 work to communicate:</p>
+    <pre style="background: var(--gray-900); color: #C5E0FF; padding: 20px; border-radius: 8px; font-size: 13px; overflow-x: auto;">{
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "Euphoria Wellness Weed Dispensary",
+  "alternateName": [
+    "Euphoria Wellness Cannabis Dispensary",
+    "Euphoria Wellness Dispensary",
+    "Euphoria Cannabis"
+  ],
+  "url": "https://euphoriawellnessnv.com",
+  "telephone": "+1-702-960-7200",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "7780 S Jones Blvd Ste 105",
+    "addressLocality": "Las Vegas",
+    "addressRegion": "NV",
+    "postalCode": "89139"
+  },
+  "openingHours": "Mo-Su 09:00-23:00",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.7",
+    "reviewCount": "2595"
+  },
+  "areaServed": [
+    "Las Vegas", "Henderson", "Summerlin", "North Las Vegas",
+    "Enterprise", "Spring Valley", "Mountain's Edge",
+    "Rhodes Ranch", "Southern Highlands", "Paradise"
+  ]
+}</pre>
+  </div>
+</section>
+
+<hr/>
+
+<!-- ===== PILLAR 3: GBP CATEGORIES ===== -->
+<section>
+  <div class="section-header">
+    <div class="section-num">PILLAR 03</div>
+    <h2><span class="pillar-num">3</span>Secondary GBP Categories</h2>
+  </div>
+  <p class="lede">Euphoria's GBP currently has <strong>one</strong> category: Cannabis Store. Deep Roots and other top-3 competitors carry multiple categories. Adding 2–3 well-chosen secondary categories is a high-leverage signal Google uses for keyword association — at zero cost.</p>
+
+  <div class="pillar-meta">
+    <div><div class="label">Confidence</div><div class="value"><span class="pill high">High</span></div></div>
+    <div><div class="label">Expected lift</div><div class="value">+2 to +5 SoLV pts on dispensary tier</div></div>
+    <div><div class="label">Time to impact</div><div class="value">1–3 weeks (live immediately)</div></div>
+  </div>
+
+  <h3>Recommended secondary categories</h3>
+  <div class="attr-list">
+    <div class="attr-item present"><div class="ic">●</div><div><strong>Cannabis store</strong> (current primary)</div></div>
+    <div class="attr-item missing"><div class="ic">+</div><div><strong>Marijuana dispensary</strong> — direct match for "marijuana" + "dispensary" intent</div></div>
+    <div class="attr-item missing"><div class="ic">+</div><div><strong>Delivery service</strong> — explicit signal for delivery-keyword set</div></div>
+    <div class="attr-item missing"><div class="ic">+</div><div><strong>Herb shop</strong> — wider relevance umbrella; Joyleaf carries this</div></div>
+  </div>
+  <p style="font-size:14px; color:var(--gray-700); margin-top: 16px;"><em>Note: GBP allows up to 9 secondary categories. Three is the safe ship-it set; we can test adding more in June based on May's scan.</em></p>
+</section>
+
+<hr/>
+
+<!-- ===== PILLAR 4: DELIVERY DOMINANCE ===== -->
+<section>
+  <div class="section-header">
+    <div class="section-num">PILLAR 04</div>
+    <h2><span class="pillar-num">4</span>Defend &amp; Extend the Delivery Engine</h2>
+  </div>
+  <p class="lede">The single most defensible position Euphoria holds: <strong>cannabis delivery #1, dispensary delivery #2.</strong> The delivery business is +61% YoY revenue. May tactic: take "dispensary delivery" to #1 — it's a 1.65 SoLV point gap from Deep Roots.</p>
+
+  <div class="pillar-meta">
+    <div><div class="label">Confidence</div><div class="value"><span class="pill high">High</span></div></div>
+    <div><div class="label">Expected outcome</div><div class="value">"Dispensary delivery" → #1</div></div>
+    <div><div class="label">Time to impact</div><div class="value">3–5 weeks</div></div>
+  </div>
+
+  <h3>The math is small and very closeable</h3>
+  <div class="math-callout">
+    <div class="title">Math · "Dispensary Delivery" Take-Over of #1</div>
+    <div class="formula">Deep Roots #1: ARP <strong style="color:#fff;">~5.0</strong> · SoLV <strong style="color:#fff;">39.67%</strong></div>
+    <div class="formula">Euphoria #2: ARP <strong style="color:#fff;">5.00</strong> · SoLV <strong style="color:#fff;">38.02%</strong></div>
+    <div class="formula">Gap to #1: <strong style="color:#fff;">1.65 SoLV pts</strong></div>
+    <div class="formula">+ Pillar 2 title-tag work mentions "dispensary": <strong style="color:#fff;">+2 to +4 pts</strong></div>
+    <div class="formula">+ Pillar 3 "Delivery service" secondary category: <strong style="color:#fff;">+1 to +3 pts</strong></div>
+    <div class="answer">Conservative: Euphoria 38 + 4 = <strong>42% SoLV</strong> → projected #1.</div>
+  </div>
+
+  <h3>Build a dedicated /cannabis-delivery-las-vegas/ page</h3>
+  <p>Today the site has <code>/weed-delivery-las-vegas/</code> with a strong 2,000+ word body — but no equivalent page for "cannabis delivery" as a standalone target. Deep Roots' edge is keyword-diverse content; the symmetry is the answer.</p>
+  <table>
+    <thead><tr><th>Element</th><th>Spec</th></tr></thead>
+    <tbody>
+      <tr><td><strong>URL</strong></td><td><code>/cannabis-delivery-las-vegas/</code></td></tr>
+      <tr><td><strong>H1</strong></td><td>Cannabis Delivery in Las Vegas — Same-Day from Euphoria Wellness</td></tr>
+      <tr><td><strong>Title tag</strong></td><td>Cannabis Delivery Las Vegas | Euphoria Wellness — Same-Day Cannabis Dispensary Delivery</td></tr>
+      <tr><td><strong>Word count target</strong></td><td>2,000+ (matches Deep Roots' approach for the Blue Diamond location)</td></tr>
+      <tr><td><strong>Sections</strong></td><td>Service area map · same-day delivery promise · cannabis product categories · how it works · FAQ · age verification</td></tr>
+      <tr><td><strong>Schema</strong></td><td>Service schema + FAQPage schema</td></tr>
+      <tr><td><strong>Internal linking</strong></td><td>From homepage hero, footer, /weed-delivery-las-vegas/ cross-link, every neighborhood page</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<hr/>
+
+<!-- ===== PILLAR 5: HYPERLOCAL PAGES ===== -->
+<section>
+  <div class="section-header">
+    <div class="section-num">PILLAR 05</div>
+    <h2><span class="pillar-num">5</span>Hyperlocal "Getting Here" Pages — Airport &amp; Strip</h2>
+  </div>
+  <p class="lede">Per Euphoria's strategy guardrails: hyper-local focus over broad awareness. The two highest-conversion targets — Harry Reid International Airport and Las Vegas Strip — are explicitly named in the playbook. May ships both.</p>
+
+  <div class="pillar-meta">
+    <div><div class="label">Confidence (Airport page)</div><div class="value"><span class="pill high">High</span></div></div>
+    <div><div class="label">Expected lift on "dispensary near me"</div><div class="value">+3 to +6 SoLV pts</div></div>
+    <div><div class="label">Time to impact</div><div class="value">3–6 weeks post-launch</div></div>
+  </div>
+
+  <h3>Why Airport first</h3>
+  <div class="evidence-stack">
+    <div class="evidence-block">
+      <div class="head"><span class="pill evidence">Geo-traffic logic</span></div>
+      <ul>
+        <li>Euphoria sits ~3 mi from the airport — closest licensed dispensary to Harry Reid for arriving travelers.</li>
+        <li>Tourist intent searches ("dispensary near me," "weed near me") spike from airport WiFi.</li>
+        <li>91% of Euphoria's GBP traffic is mobile (per Apr 1–22 GBP performance) — perfectly aligned with traveler search behavior.</li>
+      </ul>
+    </div>
+    <div class="evidence-block">
+      <div class="head"><span class="pill evidence">Existing brief alignment</span></div>
+      <ul>
+        <li>"Dispensary near Las Vegas airport" is on Euphoria's documented strategy from March 2025 — already planned, not yet executed.</li>
+        <li>Airport page directly counters the eastern grid weakness identified in the April 3 scan (Paradise/Henderson/Strip side).</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="ba-grid" style="margin-top: 24px;">
+    <div class="card teal">
+      <h4 style="margin-top:0;">Page 1 — Airport (Week 2)</h4>
+      <div class="browser" style="background:#fff; padding:8px 12px; border-radius:6px; font-family:monospace; font-size:12px; margin-bottom:10px;">/dispensary-near-las-vegas-airport/</div>
+      <p><strong>H1:</strong> Cannabis Dispensary Near Harry Reid International Airport</p>
+      <p><strong>What it includes:</strong></p>
+      <ul class="tight">
+        <li>"3 minutes from Terminal 1" + driving directions from McCarran/Reid</li>
+        <li>"First licensed dispensary in Las Vegas" trust strip (10-year claim)</li>
+        <li>21+ legal reminder + ID requirements (Nevada compliance)</li>
+        <li>Hours, free parking, delivery-to-hotel/Strip option</li>
+        <li>FAQ: "Can I bring purchases on my flight?", "Where can I consume legally?"</li>
+        <li>Schema: LocalBusiness + FAQPage + areaServed (Strip, Paradise, Spring Valley)</li>
+      </ul>
+    </div>
+    <div class="card teal">
+      <h4 style="margin-top:0;">Page 2 — Las Vegas Strip (Week 4)</h4>
+      <div class="browser" style="background:#fff; padding:8px 12px; border-radius:6px; font-family:monospace; font-size:12px; margin-bottom:10px;">/dispensary-near-las-vegas-strip/</div>
+      <p><strong>H1:</strong> Cannabis Dispensary Near the Las Vegas Strip — Delivery + Pickup</p>
+      <p><strong>What it includes:</strong></p>
+      <ul class="tight">
+        <li>Strip-to-store driving directions (Paradise / Tropicana / Sahara routes)</li>
+        <li>"Delivery to most Strip hotels" hook (where compliant)</li>
+        <li>Compliance note: hotel consumption rules</li>
+        <li>FAQ: "Closest licensed dispensary to MGM/Wynn/Bellagio?"</li>
+        <li>Schema: LocalBusiness + FAQPage</li>
+        <li>Real Euphoria photos only (no Strip landmark imagery — prevents location confusion)</li>
+      </ul>
+    </div>
+  </div>
+  <p style="font-size:14px; color: var(--gray-700); font-style: italic;">Per playbook: South Jones / Blue Diamond intersection page remains queued pending location opening — not part of May commitment.</p>
+</section>
+
+<hr/>
+
+<!-- ===== PILLAR 6: REVIEWS & PHOTOS ===== -->
+<section>
+  <div class="section-header">
+    <div class="section-num">PILLAR 06</div>
+    <h2><span class="pillar-num">6</span>Reviews, Photos &amp; Maintenance</h2>
+  </div>
+  <p class="lede">Euphoria's review moat (2,595 reviews vs. competitors' 303–2,550) is already won. May is about <strong>maintenance</strong> — protect the lead, fix the photo cadence gap, keep response SLA tight.</p>
+
+  <div class="pillar-meta">
+    <div><div class="label">Confidence</div><div class="value"><span class="pill high">High</span></div></div>
+    <div><div class="label">May SoLV impact</div><div class="value">Protective (slow-burn)</div></div>
+    <div><div class="label">Effort</div><div class="value">Already-running cadence; minor tactical adds</div></div>
+  </div>
+
+  <h3>What we keep doing</h3>
+  <table>
+    <thead><tr><th>Tactic</th><th>Existing cadence</th><th>May tweak</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Review responses</strong></td><td>24–48 hr SLA</td><td>Vary brand form: "Euphoria Cannabis Dispensary" / "our dispensary" / "Euphoria Wellness" — same trick used to give Google more "Cannabis Dispensary" co-occurrence without GBP rename risk.</td></tr>
+      <tr><td><strong>Photo uploads</strong></td><td>Weekly/biweekly owner photos</td><td>Add <strong>delivery-focused imagery</strong> (branded packaging, vehicle, driver-handoff) — addresses the gap flagged in April photo audit. Delivery is +61% revenue; the imagery should reflect that.</td></tr>
+      <tr><td><strong>Review acquisition</strong></td><td>QR + free pre-roll incentive</td><td>Add a delivery-specific QR insert in delivery bags. Goal: review-velocity contributions from delivery customers (different zip codes = geographic authority signals).</td></tr>
+      <tr><td><strong>Review tracking</strong></td><td>Monthly snapshot — total + avg rating</td><td>Add cadence: track competitor review velocity weekly (Deep Roots Blue Diamond, RISE x2, Wallflower) — early warning if any push hard.</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Compliance reminders (per Euphoria guardrails)</h3>
+  <ul class="tight">
+    <li>No pricing in GBP imagery</li>
+    <li>No medical claims</li>
+    <li>21+ language on every page (Nevada cannabis ad rules)</li>
+    <li>No social media tactics — explicitly excluded due to ToS risk</li>
+    <li>Q&amp;A removed by Google for cannabis category — not a tactic this month</li>
+  </ul>
+</section>
+
+<hr/>
+
+<!-- ===== KPIs WITH MATH ===== -->
+<section>
+  <div class="section-header">
+    <div class="section-num">07</div>
+    <h2>KPIs &amp; Math Behind Each Direction</h2>
+  </div>
+  <p class="lede">Per Euphoria guardrails, all targets are directional. Each KPI shows the data trajectory and the tactic-by-tactic math behind it.</p>
+
+  <div class="kpi-row-detailed">
+    <div class="kpi-top">
+      <div class="name">"Dispensary delivery" → take #1 from Deep Roots <span class="pill high">High Confidence</span></div>
+      <div class="nums">Baseline: <strong>#2 (38.02%)</strong> → <span class="target">May: #1 (40%+ SoLV)</span></div>
+    </div>
+    <div class="bar"><div class="fill-baseline" style="width:38%;"></div><div class="fill-target" style="width:42%; opacity:0.65;"></div></div>
+    <div class="why"><strong>Math:</strong> Gap to #1 is just 1.65 SoLV points. Pillar 2 (title rewrites with "dispensary") + Pillar 3 ("Delivery service" secondary category) + Pillar 4 (dedicated /cannabis-delivery-las-vegas/ page) = <strong>+3 to +7 SoLV pts</strong>. <strong>Risk:</strong> Deep Roots runs counter-push. <strong>Mitigation:</strong> ship Pillar 2 by May 5; Pillar 3 by May 3.</div>
+  </div>
+
+  <div class="kpi-row-detailed">
+    <div class="kpi-top">
+      <div class="name">"Dispensary" / "dispensary near me" → out of #6–#7 territory <span class="pill high">High Confidence</span></div>
+      <div class="nums">Baseline: <strong>#7 (11.57%) / #7 (12.40%)</strong> → <span class="target">May: #4–5 territory</span></div>
+    </div>
+    <div class="bar"><div class="fill-baseline" style="width:12%;"></div><div class="fill-target" style="width:24%; opacity:0.65;"></div></div>
+    <div class="why"><strong>Math:</strong> Title-tag rewrite (+4 to +8) + H1 rewrite (+1 to +3) + schema (+2 to +4) + airport hyperlocal (+3 to +6 — primarily on "near me" variant) = <strong>+10 to +21 SoLV pts</strong>. Conservative: 11.57 + 8 = <strong>~20% SoLV</strong> → likely #4–#5. Top 3 is a 60–90 day target. <strong>Risk:</strong> Deep Roots' multi-location authority is a structural advantage we can't fully match in 30 days.</div>
+  </div>
+
+  <div class="kpi-row-detailed">
+    <div class="kpi-top">
+      <div class="name">"Cannabis" / "cannabis near me" → moving up from #6 <span class="pill high">High Confidence</span></div>
+      <div class="nums">Baseline: <strong>#6 (23.97% / 17.36%)</strong> → <span class="target">May: #4–5 territory</span></div>
+    </div>
+    <div class="bar"><div class="fill-baseline" style="width:24%;"></div><div class="fill-target" style="width:32%; opacity:0.65;"></div></div>
+    <div class="why"><strong>Math:</strong> Same Pillar 2 title work targets these directly ("Cannabis Dispensary in Las Vegas" in homepage title). Pillar 5 airport + Strip pages add geo-relevance. Total expected: <strong>+6 to +12 SoLV pts</strong>. Conservative: 24 + 6 = <strong>30% SoLV</strong> → rank #4 likely.</div>
+  </div>
+
+  <div class="kpi-row-detailed">
+    <div class="kpi-top">
+      <div class="name">"Weed" group → hold all 4 at #1 <span class="pill high">High Confidence</span></div>
+      <div class="nums">Baseline: <strong>#1 across 4 keywords (SoLV 91–97%)</strong> → <span class="target">Maintain</span></div>
+    </div>
+    <div class="bar"><div class="fill-baseline" style="width:95%;"></div><div class="fill-target" style="width:95%; opacity:0.65;"></div></div>
+    <div class="why"><strong>Math:</strong> Title/H1 rewrites are additive — they keep "Weed Dispensary" in subheads and brand strip. GBP name "Euphoria Wellness <strong>Weed</strong> Dispensary" remains unchanged. <strong>Risk:</strong> If we strip "weed" entirely from H1, we'd risk #1 loss. Plan retains it; just demotes from primary heading.</div>
+  </div>
+
+  <div class="kpi-row-detailed">
+    <div class="kpi-top">
+      <div class="name">"Cannabis delivery" → hold #1 <span class="pill high">High Confidence</span></div>
+      <div class="nums">Baseline: <strong>#1 (45.45%)</strong> → <span class="target">SoLV ≥ 45%</span></div>
+    </div>
+    <div class="bar"><div class="fill-baseline" style="width:45%;"></div><div class="fill-target" style="width:48%; opacity:0.65;"></div></div>
+    <div class="why"><strong>Math:</strong> Pillar 4's dedicated cannabis-delivery page strengthens an already-#1 position. Deep Roots is #2 at 39.67%; gap is <strong>5.78 SoLV points</strong> in Euphoria's favor. Maintenance, not stretch.</div>
+  </div>
+
+  <div class="kpi-row-detailed">
+    <div class="kpi-top">
+      <div class="name">GBP actions / month → reverse decline <span class="pill high">High Confidence</span></div>
+      <div class="nums">Baseline (Mar '26): <strong>5,190</strong> → <span class="target">May: trending up</span></div>
+    </div>
+    <div class="bar"><div class="fill-baseline" style="width:53%;"></div><div class="fill-target" style="width:60%; opacity:0.65;"></div></div>
+    <div class="why"><strong>Math:</strong> Direction requests held at 1,203 in March (above last 6-month average). Web clicks 3,750 (matching Mar '26 baseline). Pillar 1–4 lift discovery from new keyword surface; conversion is already the strongest it's been. April 1–22 actuals already projecting ~5,295 — slightly above March. Trend reversing.</div>
+  </div>
+
+  <div class="kpi-row-detailed">
+    <div class="kpi-top">
+      <div class="name">Direction requests / month → maintain recovery <span class="pill high">High Confidence</span></div>
+      <div class="nums">Baseline (Mar '26): <strong>1,203</strong> → <span class="target">May: 1,200+</span></div>
+    </div>
+    <div class="bar"><div class="fill-baseline" style="width:60%;"></div><div class="fill-target" style="width:62%; opacity:0.65;"></div></div>
+    <div class="why"><strong>Math:</strong> April 1–22 partial = 853, projecting ~1,163 — close to March. Last 12 months ranged 940–1,612. Memorial Day weekend traffic (highest cannabis sales weekend of spring/summer) typically lifts directions 10–20% in the holiday week.</div>
+  </div>
+
+  <div class="kpi-row-detailed">
+    <div class="kpi-top">
+      <div class="name">Conversion rate → maintain trajectory <span class="pill high">High Confidence</span></div>
+      <div class="nums">Baseline (Mar '26): <strong>44.9%</strong> → <span class="target">May: 44%+</span></div>
+    </div>
+    <div class="bar"><div class="fill-baseline" style="width:90%;"></div><div class="fill-target" style="width:90%; opacity:0.65;"></div></div>
+    <div class="why"><strong>Math:</strong> Steady climb from 30.8% (Dec '24) to 44.9% (Mar '26). Last 6 months range 35–48%. Funnel is structurally healthier; structural fixes don't degrade it.</div>
+  </div>
+
+  <div class="kpi-row-detailed">
+    <div class="kpi-top">
+      <div class="name">Delivery revenue → sustain trajectory <span class="pill high">High Confidence</span></div>
+      <div class="nums">Baseline (Mar '26): <strong>+61.2% YoY</strong> → <span class="target">Sustain or grow</span></div>
+    </div>
+    <div class="bar"><div class="fill-baseline" style="width:75%;"></div><div class="fill-target" style="width:80%; opacity:0.65;"></div></div>
+    <div class="why"><strong>Math:</strong> 17 consecutive months of YoY growth. Delivery-attribute set in GBP. Delivery revenue is now 19.7% of total (was 10.6% baseline). Pillar 4 (dedicated cannabis-delivery page) reinforces this directly. <strong>Most defensible position in the entire portfolio.</strong></div>
+  </div>
+
+  <div class="kpi-row-detailed">
+    <div class="kpi-top">
+      <div class="name">Discovery searches → reverse decline <span class="pill med">Moderate Confidence</span></div>
+      <div class="nums">Baseline (Mar '26): <strong>10,672</strong> → <span class="target">May: trending up</span></div>
+    </div>
+    <div class="bar"><div class="fill-baseline" style="width:43%;"></div><div class="fill-target" style="width:50%; opacity:0.65;"></div></div>
+    <div class="why"><strong>Math:</strong> Mar '26 = 10,672 (down from Nov '24 14,728). Memorial Day cannabis search lift typically +25-40% in holiday week. Pillar 5 (airport + Strip pages) opens new keyword surface. <strong>Risk:</strong> -27% YoY market decline is structural, not Euphoria-specific. Conservative projection: <strong>10,800–11,500</strong>. <strong>Most exposed KPI to factors outside our control.</strong></div>
+  </div>
+
+  <div class="kpi-row-detailed">
+    <div class="kpi-top">
+      <div class="name">In-store revenue stabilization <span class="pill stretch">Stretch</span></div>
+      <div class="nums">Baseline (Mar '26): <strong>−25.1% vs baseline</strong> → <span class="target">May: gap narrowing</span></div>
+    </div>
+    <div class="bar"><div class="fill-baseline" style="width:25%;"></div><div class="fill-target" style="width:35%; opacity:0.65;"></div></div>
+    <div class="why"><strong>Math:</strong> SEO contribution is indirect — better rankings drive more discovery → more direction requests → more in-store visits. Direction requests projection 1,200+ helps. <strong>BUT:</strong> in-store decline has multiple non-SEO drivers (foot traffic, retail-cycle, competitive density, Strip tourist trends). We can contribute to stabilization, not single-handedly fix it. <strong>Honest:</strong> this is a stretch metric, flagged transparently.</div>
+  </div>
+</section>
+
+<hr/>
+
+<!-- ===== RISK REGISTER ===== -->
+<section>
+  <div class="section-header">
+    <div class="section-num">08</div>
+    <h2>Risk Register — what could break the plan</h2>
+  </div>
+  <p class="lede">Honest accounting of what could prevent us from hitting May targets, and what we'll do about each.</p>
+
+  <div class="risk-row high">
+    <div class="head">
+      <div class="name">R1 · San Diego footer address turns out to be real</div>
+      <div class="severity">High (Positive Risk)</div>
+    </div>
+    <p><strong>What:</strong> If the audit was correct and the wrong address has been live, every keyword has been suppressed by NAP inconsistency. Rankings will lift faster than expected once removed.</p>
+    <p><strong>Mitigation:</strong> Verify Day 1; document either way. If real, file a Google Search Console reindex request within 24 hours.</p>
+  </div>
+
+  <div class="risk-row high">
+    <div class="head">
+      <div class="name">R2 · Pillar 2 deployment delayed past May 5</div>
+      <div class="severity">High</div>
+    </div>
+    <p><strong>What:</strong> Title-tag and H1 rewrites are the foundation of the cannabis/dispensary KPI math. Every day past May 5 reduces the post-deploy compounding window before the May 31 scan.</p>
+    <p><strong>Mitigation:</strong> Dispenza dev queued; only client approval needed. Ask 01 is the unblocker.</p>
+  </div>
+
+  <div class="risk-row">
+    <div class="head">
+      <div class="name">R3 · Deep Roots Harvest counter-push</div>
+      <div class="severity">Medium</div>
+    </div>
+    <p><strong>What:</strong> Deep Roots already has the technical SEO advantage. If they accelerate (e.g., adding more locations, refreshing title tags, doubling content output), our gains compress.</p>
+    <p><strong>Mitigation:</strong> Pillar 6 includes weekly competitor review-velocity tracking + monthly title-tag audit. Early-warning system.</p>
+  </div>
+
+  <div class="risk-row">
+    <div class="head">
+      <div class="name">R4 · Market-wide discovery search decline continues</div>
+      <div class="severity">Medium</div>
+    </div>
+    <p><strong>What:</strong> Discovery down -27% from peak. Pattern is market-wide (Joyleaf shows -52%, others similar). Algorithmic shift, not Euphoria-specific.</p>
+    <p><strong>Mitigation:</strong> Discovery is 1 of 11 KPIs. Other 9 high-confidence KPIs do not depend on discovery search recovery. Plan does not rest on this metric.</p>
+  </div>
+
+  <div class="risk-row">
+    <div class="head">
+      <div class="name">R5 · GA4 / Dutchie attribution gap</div>
+      <div class="severity">Medium</div>
+    </div>
+    <p><strong>What:</strong> The client-profile flagged GA4 tracking gaps with embedded menus. Without clean attribution, we cannot tie specific SEO outputs to specific revenue gains in the May report.</p>
+    <p><strong>Mitigation:</strong> Pillar 4's dedicated cannabis-delivery page launches with clean GA4 setup from day one. We at least clean the attribution for the new page; the embedded-menu gap stays open as a separate workstream.</p>
+  </div>
+
+  <div class="risk-row">
+    <div class="head">
+      <div class="name">R6 · Compliance review delays asset publishing</div>
+      <div class="severity">Low–Medium</div>
+    </div>
+    <p><strong>What:</strong> Nevada cannabis ad rules + Google's automatic moderation can hold up posts/photos. Strategy guardrails are explicit on this.</p>
+    <p><strong>Mitigation:</strong> All May copy reviewed against Euphoria's documented compliance checklist before publish. No pricing in GBP imagery, no medical claims, 21+ language standard.</p>
+  </div>
+</section>
+
+<hr/>
+
+<!-- ===== CALENDAR ===== -->
+<section>
+  <div class="section-header">
+    <div class="section-num">09</div>
+    <h2>May at a Glance</h2>
+  </div>
+
+  <div class="calendar">
+    <div class="calendar-grid">
+      <div class="cal-day-name">Sun</div>
+      <div class="cal-day-name">Mon</div>
+      <div class="cal-day-name">Tue</div>
+      <div class="cal-day-name">Wed</div>
+      <div class="cal-day-name">Thu</div>
+      <div class="cal-day-name">Fri</div>
+      <div class="cal-day-name">Sat</div>
+
+      <div class="cal-day empty"></div>
+      <div class="cal-day empty"></div>
+      <div class="cal-day empty"></div>
+      <div class="cal-day empty"></div>
+      <div class="cal-day empty"></div>
+      <div class="cal-day deliverable"><span class="num">1</span><span class="tag">Pillar 1 · Audit footer · Add GBP secondary categories</span></div>
+      <div class="cal-day"><span class="num">2</span></div>
+
+      <div class="cal-day"><span class="num">3</span></div>
+      <div class="cal-day deliverable"><span class="num">4</span><span class="tag">Photo drop · Mother's Day prep</span></div>
+      <div class="cal-day deliverable"><span class="num">5</span><span class="tag">Pillar 2 · Title tags + H1 + schema deploy</span></div>
+      <div class="cal-day"><span class="num">6</span></div>
+      <div class="cal-day"><span class="num">7</span></div>
+      <div class="cal-day"><span class="num">8</span></div>
+      <div class="cal-day"><span class="num">9</span></div>
+
+      <div class="cal-day holiday"><span class="num">10</span><span class="tag">Mother's Day</span></div>
+      <div class="cal-day deliverable"><span class="num">11</span><span class="tag">Launch /dispensary-near-las-vegas-airport/</span></div>
+      <div class="cal-day"><span class="num">12</span></div>
+      <div class="cal-day"><span class="num">13</span></div>
+      <div class="cal-day"><span class="num">14</span></div>
+      <div class="cal-day deliverable"><span class="num">15</span><span class="tag">Mid-month check-in</span></div>
+      <div class="cal-day"><span class="num">16</span></div>
+
+      <div class="cal-day"><span class="num">17</span></div>
+      <div class="cal-day"><span class="num">18</span></div>
+      <div class="cal-day deliverable"><span class="num">19</span><span class="tag">Pillar 4 · Launch /cannabis-delivery-las-vegas/</span></div>
+      <div class="cal-day"><span class="num">20</span></div>
+      <div class="cal-day"><span class="num">21</span></div>
+      <div class="cal-day deliverable"><span class="num">22</span><span class="tag">Photo drop · Memorial Day weekend</span></div>
+      <div class="cal-day"><span class="num">23</span></div>
+
+      <div class="cal-day"><span class="num">24</span></div>
+      <div class="cal-day holiday"><span class="num">25</span><span class="tag">Memorial Day</span></div>
+      <div class="cal-day deliverable"><span class="num">26</span><span class="tag">Launch /dispensary-near-las-vegas-strip/</span></div>
+      <div class="cal-day"><span class="num">27</span></div>
+      <div class="cal-day"><span class="num">28</span></div>
+      <div class="cal-day"><span class="num">29</span></div>
+      <div class="cal-day"><span class="num">30</span></div>
+
+      <div class="cal-day deliverable"><span class="num">31</span><span class="tag">May Local Falcon scan + competitor scan</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ASKS ===== -->
+<section>
+  <div class="section-header">
+    <div class="section-num">10</div>
+    <h2>What We Need From Euphoria</h2>
+  </div>
+  <p class="lede">Five specific asks. Asks 01 and 02 are the unlocks for the highest-confidence KPIs.</p>
+  <div class="asks">
+    <div class="ask">
+      <div class="num">Ask 01 · By May 1 (Critical)</div>
+      <div class="text">Confirmation to verify the website footer / source for the suspected San Diego address — and authority to remove if real. Cost: 30 minutes. Impact: meaningful lift across every keyword.</div>
+    </div>
+    <div class="ask">
+      <div class="num">Ask 02 · By May 5 (Critical)</div>
+      <div class="text">Approval to ship Pillar 2 — title tags, H1 rewrites, schema. Dispenza dev can deploy if approved. Every day past May 5 reduces the post-deploy window before the May 31 scan.</div>
+    </div>
+    <div class="ask">
+      <div class="num">Ask 03 · By May 8</div>
+      <div class="text">Approval to add 3 GBP secondary categories: Marijuana Dispensary, Delivery Service, Herb Shop. We will set these from the GBP dashboard with client sign-off.</div>
+    </div>
+    <div class="ask">
+      <div class="num">Ask 04 · By May 18</div>
+      <div class="text">Confirmation of Memorial Day weekend hours so we can update the website and pre-stage photos / messaging accordingly.</div>
+    </div>
+    <div class="ask">
+      <div class="num">Ask 05 · Open Decision</div>
+      <div class="text">Email platform decision (Klaviyo vs Alpine IQ for Dutchie/POS lifecycle messaging) — open since Dec '25. Dispenza will bring a recommendation to the May 15 mid-month check-in.</div>
+    </div>
+    <div class="ask">
+      <div class="num">Ask 06 · Asset Cadence</div>
+      <div class="text">Continued photo asset drops — May priority is delivery-focused imagery (branded packaging, vehicle, driver-handoff). Closes the gap flagged in the April photo audit.</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="section-header">
+    <div class="section-num">11 · FOUNDATION LAYER</div>
+    <h2>Evidence-Tiered Closure — 14 Quantifiable Levers</h2>
+  </div>
+  <p class="lede">The May 2026 plan above runs <em>on top of</em> a foundation that must hold. We re-ran this report against the Cannabis-Specialist SEO Operating Catalog (22 tracking domains · 50-item evidence-weighted priority order · Whitespark 2026 LSRF · BrightLocal 2024-25 · Citation Building Group · Cannabis Creative + CannaPlanners). <b>14 quantifiable levers were identified the original plan did not address — including two cannabis-specific binary checks that can each be the single biggest rank mover when broken, and a NAP audit scope expansion that builds directly on Pillar 1's audit fix.</b></p>
+
+  <div class="card alert" style="margin-bottom: 20px;">
+    <b>Cannabis-specific hot-takes (apply to Euphoria).</b>
+    <ul style="margin-top:8px; padding-left: 22px;">
+      <li><b>Default Dutchie iframe is a critical bug, not a feature.</b> Pillar 1 caught the San Diego footer NAP issue — but if <code>euphoriawellness.com/menu</code> is iframe-loaded, every product URL is invisible to Google regardless of NAP integrity. Cannabis Creative + CannaPlanners consensus: this is the single highest-leverage cannabis-specific SEO fix available.</li>
+      <li><b>The age-gate is a stealth indexation killer.</b> If implemented client-side without a Googlebot allowlist, the homepage Google crawls is the empty age-verification page — not "first licensed dispensary in Las Vegas" content. Verify in server logs.</li>
+      <li><b>NAP exact-match across all properties drives a documented +23% local-pack rank lift</b> (Citation Building Group). Pillar 1 audited the website footer — Foundation extends to Weedmaps, Leafly, Yelp, BBB, Bing, Apple Maps, Foursquare, and 5+ NV cannabis directories.</li>
+      <li><b>Weedmaps + Leafly are NAP nodes + traffic drivers, not local-pack rank competitors</b> (aggregators can't appear in the pack). In NV, vertical platforms often drive comparable traffic to non-branded organic; Euphoria forfeits the largest cannabis-vertical multiplier if absent.</li>
+    </ul>
+  </div>
+
+  <h3>The 14-Lever Closure Matrix</h3>
+  <p>Evidence-weighted by Whitespark 2026 LSRF (proximity ~55%, GBP signals ~32%, on-page ~19%, reviews 16-20% rising). Cannabis-binary checks lead because each can be the single biggest rank mover when currently broken. <b>Vegas-specific weighting:</b> Apple Maps + Bing Places are unusually high-leverage because Strip-area mobile share routes through CarPlay, Siri, and Edge defaults at elevated rates.</p>
+
+  <div class="confidence-matrix">
+    <div class="conf-row head">
+      <div class="seq">#</div>
+      <div class="name">Lever · Baseline → Target · Evidence Citation</div>
+      <div class="target">Method · Tool</div>
+      <div class="target">Confidence</div>
+    </div>
+    <div class="conf-row" style="background:var(--gold-light);">
+      <div class="seq" style="color:var(--red);">F·01</div>
+      <div class="name"><b>Age-gate Googlebot allowlist verification</b> <span class="pill stretch" style="margin-left:6px;">CANNABIS-BINARY</span><br/><span style="font-size:13px;color:var(--gray-700)">Baseline: unknown. Target: server logs confirm Googlebot is served the actual homepage HTML ("first licensed dispensary in Las Vegas" content + H1), not the age-verification interstitial. <b>If currently blocking → +10 to +20 SoLV in 2-4 weeks (binary fix).</b> Source: Cannabis Creative · Whitespark.</span></div>
+      <div class="target">Server log analysis · GSC URL Inspection · "Fetch as Google" via Inspect URL Live</div>
+      <div class="target"><span class="pill high">P0 · ★★★★★ if blocking</span></div>
+    </div>
+    <div class="conf-row" style="background:var(--gold-light);">
+      <div class="seq" style="color:var(--red);">F·02</div>
+      <div class="name"><b>Dutchie iframe → Plus / native menu migration check</b> <span class="pill stretch" style="margin-left:6px;">CANNABIS-BINARY</span><br/><span style="font-size:13px;color:var(--gray-700)">Baseline: Dutchie POS confirmed (per existing Ask 05 / R5 attribution gap discussion); iframe vs Plus/native rendering unverified. Target: every strain + category URL crawlable + indexable + Product schema on parent page. <b>Highest-leverage cannabis-specific fix available.</b> Adjacent benefit: closes Risk R5 (GA4 / Dutchie attribution gap) since cross-domain tracking strengthens with Dutchie Plus deployment.</span></div>
+      <div class="target">Manual page audit (View Source) · Lighthouse SEO check · Schema validator on /menu · GA4 cross-domain config audit</div>
+      <div class="target"><span class="pill high">P0 · ★★★★★ if iframe</span></div>
+    </div>
+    <div class="conf-row">
+      <div class="seq">F·03</div>
+      <div class="name"><b>NAP exact-match audit — extension beyond Pillar 1</b><br/><span style="font-size:13px;color:var(--gray-700)">Pillar 1 corrected the website-footer NAP. Foundation extends the same character-level audit to: GBP, Weedmaps, Leafly, Yelp, BBB, Bing Places, Apple Maps, Foursquare, Las Vegas Review-Journal directory, 5+ NV cannabis directories. Target: 85%+ NAP consistency = <b>documented +23% local-pack rank improvement</b>, realized 4-8 weeks post-cleanup (Citation Building Group · BrightLocal).</span></div>
+      <div class="target">BrightLocal Citation Tracker · Whitespark NAP scan · Manual audit spreadsheet</div>
+      <div class="target"><span class="pill high">P0 · ★★★★★ +23%</span></div>
+    </div>
+    <div class="conf-row">
+      <div class="seq">F·04</div>
+      <div class="name"><b>Primary GBP category verification + 5+ secondary categories</b><br/><span style="font-size:13px;color:var(--gray-700)">Baseline: Pillar 1 references GBP audit but primary category not explicitly confirmed correct. Target: primary = "Cannabis Store" (NV listing); 5-9 secondary categories deployed (Marijuana Dispensary, Delivery Service, Cannabis Delivery, Herb Shop, etc.). <b>Whitespark 2026: primary category is the #2 ranking factor after proximity. +5 to +15 SoLV in 1-3 weeks if currently wrong.</b> Risk amplifier: this directly affects the "cannabis" / "dispensary" KW universe Euphoria is trying to recover.</span></div>
+      <div class="target">GBP dashboard &gt; Info &gt; Categories · Whitespark category research tool</div>
+      <div class="target"><span class="pill high">P0 · ★★★★★ if wrong</span></div>
+    </div>
+    <div class="conf-row">
+      <div class="seq">F·05</div>
+      <div class="name"><b>Weedmaps profile 100% + menu sync + photo cadence + deals</b><br/><span style="font-size:13px;color:var(--gray-700)">Baseline: status unknown. Target: claimed, banner + logo + license # + hours, ≥3 active deals, ≥20 photos all categories, daily Dutchie→Weedmaps menu sync, ≥10 reviews/mo, &lt;48h response time, "first licensed in Las Vegas" prominently in profile description. <b>Major direct traffic driver + NAP node — in NV, Weedmaps often drives traffic comparable to non-branded organic</b> (Lifted Digital · Flowhub).</span></div>
+      <div class="target">Weedmaps for Business · Manual platform audit · Dutchie menu integration check</div>
+      <div class="target"><span class="pill high">P0 · ★★★★ traffic+rank</span></div>
+    </div>
+    <div class="conf-row">
+      <div class="seq">F·06</div>
+      <div class="name"><b>Leafly profile 100% + menu sync + strain-page authority bleed</b><br/><span style="font-size:13px;color:var(--gray-700)">Baseline: status unknown. Target: claimed, full profile, daily Dutchie→Leafly menu sync, strain pages link correctly to Leafly's authority strain DB, "first licensed" trust language deployed. <b>Leafly's strain pages bleed authority to your menu items if linked correctly</b> (Lifted Digital).</span></div>
+      <div class="target">Leafly Biz portal · Manual platform audit</div>
+      <div class="target"><span class="pill high">P0 · ★★★ traffic+rank</span></div>
+    </div>
+    <div class="conf-row">
+      <div class="seq">F·07</div>
+      <div class="name"><b>Apple Maps Connect + Bing Places verified <em>(Vegas-amplified)</em></b><br/><span style="font-size:13px;color:var(--gray-700)">Baseline: presence unknown. Target: claimed + NAP-consistent on both. <b>Vegas-specific weighting:</b> Strip-area tourist mobile routes heavily through CarPlay (Apple Maps default), Siri voice, and Edge default Bing — making this cluster materially more impactful than for non-tourist markets. Apple Maps = ~25% US mobile baseline; tourist Vegas exceeds. Bing = #2 engine + feeds DuckDuckGo + ChatGPT search. Setup is 4 hours each.</span></div>
+      <div class="target">Apple Maps Connect · Bing Places for Business</div>
+      <div class="target"><span class="pill high">P1 · ★★★ +1-3 SoLV (Vegas-amplified)</span></div>
+    </div>
+    <div class="conf-row">
+      <div class="seq">F·08</div>
+      <div class="name"><b>Internal linking — money-page inlink injection ≥5/page</b><br/><span style="font-size:13px;color:var(--gray-700)">Baseline: scattered. Target: every money page (homepage, /delivery, /menu, May tourist-intent + delivery-focused content) receives ≥5 in-content inlinks; anchor diversity (no single anchor &gt;50% of inlinks). <b>Cheapest rank lever after on-page</b> (Whitespark · Moz · Ahrefs).</span></div>
+      <div class="target">Screaming Frog inlink report · Manual link insertion + anchor diversification</div>
+      <div class="target"><span class="pill high">P1 · ★★ +1-3 SoLV</span></div>
+    </div>
+    <div class="conf-row">
+      <div class="seq">F·09</div>
+      <div class="name"><b>Knowledge Panel claim + sameAs schema + "first licensed" entity hook</b><br/><span style="font-size:13px;color:var(--gray-700)">Baseline: KP unmonitored, sameAs missing. Target: KP claimed (Euphoria has strong eligibility — 10-year track record, 2,595 reviews, "first licensed dispensary in Las Vegas" trust signal); deploy <code>sameAs</code> array linking GBP + Weedmaps + Leafly + LinkedIn + Facebook + Instagram + Yelp + LV Review-Journal profile in Organization schema. <b>"First licensed" is a defensible CTR multiplier on every "euphoria wellness" branded query (30-50% of total clicks).</b> Whitespark · Kalicube.</span></div>
+      <div class="target">Manual SERP capture · Google KP claim flow · sameAs in JSON-LD (Organization schema)</div>
+      <div class="target"><span class="pill high">P1 · ★★ brand SERP</span></div>
+    </div>
+    <div class="conf-row">
+      <div class="seq">F·10</div>
+      <div class="name"><b>Backlink baseline + Link Intersect vs. Deep Roots / Planet 13</b><br/><span style="font-size:13px;color:var(--gray-700)">Baseline: unaudited. Target: full Ahrefs audit + 10 high-DR Deep-Roots / Planet-13-only domains identified (the "Deep Roots winning despite less authority" framing in Section 02 is partly a backlink-moat story; F-10 quantifies it). May = baseline + 3 outreach pitches sent (LV chamber, charity, NV cannabis trade body, local press — NOT HARO).</span></div>
+      <div class="target">Ahrefs Site Explorer + Link Intersect · LV chamber / NV trade body / local press prospecting</div>
+      <div class="target"><span class="pill med">P1 · ★★★ +1-3 SoLV/yr</span></div>
+    </div>
+    <div class="conf-row">
+      <div class="seq">F·11</div>
+      <div class="name"><b>Tier-1 citation cleanup + buildout to 30-50 high-quality</b><br/><span style="font-size:13px;color:var(--gray-700)">Baseline: unverified. Target: presence on BBB · Yellow Pages · Foursquare · Data Axle · Localeze · Neustar · LV Review-Journal business directory · 5+ NV cannabis directories. Aggregator data feeds (Foursquare → Apple Maps + others) propagate NAP across long tail. <b>4-8 week timeline for rank impact post-cleanup.</b></span></div>
+      <div class="target">BrightLocal Citation Tracker · Foursquare/Localeze/Data Axle direct submission</div>
+      <div class="target"><span class="pill med">P2 · ★★★★ +5-15%</span></div>
+    </div>
+    <div class="conf-row">
+      <div class="seq">F·12</div>
+      <div class="name"><b>Manual action + disavow audit (defensive)</b><br/><span style="font-size:13px;color:var(--gray-700)">Cannabis is a high-risk vertical for spam-link attacks; one incident can fully de-index. Baseline: never checked. Target: GSC Manual Actions clean; disavow file uploaded covering Ahrefs ≥35-spam-score links.</span></div>
+      <div class="target">GSC &gt; Security &amp; Manual Actions · Ahrefs toxic-link export · Google Disavow Tool</div>
+      <div class="target"><span class="pill med">P2 · defensive</span></div>
+    </div>
+    <div class="conf-row">
+      <div class="seq">F·13</div>
+      <div class="name"><b>CWV field-data baseline + remediation if poor</b><br/><span style="font-size:13px;color:var(--gray-700)">Baseline: CrUX field data unmeasured. Target: LCP &lt;2.5s · INP &lt;200ms · CLS &lt;0.1 on mobile homepage + delivery + menu pages; CrUX shows "Good" on all three. <b>91% of GBP traffic is mobile (per this report) — Vegas tourist-heavy + high mobile share amplifies CWV impact.</b> Track <em>field</em> data, not lab metrics.</span></div>
+      <div class="target">PageSpeed Insights (CrUX field data) · Lighthouse · WebPageTest mobile profile</div>
+      <div class="target"><span class="pill med">P1 if poor / monitor only if good</span></div>
+    </div>
+    <div class="conf-row">
+      <div class="seq">F·14</div>
+      <div class="name"><b>Foundation infrastructure (F1-F18) audit</b><br/><span style="font-size:13px;color:var(--gray-700)">Verify: GA4 conversions configured + bot filter + R5 attribution-gap remediation; GSC verified all variants; Bing Webmaster verified; GTM clean; UTM-tagged GBP website link; CallRail wired into GA4; Local Falcon scan cadence (twice-monthly); Schema validator monitoring; Looker Studio dashboard; annotations log started; SSL + HSTS valid + auto-renew. <b>Closes Risk R5 (GA4 / Dutchie attribution) explicitly.</b></span></div>
+      <div class="target">GA4 / GSC / Bing WMT / GTM consoles · CallRail / Looker Studio · Dutchie GA4 cross-domain config</div>
+      <div class="target"><span class="pill high">P0 (instrumentation)</span></div>
+    </div>
+  </div>
+
+  <h3>Explicitly de-prioritized — and why</h3>
+  <div class="card" style="background:var(--gray-50);border-left:5px solid var(--gray-500);">
+    <ul style="padding-left:22px;">
+      <li><b>AI Overview content rewrites</b> — only 7% of LOCAL queries trigger AI Overviews (Semrush AI Overview Study 2025). AIO triggers cluster on informational queries — not transactional cannabis intent. <b>Tier 3 — defer.</b> AIO presence will be passively monitored under F-14 reporting; we will not invest in content rewrites.</li>
+      <li><b>Algorithm-update site-specific deep attribution for the Discovery -52%</b> — the new evidence is unambiguous: site-specific deep attribution is observation only. The response to any HCU / core update is the same regardless: HCU audit + content refresh + E-E-A-T signals. <b>Calendar awareness is required (covered under F-14 annotations log + alerts); deep attribution is not.</b> Spend energy on the response. The Discovery decline will be tracked at the calendar level (was there a known update ±3 days?) without burning the 1-week analysis project.</li>
+      <li><b>Wikipedia / Wikidata entity creation</b> — Euphoria has stronger notability than most single-location dispensaries ("first licensed in Las Vegas," 10-year track record, press footprint). Wikidata Q-ID is achievable as an extension of F-09; Wikipedia is still likely below the bar. <b>Tier 3 — Wikidata Q-ID conditional add to F-09; Wikipedia skip.</b></li>
+      <li><b>HARO / journalist pitching at scale</b> — high effort, low cannabis yield. Replaced by F-10's local press / chamber / charity / cannabis-trade-association approach.</li>
+      <li><b>ADA / WCAG 2.2 AA</b> — already covered in this strategy; not added to the matrix.</li>
+    </ul>
+  </div>
+
+  <h3>Quantifiable May 2026 outcomes (incremental to the existing pillars)</h3>
+  <ul>
+    <li><b>F-01 + F-02 binary fixes (if currently broken):</b> +10 to +20 SoLV cumulative from age-gate Googlebot allowlist + Dutchie native-menu migration. These are the highest-leverage single fixes available.</li>
+    <li><b>F-03 NAP audit extension + Tier-1 citation cleanup:</b> +23% local-pack rank improvement at 85%+ NAP consistency (Citation Building Group), realized 4-8 weeks post-cleanup. Builds directly on Pillar 1's footer fix.</li>
+    <li><b>F-04 primary category fix (if needed):</b> +5 to +15 SoLV in 1-3 weeks — directly affects the "cannabis" / "dispensary" KW universe that the strategy is trying to recover.</li>
+    <li><b>F-05 + F-06 Weedmaps + Leafly profiles live and synced:</b> projected to add 400-700 incremental visits/month at NV maturity benchmarks.</li>
+    <li><b>F-07 Apple Maps + Bing Places live:</b> captures Strip-area CarPlay routing, Siri voice queries, and Edge-default Bing share that are currently invisible. Vegas-amplified relative to non-tourist markets.</li>
+    <li><b>F-08 internal-linking density established:</b> +1 to +3 SoLV per money page; cumulative across the existing money pages.</li>
+    <li><b>F-09 Knowledge Panel claim + sameAs + "first licensed" entity hook:</b> CTR multiplier on every "euphoria wellness" branded query (30-50% of total clicks).</li>
+    <li><b>F-10 backlink baseline + 3 May outreach pitches:</b> identification + Q3 acquisition pipeline against Deep Roots / Planet 13.</li>
+    <li><b>F-12 disavow file uploaded:</b> eliminates the largest single-incident risk for the domain.</li>
+    <li><b>F-13 CWV field-data baseline:</b> visibility on a confirmed Google ranking signal that has been silent since 2021; Vegas tourist mobile share amplifies impact.</li>
+    <li><b>F-14 instrumentation complete + R5 closed:</b> the GA4 / Dutchie attribution gap stops being an unsolved risk; nothing else is invisible.</li>
+  </ul>
+
+  <h3>How this layer interacts with the existing strategy</h3>
+  <table>
+    <tr><th>Foundation lever</th><th>Reinforces / extends</th></tr>
+    <tr><td>F-01 Age-gate Googlebot allowlist</td><td>Pillar 1 audit — confirms the corrected NAP + content actually reach Googlebot's index</td></tr>
+    <tr><td>F-02 Dutchie iframe → native</td><td>Closes Risk R5 (GA4 / Dutchie attribution gap) explicitly</td></tr>
+    <tr><td>F-03 NAP exact-match extension</td><td>Pillar 1 — extends the same NAP integrity from website footer to every external property</td></tr>
+    <tr><td>F-04 Primary category</td><td>Strategic Bet (Section 02) — directly affects the "cannabis"/"dispensary" KW universe Euphoria is recovering</td></tr>
+    <tr><td>F-05 + F-06 Vertical platforms</td><td>GBP pillar — extends listing hygiene where NV traffic is highest</td></tr>
+    <tr><td>F-07 Apple + Bing</td><td>The "91% of GBP traffic is mobile" framing extends naturally — captures the non-Google slice of Strip-area mobile</td></tr>
+    <tr><td>F-08 Internal linking</td><td>Existing money pages — turns scattered links into a hub-and-spoke structure</td></tr>
+    <tr><td>F-09 KP + sameAs + "first licensed"</td><td>Section 02 / brand authority — converts the "first licensed in Las Vegas" trust signal into entity strength</td></tr>
+    <tr><td>F-10 Backlinks</td><td>Section 02 (Deep Roots competitive analysis) — quantifies the moat; gives a monthly outreach quota</td></tr>
+    <tr><td>F-13 CWV</td><td>Mobile pillar (91% mobile) — confirms a silent rank suppressor visible to Google but not to the team</td></tr>
+    <tr><td>F-14 Infrastructure</td><td>Closes Risk R5 explicitly; underlies the whole strategy — without it nothing is measurable</td></tr>
+  </table>
+
+  <p style="margin-top:24px;color:var(--gray-700);font-size:14px;font-style:italic;">Foundation levers are scoped, scheduled, and assigned in the v3 Execution Playbook under the new <b>🛡️ Foundation</b> department. Phasing follows the Cannabis-Specialist Playbook's <b>Phase 0 Onboarding</b> framework (Day 1–7 instrumentation + audit), with cannabis-binary checks (F-01, F-02) treated as P0 same-week tasks because each can be the single biggest rank mover when broken.</p>
+</section>
+
+<div class="footer">
+  Prepared by Dispenza Dispensary Marketing · May 2026 Strategy · Euphoria Wellness · v3 (Foundation Layer · Evidence-Tiered)<br/>
+  Re-analyzed and evidence-backed 2026-04-30. Foundation Layer added 2026-05-01 (Whitespark 2026 LSRF · BrightLocal · Citation Building Group · Cannabis Creative + CannaPlanners). Questions or edits — Darrell is the point of contact.
+</div>
+
+</div>
+
+</body>
+</html>

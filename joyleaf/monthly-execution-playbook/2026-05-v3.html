@@ -1,0 +1,1595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Joyleaf — May 2026 Dispenza Execution Playbook</title>
+<style>
+  :root{--purple-900:#2E1A47;--purple-700:#5B2A86;--purple-500:#7B3FA8;--purple-100:#F3E8FB;--pink-500:#D63384;--pink-100:#FDE8F2;--gold:#F4B942;--gold-light:#FFF4D6;--green:#2BA84A;--green-100:#E6F6EA;--red:#D64545;--red-100:#FFE8E8;--amber:#E8870C;--amber-100:#FFF1DD;--blue:#2563EB;--blue-100:#DBEAFE;--gray-900:#1F2937;--gray-700:#4B5563;--gray-500:#6B7280;--gray-300:#D1D5DB;--gray-100:#F3F4F6;--gray-50:#F9FAFB;--bg:#FFFFFF}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--gray-900);background:var(--gray-50);line-height:1.55;font-size:15px}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+  header.hero{background:linear-gradient(135deg,var(--purple-900),var(--purple-500));color:#fff;padding:44px 0 36px;border-bottom:6px solid var(--gold)}
+  .hero h1{margin:0 0 8px;font-size:34px;letter-spacing:-.5px;line-height:1.1}
+  .hero .sub{font-size:16px;opacity:.95;margin-bottom:18px;max-width:780px}
+  .hero .meta{display:flex;flex-wrap:wrap;gap:18px 28px;font-size:13px;opacity:.92}
+  .hero .meta b{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.6px;opacity:.75}
+  section{background:#fff;margin:24px 0;padding:28px;border-radius:12px;box-shadow:0 1px 2px rgba(0,0,0,.04),0 1px 3px rgba(0,0,0,.06)}
+  h2{margin:0 0 14px;font-size:22px;color:var(--purple-900);border-left:5px solid var(--pink-500);padding-left:12px}
+  h3{margin:22px 0 8px;font-size:17px;color:var(--purple-700)}
+  h4{margin:14px 0 6px;font-size:13.5px;text-transform:uppercase;letter-spacing:.6px;color:var(--gray-700)}
+  p{margin:8px 0}
+  ul,ol{margin:8px 0;padding-left:22px}
+  li{margin:4px 0}
+  code{background:var(--purple-100);color:var(--purple-900);padding:1px 6px;border-radius:4px;font-size:.9em;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+  pre{background:var(--gray-900);color:#E5E7EB;padding:14px 16px;border-radius:8px;overflow-x:auto;font-size:12.5px;line-height:1.5}
+  pre code{background:transparent;color:inherit;padding:0}
+  table{width:100%;border-collapse:collapse;font-size:13.5px;margin:8px 0}
+  th{background:var(--purple-100);color:var(--purple-900);text-align:left;padding:8px 10px;border-bottom:2px solid var(--purple-500)}
+  td{padding:8px 10px;border-bottom:1px solid var(--gray-300);vertical-align:top}
+  tr:nth-child(even) td{background:var(--gray-50)}
+  .badge{display:inline-block;padding:2px 9px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.3px;vertical-align:middle}
+  .b-p0{background:var(--red-100);color:var(--red)}
+  .b-p1{background:var(--amber-100);color:var(--amber)}
+  .b-p2{background:var(--blue-100);color:var(--blue)}
+  .b-high{background:var(--green-100);color:var(--green)}
+  .b-mod{background:var(--amber-100);color:var(--amber)}
+  .b-stretch{background:var(--red-100);color:var(--red)}
+  .alert{padding:14px 18px;border-radius:8px;margin:14px 0;border-left:5px solid}
+  .alert-critical{background:var(--red-100);border-color:var(--red);color:#7F1D1D}
+  .alert-warn{background:var(--gold-light);border-color:var(--gold);color:#78350F}
+  .alert-info{background:var(--blue-100);border-color:var(--blue);color:#1E3A8A}
+  .alert-good{background:var(--green-100);border-color:var(--green);color:#14532D}
+  .task{border:1px solid var(--gray-300);border-radius:10px;padding:18px 20px;margin:14px 0;background:#fff}
+  .task-p0{border-left:6px solid var(--red)}
+  .task-p1{border-left:6px solid var(--amber)}
+  .task-p2{border-left:6px solid var(--blue)}
+  .task-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px;margin-bottom:8px}
+  .task-id{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;font-weight:700;color:var(--gray-500)}
+  .task-title{font-size:18px;font-weight:700;color:var(--purple-900);flex:1;min-width:0}
+  .task-meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:6px 16px;background:var(--gray-50);padding:10px 12px;border-radius:6px;margin:10px 0;font-size:13px}
+  .task-meta b{font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;color:var(--gray-500);display:block;margin-bottom:1px}
+  .steps{counter-reset:step;list-style:none;padding-left:0;margin:10px 0}
+  .steps li{counter-increment:step;position:relative;padding:8px 12px 8px 42px;margin:4px 0;background:var(--gray-50);border-radius:6px;border:1px solid var(--gray-300)}
+  .steps li::before{content:counter(step);position:absolute;left:10px;top:8px;width:24px;height:24px;background:var(--purple-500);color:#fff;border-radius:50%;text-align:center;line-height:24px;font-weight:700;font-size:12px}
+  .accept{background:var(--green-100);border:1px solid var(--green);border-radius:6px;padding:10px 14px;margin-top:10px}
+  .accept ul{list-style:none;padding-left:0}
+  .accept li{padding:3px 0 3px 26px;position:relative}
+  .accept li::before{content:"☐";position:absolute;left:0;top:0;font-size:18px;color:var(--green);font-weight:700}
+  .dept-head{background:linear-gradient(90deg,var(--purple-900),var(--purple-500));color:#fff;padding:22px 26px;border-radius:10px;margin:36px 0 14px}
+  .dept-head h2{color:#fff;border-left:5px solid var(--gold);margin:0;font-size:24px}
+  .dept-head .sub{opacity:.9;font-size:14px;margin-top:6px}
+  .dept-head .meta-line{font-size:12.5px;opacity:.85;margin-top:8px}
+  .copy{background:var(--purple-100);border-left:4px solid var(--purple-700);padding:12px 14px;margin:8px 0;border-radius:4px}
+  .copy b.lbl{color:var(--purple-900);text-transform:uppercase;font-size:10.5px;letter-spacing:.6px;display:block;margin-bottom:3px}
+  .copy .why{font-size:12.5px;color:var(--gray-700);margin-top:6px;font-style:italic}
+  .copy .text{font-size:14.5px;line-height:1.45}
+  .reasoning{background:var(--gold-light);border-left:4px solid var(--gold);padding:10px 14px;margin:8px 0;border-radius:4px;font-size:13px}
+  .reasoning b{color:#78350F;text-transform:uppercase;font-size:10.5px;letter-spacing:.6px;display:block;margin-bottom:3px}
+  .toc{background:var(--purple-100);border-radius:8px;padding:14px 20px;margin:14px 0}
+  .toc a{color:var(--purple-700);text-decoration:none;display:inline-block;margin:3px 14px 3px 0;font-size:13.5px;font-weight:600}
+  .toc a:hover{text-decoration:underline}
+  .kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin:8px 0}
+  .kpi{background:var(--gray-50);border-radius:8px;padding:12px;border-left:4px solid var(--purple-500)}
+  .kpi b{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:var(--gray-500)}
+  .kpi .v{font-size:18px;font-weight:700;color:var(--purple-900);margin:2px 0}
+  .kpi .t{font-size:13px;color:var(--gray-700)}
+  footer{text-align:center;padding:28px 0;color:var(--gray-500);font-size:13px}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>Joyleaf — May 2026 Dispenza Execution Playbook</h1>
+    <div class="sub">Department-by-department guide for the Dispenza team. Every task is something <b>we</b> own and ship. Client-side asks are tracked separately by the Account Lead and surface here only as dependencies.</div>
+    <div class="meta">
+      <div><b>Period</b>May 1 – May 31, 2026</div>
+      <div><b>Account Lead</b>Darrell</div>
+      <div><b>Departments</b>Dev · Content · GBP · Design · SEO/Analytics</div>
+      <div><b>Final Measurement</b>Local Falcon scan · May 31</div>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+<section>
+  <h2>How to use this playbook</h2>
+  <p>Find your department section. Work top-down — within each department tasks are listed in <b>impact priority</b> (highest leverage first). Every task has: deadline, time estimate, dependencies, click-by-click steps, the <b>exact copy to publish</b>, and acceptance criteria.</p>
+  <p>If you cannot tick every acceptance box, the task is not done.</p>
+  <div class="toc">
+    <a href="#path">Critical-path overview</a>
+    <a href="#foundation">🛡 Foundation Layer</a>
+    <a href="#dev">🛠 Web Development</a>
+    <a href="#content">✍️ Content / Copywriting</a>
+    <a href="#gbp">📍 GBP / Local Listings</a>
+    <a href="#design">🎨 Design</a>
+    <a href="#seo">📊 SEO / Analytics</a>
+    <a href="#lead">🤝 Account Lead</a>
+    <a href="#copy">📋 Master Copy Library</a>
+    <a href="#calendar">📅 May Calendar</a>
+    <a href="#kpis">🎯 KPI Targets</a>
+  </div>
+</section>
+
+<section id="path">
+  <h2>Critical-path overview</h2>
+  <div class="alert alert-critical">
+    <b>Hard deadline: May 3 deploy.</b> Pillar 1 (homepage H1, location-page H1, both meta titles, LocalBusiness schema) must ship by EOD Saturday May 3. Every day past May 3 burns post-deploy crawl time before the May 31 measurement.
+  </div>
+  <table>
+    <tr><th>Date</th><th>Must be live</th><th>Owning department</th></tr>
+    <tr><td>May 1</td><td>"Offers delivery" GBP attribute on · 8 GBP Q&amp;A pairs posted · QR insert delivered to Joyleaf</td><td>GBP · Design</td></tr>
+    <tr><td><b>May 3</b></td><td>Homepage H1 · location-page H1 · both meta titles · LocalBusiness JSON-LD schema</td><td>Dev</td></tr>
+    <tr><td>May 5</td><td>Mother's Day blog live</td><td>Content · Dev</td></tr>
+    <tr><td>May 11</td><td>Roselle Park hyperlocal page live</td><td>Content · Dev</td></tr>
+    <tr><td>May 12</td><td>First-Timer's Guide blog live</td><td>Content</td></tr>
+    <tr><td>May 19</td><td>Memorial Day BBQ blog live</td><td>Content</td></tr>
+    <tr><td>May 26</td><td>Spring Strain Picks blog · Elizabeth hyperlocal page live</td><td>Content · Dev</td></tr>
+    <tr><td>May 28</td><td>Camino + Doinks brand pages · footer "Featured Brands" links sitewide</td><td>Content · Dev</td></tr>
+    <tr><td><b>May 31</b></td><td>Local Falcon scan · all KPIs assessed · May report drafted</td><td>SEO / Analytics</td></tr>
+  </table>
+</section>
+
+<div class="dept-head" id="foundation">
+  <h2>🛡 Department: Foundation Layer</h2>
+  <div class="sub">14 tasks. Closes the evidence-tiered gaps identified in Section 11 of the v3 Strategy Report. Two cannabis-binary checks (FND-01 + FND-02) lead — each can be the single biggest rank mover when broken. The remaining 12 tasks build the foundation underneath every Pillar 1–6 deploy.</div>
+  <div class="meta-line">Tools: server logs · GSC URL Inspection · BrightLocal · Whitespark · Ahrefs · PageSpeed Insights (CrUX) · Lighthouse · Apple Maps Connect · Bing Places · Weedmaps for Business · Leafly Biz · Google KP claim · Looker Studio</div>
+</div>
+
+<div class="alert alert-warn">
+  <b>Phasing.</b> FND-01 + FND-02 (cannabis-binary) ship in Week 1 alongside the Pillar 1 May 3 deploy — they are higher-priority than any non-cannabis-binary task. FND-03 + FND-04 (NAP audit + GBP primary category) ship Week 1. FND-05 through FND-09 ship Week 2. FND-10 through FND-14 ship Weeks 3–4. Acceptance must close before May 31.
+</div>
+
+<div class="task task-p0">
+  <div class="task-head"><span class="task-id">FND-01</span><span class="task-title">Verify age-gate Googlebot allowlist (cannabis-binary)</span><span class="badge b-p0">P0</span><span class="badge b-high">★★★★★ if blocking</span></div>
+  <p>If the age-gate is implemented client-side without a Googlebot allowlist, the homepage Google crawls is the empty age-verification interstitial — not the new H1 from DEV-01. Every Pillar 1 deploy is wasted if this is broken. <b>Single biggest rank mover when broken.</b></p>
+  <div class="task-meta">
+    <div><b>Owner</b>SEO/Analytics + Dev</div>
+    <div><b>Deadline</b>EOD May 5</div>
+    <div><b>Time</b>2 hrs</div>
+    <div><b>Expected lift if broken</b>+10 to +20 SoLV</div>
+  </div>
+  <h4>Steps</h4>
+  <ol class="steps">
+    <li>In GSC, run <b>URL Inspection</b> on <code>https://joyleaf.com/</code>. Click <b>"Test live URL"</b> → after the test runs, click <b>"View tested page"</b> → switch to the <b>HTML</b> tab.</li>
+    <li>Search for the new H1 ("Roselle's Trusted Cannabis Dispensary") and the LocalBusiness JSON-LD <code>&lt;script&gt;</code> block. Both must be present in the rendered HTML Google sees.</li>
+    <li>If either is missing, the age-gate is blocking Googlebot. Pull joyleaf.com server access logs for the last 7 days. Filter for <code>User-Agent</code> matching <code>Googlebot</code>.</li>
+    <li>For each Googlebot request to <code>/</code>, confirm the response served the actual page HTML (200 status, ~30-100KB body). If the response is the lightweight age-gate page (small body, redirect, or interstitial JS-only response), the allowlist is missing.</li>
+    <li>If broken: implement a server-side Googlebot allowlist. The pattern is: detect <code>Googlebot|Bingbot|DuckDuckBot</code> in <code>User-Agent</code>; if matched, bypass the age-gate cookie/session check and serve the full page.</li>
+    <li>Deploy. Re-run URL Inspection. Confirm the H1 + schema are visible in the rendered HTML tab.</li>
+    <li>Submit homepage + <code>/dispensary-location</code> URLs in GSC for re-indexing.</li>
+  </ol>
+  <div class="reasoning"><b>Why this matters</b> Cannabis Creative + Whitespark consensus: the age-gate is the most common stealth indexation killer in cannabis. Joyleaf may already have this configured correctly — if so, FND-01 closes in Step 2 (verify pass). If not, fixing it is the highest-leverage single change in May.</div>
+  <div class="accept"><b>Acceptance criteria</b><ul>
+    <li>GSC URL Inspection live test of <code>joyleaf.com/</code> shows the new H1 and LocalBusiness JSON-LD in the rendered HTML.</li>
+    <li>Server logs for the last 7 days show Googlebot receives 200 responses with full page bodies (not the age-gate interstitial).</li>
+    <li>If a fix was deployed, re-run after deploy and confirm the rendered HTML now includes the H1 + schema.</li>
+    <li>Homepage + location URLs submitted for re-indexing.</li>
+  </ul></div>
+</div>
+
+<div class="task task-p0">
+  <div class="task-head"><span class="task-id">FND-02</span><span class="task-title">Audit Dutchie iframe vs. Plus / native menu (cannabis-binary)</span><span class="badge b-p0">P0</span><span class="badge b-high">★★★★★ if iframe</span></div>
+  <p>If <code>joyleaf.com/menu</code> (or <code>/shop</code>) is iframe-loaded via the default Dutchie embed, every product page is invisible to Google. Cannabis Creative + CannaPlanners consensus: <b>highest-leverage cannabis-specific SEO fix available.</b></p>
+  <div class="task-meta">
+    <div><b>Owner</b>SEO/Analytics + Dev</div>
+    <div><b>Deadline</b>Audit EOD May 8 · Migration plan EOD May 31</div>
+    <div><b>Time</b>4 hrs audit + variable migration</div>
+    <div><b>Expected lift if iframe</b>+10 to +20 SoLV (post-migration)</div>
+  </div>
+  <h4>Steps</h4>
+  <ol class="steps">
+    <li>Open <code>joyleaf.com/menu</code> (or whichever URL serves the Dutchie menu). View page source (right-click → View Page Source — NOT Inspect).</li>
+    <li>Search source for <code>&lt;iframe</code>. If found, look at the <code>src</code> — if it points to <code>dutchie.com</code> or a Dutchie subdomain, the menu is iframe-loaded and the products are invisible to Google.</li>
+    <li>Run the URL through Lighthouse (Chrome DevTools → Lighthouse → SEO audit). The "Page has no robots tag" + "Document has a meta description" + "Links have descriptive text" tests will surface menu-content issues if the iframe is the only source of product info.</li>
+    <li>Run Schema validator on the parent <code>/menu</code> page. If no <code>Product</code> schema is detected, the products are invisible to Google's structured-data layer.</li>
+    <li>Document the finding in <code>FND-02-dutchie-audit.md</code> in the Joyleaf project folder. Include: iframe present (Y/N), iframe src, parent-page Product-schema present (Y/N), Lighthouse SEO score, recommended remediation path.</li>
+    <li>If iframe-loaded: prepare a migration recommendation — Option A: enable Dutchie Plus (Dutchie's SEO-friendly menu product, ~1-line config + paid tier); Option B: build a native menu sourced from Dutchie's API. Quote both; loop in Account Lead.</li>
+    <li>If already migrated to Dutchie Plus or native: confirm Product schema is present on parent page; close FND-02 as already-good.</li>
+  </ol>
+  <div class="reasoning"><b>Why this matters</b> Joyleaf's strain catalog represents a substantial long-tail KW universe ("[strain name] near me", "[strain name] roselle nj"). If the menu is iframe-loaded, none of that traffic is reachable. The Dutchie Plus migration is the single highest-leverage cannabis-vertical fix; it pays for itself in 90 days for any dispensary with material strain-level search volume.</div>
+  <div class="accept"><b>Acceptance criteria</b><ul>
+    <li>FND-02-dutchie-audit.md committed to project folder with audit findings.</li>
+    <li>If iframe-loaded: Account Lead has the migration recommendation + price quote in hand by May 31.</li>
+    <li>If already Dutchie Plus / native: Product schema confirmed present on parent /menu page; documented as already-resolved.</li>
+  </ul></div>
+</div>
+
+<div class="task task-p0">
+  <div class="task-head"><span class="task-id">FND-03</span><span class="task-title">NAP exact-match audit across all properties</span><span class="badge b-p0">P0</span><span class="badge b-high">★★★★★ +23%</span></div>
+  <p>+23% local-pack rank improvement at 85%+ NAP consistency (Citation Building Group · BrightLocal). Pillar 1 ships the LocalBusiness schema NAP — Foundation extends the same character-level audit to every external property.</p>
+  <div class="task-meta">
+    <div><b>Owner</b>SEO/Analytics</div>
+    <div><b>Deadline</b>Audit EOD May 7 · Cleanup EOD May 28</div>
+    <div><b>Time</b>4 hrs audit + 6 hrs cleanup</div>
+    <div><b>Expected lift</b>+23% local-pack rank (4-8 wks post-cleanup)</div>
+  </div>
+  <h4>Steps</h4>
+  <ol class="steps">
+    <li>Define the canonical NAP exactly (must match the LocalBusiness schema deployed in DEV-04 + the GBP listing): <b>Joyleaf Weed Dispensary · 711 E 1st Ave · Roselle, NJ 07203 · +1 (908) 287-5414</b>. Capture this in <code>FND-03-canonical-nap.md</code>.</li>
+    <li>Run a BrightLocal Citation Tracker scan against <code>joyleaf.com</code> + canonical NAP. Export the listing-by-listing NAP report.</li>
+    <li>Manually verify these 8 high-priority properties (BrightLocal may miss cannabis-specific): website footer, GBP, Weedmaps (when claimed in FND-05), Leafly (when claimed in FND-06), Yelp, BBB, Bing Places (FND-07), Apple Maps (FND-07), Foursquare.</li>
+    <li>Build <code>FND-03-nap-audit.csv</code> with columns: property, current name, current address, current phone, exact-match? (Y/N), drift type. Flag every drift.</li>
+    <li>For each drift, claim the listing (if not claimed) and submit a NAP correction. Track edit-submission dates.</li>
+    <li>Set up a monthly recurring scan in BrightLocal so drift gets surfaced going forward.</li>
+  </ol>
+  <div class="reasoning"><b>Why this matters</b> "Suite" vs "Ste", a missing dash in the phone number, "1st" vs "First" — every drift suppresses local-pack rank. The +23% lift documented by Citation Building Group is the single biggest non-cannabis-binary number on the entire foundation list. Cleanup in May means rank impact realized 4-8 weeks later — June/July tailwind.</div>
+  <div class="accept"><b>Acceptance criteria</b><ul>
+    <li>Canonical NAP documented + matches LocalBusiness schema + matches GBP listing.</li>
+    <li>FND-03-nap-audit.csv committed with all 8+ properties scored.</li>
+    <li>Every drift has a correction submitted by May 28.</li>
+    <li>Monthly recurring BrightLocal scan configured.</li>
+  </ul></div>
+</div>
+
+<div class="task task-p0">
+  <div class="task-head"><span class="task-id">FND-04</span><span class="task-title">Verify GBP primary category + deploy 5+ secondary</span><span class="badge b-p0">P0</span><span class="badge b-high">★★★★★ if wrong</span></div>
+  <p>Whitespark 2026: primary category is the <b>#2 ranking factor after proximity</b>. +5 to +15 SoLV in 1-3 weeks if currently wrong.</p>
+  <div class="task-meta">
+    <div><b>Owner</b>GBP / Local Listings</div>
+    <div><b>Deadline</b>EOD May 5</div>
+    <div><b>Time</b>1 hr</div>
+    <div><b>Expected lift</b>+5 to +15 SoLV if currently wrong</div>
+  </div>
+  <h4>Steps</h4>
+  <ol class="steps">
+    <li>Log into the GBP dashboard (business.google.com). Open Joyleaf's listing → <b>Edit profile</b> → <b>Business information</b> → <b>Categories</b>.</li>
+    <li>Confirm primary category is <b>"Cannabis store"</b> (US listing) or <b>"Marijuana dispensary"</b>. Note: GBP has both; "Cannabis store" is the modern primary preferred for legal recreational dispensaries in NJ.</li>
+    <li>If primary is wrong (anything other than these two), record the current value, then change to <b>"Cannabis store"</b>. Save.</li>
+    <li>Add secondary categories (up to 9 total). Recommended for Joyleaf: Marijuana dispensary, Delivery service, Herb shop, Vaporizer store, CBD store, Alternative medicine practitioner. Save.</li>
+    <li>Wait 24 hours, then re-run the listing's Local Falcon scan and compare SoLV to the April 3 baseline. Lift typically appears in 1-3 weeks.</li>
+  </ol>
+  <div class="copy">
+    <b class="lbl">Primary category — must equal exactly</b>
+    <div class="text">Cannabis store</div>
+    <b class="lbl" style="margin-top:8px">Secondary categories — paste these in order</b>
+    <div class="text">Marijuana dispensary · Delivery service · Herb shop · Vaporizer store · CBD store · Alternative medicine practitioner</div>
+    <div class="why">Why this works: "Cannabis store" is the broad-category match Google has trained heaviest on for dispensaries; "Marijuana dispensary" as secondary captures the still-common consumer query. The remaining secondaries cover delivery, accessory, and CBD-curious traffic without diluting the primary signal.</div>
+  </div>
+  <div class="accept"><b>Acceptance criteria</b><ul>
+    <li>Primary category verified or set to "Cannabis store".</li>
+    <li>5-9 secondary categories deployed.</li>
+    <li>Change saved and confirmed in GBP dashboard.</li>
+    <li>Local Falcon scan run 24 hours after change; result captured for May 31 comparison.</li>
+  </ul></div>
+</div>
+
+<div class="task task-p0">
+  <div class="task-head"><span class="task-id">FND-05</span><span class="task-title">Weedmaps profile 100% + menu sync + photo cadence + deals</span><span class="badge b-p0">P0</span><span class="badge b-high">★★★★ traffic+rank</span></div>
+  <p>In NJ, Weedmaps often drives traffic comparable to non-branded organic. NAP node + reviews node + direct-traffic source.</p>
+  <div class="task-meta">
+    <div><b>Owner</b>GBP / Local Listings</div>
+    <div><b>Deadline</b>Profile complete EOD May 14 · Cadence ongoing</div>
+    <div><b>Time</b>1 day initial + 2 hrs/wk</div>
+    <div><b>Expected lift</b>200-400 incremental visits/mo at NJ maturity</div>
+  </div>
+  <h4>Steps</h4>
+  <ol class="steps">
+    <li>Verify claim status at <code>weedmaps.com/dispensaries</code> → search "Joyleaf Roselle". If unclaimed, claim via Weedmaps for Business and verify license #.</li>
+    <li>Banner + logo: upload high-res Joyleaf branding (banner ≥ 1500×500, logo ≥ 500×500, transparent PNG).</li>
+    <li>Profile fields: hours (match GBP exactly), license number, address (canonical NAP from FND-03), phone, "About" description (paste copy below).</li>
+    <li>Photos: upload ≥20 across categories (interior, exterior, products, team). Cannabis-rule: <b>no pricing in imagery.</b></li>
+    <li>Deals: configure ≥3 active deals at all times. Mirror Joyleaf's GBP offer cadence.</li>
+    <li>Menu sync: Configure Dutchie → Weedmaps menu integration. Test that products appear within 24 hrs of POS update. (If FND-02 reveals iframe-only Dutchie, escalate menu-sync feasibility.)</li>
+    <li>Set review-response SLA: ≤48 hours, varied response language.</li>
+  </ol>
+  <div class="copy">
+    <b class="lbl">Weedmaps "About" description — paste verbatim</b>
+    <div class="text">Joyleaf Dispensary is Roselle, New Jersey's trusted cannabis dispensary — proudly serving Roselle, Roselle Park, Cranford, Linden, and Elizabeth with curbside pickup and in-store shopping. Stop by 711 E 1st Ave for premium flower, vapes, edibles, concentrates, and pre-rolls from leading New Jersey cultivators. Friendly, knowledgeable budtenders. 21+ only.</div>
+    <div class="why">Why this works: Leads with the geo + category exact-match, surfaces the canonical NAP street address (matches FND-03), enumerates the delivery cities Joyleaf serves (mirrors LocalBusiness schema areaServed array), and lists the SKU categories with weight on cannabis terminology. 21+ at the end satisfies cannabis-vertical compliance.</div>
+  </div>
+  <div class="accept"><b>Acceptance criteria</b><ul>
+    <li>Profile claimed + verified + license # uploaded.</li>
+    <li>Banner, logo, hours, license, NAP all populated and match canonical NAP.</li>
+    <li>≥20 photos uploaded across all categories. No pricing visible.</li>
+    <li>≥3 active deals live.</li>
+    <li>Dutchie → Weedmaps menu sync verified (or escalation noted if blocked by FND-02).</li>
+    <li>Review-response SLA documented + first 5 reviews responded within 48 hrs.</li>
+  </ul></div>
+</div>
+
+<div class="task task-p0">
+  <div class="task-head"><span class="task-id">FND-06</span><span class="task-title">Leafly profile 100% + menu sync + strain-page authority bleed</span><span class="badge b-p0">P0</span><span class="badge b-high">★★★ traffic+rank</span></div>
+  <p>Leafly's strain pages bleed authority to your menu items if linked correctly.</p>
+  <div class="task-meta">
+    <div><b>Owner</b>GBP / Local Listings</div>
+    <div><b>Deadline</b>Profile complete EOD May 14 · Cadence ongoing</div>
+    <div><b>Time</b>1 day initial + 2 hrs/wk</div>
+    <div><b>Expected lift</b>NAP node + strain-authority bleed</div>
+  </div>
+  <h4>Steps</h4>
+  <ol class="steps">
+    <li>Verify claim status at <code>leafly.com/dispensary-info</code>. If unclaimed, claim via Leafly Biz portal.</li>
+    <li>Profile fields + photos + hours + license — same standard as FND-05 Weedmaps.</li>
+    <li>Configure Dutchie → Leafly menu sync. Confirm strain pages link via Leafly's strain-DB to the corresponding strain article (e.g., "Blue Dream" on Joyleaf's menu → links to leafly.com/strains/blue-dream).</li>
+    <li>Apply the "About" description from FND-05 (Leafly accepts the same copy).</li>
+    <li>Set review-response SLA ≤48 hours.</li>
+  </ol>
+  <div class="accept"><b>Acceptance criteria</b><ul>
+    <li>Profile claimed + 100% complete.</li>
+    <li>Menu sync verified — at least 5 strains correctly link to Leafly's strain DB.</li>
+    <li>Review-response SLA documented + first 5 reviews responded within 48 hrs.</li>
+  </ul></div>
+</div>
+
+<div class="task task-p1">
+  <div class="task-head"><span class="task-id">FND-07</span><span class="task-title">Apple Maps Connect + Bing Places verified</span><span class="badge b-p1">P1</span><span class="badge b-mod">★★★ +1-3 SoLV</span></div>
+  <p>Apple Maps = ~25% US mobile (CarPlay, Siri, Edge default). Bing = #2 engine + feeds DuckDuckGo + ChatGPT search. 4 hrs each, ROI heavily favors doing both.</p>
+  <div class="task-meta">
+    <div><b>Owner</b>GBP / Local Listings</div>
+    <div><b>Deadline</b>EOD May 17</div>
+    <div><b>Time</b>8 hrs total</div>
+    <div><b>Expected lift</b>+1-3 SoLV + non-Google mobile capture</div>
+  </div>
+  <h4>Steps</h4>
+  <ol class="steps">
+    <li><b>Apple Maps:</b> Visit <code>mapsconnect.apple.com</code>. Sign in with Apple ID. Add Joyleaf as a business; verify ownership via phone or email; submit.</li>
+    <li>Apple profile: paste canonical NAP (FND-03), GBP-matching hours, ≤10 photos, About description (use FND-05 copy adapted for Apple's 200-char limit if needed).</li>
+    <li><b>Bing Places:</b> Visit <code>bingplaces.com</code>. Sign in or create. Import from Google option will pre-fill fields from GBP — use it, then verify the import is exact-match canonical NAP.</li>
+    <li>Bing profile: confirm hours, photos, description, categories. Submit verification.</li>
+    <li>Set 7-day calendar reminders to re-check verification status (Apple's 1-2 week SLA; Bing typically faster).</li>
+    <li>Once both are live, run a manual SERP check (incognito, location-set to Roselle NJ) on each engine for "dispensary near me" — confirm Joyleaf appears.</li>
+  </ol>
+  <div class="accept"><b>Acceptance criteria</b><ul>
+    <li>Apple Maps listing verified + appearing in Apple Maps search for "dispensary near me" within Roselle, NJ.</li>
+    <li>Bing Places listing verified + appearing in Bing search for "dispensary near me" within Roselle, NJ.</li>
+    <li>NAP exact-match confirmed on both vs. canonical from FND-03.</li>
+  </ul></div>
+</div>
+
+<div class="task task-p1">
+  <div class="task-head"><span class="task-id">FND-08</span><span class="task-title">Internal linking — money-page inlink injection ≥5/page</span><span class="badge b-p1">P1</span><span class="badge b-mod">★★ +1-3 SoLV</span></div>
+  <p>Cheapest rank lever after on-page. Every money page (homepage, /dispensary-location, May hyperlocals, brand pages) needs ≥5 in-content inlinks from existing relevant content.</p>
+  <div class="task-meta">
+    <div><b>Owner</b>SEO/Analytics + Dev</div>
+    <div><b>Deadline</b>Audit EOD May 14 · Injection EOD May 28</div>
+    <div><b>Time</b>1 day audit + 4 hrs/page injection</div>
+    <div><b>Expected lift</b>+1 to +3 SoLV per money page</div>
+  </div>
+  <h4>Steps</h4>
+  <ol class="steps">
+    <li>Run a Screaming Frog crawl of joyleaf.com. Export the inlinks report (Bulk Export → All Inlinks).</li>
+    <li>Build <code>FND-08-money-page-inlinks.csv</code> listing every money page (homepage, /dispensary-location, /roselle-park, /elizabeth, /camino, /doinks, key blog posts) and its current in-content inlink count.</li>
+    <li>For every page below 5 inlinks: identify 5+ existing pieces of content (other blogs, hyperlocal pages, brand pages) where a contextual inlink to the under-linked page makes editorial sense.</li>
+    <li>Inject the inlinks. Use varied anchor text — no anchor &gt;50% concentration on a single phrase.</li>
+    <li>Re-crawl after the deploy. Confirm every money page has ≥5 in-content inlinks (header/footer/nav links don't count toward the 5).</li>
+  </ol>
+  <div class="reasoning"><b>Why this matters</b> Joyleaf's hyperlocal pages (Roselle Park, Elizabeth) and brand pages (Camino, Doinks) ship in May. Without inlink density, they enter the index isolated — months until they earn rank. ≥5 contextual inlinks at launch shortens that to weeks.</div>
+  <div class="accept"><b>Acceptance criteria</b><ul>
+    <li>FND-08-money-page-inlinks.csv committed.</li>
+    <li>Every money page has ≥5 in-content inlinks (excluding header/footer/nav).</li>
+    <li>No single anchor text concentration &gt;50% per money page.</li>
+  </ul></div>
+</div>
+
+<div class="task task-p1">
+  <div class="task-head"><span class="task-id">FND-09</span><span class="task-title">Knowledge Panel claim + sameAs schema enrichment</span><span class="badge b-p1">P1</span><span class="badge b-mod">★★ brand SERP</span></div>
+  <p>Branded queries = 30-50% of total clicks for established dispensaries. KP claim + sameAs makes every "joyleaf" SERP a CTR multiplier.</p>
+  <div class="task-meta">
+    <div><b>Owner</b>SEO/Analytics + Dev</div>
+    <div><b>Deadline</b>EOD May 21</div>
+    <div><b>Time</b>1 day</div>
+    <div><b>Expected lift</b>CTR multiplier on branded queries</div>
+  </div>
+  <h4>Steps</h4>
+  <ol class="steps">
+    <li>Run an incognito search for "joyleaf dispensary" + "joyleaf weed dispensary roselle nj". If a Knowledge Panel appears (right side on desktop / above results on mobile), proceed to step 2. If no KP, the entity threshold isn't met yet — Q3 retry after F-10 backlinks land.</li>
+    <li>Click the small <b>"Claim this knowledge panel"</b> link at the bottom of the KP. Sign in with the Google account that owns the GBP. Verify ownership via the existing GBP verification path.</li>
+    <li>Once claimed, you can submit feedback / corrections directly. Confirm the panel reflects the canonical NAP, hours, and review count.</li>
+    <li>Extend the LocalBusiness schema deployed in DEV-04 with a <code>sameAs</code> array. Paste the JSON below into the schema's top level.</li>
+    <li>Re-deploy the schema. Validate via Rich Results Test. Submit homepage for re-indexing in GSC.</li>
+  </ol>
+  <div class="copy">
+    <b class="lbl">sameAs JSON-LD addition — paste inside the Store/LocalBusiness object</b>
+<pre><code>"sameAs": [
+  "https://www.facebook.com/joyleafnj",
+  "https://www.instagram.com/joyleafdispensary",
+  "https://www.weedmaps.com/dispensaries/joyleaf-dispensary",
+  "https://www.leafly.com/dispensary-info/joyleaf",
+  "https://www.yelp.com/biz/joyleaf-dispensary-roselle",
+  "https://www.linkedin.com/company/joyleaf-dispensary"
+]</code></pre>
+    <div class="why">Why this works: sameAs is the schema field Google uses to confirm an entity is the same across the web. Each URL is a verification pivot — Google reads them, confirms the entity match, and strengthens the knowledge graph for "Joyleaf Dispensary." This is how single-location dispensaries earn knowledge-panel reliability.</div>
+  </div>
+  <div class="accept"><b>Acceptance criteria</b><ul>
+    <li>If KP exists: claim submitted + verified.</li>
+    <li>sameAs array deployed in production schema.</li>
+    <li>Rich Results Test reports zero schema errors.</li>
+    <li>Homepage submitted for re-indexing.</li>
+  </ul></div>
+</div>
+
+<div class="task task-p1">
+  <div class="task-head"><span class="task-id">FND-10</span><span class="task-title">Backlink baseline + Link Intersect vs. competitors</span><span class="badge b-p1">P1</span><span class="badge b-mod">★★★ +1-3 SoLV/yr</span></div>
+  <p>Identification + Q3 acquisition pipeline. May = baseline + 3 outreach pitches sent.</p>
+  <div class="task-meta">
+    <div><b>Owner</b>SEO/Analytics + Account Lead</div>
+    <div><b>Deadline</b>Baseline EOD May 17 · 3 pitches sent EOD May 28</div>
+    <div><b>Time</b>1 day baseline + 4 hrs prospecting</div>
+    <div><b>Expected lift</b>+1-3 SoLV/yr (Q3 realization)</div>
+  </div>
+  <h4>Steps</h4>
+  <ol class="steps">
+    <li>In Ahrefs, open Site Explorer → joyleaf.com. Capture: total RDs, DR, anchor distribution (top 10), toxic links count (spam score ≥35), broken backlinks. Save as <code>FND-10-baseline.md</code>.</li>
+    <li>Run Link Intersect: joyleaf.com vs. breakwatercannabis.com (Roselle Park) vs. apothecarium.com vs. gardenstatedispensary.com. Filter for domains linking to ≥2 competitors but not Joyleaf. Sort by DR descending. Capture the top 15 in <code>FND-10-link-intersect.csv</code>.</li>
+    <li>Filter the 15 prospects by relevance + accessibility: prefer chamber/charity/local-press/cannabis-trade-body domains. Discard generic SEO directories.</li>
+    <li>Pick 3 highest-leverage prospects. Draft outreach pitches (1 paragraph each — see template below).</li>
+    <li>Send pitches via outlet-appropriate channels (chamber: chamber email; charity: sponsorship contact; trade body: membership rep; local press: tip line / editor). Track in <code>FND-10-outreach-log.csv</code>.</li>
+  </ol>
+  <div class="copy">
+    <b class="lbl">Outreach pitch template — Local Press version</b>
+    <div class="text">Subject: Roselle dispensary joining the [neighborhood] community<br/><br/>Hi [Editor name],<br/><br/>Joyleaf Dispensary at 711 E 1st Ave is one of Roselle's most-reviewed local businesses (4.9★ across 2,200+ Google reviews). We're proud to serve the Roselle, Roselle Park, Cranford, Linden, and Elizabeth communities, and we'd love to be part of [outlet]'s community business coverage. We can speak to [topic relevant to outlet — community impact, NJ cannabis market, local employment]. Open to a 15-minute call or a written Q&amp;A — happy to defer to whatever fits your editorial calendar. Thanks for the consideration. — Darrell, Account Lead</div>
+    <div class="why">Why this works: Leads with a verifiable trust signal (review count), then frames the pitch as community-relevant rather than promotional, then gives the editor an easy yes (15-min call or written Q&amp;A). Cannabis Creative + Lifted Digital consensus: local press cares about community angle, not industry-trade angles.</div>
+  </div>
+  <div class="accept"><b>Acceptance criteria</b><ul>
+    <li>FND-10-baseline.md committed with RD count, DR, anchor distribution, toxic count.</li>
+    <li>FND-10-link-intersect.csv with top 15 prospects.</li>
+    <li>3 pitches sent via FND-10-outreach-log.csv.</li>
+  </ul></div>
+</div>
+
+<div class="task task-p2">
+  <div class="task-head"><span class="task-id">FND-11</span><span class="task-title">Tier-1 citation cleanup + buildout to 30-50 high-quality</span><span class="badge b-p2">P2</span><span class="badge b-mod">★★★★ +5-15%</span></div>
+  <p>Aggregator data feeds (Foursquare → Apple Maps + others) propagate NAP across long tail. 4-8 week timeline for rank impact post-cleanup.</p>
+  <div class="task-meta">
+    <div><b>Owner</b>GBP / Local Listings</div>
+    <div><b>Deadline</b>Audit EOD May 21 · Submissions EOD May 31</div>
+    <div><b>Time</b>1 day audit + 1 day submissions</div>
+    <div><b>Expected lift</b>+5-15% rank (4-8 wks post-cleanup)</div>
+  </div>
+  <h4>Steps</h4>
+  <ol class="steps">
+    <li>Pull a BrightLocal Citation Tracker report for joyleaf.com. Export the list of citations + completeness + NAP-consistency.</li>
+    <li>Identify gaps in this Tier-1 set: BBB, Yellow Pages, Foursquare, Data Axle, Localeze, Neustar (these feed aggregators), plus 5+ NJ cannabis directories (Cannabis.net, Where's Weed, Allbud, NJ-specific dispensary directories).</li>
+    <li>For each missing Tier-1 citation, submit using canonical NAP (FND-03). Track in <code>FND-11-citations.csv</code>.</li>
+    <li>For each present-but-NAP-inconsistent citation, submit a correction.</li>
+    <li>Set up monthly recurring BrightLocal scan to flag drift.</li>
+  </ol>
+  <div class="accept"><b>Acceptance criteria</b><ul>
+    <li>Joyleaf present on all 6 aggregator-feed citations (BBB, YP, Foursquare, Data Axle, Localeze, Neustar) with canonical NAP.</li>
+    <li>5+ NJ cannabis directories added.</li>
+    <li>FND-11-citations.csv tracks every submission.</li>
+  </ul></div>
+</div>
+
+<div class="task task-p2">
+  <div class="task-head"><span class="task-id">FND-12</span><span class="task-title">Manual action + disavow audit (defensive)</span><span class="badge b-p2">P2</span><span class="badge b-mod">defensive</span></div>
+  <p>Cannabis is a high-risk vertical for spam-link attacks; one incident can fully de-index. One-time audit + monthly check.</p>
+  <div class="task-meta">
+    <div><b>Owner</b>SEO/Analytics</div>
+    <div><b>Deadline</b>EOD May 24</div>
+    <div><b>Time</b>3 hrs</div>
+    <div><b>Expected lift</b>Eliminates largest single-incident risk</div>
+  </div>
+  <h4>Steps</h4>
+  <ol class="steps">
+    <li>In GSC, open <b>Security &amp; Manual Actions</b> → confirm both report "No issues detected."</li>
+    <li>In Ahrefs, open Site Explorer → joyleaf.com → Backlinks → filter by <b>spam score ≥ 35</b>. Export.</li>
+    <li>For each high-spam link, manually verify: is this a low-quality directory, a hacked site, or a paid-link scheme? Build a <code>disavow.txt</code> with one entry per line: <code>domain:example.com</code>.</li>
+    <li>Upload via Google Disavow Tool (<code>search.google.com/search-console/disavow-links-tool</code>). Save the version + date.</li>
+    <li>Set monthly Ahrefs alert for new high-spam-score links.</li>
+  </ol>
+  <div class="accept"><b>Acceptance criteria</b><ul>
+    <li>GSC Manual Actions confirmed clean.</li>
+    <li>disavow.txt uploaded with toxic links.</li>
+    <li>Monthly Ahrefs alert configured.</li>
+  </ul></div>
+</div>
+
+<div class="task task-p1">
+  <div class="task-head"><span class="task-id">FND-13</span><span class="task-title">CWV field-data baseline (remediate only if poor)</span><span class="badge b-p1">P1 if poor / P2 if good</span><span class="badge b-mod">+1-2 SoLV if remediated</span></div>
+  <p>Confirmed Google ranking signal since 2021. Track <em>field</em> data via CrUX, not lab metrics.</p>
+  <div class="task-meta">
+    <div><b>Owner</b>SEO/Analytics + Dev</div>
+    <div><b>Deadline</b>Baseline EOD May 10 · Remediation EOD May 31 if poor</div>
+    <div><b>Time</b>2 hrs baseline + 1-3 days remediation if needed</div>
+    <div><b>Expected lift</b>+1-2 SoLV if remediated</div>
+  </div>
+  <h4>Steps</h4>
+  <ol class="steps">
+    <li>Run PageSpeed Insights on joyleaf.com homepage + /dispensary-location + May hyperlocals + brand pages. Capture <b>field-data CrUX</b> values for LCP, INP, CLS at 75th percentile mobile. Save as <code>FND-13-cwv-baseline.md</code>.</li>
+    <li>Targets: LCP &lt;2.5s · INP &lt;200ms · CLS &lt;0.1. If all are "Good," close FND-13 as monitor-only (re-check quarterly).</li>
+    <li>If any metric is "Needs Improvement" or "Poor": pull a Lighthouse trace + use WebPageTest mobile profile to identify the bottleneck (image size, JS bundle, third-party script).</li>
+    <li>Build a remediation plan with Dev. Common cannabis-dispensary fixes: lazy-load below-fold images, defer Dutchie iframe (until FND-02 migration), trim unused JS.</li>
+    <li>Deploy + re-measure. CrUX field data updates with a 28-day rolling window — full validation requires waiting that long.</li>
+  </ol>
+  <div class="accept"><b>Acceptance criteria</b><ul>
+    <li>FND-13-cwv-baseline.md committed with all 4+ URLs scored.</li>
+    <li>If all metrics Good: monitor-only schedule logged.</li>
+    <li>If any metric poor: remediation plan committed; deploy by May 31; re-measure scheduled +28 days.</li>
+  </ul></div>
+</div>
+
+<div class="task task-p0">
+  <div class="task-head"><span class="task-id">FND-14</span><span class="task-title">Foundation infrastructure (F1-F18) audit</b></span><span class="badge b-p0">P0</span><span class="badge b-high">instrumentation</span></div>
+  <p>Verify the 18 instrumentation items in the Cannabis-Specialist Playbook. Required to operate — not a rank lever, but invisible failures here cascade.</p>
+  <div class="task-meta">
+    <div><b>Owner</b>SEO/Analytics</div>
+    <div><b>Deadline</b>EOD May 10</div>
+    <div><b>Time</b>1 day</div>
+    <div><b>Expected lift</b>Nothing else is invisible</div>
+  </div>
+  <h4>Steps</h4>
+  <ol class="steps">
+    <li>Audit each of F1–F18 against current state. Build <code>FND-14-infrastructure-audit.csv</code>: column per item, status (✓/✗/partial), remediation owner.</li>
+    <li>F1 GA4: confirm conversions configured (form, call, direction, click-to-menu); IP filter for office IPs; 14+ mo retention; bot share &lt;20%.</li>
+    <li>F2 GSC: verify all variants (www / non-www / http / https / domain property); sitemap submitted; coverage tab clean.</li>
+    <li>F3 Bing Webmaster: verified + sitemap submitted (covered partially in FND-07 step 6).</li>
+    <li>F4 GTM: open container; remove unused tags; version-diff vs last save.</li>
+    <li>F5 UTM: confirm GBP website link is UTM-tagged (<code>?utm_source=gbp&amp;utm_medium=organic&amp;utm_campaign=local-pack</code>).</li>
+    <li>F6 CallRail: confirm wired into GA4 as conversion event.</li>
+    <li>F7 GA4 conversion events: form, call (CallRail), direction, click-to-menu, age-gate completion.</li>
+    <li>F8 Local Falcon scan cadence: confirm twice-monthly (mid + end of month) is scheduled.</li>
+    <li>F9 BrightLocal Citation Tracker: confirm monthly recurring scan (FND-03).</li>
+    <li>F10 Ahrefs: confirm weekly backlink/anchor monitoring + toxic alert (FND-12).</li>
+    <li>F11 Schema validator: confirm Rich Results Test in monthly cadence + GSC Enhancements weekly.</li>
+    <li>F12 Looker Studio: build single dashboard with GA4 + GSC + Local Falcon + GBP Insights + CallRail panels. Daily refresh.</li>
+    <li>F13 Annotations log: shared sheet for deploys/content/algo updates. Backfill May 1–5.</li>
+    <li>F14-F18 (SSL, backups, cookie consent, privacy, compliance): confirm each present + current.</li>
+    <li>Remediation tasks for any ✗ → assign to FND-14 sub-tickets with owners + deadlines.</li>
+  </ol>
+  <div class="accept"><b>Acceptance criteria</b><ul>
+    <li>FND-14-infrastructure-audit.csv committed.</li>
+    <li>Looker Studio dashboard live with all 5 panels.</li>
+    <li>Annotations log started + backfilled to May 1.</li>
+    <li>Every ✗ has an assigned remediation ticket with owner + deadline.</li>
+  </ul></div>
+</div>
+
+<div class="dept-head" id="dev">
+  <h2>🛠 Department: Web Development / Engineering</h2>
+  <div class="sub">11 tasks. Owns every code change on joyleaf.com — H1s, meta titles, schema, hyperlocal pages, brand pages, footer, sitemap. The May 3 deploy is the single highest-leverage tactic in the entire month.</div>
+  <div class="meta-line">Tools: joyleaf.com CMS / dev environment · Google Search Console · Rich Results Test (<code>search.google.com/test/rich-results</code>) · staging URL · sitemap.xml access</div>
+</div>
+
+<div class="task task-p0">
+  <div class="task-head"><span class="task-id">DEV-01</span><span class="task-title">Deploy new homepage H1</span><span class="badge b-p0">P0</span><span class="badge b-high">HIGH CONF.</span></div>
+  <p>The H1 is the heaviest single on-page local-SEO signal (~14% of local-pack ranking weight). Today's H1 stuffs "Weed" between brand and "Dispensary," which suppresses tokenization on "dispensary" — exactly the keyword Joyleaf is trying to recover.</p>
+  <div class="task-meta">
+    <div><b>Deadline</b>EOD May 3</div>
+    <div><b>Time</b>15 min</div>
+    <div><b>Pillar</b>01 — Website Structural Fixes</div>
+    <div><b>Expected lift</b>+5 to +8 SoLV pts on "dispensary"</div>
+  </div>
+  <h4>Steps</h4>
+  <ol class="steps">
+    <li>Pull the homepage template from the joyleaf.com codebase (typically the homepage view in CMS, or <code>index.html</code> + global header partial).</li>
+    <li>Locate the existing H1 element. Replace its content with the exact copy below.</li>
+    <li>Add a subhead element directly below the H1 (semantic <code>&lt;p class="subhead"&gt;</code> or matching design class). The subhead is the brand line so visitors immediately see "Joyleaf Dispensary."</li>
+    <li>Commit, push to staging, smoke-test on the staging URL.</li>
+    <li>Deploy to production. Verify the H1 in browser DevTools (Inspect → Elements → exactly one <code>&lt;h1&gt;</code> element with the new copy).</li>
+    <li>In Search Console, run URL Inspection on <code>joyleaf.com</code> → <b>Request indexing</b>.</li>
+  </ol>
+  <div class="copy">
+    <b class="lbl">H1 — paste verbatim</b>
+    <div class="text">Roselle's Trusted Cannabis Dispensary</div>
+    <b class="lbl" style="margin-top:8px">Subhead — paste verbatim</b>
+    <div class="text">Joyleaf Dispensary</div>
+    <div class="why">Why this works: Leads with the geo-modifier ("Roselle's") which Google reads as a strong local-relevance signal; "Trusted" is a soft trust word that lifts CTR without making a regulated claim; "Cannabis Dispensary" is the exact-match phrase we're trying to rank for. The subhead protects brand recognition for returning visitors without diluting the H1's keyword surface.</div>
+  </div>
+  <div class="accept"><b>Acceptance criteria</b><ul>
+    <li>New H1 visible on joyleaf.com homepage by EOD May 3.</li>
+    <li>Subhead "Joyleaf Dispensary" rendered immediately below or beside H1.</li>
+    <li>Browser inspector confirms a single <code>&lt;h1&gt;</code> tag with exact text.</li>
+    <li>URL submitted for re-indexing in Search Console.</li>
+  </ul></div>
+</div>
+
+<div class="task task-p0">
+  <div class="task-head"><span class="task-id">DEV-02</span><span class="task-title">Deploy new location-page H1 + H2 (resolve cannibalization)</span><span class="badge b-p0">P0</span><span class="badge b-high">HIGH CONF.</span></div>
+  <p>Today, <code>/dispensary-location</code> uses the SAME H1 as the homepage. Google penalizes that — both pages cannibalize each other's relevance.</p>
+  <div class="task-meta">
+    <div><b>Deadline</b>EOD May 3</div>
+    <div><b>Time</b>10 min</div>
+    <div><b>Pillar</b>01</div>
+    <div><b>Expected lift</b>+1 to +3 SoLV pts</div>
+  </div>
+  <ol class="steps">
+    <li>Open the <code>/dispensary-location</code> page template.</li>
+    <li>Replace the H1. Replace the existing H2 ("The Best Weed Dispensary in Roselle, NJ") with the new H2.</li>
+    <li>Deploy. Verify in inspector that the H1 differs from the homepage H1.</li>
+    <li>Submit the URL in Search Console for re-indexing.</li>
+  </ol>
+  <div class="copy">
+    <b class="lbl">H1 — paste verbatim</b>
+    <div class="text">Joyleaf Dispensary — Roselle, NJ</div>
+    <b class="lbl" style="margin-top:8px">H2 — paste verbatim</b>
+    <div class="text">Why Choose Joyleaf Dispensary</div>
+    <div class="why">Why this works: The em-dash + city/state pattern signals to Google "this is the location page for the entity in the H1." It's the canonical pattern Google's local-business templates expect. The H2 ("Why Choose…") frames the section that follows as a value proposition, which is what conversion-rate optimization research consistently finds works on local pages.</div>
+  </div>
+  <div class="accept"><b>Acceptance criteria</b><ul>
+    <li>Location-page H1 differs from homepage H1 (verified in browser inspector).</li>
+    <li>H2 text updated to match.</li>
+    <li>Submitted to Search Console for re-indexing.</li>
+  </ul></div>
+</div>
+
+<div class="task task-p0">
+  <div class="task-head"><span class="task-id">DEV-03</span><span class="task-title">Deploy new homepage + location-page <code>&lt;title&gt;</code> tags</span><span class="badge b-p0">P0</span><span class="badge b-high">HIGH CONF.</span></div>
+  <p>Title tag is the second-heaviest on-page signal. Current homepage title puts brand late and stuffs "Weed" — same tokenization problem as the H1.</p>
+  <div class="task-meta">
+    <div><b>Deadline</b>EOD May 3</div>
+    <div><b>Time</b>10 min</div>
+    <div><b>Pillar</b>01</div>
+    <div><b>Expected lift</b>+2 to +6 SoLV pts (combined)</div>
+  </div>
+  <ol class="steps">
+    <li>Open the global <code>&lt;head&gt;</code> template (or the CMS field labelled "Page Title" / "SEO Title").</li>
+    <li>Replace the homepage title and the location-page title with the exact strings below.</li>
+    <li>Update the meta description on each (use the copy library — see "Master Copy" section).</li>
+    <li>Deploy. View page source on each URL to verify.</li>
+    <li>Use a SERP simulator (e.g. <code>mangools.com/free-seo-tools/serp-simulator</code>) to confirm no truncation under standard 580px / 60-char widths.</li>
+    <li>Submit both URLs for re-indexing.</li>
+  </ol>
+  <div class="copy">
+    <b class="lbl">Homepage <code>&lt;title&gt;</code> — paste verbatim</b>
+    <div class="text">Joyleaf Dispensary | Roselle NJ Cannabis &amp; Delivery</div>
+    <b class="lbl" style="margin-top:8px">Location-page <code>&lt;title&gt;</code> — paste verbatim</b>
+    <div class="text">Visit Joyleaf Dispensary in Roselle, NJ | Hours &amp; Directions</div>
+    <div class="why">Why this works: Brand-first builds CTR for branded queries while the pipe-separated structure surfaces secondary keywords for non-branded queries. The location-page variant uses "Hours &amp; Directions" — the exact phrasing high-intent visitors search when they're ready to convert (not browsing). Both stay safely under 60 chars.</div>
+  </div>
+  <div class="accept"><b>Acceptance criteria</b><ul>
+    <li>Both titles deployed and visible in browser tab + page source.</li>
+    <li>Titles differ from each other (no cannibalization).</li>
+    <li>No truncation in SERP preview.</li>
+    <li>Both URLs submitted for re-indexing.</li>
+  </ul></div>
+</div>
+
+<div class="task task-p0">
+  <div class="task-head"><span class="task-id">DEV-04</span><span class="task-title">Deploy LocalBusiness JSON-LD schema sitewide</span><span class="badge b-p0">P0</span><span class="badge b-high">HIGH CONF.</span></div>
+  <p>Joyleaf has <b>zero JSON-LD schema</b> sitewide today. Schema is the structured signal Google uses for entity disambiguation. The <code>alternateName</code> field tells Google "Joyleaf Dispensary" is a known variant — without changing the GBP name (which would torch the existing "weed" rankings).</p>
+  <div class="task-meta">
+    <div><b>Deadline</b>EOD May 3</div>
+    <div><b>Time</b>20 min</div>
+    <div><b>Pillar</b>01</div>
+    <div><b>Expected lift</b>+2 to +4 SoLV pts</div>
+  </div>
+  <ol class="steps">
+    <li>Add a global footer include / template partial that renders the JSON-LD block on every page (homepage + location page minimum; ideally all pages).</li>
+    <li>Paste the schema below into a <code>&lt;script type="application/ld+json"&gt;...&lt;/script&gt;</code> tag inside the footer or document head.</li>
+    <li>Push to staging, fetch the staging URL, View Source to confirm the script tag is rendered.</li>
+    <li>Validate in Google's Rich Results Test (<code>search.google.com/test/rich-results</code>) — paste staging URL → must report no errors.</li>
+    <li>Deploy to production. Re-run Rich Results Test against production. Re-submit homepage + location-page URLs in Search Console.</li>
+  </ol>
+  <h4>Exact schema (paste verbatim)</h4>
+<pre><code>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "Joyleaf Weed Dispensary",
+  "alternateName": [
+    "Joyleaf Dispensary",
+    "Joyleaf Cannabis Dispensary"
+  ],
+  "url": "https://joyleaf.com",
+  "telephone": "+1-908-287-5414",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "711 E 1st Ave",
+    "addressLocality": "Roselle",
+    "addressRegion": "NJ",
+    "postalCode": "07203"
+  },
+  "openingHours": [
+    "Mo-Sa 09:00-22:00",
+    "Su 09:00-20:00"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "2224"
+  },
+  "areaServed": [
+    "Roselle, NJ",
+    "Roselle Park, NJ",
+    "Cranford, NJ",
+    "Linden, NJ",
+    "Elizabeth, NJ"
+  ]
+}
+&lt;/script&gt;</code></pre>
+  <div class="reasoning"><b>Marketer reasoning</b> Three deliberate choices: (1) <code>name</code> matches the GBP exactly (<i>Joyleaf Weed Dispensary</i>) so Google can confidently match the schema to the GBP listing — that confidence boosts trust. (2) <code>alternateName</code> uses two variants Google has never seen as the canonical name: this is how we feed "cannabis dispensary" relevance into the entity graph without GBP rename risk. (3) <code>areaServed</code> seeds the delivery cities Joyleaf actually serves — these are the exact city names that should appear later in hyperlocal pages and Q&amp;A answers. Consistency across schema, GBP, and on-page content is what Google rewards.</div>
+  <div class="accept"><b>Acceptance criteria</b><ul>
+    <li>Schema present in production HTML (verified via View Source on homepage + location).</li>
+    <li>Rich Results Test reports zero errors / warnings.</li>
+    <li>Search Console &gt; Enhancements shows the LocalBusiness/Store entity within 7 days.</li>
+  </ul></div>
+</div>
+
+<div class="task task-p1">
+  <div class="task-head"><span class="task-id">DEV-05</span><span class="task-title">Build &amp; launch Roselle Park hyperlocal page</span><span class="badge b-p1">P1</span><span class="badge b-high">HIGH CONF.</span></div>
+  <p>Joyleaf's grid weakness is concentrated in the NW quadrant — Breakwater Roselle Park sits 0.7 mi N, which drags every "near me" pin in those rows. A dedicated Roselle Park page with <code>areaServed</code> schema attacks that weakness directly.</p>
+  <div class="task-meta">
+    <div><b>Deadline</b>Live by May 11</div>
+    <div><b>Time</b>2 hr dev (content delivered separately by Content team)</div>
+    <div><b>Pillar</b>03</div>
+    <div><b>Expected lift</b>+5 to +10 SoLV pts on "dispensary near me"</div>
+  </div>
+  <ol class="steps">
+    <li>Create a new page at URL <code>joyleaf.com/roselle-park-dispensary</code>.</li>
+    <li>Use the H1 / title / meta from the Master Copy Library.</li>
+    <li>Pull body copy + FAQ from Content team (CON-05).</li>
+    <li>Add JSON-LD schema (LocalBusiness + FAQPage). Use the schema from DEV-04 as the base, but extend <code>areaServed</code>:
+<pre><code>"areaServed": ["Roselle, NJ", "Roselle Park, NJ", "Cranford, NJ", "Linden, NJ", "Elizabeth, NJ"]</code></pre>
+    </li>
+    <li>Add internal links FROM homepage hero/menu, location page, and at least one blog post. Each link should use anchor text "Roselle Park dispensary" or "dispensary in Roselle Park."</li>
+    <li>Add the new URL to <code>sitemap.xml</code>. Resubmit sitemap in Search Console.</li>
+    <li>Validate FAQPage schema in Rich Results Test. Submit URL via URL Inspection.</li>
+  </ol>
+  <div class="accept"><b>Acceptance criteria</b><ul>
+    <li>Page live and indexed by May 11 (verified via Search Console URL Inspection).</li>
+    <li>FAQPage + LocalBusiness schema validate with no errors.</li>
+    <li><code>areaServed</code> includes "Roselle Park, NJ".</li>
+    <li>Internal links live from homepage and location page.</li>
+    <li>Sitemap updated and resubmitted.</li>
+  </ul></div>
+</div>
+
+<div class="task task-p2">
+  <div class="task-head"><span class="task-id">DEV-06</span><span class="task-title">Build &amp; launch Elizabeth hyperlocal page</span><span class="badge b-p2">P2</span><span class="badge b-mod">MOD CONF.</span></div>
+  <div class="task-meta">
+    <div><b>Deadline</b>Live by May 26</div>
+    <div><b>Time</b>1.5 hr dev (uses DEV-05 template)</div>
+    <div><b>Pillar</b>03</div>
+  </div>
+  <ol class="steps">
+    <li>Clone the Roselle Park page template (DEV-05).</li>
+    <li>Create new URL <code>joyleaf.com/elizabeth-nj/dispensary-near-me/</code>.</li>
+    <li>Swap H1, title, meta, body copy, and FAQ from the Master Copy Library.</li>
+    <li>Update <code>areaServed</code> in the schema to include "Elizabeth, NJ" first.</li>
+    <li>Add to sitemap. Resubmit.</li>
+    <li>Internal links from homepage, Roselle Park page, location page, Spring Strain Picks blog (CON-04).</li>
+  </ol>
+  <div class="accept"><b>Acceptance criteria</b><ul>
+    <li>Live and indexed by May 26.</li>
+    <li>H1 matches Master Copy Library exactly.</li>
+    <li>No Elizabeth landmarks/photos used (only Joyleaf imagery).</li>
+    <li>LocalBusiness <code>areaServed</code> includes "Elizabeth, NJ".</li>
+  </ul></div>
+</div>
+
+<div class="task task-p2">
+  <div class="task-head"><span class="task-id">DEV-07</span><span class="task-title">Build Camino brand page (<code>/brands/camino</code>)</span><span class="badge b-p2">P2</span><span class="badge b-mod">MOD CONF.</span></div>
+  <div class="task-meta">
+    <div><b>Deadline</b>Live by May 28</div>
+    <div><b>Time</b>1.5 hr dev</div>
+    <div><b>Pillar</b>06 — Brand Pages</div>
+  </div>
+  <ol class="steps">
+    <li>Create <code>joyleaf.com/brands/camino</code>.</li>
+    <li>Use H1 + intro copy from Master Copy Library.</li>
+    <li>Pull current Camino SKU list from POS export (or coordinate with Account Lead).</li>
+    <li>Add BreadcrumbList JSON-LD schema (Home → Brands → Camino).</li>
+    <li>Internal links to: homepage, Mother's Day blog (CON-01), location page.</li>
+    <li>Add to sitemap.</li>
+  </ol>
+  <pre><code>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://joyleaf.com"},
+    {"@type":"ListItem","position":2,"name":"Brands","item":"https://joyleaf.com/brands"},
+    {"@type":"ListItem","position":3,"name":"Camino","item":"https://joyleaf.com/brands/camino"}
+  ]
+}
+&lt;/script&gt;</code></pre>
+  <div class="accept"><b>Acceptance criteria</b><ul>
+    <li>Page live and indexed by May 28.</li>
+    <li>BreadcrumbList schema validates with no errors.</li>
+    <li>Linked from homepage and Mother's Day blog.</li>
+  </ul></div>
+</div>
+
+<div class="task task-p2">
+  <div class="task-head"><span class="task-id">DEV-08</span><span class="task-title">Build Doinks brand page (<code>/brands/doinks</code>)</span><span class="badge b-p2">P2</span><span class="badge b-mod">MOD CONF.</span></div>
+  <div class="task-meta">
+    <div><b>Deadline</b>Live by May 28</div>
+    <div><b>Time</b>1.5 hr dev (clone DEV-07)</div>
+  </div>
+  <p>Same template as DEV-07. Internal links to homepage, Memorial Day BBQ blog (CON-03), and location page. Use H1 + intro from Master Copy Library.</p>
+  <div class="accept"><b>Acceptance criteria</b><ul>
+    <li>Page live and indexed by May 28.</li>
+    <li>"Pickup or fast delivery" CTA visible (reinforces GBP delivery attribute).</li>
+    <li>BreadcrumbList schema validates.</li>
+  </ul></div>
+</div>
+
+<div class="task task-p2">
+  <div class="task-head"><span class="task-id">DEV-09</span><span class="task-title">Add "Featured Brands" links to global site footer</span><span class="badge b-p2">P2</span><span class="badge b-high">HIGH CONF.</span></div>
+  <div class="task-meta">
+    <div><b>Deadline</b>By May 28</div>
+    <div><b>Time</b>30 min</div>
+  </div>
+  <ol class="steps">
+    <li>Open the global footer template / partial.</li>
+    <li>Add a <b>Featured Brands</b> column with two anchor tags: <code>/brands/camino</code> and <code>/brands/doinks</code>.</li>
+    <li>Design the markup so adding a third/fourth brand in June is a one-line change (use a config array if possible).</li>
+    <li>Deploy. Click-test from homepage, location page, and one blog post.</li>
+  </ol>
+  <div class="accept"><b>Acceptance criteria</b><ul>
+    <li>Footer block live on every page sitewide.</li>
+    <li>Both links resolve with HTTP 200.</li>
+    <li>Footer markup designed for one-line June expansion.</li>
+  </ul></div>
+</div>
+
+<div class="task task-p2">
+  <div class="task-head"><span class="task-id">DEV-10</span><span class="task-title">Sitemap maintenance + post-launch indexing requests</span><span class="badge b-p2">P2</span></div>
+  <div class="task-meta">
+    <div><b>Deadline</b>Within 2 hr of each new page launch</div>
+    <div><b>Time</b>5 min per page</div>
+  </div>
+  <ol class="steps">
+    <li>After every new page goes live (DEV-05, DEV-06, DEV-07, DEV-08), append the URL to <code>sitemap.xml</code>.</li>
+    <li>In Search Console → Sitemaps, click the existing <code>sitemap.xml</code> entry → resubmit (or post a new submission if the URL changed).</li>
+    <li>Run URL Inspection on each new URL → Request indexing.</li>
+    <li>Log submission timestamps so the SEO team can track crawl latency.</li>
+  </ol>
+</div>
+
+<div class="task task-p2">
+  <div class="task-head"><span class="task-id">DEV-11</span><span class="task-title">Blog publishing support (4 posts)</span><span class="badge b-p2">P2</span></div>
+  <p>For each May blog post the Content team delivers, Dev pushes to production with proper schema, internal-link structure, and indexing request.</p>
+  <div class="task-meta">
+    <div><b>Deadlines</b>May 5 · May 12 · May 19 · May 26</div>
+    <div><b>Time</b>30 min per post</div>
+  </div>
+  <ol class="steps">
+    <li>Receive draft from Content team in CMS or shared doc.</li>
+    <li>Publish at the slug specified in Master Copy Library.</li>
+    <li>Confirm Article / BlogPosting JSON-LD schema is auto-generated by CMS or manually add it.</li>
+    <li>Verify all internal links (homepage, menu, location, related blogs) resolve.</li>
+    <li>Add to sitemap. Submit URL via Search Console.</li>
+    <li>Tag the blog with category and seasonal terms for internal navigation.</li>
+  </ol>
+</div>
+
+<div class="dept-head" id="content">
+  <h2>✍️ Department: Content / Copywriting</h2>
+  <div class="sub">7 tasks. Owns every piece of public-facing language: 4 blog posts, 2 hyperlocal-page bodies, 2 brand-page intros, and all meta descriptions. Quality bar: every line should sound like it was written by a sharp local marketer who actually knows Joyleaf — not an SEO template.</div>
+  <div class="meta-line">Tools: Joyleaf brand-voice guidelines · POS SKU export (for brand pages) · existing /dispensary-location copy for tone alignment</div>
+</div>
+
+<div class="task task-p0">
+  <div class="task-head"><span class="task-id">CON-01</span><span class="task-title">Write Mother's Day Cannabis Gift Guide blog</span><span class="badge b-p0">P0 (seasonal lock)</span><span class="badge b-mod">MOD CONF.</span></div>
+  <p>Mother's Day search volume spikes 25–40% during the holiday week. This post must be live by May 5 — five days before Mother's Day (May 10) — to give Google time to index and rank it for the spike.</p>
+  <div class="task-meta">
+    <div><b>Deadline</b>Hand off to Dev by EOD May 4 · live May 5</div>
+    <div><b>Time</b>3 hr</div>
+    <div><b>Pillar</b>02 — Blog Content</div>
+  </div>
+  <h4>Content brief</h4>
+  <table>
+    <tr><td><b>URL slug</b></td><td><code>/blog/mothers-day-cannabis-gifts-nj-dispensary</code></td></tr>
+    <tr><td><b>Primary keyword</b></td><td>dispensary near me (secondary: cannabis gifts NJ)</td></tr>
+    <tr><td><b>H1</b></td><td>Mother's Day Cannabis Gift Guide: A Roselle Dispensary's Picks</td></tr>
+    <tr><td><b>Word count</b></td><td>1,000–1,200</td></tr>
+    <tr><td><b>Required internal links</b></td><td>Homepage · menu page · location page · Camino brand page (live May 28; cross-link added retrospectively)</td></tr>
+  </table>
+  <h4>Content structure (write to this outline)</h4>
+  <ol>
+    <li><b>Opening hook</b> (~80 words): Frame the gift challenge — mom is curious about cannabis but hasn't tried it. Position Joyleaf budtenders as the experts who solve this for shoppers daily.</li>
+    <li><b>Section 1 · "For the mom who's never tried"</b>: 2–3 low-dose edible recommendations (5mg-and-under). Real product names. Brief sensory description for each. Anchor to menu page.</li>
+    <li><b>Section 2 · "For the mom who already loves cannabis"</b>: 2–3 premium gift bundles or higher-end products. Camino gummies feature here (anchor to brand page once live).</li>
+    <li><b>Section 3 · "How to gift it without making it weird"</b>: practical, conversational. Talk about presentation, the legal age (21+), how Joytenders can help in-store with gift-wrapping or budtender suggestions.</li>
+    <li><b>Closer + CTA</b>: "Visit Joyleaf Dispensary in Roselle, NJ this week — or order delivery for Mother's Day weekend." Link to homepage and location.</li>
+  </ol>
+  <div class="copy">
+    <b class="lbl">Lede paragraph (paste-and-go, you can adapt)</b>
+    <div class="text">Picking the right Mother's Day gift is hard enough — picking one she'll actually want? Even harder. If your mom has been cannabis-curious but hasn't quite taken the leap, Joyleaf Dispensary's Joytenders have spent the last three years guiding first-timers through their first edible, their first tincture, and their first relaxed Sunday afternoon. Here's what we'd hand-pick for her this Mother's Day.</div>
+    <div class="why">Why this works: "Joytender" is Joyleaf's owned term — using it builds brand identity. "First edible / first tincture / first relaxed Sunday" is sensory and specific, not generic. "Three years" subtly anchors authority without making a claim.</div>
+  </div>
+  <div class="copy">
+    <b class="lbl">Meta description (paste verbatim)</b>
+    <div class="text">Looking for a thoughtful Mother's Day cannabis gift? Joyleaf Dispensary in Roselle, NJ shares low-dose edibles, calming tinctures &amp; gift bundles for moms — pickup or delivery.</div>
+    <div class="why">158 chars. Hits "dispensary," "Roselle," "NJ," "delivery," "gift" — every keyword the post should rank for, while reading like a real recommendation, not a stuffed snippet.</div>
+  </div>
+  <div class="accept"><b>Acceptance criteria</b><ul>
+    <li>Hand off to Dev (CMS or doc) by EOD May 4.</li>
+    <li>Word count between 1,000–1,200.</li>
+    <li>4 internal links present (homepage, menu, location, Camino — Camino added once live).</li>
+    <li>Meta description matches above exactly.</li>
+    <li>No medical claims; 21+ language used at least once.</li>
+  </ul></div>
+</div>
+
+<div class="task task-p1">
+  <div class="task-head"><span class="task-id">CON-02</span><span class="task-title">Write First-Timer's Guide blog</span><span class="badge b-p1">P1</span><span class="badge b-mod">MOD CONF.</span></div>
+  <div class="task-meta">
+    <div><b>Deadline</b>Hand off May 11 · live May 12</div>
+    <div><b>Time</b>3 hr</div>
+    <div><b>Pillar</b>02</div>
+  </div>
+  <table>
+    <tr><td><b>URL slug</b></td><td><code>/blog/first-time-nj-dispensary-guide</code></td></tr>
+    <tr><td><b>Primary keyword</b></td><td>dispensary (evergreen)</td></tr>
+    <tr><td><b>H1</b></td><td>What to Expect at a NJ Recreational Dispensary (First-Timer's Guide)</td></tr>
+    <tr><td><b>Word count</b></td><td>1,200–1,500</td></tr>
+  </table>
+  <h4>Content structure</h4>
+  <ol>
+    <li><b>Opening</b>: Acknowledge first-visit anxiety. Use friendly, non-judgmental tone.</li>
+    <li><b>Before you go</b>: ID requirements (21+, REAL ID or passport), what to bring (cash works; debit ATM available; no credit), can you bring a friend, parking.</li>
+    <li><b>Walking in</b>: ID check at door, security, the budtender counter — describe the layout exactly so first-timers know what they're walking into.</li>
+    <li><b>Talking to a Joytender</b>: How to ask for what you want without knowing the lingo. Examples of newcomer-friendly questions ("I want to relax but not feel out of it" / "Something I won't taste").</li>
+    <li><b>Buying &amp; checkout</b>: Cash vs debit, taxes (NJ retail cannabis tax of 6.625% plus local), receipts, packaging.</li>
+    <li><b>What you can and can't do after</b>: Public consumption rules, driving, taking it across state lines.</li>
+    <li><b>CTA</b>: Link to location page + delivery option.</li>
+  </ol>
+  <div class="copy">
+    <b class="lbl">Meta description</b>
+    <div class="text">First time at a NJ dispensary? Joyleaf Dispensary's Roselle team walks you through ID, products, prices, and what to expect — so your first visit feels easy.</div>
+  </div>
+  <div class="accept"><b>Acceptance criteria</b><ul>
+    <li>Hand off May 11; live and indexed May 12.</li>
+    <li>NJ-specific compliance details accurate (tax rate, 21+ rule, REAL ID).</li>
+    <li>3+ internal links to homepage, menu, location.</li>
+    <li>"Joytender" used as brand term.</li>
+  </ul></div>
+</div>
+
+<div class="task task-p1">
+  <div class="task-head"><span class="task-id">CON-03</span><span class="task-title">Write Memorial Day BBQ Pairings blog</span><span class="badge b-p1">P1</span><span class="badge b-mod">MOD CONF.</span></div>
+  <div class="task-meta">
+    <div><b>Deadline</b>Hand off May 18 · live May 19</div>
+    <div><b>Time</b>2.5 hr</div>
+    <div><b>Pillar</b>02</div>
+  </div>
+  <table>
+    <tr><td><b>URL slug</b></td><td><code>/blog/memorial-day-cannabis-bbq-roselle-dispensary</code></td></tr>
+    <tr><td><b>Primary keyword</b></td><td>dispensary delivery</td></tr>
+    <tr><td><b>H1</b></td><td>Memorial Day Weekend at Joyleaf: Best Cannabis-and-BBQ Pairings, Delivered</td></tr>
+    <tr><td><b>Word count</b></td><td>900–1,100</td></tr>
+  </table>
+  <h4>Content structure</h4>
+  <ol>
+    <li><b>Hook</b>: Memorial Day = grilling + chill. Frame Joyleaf as the convenience play — order delivery, focus on the grill.</li>
+    <li><b>Section 1 · Pre-cookout starters</b>: 2 sativa-leaning pre-roll picks (Doinks features here; cross-link brand page).</li>
+    <li><b>Section 2 · Burger sidekicks</b>: Vape carts and concentrates that pair with smoky/grilled flavors.</li>
+    <li><b>Section 3 · Post-meal wind-down</b>: 2 indica edibles for hammock-time.</li>
+    <li><b>The delivery angle</b>: "Skip the run." Explain coverage cities (Roselle, Cranford, Linden, Elizabeth, Roselle Park), order cutoff times, fast turnaround.</li>
+    <li><b>CTA</b>: Order delivery link + memorial day weekend hours.</li>
+  </ol>
+  <div class="copy">
+    <b class="lbl">Meta description</b>
+    <div class="text">Cannabis-and-BBQ pairings for Memorial Day weekend. Joyleaf Dispensary delivers pre-rolls, edibles &amp; carts across Roselle, Cranford &amp; Union County — order ahead.</div>
+  </div>
+  <div class="accept"><b>Acceptance criteria</b><ul>
+    <li>Live by May 19.</li>
+    <li>"Delivery" mentioned ≥4 times naturally.</li>
+    <li>Doinks brand-page cross-link included once that page is live (May 28).</li>
+    <li>Memorial Day weekend hours called out in CTA section.</li>
+  </ul></div>
+</div>
+
+<div class="task task-p2">
+  <div class="task-head"><span class="task-id">CON-04</span><span class="task-title">Write Spring Strain Picks blog</span><span class="badge b-p2">P2</span></div>
+  <div class="task-meta">
+    <div><b>Deadline</b>Hand off May 25 · live May 26</div>
+    <div><b>Time</b>2.5 hr</div>
+    <div><b>Pillar</b>02</div>
+  </div>
+  <table>
+    <tr><td><b>URL slug</b></td><td><code>/blog/spring-strain-picks-roselle-dispensary</code></td></tr>
+    <tr><td><b>Primary keyword</b></td><td>dispensary (evergreen)</td></tr>
+    <tr><td><b>H1</b></td><td>Spring Strain Picks: A Roselle Dispensary's Top 5 for May</td></tr>
+    <tr><td><b>Word count</b></td><td>900–1,100</td></tr>
+  </table>
+  <h4>Structure</h4>
+  <ol>
+    <li>Frame the season — Joytender voice. "We've been watching what's selling, and these five strains are the ones our team can't stop recommending this spring."</li>
+    <li>5 strain picks. For each: name, type (indica/sativa/hybrid), terpene profile in plain language, who it's for ("for the mid-afternoon dog walk" / "for the post-sunset hangout").</li>
+    <li>Closing: invite to come in, talk to a Joytender, ask what's fresh.</li>
+  </ol>
+  <div class="copy">
+    <b class="lbl">Meta description</b>
+    <div class="text">Joyleaf Dispensary's Joytenders break down their five favorite spring strains for May — what's energizing, what's relaxing, and what's worth grabbing this week in Roselle.</div>
+  </div>
+</div>
+
+<div class="task task-p1">
+  <div class="task-head"><span class="task-id">CON-05</span><span class="task-title">Write Roselle Park hyperlocal page body + FAQ</span><span class="badge b-p1">P1</span><span class="badge b-high">HIGH CONF.</span></div>
+  <p>This page is the spear-tip for "dispensary near me" recovery. Body copy must read like a local landing page, not an SEO doorway. Specific street names, drive times, and zero stock-photo language.</p>
+  <div class="task-meta">
+    <div><b>Deadline</b>Hand off to Dev May 9 · live May 11</div>
+    <div><b>Time</b>3 hr</div>
+    <div><b>Pillar</b>03</div>
+  </div>
+  <h4>Required sections (in this order)</h4>
+  <ol>
+    <li><b>H1 + trust strip</b> (use Master Copy Library).</li>
+    <li><b>Body paragraph #1 (~120 words)</b>: Position Joyleaf as the closest licensed dispensary to Roselle Park residents. Name <b>Westfield Avenue</b> and <b>Chestnut Street</b> as the routes. State the drive time ("under 5 minutes").</li>
+    <li><b>Body paragraph #2 (~100 words)</b>: Three reasons to drive 0.7 miles instead of staying local — fast in-and-out (~10 minutes), free parking (no Roselle Park meter hassle), women-owned roots and 2,224+ verified reviews.</li>
+    <li><b>Service block</b>: pickup, delivery to Roselle Park, hours, phone, address.</li>
+    <li><b>5-question FAQ</b> — see Master Copy Library.</li>
+    <li><b>Closer CTA</b>: "Plan your first Roselle Park dispensary trip — or skip the drive entirely with delivery."</li>
+  </ol>
+  <h4>Tone &amp; rules</h4>
+  <ul>
+    <li>Write like you're emailing a Roselle Park resident, not stuffing keywords. "Roselle Park" appears 6–8 times naturally — never twice in the same sentence.</li>
+    <li>No Roselle Park landmarks or photos (Joyleaf imagery only). Mentioning landmarks would tell Google "this page is about Roselle Park" — but not "this is the dispensary for Roselle Park residents." Subtle but important distinction.</li>
+    <li>Include one mention of the GBP review count (2,224+).</li>
+    <li>21+ reminder once.</li>
+  </ul>
+  <div class="accept"><b>Acceptance criteria</b><ul>
+    <li>Body copy is 350–450 words excluding FAQ.</li>
+    <li>"Roselle Park" appears 6–8 times.</li>
+    <li>Westfield Ave + Chestnut St both named.</li>
+    <li>FAQ has 5 questions per Master Copy Library.</li>
+    <li>Hand-off to Dev by EOD May 9.</li>
+  </ul></div>
+</div>
+
+<div class="task task-p2">
+  <div class="task-head"><span class="task-id">CON-06</span><span class="task-title">Write Elizabeth hyperlocal page body + FAQ</span><span class="badge b-p2">P2</span><span class="badge b-mod">MOD CONF.</span></div>
+  <div class="task-meta">
+    <div><b>Deadline</b>Hand off May 24 · live May 26</div>
+    <div><b>Time</b>3 hr</div>
+    <div><b>Pillar</b>03</div>
+  </div>
+  <p>Same structural template as Roselle Park, but with a different hook: <b>"Skip Elizabeth congestion."</b> Elizabeth residents driving to a local dispensary deal with downtown traffic and limited parking. Joyleaf is a 12-minute drive on Route 1/9 with free parking.</p>
+  <h4>Required sections</h4>
+  <ol>
+    <li><b>H1 + trust strip</b> (Master Copy Library).</li>
+    <li><b>Body #1</b>: Joyleaf as the dispensary for Elizabeth residents who want easier parking and a faster trip. Name <b>Route 1/9</b> and <b>Westfield Avenue</b> as the routes. Drive time "under 12 minutes."</li>
+    <li><b>Body #2</b>: Why Roselle vs staying in Elizabeth — free parking (no metered street parking hassle), shorter wait times, established 4.9★ rating with 2,224+ reviews, women-owned independent dispensary.</li>
+    <li><b>Service block</b>: pickup, delivery to Elizabeth, hours, phone, address.</li>
+    <li><b>5-question FAQ</b> (Master Copy Library).</li>
+  </ol>
+  <h4>Hard rule</h4>
+  <p><b>Zero Elizabeth landmarks or imagery.</b> The page positions Joyleaf as "the dispensary near Elizabeth" — not "a dispensary in Elizabeth." Photos of Mills Mall or downtown Elizabeth would confuse Google's location signal.</p>
+</div>
+
+<div class="task task-p2">
+  <div class="task-head"><span class="task-id">CON-07</span><span class="task-title">Write brand-page intros — Camino &amp; Doinks</span><span class="badge b-p2">P2</span></div>
+  <div class="task-meta">
+    <div><b>Deadline</b>Hand off May 26 · live May 28</div>
+    <div><b>Time</b>2 hr (both pages)</div>
+    <div><b>Pillar</b>06</div>
+  </div>
+  <p>Both pages are short — the brand intro and the SKU listing do most of the work. Goal: capture brand-name search and feed traffic into the rest of the site.</p>
+  <h4>Camino page · structure</h4>
+  <ol>
+    <li>H1: <b>Camino Cannabis at Joyleaf Dispensary</b> (Master Copy Library).</li>
+    <li>Intro (~80 words) — see copy library.</li>
+    <li>SKU list (Dev pulls from POS).</li>
+    <li>"Pick up at Joyleaf in Roselle, NJ — or get it delivered" CTA.</li>
+    <li>Cross-link to Mother's Day blog (CON-01) — "Camino gummies are one of our top Mother's Day picks…"</li>
+  </ol>
+  <h4>Doinks page · structure</h4>
+  <ol>
+    <li>H1: <b>Doinks Pre-Rolls at Joyleaf Dispensary</b>.</li>
+    <li>Intro (~80 words).</li>
+    <li>SKU list.</li>
+    <li>"Pickup or fast delivery from Roselle" CTA — explicitly mention delivery to reinforce GBP attribute.</li>
+    <li>Cross-link to Memorial Day BBQ blog (CON-03).</li>
+  </ol>
+</div>
+
+<div class="dept-head" id="gbp">
+  <h2>📍 Department: GBP / Local Listings</h2>
+  <div class="sub">8 tasks. Owns the Google Business Profile entirely — Q&amp;A, posts, photos, attributes, review responses. The May 1 Q&amp;A seeding + delivery-attribute toggle are the two highest-leverage GBP tactics in the entire month combined.</div>
+  <div class="meta-line">Tools: <code>business.google.com</code> · Joyleaf-authorized GBP account · review-management dashboard · scheduling tool for posts</div>
+</div>
+
+<div class="task task-p0">
+  <div class="task-head"><span class="task-id">GBP-01</span><span class="task-title">Enable "Offers delivery" service-options attribute</span><span class="badge b-p0">P0</span><span class="badge b-high">HIGH CONF.</span></div>
+  <p>30-second click. Currently OFF despite Joyleaf actively offering delivery — that misalignment is exactly the kind of signal Google penalizes (attribute ≠ observed user behavior). Toggling it ON reverses a 21.49-point SoLV drop on "dispensary delivery."</p>
+  <div class="task-meta">
+    <div><b>Deadline</b>EOD May 1</div>
+    <div><b>Time</b>30 sec</div>
+    <div><b>Pillar</b>04 — GBP Optimizations</div>
+    <div><b>Expected lift</b>+5 to +10 SoLV pts on "dispensary delivery"</div>
+  </div>
+  <ol class="steps">
+    <li>Sign into <code>business.google.com</code> with the Joyleaf-authorized account.</li>
+    <li>Select Joyleaf (711 E 1st Ave, Roselle, NJ 07203). Click <b>Edit profile</b>.</li>
+    <li>Open the <b>Services</b> tab. Scroll to <b>Service options</b>.</li>
+    <li>Tick <b>Offers delivery</b>. Click <b>Save</b>.</li>
+    <li>Screenshot the saved state and post in #joyleaf-may-execution.</li>
+    <li>24–48 hr later, recheck the public Google listing — confirm a "Delivery" pill is visible under the listing.</li>
+  </ol>
+  <div class="accept"><b>Acceptance criteria</b><ul>
+    <li>"Offers delivery" attribute is checked in dashboard (screenshot saved).</li>
+    <li>"Delivery" pill visible on public listing within 48 hr.</li>
+    <li>No moderation flag.</li>
+  </ul></div>
+</div>
+
+<div class="task task-p0">
+  <div class="task-head"><span class="task-id">GBP-02</span><span class="task-title">Seed 8 owner Q&amp;A pairs on the GBP listing</span><span class="badge b-p0">P0</span><span class="badge b-high">HIGH CONF.</span></div>
+  <p>Joyleaf has <b>zero</b> owner-posted Q&amp;A today. Q&amp;A is the highest-leverage GBP signal because Google indexes every answer as part of the listing's keyword surface. Eight multi-keyword answers added in one Week-1 task = a major relevance lift.</p>
+  <div class="task-meta">
+    <div><b>Deadline</b>EOD May 3</div>
+    <div><b>Time</b>~25 min</div>
+    <div><b>Pillar</b>04</div>
+    <div><b>Expected lift</b>+3 to +7 SoLV pts aggregate</div>
+  </div>
+  <ol class="steps">
+    <li>From a logged-in GBP-manager browser, search Google for <b>"Joyleaf Dispensary Roselle"</b>. The Knowledge Panel appears.</li>
+    <li>Scroll to <b>Questions &amp; answers</b>. Click <b>Ask a question</b>.</li>
+    <li>The Q&amp;A flow requires posting the question first as a regular Google user, then signing back in as the owner to post the answer. Use a different browser profile (or another teammate) to post the question half if your main session is the owner login.</li>
+    <li>Post each of the 8 questions below. Then sign back in as the owner and post the matching answer verbatim. Bold "<b>Joyleaf Dispensary</b>" formatting must be preserved (Google honors basic markdown).</li>
+    <li>After all 8 are live, refresh the listing. Confirm none have been auto-removed by content moderation.</li>
+    <li>Screenshot the populated Q&amp;A panel; archive in May execution folder.</li>
+  </ol>
+  <h4>Exact Q&amp;A pairs (paste verbatim)</h4>
+  <table>
+    <tr><th>#</th><th>Question</th><th>Answer</th></tr>
+    <tr><td>1</td><td>Is Joyleaf a recreational dispensary?</td><td><b>Joyleaf Dispensary</b> is a state-licensed recreational dispensary in Roselle, NJ — open to anyone 21+.</td></tr>
+    <tr><td>2</td><td>What time does the dispensary close?</td><td>Our dispensary is open Mon–Sat 9 AM–10 PM and Sun 9 AM–8 PM.</td></tr>
+    <tr><td>3</td><td>Is this dispensary licensed in NJ?</td><td>Yes — Joyleaf Dispensary holds NJ recreational license RE000124.</td></tr>
+    <tr><td>4</td><td>What dispensary brands do you carry?</td><td>Our dispensary stocks Camino, Doinks, Simply Herb, Ozone, Garden Greens and more.</td></tr>
+    <tr><td>5</td><td>Is this a women-owned dispensary?</td><td>Yes — <b>Joyleaf Dispensary</b> is proudly women-owned.</td></tr>
+    <tr><td>6</td><td>Where's the closest dispensary to Roselle Park?</td><td>Joyleaf Dispensary is just 0.7 mi south of Roselle Park on E 1st Ave.</td></tr>
+    <tr><td>7</td><td>Where's the closest dispensary to Cranford?</td><td>Joyleaf Dispensary serves Cranford via in-store pickup or fast delivery.</td></tr>
+    <tr><td>8</td><td>Does the dispensary offer delivery?</td><td>Yes — our dispensary delivers across Union County (Roselle, Cranford, Linden, Elizabeth, and more).</td></tr>
+  </table>
+  <div class="reasoning"><b>Marketer reasoning</b> Notice the pattern across the 8 answers: "dispensary" appears 12 times, "Joyleaf Dispensary" 4 times, and 5 different city names (Roselle, Roselle Park, Cranford, Linden, Elizabeth). This is intentional — every answer is a chance to drop a keyword Google indexes against the listing. The 0.7-mile claim in answer 6 is verifiable; Google rewards specificity over fluff.</div>
+  <div class="accept"><b>Acceptance criteria</b><ul>
+    <li>All 8 Q&amp;As live and visible on the GBP listing by EOD May 3.</li>
+    <li>Answer text matches verbatim including bold formatting.</li>
+    <li>None auto-removed after 24 hr.</li>
+  </ul></div>
+</div>
+
+<div class="task task-p1">
+  <div class="task-head"><span class="task-id">GBP-03</span><span class="task-title">Schedule &amp; publish 12 GBP posts (50/50 weed-led ↔ dispensary-led split)</span><span class="badge b-p1">P1</span><span class="badge b-high">HIGH CONF.</span></div>
+  <p>Joyleaf already runs 3 posts/week. Maintain that cadence. The change is in <b>headline word choice</b>: half the posts should lead with "weed" (defends the existing #1 rankings) and half should lead with "dispensary" (builds the keyword we're trying to recover).</p>
+  <div class="task-meta">
+    <div><b>Deadline</b>3 posts/wk through May (~12 total)</div>
+    <div><b>Time</b>Built into existing cadence</div>
+    <div><b>Pillar</b>04</div>
+  </div>
+  <h4>The 12-post May calendar (publish on or near these dates)</h4>
+  <table>
+    <tr><th>Date</th><th>Type</th><th>Headline (paste verbatim)</th><th>Lead</th></tr>
+    <tr><td>May 1 (Thu)</td><td>Promo</td><td>Spring Drops at Roselle's #1 Weed Dispensary</td><td>weed-led</td></tr>
+    <tr><td>May 4 (Sun)</td><td>Promo</td><td>Mother's Day Gifts at <b>Joyleaf Dispensary</b></td><td>dispensary-led</td></tr>
+    <tr><td>May 6 (Tue)</td><td>Lifestyle</td><td>This Week's Top Pick at Our <b>Dispensary</b></td><td>dispensary-led</td></tr>
+    <tr><td>May 8 (Thu)</td><td>Update</td><td>New Weed Drops This Week — Pickup or Delivery</td><td>weed-led</td></tr>
+    <tr><td>May 11 (Sun)</td><td>Event</td><td>Mother's Day at <b>Joyleaf Dispensary</b> · Last-Minute Picks</td><td>dispensary-led</td></tr>
+    <tr><td>May 13 (Tue)</td><td>Lifestyle</td><td>Best Weed for the Long Weekend Ahead</td><td>weed-led</td></tr>
+    <tr><td>May 15 (Thu)</td><td>Promo</td><td>Mid-Month Specials at Roselle's Trusted <b>Dispensary</b></td><td>dispensary-led</td></tr>
+    <tr><td>May 18 (Sun)</td><td>Update</td><td>Memorial Day Weekend Hours — Plan Your Run</td><td>neutral</td></tr>
+    <tr><td>May 20 (Tue)</td><td>Lifestyle</td><td>Cannabis-and-BBQ: A Roselle <b>Dispensary's</b> Picks</td><td>dispensary-led</td></tr>
+    <tr><td>May 22 (Thu)</td><td>Event</td><td>Memorial Day at Roselle's #1 <b>Dispensary</b> · Delivery All Weekend</td><td>dispensary-led</td></tr>
+    <tr><td>May 25 (Sun)</td><td>Lifestyle</td><td>Top-Selling Weed for Memorial Day Weekend</td><td>weed-led</td></tr>
+    <tr><td>May 28 (Wed)</td><td>Update</td><td>Featured Brands at <b>Joyleaf Dispensary</b>: Camino &amp; Doinks</td><td>dispensary-led</td></tr>
+  </table>
+  <p><b>Final split:</b> 7 dispensary-led, 4 weed-led, 1 neutral.</p>
+  <h4>Body-copy template (use under each headline)</h4>
+  <div class="copy"><b class="lbl">Standard CTA closer (paste at the end of every post)</b>
+  <div class="text">Visit Joyleaf Dispensary at 711 E 1st Ave, Roselle, NJ — or order delivery across Union County. Open Mon–Sat 9 AM–10 PM, Sun 9 AM–8 PM. 21+ ID required.</div></div>
+  <div class="accept"><b>Acceptance criteria</b><ul>
+    <li>≥12 posts live in May.</li>
+    <li>Headlines match the table verbatim.</li>
+    <li>Standard CTA closer in every post.</li>
+    <li>Each post linked to homepage or relevant blog/landing page.</li>
+  </ul></div>
+</div>
+
+<div class="task task-p1">
+  <div class="task-head"><span class="task-id">GBP-04</span><span class="task-title">Upload 25+ GBP photos with seasonal theming</span><span class="badge b-p1">P1</span><span class="badge b-mod">MOD CONF.</span></div>
+  <p>Photo velocity is a freshness signal. Holiday-themed photos capture seasonal SERPs; delivery imagery reinforces the GBP-01 attribute toggle.</p>
+  <div class="task-meta">
+    <div><b>Deadline</b>5 photos/wk through May</div>
+    <div><b>Time</b>~30 min/wk</div>
+    <div><b>Pillar</b>04</div>
+    <div><b>Dependencies</b>Photo asset drops from Joyleaf (Account Lead manages the pipeline)</div>
+  </div>
+  <h4>Theme schedule</h4>
+  <table>
+    <tr><th>Wks</th><th>Theme</th><th>Count</th></tr>
+    <tr><td>1–2</td><td>Mother's Day gift packaging · storefront decor</td><td>10</td></tr>
+    <tr><td>3–4</td><td>Memorial Day storefront / community · behind-counter Joytender shots</td><td>10</td></tr>
+    <tr><td>3–5</td><td>Branded delivery bag in action</td><td>5</td></tr>
+    <tr><td>1–5 rolling</td><td>Spring product flat-lays · seasonal inventory</td><td>10</td></tr>
+  </table>
+  <h4>Upload procedure</h4>
+  <ol class="steps">
+    <li>Open the photo asset folder. Pull the Sunday-EOD batch from Joyleaf.</li>
+    <li>Pre-flight check each photo for compliance (no pricing visible, no medical-claim language, 21+ context where customer-facing).</li>
+    <li>Upload via GBP dashboard → Photos → Add. Add a descriptive caption: <i>"Joyleaf Dispensary · Roselle, NJ · [theme]"</i>.</li>
+    <li>Don't reupload duplicates — track filenames in the asset folder.</li>
+    <li>Stagger uploads across 2–3 days each week (avoid one big batch — Google rewards consistent activity).</li>
+  </ol>
+  <div class="accept"><b>Acceptance criteria</b><ul>
+    <li>≥25 unique photos uploaded across May.</li>
+    <li>Mother's Day theme present in Wks 1–2.</li>
+    <li>Memorial Day theme present in Wks 3–4.</li>
+    <li>Zero stock photos.</li>
+    <li>No moderation flags.</li>
+  </ul></div>
+</div>
+
+<div class="task task-p1">
+  <div class="task-head"><span class="task-id">GBP-05</span><span class="task-title">Maintain 100% review response within 48 hr · varied phrasing</span><span class="badge b-p1">P1</span><span class="badge b-mod">MOD CONF.</span></div>
+  <p>Active management is a soft engagement signal. The bigger play is keyword reinforcement — every response is a chance to drop "Joyleaf Dispensary" or "our dispensary" naturally.</p>
+  <div class="task-meta">
+    <div><b>Deadline</b>Continuous</div>
+    <div><b>Time</b>~5 min per response</div>
+    <div><b>Pillar</b>05 — Reviews &amp; Reputation</div>
+  </div>
+  <h4>Opening rotation (use 3+ across May, never repeat in a row)</h4>
+  <ul>
+    <li>"Thanks for visiting Joyleaf Dispensary!"</li>
+    <li>"We appreciate your trust in our dispensary."</li>
+    <li>"Thanks for choosing Joyleaf Dispensary."</li>
+    <li>"It means the world to our dispensary team that…"</li>
+    <li>"From all of us at Joyleaf Dispensary in Roselle — thank you."</li>
+  </ul>
+  <h4>Reply patterns by review type</h4>
+  <table>
+    <tr><th>Type</th><th>Pattern</th></tr>
+    <tr><td>5★ generic</td><td>Opening + thank-you + brief brand-voice line + invite back. Drop "Joyleaf Dispensary" once.</td></tr>
+    <tr><td>5★ specific (named a budtender or product)</td><td>Opening + acknowledge the specific (by name if mentioned) + brand line. Pass praise to that staff member offline.</td></tr>
+    <tr><td>4★ with mild critique</td><td>Opening + thank for honest feedback + acknowledge the specific issue + ETA/fix if relevant + invite back.</td></tr>
+    <tr><td>≤3★</td><td>Acknowledge feedback, do NOT defend. Offer to take it offline ("DM us at…" or "give us a call at 908-287-5414"). Never apologize for things that aren't true.</td></tr>
+  </table>
+  <div class="accept"><b>Acceptance criteria</b><ul>
+    <li>≥95% of May reviews receive a response within 48 hr.</li>
+    <li>≥3 distinct opening phrasings observed.</li>
+    <li>No copy-paste duplicates.</li>
+  </ul></div>
+</div>
+
+<div class="task task-p2">
+  <div class="task-head"><span class="task-id">GBP-06</span><span class="task-title">Schedule Memorial Day GBP post + holiday photo drop</span><span class="badge b-p2">P2</span></div>
+  <div class="task-meta">
+    <div><b>Deadline</b>Schedule by May 21 · publish May 22</div>
+    <div><b>Time</b>30 min</div>
+  </div>
+  <ol class="steps">
+    <li>Confirm Memorial Day weekend hours from Account Lead (depends on client confirmation by May 18).</li>
+    <li>Schedule the May 22 GBP post (headline: <i>"Memorial Day at Roselle's #1 <b>Dispensary</b> · Delivery All Weekend"</i> — see GBP-03 calendar).</li>
+    <li>Body copy includes the confirmed hours.</li>
+    <li>Pair with a same-day photo drop (3–5 holiday-themed photos from Joyleaf asset drop).</li>
+    <li>Update the GBP "Holiday hours" field for May 25 (Memorial Day) directly.</li>
+  </ol>
+</div>
+
+<div class="task task-p2">
+  <div class="task-head"><span class="task-id">GBP-07</span><span class="task-title">Weekly competitor monitoring snapshot</span><span class="badge b-p2">P2</span></div>
+  <p>Track Plantabis, Breakwater Roselle Park, and The Dispensary of Union for review-velocity changes. If any of them spikes, that's an early-warning signal for a counter-push and Account Lead may decide to accelerate Joyleaf's tactics.</p>
+  <div class="task-meta">
+    <div><b>Deadline</b>Every Monday in May (May 5, 12, 19, 26)</div>
+    <div><b>Time</b>15 min per snapshot</div>
+  </div>
+  <ol class="steps">
+    <li>Open the competitor tracker spreadsheet (Account Lead provides the link).</li>
+    <li>For each competitor, record: total review count, average rating, new reviews this week.</li>
+    <li>Flag any competitor with &gt;15% week-over-week review-count growth in #joyleaf-may-execution.</li>
+  </ol>
+</div>
+
+<div class="task task-p2">
+  <div class="task-head"><span class="task-id">GBP-08</span><span class="task-title">Apply GBP description refresh (mid-month)</span><span class="badge b-p2">P2</span></div>
+  <p>The May 15 mid-month check-in produces a recommendation on the GBP listing-consolidation question (Ask 05). Once Account Lead confirms direction, refresh the existing description to align with the May 3 H1 changes and the new pillar narrative.</p>
+  <div class="task-meta">
+    <div><b>Deadline</b>By May 18 (post-checkin)</div>
+    <div><b>Time</b>15 min</div>
+  </div>
+  <div class="copy">
+    <b class="lbl">New GBP description (paste verbatim · 750 chars)</b>
+    <div class="text">Joyleaf Dispensary is Roselle, NJ's trusted, women-owned cannabis dispensary — proudly serving Roselle, Roselle Park, Cranford, Linden, and Elizabeth. Visit our 711 E 1st Ave dispensary for premium flower, edibles, vapes, pre-rolls, and concentrates from brands like Camino, Doinks, Simply Herb, Ozone, and Garden Greens. Fast in-store pickup, free parking, and same-day delivery across Union County. Our Joytenders make every visit easy — from first-timers to longtime regulars. Open Mon–Sat 9 AM–10 PM and Sun 9 AM–8 PM. 21+ ID required.</div>
+    <div class="why"><b>Marketer reasoning</b> 750 chars (under GBP's 750 limit). Hits "dispensary" 4 times, every delivery city, the brand portfolio (which feeds the upcoming brand pages), and the proprietary "Joytender" term that builds brand identity. The order is deliberate: identity → service area → product range → convenience → trust. That's how a high-converting local listing reads.</div>
+  </div>
+  <ol class="steps">
+    <li>Sign into GBP. Open Edit profile → Business description.</li>
+    <li>Replace existing copy with the description above. Save.</li>
+    <li>Confirm saved within 48 hr (sometimes Google holds for review). Re-paste if rejected.</li>
+  </ol>
+</div>
+
+<div class="dept-head" id="design">
+  <h2>🎨 Department: Design</h2>
+  <div class="sub">3 tasks. Owns visual deliverables: QR-code refresh, brand-page graphics, blog featured imagery. Small department, big leverage — the QR refresh is the lever for review velocity, which is the lever for the prominence moat.</div>
+  <div class="meta-line">Tools: Figma / Canva · QR generator · Joyleaf brand kit · print vendor for in-store materials</div>
+</div>
+
+<div class="task task-p0">
+  <div class="task-head"><span class="task-id">DSGN-01</span><span class="task-title">Refresh QR-code insert · Memorial Day theme</span><span class="badge b-p0">P0</span><span class="badge b-mod">MOD CONF.</span></div>
+  <p>Joyleaf's existing QR-code insert is stale. A refreshed visual using a Memorial Day weekend angle gives Joyleaf staff a reason to point it out at checkout — that 5 seconds drives review submissions.</p>
+  <div class="task-meta">
+    <div><b>Deadline</b>Print-ready file delivered May 1 · in-store May 2</div>
+    <div><b>Time</b>4 hr (design + print proof)</div>
+    <div><b>Pillar</b>05</div>
+  </div>
+  <h4>Design spec</h4>
+  <ul>
+    <li>Format: 4"×6" postcard (standard print). One side full-bleed visual; other side QR + 1-line CTA.</li>
+    <li>Visual side: red/white/blue Memorial Day color treatment, but tasteful — no stars-and-stripes overload. Weight to Joyleaf brand purple if possible.</li>
+    <li>QR code: <b>must scan directly to the Google review form for Joyleaf's GBP listing</b>, NOT the listing page. URL pattern: <code>g.page/r/Cb...EAE/review</code> (Account Lead has the live URL).</li>
+    <li>CTA copy (paste verbatim): <b>"How was your Memorial Day weekend at Joyleaf? Tell us — and tell us where you drove from."</b></li>
+    <li>21+ disclaimer in 7pt: <i>"For 21+. State-licensed cannabis dispensary."</i></li>
+  </ul>
+  <ol class="steps">
+    <li>Receive the live GBP review URL from Account Lead.</li>
+    <li>Generate QR via <code>qr-code-generator.com</code> or Bitly QR. Test scan from 3 phones (iOS Safari, Android Chrome, plus one older device).</li>
+    <li>Lay out the postcard in Figma using brand kit. Run through compliance checklist (no pricing, no claims, 21+).</li>
+    <li>Submit print-ready PDF to vendor. Spec quantity: 2,500 inserts (covers ~80 daily transactions × 31 days).</li>
+    <li>Coordinate delivery with Account Lead to be in Joyleaf's hands by EOD May 2.</li>
+  </ol>
+  <div class="accept"><b>Acceptance criteria</b><ul>
+    <li>QR scans to Google review form on iOS Safari + Android Chrome.</li>
+    <li>2,500 prints delivered to Joyleaf by May 2.</li>
+    <li>Compliance checklist signed.</li>
+  </ul></div>
+</div>
+
+<div class="task task-p2">
+  <div class="task-head"><span class="task-id">DSGN-02</span><span class="task-title">Design brand-page hero graphics · Camino &amp; Doinks</span><span class="badge b-p2">P2</span></div>
+  <div class="task-meta">
+    <div><b>Deadline</b>May 26</div>
+    <div><b>Time</b>3 hr (both)</div>
+    <div><b>Pillar</b>06</div>
+  </div>
+  <p>For each brand page (DEV-07, DEV-08), design a hero image: brand logo + Joyleaf logo + one clean product shot. Web-optimized (under 200KB), 1600×900 desktop hero crop with mobile-safe area centered.</p>
+  <ol class="steps">
+    <li>Source brand logos from manufacturer brand kits (Camino &amp; Doinks both have public press kits).</li>
+    <li>Pull a clean product shot from Joyleaf's POS-export imagery or recent inventory photos.</li>
+    <li>Design composition: brand logo top-left, Joyleaf logo bottom-right (small), product center. Avoid clutter.</li>
+    <li>Export at 1600×900 (desktop) and 800×800 (social/mobile). Web-compress.</li>
+    <li>Hand off to Dev for placement in DEV-07 and DEV-08.</li>
+  </ol>
+</div>
+
+<div class="task task-p2">
+  <div class="task-head"><span class="task-id">DSGN-03</span><span class="task-title">Design 4 blog featured images</span><span class="badge b-p2">P2</span></div>
+  <div class="task-meta">
+    <div><b>Deadlines</b>One per blog: May 4, May 11, May 18, May 25</div>
+    <div><b>Time</b>1.5 hr per image</div>
+  </div>
+  <p>Each blog (CON-01, CON-02, CON-03, CON-04) needs a featured image (1200×630 OG-spec) using real Joyleaf photos as the base + light branded overlay (post title in 72pt brand-purple). Avoid stock photography entirely.</p>
+</div>
+
+<div class="dept-head" id="seo">
+  <h2>📊 Department: SEO / Analytics</h2>
+  <div class="sub">5 tasks. Owns measurement, validation, and reporting. The May 31 Local Falcon scan is the single source of truth for whether the May plan worked — every other team's work funnels into this measurement.</div>
+  <div class="meta-line">Tools: Local Falcon · Google Search Console · Rich Results Test · GBP Insights · monthly reporting template</div>
+</div>
+
+<div class="task task-p0">
+  <div class="task-head"><span class="task-id">SEO-01</span><span class="task-title">Validate Pillar 1 deploy on May 3 · screenshot baseline</span><span class="badge b-p0">P0</span></div>
+  <div class="task-meta">
+    <div><b>Deadline</b>May 3 evening (post-deploy)</div>
+    <div><b>Time</b>1 hr</div>
+  </div>
+  <ol class="steps">
+    <li>After Dev confirms DEV-01 through DEV-04 are live, do the following in order:</li>
+    <li>Run Rich Results Test on <code>joyleaf.com</code> AND <code>joyleaf.com/dispensary-location</code>. Confirm zero errors. Save the result URLs.</li>
+    <li>View page source on both URLs. Confirm new H1, title tag, and JSON-LD script tag are present. Screenshot.</li>
+    <li>In Search Console, run URL Inspection on both URLs → request indexing.</li>
+    <li>In Search Console → Performance, take a baseline screenshot of last-7-days impressions and clicks for the homepage. This is the "before" comparison for the end-of-May report.</li>
+    <li>Post the validation summary (Rich Results pass, screenshots, indexing requested) in #joyleaf-may-execution.</li>
+  </ol>
+</div>
+
+<div class="task task-p1">
+  <div class="task-head"><span class="task-id">SEO-02</span><span class="task-title">Run weekly Local Falcon scan · 2-mile grid</span><span class="badge b-p1">P1</span></div>
+  <div class="task-meta">
+    <div><b>Deadline</b>Every Monday: May 5, 12, 19, 26</div>
+    <div><b>Time</b>20 min</div>
+  </div>
+  <ol class="steps">
+    <li>Sign into Local Falcon. Open Joyleaf's saved 2-mile grid scan.</li>
+    <li>Run the scan against all 10 keywords (weed near me, weed dispensary, weed, weed delivery, cannabis delivery, cannabis, cannabis near me, dispensary delivery, <b>dispensary</b>, <b>dispensary near me</b>).</li>
+    <li>Export results to the May tracker spreadsheet.</li>
+    <li>Update the trend chart for the bolded May-target keywords.</li>
+    <li>If any keyword regresses ≥3 SoLV pts week-over-week, post in #joyleaf-may-execution and flag for the mid-month check-in.</li>
+  </ol>
+</div>
+
+<div class="task task-p1">
+  <div class="task-head"><span class="task-id">SEO-03</span><span class="task-title">Schema validation after every new page launch</span><span class="badge b-p1">P1</span></div>
+  <div class="task-meta">
+    <div><b>Deadlines</b>After each: DEV-05 (May 11), DEV-06 (May 26), DEV-07/08 (May 28)</div>
+    <div><b>Time</b>10 min per page</div>
+  </div>
+  <ol class="steps">
+    <li>For each new page Dev launches, run Rich Results Test against the production URL.</li>
+    <li>Confirm zero errors / zero warnings.</li>
+    <li>Confirm Search Console picks up the new page within 7 days (URL Inspection → indexed status).</li>
+    <li>Add the new URL to the SEO tracker.</li>
+  </ol>
+</div>
+
+<div class="task task-p2">
+  <div class="task-head"><span class="task-id">SEO-04</span><span class="task-title">GBP Insights pull · weekly</span><span class="badge b-p2">P2</span></div>
+  <div class="task-meta">
+    <div><b>Deadline</b>Every Monday</div>
+    <div><b>Time</b>15 min</div>
+  </div>
+  <p>Pull GBP Insights for the prior 7 days. Track: discovery searches, web clicks, direction requests, phone calls, conversion rate. Add to the May KPI tracker. Trend graph required for end-of-month report.</p>
+</div>
+
+<div class="task task-p0">
+  <div class="task-head"><span class="task-id">SEO-05</span><span class="task-title">Final Local Falcon scan + May reporting</span><span class="badge b-p0">P0</span></div>
+  <div class="task-meta">
+    <div><b>Deadline</b>May 31 scan · June 2 report delivered</div>
+    <div><b>Time</b>4 hr (scan + analysis + report drafting)</div>
+  </div>
+  <ol class="steps">
+    <li>May 31 EOD: run final Local Falcon scan (same 10-keyword 2-mile grid as April 3 baseline).</li>
+    <li>Compile the May 31 vs April 3 SoLV deltas for all 10 keywords in the May report deck.</li>
+    <li>Pull May GBP Insights totals and YoY comparison.</li>
+    <li>Manually count adjacent-town review mentions (KPI 10 — stretch). Search GBP reviews for "Roselle Park," "Cranford," "Linden," "Elizabeth," "Westfield" mentions in May review text.</li>
+    <li>Compose the report — one slide per KPI with baseline, target, actual, and (where available) attribution to specific tactics.</li>
+    <li>Deliver to Account Lead by EOD June 2.</li>
+  </ol>
+</div>
+
+<div class="dept-head" id="lead">
+  <h2>🤝 Department: Account Lead (Darrell)</h2>
+  <div class="sub">4 tasks. Owns coordination + client-comms. Not in scope of executional work, but every other department depends on inputs the Account Lead manages: client approvals, photo asset pipeline, POS export, mid-month check-in.</div>
+</div>
+
+<div class="task task-p1">
+  <div class="task-head"><span class="task-id">ACT-01</span><span class="task-title">Secure all 6 client asks on schedule</span><span class="badge b-p1">P1</span></div>
+  <p>Track and chase: Ask 01 (deploy approval, May 3) · Ask 02 (photo assets, ongoing) · Ask 03 (POS export, May 15) · Ask 04 (Memorial Day hours, May 18) · Ask 05 (GBP listing decision, May 15) · Ask 06 (brand-page approval, May 21). Escalate any slip immediately.</p>
+</div>
+
+<div class="task task-p1">
+  <div class="task-head"><span class="task-id">ACT-02</span><span class="task-title">Run May 15 mid-month check-in</span><span class="badge b-p1">P1</span></div>
+  <p>Agenda: review Pillar 1 deploy results (DEV-01–04 outputs), week-1 SoLV reading from SEO-02, present recommendation on GBP listing consolidation, request POS export and Memorial Day hours, surface any competitor counter-push from GBP-07.</p>
+</div>
+
+<div class="task task-p2">
+  <div class="task-head"><span class="task-id">ACT-03</span><span class="task-title">Manage Joytender training-card delivery</span><span class="badge b-p2">P2</span></div>
+  <p>Design team produces the one-page training card. Account Lead delivers it to Joyleaf and confirms it's posted in the staff break area by May 5, then confirms with Joyleaf's manager that the hometown prompt was raised at a Week 2 standup.</p>
+</div>
+
+<div class="task task-p2">
+  <div class="task-head"><span class="task-id">ACT-04</span><span class="task-title">May 31 client report walkthrough</span><span class="badge b-p2">P2</span></div>
+  <p>Receive May report from SEO-05 on June 2. Schedule a 30-min walkthrough with Joyleaf leadership. Use the report to set up June asks and tee up brand-page expansion.</p>
+</div>
+
+<section id="copy">
+  <h2>📋 Master Copy Library</h2>
+  <p>Every piece of public-facing language for May, paste-ready. Reasoning is included so any team member can adapt for edge cases without losing the strategic intent.</p>
+
+  <h3>Homepage</h3>
+  <div class="copy">
+    <b class="lbl">H1</b><div class="text">Roselle's Trusted Cannabis Dispensary</div>
+    <b class="lbl" style="margin-top:8px">Subhead</b><div class="text">Joyleaf Dispensary</div>
+    <b class="lbl" style="margin-top:8px">Title tag</b><div class="text">Joyleaf Dispensary | Roselle NJ Cannabis &amp; Delivery</div>
+    <b class="lbl" style="margin-top:8px">Meta description</b><div class="text">Roselle's trusted cannabis dispensary. Shop NJ's top brands at Joyleaf — women-owned, fast delivery across Union County, and in-and-out in under 10 minutes.</div>
+  </div>
+
+  <h3>Location page (<code>/dispensary-location</code>)</h3>
+  <div class="copy">
+    <b class="lbl">H1</b><div class="text">Joyleaf Dispensary — Roselle, NJ</div>
+    <b class="lbl" style="margin-top:8px">H2 (replaces "The Best Weed Dispensary in Roselle, NJ")</b><div class="text">Why Choose Joyleaf Dispensary</div>
+    <b class="lbl" style="margin-top:8px">Title tag</b><div class="text">Visit Joyleaf Dispensary in Roselle, NJ | Hours &amp; Directions</div>
+    <b class="lbl" style="margin-top:8px">Meta description</b><div class="text">Visit Joyleaf Dispensary at 711 E 1st Ave, Roselle NJ. Free parking, in-and-out in 10 minutes, open Mon–Sat 9 AM–10 PM, Sun 9 AM–8 PM.</div>
+  </div>
+
+  <h3>Roselle Park hyperlocal page</h3>
+  <div class="copy">
+    <b class="lbl">URL</b><div class="text"><code>joyleaf.com/roselle-park-dispensary</code></div>
+    <b class="lbl" style="margin-top:8px">H1</b><div class="text">Joyleaf Dispensary — Serving Roselle Park, NJ</div>
+    <b class="lbl" style="margin-top:8px">Title tag</b><div class="text">Joyleaf Dispensary in Roselle Park, NJ — Nearby Cannabis</div>
+    <b class="lbl" style="margin-top:8px">Meta description</b><div class="text">Joyleaf Dispensary is just 0.7 miles south of Roselle Park, NJ. Skip the lines — fast pickup, free parking, plus delivery across Roselle Park. Open daily.</div>
+    <b class="lbl" style="margin-top:8px">Body paragraph #1 (paste)</b><div class="text">Looking for a dispensary near Roselle Park? Joyleaf Dispensary is a 5-minute drive south on E 1st Ave — straight down Westfield Avenue or Chestnut Street, no highways, no traffic. We're a state-licensed, women-owned cannabis dispensary serving Roselle Park, Roselle, Cranford, Linden, and the rest of Union County. Whether you're picking up flower, edibles, vapes, or pre-rolls, our Joytenders make it easy: most customers are in and out in under 10 minutes.</div>
+    <b class="lbl" style="margin-top:8px">Body paragraph #2 (paste)</b><div class="text">Three reasons Roselle Park residents make the short drive: free on-site parking (no metered streets to deal with), fast checkout that respects your time, and 2,224+ verified 4.9-star reviews from people who keep coming back. We deliver across Roselle Park too — order ahead and we'll bring it to you.</div>
+    <b class="lbl" style="margin-top:8px">5-question FAQ (paste)</b><div class="text">
+      <b>How long is the drive from Roselle Park to Joyleaf Dispensary?</b><br>
+      About 5 minutes from most parts of Roselle Park — 0.7 miles south on E 1st Ave.<br><br>
+      <b>Does Joyleaf Dispensary deliver to Roselle Park?</b><br>
+      Yes. We deliver across Roselle Park and the rest of Union County. Order online and we'll bring it.<br><br>
+      <b>Do I need to bring ID?</b><br>
+      Yes — anyone purchasing cannabis must be 21+ with valid government-issued ID (REAL ID, passport, or out-of-state driver's license).<br><br>
+      <b>Is there parking?</b><br>
+      Yes — free on-site parking. No meters, no garages.<br><br>
+      <b>What brands does Joyleaf carry?</b><br>
+      Camino, Doinks, Simply Herb, Ozone, Garden Greens, and many more — both flower and infused products. Our menu updates regularly; check online or stop in to see what's fresh.
+    </div>
+  </div>
+
+  <h3>Elizabeth hyperlocal page</h3>
+  <div class="copy">
+    <b class="lbl">URL</b><div class="text"><code>joyleaf.com/elizabeth-nj/dispensary-near-me/</code></div>
+    <b class="lbl" style="margin-top:8px">H1</b><div class="text">Dispensary Near Me in Elizabeth, NJ</div>
+    <b class="lbl" style="margin-top:8px">Title tag</b><div class="text">Cannabis Dispensary Near Elizabeth, NJ — Joyleaf Dispensary</div>
+    <b class="lbl" style="margin-top:8px">Meta description</b><div class="text">Looking for a dispensary near Elizabeth, NJ? Joyleaf Dispensary is 12 minutes away in Roselle — easier parking, faster checkout, and delivery to Elizabeth.</div>
+    <b class="lbl" style="margin-top:8px">Body paragraph #1 (paste)</b><div class="text">For Elizabeth, NJ residents tired of fighting downtown traffic and metered parking just to grab pre-rolls, Joyleaf Dispensary is the easier alternative. We're a 12-minute drive on Route 1/9 or Westfield Avenue — out of the congestion and into a free parking lot. Joyleaf is a state-licensed, women-owned cannabis dispensary serving Elizabeth, Roselle, Cranford, Linden, and Roselle Park.</div>
+    <b class="lbl" style="margin-top:8px">Body paragraph #2 (paste)</b><div class="text">Why drive 12 minutes instead of 4? Three reasons: free on-site parking (zero meters, zero stress), an in-and-out experience that respects your time, and a 4.9-star reputation backed by 2,224+ verified reviews. We deliver to Elizabeth too — same-day, often same-hour, depending on the time of day.</div>
+  </div>
+
+  <h3>Camino brand page</h3>
+  <div class="copy">
+    <b class="lbl">URL</b><div class="text"><code>joyleaf.com/brands/camino</code></div>
+    <b class="lbl" style="margin-top:8px">H1</b><div class="text">Camino Cannabis at Joyleaf Dispensary</div>
+    <b class="lbl" style="margin-top:8px">Intro paragraph (paste)</b><div class="text">Camino is the gummy line that gets the format right — small-dose, fast-acting, dialed-in for specific moods. At Joyleaf Dispensary in Roselle, NJ, Camino is one of our most-recommended edibles for first-timers and frequent customers alike. Whether you're looking for the energizing daytime "Wild Berry" or the wind-down "Midnight Blueberry," our Joytenders can match the right SKU to the right moment. Pick up at our Roselle location or order delivery across Union County.</div>
+  </div>
+
+  <h3>Doinks brand page</h3>
+  <div class="copy">
+    <b class="lbl">URL</b><div class="text"><code>joyleaf.com/brands/doinks</code></div>
+    <b class="lbl" style="margin-top:8px">H1</b><div class="text">Doinks Pre-Rolls at Joyleaf Dispensary</div>
+    <b class="lbl" style="margin-top:8px">Intro paragraph (paste)</b><div class="text">Doinks pre-rolls deliver the consistency regulars expect and the sessions casual users want — every roll dialed in, every batch tested. At Joyleaf Dispensary in Roselle, NJ, Doinks is a top pick for the porch, the BBQ, and the post-workout wind-down. Our menu rotates with the freshest strains, and our Joytenders can steer you to the right pack for the moment. Pickup or fast delivery across Roselle, Cranford, Linden, Elizabeth, and the rest of Union County.</div>
+  </div>
+
+  <h3>Refreshed GBP description (apply mid-month)</h3>
+  <div class="copy">
+    <b class="lbl">Description (paste verbatim · 750 chars)</b><div class="text">Joyleaf Dispensary is Roselle, NJ's trusted, women-owned cannabis dispensary — proudly serving Roselle, Roselle Park, Cranford, Linden, and Elizabeth. Visit our 711 E 1st Ave dispensary for premium flower, edibles, vapes, pre-rolls, and concentrates from brands like Camino, Doinks, Simply Herb, Ozone, and Garden Greens. Fast in-store pickup, free parking, and same-day delivery across Union County. Our Joytenders make every visit easy — from first-timers to longtime regulars. Open Mon–Sat 9 AM–10 PM and Sun 9 AM–8 PM. 21+ ID required.</div>
+  </div>
+
+  <h3>Standard GBP-post body closer (use under every post)</h3>
+  <div class="copy"><div class="text">Visit Joyleaf Dispensary at 711 E 1st Ave, Roselle, NJ — or order delivery across Union County. Open Mon–Sat 9 AM–10 PM, Sun 9 AM–8 PM. 21+ ID required.</div></div>
+
+  <h3>Review-response opening rotation</h3>
+  <div class="copy"><div class="text">
+  • "Thanks for visiting Joyleaf Dispensary!"<br>
+  • "We appreciate your trust in our dispensary."<br>
+  • "Thanks for choosing Joyleaf Dispensary."<br>
+  • "It means the world to our dispensary team that…"<br>
+  • "From all of us at Joyleaf Dispensary in Roselle — thank you."
+  </div></div>
+
+  <h3>QR-card CTA copy</h3>
+  <div class="copy"><div class="text">How was your Memorial Day weekend at Joyleaf? Tell us — and tell us where you drove from.</div></div>
+</section>
+
+<section id="calendar">
+  <h2>📅 May calendar at a glance</h2>
+  <table>
+    <tr><th>Date</th><th>Wk</th><th>Deliverable</th><th>Dept</th><th>Task ID</th></tr>
+    <tr><td>May 1</td><td>1</td><td>"Offers delivery" attribute on · QR insert delivered to Joyleaf</td><td>GBP · Design</td><td>GBP-01 · DSGN-01</td></tr>
+    <tr><td>May 1–3</td><td>1</td><td>8 GBP Q&amp;As posted</td><td>GBP</td><td>GBP-02</td></tr>
+    <tr><td><b>May 3</b> <span class="badge b-p0">DEPLOY</span></td><td>1</td><td>Pillar 1: H1s · meta titles · schema</td><td>Dev</td><td>DEV-01–04</td></tr>
+    <tr><td>May 4</td><td>1</td><td>GBP post: Mother's Day promo</td><td>GBP</td><td>GBP-03</td></tr>
+    <tr><td>May 5</td><td>1</td><td>Mother's Day blog live · SEO-01 validation done</td><td>Content · Dev · SEO</td><td>CON-01 · DEV-11 · SEO-01</td></tr>
+    <tr><td>weekly</td><td>1+</td><td>GBP photo upload (5/wk) · weekly Local Falcon scan</td><td>GBP · SEO</td><td>GBP-04 · SEO-02</td></tr>
+    <tr><td>May 11</td><td>2</td><td>Roselle Park hyperlocal page live</td><td>Content · Dev · SEO</td><td>CON-05 · DEV-05 · SEO-03</td></tr>
+    <tr><td>May 12</td><td>2</td><td>First-Timer's Guide blog live</td><td>Content · Dev</td><td>CON-02 · DEV-11</td></tr>
+    <tr><td>May 15</td><td>3</td><td>Mid-month check-in · GBP listing decision</td><td>Account Lead</td><td>ACT-02</td></tr>
+    <tr><td>May 18</td><td>3</td><td>Refreshed GBP description live</td><td>GBP</td><td>GBP-08</td></tr>
+    <tr><td>May 19</td><td>4</td><td>Memorial Day BBQ blog live</td><td>Content · Dev</td><td>CON-03 · DEV-11</td></tr>
+    <tr><td>May 22</td><td>4</td><td>Memorial Day GBP post · holiday photo drop</td><td>GBP</td><td>GBP-06</td></tr>
+    <tr><td>May 26</td><td>5</td><td>Spring Strain Picks blog · Elizabeth hyperlocal page</td><td>Content · Dev · SEO</td><td>CON-04 · CON-06 · DEV-06 · SEO-03</td></tr>
+    <tr><td>May 28</td><td>5</td><td>Camino + Doinks brand pages · footer "Featured Brands" links</td><td>Content · Dev · Design · SEO</td><td>CON-07 · DEV-07/08/09 · DSGN-02 · SEO-03</td></tr>
+    <tr><td><b>May 31</b></td><td>5</td><td>Final Local Falcon scan · May report drafted (delivered June 2)</td><td>SEO</td><td>SEO-05</td></tr>
+  </table>
+</section>
+
+<section id="kpis">
+  <h2>🎯 KPI targets · what success looks like on May 31</h2>
+  <div class="kpi-grid">
+    <div class="kpi"><b>"Dispensary" rank</b><div class="v">#4 → #3+ (40%+ SoLV)</div><div class="t">High confidence</div></div>
+    <div class="kpi"><b>"Dispensary near me" rank</b><div class="v">#4 → #3+ (38%+ SoLV)</div><div class="t">High confidence</div></div>
+    <div class="kpi"><b>9/10 keywords top 3</b><div class="v">8/10 → 9/10</div><div class="t">High confidence</div></div>
+    <div class="kpi"><b>Direction requests</b><div class="v">1,347 → 1,400+</div><div class="t">High confidence</div></div>
+    <div class="kpi"><b>Web clicks / mo</b><div class="v">5,496 → 5,700+</div><div class="t">High confidence</div></div>
+    <div class="kpi"><b>Phone calls / mo</b><div class="v">251 → 300+</div><div class="t">High confidence</div></div>
+    <div class="kpi"><b>Conversion rate</b><div class="v">111.7% → 110%+</div><div class="t">High confidence</div></div>
+    <div class="kpi"><b>Discovery searches</b><div class="v">5,406 → 6,000+</div><div class="t">Moderate (market headwind)</div></div>
+    <div class="kpi"><b>New reviews</b><div class="v">~80/mo → 100+</div><div class="t">Moderate</div></div>
+    <div class="kpi"><b>Adjacent-town review mentions</b><div class="v">0 → 30+</div><div class="t">Stretch</div></div>
+    <div class="kpi"><b>10/10 keywords top 3</b><div class="v">stretch goal</div><div class="t">Stretch</div></div>
+  </div>
+</section>
+
+<section>
+  <h2>Compliance &amp; guardrails</h2>
+  <ul>
+    <li><b>No pricing in GBP imagery</b> or photo captions.</li>
+    <li><b>No medical claims.</b> Avoid "treats," "cures," "therapeutic," "prescribed."</li>
+    <li><b>21+ language</b> on every new page and gift-themed blog post.</li>
+    <li><b>No social media tactics</b> in this month's scope.</li>
+    <li>Brand-page imagery must be cleared by Account Lead before publish.</li>
+  </ul>
+</section>
+
+<footer>
+  Joyleaf Dispensary · May 2026 Dispenza Execution Playbook · v2.0 · Departmentalized · prepared by Dispenza Dispensary Marketing
+</footer>
+
+</div>
+</body>
+</html>

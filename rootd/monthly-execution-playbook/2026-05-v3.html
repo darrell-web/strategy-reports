@@ -1,0 +1,1394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Root'd In The 510 — May 2026 Dispenza Execution Playbook</title>
+<style>
+  :root{--purple-900:#2E1A47;--purple-700:#5B2A86;--purple-500:#7B3FA8;--purple-100:#F3E8FB;--pink-500:#D63384;--pink-100:#FDE8F2;--gold:#F4B942;--gold-light:#FFF4D6;--green:#2BA84A;--green-100:#E6F6EA;--red:#D64545;--red-100:#FFE8E8;--amber:#E8870C;--amber-100:#FFF1DD;--blue:#2563EB;--blue-100:#DBEAFE;--gray-900:#1F2937;--gray-700:#4B5563;--gray-500:#6B7280;--gray-300:#D1D5DB;--gray-100:#F3F4F6;--gray-50:#F9FAFB}
+  *{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--gray-900);background:var(--gray-50);line-height:1.55;font-size:15px}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+  header.hero{background:linear-gradient(135deg,var(--purple-900),var(--purple-500));color:#fff;padding:44px 0 36px;border-bottom:6px solid var(--gold)}
+  .hero h1{margin:0 0 8px;font-size:34px;letter-spacing:-.5px;line-height:1.1}.hero .sub{font-size:16px;opacity:.95;margin-bottom:18px;max-width:780px}
+  .hero .meta{display:flex;flex-wrap:wrap;gap:18px 28px;font-size:13px;opacity:.92}.hero .meta b{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.6px;opacity:.75}
+  section{background:#fff;margin:24px 0;padding:28px;border-radius:12px;box-shadow:0 1px 2px rgba(0,0,0,.04),0 1px 3px rgba(0,0,0,.06)}
+  h2{margin:0 0 14px;font-size:22px;color:var(--purple-900);border-left:5px solid var(--pink-500);padding-left:12px}
+  h3{margin:22px 0 8px;font-size:17px;color:var(--purple-700)}h4{margin:14px 0 6px;font-size:13.5px;text-transform:uppercase;letter-spacing:.6px;color:var(--gray-700)}
+  p{margin:8px 0}ul,ol{margin:8px 0;padding-left:22px}li{margin:4px 0}
+  code{background:var(--purple-100);color:var(--purple-900);padding:1px 6px;border-radius:4px;font-size:.9em;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+  pre{background:var(--gray-900);color:#E5E7EB;padding:14px 16px;border-radius:8px;overflow-x:auto;font-size:12.5px;line-height:1.5}pre code{background:transparent;color:inherit;padding:0}
+  table{width:100%;border-collapse:collapse;font-size:13.5px;margin:8px 0}th{background:var(--purple-100);color:var(--purple-900);text-align:left;padding:8px 10px;border-bottom:2px solid var(--purple-500)}
+  td{padding:8px 10px;border-bottom:1px solid var(--gray-300);vertical-align:top}tr:nth-child(even) td{background:var(--gray-50)}
+  .badge{display:inline-block;padding:2px 9px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.3px;vertical-align:middle}
+  .b-p0{background:var(--red-100);color:var(--red)}.b-p1{background:var(--amber-100);color:var(--amber)}.b-p2{background:var(--blue-100);color:var(--blue)}
+  .b-high{background:var(--green-100);color:var(--green)}.b-mod{background:var(--amber-100);color:var(--amber)}.b-stretch{background:var(--red-100);color:var(--red)}
+  .alert{padding:14px 18px;border-radius:8px;margin:14px 0;border-left:5px solid}.alert-critical{background:var(--red-100);border-color:var(--red);color:#7F1D1D}
+  .alert-warn{background:var(--gold-light);border-color:var(--gold);color:#78350F}.alert-info{background:var(--blue-100);border-color:var(--blue);color:#1E3A8A}
+  .task{border:1px solid var(--gray-300);border-radius:10px;padding:18px 20px;margin:14px 0;background:#fff}
+  .task-p0{border-left:6px solid var(--red)}.task-p1{border-left:6px solid var(--amber)}.task-p2{border-left:6px solid var(--blue)}
+  .task-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px;margin-bottom:8px}
+  .task-id{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;font-weight:700;color:var(--gray-500)}
+  .task-title{font-size:18px;font-weight:700;color:var(--purple-900);flex:1;min-width:0}
+  .task-meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:6px 16px;background:var(--gray-50);padding:10px 12px;border-radius:6px;margin:10px 0;font-size:13px}
+  .task-meta b{font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;color:var(--gray-500);display:block;margin-bottom:1px}
+  .steps{counter-reset:step;list-style:none;padding-left:0;margin:10px 0}
+  .steps li{counter-increment:step;position:relative;padding:8px 12px 8px 42px;margin:4px 0;background:var(--gray-50);border-radius:6px;border:1px solid var(--gray-300)}
+  .steps li::before{content:counter(step);position:absolute;left:10px;top:8px;width:24px;height:24px;background:var(--purple-500);color:#fff;border-radius:50%;text-align:center;line-height:24px;font-weight:700;font-size:12px}
+  .accept{background:var(--green-100);border:1px solid var(--green);border-radius:6px;padding:10px 14px;margin-top:10px}
+  .accept ul{list-style:none;padding-left:0}.accept li{padding:3px 0 3px 26px;position:relative}.accept li::before{content:"☐";position:absolute;left:0;top:0;font-size:18px;color:var(--green);font-weight:700}
+  .dept-head{background:linear-gradient(90deg,var(--purple-900),var(--purple-500));color:#fff;padding:22px 26px;border-radius:10px;margin:36px 0 14px}
+  .dept-head h2{color:#fff;border-left:5px solid var(--gold);margin:0;font-size:24px}.dept-head .sub{opacity:.9;font-size:14px;margin-top:6px}.dept-head .meta-line{font-size:12.5px;opacity:.85;margin-top:8px}
+  .copy{background:var(--purple-100);border-left:4px solid var(--purple-700);padding:12px 14px;margin:8px 0;border-radius:4px}
+  .copy b.lbl{color:var(--purple-900);text-transform:uppercase;font-size:10.5px;letter-spacing:.6px;display:block;margin-bottom:3px}
+  .copy .why{font-size:12.5px;color:var(--gray-700);margin-top:6px;font-style:italic}.copy .text{font-size:14.5px;line-height:1.45}
+  .reasoning{background:var(--gold-light);border-left:4px solid var(--gold);padding:10px 14px;margin:8px 0;border-radius:4px;font-size:13px}
+  .reasoning b{color:#78350F;text-transform:uppercase;font-size:10.5px;letter-spacing:.6px;display:block;margin-bottom:3px}
+  .toc{background:var(--purple-100);border-radius:8px;padding:14px 20px;margin:14px 0}.toc a{color:var(--purple-700);text-decoration:none;display:inline-block;margin:3px 14px 3px 0;font-size:13.5px;font-weight:600}
+  .kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin:8px 0}
+  .kpi{background:var(--gray-50);border-radius:8px;padding:12px;border-left:4px solid var(--purple-500)}
+  .kpi b{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:var(--gray-500)}
+  .kpi .v{font-size:18px;font-weight:700;color:var(--purple-900);margin:2px 0}.kpi .t{font-size:13px;color:var(--gray-700)}
+  footer{text-align:center;padding:28px 0;color:var(--gray-500);font-size:13px}
+</style>
+</head>
+<body>
+
+<header class="hero"><div class="wrap">
+  <h1>Root'd In The 510 — May 2026 Dispenza Execution Playbook</h1>
+  <div class="sub">Department-by-department guide for the Dispenza team. Every task is something <b>we</b> own and ship. Client-side asks are tracked separately by the Account Lead and surface here only as dependencies.</div>
+  <div class="meta">
+    <div><b>Period</b>May 1 – May 31, 2026</div>
+    <div><b>Account Lead</b>Darrell</div>
+    <div><b>Departments</b>Dev · Content · GBP · AIQ Lifecycle · Design · SEO/Analytics</div>
+    <div><b>Final Measurement</b>Local Falcon + AIQ revenue · May 31</div>
+  </div>
+</div></header>
+
+<div class="wrap">
+
+<section>
+  <h2>How to use this playbook</h2>
+  <p>Find your department section. Work top-down — within each department tasks are listed in <b>impact priority</b>. Every task has: deadline, time estimate, dependencies, click-by-click steps, the <b>exact copy to publish</b>, and acceptance criteria. If you cannot tick every acceptance box, the task is not done.</p>
+  <p><b>Two parallel objectives this month:</b> (1) Recover "weed" SoLV from 58% → 70–75% via website + GBP fixes. (2) Scale AIQ revenue from $14K → $18–20K/month via send-volume increases + SMS opt-in growth + push activation.</p>
+  <div class="toc">
+    <a href="#path">Critical-path</a><a href="#foundation">🛡 Foundation Layer</a><a href="#dev">🛠 Web Development</a><a href="#content">✍️ Content</a><a href="#gbp">📍 GBP / Local Listings</a><a href="#aiq">📨 AIQ Lifecycle</a><a href="#design">🎨 Design</a><a href="#seo">📊 SEO / Analytics</a><a href="#lead">🤝 Account Lead</a><a href="#copy">📋 Master Copy Library</a><a href="#calendar">📅 Calendar</a><a href="#kpis">🎯 KPIs</a>
+  </div>
+</section>
+
+<section id="path">
+  <h2>Critical-path overview</h2>
+  <div class="alert alert-critical">
+    <b>Hard deadline: May 5 deploy.</b> Pillar 1 (homepage H1, LocalBusiness schema, age-gate fix) must ship by EOD May 5. The website has <b>zero H1 today</b> — this is the single biggest fixable error in the entire May plan.
+  </div>
+  <table>
+    <tr><th>Date</th><th>Must be live</th><th>Owning department</th></tr>
+    <tr><td>May 1</td><td>"Offers delivery" GBP attribute REMOVED · Friday email cadence kicks off · daily push activated · QR opt-in design done</td><td>GBP · AIQ · Design</td></tr>
+    <tr><td><b>May 5</b></td><td>Homepage H1 deployed · LocalBusiness JSON-LD · age-gate Googlebot allow-list · Mother's Day blog live</td><td>Dev · Content</td></tr>
+    <tr><td>May 8</td><td>SMS opt-in incentive campaign live at POS · GBP description rewrite live</td><td>AIQ · GBP</td></tr>
+    <tr><td>May 11</td><td>Temescal neighborhood page live</td><td>Content · Dev</td></tr>
+    <tr><td>May 14</td><td>Bushrod neighborhood page live (Root'd's own zip — competitive defense)</td><td>Content · Dev</td></tr>
+    <tr><td>May 19</td><td>Rockridge page live · Memorial Day blog live</td><td>Content · Dev</td></tr>
+    <tr><td>May 21</td><td>Piedmont page live</td><td>Content · Dev</td></tr>
+    <tr><td>May 26</td><td>Lake Merritt page live</td><td>Content · Dev</td></tr>
+    <tr><td><b>May 31</b></td><td>Final Local Falcon scan · AIQ revenue report · May report drafted</td><td>SEO · AIQ</td></tr>
+  </table>
+</section>
+
+<!-- FOUNDATION LAYER -->
+<div class="dept-head" id="foundation">
+  <h2>🛡 Department: Foundation Layer</h2>
+  <div class="sub">14 tasks. Closes the evidence-tiered gaps identified in Section 11 of the v3 Strategy Report. Two cannabis-binary checks (FND-01 + FND-02) lead — FND-01 verifies the age-gate fix the existing Pillar 1 ships; FND-02 audits Treez Embedded Menu (the Treez parallel to the well-documented Dutchie iframe issue). FND-10 (backlinks) is P0-elevated as the structured response to the Urbana content moat surfaced in the strategy.</div>
+  <div class="meta-line">Tools: server logs · GSC URL Inspection · BrightLocal · Whitespark · Ahrefs · PageSpeed Insights (CrUX) · Lighthouse · Apple Maps Connect · Bing Places · Weedmaps for Business · Leafly Biz · Google KP claim · Looker Studio · Treez integration support · AIQ analytics</div>
+</div>
+
+<div class="alert alert-warn">
+  <b>Phasing.</b> FND-01 ships alongside Pillar 1's May 5 deploy (verifies the age-gate fix actually reached Googlebot). FND-02 + FND-03 + FND-04 ship Week 1. FND-05 through FND-09 ship Week 2. FND-10 through FND-14 ship Weeks 3–4. Acceptance closes by May 31.
+</div>
+
+<div class="task task-p0">
+  <div class="task-head"><span class="task-id">FND-01</span><span class="task-title">Verify age-gate Googlebot allowlist (post-Pillar 1 confirmation)</span><span class="badge b-p0">P0</span><span class="badge b-high">★★★★★ if blocking</span></div>
+  <p>Pillar 1 ships an age-gate fix as part of the May 5 deploy. FND-01 verifies it actually reached Googlebot's index — the difference between "we deployed a fix" and "Google sees the lounge differentiator content" is non-zero.</p>
+  <div class="task-meta">
+    <div><b>Owner</b>SEO/Analytics + Dev (Nick / Shade)</div>
+    <div><b>Deadline</b>EOD May 7 (post-deploy verification)</div>
+    <div><b>Time</b>2 hrs</div>
+    <div><b>Expected lift if still broken</b>+10 to +20 SoLV</div>
+  </div>
+  <h4>Steps</h4>
+  <ol class="steps">
+    <li>In GSC, run <b>URL Inspection</b> on <code>https://rootd510.com/</code>. Click <b>"Test live URL"</b> → <b>"View tested page"</b> → <b>HTML</b> tab.</li>
+    <li>Search the rendered HTML for: the new H1 ("Oakland Cannabis Dispensary &amp; Lounge — Root'd In The 510"), the LocalBusiness JSON-LD <code>&lt;script&gt;</code>, and the H2 mentioning "Black-Owned Equity Dispensary" + "Consumption Lounge". All three must be present.</li>
+    <li>If any are missing post-deploy, the age-gate fix didn't fully land. Pull rootd510.com server logs for the last 7 days. Filter for <code>User-Agent</code> matching <code>Googlebot</code>.</li>
+    <li>For each Googlebot request to <code>/</code>, confirm the response served the actual page HTML (200 status, ~30-100KB body), not the age-gate interstitial.</li>
+    <li>If still broken: harden the server-side Googlebot allowlist with Nick/Shade. Pattern: detect <code>Googlebot|Bingbot|DuckDuckBot</code> in <code>User-Agent</code>; bypass age-gate.</li>
+    <li>Re-deploy. Re-run URL Inspection. Confirm rendered HTML shows H1 + schema + lounge content.</li>
+    <li>Submit homepage + 5 neighborhood pages + /menu for re-indexing in GSC.</li>
+  </ol>
+  <div class="reasoning"><b>Why this matters</b> Root'd's H1 fix is the biggest single rank lever in the May plan — but it only delivers if Google actually crawls it. Cannabis Creative + Whitespark consensus: stealth indexation killers are common. Verifying post-deploy is non-negotiable.</div>
+  <div class="accept"><b>Acceptance criteria</b><ul>
+    <li>GSC URL Inspection shows H1 + LocalBusiness JSON-LD + lounge H2 in rendered HTML.</li>
+    <li>Server logs confirm Googlebot receives 200s with full bodies.</li>
+    <li>If additional fix deployed: re-verified post-deploy.</li>
+    <li>Homepage + 5 neighborhood pages + /menu re-indexed.</li>
+  </ul></div>
+</div>
+
+<div class="task task-p0">
+  <div class="task-head"><span class="task-id">FND-02</span><span class="task-title">Audit Treez Embedded Menu crawlability (Dutchie-iframe equivalent)</span><span class="badge b-p0">P0</span><span class="badge b-high">★★★★★ if iframe</span></div>
+  <p>Treez Embedded Menu has the same architectural failure mode as the well-documented Dutchie iframe issue: if iframe-loaded by default, every product URL is invisible to Google. Treez Embedded supports SEO-friendly URL structures only if configured correctly.</p>
+  <div class="task-meta">
+    <div><b>Owner</b>SEO/Analytics + Dev</div>
+    <div><b>Deadline</b>Audit EOD May 10 · Migration plan EOD May 31</div>
+    <div><b>Time</b>4 hrs audit + variable</div>
+    <div><b>Expected lift if iframe</b>+10 to +20 SoLV (post-migration)</div>
+  </div>
+  <h4>Steps</h4>
+  <ol class="steps">
+    <li>Open <code>rootd510.com/menu</code>. View page source.</li>
+    <li>Search for <code>&lt;iframe</code>. If found and <code>src</code> points to <code>treez.io</code> or a Treez subdomain, the menu is iframe-loaded — products are invisible to Google.</li>
+    <li>Run Lighthouse SEO audit. Run Schema validator on parent /menu page — if no <code>Product</code> schema is detected, products are invisible to Google's structured-data layer.</li>
+    <li>Document in <code>FND-02-treez-audit.md</code>: iframe present (Y/N), iframe src, Product-schema present (Y/N), Lighthouse SEO score, recommended remediation.</li>
+    <li>If iframe-loaded: open a Treez integration support case asking specifically for SEO-friendly Embedded Menu configuration (per-product URLs, server-side rendering, schema). Some Treez customers are on legacy iframe; migrating to current Embedded Menu requires Treez engineering coordination.</li>
+    <li>If already SEO-friendly: confirm Product schema present; document as resolved.</li>
+  </ol>
+  <div class="reasoning"><b>Why this matters</b> Root'd's strain catalog represents long-tail KW universe ("[strain name] oakland", "[strain name] near me oakland"). Iframe-loaded means none reachable. The Treez migration path is less standardized than Dutchie's — escalation through Treez support is the right move.</div>
+  <div class="accept"><b>Acceptance criteria</b><ul>
+    <li>FND-02-treez-audit.md committed.</li>
+    <li>If iframe-loaded: Treez support case opened + migration recommendation in hand by May 31.</li>
+    <li>If SEO-friendly: Product schema confirmed; documented as resolved.</li>
+  </ul></div>
+</div>
+
+<div class="task task-p0">
+  <div class="task-head"><span class="task-id">FND-03</span><span class="task-title">NAP exact-match audit across all properties</span><span class="badge b-p0">P0</span><span class="badge b-high">★★★★★ +23%</span></div>
+  <p>+23% local-pack rank improvement at 85%+ NAP consistency (Citation Building Group · BrightLocal). 4-8 weeks post-cleanup.</p>
+  <div class="task-meta">
+    <div><b>Owner</b>SEO/Analytics</div>
+    <div><b>Deadline</b>Audit EOD May 9 · Cleanup EOD May 28</div>
+    <div><b>Time</b>4 hrs audit + 6 hrs cleanup</div>
+    <div><b>Expected lift</b>+23% local-pack rank (4-8 wks)</div>
+  </div>
+  <h4>Steps</h4>
+  <ol class="steps">
+    <li>Define canonical NAP exactly: <b>Root'd In The 510 · 4444 Telegraph Ave · Oakland, CA 94609 · +1 (510) 488-1148</b>. Capture in <code>FND-03-canonical-nap.md</code>. Confirm matches LocalBusiness schema + GBP listing exactly. <em>Note: the apostrophe in "Root'd" is a known NAP-drift risk — some directories strip it.</em></li>
+    <li>Run BrightLocal Citation Tracker scan against rootd510.com + canonical NAP. Export listing report.</li>
+    <li>Manually verify 8+ properties: website footer, GBP, Weedmaps (FND-05), Leafly (FND-06), Yelp, BBB, Bing Places (FND-07), Apple Maps (FND-07), Foursquare, SF Chronicle business directory, East Bay Express directory.</li>
+    <li>Build <code>FND-03-nap-audit.csv</code>: property, current name, current address, current phone, exact-match? (Y/N), drift type. Flag every drift — including apostrophe variants ("Rootd" vs "Root'd").</li>
+    <li>For each drift, claim if needed and submit correction. Track edit-submission dates.</li>
+    <li>Set monthly recurring BrightLocal scan.</li>
+  </ol>
+  <div class="accept"><b>Acceptance criteria</b><ul>
+    <li>Canonical NAP documented + matches schema + GBP.</li>
+    <li>FND-03-nap-audit.csv with all 8+ properties scored.</li>
+    <li>Apostrophe drift specifically tracked.</li>
+    <li>Every drift has correction submitted by May 28.</li>
+    <li>Monthly recurring BrightLocal scan configured.</li>
+  </ul></div>
+</div>
+
+<div class="task task-p0">
+  <div class="task-head"><span class="task-id">FND-04</span><span class="task-title">Verify GBP primary category + lounge-position decision</span><span class="badge b-p0">P0</span><span class="badge b-high">★★★★★ if wrong</span></div>
+  <p>Whitespark 2026: primary category = #2 ranking factor after proximity. <b>Strategic upside for Root'd:</b> if "Cannabis Lounge" is available as a primary category in Oakland, it's a unique-position lever Urbana cannot match.</p>
+  <div class="task-meta">
+    <div><b>Owner</b>GBP / Local Listings + Account Lead</div>
+    <div><b>Deadline</b>EOD May 9</div>
+    <div><b>Time</b>2 hrs (research + decision)</div>
+    <div><b>Expected lift</b>+5 to +15 SoLV if currently wrong</div>
+  </div>
+  <h4>Steps</h4>
+  <ol class="steps">
+    <li>GBP dashboard → Root'd In The 510 listing → Edit profile → Business information → Categories. Capture current primary.</li>
+    <li>Check available primary categories for Oakland CA cannabis: "Cannabis store" vs. "Cannabis lounge" (where licensed and Google offers it as a primary in CA). Use Whitespark's category research tool to confirm availability.</li>
+    <li><b>Decision point:</b> if "Cannabis lounge" is available as primary, escalate to Account Lead — switching primary from "Cannabis store" to "Cannabis lounge" is a strategic move that may reduce eligibility for "dispensary" KWs but eliminates Urbana's category competition entirely. Default recommendation: keep primary "Cannabis store" + add "Cannabis lounge" as the FIRST secondary.</li>
+    <li>Add 5-9 secondaries: <b>Cannabis lounge</b>, Marijuana dispensary, Herb shop, Vaporizer store, CBD store, Alternative medicine practitioner, Tobacco shop (where appropriate for accessory cross-traffic).</li>
+    <li>Save. Wait 24 hrs, run Local Falcon scan, capture for May 31 comparison.</li>
+  </ol>
+  <div class="copy">
+    <b class="lbl">Default primary category</b>
+    <div class="text">Cannabis store</div>
+    <b class="lbl" style="margin-top:8px">Secondary categories — paste in order</b>
+    <div class="text">Cannabis lounge · Marijuana dispensary · Herb shop · Vaporizer store · CBD store · Alternative medicine practitioner</div>
+    <div class="why">Why this works: keeps eligibility for "dispensary" + "cannabis store" KWs while putting "Cannabis lounge" as first secondary — that surfaces the lounge differentiator on every category-match search. The unique-position decision (lounge as primary) deserves Account Lead sign-off given the trade-off; default to the safer hybrid first.</div>
+  </div>
+  <div class="accept"><b>Acceptance criteria</b><ul>
+    <li>Current primary documented.</li>
+    <li>Decision made on primary (default: "Cannabis store"; lounge if AL approves).</li>
+    <li>5-9 secondaries deployed with "Cannabis lounge" first secondary.</li>
+    <li>Saved + Local Falcon scan baseline captured.</li>
+  </ul></div>
+</div>
+
+<div class="task task-p0">
+  <div class="task-head"><span class="task-id">FND-05</span><span class="task-title">Weedmaps profile 100% + menu sync + lounge imagery + deals</span><span class="badge b-p0">P0</span><span class="badge b-high">★★★★ traffic+rank</span></div>
+  <p>In CA, Weedmaps drives traffic exceeding non-branded organic for ~70% of dispensaries. NAP node + reviews node + direct-traffic source.</p>
+  <div class="task-meta">
+    <div><b>Owner</b>GBP / Local Listings</div>
+    <div><b>Deadline</b>Profile complete EOD May 16 · Cadence ongoing</div>
+    <div><b>Time</b>1 day initial + 2 hrs/wk</div>
+    <div><b>Expected lift</b>600-1,200 incremental visits/mo at CA maturity</div>
+  </div>
+  <h4>Steps</h4>
+  <ol class="steps">
+    <li>Verify claim status at <code>weedmaps.com/dispensaries</code> → search "Root'd In The 510 Oakland". If unclaimed, claim via Weedmaps for Business + verify CA license #.</li>
+    <li>Banner + logo: high-res Root'd branding. Profile fields: hours, license, canonical NAP (FND-03), phone, "About" description (paste below).</li>
+    <li>Photos: ≥20 across categories — <b>lounge imagery prioritized</b> (banner photo, interior lounge shots, in-use customer experience). No pricing.</li>
+    <li>Deals: ≥3 active deals. Mirror GBP cadence.</li>
+    <li>Menu sync: configure Treez → Weedmaps integration. Test 24-hr POS-update reflection. (Escalate if FND-02 reveals iframe-only Treez.)</li>
+    <li>Review-response SLA ≤48 hrs, varied language emphasizing lounge.</li>
+  </ol>
+  <div class="copy">
+    <b class="lbl">Weedmaps "About" description — paste verbatim</b>
+    <div class="text">Root'd In The 510 is Oakland's Black-owned equity cannabis dispensary and consumption lounge — proudly serving Oakland, Berkeley, Emeryville, Piedmont, and Temescal. Visit our 4444 Telegraph Ave dispensary for premium flower, edibles, vapes, pre-rolls, and concentrates. Our consumption lounge offers a safe, welcoming space to enjoy your purchase on-site (the only one in our footprint). 1,330+ verified 4.9-star reviews. Open daily 9 AM – 9:55 PM. In-store only — no delivery. 21+ ID required.</div>
+    <div class="why">Why this works: Two irreplaceable trust signals lead — "Black-owned equity" (which Urbana cannot copy) and "consumption lounge" (the structural moat). The neighborhood enumeration mirrors LocalBusiness areaServed schema. Closing with "in-store only — no delivery" sets correct expectation against the 70% of Bay Area dispensaries that do deliver.</div>
+  </div>
+  <div class="accept"><b>Acceptance criteria</b><ul>
+    <li>Profile claimed + verified + license # uploaded.</li>
+    <li>Banner, logo, hours, license, NAP populated and match canonical.</li>
+    <li>≥20 photos with lounge imagery prioritized. No pricing.</li>
+    <li>≥3 active deals.</li>
+    <li>Treez → Weedmaps menu sync verified (or FND-02 escalation noted).</li>
+    <li>Review-response SLA documented + first 5 reviews handled within 48 hrs.</li>
+  </ul></div>
+</div>
+
+<div class="task task-p0">
+  <div class="task-head"><span class="task-id">FND-06</span><span class="task-title">Leafly profile 100% + menu sync + strain-page authority bleed</span><span class="badge b-p0">P0</span><span class="badge b-high">★★★ traffic+rank</span></div>
+  <p>Leafly's strain pages bleed authority to your menu items if linked correctly.</p>
+  <div class="task-meta">
+    <div><b>Owner</b>GBP / Local Listings</div>
+    <div><b>Deadline</b>Profile complete EOD May 16 · Cadence ongoing</div>
+    <div><b>Time</b>1 day initial + 2 hrs/wk</div>
+    <div><b>Expected lift</b>NAP node + strain-authority bleed</div>
+  </div>
+  <h4>Steps</h4>
+  <ol class="steps">
+    <li>Claim/verify at <code>leafly.com/dispensary-info</code>.</li>
+    <li>Profile fields + photos + hours + license — same standard as FND-05. Apply FND-05 "About" copy.</li>
+    <li>Configure Treez → Leafly menu sync. Confirm 5+ strains link to Leafly's strain DB.</li>
+    <li>Review-response SLA ≤48 hrs.</li>
+  </ol>
+  <div class="accept"><b>Acceptance criteria</b><ul>
+    <li>Profile claimed + 100% complete.</li>
+    <li>Menu sync verified — at least 5 strains link to Leafly's strain DB.</li>
+    <li>Review-response SLA + first 5 handled in 48 hrs.</li>
+  </ul></div>
+</div>
+
+<div class="task task-p1">
+  <div class="task-head"><span class="task-id">FND-07</span><span class="task-title">Apple Maps Connect + Bing Places verified (Bay-Area-amplified)</span><span class="badge b-p1">P1</span><span class="badge b-mod">★★★ Bay-Area-amplified</span></div>
+  <p>Bay Area iPhone share is unusually high; CarPlay/Siri voice routing happens on Apple Maps not Google; Edge default Bing has elevated tech-worker share.</p>
+  <div class="task-meta">
+    <div><b>Owner</b>GBP / Local Listings</div>
+    <div><b>Deadline</b>EOD May 19</div>
+    <div><b>Time</b>8 hrs total</div>
+    <div><b>Expected lift</b>Captures Bay Area non-Google mobile</div>
+  </div>
+  <h4>Steps</h4>
+  <ol class="steps">
+    <li><b>Apple Maps:</b> <code>mapsconnect.apple.com</code>. Add Root'd In The 510. Verify ownership. Profile: canonical NAP, hours, ≤10 photos (lounge prioritized), About description (FND-05 adapted to 200-char Apple limit).</li>
+    <li><b>Bing Places:</b> <code>bingplaces.com</code>. Use "Import from Google" then verify exact-match canonical NAP.</li>
+    <li>Bing profile: confirm hours, photos, description, categories. Submit.</li>
+    <li>7-day calendar reminders for verification.</li>
+    <li>Once both live, run incognito SERP check (location-set to Oakland CA) for "cannabis lounge", "dispensary near me", "cannabis dispensary oakland" — confirm Root'd appears.</li>
+  </ol>
+  <div class="accept"><b>Acceptance criteria</b><ul>
+    <li>Apple Maps listing verified + appearing for Oakland "cannabis lounge" + "dispensary near me".</li>
+    <li>Bing Places listing verified + appearing for Oakland queries.</li>
+    <li>NAP exact-match confirmed on both.</li>
+  </ul></div>
+</div>
+
+<div class="task task-p0">
+  <div class="task-head"><span class="task-id">FND-08</span><span class="task-title">Internal linking — lounge-page hub-and-spoke architecture</span><span class="badge b-p0">P0</span><span class="badge b-mod">★★ +1-3 SoLV</span></div>
+  <p>The lounge differentiator can only rank for lounge-class queries with hub-and-spoke architecture. <b>P0 elevated for Root'd</b> because the lounge page is currently orphan-adjacent and 5 neighborhood pages launch in May without inlink density.</p>
+  <div class="task-meta">
+    <div><b>Owner</b>SEO/Analytics + Dev</div>
+    <div><b>Deadline</b>Audit EOD May 14 · Injection EOD May 28</div>
+    <div><b>Time</b>1 day audit + 4 hrs/page injection</div>
+    <div><b>Expected lift</b>+1-3 SoLV/page; lounge becomes lounge-class hub</div>
+  </div>
+  <h4>Steps</h4>
+  <ol class="steps">
+    <li>Screaming Frog crawl of rootd510.com. Export inlinks report.</li>
+    <li>Build <code>FND-08-money-page-inlinks.csv</code> for: homepage, /menu, the 5 neighborhood pages launching in May (/temescal-dispensary, /piedmont-dispensary, plus the 3 others), /lounge (or equivalent lounge page if exists; if not, create as part of FND-08), key blog posts. Capture current in-content inlink counts.</li>
+    <li>For pages below 5 inlinks: identify 5+ existing pieces of content where contextual inlinks make editorial sense. Inject with varied anchor text.</li>
+    <li><b>Lounge-hub structure:</b> every blog post inlinks ≥3× to the lounge page; every product/menu page footer carries a "Visit our consumption lounge" anchor; lounge becomes the hub for 5+ lounge-related blog spokes.</li>
+    <li>Re-crawl after deploy. Confirm every money page ≥5 in-content inlinks; lounge page ≥10 inlinks (hub status).</li>
+  </ol>
+  <div class="reasoning"><b>Why this matters</b> Root'd's lounge differentiator is the structural moat against Urbana, but it can only rank for "cannabis lounge oakland" / "consumption lounge bay area" queries if the internal-linking architecture treats it as a hub. Without inlink density, the lounge page enters the index isolated. ≥10 inlinks at launch establishes hub status.</div>
+  <div class="accept"><b>Acceptance criteria</b><ul>
+    <li>FND-08-money-page-inlinks.csv committed.</li>
+    <li>Every money page ≥5 in-content inlinks.</li>
+    <li>Lounge page ≥10 inlinks (hub status).</li>
+    <li>Sitewide footer carries "Visit our consumption lounge" anchor on product/menu pages.</li>
+  </ul></div>
+</div>
+
+<div class="task task-p1">
+  <div class="task-head"><span class="task-id">FND-09</span><span class="task-title">Knowledge Panel claim + sameAs schema + "consumption lounge" entity</span><span class="badge b-p1">P1</span><span class="badge b-mod">★★ brand SERP</span></div>
+  <p>"Consumption lounge" + "Black-owned equity dispensary" are unique entity hooks in the Bay Area cannabis market — branded queries are 30-50% of total clicks.</p>
+  <div class="task-meta">
+    <div><b>Owner</b>SEO/Analytics + Dev</div>
+    <div><b>Deadline</b>EOD May 23</div>
+    <div><b>Time</b>1 day</div>
+    <div><b>Expected lift</b>CTR multiplier on branded queries</div>
+  </div>
+  <h4>Steps</h4>
+  <ol class="steps">
+    <li>Run incognito search for "rootd in the 510", "rootd 510", "rootd oakland", "consumption lounge oakland". If a Knowledge Panel appears, click "Claim this knowledge panel".</li>
+    <li>Sign in with the GBP-owning Google account; verify ownership.</li>
+    <li>Once claimed, submit feedback to ensure panel reflects: canonical NAP, hours, "Black-Owned Equity Dispensary" + "Consumption Lounge" trust signals, review count.</li>
+    <li>Extend the LocalBusiness schema with sameAs array (paste below).</li>
+    <li>Re-deploy. Validate via Rich Results Test. Submit homepage for re-indexing.</li>
+  </ol>
+  <div class="copy">
+    <b class="lbl">sameAs JSON-LD addition — paste inside the Store/LocalBusiness object</b>
+<pre><code>"sameAs": [
+  "https://www.facebook.com/rootdinthe510",
+  "https://www.instagram.com/rootdinthe510",
+  "https://www.weedmaps.com/dispensaries/rootd-in-the-510",
+  "https://www.leafly.com/dispensary-info/rootd-in-the-510",
+  "https://www.yelp.com/biz/rootd-in-the-510-oakland",
+  "https://www.linkedin.com/company/rootd-in-the-510"
+]</code></pre>
+    <div class="why">Why this works: Each URL is an entity-verification pivot for a unique-position entity — "Black-owned equity cannabis dispensary + consumption lounge in Oakland" is a category that only Root'd occupies. Strong sameAs cross-references reinforce the knowledge graph for both differentiators.</div>
+  </div>
+  <div class="accept"><b>Acceptance criteria</b><ul>
+    <li>If KP exists: claim submitted + verified.</li>
+    <li>sameAs deployed in production schema.</li>
+    <li>Rich Results Test reports zero schema errors.</li>
+    <li>Homepage re-indexed.</li>
+  </ul></div>
+</div>
+
+<div class="task task-p0">
+  <div class="task-head"><span class="task-id">FND-10</span><span class="task-title">Backlink baseline + Link Intersect vs. Urbana / Solful / Embarc <em>(Urbana-moat response)</em></span><span class="badge b-p0">P0</span><span class="badge b-high">★★★ +1-3 SoLV/yr</span></div>
+  <p>The structured response to the Urbana content moat surfaced in Section 02. <b>P0 for Root'd</b> because backlinks are the largest single competitive gap.</p>
+  <div class="task-meta">
+    <div><b>Owner</b>SEO/Analytics + Account Lead</div>
+    <div><b>Deadline</b>Baseline EOD May 17 · 5 pitches sent EOD May 28</div>
+    <div><b>Time</b>1 day baseline + 6 hrs prospecting</div>
+    <div><b>Expected lift</b>+1-3 SoLV/yr; Q3 acquisition pipeline</div>
+  </div>
+  <h4>Steps</h4>
+  <ol class="steps">
+    <li>In Ahrefs, open Site Explorer → rootd510.com. Capture: total RDs, DR, anchor distribution (top 10), toxic links count (spam ≥35), broken backlinks. Save as <code>FND-10-baseline.md</code>.</li>
+    <li>Run Link Intersect: rootd510.com vs. urbanalovesyou.com vs. solful.com vs. embarcoakland.com. Filter for domains linking to ≥1 competitor but not Root'd. Sort by DR desc. Top 20 → <code>FND-10-link-intersect.csv</code>.</li>
+    <li>Filter prospects by relevance: prefer East Bay chamber of commerce, CA cannabis trade body, Oakland charity sponsors, SF/Oakland local press (East Bay Times, Berkeleyside, Oaklandside, KQED), neighborhood business associations (Temescal BID, Piedmont Ave merchants).</li>
+    <li>Pick 5 highest-leverage. Draft outreach pitches (template below). <b>Lead with the equity + lounge angles</b> — these resonate with East Bay editorial outlets in ways generic dispensaries cannot match.</li>
+    <li>Send via outlet-appropriate channels. Track in <code>FND-10-outreach-log.csv</code>.</li>
+  </ol>
+  <div class="copy">
+    <b class="lbl">Outreach pitch template — Local Press version (East Bay)</b>
+    <div class="text">Subject: Oakland's Black-owned cannabis equity dispensary + consumption lounge<br/><br/>Hi [Editor],<br/><br/>Root'd In The 510 at 4444 Telegraph Ave is one of the few Black-owned cannabis equity businesses in Oakland — and one of even fewer dispensaries that operate a consumption lounge. We've earned 1,330+ verified 4.9-star reviews and serve Temescal, Piedmont, Berkeley, Emeryville, and the broader East Bay. We'd love to be part of [outlet]'s coverage — we can speak to [topic: Oakland equity cannabis program, lounge culture, neighborhood business impact, community sponsorship]. Open to a 15-min call or written Q&amp;A. — Darrell, Account Lead</div>
+    <div class="why">Why this works: Two trust signals editors specifically value (Black-owned equity + lounge differentiator) — neither is promotional, both are genuinely newsworthy. East Bay editorial outlets actively cover equity-cannabis-program operators; this pitch fits their existing editorial calendar.</div>
+  </div>
+  <div class="accept"><b>Acceptance criteria</b><ul>
+    <li>FND-10-baseline.md committed.</li>
+    <li>FND-10-link-intersect.csv with top 20 prospects.</li>
+    <li>5 pitches sent via FND-10-outreach-log.csv.</li>
+  </ul></div>
+</div>
+
+<div class="task task-p2">
+  <div class="task-head"><span class="task-id">FND-11</span><span class="task-title">Tier-1 citation cleanup + buildout to 30-50 high-quality</span><span class="badge b-p2">P2</span><span class="badge b-mod">★★★★ +5-15%</span></div>
+  <p>Aggregator data feeds propagate NAP across long tail. 4-8 wk timeline post-cleanup.</p>
+  <div class="task-meta">
+    <div><b>Owner</b>GBP / Local Listings</div>
+    <div><b>Deadline</b>Audit EOD May 23 · Submissions EOD May 31</div>
+    <div><b>Time</b>1 day audit + 1 day submissions</div>
+    <div><b>Expected lift</b>+5-15% rank (4-8 wks)</div>
+  </div>
+  <h4>Steps</h4>
+  <ol class="steps">
+    <li>BrightLocal Citation Tracker report for rootd510.com.</li>
+    <li>Identify gaps in Tier-1: BBB, Yellow Pages, Foursquare, Data Axle, Localeze, Neustar (aggregator feeds), SF Chronicle business directory, East Bay Express directory, Oakland Magazine business directory, 5+ CA cannabis directories (Cannabis.net, Where's Weed, Allbud, CA-specific dispensary directories, Equity-business directories).</li>
+    <li>For each missing, submit using canonical NAP. Track in <code>FND-11-citations.csv</code>.</li>
+    <li>For each present-but-inconsistent, submit correction. Apostrophe drift specifically tracked.</li>
+    <li>Monthly recurring BrightLocal scan.</li>
+  </ol>
+  <div class="accept"><b>Acceptance criteria</b><ul>
+    <li>All 6 aggregator-feed citations present with canonical NAP.</li>
+    <li>5+ CA cannabis directories added; equity-business directory added if available.</li>
+    <li>FND-11-citations.csv tracks every submission.</li>
+  </ul></div>
+</div>
+
+<div class="task task-p2">
+  <div class="task-head"><span class="task-id">FND-12</span><span class="task-title">Manual action + disavow audit (defensive)</span><span class="badge b-p2">P2</span><span class="badge b-mod">defensive</span></div>
+  <p>One-time audit + monthly check.</p>
+  <div class="task-meta">
+    <div><b>Owner</b>SEO/Analytics</div>
+    <div><b>Deadline</b>EOD May 26</div>
+    <div><b>Time</b>3 hrs</div>
+    <div><b>Expected lift</b>Eliminates largest single-incident risk</div>
+  </div>
+  <h4>Steps</h4>
+  <ol class="steps">
+    <li>GSC → Security &amp; Manual Actions → confirm "No issues detected".</li>
+    <li>Ahrefs Site Explorer → rootd510.com → Backlinks → spam ≥35. Export.</li>
+    <li>Build disavow.txt: <code>domain:example.com</code> per line.</li>
+    <li>Upload via Google Disavow Tool. Save version + date.</li>
+    <li>Monthly Ahrefs alert.</li>
+  </ol>
+  <div class="accept"><b>Acceptance criteria</b><ul>
+    <li>GSC Manual Actions clean.</li>
+    <li>disavow.txt uploaded.</li>
+    <li>Monthly Ahrefs alert configured.</li>
+  </ul></div>
+</div>
+
+<div class="task task-p1">
+  <div class="task-head"><span class="task-id">FND-13</span><span class="task-title">CWV field-data baseline (remediate only if poor)</span><span class="badge b-p1">P1 if poor / P2 if good</span><span class="badge b-mod">+1-2 SoLV if remediated</span></div>
+  <p>Bay Area mobile-first + iPhone share elevated. Track <em>field</em> data via CrUX.</p>
+  <div class="task-meta">
+    <div><b>Owner</b>SEO/Analytics + Dev</div>
+    <div><b>Deadline</b>Baseline EOD May 12 · Remediation EOD May 31 if poor</div>
+    <div><b>Time</b>2 hrs baseline + 1-3 days remediation</div>
+    <div><b>Expected lift</b>+1-2 SoLV if remediated</div>
+  </div>
+  <h4>Steps</h4>
+  <ol class="steps">
+    <li>PageSpeed Insights on homepage + /menu + /lounge + 5 neighborhood pages. Capture <b>field-data CrUX</b> at 75th-percentile mobile. Save as <code>FND-13-cwv-baseline.md</code>.</li>
+    <li>Targets: LCP &lt;2.5s · INP &lt;200ms · CLS &lt;0.1. If all "Good," monitor-only.</li>
+    <li>If any "Needs Improvement"/"Poor": Lighthouse trace + WebPageTest mobile profile. Identify bottleneck (likely Treez iframe pre-FND-02, image size, JS bundle).</li>
+    <li>Remediation plan with Dev (Nick / Shade). Common fixes: lazy-load below-fold images, defer Treez iframe (until FND-02), trim unused JS, CDN tuning.</li>
+    <li>Deploy + re-measure (28-day rolling window for CrUX).</li>
+  </ol>
+  <div class="accept"><b>Acceptance criteria</b><ul>
+    <li>FND-13-cwv-baseline.md committed.</li>
+    <li>If all Good: monitor-only schedule.</li>
+    <li>If any poor: remediation deployed by May 31; re-measure +28 days scheduled.</li>
+  </ul></div>
+</div>
+
+<div class="task task-p0">
+  <div class="task-head"><span class="task-id">FND-14</span><span class="task-title">Foundation infrastructure (F1-F18) audit + AIQ attribution wiring</span><span class="badge b-p0">P0</span><span class="badge b-high">instrumentation + AIQ wiring</span></div>
+  <p>Verifies the 18 infrastructure items + wires AIQ → GA4 attribution path so the existing AIQ Lifecycle workstream's contribution is measurable separately from organic SEO.</p>
+  <div class="task-meta">
+    <div><b>Owner</b>SEO/Analytics</div>
+    <div><b>Deadline</b>EOD May 12</div>
+    <div><b>Time</b>1 day + 0.5 day AIQ integration</div>
+    <div><b>Expected lift</b>Measurability of AIQ contribution; nothing else invisible</div>
+  </div>
+  <h4>Steps</h4>
+  <ol class="steps">
+    <li>Audit F1–F18 against current state. Build <code>FND-14-infrastructure-audit.csv</code>.</li>
+    <li>F1 GA4: confirm conversions configured (form, call, direction, click-to-menu, age-gate completion); IP filter; 14+ mo retention; bot share &lt;20%.</li>
+    <li>F2 GSC: verify all variants; sitemap submitted; coverage clean.</li>
+    <li>F3 Bing Webmaster: verified + sitemap.</li>
+    <li>F4 GTM: clean; version-diff.</li>
+    <li>F5 UTM: GBP website link UTM-tagged.</li>
+    <li>F6 CallRail: wired into GA4 as conversion.</li>
+    <li>F7 GA4 conversion events full set.</li>
+    <li>F8 Local Falcon scan cadence twice-monthly.</li>
+    <li>F9 BrightLocal monthly recurring (FND-03).</li>
+    <li>F10 Ahrefs weekly + toxic alert (FND-12).</li>
+    <li>F11 Schema validator monthly + GSC Enhancements weekly.</li>
+    <li>F12 Looker Studio dashboard with all 5 panels + <b>add 6th panel for AIQ Lifecycle KPIs</b> (SMS opt-in, push opt-in, lifecycle conversion rate). Daily refresh.</li>
+    <li>F13 Annotations log; backfill May 1–7.</li>
+    <li>F14-F18 (SSL, backups, cookie consent, privacy w/ CA cannabis disclosure, compliance): confirm each present + current.</li>
+    <li><b>AIQ wiring:</b> verify AIQ → GA4 cross-domain UTM is intact; AIQ campaigns surface in GA4 source/medium reporting; AIQ-attributed conversions are flagged separately from organic. Document path in <code>FND-14-aiq-attribution.md</code>.</li>
+  </ol>
+  <div class="accept"><b>Acceptance criteria</b><ul>
+    <li>FND-14-infrastructure-audit.csv committed.</li>
+    <li>Looker Studio dashboard live with 6 panels (5 standard + AIQ).</li>
+    <li>Annotations log started + backfilled.</li>
+    <li>AIQ → GA4 attribution verified + documented.</li>
+    <li>Every ✗ has remediation ticket with owner + deadline.</li>
+  </ul></div>
+</div>
+
+<!-- DEV -->
+<div class="dept-head" id="dev">
+  <h2>🛠 Department: Web Development / Engineering</h2>
+  <div class="sub">9 tasks. Owns rootd510.com — H1, schema, age-gate, 5 neighborhood pages, sitemap. Two structural errors are suppressing the entire site: no H1 tag exists today, and the age-gate may be blocking Googlebot. Fix both by May 5 and the math works.</div>
+  <div class="meta-line">Tools: rootd510.com CMS / dev (Nick &amp; Shade for site access) · Search Console · Rich Results Test · age-gate config (server / robots.txt) · sitemap.xml</div>
+</div>
+
+<div class="task task-p0">
+  <div class="task-head"><span class="task-id">DEV-01</span><span class="task-title">Add H1 tag + restructure homepage heading hierarchy</span><span class="badge b-p0">P0</span><span class="badge b-high">HIGH CONF.</span></div>
+  <p>April 27 audit confirmed the homepage has <b>no H1 tag at all</b>. The current "Best Cannabis Dispensary Near Me in Oakland, East Bay Area" line is plain text; the only heading is an H2 saying "GET IN TOUCH." This is the single fixable error suppressing all 7 keywords. The H1 we add fills the cannabis gap, names "Oakland" (geo signal), and adds "Lounge" — Root'd's key differentiator vs Urbana.</p>
+  <div class="task-meta">
+    <div><b>Deadline</b>EOD May 5</div>
+    <div><b>Time</b>30 min</div>
+    <div><b>Pillar</b>01 — Technical SEO Fixes</div>
+    <div><b>Expected lift</b>+3 to +6 SoLV pts across all 7 keywords</div>
+  </div>
+  <ol class="steps">
+    <li>Coordinate site access with Nick / Shade (Account Lead has the ask).</li>
+    <li>Locate the existing homepage hero block in the rootd510.com codebase.</li>
+    <li>Replace the plain-text "Best Cannabis Dispensary…" element with a properly tagged <code>&lt;h1&gt;</code>.</li>
+    <li>Restructure the heading hierarchy — exactly four H2s in the order below, replacing whatever is there now.</li>
+    <li>Push to staging, smoke-test. Inspect to confirm a single <code>&lt;h1&gt;</code> exists with the new copy.</li>
+    <li>Deploy to production. Submit URL Inspection request in Search Console.</li>
+  </ol>
+  <div class="copy">
+    <b class="lbl">H1 — paste verbatim</b><div class="text">Oakland Cannabis Dispensary &amp; Lounge — Root'd In The 510</div>
+    <b class="lbl" style="margin-top:8px">H2 hierarchy (in order, paste verbatim)</b><div class="text">
+    1. Black-Owned Equity Dispensary<br>
+    2. Visit Our Consumption Lounge<br>
+    3. Now Serving Temescal, Bushrod, Longfellow<br>
+    4. Today's Deals
+    </div>
+    <div class="why">Why this works: H1 covers "Oakland" (geo) + "Cannabis Dispensary" (the keyword we're chasing) + "Lounge" (the structural moat — Urbana doesn't have one). The H2s do four jobs: (1) "Black-Owned Equity Dispensary" is the most defensible value prop, (2) "Consumption Lounge" reinforces Root'd's exclusive feature, (3) the neighborhood line seeds the 5 hyperlocal pages we're building, (4) "Today's Deals" is the conversion hook for arriving traffic.</div>
+  </div>
+  <div class="accept"><b>Acceptance criteria</b><ul>
+    <li>H1 visible on rootd510.com homepage by EOD May 5.</li>
+    <li>Single <code>&lt;h1&gt;</code> verified in DevTools.</li>
+    <li>4 H2s in the order above.</li>
+    <li>Submitted for re-indexing in Search Console.</li>
+  </ul></div>
+</div>
+
+<div class="task task-p0">
+  <div class="task-head"><span class="task-id">DEV-02</span><span class="task-title">Verify + fix age-gate blocking Googlebot</span><span class="badge b-p0">P0</span><span class="badge b-high">HIGH CONF. (binary)</span></div>
+  <p>April 27 audit flagged this as critical. If the age-gate is blocking Googlebot from rendering the homepage, every on-page signal we deploy is invisible. This is binary — either it's blocking and fixing it unlocks +5 SoLV pts, or it's already fine.</p>
+  <div class="task-meta">
+    <div><b>Deadline</b>Verified or fixed EOD May 5</div>
+    <div><b>Time</b>1 hr</div>
+    <div><b>Pillar</b>01</div>
+    <div><b>Expected lift</b>+0 to +5 SoLV pts (binary unlock)</div>
+  </div>
+  <ol class="steps">
+    <li>In Search Console → URL Inspection → enter <code>rootd510.com</code> → click <b>Test live URL</b> → wait for fetch → click <b>View tested page</b> → <b>Screenshot tab</b>.</li>
+    <li>If the screenshot shows the age-gate modal (not the homepage content), Googlebot is being blocked.</li>
+    <li>Fix: implement a server-side user-agent allow-list for known bot user agents (Googlebot, Bingbot, etc.). The age-gate must NOT show to bots — content must render directly.</li>
+    <li>Common implementation patterns:
+      <ul>
+        <li><b>Cloudflare worker / reverse proxy:</b> bypass age-gate cookie for matching UA.</li>
+        <li><b>Server-side framework:</b> conditional render in homepage controller.</li>
+        <li><b>Robots.txt:</b> NEVER use this to "fix" age-gate visibility — use server-side logic.</li>
+      </ul>
+    </li>
+    <li>Re-test in URL Inspection after fix. Screenshot must show full homepage content rendered.</li>
+    <li>Document in #rootd-may-execution: pre-fix screenshot vs post-fix screenshot.</li>
+  </ol>
+  <div class="accept"><b>Acceptance criteria</b><ul>
+    <li>URL Inspection screenshot shows full homepage content rendered (not age-gate modal).</li>
+    <li>Pre/post screenshots archived.</li>
+  </ul></div>
+</div>
+
+<div class="task task-p0">
+  <div class="task-head"><span class="task-id">DEV-03</span><span class="task-title">Deploy LocalBusiness JSON-LD schema sitewide</span><span class="badge b-p0">P0</span><span class="badge b-high">HIGH CONF.</span></div>
+  <p>Currently no schema sitewide. Schema is the structured signal Google uses for entity disambiguation — and it's how we surface Root'd's three biggest differentiators (Black-owned, social equity, consumption lounge) as machine-readable facts.</p>
+  <div class="task-meta">
+    <div><b>Deadline</b>EOD May 5</div>
+    <div><b>Time</b>20 min</div>
+    <div><b>Pillar</b>01</div>
+    <div><b>Expected lift</b>+2 to +4 SoLV pts</div>
+  </div>
+  <ol class="steps">
+    <li>Add a global footer/head include rendering JSON-LD on every page.</li>
+    <li>Paste the schema below into a <code>&lt;script type="application/ld+json"&gt;...&lt;/script&gt;</code> block.</li>
+    <li>Push to staging. Validate in Rich Results Test.</li>
+    <li>Deploy. Re-run validation.</li>
+    <li>Resubmit homepage in Search Console.</li>
+  </ol>
+  <h4>Exact schema — paste verbatim</h4>
+<pre><code>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "Root'd In The 510 Equity Weed Dispensary",
+  "alternateName": [
+    "Root'd In The 510",
+    "Root'd Cannabis Dispensary Oakland",
+    "Root'd Dispensary"
+  ],
+  "url": "https://rootd510.com",
+  "telephone": "+1-510-488-1148",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "4444 Telegraph Ave",
+    "addressLocality": "Oakland",
+    "addressRegion": "CA",
+    "postalCode": "94609"
+  },
+  "openingHours": "Mo-Su 09:00-21:55",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "1330"
+  },
+  "areaServed": ["Oakland", "Emeryville", "Temescal", "Longfellow", "Bushrod", "Berkeley", "Rockridge", "Piedmont"],
+  "amenityFeature": [
+    {"@type": "LocationFeatureSpecification", "name": "Consumption Lounge"},
+    {"@type": "LocationFeatureSpecification", "name": "Black-owned Business"},
+    {"@type": "LocationFeatureSpecification", "name": "Social Equity Dispensary"}
+  ]
+}
+&lt;/script&gt;</code></pre>
+  <div class="reasoning"><b>Marketer reasoning</b> Three deliberate moves: (1) <code>alternateName</code> seeds three "Cannabis Dispensary" variants Google has never seen — that's how we feed cannabis-tier relevance into the entity graph without GBP rename risk. (2) <code>amenityFeature</code> is rare for cannabis-store schemas; explicitly tagging "Consumption Lounge" + "Black-owned Business" + "Social Equity Dispensary" as machine-readable amenities surfaces these three differentiators where Urbana literally cannot match. (3) <code>areaServed</code> mirrors the exact 5 neighborhood pages we're building this month — schema and on-page consistency is what Google rewards.</div>
+  <div class="accept"><b>Acceptance criteria</b><ul>
+    <li>Schema present in production HTML.</li>
+    <li>Rich Results Test reports zero errors.</li>
+    <li>Search Console &gt; Enhancements shows the entity within 7 days.</li>
+  </ul></div>
+</div>
+
+<div class="task task-p1">
+  <div class="task-head"><span class="task-id">DEV-04</span><span class="task-title">Build &amp; launch Temescal neighborhood page</span><span class="badge b-p1">P1</span><span class="badge b-high">HIGH CONF.</span></div>
+  <div class="task-meta">
+    <div><b>Deadline</b>Live by May 11</div>
+    <div><b>Time</b>2 hr dev</div>
+    <div><b>Pillar</b>02 — Neighborhood Pages</div>
+    <div><b>Expected lift</b>+4 to +9 SoLV pts on "near me" terms</div>
+  </div>
+  <ol class="steps">
+    <li>Create <code>rootd510.com/temescal-dispensary</code>.</li>
+    <li>Use H1 / title / meta + body + FAQ from Master Copy Library.</li>
+    <li>Add LocalBusiness + FAQPage schema. Extend <code>areaServed</code>: <code>["Temescal", "Oakland", "Emeryville"]</code>.</li>
+    <li>Embed Google Map of Root'd's location with a Temescal-area zoom.</li>
+    <li>Internal links FROM homepage hero, navigation, lounge events page (if exists), other neighborhood pages once they ship.</li>
+    <li>Update sitemap, validate, submit URL.</li>
+  </ol>
+  <div class="accept"><b>Acceptance criteria</b><ul>
+    <li>Page live and indexed by May 11.</li>
+    <li>FAQPage + LocalBusiness schema validate.</li>
+    <li>Real Root'd photos only — zero Temescal landmark stock imagery.</li>
+  </ul></div>
+</div>
+
+<div class="task task-p1">
+  <div class="task-head"><span class="task-id">DEV-05</span><span class="task-title">Build &amp; launch Bushrod neighborhood page (94609 — Root'd's own zip)</span><span class="badge b-p1">P1</span><span class="badge b-high">HIGH CONF.</span></div>
+  <p>Bushrod is 94609 — Root'd's <b>own</b> zip code. Urbana is already targeting it with a dedicated neighborhood page despite not being located there. This is direct competitive defense.</p>
+  <div class="task-meta">
+    <div><b>Deadline</b>Live by May 14</div>
+    <div><b>Time</b>2 hr dev</div>
+    <div><b>Pillar</b>02</div>
+    <div><b>Expected lift</b>+4 to +9 SoLV pts on "near me" terms</div>
+  </div>
+  <ol class="steps">
+    <li>Clone the Temescal page template (DEV-04).</li>
+    <li>Create <code>rootd510.com/bushrod-oakland-dispensary</code>.</li>
+    <li>Swap H1, title, meta, body, and FAQ from Master Copy Library.</li>
+    <li>Add to sitemap, validate, submit.</li>
+  </ol>
+  <div class="accept"><b>Acceptance criteria</b><ul>
+    <li>Page live and indexed by May 14.</li>
+    <li>"Bushrod" appears 6–8 times on the page.</li>
+    <li>"94609" appears at least twice.</li>
+  </ul></div>
+</div>
+
+<div class="task task-p1">
+  <div class="task-head"><span class="task-id">DEV-06</span><span class="task-title">Build &amp; launch Rockridge neighborhood page</span><span class="badge b-p1">P1</span></div>
+  <div class="task-meta">
+    <div><b>Deadline</b>Live by May 19</div>
+    <div><b>Time</b>2 hr dev (clone template)</div>
+    <div><b>Pillar</b>02</div>
+  </div>
+  <p>Same template. URL: <code>rootd510.com/rockridge-dispensary</code>. Use Master Copy Library for H1/title/meta/body/FAQ.</p>
+</div>
+
+<div class="task task-p2">
+  <div class="task-head"><span class="task-id">DEV-07</span><span class="task-title">Build &amp; launch Piedmont neighborhood page</span><span class="badge b-p2">P2</span></div>
+  <div class="task-meta">
+    <div><b>Deadline</b>Live by May 21</div>
+    <div><b>Time</b>2 hr dev (clone)</div>
+    <div><b>Pillar</b>02</div>
+  </div>
+  <p>URL: <code>rootd510.com/piedmont-dispensary</code>. Master Copy Library.</p>
+</div>
+
+<div class="task task-p2">
+  <div class="task-head"><span class="task-id">DEV-08</span><span class="task-title">Build &amp; launch Lake Merritt neighborhood page</span><span class="badge b-p2">P2</span></div>
+  <div class="task-meta">
+    <div><b>Deadline</b>Live by May 26</div>
+    <div><b>Time</b>2 hr dev (clone)</div>
+    <div><b>Pillar</b>02</div>
+  </div>
+  <p>URL: <code>rootd510.com/lake-merritt-dispensary</code>. Master Copy Library.</p>
+</div>
+
+<div class="task task-p2">
+  <div class="task-head"><span class="task-id">DEV-09</span><span class="task-title">Blog publishing + sitemap maintenance</span><span class="badge b-p2">P2</span></div>
+  <div class="task-meta">
+    <div><b>Deadlines</b>May 5 (Mother's Day blog) · May 19 (Memorial Day blog)</div>
+    <div><b>Time</b>30 min per post</div>
+  </div>
+  <ol class="steps">
+    <li>Receive blog drafts from Content team.</li>
+    <li>Publish at the slugs in Master Copy Library.</li>
+    <li>Confirm BlogPosting JSON-LD auto-generates or add it manually.</li>
+    <li>For both blog posts AND every neighborhood page launch (DEV-04 through DEV-08), append to sitemap.xml and resubmit in Search Console.</li>
+    <li>Run URL Inspection on each new URL → Request indexing.</li>
+  </ol>
+</div>
+
+<!-- CONTENT -->
+<div class="dept-head" id="content">
+  <h2>✍️ Department: Content / Copywriting</h2>
+  <div class="sub">7 tasks. Owns 2 blog posts + 5 neighborhood-page bodies + GBP description rewrite. The 5 neighborhood pages share a template — write Temescal first, then clone and adapt for the others.</div>
+  <div class="meta-line">Tools: Root'd brand-voice guidelines · existing rootd510.com copy for tone alignment · BCC compliance language reference</div>
+</div>
+
+<div class="task task-p0">
+  <div class="task-head"><span class="task-id">CON-01</span><span class="task-title">Rewrite GBP description</span><span class="badge b-p0">P0</span><span class="badge b-high">HIGH CONF.</span></div>
+  <p>The current GBP description doesn't surface Root'd's three differentiators (Black-owned, social equity, consumption lounge). The new one closes the keyword gap with Urbana while leaning hard into what Urbana cannot match.</p>
+  <div class="task-meta">
+    <div><b>Deadline</b>Hand off May 7 · live May 8</div>
+    <div><b>Time</b>30 min (already drafted — review and finalize)</div>
+    <div><b>Pillar</b>03</div>
+    <div><b>Expected lift</b>+1 to +3 SoLV pts (compounds 60–90 days)</div>
+  </div>
+  <div class="copy">
+    <b class="lbl">GBP description (paste verbatim · 750 chars)</b>
+    <div class="text">Root'd In The 510 is Oakland's Black-owned, social equity cannabis dispensary and consumption lounge — proudly serving Temescal, Bushrod, Longfellow, Rockridge, and the broader East Bay. Visit our 4444 Telegraph Ave dispensary for premium flower, edibles, concentrates, pre-rolls, and cartridges from trusted brands like Stiiizy, Raw Garden, Jetty, Kiva, and our own Root'd house line. Stay for our consumption lounge events: Movie Night Wednesdays, First Friday Light the Mic, Senior Tokeland, Cannaoke, and more. Root'd is more than a dispensary — it's a community. Open daily 9 AM – 9:55 PM.</div>
+    <div class="why">Why this works: "Cannabis dispensary" surfaces immediately (closes the keyword gap). "Black-owned, social equity" is a defensible identity claim Urbana cannot match. Five neighborhood names seed the schema. The brand-name list (Stiiizy, Raw Garden, Jetty, Kiva) covers the highest-intent brand searches Root'd's customers actually use. The lounge events list is the killer line — no other Oakland dispensary description names recurring events. Closing line "more than a dispensary — it's a community" is the brand-voice line that does the emotional work.</div>
+  </div>
+  <div class="accept"><b>Acceptance criteria</b><ul>
+    <li>Description live in GBP by May 8.</li>
+    <li>Hits "cannabis dispensary" once + "dispensary" twice.</li>
+  </ul></div>
+</div>
+
+<div class="task task-p1">
+  <div class="task-head"><span class="task-id">CON-02</span><span class="task-title">Write Temescal neighborhood page body + FAQ</span><span class="badge b-p1">P1</span><span class="badge b-high">HIGH CONF.</span></div>
+  <p>This is the template that drives the next 4 pages. Get this one right and the rest are 80% mechanical.</p>
+  <div class="task-meta">
+    <div><b>Deadline</b>Hand off May 9 · live May 11</div>
+    <div><b>Time</b>3 hr</div>
+    <div><b>Pillar</b>02</div>
+  </div>
+  <h4>Required sections (in order)</h4>
+  <ol>
+    <li><b>H1 + trust strip</b> (Master Copy Library).</li>
+    <li><b>Body #1 (~140 words)</b>: Position Root'd as Temescal's neighborhood cannabis dispensary. Specific drive time ("under 5 minutes from most of Temescal — straight up Telegraph Ave"). Name 1–2 Temescal landmarks <i>only as routing references, NOT as photo subjects</i> (e.g., "down the street from the Temescal Farmers Market"). Mention Black-owned, social equity, consumption lounge.</li>
+    <li><b>Body #2 (~120 words)</b>: Three reasons Temescal residents choose Root'd — community-rooted ownership, exclusive consumption lounge events, trusted brand portfolio (Stiiizy, Raw Garden, Jetty, Kiva, Root'd house line). Include "1,330+ verified 4.9-star reviews."</li>
+    <li><b>Service block</b>: hours (9 AM – 9:55 PM), phone, address, in-store-only (no delivery — Root'd doesn't deliver).</li>
+    <li><b>Lounge events callout (~80 words)</b>: list the 5 recurring events (Movie Night Wednesdays, 1st Fri Light the Mic, 2nd Fri Puff n' Paint, 3rd Fri Senior Tokeland, 4th Fri Cannaoke). Tie to "more than a dispensary — it's a community."</li>
+    <li><b>5-question FAQ</b> (Master Copy Library).</li>
+    <li><b>CTA</b>: "Visit Root'd at 4444 Telegraph Ave — and stay for whichever lounge event lands on your day."</li>
+  </ol>
+  <h4>Tone &amp; rules</h4>
+  <ul>
+    <li>"Temescal" appears 6–8 times naturally — never twice in the same sentence.</li>
+    <li>No Temescal landmark <b>photos</b>. Real Root'd photos only.</li>
+    <li>21+ language present once (footer or compliance line).</li>
+    <li>Body copy 350–450 words excluding FAQ + lounge callout.</li>
+  </ul>
+  <div class="accept"><b>Acceptance criteria</b><ul>
+    <li>Body 350–450 words.</li>
+    <li>"Temescal" appears 6–8 times.</li>
+    <li>Lounge events listed with weekday/Friday cadence.</li>
+    <li>FAQ has 5 questions per Master Copy Library.</li>
+    <li>Hand-off May 9.</li>
+  </ul></div>
+</div>
+
+<div class="task task-p1">
+  <div class="task-head"><span class="task-id">CON-03</span><span class="task-title">Write Bushrod (94609) neighborhood page body + FAQ</span><span class="badge b-p1">P1</span><span class="badge b-high">HIGH CONF.</span></div>
+  <div class="task-meta">
+    <div><b>Deadline</b>Hand off May 12 · live May 14</div>
+    <div><b>Time</b>2.5 hr (uses CON-02 template)</div>
+    <div><b>Pillar</b>02</div>
+  </div>
+  <p>Same structure as CON-02. The unique angle: "We <b>are</b> Bushrod" — Root'd is at 4444 Telegraph Ave, in 94609, in Bushrod itself. This positioning is impossible for Urbana to copy (they're not in the zip).</p>
+  <p><b>Mention "94609" at least twice in body copy.</b> Mention "Bushrod" 6–8 times. Drop "We're not just nearby — we're at the heart of Bushrod" verbatim once.</p>
+</div>
+
+<div class="task task-p1">
+  <div class="task-head"><span class="task-id">CON-04</span><span class="task-title">Write Rockridge neighborhood page body + FAQ</span><span class="badge b-p1">P1</span></div>
+  <div class="task-meta">
+    <div><b>Deadline</b>Hand off May 17 · live May 19</div>
+    <div><b>Time</b>2.5 hr</div>
+    <div><b>Pillar</b>02</div>
+  </div>
+  <p>Same template. Unique angle: <b>"a 7-minute drive from College Avenue"</b> — Rockridge is affluent and walkable; emphasize the easy detour and free parking. Lounge events relevant to date-night audience (Cannaoke especially).</p>
+</div>
+
+<div class="task task-p2">
+  <div class="task-head"><span class="task-id">CON-05</span><span class="task-title">Write Piedmont neighborhood page body + FAQ</span><span class="badge b-p2">P2</span></div>
+  <div class="task-meta">
+    <div><b>Deadline</b>Hand off May 19 · live May 21</div>
+    <div><b>Time</b>2.5 hr</div>
+    <div><b>Pillar</b>02</div>
+  </div>
+  <p>Unique angle: commuter corridor — "Piedmont residents passing through on the way to or from Oakland find Root'd a natural stop." Drive time ~8 minutes via Broadway or Telegraph.</p>
+</div>
+
+<div class="task task-p2">
+  <div class="task-head"><span class="task-id">CON-06</span><span class="task-title">Write Lake Merritt neighborhood page body + FAQ</span><span class="badge b-p2">P2</span></div>
+  <div class="task-meta">
+    <div><b>Deadline</b>Hand off May 24 · live May 26</div>
+    <div><b>Time</b>2.5 hr</div>
+    <div><b>Pillar</b>02</div>
+  </div>
+  <p>Unique angle: downtown intent + tourist overlap. "Whether you live around the lake or you're visiting downtown for the day, Root'd is a 12-minute drive up Telegraph." Highlight lounge events as a destination experience.</p>
+</div>
+
+<div class="task task-p1">
+  <div class="task-head"><span class="task-id">CON-07</span><span class="task-title">Write Mother's Day + Memorial Day blog posts</span><span class="badge b-p1">P1</span></div>
+  <div class="task-meta">
+    <div><b>Deadlines</b>Mother's Day: hand off May 4 · live May 5 · Memorial Day: hand off May 18 · live May 19</div>
+    <div><b>Time</b>3 hr per post</div>
+    <div><b>Pillar</b>03</div>
+  </div>
+  <h4>Mother's Day blog</h4>
+  <table>
+    <tr><td><b>URL slug</b></td><td><code>/blog/mothers-day-cannabis-gifts-oakland-dispensary</code></td></tr>
+    <tr><td><b>H1</b></td><td>Mother's Day at Root'd: Cannabis Gifts &amp; Lounge Experiences for Bay Area Moms</td></tr>
+    <tr><td><b>Primary keyword</b></td><td>cannabis dispensary near me</td></tr>
+    <tr><td><b>Word count</b></td><td>1,000–1,200</td></tr>
+    <tr><td><b>Required internal links</b></td><td>Homepage · all 5 neighborhood pages (cross-link as they go live)</td></tr>
+  </table>
+  <h4>Memorial Day blog</h4>
+  <table>
+    <tr><td><b>URL slug</b></td><td><code>/blog/memorial-day-cannabis-bbq-oakland-dispensary</code></td></tr>
+    <tr><td><b>H1</b></td><td>Memorial Day at Root'd: BBQ Pairings + Lounge Events at Oakland's #1 Equity Dispensary</td></tr>
+    <tr><td><b>Primary keyword</b></td><td>cannabis</td></tr>
+    <tr><td><b>Word count</b></td><td>900–1,100</td></tr>
+    <tr><td><b>Required internal links</b></td><td>Homepage · all 5 neighborhood pages</td></tr>
+  </table>
+  <p>See Master Copy Library for ledes and meta descriptions.</p>
+</div>
+
+<!-- GBP -->
+<div class="dept-head" id="gbp">
+  <h2>📍 Department: GBP / Local Listings</h2>
+  <div class="sub">5 tasks. Removing the misleading "Offers delivery" attribute is the single fastest win in the May plan (30 seconds, +0–2 SoLV pts).</div>
+  <div class="meta-line">Tools: <code>business.google.com</code> · Root'd-authorized GBP account · review-management dashboard · Local Falcon</div>
+</div>
+
+<div class="task task-p0">
+  <div class="task-head"><span class="task-id">GBP-01</span><span class="task-title">Remove "Offers delivery" GBP attribute</span><span class="badge b-p0">P0</span><span class="badge b-high">HIGH CONF.</span></div>
+  <p>Currently ON despite Root'd being in-store-only. This is a misalignment between the GBP attribute and the observed reality (no delivery orders, no delivery vehicles, no delivery operations). Google demotes listings whose attributes don't match real behavior. Removing the false signal restores keyword relevance.</p>
+  <div class="task-meta">
+    <div><b>Deadline</b>EOD May 1</div>
+    <div><b>Time</b>30 sec</div>
+    <div><b>Pillar</b>01</div>
+    <div><b>Expected lift</b>+0 to +2 SoLV pts (across all keywords)</div>
+  </div>
+  <ol class="steps">
+    <li>Sign into <code>business.google.com</code>.</li>
+    <li>Select Root'd (4444 Telegraph Ave). Click <b>Edit profile</b> → <b>Services</b> → <b>Service options</b>.</li>
+    <li>Uncheck <b>"Offers delivery"</b>. Click <b>Save</b>.</li>
+    <li>Screenshot. Post in #rootd-may-execution.</li>
+    <li>48 hr later, verify the public listing no longer shows the "Delivery" pill.</li>
+  </ol>
+  <div class="accept"><b>Acceptance criteria</b><ul>
+    <li>"Offers delivery" unchecked in dashboard.</li>
+    <li>Public listing reflects change within 48 hr.</li>
+  </ul></div>
+</div>
+
+<div class="task task-p0">
+  <div class="task-head"><span class="task-id">GBP-02</span><span class="task-title">Apply rewritten GBP description</span><span class="badge b-p0">P0</span><span class="badge b-high">HIGH CONF.</span></div>
+  <div class="task-meta">
+    <div><b>Deadline</b>By May 8 (post-Ask 03 approval)</div>
+    <div><b>Time</b>10 min</div>
+    <div><b>Pillar</b>03</div>
+  </div>
+  <ol class="steps">
+    <li>Receive approved description from Account Lead (CON-01 + Ask 03).</li>
+    <li>Sign into GBP. Open Edit profile → Business description.</li>
+    <li>Replace existing copy with the version in the Master Copy Library. Save.</li>
+    <li>Confirm saved within 48 hr (Google sometimes holds for review). Re-paste if rejected.</li>
+  </ol>
+</div>
+
+<div class="task task-p1">
+  <div class="task-head"><span class="task-id">GBP-03</span><span class="task-title">Upload 5–10 GBP photos per week (Wednesdays) — lounge events priority</span><span class="badge b-p1">P1</span><span class="badge b-high">HIGH CONF.</span></div>
+  <p>Google rewards GBP freshness more than almost any other signal. Root'd's biggest content gap is event photos — there are <b>zero event photos uploaded today</b> despite events being the brand's structural moat. Fixing this directly supports "weed" SoLV recovery.</p>
+  <div class="task-meta">
+    <div><b>Deadline</b>5–10 photos every Wednesday in May</div>
+    <div><b>Time</b>30 min/wk</div>
+    <div><b>Pillar</b>05</div>
+    <div><b>Dependencies</b>Photo asset drops from Root'd via shared Drive (Account Lead manages)</div>
+  </div>
+  <h4>May priority order (highest gap first)</h4>
+  <ol>
+    <li><b>Lounge events</b> — Movie Night Wednesdays, 1st Fri Light the Mic, 2nd Fri Puff n' Paint, 3rd Fri Senior Tokeland, 4th Fri Cannaoke. Goal: 2+ event photos per week.</li>
+    <li><b>Mother's Day prep</b> (by May 10) — gift packaging, themed flat-lays.</li>
+    <li><b>Memorial Day weekend</b> (by May 25) — branded signage, BBQ-bundle messaging.</li>
+    <li><b>Staff portraits</b> — fill the audit-flagged humanization gap (3–5 across May).</li>
+    <li><b>Authentic store interior</b> — replace any rendering-style CGI photos with real interior shots.</li>
+  </ol>
+  <ol class="steps">
+    <li>Open the shared Drive Wednesday morning. Pull that week's photo batch from Root'd team.</li>
+    <li>Pre-flight check: no pricing, no claims, geotag verified to 4444 Telegraph Ave (geotag locks Oakland location signal).</li>
+    <li>Upload via GBP dashboard → Photos → Add. Caption format: <i>"Root'd In The 510 · Oakland · [theme/event]"</i>.</li>
+    <li>Stagger uploads across 2–3 days each week.</li>
+  </ol>
+  <div class="accept"><b>Acceptance criteria</b><ul>
+    <li>5–10 unique photos uploaded each week (≥25 total in May).</li>
+    <li>≥2 event photos per week.</li>
+    <li>All geotagged to 4444 Telegraph Ave.</li>
+    <li>No moderation flags.</li>
+    <li>Any rendering/CGI photos removed and replaced with authentic interior shots.</li>
+  </ul></div>
+</div>
+
+<div class="task task-p1">
+  <div class="task-head"><span class="task-id">GBP-04</span><span class="task-title">Maintain 100% review response within 48 hr · varied phrasing</span><span class="badge b-p1">P1</span></div>
+  <div class="task-meta">
+    <div><b>Deadline</b>Continuous</div>
+    <div><b>Time</b>~5 min per response</div>
+    <div><b>Pillar</b>05</div>
+  </div>
+  <h4>Opening rotation (use ALL 4 across May, never repeat in a row)</h4>
+  <ul>
+    <li>"Thanks for visiting our cannabis dispensary &amp; lounge —"</li>
+    <li>"It means a lot to our team at Root'd —"</li>
+    <li>"From all of us at Root'd In The 510 —"</li>
+    <li>"Thanks for choosing Root'd, Oakland's Black-owned dispensary —"</li>
+  </ul>
+  <p>Reply patterns same as standard playbook (5★ generic / 5★ specific / 4★ critique / ≤3★). For lounge-event mentions in reviews, always pass praise to the named host or DJ offline.</p>
+</div>
+
+<div class="task task-p2">
+  <div class="task-head"><span class="task-id">GBP-05</span><span class="task-title">Publish 6 GBP posts (lounge events + cannabis-led + delivery-removed messaging)</span><span class="badge b-p2">P2</span></div>
+  <div class="task-meta">
+    <div><b>Deadline</b>~1.5 posts/wk through May</div>
+  </div>
+  <table>
+    <tr><th>Date</th><th>Headline (paste verbatim)</th></tr>
+    <tr><td>May 2</td><td>Movie Night Wednesday at Oakland's <b>Cannabis Dispensary</b> &amp; Lounge</td></tr>
+    <tr><td>May 8</td><td>Mother's Day Picks at Root'd · Oakland's <b>Cannabis Dispensary</b></td></tr>
+    <tr><td>May 15</td><td>This Week at Our Lounge: Light the Mic + New Drops</td></tr>
+    <tr><td>May 21</td><td>Senior Tokeland Friday at Oakland's <b>Equity Dispensary</b></td></tr>
+    <tr><td>May 23</td><td>Memorial Day Weekend at Oakland's #1 <b>Cannabis Dispensary</b></td></tr>
+    <tr><td>May 30</td><td>Cannaoke Friday + Last-Day Specials at Root'd</td></tr>
+  </table>
+  <div class="copy"><b class="lbl">Standard CTA closer (use under every post)</b><div class="text">Visit Root'd In The 510 at 4444 Telegraph Ave, Oakland. Open daily 9 AM – 9:55 PM. Stay for the lounge — Movie Night Wednesdays + First Friday Light the Mic + more. 21+ ID required. In-store only, no delivery.</div></div>
+  <div class="reasoning"><b>Marketer reasoning</b> Notice every post headline either says "Cannabis Dispensary" or "Equity Dispensary" — that's deliberate keyword reinforcement on the GBP surface. The CTA explicitly says "no delivery" because customer expectation alignment matters: anyone arriving from a search should know what they're getting before they show up.</div>
+</div>
+
+<!-- AIQ -->
+<div class="dept-head" id="aiq">
+  <h2>📨 Department: AIQ Lifecycle Marketing</h2>
+  <div class="sub">7 tasks. Owns email, SMS, and push at Root'd. Q1 Alpine IQ generated $42,317 from $386 spend (10,858% ROI). May target: scale from $14K/mo to $18–20K/mo via send-volume increases + SMS opt-in growth + push activation.</div>
+  <div class="meta-line">Tools: Alpine IQ · Root'd POS · audience segments · campaign analytics</div>
+</div>
+
+<div class="task task-p0">
+  <div class="task-head"><span class="task-id">AIQ-01</span><span class="task-title">Add Friday email — increase send volume +25%</span><span class="badge b-p0">P0</span><span class="badge b-high">HIGH CONF.</span></div>
+  <p>Current cadence is Monday-only (38.8K sends/mo). Adding a Friday push gets us to 2x weekly = +25% volume. Q1 email CVR was 1.27%; assuming constant CVR, +25% volume = +$1,800/mo.</p>
+  <div class="task-meta">
+    <div><b>Deadline</b>First Friday email goes out May 1</div>
+    <div><b>Time</b>2 hr setup · 1 hr/wk thereafter</div>
+    <div><b>Expected impact</b>+15–20% email revenue ($25–26K/mo run-rate)</div>
+  </div>
+  <ol class="steps">
+    <li>In AIQ, duplicate the existing Monday recurring email template.</li>
+    <li>Set send time: Friday 11:00 AM PT (peak open-rate window for cannabis retail per AIQ benchmark).</li>
+    <li>Adjust content positioning: Mondays = weekly drops/promos. Fridays = weekend-anchored content (events, Memorial Day prep, BBQ pairings).</li>
+    <li>Verify suppression/exclusion rules carry over (don't email same-day to recent buyers).</li>
+    <li>First Friday send goes out May 1. Monitor open rate vs Monday baseline through Week 1.</li>
+  </ol>
+  <div class="copy">
+    <b class="lbl">May 1 Friday email subject line</b><div class="text">Spring drops at Oakland's lounge dispensary 🌿 + this Friday's Light the Mic</div>
+    <b class="lbl" style="margin-top:8px">May 8 Friday email subject line</b><div class="text">Mother's Day picks 🎁 + lounge events all weekend at Root'd</div>
+    <b class="lbl" style="margin-top:8px">May 15 Friday email</b><div class="text">Mid-month deals + Senior Tokeland tonight at Root'd</div>
+    <b class="lbl" style="margin-top:8px">May 22 Friday email</b><div class="text">Memorial Day weekend at Oakland's equity cannabis dispensary 🇺🇸</div>
+    <b class="lbl" style="margin-top:8px">May 29 Friday email</b><div class="text">Last weekend of May 🔥 + Cannaoke tonight at the lounge</div>
+    <div class="why">Why this works: each Friday subject ties an event to a deal. The lounge is Root'd's highest-leverage hook because it's structurally undefendable — Urbana cannot reply with their own lounge.</div>
+  </div>
+  <div class="accept"><b>Acceptance criteria</b><ul>
+    <li>5 Friday emails go out (May 1, 8, 15, 22, 29).</li>
+    <li>Open rates within 80% of Monday baseline by Week 3.</li>
+  </ul></div>
+</div>
+
+<div class="task task-p0">
+  <div class="task-head"><span class="task-id">AIQ-02</span><span class="task-title">Increase SMS cadence to 3–4/week, 4–8 PM windows</span><span class="badge b-p0">P0</span><span class="badge b-high">HIGH CONF.</span></div>
+  <p>Q1 SMS CVR was 5.74% — 4.5x higher than email. SMS is Root'd's highest-converting channel; the limiter today is volume, not effectiveness. +40% volume → +$2,700/mo conservatively.</p>
+  <div class="task-meta">
+    <div><b>Deadline</b>First increased-cadence send May 1</div>
+    <div><b>Time</b>3 hr setup · 30 min/send thereafter</div>
+    <div><b>Expected impact</b>+25–35% SMS revenue ($25–27K/mo run-rate)</div>
+  </div>
+  <ol class="steps">
+    <li>In AIQ, set up 3–4 weekly SMS sends in the 4–8 PM PT window (peak retail decision-making window).</li>
+    <li>Avoid back-to-back days. Mix campaign types: deal-of-the-day (Mon, Wed), weekend lounge teasers (Fri), STIIIZY-bundle test (1x weekly per AIQ-05).</li>
+    <li>Maintain max-frequency cap of 4/wk per subscriber; AIQ enforces this automatically.</li>
+    <li>Monitor opt-out rate weekly. If &gt;1.5% opt-out per send, scale back.</li>
+  </ol>
+  <h4>SMS calendar (paste-and-go)</h4>
+  <table>
+    <tr><th>Date / Time</th><th>Type</th><th>Copy (paste verbatim)</th></tr>
+    <tr><td>Mon May 5 · 5 PM</td><td>Deal</td><td>Root'd: 20% off Stiiizy carts today only. 4444 Telegraph, 9–9:55. Reply STOP to opt out.</td></tr>
+    <tr><td>Wed May 7 · 5 PM</td><td>Event</td><td>Movie Night Wednesday at Root'd's lounge. Tonight: indica-friendly picks. Reply STOP to opt out.</td></tr>
+    <tr><td>Fri May 9 · 4 PM</td><td>Weekend</td><td>Mother's Day this Sunday 🎁 Root'd has gift bundles + 1st Friday Light the Mic tonight. Reply STOP to opt out.</td></tr>
+    <tr><td>Mon May 12 · 5 PM</td><td>Deal</td><td>Root'd: Buy 2 pre-rolls, get 1 free today. House line + Doinks. Reply STOP to opt out.</td></tr>
+    <tr><td>Wed May 14 · 5 PM</td><td>Event</td><td>Movie Night tonight at Root'd's lounge — fresh edibles, comfy seats. 21+. Reply STOP to opt out.</td></tr>
+    <tr><td>Fri May 16 · 4 PM</td><td>Bundle (STIIIZY test)</td><td>Stiiizy fans: try our new bundle — Stiiizy + a paired pre-roll for 25% off. Reply STOP to opt out.</td></tr>
+    <tr><td>Mon May 19 · 5 PM</td><td>Deal</td><td>Memorial Day weekend prep starts now: 15% off all flower this week at Root'd. Reply STOP to opt out.</td></tr>
+    <tr><td>Wed May 21 · 5 PM</td><td>Event</td><td>3rd Friday this week = Senior Tokeland at Root'd's lounge. 21+ welcome. Reply STOP to opt out.</td></tr>
+    <tr><td>Fri May 23 · 4 PM</td><td>Holiday</td><td>Memorial Day weekend at Oakland's #1 equity cannabis dispensary 🇺🇸 Open all weekend. Reply STOP to opt out.</td></tr>
+    <tr><td>Mon May 26 · 5 PM</td><td>Holiday</td><td>Memorial Day at Root'd: BBQ-pairing bundles 20% off today only. Reply STOP to opt out.</td></tr>
+    <tr><td>Wed May 28 · 5 PM</td><td>Event</td><td>Movie Night Wednesday — bring a friend, your first edible's on us. Reply STOP to opt out.</td></tr>
+    <tr><td>Fri May 30 · 4 PM</td><td>Closer</td><td>Last weekend of May 🔥 Cannaoke at our lounge tonight + monthly closer specials. Reply STOP to opt out.</td></tr>
+  </table>
+  <div class="reasoning"><b>Marketer reasoning</b> Each message hits 3 marketing principles: (1) direct value (the deal or the event), (2) location anchor ("Root'd," "4444 Telegraph," "the lounge"), and (3) compliance ("Reply STOP" + "21+" where relevant). Subject-less SMS lives by the first 30 characters — every message leads with brand or event because branded openers significantly outperform deal-led openers in cannabis SMS benchmarks.</div>
+</div>
+
+<div class="task task-p0">
+  <div class="task-head"><span class="task-id">AIQ-03</span><span class="task-title">Build &amp; launch SMS opt-in incentive campaign at POS</span><span class="badge b-p0">P0</span><span class="badge b-high">HIGH CONF.</span></div>
+  <p>Current SMS opt-in rate is 6.7% — the bottleneck. AIQ benchmark for cannabis loyalty programs: 40–80% opt-in lift from POS-incentivized prompts. Target: 9%+ by month-end.</p>
+  <div class="task-meta">
+    <div><b>Deadline</b>Live by May 8 (Ask 05 deadline)</div>
+    <div><b>Time</b>4 hr setup</div>
+    <div><b>Expected impact</b>SMS list 4,000 → 5,200–6,000 subscribers · +$1,500/mo run-rate exiting May</div>
+  </div>
+  <ol class="steps">
+    <li>Set up the AIQ campaign: trigger = SMS sign-up at POS, reward = free pre-roll (Root'd house brand · cost ~$4.64/unit · ~$150/mo pre-roll cost).</li>
+    <li>Build the post-signup confirmation flow: instant SMS auto-reply confirming sign-up + delivering the pre-roll voucher.</li>
+    <li>Coordinate with Design (DSGN-02) for kiosk QR signage at POS.</li>
+    <li>Layer this incentive ON TOP of the existing review-discount free pre-roll — different prompts at different moments. Document the layering clearly so budtenders don't accidentally double-discount.</li>
+    <li>Track opt-in rate weekly. Report progress in #rootd-may-execution.</li>
+  </ol>
+  <div class="copy">
+    <b class="lbl">Confirmation auto-reply (paste verbatim)</b>
+    <div class="text">Welcome to Root'd 🌿 Your free pre-roll is ready — show this text at any register today. We'll send 3–4 deals + lounge updates per week. Reply STOP to opt out anytime.</div>
+    <div class="why">Why this works: Welcome moment + immediate value (the pre-roll voucher) + transparent expectation-setting on cadence + opt-out clarity. Opening with "Welcome to Root'd" reinforces brand identity at the moment of highest customer attention (the receipt-look moment).</div>
+  </div>
+  <div class="accept"><b>Acceptance criteria</b><ul>
+    <li>Campaign live in AIQ by May 8.</li>
+    <li>Confirmation flow tested and verified.</li>
+    <li>Opt-in rate tracked weekly; ≥9% by May 31.</li>
+  </ul></div>
+</div>
+
+<div class="task task-p0">
+  <div class="task-head"><span class="task-id">AIQ-04</span><span class="task-title">Activate daily push notification campaign</span><span class="badge b-p0">P0</span><span class="badge b-high">HIGH CONF.</span></div>
+  <p>Push is dormant — 238 sends in 90 days = 2.6/day, $73 total revenue. Activating it as a daily-deal channel takes a microscopic base to 5–8x growth conservatively.</p>
+  <div class="task-meta">
+    <div><b>Deadline</b>First push goes out May 1</div>
+    <div><b>Time</b>3 hr setup · 15 min/day thereafter</div>
+    <div><b>Expected impact</b>$73 → $400–600/mo</div>
+  </div>
+  <ol class="steps">
+    <li>Set up AIQ daily-push campaign template — 1x/day at 11:00 AM PT (post-coffee, pre-lunch decision window).</li>
+    <li>Theme: today's deal of the day. Cycle through: 1-day flower deal, 1-day edible deal, 1-day pre-roll deal, 1-day cart deal, lounge-event teaser.</li>
+    <li>Test deep-linking: pushes should route to a specific deal page (when those exist) or the homepage.</li>
+    <li>Monitor opt-out + open rate weekly. Push is non-intrusive at 1/day; if open rate &gt;5%, consider 2/day in June.</li>
+  </ol>
+  <h4>First-week push copy (paste-and-go)</h4>
+  <ul>
+    <li><b>May 1</b>: 🌿 Stiiizy carts 20% off today only at Root'd · 4444 Telegraph</li>
+    <li><b>May 2</b>: Edible day at Root'd: Kiva &amp; Wyld up to 30% off · 9 AM–9:55 PM</li>
+    <li><b>May 3</b>: Saturday at Root'd: BOGO pre-rolls all day · house line + Doinks</li>
+    <li><b>May 4</b>: Sunday picks at Oakland's lounge dispensary 🌿 fresh flower drops</li>
+    <li><b>May 5</b>: Mother's Day's Sunday — start her gift today at Root'd</li>
+  </ul>
+</div>
+
+<div class="task task-p1">
+  <div class="task-head"><span class="task-id">AIQ-05</span><span class="task-title">Launch STIIIZY-bundle offer to past STIIIZY purchasers</span><span class="badge b-p1">P1</span></div>
+  <div class="task-meta">
+    <div><b>Deadline</b>First send by May 15</div>
+    <div><b>Time</b>2 hr (segment + offer build)</div>
+  </div>
+  <p>STIIIZY is Root'd's #1 brand — $3,742 Q1 revenue. Past STIIIZY purchasers are a high-affinity audience; bundling STIIIZY with a complementary product tests willingness to upsell.</p>
+  <ol class="steps">
+    <li>In AIQ, build a segment: <code>past_purchases.brand = 'STIIIZY'</code> in the last 90 days.</li>
+    <li>Construct the bundle offer in collaboration with merchandising: STIIIZY pod + 1 pairing item (gummy or pre-roll) at 25% off.</li>
+    <li>Send via SMS first (highest CVR), email follow-up 48 hr later for non-responders.</li>
+    <li>Track CVR vs baseline. Report by May 31.</li>
+  </ol>
+  <div class="copy"><b class="lbl">SMS copy</b><div class="text">Stiiizy fans: pair your favorite pod with a gummy or pre-roll, 25% off the bundle today only at Root'd · 4444 Telegraph · 9–9:55. Reply STOP to opt out.</div></div>
+</div>
+
+<div class="task task-p1">
+  <div class="task-head"><span class="task-id">AIQ-06</span><span class="task-title">Build Root'd house-brand bundle offer</span><span class="badge b-p1">P1</span></div>
+  <div class="task-meta">
+    <div><b>Deadline</b>Live by May 20</div>
+    <div><b>Time</b>2 hr</div>
+  </div>
+  <p>House-brand pre-rolls are $4.64/unit (high margin) but lower velocity than STIIIZY ($15.72/unit). Bundle the two: blended-margin offer that drives house-brand volume on the back of premium-brand traffic.</p>
+  <h4>Offer construction</h4>
+  <ul>
+    <li>Bundle: 1 STIIIZY pod + 2 Root'd house pre-rolls = bundle price ~$23 (saves customer ~$5; preserves 38% margin).</li>
+    <li>Messaging: "Discover Root'd · try our house pre-rolls paired with your favorite premium brand."</li>
+    <li>Channels: email + SMS + push.</li>
+  </ul>
+</div>
+
+<div class="task task-p0">
+  <div class="task-head"><span class="task-id">AIQ-07</span><span class="task-title">May AIQ revenue report — projection vs actual</span><span class="badge b-p0">P0</span></div>
+  <div class="task-meta">
+    <div><b>Deadline</b>Delivered to Account Lead June 2</div>
+    <div><b>Time</b>3 hr</div>
+  </div>
+  <p>Compile May AIQ performance: revenue per channel, MoM lift, ROI, opt-in rate trajectory. Compare against projection ($14K → $18–20K). Document each tactic's contribution where attribution allows.</p>
+  <ol class="steps">
+    <li>Pull AIQ analytics for May 1–31 by channel.</li>
+    <li>Calculate: total attributed revenue · MoM lift · ROI vs Q1 baseline · SMS opt-in rate trajectory.</li>
+    <li>Build the slide deck — one slide per channel + one summary slide.</li>
+    <li>Deliver to Darrell by EOD June 2 for client walkthrough.</li>
+  </ol>
+</div>
+
+<!-- DESIGN -->
+<div class="dept-head" id="design">
+  <h2>🎨 Department: Design</h2>
+  <div class="sub">2 tasks. POS opt-in QR signage + photo-asset curation support.</div>
+</div>
+
+<div class="task task-p0">
+  <div class="task-head"><span class="task-id">DSGN-01</span><span class="task-title">Design POS opt-in QR signage (counter card + kiosk overlay)</span><span class="badge b-p0">P0</span></div>
+  <div class="task-meta"><div><b>Deadline</b>Print-ready files May 5 · in-store May 7</div><div><b>Time</b>4 hr</div></div>
+  <h4>Spec</h4>
+  <ul>
+    <li>Format: 5"×7" counter card (vertical) + 8.5"×11" kiosk overlay (landscape).</li>
+    <li>Visual: Root'd's brand colors. Lead with "Get a free pre-roll." QR center.</li>
+    <li>QR resolves to AIQ SMS opt-in flow.</li>
+    <li>Headline copy (paste verbatim): <b>"Sign up for Root'd texts, get a free pre-roll today."</b></li>
+    <li>Sub-copy: <b>"3–4 messages per week · deals + lounge events · reply STOP to opt out anytime."</b></li>
+    <li>21+ disclaimer 7pt: <i>"For 21+. State-licensed cannabis dispensary &amp; lounge."</i></li>
+  </ul>
+</div>
+
+<div class="task task-p2">
+  <div class="task-head"><span class="task-id">DSGN-02</span><span class="task-title">Curate event-photo overlays (lounge night branding)</span><span class="badge b-p2">P2</span></div>
+  <div class="task-meta"><div><b>Deadline</b>By May 5 (templates ready before first event drop)</div><div><b>Time</b>3 hr</div></div>
+  <p>Build 5 reusable photo overlay templates — one per recurring event (Movie Night, Light the Mic, Puff n' Paint, Senior Tokeland, Cannaoke). Subtle branded corner badge with event name + Root'd logo. Used to badge raw event photos for GBP upload.</p>
+</div>
+
+<!-- SEO -->
+<div class="dept-head" id="seo">
+  <h2>📊 Department: SEO / Analytics</h2>
+  <div class="sub">5 tasks. Owns measurement, validation, and the May 31 final report.</div>
+  <div class="meta-line">Tools: Local Falcon · Search Console · Rich Results Test · GBP Insights · AIQ analytics (cross-functional with AIQ team)</div>
+</div>
+
+<div class="task task-p0">
+  <div class="task-head"><span class="task-id">SEO-01</span><span class="task-title">Validate Pillar 1 deploy on May 5</span><span class="badge b-p0">P0</span></div>
+  <div class="task-meta"><div><b>Deadline</b>May 5 evening</div><div><b>Time</b>1.5 hr</div></div>
+  <ol class="steps">
+    <li>Confirm DEV-01–03 are live (H1, schema, age-gate fix).</li>
+    <li><b>Most important:</b> re-test age-gate with URL Inspection. Screenshot must show full homepage rendered (not modal).</li>
+    <li>Run Rich Results Test on homepage. Confirm zero errors.</li>
+    <li>View page source. Confirm new H1, JSON-LD script tag, four H2s.</li>
+    <li>URL Inspection → Request indexing.</li>
+    <li>Take baseline screenshot of last-7-days impressions/clicks for the homepage in Search Console.</li>
+    <li>Post validation summary in #rootd-may-execution.</li>
+  </ol>
+</div>
+
+<div class="task task-p1">
+  <div class="task-head"><span class="task-id">SEO-02</span><span class="task-title">Run weekly Local Falcon scan · 7 keywords</span><span class="badge b-p1">P1</span></div>
+  <div class="task-meta"><div><b>Deadline</b>Every Monday: May 5, 12, 19, 26</div><div><b>Time</b>20 min</div></div>
+  <ol class="steps">
+    <li>Run scans against all 7 keywords (weed dispensary, weed near me, <b>weed</b>, dispensary, dispensary near me, <b>cannabis near me</b>, <b>cannabis</b>).</li>
+    <li>Bolded = primary May targets.</li>
+    <li>Export to May tracker. Update trend chart.</li>
+    <li>Flag any ≥3-pt SoLV regression.</li>
+  </ol>
+</div>
+
+<div class="task task-p1">
+  <div class="task-head"><span class="task-id">SEO-03</span><span class="task-title">Schema validation after each new page launch</span><span class="badge b-p1">P1</span></div>
+  <div class="task-meta"><div><b>Deadlines</b>After DEV-04 (May 11), DEV-05 (May 14), DEV-06 (May 19), DEV-07 (May 21), DEV-08 (May 26)</div><div><b>Time</b>10 min per page</div></div>
+  <p>Run Rich Results Test on each new neighborhood page. Confirm zero errors. Verify Search Console picks up indexing within 7 days.</p>
+</div>
+
+<div class="task task-p2">
+  <div class="task-head"><span class="task-id">SEO-04</span><span class="task-title">GBP Insights pull · weekly</span><span class="badge b-p2">P2</span></div>
+  <div class="task-meta"><div><b>Deadline</b>Every Monday</div><div><b>Time</b>15 min</div></div>
+  <p>Track: discovery searches, conversion rate, direction requests, web clicks, phone calls. Flag KPI #5 (conversion rate maintain 50%+) weekly. Document trend.</p>
+</div>
+
+<div class="task task-p0">
+  <div class="task-head"><span class="task-id">SEO-05</span><span class="task-title">Final Local Falcon scan + May reporting</span><span class="badge b-p0">P0</span></div>
+  <div class="task-meta"><div><b>Deadline</b>May 31 scan · June 2 report delivered</div><div><b>Time</b>4 hr</div></div>
+  <ol class="steps">
+    <li>May 31 EOD: run final Local Falcon scan (same 7-keyword grid as April baseline).</li>
+    <li>Compile May 31 vs April SoLV deltas.</li>
+    <li>Pull May GBP Insights totals + YoY comparison.</li>
+    <li>Sync with AIQ team to merge AIQ-07 revenue report into the master May report.</li>
+    <li>Compose: KPI-by-KPI baseline vs actual, attribution to specific tactics, July outlook.</li>
+    <li>Deliver to Account Lead by EOD June 2.</li>
+  </ol>
+</div>
+
+<!-- ACCOUNT LEAD -->
+<div class="dept-head" id="lead">
+  <h2>🤝 Department: Account Lead (Darrell)</h2>
+  <div class="sub">3 tasks. Coordination + client comms.</div>
+</div>
+
+<div class="task task-p1">
+  <div class="task-head"><span class="task-id">ACT-01</span><span class="task-title">Secure all 6 client asks on schedule</span><span class="badge b-p1">P1</span></div>
+  <p>Track and chase: Ask 01 (delivery confirmation, May 1) · Ask 02 (Pillar 1 approval + Nick/Shade access, May 5) · Ask 03 (GBP description sign-off, May 8) · Ask 04 (weekly photo cadence, ongoing) · Ask 05 (POS opt-in incentive launch, May 8) · Ask 06 (Treez integration decision, May 15).</p>
+</div>
+
+<div class="task task-p1">
+  <div class="task-head"><span class="task-id">ACT-02</span><span class="task-title">Run May 15 mid-month check-in</span><span class="badge b-p1">P1</span></div>
+  <p>Agenda: review Pillar 1 deploy (DEV-01–03), week-1 SoLV reading from SEO-02, AIQ early-week revenue progression from AIQ-07, recommend on Treez integration (Ask 06), confirm photo cadence is sustaining.</p>
+</div>
+
+<div class="task task-p2">
+  <div class="task-head"><span class="task-id">ACT-03</span><span class="task-title">May 31 client report walkthrough</span><span class="badge b-p2">P2</span></div>
+  <p>Receive May report from SEO-05 + AIQ-07 on June 2. Schedule a 30-min walkthrough with Rickey/Daniel/Infini. Two highlights to feature: "weed" SoLV recovery trajectory + AIQ revenue scale-up.</p>
+</div>
+
+<!-- COPY LIBRARY -->
+<section id="copy">
+  <h2>📋 Master Copy Library</h2>
+  <p>Every piece of public-facing language for May, paste-ready. Reasoning included so any team member can adapt without losing strategic intent.</p>
+
+  <h3>Homepage</h3>
+  <div class="copy">
+    <b class="lbl">H1</b><div class="text">Oakland Cannabis Dispensary &amp; Lounge — Root'd In The 510</div>
+    <b class="lbl" style="margin-top:8px">H2 hierarchy</b><div class="text">1. Black-Owned Equity Dispensary<br>2. Visit Our Consumption Lounge<br>3. Now Serving Temescal, Bushrod, Longfellow<br>4. Today's Deals</div>
+    <b class="lbl" style="margin-top:8px">Title tag</b><div class="text">Oakland Cannabis Dispensary &amp; Lounge | Root'd In The 510</div>
+    <b class="lbl" style="margin-top:8px">Meta description</b><div class="text">Root'd In The 510: Oakland's Black-owned cannabis dispensary &amp; consumption lounge. Movie Night Wednesdays, First Friday Light the Mic &amp; more. 4444 Telegraph Ave.</div>
+  </div>
+
+  <h3>Temescal page (<code>/temescal-dispensary</code>)</h3>
+  <div class="copy">
+    <b class="lbl">H1</b><div class="text">Temescal Cannabis Dispensary &amp; Lounge — Root'd In The 510</div>
+    <b class="lbl" style="margin-top:8px">Title tag</b><div class="text">Temescal Cannabis Dispensary | Root'd In The 510 — Oakland's Lounge Dispensary</div>
+    <b class="lbl" style="margin-top:8px">Meta description</b><div class="text">Root'd In The 510 is Temescal's Black-owned cannabis dispensary &amp; consumption lounge — under 5 minutes up Telegraph. Lounge events all week. 21+.</div>
+    <b class="lbl" style="margin-top:8px">Body paragraph #1 (paste)</b><div class="text">For Temescal residents looking for a neighborhood cannabis dispensary, Root'd In The 510 is right up the street — under 5 minutes from most of Temescal, straight up Telegraph Ave. We're Oakland's Black-owned, social equity cannabis dispensary and consumption lounge, just a few blocks down from the Temescal Farmers Market. Whether you're picking up flower, edibles, vapes, or pre-rolls — or staying for one of our recurring lounge nights — we're built around the neighborhood.</div>
+    <b class="lbl" style="margin-top:8px">Body paragraph #2 (paste)</b><div class="text">Three reasons Temescal customers come back to Root'd: community-rooted ownership (we're Black-owned and equity-licensed in a city where that still matters), a curated portfolio of trusted brands (Stiiizy, Raw Garden, Jetty, Kiva, plus our own Root'd house line), and a consumption lounge with live events you won't find at any other Oakland dispensary. Our 1,330+ verified 4.9-star reviews tell the rest of the story.</div>
+    <b class="lbl" style="margin-top:8px">Lounge events callout (paste)</b><div class="text">More than a dispensary — it's a community. Movie Night every Wednesday. 1st Friday Light the Mic (open mic). 2nd Friday Puff n' Paint (BYO canvas). 3rd Friday Senior Tokeland (21+ welcome). 4th Friday Cannaoke (cannabis karaoke). Whichever Friday lands when you visit, we've got something happening.</div>
+    <b class="lbl" style="margin-top:8px">5-question FAQ (paste)</b><div class="text">
+      <b>How long is the drive from Temescal to Root'd?</b><br>
+      Under 5 minutes from most of Temescal — straight up Telegraph Ave to 4444 Telegraph.<br><br>
+      <b>Does Root'd deliver to Temescal?</b><br>
+      Root'd is in-store only — no delivery. But pickup is fast and parking is easy.<br><br>
+      <b>What lounge events does Root'd host?</b><br>
+      Movie Night Wednesdays, 1st Friday Light the Mic, 2nd Friday Puff n' Paint, 3rd Friday Senior Tokeland, 4th Friday Cannaoke. All 21+ with valid ID.<br><br>
+      <b>Do I need a California ID?</b><br>
+      No — any valid government-issued photo ID showing you're 21+ works (REAL ID, passport, out-of-state license).<br><br>
+      <b>What brands does Root'd carry?</b><br>
+      Stiiizy, Raw Garden, Jetty, Kiva, plus our own Root'd house line and many more.
+    </div>
+  </div>
+
+  <h3>Bushrod page (<code>/bushrod-oakland-dispensary</code>)</h3>
+  <div class="copy">
+    <b class="lbl">H1</b><div class="text">Bushrod Cannabis Dispensary &amp; Lounge — Root'd In The 510</div>
+    <b class="lbl" style="margin-top:8px">Title tag</b><div class="text">Bushrod Cannabis Dispensary 94609 | Root'd In The 510</div>
+    <b class="lbl" style="margin-top:8px">Meta description</b><div class="text">Root'd is Bushrod's hometown cannabis dispensary &amp; consumption lounge — at 4444 Telegraph in 94609. Black-owned, equity-licensed, lounge events every week.</div>
+    <b class="lbl" style="margin-top:8px">Body paragraph #1 (paste)</b><div class="text">Root'd In The 510 isn't near Bushrod — Root'd <b>is</b> Bushrod. Our 4444 Telegraph Ave dispensary sits in the 94609 zip code, in the heart of the Bushrod neighborhood. We're Oakland's Black-owned, social equity cannabis dispensary and consumption lounge, and we built it here on purpose: for the residents and regulars who've made this corner of Oakland what it is.</div>
+    <b class="lbl" style="margin-top:8px">Body paragraph #2 (paste)</b><div class="text">Bushrod customers walking, biking, or driving in from Adeline, Telegraph, or Shattuck find more than a dispensary at Root'd. Our consumption lounge hosts five recurring events that turn buying flower into staying for a community night. We carry Stiiizy, Raw Garden, Jetty, Kiva, plus our Root'd house line — at the same 4444 Telegraph spot where 1,330+ verified 4.9-star reviewers keep finding us.</div>
+  </div>
+
+  <h3>Rockridge page (<code>/rockridge-dispensary</code>)</h3>
+  <div class="copy">
+    <b class="lbl">H1</b><div class="text">Rockridge Cannabis Dispensary &amp; Lounge — Root'd In The 510</div>
+    <b class="lbl" style="margin-top:8px">Title tag</b><div class="text">Rockridge Cannabis Dispensary | Root'd In The 510 — 7 Min from College Ave</div>
+    <b class="lbl" style="margin-top:8px">Meta description</b><div class="text">Root'd In The 510: Rockridge's neighborhood cannabis dispensary &amp; consumption lounge — 7 minutes from College Avenue. Black-owned, equity-licensed.</div>
+    <b class="lbl" style="margin-top:8px">Body opening</b><div class="text">For Rockridge residents looking for a cannabis dispensary that's worth the short drive, Root'd In The 510 is about 7 minutes off College Avenue — straight down Telegraph. We're Oakland's Black-owned, social equity cannabis dispensary and consumption lounge: premium flower from Stiiizy, Raw Garden, Jetty, and Kiva, plus our Root'd house line, plus five recurring lounge nights that turn an errand into a destination.</div>
+  </div>
+
+  <h3>Piedmont page (<code>/piedmont-dispensary</code>)</h3>
+  <div class="copy">
+    <b class="lbl">H1</b><div class="text">Piedmont Cannabis Dispensary &amp; Lounge — Root'd In The 510</div>
+    <b class="lbl" style="margin-top:8px">Title tag</b><div class="text">Piedmont Cannabis Dispensary | Root'd In The 510 — 8 Min via Broadway</div>
+    <b class="lbl" style="margin-top:8px">Meta description</b><div class="text">Root'd In The 510 is Piedmont's commuter-corridor cannabis dispensary &amp; consumption lounge — 8 minutes via Broadway or Telegraph. Black-owned. 21+.</div>
+    <b class="lbl" style="margin-top:8px">Body opening</b><div class="text">For Piedmont residents passing through Oakland on their commute, Root'd In The 510 is a natural detour — 8 minutes via Broadway or Telegraph, free parking out front. We're Oakland's Black-owned, social equity cannabis dispensary and consumption lounge, with premium brand portfolio and five recurring lounge events that make us worth more than just a stop.</div>
+  </div>
+
+  <h3>Lake Merritt page (<code>/lake-merritt-dispensary</code>)</h3>
+  <div class="copy">
+    <b class="lbl">H1</b><div class="text">Lake Merritt Cannabis Dispensary &amp; Lounge — Root'd In The 510</div>
+    <b class="lbl" style="margin-top:8px">Title tag</b><div class="text">Lake Merritt Cannabis Dispensary | Root'd In The 510 — 12 Min Up Telegraph</div>
+    <b class="lbl" style="margin-top:8px">Meta description</b><div class="text">Root'd In The 510: Lake Merritt's neighborhood cannabis dispensary &amp; consumption lounge — 12 minutes up Telegraph. Black-owned. Lounge events all week.</div>
+    <b class="lbl" style="margin-top:8px">Body opening</b><div class="text">Whether you live around the lake or you're visiting downtown Oakland for the day, Root'd In The 510 is a 12-minute drive up Telegraph. We're Oakland's Black-owned, social equity cannabis dispensary and consumption lounge — built around our community, with five recurring lounge events that turn any night into a reason to come back.</div>
+  </div>
+
+  <h3>Mother's Day blog</h3>
+  <div class="copy">
+    <b class="lbl">URL</b><div class="text"><code>/blog/mothers-day-cannabis-gifts-oakland-dispensary</code></div>
+    <b class="lbl" style="margin-top:8px">H1</b><div class="text">Mother's Day at Root'd: Cannabis Gifts &amp; Lounge Experiences for Bay Area Moms</div>
+    <b class="lbl" style="margin-top:8px">Meta description</b><div class="text">A Mother's Day cannabis gift guide from Oakland's Black-owned dispensary. Low-dose edibles, calming tinctures, and lounge experiences for Bay Area moms.</div>
+    <b class="lbl" style="margin-top:8px">Lede (paste)</b><div class="text">If your mom has been cannabis-curious but never quite ready, Root'd In The 510's team has spent years walking first-timers through their first edible, their first tincture, their first easy Sunday. Here's what we'd hand-pick for her this Mother's Day — a Bay Area gift guide from Oakland's Black-owned, equity-licensed cannabis dispensary.</div>
+  </div>
+
+  <h3>Memorial Day blog</h3>
+  <div class="copy">
+    <b class="lbl">URL</b><div class="text"><code>/blog/memorial-day-cannabis-bbq-oakland-dispensary</code></div>
+    <b class="lbl" style="margin-top:8px">H1</b><div class="text">Memorial Day at Root'd: BBQ Pairings + Lounge Events at Oakland's #1 Equity Dispensary</div>
+    <b class="lbl" style="margin-top:8px">Meta description</b><div class="text">Cannabis-and-BBQ pairings for Memorial Day weekend from Oakland's Black-owned equity dispensary. Plus four nights of lounge events. Root'd In The 510.</div>
+    <b class="lbl" style="margin-top:8px">Lede (paste)</b><div class="text">Memorial Day weekend = grilling all day, winding down all night. Root'd In The 510 has both ends covered: sativa-leaning pre-rolls that pair with afternoon ribs, edibles that turn the post-cookout couch into hammock-mode, and four nights of lounge events at Oakland's Black-owned equity cannabis dispensary.</div>
+  </div>
+
+  <h3>Refreshed GBP description</h3>
+  <div class="copy">
+    <b class="lbl">Description (paste verbatim · 750 chars)</b><div class="text">Root'd In The 510 is Oakland's Black-owned, social equity cannabis dispensary and consumption lounge — proudly serving Temescal, Bushrod, Longfellow, Rockridge, and the broader East Bay. Visit our 4444 Telegraph Ave dispensary for premium flower, edibles, concentrates, pre-rolls, and cartridges from trusted brands like Stiiizy, Raw Garden, Jetty, Kiva, and our own Root'd house line. Stay for our consumption lounge events: Movie Night Wednesdays, First Friday Light the Mic, Senior Tokeland, Cannaoke, and more. Root'd is more than a dispensary — it's a community. Open daily 9 AM – 9:55 PM.</div>
+  </div>
+
+  <h3>Review-response opening rotation</h3>
+  <div class="copy"><div class="text">
+    • "Thanks for visiting our cannabis dispensary &amp; lounge —"<br>
+    • "It means a lot to our team at Root'd —"<br>
+    • "From all of us at Root'd In The 510 —"<br>
+    • "Thanks for choosing Root'd, Oakland's Black-owned dispensary —"
+  </div></div>
+
+  <h3>Standard GBP-post body closer</h3>
+  <div class="copy"><div class="text">Visit Root'd In The 510 at 4444 Telegraph Ave, Oakland. Open daily 9 AM – 9:55 PM. Stay for the lounge — Movie Night Wednesdays + First Friday Light the Mic + more. 21+ ID required. In-store only, no delivery.</div></div>
+
+  <h3>SMS opt-in confirmation auto-reply</h3>
+  <div class="copy"><div class="text">Welcome to Root'd 🌿 Your free pre-roll is ready — show this text at any register today. We'll send 3–4 deals + lounge updates per week. Reply STOP to opt out anytime.</div></div>
+
+  <h3>POS QR signage copy</h3>
+  <div class="copy">
+    <b class="lbl">Headline</b><div class="text">Sign up for Root'd texts, get a free pre-roll today.</div>
+    <b class="lbl" style="margin-top:8px">Sub-copy</b><div class="text">3–4 messages per week · deals + lounge events · reply STOP to opt out anytime.</div>
+  </div>
+</section>
+
+<section id="calendar">
+  <h2>📅 May calendar at a glance</h2>
+  <table>
+    <tr><th>Date</th><th>Wk</th><th>Deliverable</th><th>Dept</th><th>Task ID</th></tr>
+    <tr><td>May 1</td><td>1</td><td>"Offers delivery" attribute removed · 1st Friday email · daily push activated</td><td>GBP · AIQ</td><td>GBP-01 · AIQ-01 · AIQ-04</td></tr>
+    <tr><td>May 2</td><td>1</td><td>Movie Night GBP post · Saturday SMS</td><td>GBP · AIQ</td><td>GBP-05 · AIQ-02</td></tr>
+    <tr><td><b>May 5</b> <span class="badge b-p0">DEPLOY</span></td><td>1</td><td>Pillar 1: H1 + schema + age-gate fix · Mother's Day blog · QR signage delivered · SEO-01 validation</td><td>Dev · Content · Design · SEO</td><td>DEV-01–03 · CON-07 · DSGN-01 · SEO-01</td></tr>
+    <tr><td>May 8</td><td>2</td><td>SMS opt-in incentive campaign live · GBP description rewrite live</td><td>AIQ · GBP</td><td>AIQ-03 · GBP-02</td></tr>
+    <tr><td>May 11</td><td>2</td><td>Temescal page live</td><td>Content · Dev · SEO</td><td>CON-02 · DEV-04 · SEO-03</td></tr>
+    <tr><td>May 14</td><td>2</td><td>Bushrod page live</td><td>Content · Dev · SEO</td><td>CON-03 · DEV-05 · SEO-03</td></tr>
+    <tr><td>May 15</td><td>3</td><td>Mid-month check-in · STIIIZY-bundle test launch</td><td>Account Lead · AIQ</td><td>ACT-02 · AIQ-05</td></tr>
+    <tr><td>May 19</td><td>4</td><td>Rockridge page live · Memorial Day blog live</td><td>Content · Dev</td><td>CON-04 · CON-07 · DEV-06</td></tr>
+    <tr><td>May 20</td><td>4</td><td>House-brand bundle live</td><td>AIQ</td><td>AIQ-06</td></tr>
+    <tr><td>May 21</td><td>4</td><td>Piedmont page live</td><td>Content · Dev</td><td>CON-05 · DEV-07</td></tr>
+    <tr><td>May 23</td><td>4</td><td>Memorial Day GBP post · holiday SMS</td><td>GBP · AIQ</td><td>GBP-05 · AIQ-02</td></tr>
+    <tr><td>May 26</td><td>5</td><td>Lake Merritt page live</td><td>Content · Dev</td><td>CON-06 · DEV-08</td></tr>
+    <tr><td>weekly · Wed</td><td>1+</td><td>5–10 GBP photos uploaded · Local Falcon scan Mon</td><td>GBP · SEO</td><td>GBP-03 · SEO-02</td></tr>
+    <tr><td><b>May 31</b></td><td>5</td><td>Final Local Falcon scan + AIQ revenue report drafted</td><td>SEO · AIQ</td><td>SEO-05 · AIQ-07</td></tr>
+  </table>
+</section>
+
+<section id="kpis">
+  <h2>🎯 KPI targets · what success looks like on May 31</h2>
+  <div class="kpi-grid">
+    <div class="kpi"><b>Hold all 5 current top-3 keywords</b><div class="v">5/7 → maintain 5/7</div><div class="t">High confidence</div></div>
+    <div class="kpi"><b>"Weed" SoLV recovery</b><div class="v">58.68% → 70–75%+</div><div class="t">High confidence</div></div>
+    <div class="kpi"><b>"Cannabis near me" rank</b><div class="v">#4 → #3 (28%+ SoLV)</div><div class="t">High confidence</div></div>
+    <div class="kpi"><b>"Cannabis" rank</b><div class="v">#5 → #3–4 (25%+ SoLV)</div><div class="t">Moderate (CBCB structural advantage)</div></div>
+    <div class="kpi"><b>GBP conversion rate</b><div class="v">56.8% → maintain 50%+</div><div class="t">High confidence</div></div>
+    <div class="kpi"><b>Direction requests</b><div class="v">1,532 → 1,500+</div><div class="t">High confidence</div></div>
+    <div class="kpi"><b>AIQ monthly revenue</b><div class="v">$14K → $18–20K</div><div class="t">High confidence</div></div>
+    <div class="kpi"><b>SMS opt-in rate</b><div class="v">6.7% → 9%+</div><div class="t">High confidence</div></div>
+    <div class="kpi"><b>AIQ conversion rate</b><div class="v">1.99% → 2.3%+</div><div class="t">Moderate</div></div>
+    <div class="kpi"><b>Discovery searches</b><div class="v">7,643 → trending up</div><div class="t">Moderate (market headwind)</div></div>
+    <div class="kpi"><b>All 7 keywords top 3</b><div class="v">stretch goal · 6/7 realistic</div><div class="t">Stretch</div></div>
+  </div>
+</section>
+
+<section>
+  <h2>Compliance &amp; guardrails</h2>
+  <ul>
+    <li><b>No pricing in GBP imagery</b> or photo captions.</li>
+    <li><b>No medical claims.</b> Avoid "treats," "cures," "therapeutic," "prescribed."</li>
+    <li><b>21+ language</b> on every new page including FAQ blocks and SMS messaging.</li>
+    <li>Every neighborhood page: <b>real Root'd photos only</b>. No neighborhood-landmark photos (would confuse Google's location signal).</li>
+    <li>SMS opt-in incentive is layered, not replacement, for the existing review-discount free pre-roll. Different prompts at different moments.</li>
+    <li>"In-store only, no delivery" must appear in every GBP post and the new neighborhood pages — customer expectation alignment matters as much as keyword work.</li>
+  </ul>
+</section>
+
+<footer>Root'd In The 510 · May 2026 Dispenza Execution Playbook · v2.0 · Departmentalized · prepared by Dispenza Dispensary Marketing</footer>
+
+</div>
+</body>
+</html>
