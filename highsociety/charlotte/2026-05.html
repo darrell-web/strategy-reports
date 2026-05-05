@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>High Society Charlotte — May 2026 Local SEO Strategy</title>
+<style>
+  :root { --purple-900: #2E1A47; --purple-700: #5B2A86; --purple-500: #7B3FA8; --purple-100: #F3E8FB; --pink-500: #D63384; --pink-100: #FDE8F2; --gold: #F4B942; --gold-light: #FFF4D6; --green: #2BA84A; --green-100: #E6F6EA; --red: #D64545; --red-100: #FFE8E8; --amber: #E8870C; --amber-100: #FFF1DD; --gray-900: #1F2937; --gray-700: #4B5563; --gray-500: #6B7280; --gray-300: #D1D5DB; --gray-100: #F3F4F6; --gray-50: #F9FAFB; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; color: var(--gray-900); background: var(--gray-50); line-height: 1.6; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 32px 80px; }
+  .cover { background: linear-gradient(135deg, var(--purple-900) 0%, var(--purple-700) 60%, var(--pink-500) 100%); color: #fff; padding: 80px 32px 100px; margin-bottom: 48px; border-bottom: 6px solid var(--gold); }
+  .cover-inner { max-width: 1100px; margin: 0 auto; }
+  .cover .eyebrow { text-transform: uppercase; letter-spacing: 3px; font-size: 14px; font-weight: 600; opacity: 0.85; margin-bottom: 16px; }
+  .cover h1 { font-size: 52px; line-height: 1.08; margin: 0 0 20px; font-weight: 800; }
+  .cover h1 span { color: var(--gold); }
+  .cover .subtitle { font-size: 21px; opacity: 0.92; max-width: 780px; margin: 0 0 28px; }
+  .cover .stamp { display: inline-block; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.35); padding: 10px 18px; border-radius: 999px; font-size: 13px; text-transform: uppercase; letter-spacing: 2px; font-weight: 700; margin-bottom: 36px; }
+  .cover .stamp .dot { color: var(--gold); margin-right: 8px; }
+  .cover-meta { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; padding-top: 28px; border-top: 1px solid rgba(255,255,255,0.25); }
+  .cover-meta div .label { font-size: 12px; text-transform: uppercase; letter-spacing: 2px; opacity: 0.7; }
+  .cover-meta div .value { font-size: 16px; font-weight: 600; margin-top: 4px; }
+  section { margin-bottom: 56px; }
+  .section-header { display: flex; align-items: baseline; gap: 16px; margin-bottom: 8px; }
+  .section-num { font-size: 14px; font-weight: 700; color: var(--pink-500); letter-spacing: 3px; }
+  h2 { font-size: 34px; line-height: 1.2; color: var(--purple-900); margin: 0 0 8px; font-weight: 700; }
+  h3 { font-size: 22px; color: var(--purple-700); margin: 28px 0 12px; }
+  h4 { font-size: 17px; color: var(--gray-900); margin: 20px 0 8px; font-weight: 700; }
+  .lede { font-size: 18px; color: var(--gray-700); max-width: 880px; margin-bottom: 20px; }
+  .card { background: #fff; border: 1px solid var(--gray-300); border-radius: 12px; padding: 24px 28px; margin: 16px 0; }
+  .card.purple { background: var(--purple-100); border-color: var(--purple-500); }
+  .card.alert { background: var(--gold-light); border-left: 5px solid var(--gold); }
+  .card.proof { background: #F8FAFF; border: 1px solid var(--purple-500); border-left: 6px solid var(--purple-700); }
+  .card.proof .label { font-size: 11px; font-weight: 800; color: var(--purple-700); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 10px; }
+  .card.critical { background: var(--red-100); border-left: 5px solid var(--red); }
+  .strategic-bet { background: var(--purple-900); color: #fff; padding: 40px; border-radius: 16px; text-align: center; margin: 24px 0 40px; }
+  .strategic-bet .label { text-transform: uppercase; letter-spacing: 4px; font-size: 13px; color: var(--gold); margin-bottom: 16px; font-weight: 700; }
+  .strategic-bet blockquote { font-size: 26px; line-height: 1.3; margin: 0; font-weight: 600; }
+  .strategic-bet blockquote em { color: var(--gold); font-style: normal; }
+  table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.05); margin: 16px 0 24px; }
+  th { background: var(--purple-700); color: #fff; text-align: left; padding: 12px 14px; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; }
+  td { padding: 12px 14px; border-bottom: 1px solid var(--gray-100); font-size: 14.5px; vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  tr:nth-child(even) td { background: var(--gray-50); }
+  .pill { display: inline-block; padding: 4px 12px; border-radius: 999px; font-size: 11px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; }
+  .pill.high { background: var(--green-100); color: var(--green); }
+  .pill.med { background: var(--amber-100); color: var(--amber); }
+  .pill.stretch { background: var(--red-100); color: var(--red); }
+  .pill.same-day { background: var(--red); color: #fff; }
+  .trend-box { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 16px 0; }
+  .trend-tile { background: #fff; border-radius: 12px; padding: 20px; border: 1px solid var(--gray-300); }
+  .trend-tile .num { font-size: 28px; font-weight: 800; color: var(--purple-700); line-height: 1; }
+  .trend-tile .label { font-size: 12px; color: var(--gray-700); margin-top: 8px; text-transform: uppercase; letter-spacing: 1px; }
+  .trend-tile .sub { font-size: 12px; color: var(--gray-500); margin-top: 4px; }
+  .pillar-num { display: inline-block; background: var(--gold); color: var(--purple-900); width: 36px; height: 36px; border-radius: 50%; text-align: center; line-height: 36px; font-weight: 800; margin-right: 12px; }
+  .confidence-matrix { background: #fff; border: 1px solid var(--gray-300); border-radius: 12px; margin: 20px 0 32px; overflow: hidden; }
+  .conf-row { display: grid; grid-template-columns: 60px 1fr 240px 140px; align-items: center; padding: 14px 22px; border-bottom: 1px solid var(--gray-100); gap: 14px; }
+  .conf-row:last-child { border-bottom: none; }
+  .conf-row.head { background: var(--purple-700); color: #fff; font-size: 12px; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; }
+  .conf-row .seq { font-weight: 800; font-size: 16px; color: var(--purple-700); font-variant-numeric: tabular-nums; }
+  .conf-row.head .seq { color: #fff; }
+  .conf-row .name { font-weight: 600; color: var(--gray-900); font-size: 14px; }
+  .conf-row .target { font-variant-numeric: tabular-nums; color: var(--gray-700); font-size: 13px; }
+  .ask { background: var(--purple-100); border-left: 5px solid var(--purple-700); padding: 16px 20px; margin: 12px 0; border-radius: 4px; }
+  .ask .num { font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; color: var(--purple-700); margin-bottom: 6px; }
+  .ask .text { font-size: 14.5px; line-height: 1.5; }
+  .footer { text-align: center; padding: 36px 0 0; color: var(--gray-500); font-size: 13px; line-height: 1.7; border-top: 1px solid var(--gray-300); margin-top: 60px; }
+  ul li, ol li { margin: 4px 0; }
+  code { background: var(--purple-100); color: var(--purple-900); padding: 1px 6px; border-radius: 4px; font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 0.9em; }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="cover-inner">
+    <div class="eyebrow">High Society · May 2026 Local SEO Strategy</div>
+    <h1>Charlotte:<br/>Protect the <span>review-velocity outlier</span> + close the Weedmaps gap</h1>
+    <div class="subtitle">Charlotte is the chain's review-velocity outlier — 1,067 Google reviews / 4.9★ in just 9 months (~123 reviews/mo, 5× the chain average). It's also the chain's best description template (brand-mentioning). May's job: <em>protect what's working</em>, replicate to other stores, and close the one big gap — Weedmaps profile under-development (only 28 reviews vs Birch Run's 489).</div>
+    <div class="stamp"><span class="dot">●</span> Evidence-Backed · Whitespark 2026 LSRF</div>
+    <div class="cover-meta">
+      <div><div class="label">Period</div><div class="value">May 1 – May 31, 2026</div></div>
+      <div><div class="label">Account Lead</div><div class="value">Darrell · Dispenza</div></div>
+      <div><div class="label">Final Measurement</div><div class="value">Local Falcon scan · May 31</div></div>
+      <div><div class="label">Store Opening</div><div class="value">August 14, 2024 (~9 mo · newest non-NB)</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+<section>
+  <div class="section-header">
+    <div class="section-num">EXECUTIVE PROOF</div>
+    <h2>Why this plan will hit its KPIs</h2>
+  </div>
+  <p class="lede">Charlotte is doing something <em>significantly different</em> from the rest of the chain — its Google review velocity (~123/mo) is 5× Saline (~13/mo) and 15× Big Rapids (~8/mo). Whatever Charlotte's checkout / staff prompts / customer-base mix is, it's working. The May plan first <em>identifies the success driver</em> for chain-wide replication, then closes the one glaring gap (Weedmaps under-development) without disrupting the core machine.</p>
+
+  <div class="card proof">
+    <div class="label">Proof point #1 · Best-in-chain description template</div>
+    <p style="margin:0;">Charlotte's GBP description is the only one that names specific brands (MI Jane / Uncle Arnie's / Choice Labs / Jeeter / in-house line) + uses "trusted" framing instead of "leading" (regulated-claim safer). This template is the chain's gold standard — it's the model the other 7 stores' May rewrites are mimicking.</p>
+  </div>
+
+  <div class="card proof">
+    <div class="label">Proof point #2 · Pit Stop is real and visible</div>
+    <p style="margin:0;">Charlotte's storefront photo shows a prominent red "PIT STOP" window banner alongside the "HIGH SOCIETY" branding. This is the chain's only visual confirmation that Pit Stop is a tangible in-store concept, not just description copy. The brand asset is real here in a way it isn't visible at Big Rapids / Birch Run / Saline / Lenox.</p>
+  </div>
+
+  <div class="card critical">
+    <p style="margin:0;"><b>🚨 Critical gap — Weedmaps under-development:</b> Charlotte has only <b>28 Weedmaps reviews</b> despite 1,067 Google reviews. That's a 38× ratio (vs Birch Run's 1.5× and Big Rapids' 2.7×). The Weedmaps profile is severely under-fed. <b>This is the chain's single biggest individual-store rebalancing opportunity.</b> Closing it could add 100-200 incremental Weedmaps reviews over Q3 with the right cadence.</p>
+  </div>
+
+  <h3>What we're committing to</h3>
+  <div class="confidence-matrix">
+    <div class="conf-row head"><div class="seq">#</div><div class="name">KPI</div><div class="target">May 2026 Target</div><div>Confidence</div></div>
+    <div class="conf-row"><div class="seq">1</div><div class="name">Diagnose Charlotte's review-velocity advantage (replicable to chain?)</div><div class="target">Operational diagnostic complete by May 14</div><div><span class="pill high">High</span></div></div>
+    <div class="conf-row"><div class="seq">2</div><div class="name">Weedmaps profile audit + rebuild — banner, photos, deals, menu sync, review-acquisition flow</div><div class="target">100% by May 19; +5 Weedmaps reviews in May (baseline)</div><div><span class="pill high">High</span></div></div>
+    <div class="conf-row"><div class="seq">3</div><div class="name">Description tweak — add Lansing metro adjacency + I-69 corridor + 21+ language (light edit; Charlotte's template is already good)</div><div class="target">Live by May 8</div><div><span class="pill high">High</span></div></div>
+    <div class="conf-row"><div class="seq">4</div><div class="name">Secondary category swap (chain Week 3)</div><div class="target">Live by May 19</div><div><span class="pill high">High</span></div></div>
+    <div class="conf-row"><div class="seq">5</div><div class="name">Service area expansion (Eaton Rapids + Olivet + Dimondale + Potterville + Lansing-area)</div><div class="target">Live by May 15</div><div><span class="pill high">High</span></div></div>
+    <div class="conf-row"><div class="seq">6</div><div class="name">Knowledge Panel claim + sameAs schema (1,067 reviews + 4.9★ = strongest entity in chain)</div><div class="target">Submitted by May 21</div><div><span class="pill high">High</span></div></div>
+    <div class="conf-row"><div class="seq">7</div><div class="name">Lansing-area hyperlocal page pilot</div><div class="target">/lansing-area-dispensary live by May 26</div><div><span class="pill med">Moderate</span></div></div>
+    <div class="conf-row"><div class="seq">8</div><div class="name">Maintain ~123/mo Google review velocity</div><div class="target">≥100/mo in May (don't break the machine)</div><div><span class="pill high">High (defensive)</span></div></div>
+    <div class="conf-row"><div class="seq">9</div><div class="name">Discovery (non-branded) searches MoM</div><div class="target">+5% to +10%</div><div><span class="pill med">Moderate</span></div></div>
+  </div>
+</section>
+
+<section>
+  <div class="section-header">
+    <div class="section-num">01</div>
+    <h2>Where We Stand</h2>
+  </div>
+
+  <div class="trend-box">
+    <div class="trend-tile"><div class="num">1,067</div><div class="label">Google reviews</div><div class="sub">4.9★ · ~123/mo (chain leader by 5×)</div></div>
+    <div class="trend-tile"><div class="num">28</div><div class="label">Weedmaps reviews</div><div class="sub">4.9★ · 🚨 chain-low (under-developed)</div></div>
+    <div class="trend-tile"><div class="num">1</div><div class="label">AllBud votes</div><div class="sub">4.8★</div></div>
+    <div class="trend-tile"><div class="num">~9 mo</div><div class="label">Operating since</div><div class="sub">Aug 14, 2024 · newest non-NB</div></div>
+  </div>
+
+  <h3>What's already strong (don't touch)</h3>
+  <table>
+    <tr><th>Element</th><th>State</th></tr>
+    <tr><td>Description template</td><td>✅ Brand-mentioning (MI Jane / Uncle Arnie's / Choice Labs / Jeeter + in-house) — chain's best</td></tr>
+    <tr><td>Primary GBP category</td><td>"Cannabis store" ✅</td></tr>
+    <tr><td>UTM-tagged GBP website link</td><td><code>?utm_source=gmb-charlotte&amp;utm_campaign=dispenza</code> ✅</td></tr>
+    <tr><td>Hours · Easter closed · Pit Stop closer</td><td>✅</td></tr>
+    <tr><td>Service options · accessibility · payments</td><td>Full chain set ✅ · Cash-only ✅</td></tr>
+    <tr><td>Both FB + IG visible</td><td>FB id=61564212894886 (Charlotte-specific) + IG ✅</td></tr>
+    <tr><td>Storefront brand asset</td><td>Visible "PIT STOP" + "HIGH SOCIETY" window banners ✅</td></tr>
+    <tr><td>Review acquisition machine</td><td>~123/mo Google velocity — whatever's working, keep it working</td></tr>
+  </table>
+
+  <h3>What's broken / underleveraged</h3>
+  <table>
+    <tr><th>Gap</th><th>Current state</th><th>Fix</th></tr>
+    <tr><td>🚨 Weedmaps under-development</td><td>28 reviews vs 489 at Birch Run, 192 at BR, 217 at Saline. Profile fields likely missing or stale; menu sync may not be firing; review-acquisition flow may not point to Weedmaps as a channel</td><td><span class="pill high">P0 May 19</span></td></tr>
+    <tr><td>Description: Lansing metro adjacency</td><td>0 references — Charlotte is ~20 min SW of Lansing (state capital + MSU spillover)</td><td><span class="pill high">P0 May 8</span></td></tr>
+    <tr><td>Description: I-69 corridor</td><td>0 references — visible on map; corridor traffic to/from Indiana</td><td><span class="pill high">P0 May 8</span></td></tr>
+    <tr><td>Description: 21+ language</td><td>Missing — chain compliance gap</td><td><span class="pill high">P0 May 8</span></td></tr>
+    <tr><td>Service area</td><td>Single ZIP 48813 only</td><td><span class="pill high">P0 May 15</span></td></tr>
+    <tr><td>Order link redirect</td><td>Lands on root domain — friction loss (chain pattern)</td><td><span class="pill med">P1</span></td></tr>
+  </table>
+</section>
+
+<section>
+  <div class="section-header">
+    <div class="section-num">02</div>
+    <h2>The Strategic Bet for May</h2>
+  </div>
+
+  <div class="strategic-bet">
+    <div class="label">May 2026 Strategic Bet</div>
+    <blockquote>Charlotte's review-velocity advantage is the chain's most valuable unidentified asset. <em>Diagnose it</em>. Replicate the driver to BR / Saline / Lenox. <em>Close the Weedmaps gap</em>. Add Lansing metro positioning to the already-best-in-chain description. Don't break what's working.</blockquote>
+  </div>
+
+  <h3>Charlotte's review-velocity advantage — diagnostic hypotheses</h3>
+  <p class="lede">Charlotte earns reviews at 5× the chain average. Whatever's driving it — store-staff process, customer-base demographic, or a tooling difference — finding the cause is worth more than any other single May tactic at any store. The diagnostic is the highest-priority item.</p>
+
+  <table>
+    <tr><th>Hypothesis</th><th>How to test</th></tr>
+    <tr><td><b>H1:</b> Charlotte staff has a tighter checkout review-prompt script</td><td>Compare front-desk + budtender scripts. Visit Charlotte vs. Big Rapids for direct observation. Talk to GMs.</td></tr>
+    <tr><td><b>H2:</b> Charlotte runs a different review-acquisition kiosk / SMS / receipt-insert combo</td><td>Audit the post-purchase flow at each store. Map AIQ post-visit campaign timing per store. Charlotte's post-visit SMS may fire faster or with a different incentive.</td></tr>
+    <tr><td><b>H3:</b> Charlotte's customer-base demographic skews more review-active (younger / more app-engaged / Lansing-metro university spillover)</td><td>POS data segmentation — repeat-customer rate, average visit frequency, AVO distribution. If Charlotte's customer mix differs materially, that's the driver and it's not replicable directly.</td></tr>
+    <tr><td><b>H4:</b> Charlotte has been actively running a review-incentive promo that other stores haven't</td><td>Audit AIQ campaign history at Charlotte vs. other stores. Look for "leave a review for X off" type campaigns.</td></tr>
+    <tr><td><b>H5:</b> Charlotte's staff has lower turnover + better review-response cadence (positive feedback loop)</td><td>HR check on staff tenure. Review-response audit on Charlotte's existing reviews.</td></tr>
+  </table>
+  <p>If H1-H2-H4-H5 are the drivers, the model is replicable. If H3 is the only driver, the gap stays. <b>Either answer is valuable.</b></p>
+</section>
+
+<section>
+  <div class="section-header">
+    <div class="section-num">PILLAR 01</div>
+    <h2><span class="pillar-num">1</span>Description — Light Edit, Not Rewrite</h2>
+  </div>
+  <p class="lede">Charlotte's description is already the chain's gold standard. May's edit is light — add Lansing metro adjacency + I-69 corridor + adjacent towns + 21+ language. Don't disrupt what's already winning.</p>
+
+  <h3>Master copy — paste verbatim</h3>
+  <div class="card purple">
+    <p style="margin:0; font-size:15px; line-height:1.6;">"High Society Weed Dispensary Charlotte is the trusted cannabis shop serving Charlotte, MI, and the Lansing metro — 20 minutes from downtown Lansing, off I-69. Since 2020, we've been dedicated to redefining the cannabis industry with exceptional service, high-quality products, and competitive pricing. Explore our selection of cannabis brands, including MI Jane marijuana flowers, Uncle Arnie's cannabis-infused beverages, Choice Labs edibles, and Jeeter pre-rolls. We're also proud to offer our in-house brand of cannabis flowers and pre-rolls, crafted with care to meet the highest quality standards. Our budtenders are here to guide you in finding the perfect products to suit your needs and budget. Proudly serving Charlotte, Eaton Rapids, Olivet, Dimondale, Potterville, and the Lansing-area / I-69 corridor. Open daily 9 AM – 9 PM. 21+ ID required. Check out Pit Stop by High Society today!"</p>
+  </div>
+
+  <h4>What changed (vs current)</h4>
+  <ul>
+    <li>Added "and the Lansing metro — 20 minutes from downtown Lansing, off I-69" (metro adjacency + corridor)</li>
+    <li>Added adjacent-town list (Eaton Rapids, Olivet, Dimondale, Potterville)</li>
+    <li>Added "Open daily 9 AM – 9 PM. 21+ ID required." (compliance)</li>
+    <li>Kept everything else verbatim — the brand list, the trust framing, the Pit Stop closer</li>
+  </ul>
+</section>
+
+<section>
+  <div class="section-header">
+    <div class="section-num">PILLAR 02</div>
+    <h2><span class="pillar-num">2</span>Weedmaps Profile Rebuild · The Big P0</h2>
+  </div>
+  <p class="lede">28 Weedmaps reviews vs 1,067 Google reviews is a 38× ratio (vs chain average ~3×). Charlotte's Weedmaps is severely under-fed. May's biggest individual-store opportunity is closing this gap.</p>
+
+  <h3>Weedmaps audit checklist</h3>
+  <ol>
+    <li><b>Profile completeness:</b> banner, logo (high-res, license # visible), hours match GBP exactly, NAP exact-match (515 Lansing St)</li>
+    <li><b>Photos:</b> ≥20 across categories (interior, exterior, products, team) — currently likely &lt;5 given the under-development</li>
+    <li><b>Description copy:</b> use the new GBP description (Pillar 01) — Weedmaps allows ~750 chars</li>
+    <li><b>Deals:</b> ≥3 active deals at all times, mirroring Charlotte's GBP cadence</li>
+    <li><b>Menu sync:</b> verify Sweed/Dutchie POS → Weedmaps integration is firing within 24 hrs of POS update. If broken, this alone explains the under-development.</li>
+    <li><b>Review acquisition:</b> add Weedmaps to the post-purchase review-request flow — receipt insert + AIQ post-visit campaign should include "Leave us a review on Weedmaps too!"</li>
+    <li><b>Existing review responses:</b> respond to all 28 existing Weedmaps reviews within 48 hrs (chain-wide standard)</li>
+  </ol>
+
+  <h3>Why Charlotte's Weedmaps under-development matters</h3>
+  <p>In Michigan, Weedmaps is the #1 cannabis-vertical discovery platform. A 28-review profile vs. 489 at Birch Run means Charlotte is essentially invisible in Weedmaps' Charlotte-area discovery layer. Closing the gap to ~150 reviews over 6 months would add an estimated 200-400 incremental visits/month from Weedmaps direct traffic.</p>
+</section>
+
+<section>
+  <div class="section-header">
+    <div class="section-num">PILLAR 03</div>
+    <h2><span class="pillar-num">3</span>GBP Attribute &amp; Category Optimization</h2>
+  </div>
+
+  <h3>Fix 3a · Secondary category swap (chain Week 3)</h3>
+  <p>Charlotte is recommended for Week 3 of the chain stagger (paired with East Lansing). Drop Vit&amp;Supp + Glassware; add Marijuana dispensary + Herb shop.</p>
+
+  <h3>Fix 3b · Service area expansion</h3>
+  <ul>
+    <li>Add: Eaton Rapids, MI 48827</li>
+    <li>Add: Olivet, MI 49076</li>
+    <li>Add: Dimondale, MI 48821</li>
+    <li>Add: Potterville, MI 48876</li>
+    <li>Add: Lansing-area ZIPs (48910, 48911, 48912 — adjacent metro)</li>
+    <li>Add: "Eaton County" + "I-69 corridor" descriptors</li>
+  </ul>
+
+  <h3>Fix 3c · Order link redirect</h3>
+  <p>Chain-wide pattern. Dev fix → <code>highsocietydispo.com/shop/charlotte</code>.</p>
+</section>
+
+<section>
+  <div class="section-header">
+    <div class="section-num">PILLAR 04</div>
+    <h2><span class="pillar-num">4</span>Hyperlocal Pages — Lansing Metro Pilot</h2>
+  </div>
+  <p>Charlotte's competitive set is Lansing-anchored (JARS Lansing × 2 + Fuel 420 + Homegrown). The Lansing metro is the natural extension. Pilot 1 hyperlocal page; if it ranks, replicate to Eaton Rapids + Olivet in June.</p>
+
+  <table>
+    <tr><th>Element</th><th>Spec</th></tr>
+    <tr><td>URL slug</td><td><code>/shop/charlotte/lansing-area-dispensary/</code></td></tr>
+    <tr><td>H1</td><td>"Lansing Area Cannabis Dispensary — High Society Charlotte (20 min SW)"</td></tr>
+    <tr><td>Target queries</td><td>"dispensary near lansing", "cannabis lansing metro", "weed dispensary charlotte mi"</td></tr>
+    <tr><td>Schema</td><td>LocalBusiness w/ areaServed=Lansing · FAQPage · HowTo (driving directions from downtown Lansing / MSU)</td></tr>
+    <tr><td>Photos</td><td>Real Charlotte storefront — including the PIT STOP banner visible (storefront brand asset is uniquely Charlotte's)</td></tr>
+  </table>
+</section>
+
+<section>
+  <div class="section-header">
+    <div class="section-num">PILLAR 05</div>
+    <h2><span class="pillar-num">5</span>Foundation Layer · Charlotte-specific</h2>
+  </div>
+
+  <div class="confidence-matrix">
+    <div class="conf-row head"><div class="seq">FND</div><div class="name">Lever</div><div class="target">Method</div><div>Priority</div></div>
+    <div class="conf-row"><div class="seq">F-05</div><div class="name">Weedmaps profile rebuild — covered in Pillar 02 — P0 elevated</div><div class="target">Manual platform audit + Sweed integration</div><div><span class="pill high">P0</span></div></div>
+    <div class="conf-row"><div class="seq">F-09</div><div class="name">Knowledge Panel claim + sameAs (Charlotte has the chain's strongest review-based entity eligibility)</div><div class="target">Manual SERP capture + KP claim flow</div><div><span class="pill high">P0</span></div></div>
+    <div class="conf-row"><div class="seq">F-10</div><div class="name">Backlink baseline + Lansing-area outreach (Lansing State Journal, City Pulse, MSU campus paper)</div><div class="target">Ahrefs · local press prospecting</div><div><span class="pill med">P1</span></div></div>
+    <div class="conf-row"><div class="seq">F-13</div><div class="name">CWV field-data baseline</div><div class="target">PageSpeed Insights (CrUX field)</div><div><span class="pill med">P1</span></div></div>
+    <div class="conf-row"><div class="seq">F-14</div><div class="name">Foundation infrastructure audit — Charlotte's high-AIQ-velocity environment makes attribution accuracy critical</div><div class="target">Console audit + Looker dashboard</div><div><span class="pill high">P0</span></div></div>
+  </div>
+</section>
+
+<section>
+  <div class="section-header">
+    <div class="section-num">06</div>
+    <h2>Risk Register</h2>
+  </div>
+
+  <table>
+    <tr><th>Risk</th><th>Mitigation</th></tr>
+    <tr><td><b>R1.</b> Touching Charlotte's review-acquisition machine breaks the velocity advantage.</td><td>Don't change the existing flow before diagnostic is complete. Light description edit + add-Weedmaps-to-flow are additive, not replacement.</td></tr>
+    <tr><td><b>R2.</b> Diagnostic concludes Charlotte's velocity is purely demographic (H3 wins) — gap is structural and not replicable.</td><td>Still valuable answer. Sets the chain's review-velocity ceiling expectations + reframes the other stores' targets as small-market-realistic.</td></tr>
+    <tr><td><b>R3.</b> Weedmaps menu sync is broken upstream (Sweed config issue) — fix requires Sweed engineering coordination.</td><td>Open Sweed support case in Week 1. If unresolvable in May, document the gap + request Sweed roadmap commitment.</td></tr>
+    <tr><td><b>R4.</b> Description edit triggers Google to reduce confidence in the entity (rare but possible after major change to a high-performing listing).</td><td>Light edit only — keep brand list + trust framing + Pit Stop closer intact. Monitor rank for 2 weeks post-edit.</td></tr>
+  </table>
+</section>
+
+<section>
+  <div class="section-header">
+    <div class="section-num">07</div>
+    <h2>May at a Glance</h2>
+  </div>
+
+  <table>
+    <tr><th>Date</th><th>Deliverable</th><th>Owner</th></tr>
+    <tr><td>May 5</td><td>Review-velocity diagnostic kickoff — interview Charlotte GM, audit AIQ + checkout flow vs other stores</td><td>SEO + Account Lead</td></tr>
+    <tr><td>May 7</td><td>Description light edit drafted + submitted for client approval</td><td>Content + Account Lead</td></tr>
+    <tr><td>May 8</td><td>New description live</td><td>GBP / Local Listings</td></tr>
+    <tr><td>May 14</td><td>Review-velocity diagnostic complete — driver identified + replicability assessed</td><td>SEO + Account Lead</td></tr>
+    <tr><td>May 15</td><td>Service area expansion live</td><td>GBP / Local Listings</td></tr>
+    <tr><td>May 19</td><td>Weedmaps profile rebuild complete · Secondary category swap (chain Week 3)</td><td>GBP / Local Listings</td></tr>
+    <tr><td>May 21</td><td>KP claim submitted · sameAs schema deployed</td><td>Dev + SEO</td></tr>
+    <tr><td>May 23</td><td>F-14 infrastructure audit complete</td><td>SEO / Analytics</td></tr>
+    <tr><td>May 26</td><td>Lansing-area hyperlocal page live</td><td>Content + Dev</td></tr>
+    <tr><td>May 28</td><td>3 outreach pitches (Lansing State Journal · City Pulse · MSU Independent)</td><td>SEO + Account Lead</td></tr>
+    <tr><td><b>May 31</b></td><td>Local Falcon scan · KPIs assessed · Velocity check (≥100/mo target)</td><td>SEO / Analytics</td></tr>
+  </table>
+</section>
+
+<section>
+  <div class="section-header">
+    <div class="section-num">08</div>
+    <h2>What We Need From High Society</h2>
+  </div>
+
+  <div class="ask">
+    <div class="num">Ask 01 · Charlotte GM interview access (P0 May 5)</div>
+    <div class="text">15-min call with Charlotte's GM to discuss: checkout review-prompt script · staff tenure · post-purchase flow · any active review-incentive campaigns. The diagnostic depends on this access.</div>
+  </div>
+  <div class="ask">
+    <div class="num">Ask 02 · Description approval (P0 May 7)</div>
+    <div class="text">Light edit only. Approve or flag specific phrasing concerns.</div>
+  </div>
+  <div class="ask">
+    <div class="num">Ask 03 · Sweed POS access for Weedmaps menu-sync verification (P0 May 12)</div>
+    <div class="text">Read-access to Sweed reporting at Charlotte. Need to confirm whether the under-development is a sync failure or a profile-fields-not-set issue.</div>
+  </div>
+  <div class="ask">
+    <div class="num">Ask 04 · "Pit Stop by High Society" clarification (P1 May 14)</div>
+    <div class="text">Charlotte has visible Pit Stop window banners. Is Pit Stop a sub-brand, loyalty program, or in-store concept? Same chain-wide ask but Charlotte is the visual evidence point — answering here informs every store's description framing.</div>
+  </div>
+  <div class="ask">
+    <div class="num">Ask 05 · POS data segmentation for Charlotte (P1 May 14)</div>
+    <div class="text">For the diagnostic: customer-mix metrics (repeat-customer rate, average visit frequency, AVO distribution, demographic segmentation if available). Helps test H3 vs the operational hypotheses.</div>
+  </div>
+</section>
+
+<div class="footer">
+  Prepared by Dispenza Dispensary Marketing · May 2026 Strategy · High Society Charlotte · Evidence-Tiered<br/>
+  Whitespark 2026 LSRF · BrightLocal · Citation Building Group · Cannabis Creative · Lifted Digital<br/>
+  Cross-referenced with chain-wide POS+GBP master · Local Falcon Apr 3 baseline · AIQ messaging cadence calendar<br/>
+  Questions or edits — Darrell is the point of contact.
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>High Society East Lansing — May 2026 Local SEO Strategy</title>
+<style>
+  :root { --purple-900: #2E1A47; --purple-700: #5B2A86; --purple-500: #7B3FA8; --purple-100: #F3E8FB; --pink-500: #D63384; --gold: #F4B942; --gold-light: #FFF4D6; --green: #2BA84A; --green-100: #E6F6EA; --red: #D64545; --red-100: #FFE8E8; --amber: #E8870C; --amber-100: #FFF1DD; --gray-900: #1F2937; --gray-700: #4B5563; --gray-500: #6B7280; --gray-300: #D1D5DB; --gray-100: #F3F4F6; --gray-50: #F9FAFB; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; color: var(--gray-900); background: var(--gray-50); line-height: 1.6; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 32px 80px; }
+  .cover { background: linear-gradient(135deg, var(--purple-900) 0%, var(--purple-700) 60%, var(--pink-500) 100%); color: #fff; padding: 80px 32px 100px; margin-bottom: 48px; border-bottom: 6px solid var(--gold); }
+  .cover-inner { max-width: 1100px; margin: 0 auto; }
+  .cover .eyebrow { text-transform: uppercase; letter-spacing: 3px; font-size: 14px; font-weight: 600; opacity: 0.85; margin-bottom: 16px; }
+  .cover h1 { font-size: 50px; line-height: 1.1; margin: 0 0 20px; font-weight: 800; }
+  .cover h1 span { color: var(--gold); }
+  .cover .subtitle { font-size: 21px; opacity: 0.92; max-width: 780px; margin: 0 0 28px; }
+  .cover .stamp { display: inline-block; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.35); padding: 10px 18px; border-radius: 999px; font-size: 13px; text-transform: uppercase; letter-spacing: 2px; font-weight: 700; margin-bottom: 36px; }
+  .cover .stamp .dot { color: var(--gold); margin-right: 8px; }
+  .cover-meta { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; padding-top: 28px; border-top: 1px solid rgba(255,255,255,0.25); }
+  .cover-meta div .label { font-size: 12px; text-transform: uppercase; letter-spacing: 2px; opacity: 0.7; }
+  .cover-meta div .value { font-size: 16px; font-weight: 600; margin-top: 4px; }
+  section { margin-bottom: 56px; }
+  .section-header { display: flex; align-items: baseline; gap: 16px; margin-bottom: 8px; }
+  .section-num { font-size: 14px; font-weight: 700; color: var(--pink-500); letter-spacing: 3px; }
+  h2 { font-size: 34px; line-height: 1.2; color: var(--purple-900); margin: 0 0 8px; font-weight: 700; }
+  h3 { font-size: 22px; color: var(--purple-700); margin: 28px 0 12px; }
+  h4 { font-size: 17px; color: var(--gray-900); margin: 20px 0 8px; font-weight: 700; }
+  .lede { font-size: 18px; color: var(--gray-700); max-width: 880px; margin-bottom: 20px; }
+  .card { background: #fff; border: 1px solid var(--gray-300); border-radius: 12px; padding: 24px 28px; margin: 16px 0; }
+  .card.purple { background: var(--purple-100); border-color: var(--purple-500); }
+  .card.alert { background: var(--gold-light); border-left: 5px solid var(--gold); }
+  .card.proof { background: #F8FAFF; border: 1px solid var(--purple-500); border-left: 6px solid var(--purple-700); }
+  .card.proof .label { font-size: 11px; font-weight: 800; color: var(--purple-700); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 10px; }
+  .strategic-bet { background: var(--purple-900); color: #fff; padding: 40px; border-radius: 16px; text-align: center; margin: 24px 0 40px; }
+  .strategic-bet .label { text-transform: uppercase; letter-spacing: 4px; font-size: 13px; color: var(--gold); margin-bottom: 16px; font-weight: 700; }
+  .strategic-bet blockquote { font-size: 26px; line-height: 1.3; margin: 0; font-weight: 600; }
+  .strategic-bet blockquote em { color: var(--gold); font-style: normal; }
+  table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.05); margin: 16px 0 24px; }
+  th { background: var(--purple-700); color: #fff; text-align: left; padding: 12px 14px; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; }
+  td { padding: 12px 14px; border-bottom: 1px solid var(--gray-100); font-size: 14.5px; vertical-align: top; }
+  tr:last-child td { border-bottom: none; } tr:nth-child(even) td { background: var(--gray-50); }
+  .pill { display: inline-block; padding: 4px 12px; border-radius: 999px; font-size: 11px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; }
+  .pill.high { background: var(--green-100); color: var(--green); }
+  .pill.med { background: var(--amber-100); color: var(--amber); }
+  .pill.stretch { background: var(--red-100); color: var(--red); }
+  .pill.same-day { background: var(--red); color: #fff; }
+  .trend-box { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 16px 0; }
+  .trend-tile { background: #fff; border-radius: 12px; padding: 20px; border: 1px solid var(--gray-300); }
+  .trend-tile .num { font-size: 28px; font-weight: 800; color: var(--purple-700); line-height: 1; }
+  .trend-tile .label { font-size: 12px; color: var(--gray-700); margin-top: 8px; text-transform: uppercase; letter-spacing: 1px; }
+  .trend-tile .sub { font-size: 12px; color: var(--gray-500); margin-top: 4px; }
+  .pillar-num { display: inline-block; background: var(--gold); color: var(--purple-900); width: 36px; height: 36px; border-radius: 50%; text-align: center; line-height: 36px; font-weight: 800; margin-right: 12px; }
+  .confidence-matrix { background: #fff; border: 1px solid var(--gray-300); border-radius: 12px; margin: 20px 0 32px; overflow: hidden; }
+  .conf-row { display: grid; grid-template-columns: 60px 1fr 240px 140px; align-items: center; padding: 14px 22px; border-bottom: 1px solid var(--gray-100); gap: 14px; }
+  .conf-row:last-child { border-bottom: none; }
+  .conf-row.head { background: var(--purple-700); color: #fff; font-size: 12px; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; }
+  .conf-row .seq { font-weight: 800; font-size: 16px; color: var(--purple-700); font-variant-numeric: tabular-nums; }
+  .conf-row.head .seq { color: #fff; }
+  .conf-row .name { font-weight: 600; color: var(--gray-900); font-size: 14px; }
+  .conf-row .target { font-variant-numeric: tabular-nums; color: var(--gray-700); font-size: 13px; }
+  .ask { background: var(--purple-100); border-left: 5px solid var(--purple-700); padding: 16px 20px; margin: 12px 0; border-radius: 4px; }
+  .ask .num { font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; color: var(--purple-700); margin-bottom: 6px; }
+  .ask .text { font-size: 14.5px; line-height: 1.5; }
+  .footer { text-align: center; padding: 36px 0 0; color: var(--gray-500); font-size: 13px; line-height: 1.7; border-top: 1px solid var(--gray-300); margin-top: 60px; }
+  ul li, ol li { margin: 4px 0; }
+  code { background: var(--purple-100); color: var(--purple-900); padding: 1px 6px; border-radius: 4px; font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 0.9em; }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="cover-inner">
+    <div class="eyebrow">High Society · May 2026 Local SEO Strategy</div>
+    <h1>East Lansing:<br/>Diagnose the <span>5-min visit anomaly</span> + lean into MSU</h1>
+    <div class="subtitle">East Lansing has the chain's <em>only operational anomaly</em> — customers spend 5 minutes per visit (every other chain store: 10 min). This signals an unidentified efficiency advantage worth replicating chain-wide. May's job: diagnose it. Plus: surface MSU adjacency in copy, fix the Rd/Road NAP drift, and add the missing "No delivery" attribute.</div>
+    <div class="stamp"><span class="dot">●</span> Evidence-Backed · Whitespark 2026 LSRF</div>
+    <div class="cover-meta">
+      <div><div class="label">Period</div><div class="value">May 1 – May 31, 2026</div></div>
+      <div><div class="label">Account Lead</div><div class="value">Darrell · Dispenza</div></div>
+      <div><div class="label">Final Measurement</div><div class="value">Local Falcon scan · May 31</div></div>
+      <div><div class="label">Store Opening</div><div class="value">December 22, 2023 (~17 mo)</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+<section>
+  <div class="section-header"><div class="section-num">EXECUTIVE PROOF</div><h2>Why this plan will hit its KPIs</h2></div>
+  <p class="lede">East Lansing is the chain's most operationally interesting store — strong reviews (4.9★/835 Google + 4.8★/155 Weedmaps), university-adjacent demographic (MSU ~3 mi south), and the chain's <em>only 5-minute typical visit</em> in a chain that otherwise averages 10. The May plan diagnoses that advantage, surfaces MSU in copy, and closes housekeeping gaps.</p>
+
+  <div class="card proof">
+    <div class="label">Proof point #1 · 5-min visit time = operational leading indicator</div>
+    <p style="margin:0;">Every other chain store: 10-min typical visit. East Lansing: 5 min. Half the time. This signals (1) heavy app/online pre-order use, (2) different menu architecture, (3) MSU student demographic moving fast between classes, or (4) high-velocity POS. <b>Diagnosing the driver is worth more than any other May tactic.</b></p>
+  </div>
+
+  <div class="card proof">
+    <div class="label">Proof point #2 · MSU adjacency — biggest unleveraged signal</div>
+    <p style="margin:0;">Michigan State University ~3 mi south. ~50,000 students = primary cannabis demographic. Description: 0 references. Adding "MSU" + "East Lansing's main campus thoroughfare on Merritt Rd" + university-cohort phrasing is a low-effort high-leverage rewrite.</p>
+  </div>
+
+  <div class="card proof">
+    <div class="label">Proof point #3 · Already best-instrumented chain store</div>
+    <p style="margin:0;">East Lansing is the only chain store with: (1) multi-area service coverage (Lansing + East Lansing) + (2) Planning attribute set ("Appointment not required") + (3) explicit "Free parking lot" Google attribute. May extends this discipline chain-wide; East Lansing is the precedent.</p>
+  </div>
+
+  <h3>What we're committing to</h3>
+  <div class="confidence-matrix">
+    <div class="conf-row head"><div class="seq">#</div><div class="name">KPI</div><div class="target">Target</div><div>Confidence</div></div>
+    <div class="conf-row"><div class="seq">1</div><div class="name">5-min visit-time diagnostic — identify driver + assess chain replicability</div><div class="target">Complete by May 14</div><div><span class="pill high">High</span></div></div>
+    <div class="conf-row"><div class="seq">2</div><div class="name">Fix Rd/Road NAP drift between KP and internal listing</div><div class="target">By May 5</div><div><span class="pill same-day">Same-day</span></div></div>
+    <div class="conf-row"><div class="seq">3</div><div class="name">Add missing "No delivery" service-option attribute</div><div class="target">By May 5</div><div><span class="pill same-day">Same-day</span></div></div>
+    <div class="conf-row"><div class="seq">4</div><div class="name">Description rewrite — MSU adjacency + Lansing metro core + Charlotte template</div><div class="target">Live by May 8</div><div><span class="pill high">High</span></div></div>
+    <div class="conf-row"><div class="seq">5</div><div class="name">Secondary category swap (chain Week 3)</div><div class="target">Live by May 19</div><div><span class="pill high">High</span></div></div>
+    <div class="conf-row"><div class="seq">6</div><div class="name">AIQ campaign timing recalibration — fire faster than chain default to fit 5-min window</div><div class="target">A/B test 5-min vs 10-min trigger by May 21</div><div><span class="pill med">Moderate</span></div></div>
+    <div class="conf-row"><div class="seq">7</div><div class="name">MSU-area hyperlocal page pilot</div><div class="target">/msu-area-dispensary live by May 26</div><div><span class="pill med">Moderate</span></div></div>
+    <div class="conf-row"><div class="seq">8</div><div class="name">KP claim + sameAs schema</div><div class="target">By May 21</div><div><span class="pill high">High</span></div></div>
+    <div class="conf-row"><div class="seq">9</div><div class="name">Discovery searches MoM</div><div class="target">+5% to +10%</div><div><span class="pill med">Moderate</span></div></div>
+  </div>
+</section>
+
+<section>
+  <div class="section-header"><div class="section-num">01</div><h2>Where We Stand</h2></div>
+
+  <div class="trend-box">
+    <div class="trend-tile"><div class="num">835</div><div class="label">Google reviews</div><div class="sub">4.9★ · ~49/mo velocity</div></div>
+    <div class="trend-tile"><div class="num">155</div><div class="label">Weedmaps reviews</div><div class="sub">4.8★ · solid</div></div>
+    <div class="trend-tile"><div class="num">5 min</div><div class="label">Typical visit</div><div class="sub">🚨 chain anomaly (others = 10)</div></div>
+    <div class="trend-tile"><div class="num">~17 mo</div><div class="label">Operating since</div><div class="sub">Dec 22, 2023</div></div>
+  </div>
+
+  <h3>What's already correct (precedents for chain rollout)</h3>
+  <table>
+    <tr><th>Element</th><th>State</th></tr>
+    <tr><td>Primary GBP category</td><td>"Cannabis store" ✅</td></tr>
+    <tr><td>Multi-area service coverage</td><td>✅ Lansing + East Lansing — only chain store with multi-area; chain-rollout candidate</td></tr>
+    <tr><td>Planning attribute</td><td>✅ "Appointment not required" — only chain store with this set; chain-rollout candidate</td></tr>
+    <tr><td>Parking attribute</td><td>"Free parking lot" ✅ explicit — proves Google reads on-site reality</td></tr>
+    <tr><td>UTM-tagged GBP link</td><td><code>?utm_source=gmb-east-lansing&amp;utm_campaign=dispenza</code> ✅</td></tr>
+    <tr><td>Description format</td><td>"Supercenter" + Pit Stop closer ✅</td></tr>
+    <tr><td>Both FB + IG visible</td><td>FB id=61554188635254 + IG ✅</td></tr>
+    <tr><td>Service options · accessibility · payments</td><td>Mostly chain set ✅ (except missing "No delivery")</td></tr>
+  </table>
+
+  <h3>What's broken / underleveraged</h3>
+  <table>
+    <tr><th>Gap</th><th>State</th><th>Fix</th></tr>
+    <tr><td>🚨 5-min visit time — driver unidentified</td><td>Operational leading indicator; could be chain-replicable</td><td><span class="pill high">P0 diagnose by May 14</span></td></tr>
+    <tr><td>NAP drift: KP "Rd" vs internal "Road"</td><td>Char-level mismatch — exactly the kind of drift that suppresses the +23% NAP rank lift</td><td><span class="pill same-day">Same-day fix</span></td></tr>
+    <tr><td>Missing "No delivery" attribute</td><td>Chain-pattern at older stores; missing at the 3 newer stores (East Lansing, Lenox, Mt Pleasant)</td><td><span class="pill same-day">Same-day add</span></td></tr>
+    <tr><td>Description: MSU adjacency</td><td>0 references — biggest unleveraged signal</td><td><span class="pill high">P0 May 8</span></td></tr>
+    <tr><td>Description: Lansing metro core position</td><td>0 references</td><td><span class="pill high">P0 May 8</span></td></tr>
+    <tr><td>Description: Costco Wholesale + Frandor / Lake Lansing retail corridor</td><td>0 references — high-foot-traffic neighbor signals</td><td><span class="pill med">P1 May 8</span></td></tr>
+    <tr><td>Secondary categories</td><td>Chain template — needs swap</td><td><span class="pill high">P0 May 19 (Week 3)</span></td></tr>
+    <tr><td>AIQ post-visit campaign timing</td><td>Standard 10-min window misses East Lansing's 5-min visit profile</td><td><span class="pill med">P1 test by May 21</span></td></tr>
+  </table>
+</section>
+
+<section>
+  <div class="section-header"><div class="section-num">02</div><h2>The Strategic Bet for May</h2></div>
+
+  <div class="strategic-bet">
+    <div class="label">May 2026 Strategic Bet</div>
+    <blockquote>East Lansing is doing something <em>different and faster</em>. Diagnose what. Surface MSU adjacency in copy. Fix the small-but-real housekeeping (NAP drift + No-delivery attribute). Test AIQ timing tightening to match the 5-min window. <em>Don't break what's already efficient.</em></blockquote>
+  </div>
+</section>
+
+<section>
+  <div class="section-header"><div class="section-num">PILLAR 01</div><h2><span class="pillar-num">1</span>Description Rewrite + NAP Drift Fix</h2></div>
+
+  <h3>NAP drift fix (same-day)</h3>
+  <p>KP shows "2040 Merritt <b>Rd</b>" while internal Location tab shows "2040 Merritt <b>Road</b>." Pick one canonical (recommend "Road" full-spelled-out — matches Google's preferred long-form for local listings). Update to match across: GBP internal Location tab + Weedmaps + Leafly + Yelp + BBB + Bing + Apple Maps + Foursquare + website footer schema.</p>
+
+  <h3>Master copy — paste verbatim into GBP description</h3>
+  <div class="card purple">
+    <p style="margin:0; font-size:15px; line-height:1.6;">"High Society Cannabis Supercenter East Lansing is the trusted cannabis dispensary serving the Lansing metro and Michigan State University area — on Merritt Road, just minutes from MSU campus and adjacent to Costco Wholesale on the Lake Lansing retail corridor. We carry the full premium menu: MI Jane flower, Uncle Arnie's cannabis-infused beverages, Choice Labs edibles, Jeeter pre-rolls, plus our in-house High Society line of premium flower and pre-rolls. With 4.9-star reviews across 800+ Google + 150+ Weedmaps verified visits, we're proudly serving East Lansing, Lansing, Okemos, Haslett, Meridian Township, Bath, and DeWitt. Open daily 9 AM – 9 PM. 21+ ID required. Check out Pit Stop by High Society today!"</p>
+  </div>
+
+  <h4>Why it works</h4>
+  <ul>
+    <li>"Trusted cannabis dispensary serving the Lansing metro and Michigan State University area" — front-loads metro positioning + MSU (the demographic anchor)</li>
+    <li>"On Merritt Road, just minutes from MSU campus" — concrete proximity claim</li>
+    <li>"Adjacent to Costco Wholesale on the Lake Lansing retail corridor" — high-foot-traffic complementary retail anchor</li>
+    <li>Charlotte-format brand list</li>
+    <li>Adjacent-town enumeration: East Lansing, Lansing, Okemos, Haslett, Meridian Township, Bath, DeWitt</li>
+    <li>21+ + Pit Stop closer retained</li>
+  </ul>
+</section>
+
+<section>
+  <div class="section-header"><div class="section-num">PILLAR 02</div><h2><span class="pillar-num">2</span>The 5-Minute Visit Diagnostic</h2></div>
+  <p class="lede">Same diagnostic framework as Charlotte's review-velocity work — different question. East Lansing customers complete their visit in half the chain-standard time. Why?</p>
+
+  <table>
+    <tr><th>Hypothesis</th><th>Test</th></tr>
+    <tr><td><b>H1:</b> Heavy app / online pre-order — customers walk in to pick up, not browse</td><td>POS data — what % of East Lansing transactions originate via online order vs in-store-walk-in?</td></tr>
+    <tr><td><b>H2:</b> Different menu architecture — perhaps East Lansing has cleaner Dutchie/Sweed integration that supports faster decision-making</td><td>Audit menu rendering at East Lansing vs Big Rapids. Is the in-store digital menu / kiosk different?</td></tr>
+    <tr><td><b>H3:</b> MSU student demographic moving between classes — fast-cycle, decisive shoppers</td><td>POS data — repeat-customer rate + visit-frequency distribution. If it skews more frequent / shorter, demographic is the driver.</td></tr>
+    <tr><td><b>H4:</b> High-velocity POS — checkout itself is faster (more registers, better-trained staff, different flow)</td><td>Observe checkout at East Lansing vs other store. Time the average transaction.</td></tr>
+    <tr><td><b>H5:</b> Different store layout — products laid out for fast browsing</td><td>Photo audit + GM interview.</td></tr>
+  </table>
+
+  <p>If H1 is the driver: <b>chain-replicable via online-pre-order push in AIQ + UX optimization</b>. If H2: replicable via menu integration audit. If H4: replicable via staff training + register count. If H3 alone: structural; not replicable but reframes chain expectations.</p>
+
+  <h3>Implication for AIQ campaign timing</h3>
+  <p>Standard chain default: post-visit AIQ campaign fires ~10 minutes after visit complete. At East Lansing's 5-minute visit profile, the customer is already gone before the SMS / push arrives. <b>Test 3-5 minute fire times</b> for East Lansing specifically — this is the single most-impactful AIQ adjustment for this store.</p>
+</section>
+
+<section>
+  <div class="section-header"><div class="section-num">PILLAR 03</div><h2><span class="pillar-num">3</span>GBP Attribute &amp; Category Optimization</h2></div>
+
+  <h3>Same-day fixes (May 5)</h3>
+  <ul>
+    <li><b>Add "No delivery"</b> service-option attribute (chain-pattern hygiene)</li>
+    <li><b>Fix "Rd"/"Road" NAP drift</b> — canonicalize to "Road"</li>
+  </ul>
+
+  <h3>Secondary category swap (chain Week 3)</h3>
+  <p>East Lansing is recommended for Week 3 (paired with Charlotte). Drop Vit&amp;Supp + Glassware; add Marijuana dispensary + Herb shop.</p>
+
+  <h3>Service area expansion (already best-practice — extend further)</h3>
+  <p>East Lansing is the only chain store with multi-area coverage already (Lansing + East Lansing). Add: Okemos (48864), Haslett (48840), Meridian Township, Bath (48808), DeWitt (48820), MSU campus environs.</p>
+</section>
+
+<section>
+  <div class="section-header"><div class="section-num">PILLAR 04</div><h2><span class="pillar-num">4</span>MSU-Area Hyperlocal Page Pilot</h2></div>
+
+  <table>
+    <tr><th>Element</th><th>Spec</th></tr>
+    <tr><td>URL slug</td><td><code>/shop/east-lansing/msu-area-dispensary/</code></td></tr>
+    <tr><td>H1</td><td>"Cannabis Dispensary Near MSU — High Society East Lansing Supercenter (3 min from campus)"</td></tr>
+    <tr><td>Target queries</td><td>"dispensary near msu", "cannabis east lansing msu", "weed near michigan state"</td></tr>
+    <tr><td>Schema</td><td>LocalBusiness w/ areaServed=MSU campus + East Lansing · FAQPage · HowTo (driving directions from campus)</td></tr>
+    <tr><td>21+ disclaimer</td><td>Mandatory + repeated near top + bottom of page given university-area context</td></tr>
+  </table>
+</section>
+
+<section>
+  <div class="section-header"><div class="section-num">PILLAR 05</div><h2><span class="pillar-num">5</span>Foundation Layer · East Lansing-specific</h2></div>
+
+  <div class="confidence-matrix">
+    <div class="conf-row head"><div class="seq">FND</div><div class="name">Lever</div><div class="target">Method</div><div>Priority</div></div>
+    <div class="conf-row"><div class="seq">F-02</div><div class="name">Sweed/Dutchie iframe → native menu architecture check (East Lansing's 5-min visit may indicate cleaner menu integration than other stores — diagnose chain-wide)</div><div class="target">Manual page audit + POS integration check</div><div><span class="pill high">P0</span></div></div>
+    <div class="conf-row"><div class="seq">F-03</div><div class="name">NAP exact-match audit — covered in Pillar 01 (Rd/Road fix)</div><div class="target">BrightLocal Citation Tracker</div><div><span class="pill high">P0</span></div></div>
+    <div class="conf-row"><div class="seq">F-08</div><div class="name">Internal linking — confirm East Lansing's site architecture is solid (5-min visit may be supported by clean web architecture too)</div><div class="target">Screaming Frog inlink audit</div><div><span class="pill med">P1</span></div></div>
+    <div class="conf-row"><div class="seq">F-09</div><div class="name">Knowledge Panel claim + sameAs schema</div><div class="target">Manual SERP capture · KP claim · sameAs JSON-LD</div><div><span class="pill high">P0</span></div></div>
+    <div class="conf-row"><div class="seq">F-10</div><div class="name">Backlink baseline + MSU partnership outreach (State News campus paper, ASMSU student associations, Greek life sponsorship)</div><div class="target">Ahrefs · campus prospecting</div><div><span class="pill med">P1</span></div></div>
+    <div class="conf-row"><div class="seq">F-13</div><div class="name">CWV field-data baseline (high-mobile-share university audience amplifies CWV impact)</div><div class="target">PageSpeed Insights (CrUX)</div><div><span class="pill med">P1</span></div></div>
+    <div class="conf-row"><div class="seq">F-14</div><div class="name">Foundation infrastructure audit + AIQ timing recalibration</div><div class="target">Console audit + Looker dashboard + AIQ A/B test</div><div><span class="pill high">P0</span></div></div>
+  </div>
+</section>
+
+<section>
+  <div class="section-header"><div class="section-num">06</div><h2>Risk Register</h2></div>
+
+  <table>
+    <tr><th>Risk</th><th>Mitigation</th></tr>
+    <tr><td><b>R1.</b> 5-min diagnostic concludes the driver is purely demographic (H3) — no chain-replicable lever.</td><td>Still valuable answer. Reframes chain ceiling expectations + protects East Lansing's structural advantage from being inadvertently disrupted.</td></tr>
+    <tr><td><b>R2.</b> AIQ timing test (5-min fire vs 10-min) shows no meaningful conversion lift.</td><td>Document + standardize on chain-default 10-min as the right window. The test itself has analytical value.</td></tr>
+    <tr><td><b>R3.</b> "Adjacent to Costco Wholesale" reference triggers Google's third-party-trademark concern.</td><td>Fact-based proximity description. If rejected, swap to "next to a major wholesale retailer."</td></tr>
+    <tr><td><b>R4.</b> MSU-area hyperlocal page perceived by Google as targeting university students (compliance risk in some interpretations).</td><td>21+ language repeated + age-gate enforced + no incentive content targeted at students. Standard cannabis-content compliance applies.</td></tr>
+  </table>
+</section>
+
+<section>
+  <div class="section-header"><div class="section-num">07</div><h2>May at a Glance</h2></div>
+
+  <table>
+    <tr><th>Date</th><th>Deliverable</th><th>Owner</th></tr>
+    <tr><td>May 5</td><td>NAP Rd→Road fix · Add "No delivery" attribute</td><td>GBP / Local Listings</td></tr>
+    <tr><td>May 5</td><td>5-min diagnostic kickoff — interview East Lansing GM, audit POS + AIQ flow</td><td>SEO + Account Lead</td></tr>
+    <tr><td>May 7</td><td>Description rewrite drafted</td><td>Content + Account Lead</td></tr>
+    <tr><td>May 8</td><td>New description live</td><td>GBP / Local Listings</td></tr>
+    <tr><td>May 14</td><td>5-min diagnostic complete — driver + replicability documented</td><td>SEO + Account Lead</td></tr>
+    <tr><td>May 15</td><td>Service area expansion live</td><td>GBP / Local Listings</td></tr>
+    <tr><td>May 19</td><td>Secondary category swap (chain Week 3)</td><td>GBP / Local Listings</td></tr>
+    <tr><td>May 21</td><td>KP claim · sameAs schema · AIQ 5-min/10-min A/B test launches</td><td>Dev + SEO + AIQ</td></tr>
+    <tr><td>May 23</td><td>F-14 infrastructure audit complete</td><td>SEO / Analytics</td></tr>
+    <tr><td>May 26</td><td>MSU-area hyperlocal page live</td><td>Content + Dev</td></tr>
+    <tr><td>May 28</td><td>3 outreach pitches (State News · MSU Vanguard · ASMSU sponsor liaison)</td><td>SEO + Account Lead</td></tr>
+    <tr><td><b>May 31</b></td><td>Local Falcon scan · KPIs assessed</td><td>SEO / Analytics</td></tr>
+  </table>
+</section>
+
+<section>
+  <div class="section-header"><div class="section-num">08</div><h2>What We Need From High Society</h2></div>
+
+  <div class="ask"><div class="num">Ask 01 · East Lansing GM interview access (P0 May 5)</div><div class="text">15-min call with East Lansing's GM for the 5-min visit diagnostic. Topics: checkout flow · POS / kiosk setup · staff tenure · in-store layout · online pre-order share.</div></div>
+  <div class="ask"><div class="num">Ask 02 · Description approval (P0 May 7)</div><div class="text">Approve Pillar 01 master copy or flag specific concerns (esp. "Costco Wholesale" reference + MSU framing).</div></div>
+  <div class="ask"><div class="num">Ask 03 · POS data for diagnostic (P0 May 12)</div><div class="text">East Lansing transaction breakdown: online-pre-order share · average transaction time · repeat-customer rate · AVO distribution. Helps test H1 vs H3.</div></div>
+  <div class="ask"><div class="num">Ask 04 · MSU partnership posture (P1 May 21)</div><div class="text">Open to State News (campus paper) ad / sponsored event? ASMSU partnership? Greek life sponsorship? All compliant via 21+ filtering. Backlink + brand-awareness opportunity.</div></div>
+  <div class="ask"><div class="num">Ask 05 · "Pit Stop by High Society" clarification (P1 May 14)</div><div class="text">Same chain-wide ask.</div></div>
+</section>
+
+<div class="footer">
+  Prepared by Dispenza Dispensary Marketing · May 2026 Strategy · High Society East Lansing · Evidence-Tiered<br/>
+  Whitespark 2026 LSRF · BrightLocal · Citation Building Group · Cannabis Creative · Lifted Digital<br/>
+  Cross-referenced with chain-wide POS+GBP master · Local Falcon Apr 3 baseline · AIQ messaging cadence calendar<br/>
+  Questions or edits — Darrell is the point of contact.
+</div>
+
+</div>
+</body>
+</html>

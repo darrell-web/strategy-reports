@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>High Society New Buffalo — May 2026 Local SEO Strategy</title>
+<style>
+  :root { --purple-900: #2E1A47; --purple-700: #5B2A86; --purple-500: #7B3FA8; --purple-100: #F3E8FB; --pink-500: #D63384; --gold: #F4B942; --gold-light: #FFF4D6; --green: #2BA84A; --green-100: #E6F6EA; --red: #D64545; --red-100: #FFE8E8; --amber: #E8870C; --amber-100: #FFF1DD; --gray-900: #1F2937; --gray-700: #4B5563; --gray-500: #6B7280; --gray-300: #D1D5DB; --gray-100: #F3F4F6; --gray-50: #F9FAFB; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; color: var(--gray-900); background: var(--gray-50); line-height: 1.6; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 32px 80px; }
+  .cover { background: linear-gradient(135deg, var(--purple-900) 0%, var(--purple-700) 60%, var(--pink-500) 100%); color: #fff; padding: 80px 32px 100px; margin-bottom: 48px; border-bottom: 6px solid var(--gold); }
+  .cover-inner { max-width: 1100px; margin: 0 auto; }
+  .cover .eyebrow { text-transform: uppercase; letter-spacing: 3px; font-size: 14px; font-weight: 600; opacity: 0.85; margin-bottom: 16px; }
+  .cover h1 { font-size: 50px; line-height: 1.1; margin: 0 0 20px; font-weight: 800; }
+  .cover h1 span { color: var(--gold); }
+  .cover .subtitle { font-size: 21px; opacity: 0.92; max-width: 780px; margin: 0 0 28px; }
+  .cover .stamp { display: inline-block; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.35); padding: 10px 18px; border-radius: 999px; font-size: 13px; text-transform: uppercase; letter-spacing: 2px; font-weight: 700; margin-bottom: 36px; }
+  .cover .stamp .dot { color: var(--gold); margin-right: 8px; }
+  .cover-meta { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; padding-top: 28px; border-top: 1px solid rgba(255,255,255,0.25); }
+  .cover-meta div .label { font-size: 12px; text-transform: uppercase; letter-spacing: 2px; opacity: 0.7; }
+  .cover-meta div .value { font-size: 16px; font-weight: 600; margin-top: 4px; }
+  section { margin-bottom: 56px; }
+  .section-header { display: flex; align-items: baseline; gap: 16px; margin-bottom: 8px; }
+  .section-num { font-size: 14px; font-weight: 700; color: var(--pink-500); letter-spacing: 3px; }
+  h2 { font-size: 34px; line-height: 1.2; color: var(--purple-900); margin: 0 0 8px; font-weight: 700; }
+  h3 { font-size: 22px; color: var(--purple-700); margin: 28px 0 12px; }
+  h4 { font-size: 17px; color: var(--gray-900); margin: 20px 0 8px; font-weight: 700; }
+  .lede { font-size: 18px; color: var(--gray-700); max-width: 880px; margin-bottom: 20px; }
+  .card { background: #fff; border: 1px solid var(--gray-300); border-radius: 12px; padding: 24px 28px; margin: 16px 0; }
+  .card.purple { background: var(--purple-100); border-color: var(--purple-500); }
+  .card.alert { background: var(--gold-light); border-left: 5px solid var(--gold); }
+  .card.proof { background: #F8FAFF; border: 1px solid var(--purple-500); border-left: 6px solid var(--purple-700); }
+  .card.proof .label { font-size: 11px; font-weight: 800; color: var(--purple-700); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 10px; }
+  .strategic-bet { background: var(--purple-900); color: #fff; padding: 40px; border-radius: 16px; text-align: center; margin: 24px 0 40px; }
+  .strategic-bet .label { text-transform: uppercase; letter-spacing: 4px; font-size: 13px; color: var(--gold); margin-bottom: 16px; font-weight: 700; }
+  .strategic-bet blockquote { font-size: 26px; line-height: 1.3; margin: 0; font-weight: 600; }
+  .strategic-bet blockquote em { color: var(--gold); font-style: normal; }
+  table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.05); margin: 16px 0 24px; }
+  th { background: var(--purple-700); color: #fff; text-align: left; padding: 12px 14px; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; }
+  td { padding: 12px 14px; border-bottom: 1px solid var(--gray-100); font-size: 14.5px; vertical-align: top; }
+  tr:last-child td { border-bottom: none; } tr:nth-child(even) td { background: var(--gray-50); }
+  .pill { display: inline-block; padding: 4px 12px; border-radius: 999px; font-size: 11px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; }
+  .pill.high { background: var(--green-100); color: var(--green); }
+  .pill.med { background: var(--amber-100); color: var(--amber); }
+  .pill.stretch { background: var(--red-100); color: var(--red); }
+  .pill.same-day { background: var(--red); color: #fff; }
+  .trend-box { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 16px 0; }
+  .trend-tile { background: #fff; border-radius: 12px; padding: 20px; border: 1px solid var(--gray-300); }
+  .trend-tile .num { font-size: 28px; font-weight: 800; color: var(--purple-700); line-height: 1; }
+  .trend-tile .label { font-size: 12px; color: var(--gray-700); margin-top: 8px; text-transform: uppercase; letter-spacing: 1px; }
+  .trend-tile .sub { font-size: 12px; color: var(--gray-500); margin-top: 4px; }
+  .pillar-num { display: inline-block; background: var(--gold); color: var(--purple-900); width: 36px; height: 36px; border-radius: 50%; text-align: center; line-height: 36px; font-weight: 800; margin-right: 12px; }
+  .confidence-matrix { background: #fff; border: 1px solid var(--gray-300); border-radius: 12px; margin: 20px 0 32px; overflow: hidden; }
+  .conf-row { display: grid; grid-template-columns: 60px 1fr 240px 140px; align-items: center; padding: 14px 22px; border-bottom: 1px solid var(--gray-100); gap: 14px; }
+  .conf-row:last-child { border-bottom: none; }
+  .conf-row.head { background: var(--purple-700); color: #fff; font-size: 12px; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; }
+  .conf-row .seq { font-weight: 800; font-size: 16px; color: var(--purple-700); font-variant-numeric: tabular-nums; }
+  .conf-row.head .seq { color: #fff; }
+  .conf-row .name { font-weight: 600; color: var(--gray-900); font-size: 14px; }
+  .conf-row .target { font-variant-numeric: tabular-nums; color: var(--gray-700); font-size: 13px; }
+  .ask { background: var(--purple-100); border-left: 5px solid var(--purple-700); padding: 16px 20px; margin: 12px 0; border-radius: 4px; }
+  .ask .num { font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; color: var(--purple-700); margin-bottom: 6px; }
+  .ask .text { font-size: 14.5px; line-height: 1.5; }
+  .footer { text-align: center; padding: 36px 0 0; color: var(--gray-500); font-size: 13px; line-height: 1.7; border-top: 1px solid var(--gray-300); margin-top: 60px; }
+  ul li, ol li { margin: 4px 0; }
+  code { background: var(--purple-100); color: var(--purple-900); padding: 1px 6px; border-radius: 4px; font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 0.9em; }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="cover-inner">
+    <div class="eyebrow">High Society · May 2026 Local SEO Strategy</div>
+    <h1>New Buffalo:<br/>Defend the AIQ <span>flagship</span> + expand Wisconsin V2</h1>
+    <div class="subtitle">New Buffalo is the chain's <em>youngest store and AIQ flagship</em> — opened Aug 2025, gets the highest May 2026 push frequency (29 mentions, ~25% of all chain pushes), runs $150-min wallet drops for IL/IN cross-border traffic, and already has the chain's strongest description (luxury / Lake Michigan / Big Dawg house brand). May's job: <em>defend the working machine</em>, expand cross-border to Wisconsin, and lock in attribution accuracy as POS data accumulates.</div>
+    <div class="stamp"><span class="dot">●</span> Evidence-Backed · Whitespark 2026 LSRF</div>
+    <div class="cover-meta">
+      <div><div class="label">Period</div><div class="value">May 1 – May 31, 2026</div></div>
+      <div><div class="label">Account Lead</div><div class="value">Darrell · Dispenza</div></div>
+      <div><div class="label">Final Measurement</div><div class="value">Local Falcon scan · May 31</div></div>
+      <div><div class="label">Store Opening</div><div class="value">August 1, 2025 (~9 mo · newest in chain)</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+<section>
+  <div class="section-header"><div class="section-num">EXECUTIVE PROOF</div><h2>Why this plan will hit its KPIs</h2></div>
+  <p class="lede">New Buffalo is doing nearly everything right — strong description (chain's most distinctive — "luxury meets accessibility" + Lake Michigan shoreline + Big Dawg house brand), aggressive AIQ flagship cadence, sophisticated V2 audience uploads (IL + IN), 10-city service area already enumerated, full attribute set populated. May is largely <em>defensive</em> — protect what's working — and offensive on one axis: extend the V2 cross-border model to Wisconsin.</p>
+
+  <div class="card proof">
+    <div class="label">Proof point #1 · AIQ flagship cadence (29 May 26 pushes)</div>
+    <p style="margin:0;">New Buffalo gets the chain's most aggressive AIQ outreach: weekly $150-min spend wallet drops (IL/IN audience) · 2nd-visit reward (30% off) · BOGO Oz weekend pushes · MUHA MEDS / Doozy fresh-drop announcements. 29 push mentions in May 26 — Saline (#2) gets 23. The machine is set up correctly.</p>
+  </div>
+
+  <div class="card proof">
+    <div class="label">Proof point #2 · Best chain description (already)</div>
+    <p style="margin:0;">"Welcome to High Society Weed Dispensary in New Buffalo, Michigan – where luxury meets accessibility..." The current description names Lake Michigan shoreline, Grand Beach, Big Dawg + MI Jane house brands, and uses "luxury / curated / exclusive" language no other chain store does. This is the chain's strongest standalone description; light edits only.</p>
+  </div>
+
+  <div class="card proof">
+    <div class="label">Proof point #3 · Service area already at chain-leading 10 cities</div>
+    <p style="margin:0;">Niles · Decatur · Bridgman · Buchanan · Dowagiac · Hartford · St Joseph · New Buffalo · Stevensville · Berrien Springs. New Buffalo is the only chain store with multi-city service area at this scale. The framework for Wisconsin extension is already in place.</p>
+  </div>
+
+  <h3>What we're committing to</h3>
+  <div class="confidence-matrix">
+    <div class="conf-row head"><div class="seq">#</div><div class="name">KPI</div><div class="target">Target</div><div>Confidence</div></div>
+    <div class="conf-row"><div class="seq">1</div><div class="name">Defend ~30 monthly AIQ pushes (don't break the machine)</div><div class="target">≥27 in May; sustain through June</div><div><span class="pill high">High (defensive)</span></div></div>
+    <div class="conf-row"><div class="seq">2</div><div class="name">Description light enhancement — explicitly name "Indiana" + "Illinois" + "Wisconsin" cross-border framing</div><div class="target">Live by May 8</div><div><span class="pill high">High</span></div></div>
+    <div class="conf-row"><div class="seq">3</div><div class="name">Wisconsin V2 audience pilot — extend the IL/IN model</div><div class="target">Audience uploaded by May 21; first WI campaign by May 26</div><div><span class="pill med">Moderate</span></div></div>
+    <div class="conf-row"><div class="seq">4</div><div class="name">Service area expansion — add Michigan City IN + La Porte IN + WI border cities</div><div class="target">Live by May 15</div><div><span class="pill high">High</span></div></div>
+    <div class="conf-row"><div class="seq">5</div><div class="name">Secondary category swap (chain Week 4 — paired with Lenox)</div><div class="target">Live by May 26</div><div><span class="pill high">High</span></div></div>
+    <div class="conf-row"><div class="seq">6</div><div class="name">FND-14 instrumentation — close the GA4/Sweed attribution gap (newest store + most AIQ activity = attribution accuracy critical)</div><div class="target">By May 14</div><div><span class="pill high">High</span></div></div>
+    <div class="conf-row"><div class="seq">7</div><div class="name">KP claim + sameAs schema</div><div class="target">By May 21</div><div><span class="pill med">Moderate</span></div></div>
+    <div class="conf-row"><div class="seq">8</div><div class="name">Lake Michigan shoreline / tourist hyperlocal page pilot</div><div class="target">/lake-michigan-cannabis-stop live by May 26</div><div><span class="pill med">Moderate</span></div></div>
+    <div class="conf-row"><div class="seq">9</div><div class="name">VIP bulk-buyer cohort segmentation in AIQ — formalize the high-LTV customer list</div><div class="target">Segment defined + first VIP-cohort campaign by May 21</div><div><span class="pill med">Moderate</span></div></div>
+    <div class="conf-row"><div class="seq">10</div><div class="name">Discovery searches MoM</div><div class="target">+8% to +15% (newer store, faster relative growth)</div><div><span class="pill high">High</span></div></div>
+  </div>
+</section>
+
+<section>
+  <div class="section-header"><div class="section-num">01</div><h2>Where We Stand</h2></div>
+
+  <div class="trend-box">
+    <div class="trend-tile"><div class="num">29</div><div class="label">May 26 AIQ pushes</div><div class="sub">CHAIN LEADER · ~25% of all chain activity</div></div>
+    <div class="trend-tile"><div class="num">10</div><div class="label">Service-area cities</div><div class="sub">CHAIN LEADER · multi-city framework</div></div>
+    <div class="trend-tile"><div class="num">~9 mo</div><div class="label">Operating since</div><div class="sub">Aug 1, 2025 · newest in chain</div></div>
+    <div class="trend-tile"><div class="num">2</div><div class="label">House brands named in description</div><div class="sub">Big Dawg + MI Jane (chain leader on brand integration)</div></div>
+  </div>
+
+  <h3>What's already in place (don't touch — defensive operating mode)</h3>
+  <table>
+    <tr><th>Element</th><th>State</th></tr>
+    <tr><td>Primary GBP category</td><td>"Cannabis store" ✅</td></tr>
+    <tr><td>UTM-tagged GBP link</td><td><code>?utm_source=gmb-new-buffalo&amp;utm_campaign=dispenza</code> ✅</td></tr>
+    <tr><td>Hours</td><td>9:00 AM – 9:00 PM Sun-Sat ✅ + Easter open 9-5 (note: differs from chain — most stores close Easter; NB stays open with reduced hours — verify intent)</td></tr>
+    <tr><td>Description</td><td>✅ Chain's best — luxury + Lake Michigan + Big Dawg + Pit Stop closer</td></tr>
+    <tr><td>Service area</td><td>✅ 10-city enumeration (chain leader)</td></tr>
+    <tr><td>Accessibility</td><td>Wheelchair entrance + parking ✅</td></tr>
+    <tr><td>Parking attribute</td><td>"On-site parking" ✅ (verified accurate, not Google misclassification)</td></tr>
+    <tr><td>Payments</td><td>Cash-only ✅ + explicit "Doesn't accept credit cards" + "Doesn't accept debit cards"</td></tr>
+    <tr><td>Recycling</td><td>"No electronics recycling" ✅</td></tr>
+    <tr><td>AIQ cadence</td><td>Chain flagship — 29 pushes/May 26 · $150-min wallet drops · 2nd-visit reward · BOGO Oz weekends</td></tr>
+    <tr><td>V2 audiences uploaded</td><td>Illinois + Indiana cross-border ✅</td></tr>
+  </table>
+
+  <h3>What's underleveraged (offensive scope)</h3>
+  <table>
+    <tr><th>Gap</th><th>Fix</th></tr>
+    <tr><td>Description: explicit "Indiana" + "Illinois" cross-border named</td><td>Light enhancement — currently "luxury meets accessibility" framing implies regional draw but doesn't say IL/IN by name</td></tr>
+    <tr><td>Description: Wisconsin draw (~3 hours west)</td><td>Add Wisconsin to cross-border framing — extends V2 model</td></tr>
+    <tr><td>Service area: Michigan City IN, La Porte IN, Mishawaka IN</td><td>Add Indiana cities (compliant — they're proximate MI customers)</td></tr>
+    <tr><td>Service area: Wisconsin border cities (Kenosha WI, Racine WI metro)</td><td>Add Wisconsin if WI V2 pilot launches</td></tr>
+    <tr><td>VIP bulk-buyer cohort formalization</td><td>POS data segmentation → AIQ V2 audience for "spent &gt;$X in 90 days" customers; differentiated VIP campaign</td></tr>
+    <tr><td>Lake Michigan tourist hyperlocal page</td><td>Pilot — "Cannabis Near Lake Michigan / Grand Beach / Warren Dunes" angle</td></tr>
+    <tr><td>"From the business" attribute (More tab)</td><td>Currently empty in More tab — Birch Run pattern. Verify whether it's the same field as Description (likely UI quirk)</td></tr>
+    <tr><td>Q&amp;A seeding</td><td>Status not captured — verify + seed if empty</td></tr>
+  </table>
+
+  <h3>4/20 Weekend baseline (in chain master file — only New Buffalo + others have this)</h3>
+  <p>The chain POS master includes a 4/20 Weekend snapshot specifically. New Buffalo's cross-border draw makes 4/20 a major demand-spike — IL/IN traffic crossing for the holiday. Use the 4/20 baseline to calibrate Wisconsin V2 expectations.</p>
+</section>
+
+<section>
+  <div class="section-header"><div class="section-num">02</div><h2>The Strategic Bet for May</h2></div>
+
+  <div class="strategic-bet">
+    <div class="label">May 2026 Strategic Bet</div>
+    <blockquote>New Buffalo is the chain's <em>working flagship</em>. May is mostly defensive — don't break the machine. Offensive plays: extend the V2 cross-border model to Wisconsin, formalize the VIP bulk-buyer cohort in AIQ, and pilot a Lake Michigan tourist hyperlocal page that captures the unique-in-chain Lakefront positioning.</blockquote>
+  </div>
+</section>
+
+<section>
+  <div class="section-header"><div class="section-num">PILLAR 01</div><h2><span class="pillar-num">1</span>Description Enhancement (Light, Not Rewrite)</h2></div>
+  <p class="lede">New Buffalo's current description is the chain's strongest. The May enhancement names Indiana + Illinois + Wisconsin explicitly to maximize cross-border SEO + adds 21+ language for compliance.</p>
+
+  <h3>Master copy — paste verbatim into GBP description</h3>
+  <div class="card purple">
+    <p style="margin:0; font-size:15px; line-height:1.6;">"Welcome to High Society Weed Dispensary in New Buffalo, Michigan – where luxury meets accessibility in cannabis retail. Nestled just off US-12 near Grand Beach, our newest location brings the state's most curated cannabis shopping experience to the Lake Michigan shoreline — minutes from the Indiana border and an easy drive from northwestern Indiana, the Chicago metro, and southeastern Wisconsin. Whether you're a New Buffalo local, a Lake Michigan beach visitor, or crossing state lines, our dispensary is your stop for premium flower, potent concentrates, delicious edibles, and top-shelf vapes. Explore exclusive in-house brands like Big Dawg and MI Jane, known for bold genetics and exceptional value. Our knowledgeable staff is here to guide you with honest recommendations, personalized service, and unbeatable prices. Open daily 9 AM – 9 PM. 21+ ID required. Check out Pit Stop by High Society today!"</p>
+  </div>
+
+  <h4>What changed (vs current)</h4>
+  <ul>
+    <li>Added "minutes from the Indiana border and an easy drive from northwestern Indiana, the Chicago metro, and southeastern Wisconsin" — names IL/IN/WI explicitly</li>
+    <li>Added "or crossing state lines" — surfaces the cross-border use case</li>
+    <li>Added "Open daily 9 AM – 9 PM. 21+ ID required." — compliance + hours visibility</li>
+    <li>Kept everything else verbatim — luxury framing, Lake Michigan, Grand Beach, Big Dawg, MI Jane, Pit Stop closer</li>
+  </ul>
+</section>
+
+<section>
+  <div class="section-header"><div class="section-num">PILLAR 02</div><h2><span class="pillar-num">2</span>Wisconsin V2 Audience Pilot</h2></div>
+  <p class="lede">Replicate the IL/IN cross-border V2 model for Wisconsin. ~3-hour drive from Kenosha/Racine + ~3.5 hours from Milwaukee = within day-trip range for high-LTV cannabis customers.</p>
+
+  <h3>Pilot architecture</h3>
+  <table>
+    <tr><th>Element</th><th>Spec</th></tr>
+    <tr><td>Audience source</td><td>Sweed POS export filter for non-MI ZIP codes among New Buffalo customers — extract WI ZIPs from existing customer base. Augment with third-party WI cannabis-curiosity audience if available.</td></tr>
+    <tr><td>Initial audience size</td><td>Whatever Sweed surfaces from existing customer base. Pilot with as few as 200 contacts; scale up if performance warrants.</td></tr>
+    <tr><td>Promo</td><td>$200-min spend wallet load (premium tier above NB's $150 standard) with explicit Wisconsin-traveler messaging — "Drive across, drive home with our luxury menu"</td></tr>
+    <tr><td>Cadence</td><td>Bi-weekly for May. Increase to weekly in June if pilot performs.</td></tr>
+    <tr><td>KPI</td><td>WI-attributed visits (POS-tagged via the V2 audience) + WI-V2 wallet-load redemption rate</td></tr>
+  </table>
+</section>
+
+<section>
+  <div class="section-header"><div class="section-num">PILLAR 03</div><h2><span class="pillar-num">3</span>VIP Bulk-Buyer Cohort Formalization</h2></div>
+  <p class="lede">The master summary doc explicitly names "VIP bulk flower and vape case buyers" as a New Buffalo customer segment. The AIQ calendar's $150-min wallet drops are an early-stage attempt to address this. May formalizes the cohort definition + creates a dedicated VIP stream.</p>
+
+  <h3>Cohort definition (proposed)</h3>
+  <ul>
+    <li>Customer who has spent ≥$500 in last 90 days (POS-derived), OR</li>
+    <li>Customer with ≥3 visits in last 60 days each &gt;$200, OR</li>
+    <li>Customer with bulk-flower (&gt;1oz transaction) or case-vape (&gt;6 unit) purchase in last 90 days</li>
+  </ul>
+
+  <h3>VIP-stream campaigns (proposed)</h3>
+  <table>
+    <tr><th>Campaign</th><th>Cadence</th><th>Channel</th></tr>
+    <tr><td>VIP early-access drops (new strain / new brand)</td><td>Weekly</td><td>Push + Email</td></tr>
+    <tr><td>VIP $300-min spend wallet load (separate from chain $150 cohort)</td><td>Bi-weekly</td><td>Push/Wallet</td></tr>
+    <tr><td>VIP holiday hold (4/20, Memorial, Black Friday) — 24-hr early access</td><td>Per-holiday</td><td>SMS + Push</td></tr>
+    <tr><td>VIP review-request (highest-LTV customers)</td><td>Post-purchase trigger</td><td>SMS</td></tr>
+  </table>
+
+  <p>This separates VIP behavior from the chain's standard win-back / Power Hour / Happy Hour cohorts. VIP customers shouldn't be receiving the same generic 50/30/25 win-back push as a 60-day-dormant casual customer.</p>
+</section>
+
+<section>
+  <div class="section-header"><div class="section-num">PILLAR 04</div><h2><span class="pillar-num">4</span>Lake Michigan Tourist Hyperlocal Page</h2></div>
+
+  <table>
+    <tr><th>Element</th><th>Spec</th></tr>
+    <tr><td>URL slug</td><td><code>/dispensary-locations/new-buffalo/lake-michigan-cannabis-stop/</code> (matching NB's existing URL structure)</td></tr>
+    <tr><td>H1</td><td>"Cannabis Near Lake Michigan — High Society New Buffalo (Grand Beach, Warren Dunes, IL/IN/WI welcome)"</td></tr>
+    <tr><td>Title tag</td><td>"Lake Michigan Cannabis Dispensary | High Society New Buffalo (Grand Beach + Warren Dunes nearby)"</td></tr>
+    <tr><td>Target queries</td><td>"dispensary near lake michigan", "cannabis grand beach", "weed near warren dunes", "michigan city in dispensary nearby"</td></tr>
+    <tr><td>Schema</td><td>LocalBusiness w/ areaServed=Lake Michigan shoreline + Indiana + Illinois + Wisconsin · FAQPage · HowTo (driving directions from MI City IN, La Porte IN, Chicago, Kenosha WI)</td></tr>
+    <tr><td>21+ disclaimer</td><td>Mandatory + repeated near top + bottom</td></tr>
+    <tr><td>Photos</td><td>Real NB storefront — leverage the Lake-Michigan-shoreline geographic context, NOT stock images</td></tr>
+  </table>
+</section>
+
+<section>
+  <div class="section-header"><div class="section-num">PILLAR 05</div><h2><span class="pillar-num">5</span>GBP Category &amp; Service Area</h2></div>
+
+  <h3>Secondary category swap (chain Week 4)</h3>
+  <p>NB is recommended for Week 4 (paired with Lenox + Mt Pleasant). Drop Vit&amp;Supp + Glassware; add Marijuana dispensary + Herb shop.</p>
+
+  <h3>Service area expansion (add to existing 10)</h3>
+  <ul>
+    <li>Add: Michigan City, IN 46360 (~7 min S — across IN border)</li>
+    <li>Add: La Porte, IN 46350 (~25 min S)</li>
+    <li>Add: Mishawaka, IN 46544 (~50 min — northern IN)</li>
+    <li>Add: Three Oaks, MI 49128 (~10 min N)</li>
+    <li>Add: Sawyer, MI 49125 (~15 min N)</li>
+    <li>Add: Lakeside, MI 49116 (~5 min N — Warren Dunes adjacent)</li>
+    <li>Conditional add (after WI V2 pilot data): Kenosha, WI border cities</li>
+    <li>Add: "Lake Michigan shoreline" + "Berrien County" + "Northwest Indiana" descriptors</li>
+  </ul>
+</section>
+
+<section>
+  <div class="section-header"><div class="section-num">PILLAR 06</div><h2><span class="pillar-num">6</span>Foundation Layer · New Buffalo-specific</h2></div>
+
+  <div class="confidence-matrix">
+    <div class="conf-row head"><div class="seq">FND</div><div class="name">Lever</div><div class="target">Method</div><div>Priority</div></div>
+    <div class="conf-row"><div class="seq">F-14</div><div class="name">Foundation infrastructure audit + AIQ → Sweed → GA4 attribution validation. NB is the chain's most AIQ-active store; attribution accuracy is critical for proving ROI</div><div class="target">Console + Looker + AIQ + Sweed integration check</div><div><span class="pill high">P0</span></div></div>
+    <div class="conf-row"><div class="seq">F-09</div><div class="name">Knowledge Panel claim + sameAs schema (758 reviews + Aug 2025 opening = good entity but newer)</div><div class="target">Manual SERP capture · KP claim · sameAs JSON-LD</div><div><span class="pill med">P1</span></div></div>
+    <div class="conf-row"><div class="seq">F-10</div><div class="name">Backlink baseline + Lake Michigan tourism / Berrien County chamber / Indiana cannabis press / Visit Michigan board outreach</div><div class="target">Ahrefs · tourism + cross-border press prospecting</div><div><span class="pill med">P1</span></div></div>
+    <div class="conf-row"><div class="seq">F-13</div><div class="name">CWV field-data baseline (highest mobile share given tourist + cross-border audience)</div><div class="target">PageSpeed Insights (CrUX)</div><div><span class="pill med">P1</span></div></div>
+    <div class="conf-row"><div class="seq">F-03</div><div class="name">NAP audit — confirm "19189 US-12" is consistent across Weedmaps + Leafly + Yelp + Bing + Apple Maps + Foursquare + IL/IN cannabis directories</div><div class="target">BrightLocal Citation Tracker</div><div><span class="pill high">P0</span></div></div>
+    <div class="conf-row"><div class="seq">F-05</div><div class="name">Weedmaps profile audit — confirm completeness given high AIQ activity should drive cross-platform visibility</div><div class="target">Manual platform audit</div><div><span class="pill high">P0</span></div></div>
+  </div>
+</section>
+
+<section>
+  <div class="section-header"><div class="section-num">07</div><h2>Risk Register</h2></div>
+
+  <table>
+    <tr><th>Risk</th><th>Mitigation</th></tr>
+    <tr><td><b>R1.</b> Wisconsin V2 audience is too small to drive meaningful campaign volume.</td><td>Pilot. If existing Sweed export &lt;200 WI customers, augment with a paid third-party WI cannabis-audience source. If still under-scale, hold for Q3.</td></tr>
+    <tr><td><b>R2.</b> Adding "Indiana / Illinois / Wisconsin" to GBP description triggers Google review (cross-state cannabis context).</td><td>Description names the geographic context (proximity), not state-specific cannabis legality claims. Should pass. Have fallback ready that uses regional ("Lake Michigan / northwest Indiana / southeast Wisconsin") instead of state names.</td></tr>
+    <tr><td><b>R3.</b> VIP cohort definition is too narrow (yields too few customers for meaningful AIQ stream).</td><td>Soften thresholds in the definition. Test cohort sizing with Sweed POS export before formalizing in AIQ.</td></tr>
+    <tr><td><b>R4.</b> 4/20 Weekend pull-forward affects May baseline — May 2026 may show seasonally-low traffic vs. April.</td><td>Document April vs May baseline. Compare May 2026 to May 2025 (when available) for like-for-like.</td></tr>
+    <tr><td><b>R5.</b> AIQ cadence reduction during May (any planned holds) breaks the working machine.</td><td>Don't reduce cadence in May. Coordinate any AIQ changes through Account Lead with explicit "this is a defensive month" framing.</td></tr>
+  </table>
+</section>
+
+<section>
+  <div class="section-header"><div class="section-num">08</div><h2>May at a Glance</h2></div>
+
+  <table>
+    <tr><th>Date</th><th>Deliverable</th><th>Owner</th></tr>
+    <tr><td>May 5</td><td>Description light enhancement drafted (IL/IN/WI explicit) · F-14 instrumentation kickoff (AIQ→Sweed→GA4 attribution check)</td><td>Content + SEO</td></tr>
+    <tr><td>May 8</td><td>New description live</td><td>GBP / Local Listings</td></tr>
+    <tr><td>May 14</td><td>F-14 attribution audit complete · VIP cohort definition validated against Sweed POS data</td><td>SEO + AIQ</td></tr>
+    <tr><td>May 15</td><td>Service area expansion live (Michigan City + La Porte + Mishawaka + Three Oaks + Sawyer + Lakeside)</td><td>GBP / Local Listings</td></tr>
+    <tr><td>May 21</td><td>Wisconsin V2 audience uploaded · KP claim submitted · First VIP-cohort campaign live</td><td>AIQ + SEO</td></tr>
+    <tr><td>May 23</td><td>F-03 NAP audit + F-05 Weedmaps audit complete</td><td>SEO + GBP</td></tr>
+    <tr><td>May 26</td><td>Lake Michigan hyperlocal page live · Secondary category swap (chain Week 4) · First Wisconsin V2 campaign</td><td>Content + Dev + GBP + AIQ</td></tr>
+    <tr><td>May 28</td><td>3 outreach pitches sent (Visit Michigan / Berrien County tourism · NW Indiana cannabis press · Lake Michigan tourism boards)</td><td>SEO + Account Lead</td></tr>
+    <tr><td><b>May 31</b></td><td>Local Falcon scan · KPIs assessed · AIQ defensive cadence review · WI V2 pilot results</td><td>SEO / Analytics + AIQ</td></tr>
+  </table>
+</section>
+
+<section>
+  <div class="section-header"><div class="section-num">09</div><h2>What We Need From High Society</h2></div>
+
+  <div class="ask"><div class="num">Ask 01 · Description approval (P0 May 7)</div><div class="text">Approve the light-enhancement copy (Pillar 01 master copy) — particularly the explicit "Indiana / Illinois / Wisconsin" language.</div></div>
+  <div class="ask"><div class="num">Ask 02 · Sweed POS access for VIP cohort sizing (P0 May 12)</div><div class="text">Read-access to Sweed reporting at New Buffalo. Need to test the proposed VIP cohort definition (≥$500 in 90 days OR ≥3 visits ≥$200 OR bulk transactions) and validate the resulting audience size.</div></div>
+  <div class="ask"><div class="num">Ask 03 · Wisconsin V2 audience source (P0 May 12)</div><div class="text">Confirm Sweed POS export filter capability for Wisconsin ZIP codes among NB customers. If under-scale, decision needed: augment with a paid WI cannabis-audience source or hold pilot for Q3.</div></div>
+  <div class="ask"><div class="num">Ask 04 · Easter hours (P1 May 7)</div><div class="text">NB shows Easter open 9 AM – 5 PM (vs other chain stores closed Easter). Confirm intentional + matches actual operations.</div></div>
+  <div class="ask"><div class="num">Ask 05 · 4/20 Weekend POS data accessibility (P1 May 14)</div><div class="text">Need access to the 4/20 Weekend POS snapshot for NB to calibrate VIP cohort baseline + Wisconsin demand expectations.</div></div>
+  <div class="ask"><div class="num">Ask 06 · "Pit Stop by High Society" clarification (P1 May 14)</div><div class="text">Same chain-wide ask. NB description includes "Pit Stop" closer; clarification informs how all stores frame the sub-brand.</div></div>
+  <div class="ask"><div class="num">Ask 07 · VIP customer commercial intent (P1 May 21)</div><div class="text">Open to differentiated VIP messaging that names specific high-LTV behaviors? Some operators prefer not to reference customer-spend tiers explicitly. Need posture confirmation before launching VIP-cohort stream.</div></div>
+</section>
+
+<div class="footer">
+  Prepared by Dispenza Dispensary Marketing · May 2026 Strategy · High Society New Buffalo · Evidence-Tiered<br/>
+  Whitespark 2026 LSRF · BrightLocal · Citation Building Group · Cannabis Creative · Lifted Digital<br/>
+  Cross-referenced with chain-wide POS+GBP master · Local Falcon Apr 3-4 baseline · AIQ messaging cadence calendar (May 26 = 29 NB-specific pushes, chain leader) · Master strategy summary doc<br/>
+  Questions or edits — Darrell is the point of contact.
+</div>
+
+</div>
+</body>
+</html>

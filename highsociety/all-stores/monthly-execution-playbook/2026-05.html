@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>High Society — May 2026 Dispenza Execution Playbook (Chain-Wide)</title>
+<style>
+  :root{--purple-900:#2E1A47;--purple-700:#5B2A86;--purple-500:#7B3FA8;--purple-100:#F3E8FB;--pink-500:#D63384;--pink-100:#FDE8F2;--gold:#F4B942;--gold-light:#FFF4D6;--green:#2BA84A;--green-100:#E6F6EA;--red:#D64545;--red-100:#FFE8E8;--amber:#E8870C;--amber-100:#FFF1DD;--blue:#2563EB;--blue-100:#DBEAFE;--gray-900:#1F2937;--gray-700:#4B5563;--gray-500:#6B7280;--gray-300:#D1D5DB;--gray-100:#F3F4F6;--gray-50:#F9FAFB;}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--gray-900);background:var(--gray-50);line-height:1.55;font-size:15px}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+  header.hero{background:linear-gradient(135deg,var(--purple-900),var(--purple-500));color:#fff;padding:44px 0 36px;border-bottom:6px solid var(--gold)}
+  .hero h1{margin:0 0 8px;font-size:34px;letter-spacing:-.5px;line-height:1.1}
+  .hero .sub{font-size:16px;opacity:.95;margin-bottom:18px;max-width:780px}
+  .hero .meta{display:flex;flex-wrap:wrap;gap:18px 28px;font-size:13px;opacity:.92}
+  .hero .meta b{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.6px;opacity:.75}
+  section{background:#fff;margin:24px 0;padding:28px;border-radius:12px;box-shadow:0 1px 2px rgba(0,0,0,.04),0 1px 3px rgba(0,0,0,.06)}
+  h2{margin:0 0 14px;font-size:22px;color:var(--purple-900);border-left:5px solid var(--pink-500);padding-left:12px}
+  h3{margin:22px 0 8px;font-size:17px;color:var(--purple-700)}
+  h4{margin:14px 0 6px;font-size:13.5px;text-transform:uppercase;letter-spacing:.6px;color:var(--gray-700)}
+  p{margin:8px 0}
+  ul,ol{margin:8px 0;padding-left:22px}
+  li{margin:4px 0}
+  code{background:var(--purple-100);color:var(--purple-900);padding:1px 6px;border-radius:4px;font-size:.9em;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+  pre{background:var(--gray-900);color:#E5E7EB;padding:14px 16px;border-radius:8px;overflow-x:auto;font-size:12.5px;line-height:1.5}
+  pre code{background:transparent;color:inherit;padding:0}
+  table{width:100%;border-collapse:collapse;font-size:13.5px;margin:8px 0}
+  th{background:var(--purple-100);color:var(--purple-900);text-align:left;padding:8px 10px;border-bottom:2px solid var(--purple-500)}
+  td{padding:8px 10px;border-bottom:1px solid var(--gray-300);vertical-align:top}
+  tr:nth-child(even) td{background:var(--gray-50)}
+  .badge{display:inline-block;padding:2px 9px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.3px;vertical-align:middle}
+  .b-p0{background:var(--red-100);color:var(--red)}
+  .b-p1{background:var(--amber-100);color:var(--amber)}
+  .b-p2{background:var(--blue-100);color:var(--blue)}
+  .b-same-day{background:var(--red);color:#fff}
+  .b-high{background:var(--green-100);color:var(--green)}
+  .b-mod{background:var(--amber-100);color:var(--amber)}
+  .alert{padding:14px 18px;border-radius:8px;margin:14px 0;border-left:5px solid}
+  .alert-critical{background:var(--red-100);border-color:var(--red);color:#7F1D1D}
+  .alert-warn{background:var(--gold-light);border-color:var(--gold);color:#78350F}
+  .alert-info{background:var(--blue-100);border-color:var(--blue);color:#1E3A8A}
+  .alert-good{background:var(--green-100);border-color:var(--green);color:#14532D}
+  .task{border:1px solid var(--gray-300);border-radius:10px;padding:18px 20px;margin:14px 0;background:#fff}
+  .task-p0{border-left:6px solid var(--red)}
+  .task-p1{border-left:6px solid var(--amber)}
+  .task-p2{border-left:6px solid var(--blue)}
+  .task-same-day{border-left:6px solid var(--red);background:var(--red-100)}
+  .task-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px;margin-bottom:8px}
+  .task-id{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;font-weight:700;color:var(--gray-500)}
+  .task-title{font-size:18px;font-weight:700;color:var(--purple-900);flex:1;min-width:0}
+  .task-meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:6px 16px;background:var(--gray-50);padding:10px 12px;border-radius:6px;margin:10px 0;font-size:13px}
+  .task-meta b{font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;color:var(--gray-500);display:block;margin-bottom:1px}
+  .steps{counter-reset:step;list-style:none;padding-left:0;margin:10px 0}
+  .steps li{counter-increment:step;position:relative;padding:8px 12px 8px 42px;margin:4px 0;background:var(--gray-50);border-radius:6px;border:1px solid var(--gray-300)}
+  .steps li::before{content:counter(step);position:absolute;left:10px;top:8px;width:24px;height:24px;background:var(--purple-500);color:#fff;border-radius:50%;text-align:center;line-height:24px;font-weight:700;font-size:12px}
+  .accept{background:var(--green-100);border:1px solid var(--green);border-radius:6px;padding:10px 14px;margin-top:10px}
+  .accept ul{list-style:none;padding-left:0}
+  .accept li{padding:3px 0 3px 26px;position:relative}
+  .accept li::before{content:"☐";position:absolute;left:0;top:0;font-size:18px;color:var(--green);font-weight:700}
+  .dept-head{background:linear-gradient(90deg,var(--purple-900),var(--purple-500));color:#fff;padding:22px 26px;border-radius:10px;margin:36px 0 14px}
+  .dept-head h2{color:#fff;border-left:5px solid var(--gold);margin:0;font-size:24px}
+  .dept-head .sub{opacity:.9;font-size:14px;margin-top:6px}
+  .dept-head .meta-line{font-size:12.5px;opacity:.85;margin-top:8px}
+  .copy{background:var(--purple-100);border-left:4px solid var(--purple-700);padding:12px 14px;margin:8px 0;border-radius:4px}
+  .copy b.lbl{color:var(--purple-900);text-transform:uppercase;font-size:10.5px;letter-spacing:.6px;display:block;margin-bottom:3px}
+  .copy .why{font-size:12.5px;color:var(--gray-700);margin-top:6px;font-style:italic}
+  .copy .text{font-size:14.5px;line-height:1.45}
+  .reasoning{background:var(--gold-light);border-left:4px solid var(--gold);padding:10px 14px;margin:8px 0;border-radius:4px;font-size:13px}
+  .reasoning b{color:#78350F;text-transform:uppercase;font-size:10.5px;letter-spacing:.6px;display:block;margin-bottom:3px}
+  .toc{background:var(--purple-100);border-radius:8px;padding:14px 20px;margin:14px 0}
+  .toc a{color:var(--purple-700);text-decoration:none;display:inline-block;margin:3px 14px 3px 0;font-size:13.5px;font-weight:600}
+  .toc a:hover{text-decoration:underline}
+  .kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin:8px 0}
+  .kpi{background:var(--gray-50);border-radius:8px;padding:12px;border-left:4px solid var(--purple-500)}
+  .kpi b{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:var(--gray-500)}
+  .kpi .v{font-size:18px;font-weight:700;color:var(--purple-900);margin:2px 0}
+  .kpi .t{font-size:13px;color:var(--gray-700)}
+  footer{text-align:center;padding:28px 0;color:var(--gray-500);font-size:13px}
+  .store-snapshot{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:14px 0}
+  .store-card{background:#fff;border:1px solid var(--gray-300);border-left:4px solid var(--purple-500);border-radius:6px;padding:12px 14px;font-size:13px}
+  .store-card b{color:var(--purple-900);font-size:14px;display:block;margin-bottom:4px}
+  .store-card .stat{color:var(--gray-700);font-size:12px}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>High Society — May 2026 Dispenza Execution Playbook (Chain-Wide)</h1>
+    <div class="sub">Department-by-department guide for the Dispenza team across all 8 High Society stores. Every task is something <b>we</b> own and ship. Per-store tasks are tagged with the store; chain-wide tasks apply to all 8. <b>North Star: revenue over loyalty</b> — High Society explicitly does not optimize for app/loyalty enrollment; campaigns favor spend-threshold + bundle + case-deal + doorbuster formats.</div>
+    <div class="meta">
+      <div><b>Period</b>May 1 – May 31, 2026</div>
+      <div><b>Account Lead</b>Darrell · Dispenza</div>
+      <div><b>Stores</b>8 — Saline · Big Rapids · Birch Run · Charlotte · East Lansing · Lenox · Mt Pleasant · New Buffalo</div>
+      <div><b>Departments</b>🛡 Foundation · 🛠 Dev · ✍️ Content · 📍 GBP-Local · 📨 AIQ Lifecycle · 🎨 Design · 📊 SEO-Analytics · 🤝 Account Lead</div>
+      <div><b>Final Measurement</b>Local Falcon scan · May 31</div>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+<section>
+  <h2>How to use this playbook</h2>
+  <p>Find your department section. Tasks are listed in priority order (P0 → P1 → P2 within each department). <b>Same-day tasks (red) ship Day 1.</b> Per-store tasks are tagged in the title. Click-by-click steps and exact paste-ready copy are included. If you cannot tick every acceptance box, the task is not done.</p>
+  <p>For chain-wide tasks (e.g., secondary-category swap), <b>stagger across the 4 weeks of May per the schedule</b> — don't fire all 8 stores on the same day (Google may flag coordinated low-quality edits). Department coordinators own the staggering rhythm.</p>
+  <div class="toc">
+    <a href="#north-star">🎯 North Star + Critical Path</a>
+    <a href="#stores">📍 Store Snapshots</a>
+    <a href="#foundation">🛡 Foundation Layer</a>
+    <a href="#dev">🛠 Web Development</a>
+    <a href="#content">✍️ Content / Copywriting</a>
+    <a href="#gbp">📍 GBP / Local Listings</a>
+    <a href="#aiq">📨 AIQ Lifecycle</a>
+    <a href="#design">🎨 Design</a>
+    <a href="#seo">📊 SEO / Analytics</a>
+    <a href="#lead">🤝 Account Lead</a>
+    <a href="#copy">📋 Master Copy Library</a>
+    <a href="#calendar">📅 May Calendar</a>
+    <a href="#kpis">🎯 Chain KPIs</a>
+    <a href="#guardrails">⚠️ Guardrails</a>
+  </div>
+</section>
+
+<section id="north-star">
+  <h2>🎯 North Star + Chain-Wide Critical Path</h2>
+
+  <div class="alert alert-critical">
+    <b>Revenue Over Loyalty.</b> High Society explicitly does NOT optimize AIQ campaigns for app downloads or loyalty enrollment (per Darrell's master strategy summary). Campaigns optimize for revenue per customer via: spend-threshold rewards · bundles · case deals · doorbusters · BOGO · weekend/holiday demand spikes (4/20, Green Wednesday, Black Friday, Cyber Monday, Vets Day, Mother's Day, Memorial Day). This North Star distinguishes High Society from typical dispensary AIQ programs and shapes every recommendation in the AIQ Lifecycle department.
+  </div>
+
+  <h3>Critical-path overview</h3>
+  <table>
+    <tr><th>Date</th><th>Must be live / shipped</th><th>Owning department</th></tr>
+    <tr><td><b>May 1</b></td><td>🚨 Lenox typo fix (New Heaven → New Haven) · Lenox opening date populated · Mt Pleasant Accessibility / Recycling / Onsite services attributes added</td><td>GBP / Local Listings</td></tr>
+    <tr><td>May 5</td><td>Chain Week 1 secondary-category swap (Big Rapids) · Lenox NAP "Ave"→"Avenue" · East Lansing NAP "Rd"→"Road" · Mt Pleasant NAP canonicalization · "No delivery" added at East Lansing + Lenox + Mt Pleasant</td><td>GBP / Local Listings</td></tr>
+    <tr><td>May 7</td><td>🚨 Lenox AIQ rotation onboarded — first weekly Lenox Power Hour push live · Birch Run + Mt Pleasant FB URL re-add</td><td>AIQ + GBP</td></tr>
+    <tr><td><b>May 8</b></td><td>All 8 store description rewrites live in GBP (per individual strategy reports)</td><td>Content + GBP</td></tr>
+    <tr><td>May 10</td><td>Order-link redirect deployed sitewide (highsocietydispo.com root → store-specific subpages)</td><td>Dev</td></tr>
+    <tr><td>May 12</td><td>Chain Week 2 secondary-category swap (Saline + Birch Run) · Service area expansions live for all 8 stores</td><td>GBP / Local Listings</td></tr>
+    <tr><td>May 14</td><td>Charlotte review-velocity diagnostic complete · East Lansing 5-min visit diagnostic complete · Mt Pleasant noon-window AIQ push live</td><td>SEO + AIQ + Account Lead</td></tr>
+    <tr><td>May 19</td><td>Chain Week 3 secondary-category swap (Charlotte + East Lansing) · Charlotte Weedmaps profile rebuild complete · All 8 stores Weedmaps audit complete</td><td>GBP / Local Listings</td></tr>
+    <tr><td>May 21</td><td>All 8 KP claims submitted · sameAs schema deployed sitewide · Wisconsin V2 audience uploaded for New Buffalo · Ontario/OH V2 for Lenox</td><td>Dev + SEO + AIQ</td></tr>
+    <tr><td>May 23</td><td>F-14 Foundation infrastructure audit complete (all 8 stores) · Looker Studio chain-wide dashboard live</td><td>SEO / Analytics</td></tr>
+    <tr><td>May 26</td><td>Chain Week 4 secondary-category swap (Lenox + Mt Pleasant + New Buffalo) · 8 hyperlocal pilot pages live · First WI V2 + first Mt Pleasant noon AIQ campaigns</td><td>Content + Dev + AIQ + GBP</td></tr>
+    <tr><td>May 28</td><td>24 outreach pitches sent (3 per store × 8 stores)</td><td>SEO + Account Lead</td></tr>
+    <tr><td><b>May 31</b></td><td>Local Falcon scan all 8 stores · KPIs assessed · May report drafted · AIQ first-month performance review (esp. Lenox onboarding + WI V2 pilot)</td><td>SEO / Analytics + AIQ</td></tr>
+  </table>
+</section>
+
+<section id="stores">
+  <h2>📍 Store Snapshots — At-a-Glance</h2>
+  <p>Per-store strategy reports live in each store's <code>monthly-local-seo-strategy/2026-05_strategy-report.html</code>. This snapshot summarizes the unique May focus per store.</p>
+
+  <div class="store-snapshot">
+    <div class="store-card"><b>Saline · Supercenter · 4.8★ / 610 Google + 217 Weedmaps</b><div class="stat">Ann Arbor metro spillover · Ohio V2 audience refresh · Reinstate Pit Stop closer · Verify "Paid parking lot" → "Free" misclassification · 10-min visit (chain-standard)</div></div>
+    <div class="store-card"><b>Big Rapids · Standard · 4.7★ / 511 Google + 192 Weedmaps · Oldest store</b><div class="stat">Mar 2021 opening (5+ yrs) · Ferris State adjacency unleveraged · Photo cadence lapsed ~1 yr · Lowest review velocity (~8/mo) · Chain Week 1 secondary swap canary</div></div>
+    <div class="store-card"><b>Birch Run · Outlet · 4.8★ / 758 Google + 489 Weedmaps · Cross-platform leader</b><div class="stat">I-75 corridor + Premium Outlets adjacency + Frankenmuth tourism · FB URL recovery (Google removed) · Paid parking attribute likely accurate · Best Weedmaps machine</div></div>
+    <div class="store-card"><b>Charlotte · Brand-mentioning · 4.9★ / 1,067 Google + 28 Weedmaps · Velocity outlier</b><div class="stat">~123 reviews/mo (5× chain median) · DIAGNOSE the velocity advantage · Weedmaps severely under-developed (P0 rebuild) · Lansing metro spillover · PIT STOP banner physically visible (storefront proof)</div></div>
+    <div class="store-card"><b>East Lansing · Supercenter · 4.9★ / 835 Google + 155 Weedmaps · MSU adjacency</b><div class="stat">5-min visit anomaly (chain-standard 10-min) — DIAGNOSE driver · Multi-area service (Lansing + East Lansing) chain precedent · Planning attribute "Appointment not required" chain precedent · NAP drift Rd→Road · AIQ timing recalibration to fit 5-min window</div></div>
+    <div class="store-card"><b>Lenox · Standard · 4.7★ / 449 Google + 134 Weedmaps · Chain laggard</b><div class="stat">🚨 SAME-DAY: New Heaven→New Haven typo · Opening date NOT SET · NAP Ave→Avenue · "No delivery" missing · 0 store-specific AIQ pushes — ONBOARD to rotation (highest-leverage May move) · Detroit metro / Macomb County / Gratiot M-3 corridor · Ontario/OH V2 pilot</div></div>
+    <div class="store-card"><b>Mt Pleasant · Standard · 4.8★ / 596 Google + 148 Weedmaps · Least-complete listing</b><div class="stat">CMU adjacency on Mission St · Most distinctive storefront (red brick + green awning) · Music/atmosphere/vibe per customer reviews · 🚨 5 missing chain-wide attributes (Accessibility, Recycling, Onsite, No delivery, Parking) — POPULATE manually · Dual NAP drift (Rd/Road + Mt/Mount) · FB hidden internally · Noon-window AIQ push (CMU lunch-hour)</div></div>
+    <div class="store-card"><b>New Buffalo · Luxury / Lake Michigan · 4.8★ / 758+ Google · AIQ flagship</b><div class="stat">Aug 2025 opening (newest) · 29 May 26 pushes (chain leader) · IL/IN V2 audiences active · $150-min wallet drops · Big Dawg + MI Jane house brands · 10-city service area (chain leader) · Wisconsin V2 PILOT EXTENSION · VIP bulk-buyer cohort formalization · 4/20 Weekend in POS data</div></div>
+  </div>
+</section>
+
+<div class="dept-head" id="foundation">
+  <h2>🛡 Department: Foundation Layer</h2>
+  <div class="sub">14 task families. Closes the evidence-tiered gaps from the Cannabis-Specialist SEO Operating Catalog (Whitespark 2026 LSRF · BrightLocal · Citation Building Group · Cannabis Creative + CannaPlanners). Some tasks are chain-wide; some are per-store deltas.</div>
+  <div class="meta-line">Tools: server logs · GSC URL Inspection · BrightLocal · Whitespark · Ahrefs · PageSpeed Insights (CrUX) · Lighthouse · Apple Maps Connect · Bing Places · Weedmaps for Business · Leafly Biz · Google KP claim · Looker Studio · Sweed POS</div>
+</div>
+
+<div class="task task-p0">
+  <div class="task-head"><span class="task-id">FND-01</span><span class="task-title">Age-gate Googlebot allowlist verification (chain-wide)</span><span class="badge b-p0">P0</span></div>
+  <p>Cannabis-binary check. If the highsocietydispo.com age-gate is implemented client-side without a Googlebot allowlist, the homepage Google crawls is the empty age-verification page — not the actual content. <b>Single biggest rank mover when broken.</b></p>
+  <div class="task-meta">
+    <div><b>Owner</b>SEO/Analytics + Dev</div>
+    <div><b>Deadline</b>EOD May 7</div>
+    <div><b>Time</b>2 hrs</div>
+    <div><b>Scope</b>Chain-wide (all 8 store subpages)</div>
+  </div>
+  <ol class="steps">
+    <li>In GSC, run URL Inspection on each of: <code>highsocietydispo.com/</code> + <code>/shop/big-rapids</code> + <code>/shop/birch-run</code> + <code>/shop/charlotte</code> + <code>/shop/east-lansing</code> + <code>/shop/lenox</code> + <code>/shop/mount-pleasant</code> + <code>/shop/saline</code> + <code>/dispensary-locations/new-buffalo</code> (note NB has different URL pattern)</li>
+    <li>For each: click "Test live URL" → "View tested page" → HTML tab. Confirm the page H1 + content + LocalBusiness schema are visible.</li>
+    <li>If any URL shows the age-gate interstitial in the rendered HTML, pull server logs for last 7 days. Filter for User-Agent matching <code>Googlebot</code>.</li>
+    <li>If broken: implement server-side Googlebot allowlist. Detect <code>Googlebot|Bingbot|DuckDuckBot</code> in User-Agent; bypass age-gate.</li>
+    <li>Deploy. Re-run URL Inspection. Submit each URL for re-indexing.</li>
+  </ol>
+  <div class="accept"><b>Acceptance criteria</b><ul>
+    <li>All 8 store URLs show H1 + content + schema in GSC URL Inspection rendered HTML</li>
+    <li>Server logs confirm Googlebot receives 200s with full bodies (not interstitial)</li>
+    <li>Each URL submitted for re-indexing</li>
+  </ul></div>
+</div>
+
+<div class="task task-p0">
+  <div class="task-head"><span class="task-id">FND-02</span><span class="task-title">Sweed POS / menu integration crawlability check (chain-wide)</span><span class="badge b-p0">P0</span></div>
+  <p>Cannabis-binary check. Sweed is the chain's POS — confirm the menu integration on highsocietydispo.com/shop/[store] renders product URLs crawlably (server-side or hydrated), not iframe-only. If iframe-only, every strain/SKU is invisible to Google. Same architectural failure mode as the Dutchie iframe issue.</p>
+  <div class="task-meta">
+    <div><b>Owner</b>SEO/Analytics + Dev</div>
+    <div><b>Deadline</b>Audit EOD May 10 · Migration plan EOD May 31</div>
+    <div><b>Time</b>4 hrs audit + variable</div>
+    <div><b>Scope</b>Chain-wide (Sweed integration is shared across all 8 stores)</div>
+  </div>
+  <ol class="steps">
+    <li>Open each store's /shop/[store]/menu equivalent. View page source.</li>
+    <li>Search for <code>&lt;iframe</code>. If found and src points to Sweed subdomain, the menu is iframe-loaded.</li>
+    <li>Run Lighthouse SEO audit + Schema validator on parent /menu page. If no Product schema is detected, products are invisible to Google's structured-data layer.</li>
+    <li>Document in <code>FND-02-sweed-audit.md</code>: iframe present (Y/N), iframe src, Product schema present (Y/N), Lighthouse SEO score per store.</li>
+    <li>If iframe-loaded: open Sweed integration support case. Request SEO-friendly server-side rendering or per-product URL structure. Get pricing if upgrade tier required.</li>
+  </ol>
+  <div class="accept"><b>Acceptance criteria</b><ul>
+    <li>FND-02-sweed-audit.md committed</li>
+    <li>If iframe-loaded: migration plan + cost estimate by May 31</li>
+    <li>If SEO-friendly: Product schema confirmed on parent /menu pages; documented as resolved</li>
+  </ul></div>
+</div>
+
+<div class="task task-p0">
+  <div class="task-head"><span class="task-id">FND-03</span><span class="task-title">NAP exact-match audit across all properties (chain-wide)</span><span class="badge b-p0">P0</span></div>
+  <p>+23% local-pack rank improvement at 85%+ NAP consistency (Citation Building Group · BrightLocal). Three known per-store NAP drifts discovered in GBP audit — fix all three same-day plus run cross-property audit at all 8 stores.</p>
+  <div class="task-meta">
+    <div><b>Owner</b>SEO/Analytics</div>
+    <div><b>Deadline</b>Same-day per-store fixes May 5 · Cross-property audit by May 28</div>
+    <div><b>Time</b>1 day audit + 1 day cleanup</div>
+    <div><b>Scope</b>Chain-wide</div>
+  </div>
+  <h4>Same-day per-store fixes (May 5)</h4>
+  <ul>
+    <li><b>East Lansing:</b> Canonicalize "Rd" → "Road" (KP shows "Rd"; internal shows "Road")</li>
+    <li><b>Lenox:</b> Canonicalize "Ave" → "Avenue" (KP shows "Ave"; internal shows "Avenue")</li>
+    <li><b>Mt Pleasant:</b> Canonicalize "Mt Pleasant" → "Mount Pleasant" + "N Mission St" → "North Mission Street" everywhere (internal listing self-inconsistent)</li>
+  </ul>
+  <h4>Cross-property audit (May 28)</h4>
+  <p>For each of 8 stores, verify NAP exact-match across: GBP · Weedmaps · Leafly · AllBud · Yelp · BBB · Bing Places · Apple Maps · Foursquare · Sweed POS · website footer schema. Use BrightLocal Citation Tracker.</p>
+  <div class="accept"><b>Acceptance criteria</b><ul>
+    <li>3 same-day fixes deployed</li>
+    <li>BrightLocal scan complete for all 8 stores</li>
+    <li>Cleanup tickets opened for any cross-property drift detected</li>
+  </ul></div>
+</div>
+
+<div class="task task-p0">
+  <div class="task-head"><span class="task-id">FND-04a</span><span class="task-title">Chain-wide secondary-category swap (staggered 4 weeks)</span><span class="badge b-p0">P0</span></div>
+  <p>All 8 stores have identical 8-secondary template. Drop "Vitamin &amp; supplements store" + "Glassware store"; add "Marijuana dispensary" + "Herb shop". <b>Stagger 2 stores/week × 4 weeks</b> to avoid Google flagging coordinated low-quality edits.</p>
+  <div class="task-meta">
+    <div><b>Owner</b>GBP / Local Listings</div>
+    <div><b>Deadline</b>Week 1 May 5 · Week 2 May 12 · Week 3 May 19 · Week 4 May 26</div>
+    <div><b>Time</b>5 min per store × 8</div>
+    <div><b>Scope</b>Chain-wide</div>
+  </div>
+  <table>
+    <tr><th>Week</th><th>Stores</th><th>Date</th></tr>
+    <tr><td>Week 1</td><td>Big Rapids (chain canary, oldest store)</td><td>May 5</td></tr>
+    <tr><td>Week 2</td><td>Saline + Birch Run</td><td>May 12</td></tr>
+    <tr><td>Week 3</td><td>Charlotte + East Lansing</td><td>May 19</td></tr>
+    <tr><td>Week 4</td><td>Lenox + Mt Pleasant + New Buffalo</td><td>May 26</td></tr>
+  </table>
+  <div class="copy">
+    <b class="lbl">Per-store secondary list — paste exactly</b>
+    <div class="text">Marijuana dispensary · Herb shop · Gift shop · Glass shop · Smoke shop · Cannabis club · Novelty store · Vaporizer store</div>
+    <div class="why">Why this works: "Marijuana dispensary" is the most-searched cannabis-category synonym on Google; "Herb shop" is Whitespark-recommended for cannabis. Dropping "Glassware store" (redundant with "Glass shop") + "Vitamin &amp; supplements store" (miscategorization risk) clears space without losing meaningful coverage.</div>
+  </div>
+</div>
+
+<div class="task task-p0">
+  <div class="task-head"><span class="task-id">FND-04b</span><span class="task-title">Mount Pleasant manual attribute population (P0 same-day)</span><span class="badge b-same-day">Same-day</span></div>
+  <p>Mt Pleasant is the chain's least-complete listing. Missing Accessibility, Recycling, "Onsite services available", "No delivery", and Parking attributes that all 6 other captured stores have populated.</p>
+  <div class="task-meta">
+    <div><b>Owner</b>GBP / Local Listings</div>
+    <div><b>Deadline</b>Day 1-3 (May 1-3)</div>
+    <div><b>Time</b>30 min total</div>
+    <div><b>Scope</b>Mt Pleasant only</div>
+  </div>
+  <ol class="steps">
+    <li>GBP dashboard → Mt Pleasant listing → More tab → Accessibility: Add "Has wheelchair accessible entrance" + "Has wheelchair accessible parking lot"</li>
+    <li>More tab → Recycling: Add "No electronics recycling" (chain-standard)</li>
+    <li>More tab → Service options: Add "Onsite services available" + "No delivery"</li>
+    <li>More tab → Parking: Verify on-site reality (Photo confirmation from store team via Account Lead) → set "Free parking lot" if confirmed</li>
+    <li>Stagger across 3 days (one attribute per day) to avoid triggering Google quality-flag review</li>
+  </ol>
+</div>
+
+<div class="task task-p0">
+  <div class="task-head"><span class="task-id">FND-09</span><span class="task-title">Knowledge Panel claims + sameAs schema enrichment (chain-wide)</span><span class="badge b-p0">P0</span></div>
+  <p>Submit KP claims for all 8 stores. Deploy chain-wide LocalBusiness schema with sameAs array linking to GBP + Weedmaps + Leafly + Facebook + Instagram + Yelp profiles per store. Branded queries are 30-50% of total clicks for established dispensaries.</p>
+  <div class="task-meta">
+    <div><b>Owner</b>SEO/Analytics + Dev</div>
+    <div><b>Deadline</b>EOD May 21</div>
+    <div><b>Time</b>1 day</div>
+    <div><b>Scope</b>Chain-wide (all 8 stores)</div>
+  </div>
+  <p><b>Per-store sameAs URL list to deploy in JSON-LD schema (replace per-store):</b></p>
+  <pre><code>"sameAs": [
+  "https://www.facebook.com/profile.php?id=[STORE_FB_ID]",
+  "https://www.instagram.com/highsocietydispo/",
+  "https://www.weedmaps.com/dispensaries/high-society-[store-slug]",
+  "https://www.leafly.com/dispensary-info/high-society-[store-slug]",
+  "https://www.yelp.com/biz/high-society-[store-slug]",
+  "https://www.allbud.com/dispensaries/[store-slug]"
+]</code></pre>
+  <p>Per-store FB IDs (confirmed from GBP audit): BR=100091757653942 · Birch Run=100095538314342 · Charlotte=61564212894886 · East Lansing=61554188635254 · Lenox=61555455257465 · Mt Pleasant=TBD (re-add) · Saline=100091873056721 · NB=TBD (verify)</p>
+</div>
+
+<div class="task task-p0">
+  <div class="task-head"><span class="task-id">FND-14</span><span class="task-title">Foundation infrastructure audit + Looker Studio chain dashboard</span><span class="badge b-p0">P0</span></div>
+  <p>Verify GA4 conversions / GSC verification / Bing Webmaster / GTM cleanliness / UTM-tagging integrity / CallRail wiring / Sweed POS attribution / Schema validator / Annotations log per store. Build a chain-wide Looker Studio dashboard: GA4 + GSC + Local Falcon + GBP Insights + CallRail + AIQ KPIs in one view.</p>
+  <div class="task-meta">
+    <div><b>Owner</b>SEO/Analytics</div>
+    <div><b>Deadline</b>EOD May 23</div>
+    <div><b>Time</b>3 days</div>
+    <div><b>Scope</b>Chain-wide</div>
+  </div>
+  <p>Critical sub-task: <b>AIQ → Sweed → GA4 attribution validation</b>. AIQ is the chain's most-active channel (40-100+ pushes/month); without clean attribution, ROI is unmeasurable. Confirm cross-domain UTM persistence + AIQ campaign tags surface in GA4 source/medium reports.</p>
+</div>
+
+<div class="dept-head" id="dev">
+  <h2>🛠 Department: Web Development / Engineering</h2>
+  <div class="sub">12 chain-wide + per-store tasks. Owns highsocietydispo.com — schema, redirects, age-gate config, hyperlocal pages, sitemap.</div>
+  <div class="meta-line">Tools: highsocietydispo.com CMS · Search Console · Rich Results Test · sitemap.xml access · Sweed integration support</div>
+</div>
+
+<div class="task task-p0">
+  <div class="task-head"><span class="task-id">DEV-01</span><span class="task-title">Order link redirects — chain-wide (root → store-specific subpages)</span><span class="badge b-p0">P0</span></div>
+  <p>Every chain store's GBP "Order:" link lands on highsocietydispo.com root instead of /shop/[store]. Friction loss on every converting click across all 8 stores.</p>
+  <div class="task-meta">
+    <div><b>Deadline</b>EOD May 10</div>
+    <div><b>Time</b>2 hrs</div>
+    <div><b>Scope</b>Chain-wide</div>
+  </div>
+  <ol class="steps">
+    <li>Audit current redirect config — confirm "Order:" link target in each store's GBP dashboard</li>
+    <li>If GBP-side, update each store's "Online ordering" link to point to /shop/[store-slug] (not root). NB uses /dispensary-locations/new-buffalo URL pattern — preserve that.</li>
+    <li>If site-side redirect needed, deploy nginx/Apache rule to redirect highsocietydispo.com root → store-specific subpage based on referrer or geographic IP</li>
+    <li>Test each store's "Order" link from public KP → verify it lands on the correct subpage</li>
+  </ol>
+</div>
+
+<div class="task task-p0">
+  <div class="task-head"><span class="task-id">DEV-02</span><span class="task-title">Deploy LocalBusiness JSON-LD schema with sameAs sitewide (per FND-09)</span><span class="badge b-p0">P0</span></div>
+  <p>Deploy 8 store-specific LocalBusiness schema blocks (one per store subpage) + a chain-Organization schema sitewide. Each store schema includes the per-store NAP, phone, opening date, sameAs array.</p>
+  <div class="task-meta">
+    <div><b>Deadline</b>EOD May 21</div>
+    <div><b>Time</b>1 day</div>
+    <div><b>Scope</b>Chain-wide</div>
+  </div>
+</div>
+
+<div class="task task-p1">
+  <div class="task-head"><span class="task-id">DEV-03</span><span class="task-title">8 hyperlocal pilot pages (1 per store, store-specific local angle)</span><span class="badge b-p1">P1</span></div>
+  <p>Each store's strategy report identifies a hyperlocal angle. Build 8 pilot pages — one per store. Word count 800-1,200 each, FAQPage + LocalBusiness schema, real photos (no stock landmarks), 21+ disclaimers.</p>
+  <div class="task-meta">
+    <div><b>Deadline</b>All 8 live by May 26</div>
+    <div><b>Time</b>1 day per page × 8 = 8 days</div>
+    <div><b>Scope</b>Chain-wide</div>
+  </div>
+  <table>
+    <tr><th>Store</th><th>Hyperlocal angle</th><th>URL slug</th></tr>
+    <tr><td>Saline</td><td>Ann Arbor metro</td><td><code>/shop/saline/ann-arbor-dispensary/</code></td></tr>
+    <tr><td>Big Rapids</td><td>Reed City + Mecosta County</td><td><code>/shop/big-rapids/reed-city-dispensary/</code></td></tr>
+    <tr><td>Birch Run</td><td>I-75 corridor + Premium Outlets</td><td><code>/shop/birch-run/i75-cannabis-stop/</code></td></tr>
+    <tr><td>Charlotte</td><td>Lansing metro spillover</td><td><code>/shop/charlotte/lansing-area-dispensary/</code></td></tr>
+    <tr><td>East Lansing</td><td>MSU campus area</td><td><code>/shop/east-lansing/msu-area-dispensary/</code></td></tr>
+    <tr><td>Lenox</td><td>Detroit metro + Macomb County</td><td><code>/shop/lenox/detroit-metro-dispensary/</code></td></tr>
+    <tr><td>Mt Pleasant</td><td>CMU campus area</td><td><code>/shop/mount-pleasant/cmu-area-dispensary/</code></td></tr>
+    <tr><td>New Buffalo</td><td>Lake Michigan + IL/IN/WI cross-border</td><td><code>/dispensary-locations/new-buffalo/lake-michigan-cannabis-stop/</code></td></tr>
+  </table>
+</div>
+
+<div class="dept-head" id="content">
+  <h2>✍️ Department: Content / Copywriting</h2>
+  <div class="sub">8 description rewrites (per-store) + 8 hyperlocal page bodies + 4-6 chain-wide blog posts. All cannabis-compliant. 21+ language mandatory chain-wide.</div>
+  <div class="meta-line">Tools: Charlotte template (best-in-chain) as the rewrite reference · per-store strategy reports for local-landmark specifics</div>
+</div>
+
+<div class="task task-p0">
+  <div class="task-head"><span class="task-id">CONT-01</span><span class="task-title">8 store description rewrites (per-store, paste-ready in each strategy)</span><span class="badge b-p0">P0</span></div>
+  <p>Each store's strategy report includes the master copy to deploy. Rewrites follow Charlotte's brand-mentioning template + per-store local landmarks + 21+ language + Pit Stop closer (reinstated at Saline). All 8 ship to GBP by May 8.</p>
+  <div class="task-meta">
+    <div><b>Deadline</b>Drafts May 5 · Approvals May 7 · Live May 8</div>
+    <div><b>Time</b>1.5 hrs/store × 8 = 12 hrs</div>
+    <div><b>Scope</b>Chain-wide</div>
+  </div>
+  <p>The full per-store master copy lives in each store's strategy report. See the Master Copy Library section below for a quick paste-ready summary of all 8.</p>
+</div>
+
+<div class="task task-p0">
+  <div class="task-head"><span class="task-id">CONT-02</span><span class="task-title">Lenox typo fix — "New Heaven" → "New Haven" (P0 SAME-DAY)</span><span class="badge b-same-day">Same-day</span></div>
+  <p>The current Lenox GBP description contains "New Heaven" which is not a real Michigan place. The correct city name is "New Haven" (Macomb County village adjacent to Lenox). ~30 seconds in GBP. Fix Day 1 even if the full description rewrite is deferred.</p>
+</div>
+
+<div class="task task-p1">
+  <div class="task-head"><span class="task-id">CONT-03</span><span class="task-title">8 hyperlocal page bodies (per-store)</span><span class="badge b-p1">P1</span></div>
+  <p>800-1,200 words per page. Charlotte template style (specific brands, trust signals, local landmarks). 21+ disclaimers. Real Google location-signal hygiene (no stock landmark photos). See per-store strategy reports for specific angles.</p>
+  <div class="task-meta">
+    <div><b>Deadline</b>All 8 drafted by May 21 · Live by May 26</div>
+    <div><b>Time</b>3 hrs/page × 8 = 24 hrs</div>
+  </div>
+</div>
+
+<div class="task task-p1">
+  <div class="task-head"><span class="task-id">CONT-04</span><span class="task-title">May blog content (chain-wide, 4 posts)</span><span class="badge b-p1">P1</span></div>
+  <p>Holiday + general SEO content. Memorial Day weekend bundle promo · "Best Cannabis Strains for Lake Michigan Summer" · "Detroit-Metro Dispensary Guide" · "Choosing Between Edibles, Vapes, and Flower" educational. All cannabis-compliant.</p>
+  <div class="task-meta">
+    <div><b>Deadline</b>Memorial weekend post live May 19 · Others by May 28</div>
+    <div><b>Time</b>4 hrs/post × 4 = 16 hrs</div>
+  </div>
+</div>
+
+<div class="dept-head" id="gbp">
+  <h2>📍 Department: GBP / Local Listings</h2>
+  <div class="sub">Heaviest-touch department. Owns same-day fixes, attribute population, secondary-category swap, service area expansions, photo cadence, Q&amp;A seeding across all 8 stores.</div>
+  <div class="meta-line">Tools: GBP dashboard (8 listings) · Weedmaps for Business · Leafly Biz · BrightLocal · Apple Maps Connect · Bing Places</div>
+</div>
+
+<div class="task task-same-day">
+  <div class="task-head"><span class="task-id">GBP-01</span><span class="task-title">Lenox same-day rescue (P0 Day 1)</span><span class="badge b-same-day">Same-day</span></div>
+  <p>Three same-day fixes at Lenox: (1) typo correction (CONT-02), (2) opening date populated (Lenox is the only chain store with empty opening-date field), (3) reconcile dual parking attribute. All visible to public knowledge panel today.</p>
+  <div class="task-meta">
+    <div><b>Deadline</b>EOD May 1</div>
+    <div><b>Time</b>15 min</div>
+  </div>
+</div>
+
+<div class="task task-p0">
+  <div class="task-head"><span class="task-id">GBP-02</span><span class="task-title">Service area expansion — all 8 stores (per-store specifics)</span><span class="badge b-p0">P0</span></div>
+  <p>Each store currently lists single-ZIP service area (except East Lansing + New Buffalo which have multi-area precedents). Expand all 8 stores per their individual strategy reports. Live by May 15.</p>
+</div>
+
+<div class="task task-p0">
+  <div class="task-head"><span class="task-id">GBP-03</span><span class="task-title">Weedmaps profile audit + rebuild — all 8 stores</span><span class="badge b-p0">P0</span></div>
+  <p>Charlotte's Weedmaps is severely under-developed (28 reviews vs 1,067 Google) — biggest individual-store rebuild. Other 7 stores: completeness audit + photo cadence + menu sync + review-response SLA. Live by May 19.</p>
+  <div class="task-meta">
+    <div><b>Deadline</b>EOD May 19</div>
+    <div><b>Time</b>2 hrs/store × 8 = 16 hrs</div>
+  </div>
+  <ul>
+    <li>Banner + logo per store</li>
+    <li>Profile fields with NAP exact-match (per FND-03)</li>
+    <li>≥20 photos per store (no pricing in imagery — cannabis rule)</li>
+    <li>≥3 active deals per store (mirror GBP cadence)</li>
+    <li>Sweed POS → Weedmaps menu sync verified within 24-hr update window</li>
+    <li>Review-response SLA ≤48 hrs across all 8 stores</li>
+  </ul>
+</div>
+
+<div class="task task-p0">
+  <div class="task-head"><span class="task-id">GBP-04</span><span class="task-title">Apple Maps + Bing Places verified for all 8 stores</span><span class="badge b-p0">P0</span></div>
+  <p>Apple Maps = ~25% US mobile (CarPlay, Siri, default Edge). Bing = #2 search engine + feeds DuckDuckGo + ChatGPT. 4 hrs each per store. ROI heavily favors doing both.</p>
+  <div class="task-meta">
+    <div><b>Deadline</b>EOD May 23</div>
+    <div><b>Time</b>8 hrs × 8 stores = 64 hrs (split across week)</div>
+  </div>
+</div>
+
+<div class="task task-p1">
+  <div class="task-head"><span class="task-id">GBP-05</span><span class="task-title">Q&amp;A seeding — 8 questions per store</span><span class="badge b-p1">P1</span></div>
+  <p>Owner-posted Q&amp;As capturing common customer questions per store: directions, hours, payment, parking, delivery (no), brands, age-verification, accessibility. Use specific local landmarks per store.</p>
+  <div class="task-meta">
+    <div><b>Deadline</b>EOD May 19</div>
+    <div><b>Time</b>1 hr/store × 8</div>
+  </div>
+</div>
+
+<div class="task task-p1">
+  <div class="task-head"><span class="task-id">GBP-06</span><span class="task-title">Photo cadence resume — Big Rapids + others as needed</span><span class="badge b-p1">P1</span></div>
+  <p>Big Rapids' owner photo cadence has lapsed ~1 year. Restart at 4-5 owner-uploaded photos/wk. Other stores: confirm photo cadence is current. Mt Pleasant's distinctive architecture is the chain's most-photographable storefront — leverage.</p>
+</div>
+
+<div class="dept-head" id="aiq">
+  <h2>📨 Department: AIQ Lifecycle Marketing</h2>
+  <div class="sub">The largest AIQ department in the Dispenza portfolio. Multi-store cadence already running 40-100+ pushes/month chain-wide. Revenue-over-loyalty North Star applies. Major May initiatives: Lenox onboarding, Mt Pleasant noon-window, Wisconsin V2 pilot for NB, VIP cohort formalization, AIQ→GA4 attribution wiring.</div>
+  <div class="meta-line">Tools: Alpine IQ · Sweed POS exports for V2 audience uploads · GA4 cross-domain UTM check</div>
+</div>
+
+<div class="task task-p0">
+  <div class="task-head"><span class="task-id">AIQ-01</span><span class="task-title">🚨 Lenox AIQ rotation onboarding (P0 critical)</span><span class="badge b-p0">P0</span></div>
+  <p>Lenox got 0 store-specific AIQ pushes in May 26. The other stores get heavy attention (Saline 23, NB 29, Charlotte 4-15, etc.). Onboarding Lenox is the chain's single highest-leverage May AIQ move.</p>
+  <div class="task-meta">
+    <div><b>Deadline</b>First Lenox push live May 7</div>
+    <div><b>Time</b>3 hrs setup</div>
+  </div>
+  <h4>Proposed Lenox AIQ slots</h4>
+  <table>
+    <tr><th>Slot</th><th>Cadence</th><th>Time</th><th>Channel</th></tr>
+    <tr><td>Lenox Power Hour</td><td>Weekly</td><td>3:20 PM EST (mirror Birch Run / Charlotte cohort)</td><td>PUSH</td></tr>
+    <tr><td>Lenox 2nd-visit reward</td><td>Weekly</td><td>varies</td><td>PUSH</td></tr>
+    <tr><td>Lenox Detroit-metro / Macomb promo</td><td>Bi-weekly</td><td>varies</td><td>Push/Wallet</td></tr>
+    <tr><td>Ontario/OH cross-border (NEW pilot)</td><td>Bi-weekly</td><td>varies</td><td>Push/Wallet ($100-min spend)</td></tr>
+  </table>
+</div>
+
+<div class="task task-p0">
+  <div class="task-head"><span class="task-id">AIQ-02</span><span class="task-title">Mt Pleasant noon-window push (CMU lunch-hour cohort)</span><span class="badge b-p0">P0</span></div>
+  <p>Mt Pleasant's popular-times noon peak confirms university-cohort lunch-hour traffic. East Lansing already has differentiated cadence (4:30 PM Power Hour vs chain default 3:20 PM); Mt Pleasant gets the next variation.</p>
+  <div class="task-meta">
+    <div><b>Deadline</b>First push live May 14</div>
+    <div><b>Time</b>2 hrs setup</div>
+  </div>
+  <p>New slot: <b>Mt Pleasant Lunch-Hour Special · Mon-Fri 11:30 AM EST · PUSH · Mt Pleasant + CMU cohort</b>. A/B test against the existing 3:20 PM combined Mt Pleasant + Big Rapids cohort push.</p>
+</div>
+
+<div class="task task-p1">
+  <div class="task-head"><span class="task-id">AIQ-03</span><span class="task-title">Wisconsin V2 audience pilot for New Buffalo</span><span class="badge b-p1">P1</span></div>
+  <p>Replicate the IL/IN cross-border V2 model for Wisconsin. ~3-hour drive from Kenosha/Milwaukee = within day-trip range for high-LTV customers.</p>
+  <div class="task-meta">
+    <div><b>Deadline</b>Audience uploaded May 21 · First campaign May 26</div>
+    <div><b>Time</b>1 day setup</div>
+  </div>
+  <ol class="steps">
+    <li>Sweed POS export filter → extract Wisconsin ZIP codes among NB customers (last 90 days)</li>
+    <li>Upload to AIQ V2 audience module (same workflow as Saline/Ohio + NB/IL-IN)</li>
+    <li>Define $200-min spend wallet load promo (premium tier above NB's $150 standard)</li>
+    <li>Schedule bi-weekly campaigns for May; increase to weekly in June if performance warrants</li>
+    <li>Track WI-attributed visits + wallet-load redemption rate as pilot KPIs</li>
+  </ol>
+</div>
+
+<div class="task task-p1">
+  <div class="task-head"><span class="task-id">AIQ-04</span><span class="task-title">Ontario/Ohio V2 audience pilot for Lenox</span><span class="badge b-p1">P1</span></div>
+  <p>Lenox is the chain's untested border-market opportunity (Gratiot M-3 → Port Huron → Ontario; I-94 → Ohio). Mirror NB's IL/IN V2 model.</p>
+  <div class="task-meta">
+    <div><b>Deadline</b>Audience uploaded May 21 · First campaign May 26</div>
+    <div><b>Time</b>1 day setup</div>
+  </div>
+</div>
+
+<div class="task task-p1">
+  <div class="task-head"><span class="task-id">AIQ-05</span><span class="task-title">VIP bulk-buyer cohort formalization (New Buffalo first)</span><span class="badge b-p1">P1</span></div>
+  <p>Master strategy doc names "VIP bulk flower and vape case buyers" as a NB customer segment. Formalize the cohort in AIQ. Spend-threshold + behavior-based segmentation, NOT loyalty enrollment (per the chain-wide North Star).</p>
+  <h4>Cohort definition (proposed)</h4>
+  <ul>
+    <li>≥$500 spent in last 90 days, OR</li>
+    <li>≥3 visits in last 60 days each &gt;$200, OR</li>
+    <li>Bulk-flower (&gt;1oz transaction) or case-vape (&gt;6 unit) purchase in last 90 days</li>
+  </ul>
+  <h4>VIP-stream campaigns</h4>
+  <ul>
+    <li>Weekly VIP early-access drops (new strain / brand) · Push + Email</li>
+    <li>Bi-weekly VIP $300-min wallet load · Push/Wallet</li>
+    <li>Per-holiday VIP 24-hr early access · SMS + Push</li>
+    <li>Post-purchase VIP review-request (highest LTV customers) · SMS</li>
+  </ul>
+</div>
+
+<div class="task task-p2">
+  <div class="task-head"><span class="task-id">AIQ-06</span><span class="task-title">East Lansing AIQ timing recalibration (5-min vs 10-min trigger)</span><span class="badge b-p2">P2</span></div>
+  <p>East Lansing's 5-min typical visit means standard 10-min post-visit campaign timing breaks (customer is already gone). A/B test 3-5 minute fire times for East Lansing.</p>
+</div>
+
+<div class="task task-p2">
+  <div class="task-head"><span class="task-id">AIQ-07</span><span class="task-title">Email cadence decision — prune or activate</span><span class="badge b-p2">P2</span></div>
+  <p>The AIQ calendar holds 31 daily email slots/month but only ~9 actually go out (~2/week). Either prune to 2/wk rhythm (less work, accurate cadence) or activate the 22 unused slots. Account Lead decision needed.</p>
+</div>
+
+<div class="dept-head" id="design">
+  <h2>🎨 Department: Design</h2>
+  <div class="sub">Asset production for 8 stores. Hyperlocal page hero imagery, GBP photo refreshes, AIQ campaign graphics for new initiatives (Lenox Power Hour, Mt Pleasant lunch-hour, WI V2 wallet drops, VIP-cohort campaigns).</div>
+  <div class="meta-line">Tools: Canva · brand asset libraries · client-provided photo dropbox</div>
+</div>
+
+<div class="task task-p0">
+  <div class="task-head"><span class="task-id">DSGN-01</span><span class="task-title">8 store hyperlocal page hero images</span><span class="badge b-p0">P0</span></div>
+  <p>Real storefront photography per store (no stock landmarks). Mt Pleasant's distinctive red brick + green awning is the chain's most marketable visual asset — feature prominently. NB's Lake Michigan shoreline context. Charlotte's PIT STOP banner.</p>
+</div>
+
+<div class="task task-p0">
+  <div class="task-head"><span class="task-id">DSGN-02</span><span class="task-title">AIQ campaign graphics — new initiatives</span><span class="badge b-p0">P0</span></div>
+  <p>Lenox Power Hour push graphic · Mt Pleasant lunch-hour graphic · Wisconsin V2 wallet drop · VIP-cohort early-access graphics · Ontario/OH V2 graphic. All cannabis-compliant (no medical claims · 21+ language · no pricing in some-channel imagery per state rules).</p>
+</div>
+
+<div class="task task-p1">
+  <div class="task-head"><span class="task-id">DSGN-03</span><span class="task-title">Big Rapids photo refresh (lapsed ~1 yr)</span><span class="badge b-p1">P1</span></div>
+  <p>Big Rapids GBP owner photos haven't been uploaded in ~1 year. Restart cadence at 4-5 photos/wk. Account Lead chases store-level photo-uploader contact.</p>
+</div>
+
+<div class="dept-head" id="seo">
+  <h2>📊 Department: SEO / Analytics</h2>
+  <div class="sub">Diagnostics + measurement. Two big diagnostics this month: (1) Charlotte's review-velocity advantage, (2) East Lansing's 5-min visit anomaly. Plus chain-wide Foundation infrastructure audit + Looker Studio dashboard build.</div>
+  <div class="meta-line">Tools: Local Falcon · Ahrefs · BrightLocal · Lighthouse · GA4 · GSC · CallRail · Looker Studio</div>
+</div>
+
+<div class="task task-p0">
+  <div class="task-head"><span class="task-id">SEO-01</span><span class="task-title">🔬 Charlotte review-velocity diagnostic</span><span class="badge b-p0">P0</span></div>
+  <p>Charlotte earns reviews at 5× the chain average (~123/mo vs Saline ~13/mo). Diagnose the driver. Hypotheses to test: H1 staff prompt scripts, H2 review-acquisition kiosk/SMS combo, H3 customer demographic, H4 active review-incentive promo, H5 staff tenure + response cadence.</p>
+  <div class="task-meta"><div><b>Deadline</b>EOD May 14</div></div>
+  <p>If H1/H2/H4/H5: replicable chain-wide. Drives B-rapids + Lenox + Saline review-velocity uplift in Q3. If H3 alone: structural; reset chain expectations.</p>
+</div>
+
+<div class="task task-p0">
+  <div class="task-head"><span class="task-id">SEO-02</span><span class="task-title">🔬 East Lansing 5-min visit diagnostic</span><span class="badge b-p0">P0</span></div>
+  <p>East Lansing customers spend 5 minutes per visit (chain standard 10). Why? H1 heavy online pre-order, H2 different menu architecture, H3 MSU student demographic, H4 high-velocity POS, H5 different store layout.</p>
+  <div class="task-meta"><div><b>Deadline</b>EOD May 14</div></div>
+  <p>If H1/H2/H4 win: chain-replicable via online-pre-order push + UX optimization. If H3 alone: structural advantage protected.</p>
+</div>
+
+<div class="task task-p0">
+  <div class="task-head"><span class="task-id">SEO-03</span><span class="task-title">Local Falcon scan all 8 stores · May 31 measurement</span><span class="badge b-p0">P0</span></div>
+  <p>Final May 31 measurement scan for all 8 stores. Compare to April 3-4 baseline. Track SoLV per tracked KW per pin per store. Document chain-wide aggregate + per-store deltas.</p>
+</div>
+
+<div class="task task-p0">
+  <div class="task-head"><span class="task-id">SEO-04</span><span class="task-title">Looker Studio chain-wide dashboard</span><span class="badge b-p0">P0</span></div>
+  <p>Single dashboard with 8 store rows + chain-wide aggregates. Panels: GA4 (sessions, conversions, GBP-attributed traffic) · GSC (Direct vs Discovery searches) · Local Falcon (SoLV per store) · GBP Insights (calls, directions, website clicks) · CallRail (call volume) · AIQ (push counts, audience size, V2 audience performance, VIP-cohort metrics).</p>
+  <div class="task-meta"><div><b>Deadline</b>EOD May 23</div></div>
+</div>
+
+<div class="task task-p1">
+  <div class="task-head"><span class="task-id">SEO-05</span><span class="task-title">Backlink baseline + 24 outreach pitches (3 per store × 8)</span><span class="badge b-p1">P1</span></div>
+  <p>3 outreach pitches per store sent by May 28. Per-store target list in each strategy report (FSU campus paper for Big Rapids · Frankenmuth Tourism for Birch Run · Lansing State Journal for Charlotte · State News for East Lansing · Macomb Daily for Lenox · CM Life for Mt Pleasant · Visit Michigan / NW Indiana cannabis press for NB · Ann Arbor Observer for Saline).</p>
+</div>
+
+<div class="dept-head" id="lead">
+  <h2>🤝 Department: Account Lead</h2>
+  <div class="sub">Darrell. Chases client asks · coordinates department staggering · escalates blockers. May has the chain's heaviest ask volume (40+ asks across 8 strategies — track in shared Notion).</div>
+</div>
+
+<div class="task task-p0">
+  <div class="task-head"><span class="task-id">LEAD-01</span><span class="task-title">Same-day asks (May 1-3)</span><span class="badge b-same-day">Same-day</span></div>
+  <ul>
+    <li>Lenox opening date confirmed by client</li>
+    <li>Mt Pleasant on-site reality (wheelchair entrance + parking + onsite services confirmed; parking free or paid)</li>
+    <li>Charlotte GM interview scheduled for review-velocity diagnostic</li>
+    <li>East Lansing GM interview scheduled for 5-min visit diagnostic</li>
+    <li>Birch Run + Mt Pleasant Facebook page status (NAP / verification / admin access)</li>
+  </ul>
+</div>
+
+<div class="task task-p0">
+  <div class="task-head"><span class="task-id">LEAD-02</span><span class="task-title">Description approvals — all 8 stores by May 7</span><span class="badge b-p0">P0</span></div>
+  <p>Get client sign-off on all 8 store description rewrites by May 7 so they can deploy May 8.</p>
+</div>
+
+<div class="task task-p0">
+  <div class="task-head"><span class="task-id">LEAD-03</span><span class="task-title">"Pit Stop by High Society" chain-wide clarification</span><span class="badge b-p0">P0</span></div>
+  <p>The "Pit Stop" closer appears in 7 of 8 chain descriptions (Saline omits). Charlotte's storefront has visible PIT STOP window banners. Get definitive answer from client: is Pit Stop a sub-brand, loyalty program, in-store concept, or thematic decor element? The answer informs how every store frames the closer.</p>
+</div>
+
+<div class="task task-p1">
+  <div class="task-head"><span class="task-id">LEAD-04</span><span class="task-title">Sweed POS access for chain-wide attribution + V2 audience work</span><span class="badge b-p1">P1</span></div>
+  <p>Read-access to Sweed reporting for: Charlotte (review-velocity diagnostic), East Lansing (5-min visit diagnostic), New Buffalo (VIP cohort sizing + WI V2 audience), Lenox (Ontario/OH V2 audience), all 8 (chain-wide menu sync verification).</p>
+</div>
+
+<section id="copy">
+  <h2>📋 Master Copy Library — All 8 Store Description Rewrites</h2>
+  <p>Each store's full master copy is in its individual strategy report. Below is a quick reference summarizing the chain-wide rewrite pattern + per-store distinctive openings. Charlotte's existing description is the chain's gold standard; the other 7 rewrites mimic the format with per-store local-landmark injection.</p>
+
+  <h3>Saline · Supercenter (paste verbatim — full version in Saline strategy)</h3>
+  <div class="copy"><div class="text">"High Society Cannabis Supercenter Saline is Washtenaw County's biggest cannabis selection by SKU count — 10 minutes from Ann Arbor, off I-94, next door to Busch's Fresh Food Market. We carry the full premium menu: MI Jane flower, Uncle Arnie's cannabis-infused beverages, Choice Labs edibles, Jeeter pre-rolls, plus our in-house High Society line. With 4.8-star reviews across 600+ Google + 200+ Weedmaps verified visits, we're proudly serving Saline, Ann Arbor, Ypsilanti, Milan, Manchester, Tecumseh, Pittsfield Township, and the I-94 corridor since 2022. Open daily 9 AM – 9 PM. 21+ ID required. Check out Pit Stop by High Society today!"</div></div>
+
+  <h3>Big Rapids · Standard / 5-year track record</h3>
+  <div class="copy"><div class="text">"High Society Cannabis Big Rapids is Mecosta County's trusted cannabis dispensary — open since March 2021, 10 minutes from Ferris State University, on Clark Street just off US-131. We carry the full premium menu: MI Jane flower, Uncle Arnie's cannabis-infused beverages, Choice Labs edibles, Jeeter pre-rolls, plus our in-house High Society line. With 4.7-star reviews across 500+ Google + 190+ Weedmaps verified visits, we're proudly serving Big Rapids, Reed City, Mecosta, Stanwood, Paris, and the Mecosta County / US-131 corridor. Open daily 9 AM – 9 PM. 21+ ID required. Check out Pit Stop by High Society today!"</div></div>
+
+  <h3>Birch Run · Outlet · I-75 corridor</h3>
+  <div class="copy"><div class="text">"High Society Cannabis Outlet Birch Run is Saginaw County's I-75 cannabis stop — directly across from Birch Run Premium Outlets, 15 minutes south of Frankenmuth, off I-75 Exit 136. We carry the full premium menu: MI Jane flower, Uncle Arnie's cannabis-infused beverages, Choice Labs edibles, Jeeter pre-rolls, plus our in-house High Society line. With 4.8-star reviews across 750+ Google + 480+ Weedmaps verified visits — the chain's most-reviewed Weedmaps profile — we're proudly serving Birch Run, Bridgeport, Frankenmuth, Saginaw, Flint Township, Mt. Morris, and I-75 corridor travelers between Detroit and Bay City. Open daily 9 AM – 9 PM. 21+ ID required. Check out Pit Stop by High Society today!"</div></div>
+
+  <h3>Charlotte · Brand-mentioning · Lansing metro (light edit only)</h3>
+  <div class="copy"><div class="text">"High Society Weed Dispensary Charlotte is the trusted cannabis shop serving Charlotte, MI, and the Lansing metro — 20 minutes from downtown Lansing, off I-69. Since 2020, we've been dedicated to redefining the cannabis industry with exceptional service, high-quality products, and competitive pricing. Explore our selection of cannabis brands, including MI Jane marijuana flowers, Uncle Arnie's cannabis-infused beverages, Choice Labs edibles, and Jeeter pre-rolls. We're also proud to offer our in-house brand of cannabis flowers and pre-rolls, crafted with care to meet the highest quality standards. Our budtenders are here to guide you in finding the perfect products to suit your needs and budget. Proudly serving Charlotte, Eaton Rapids, Olivet, Dimondale, Potterville, and the Lansing-area / I-69 corridor. Open daily 9 AM – 9 PM. 21+ ID required. Check out Pit Stop by High Society today!"</div></div>
+
+  <h3>East Lansing · Supercenter · MSU adjacency</h3>
+  <div class="copy"><div class="text">"High Society Cannabis Supercenter East Lansing is the trusted cannabis dispensary serving the Lansing metro and Michigan State University area — on Merritt Road, just minutes from MSU campus and adjacent to Costco Wholesale on the Lake Lansing retail corridor. We carry the full premium menu: MI Jane flower, Uncle Arnie's cannabis-infused beverages, Choice Labs edibles, Jeeter pre-rolls, plus our in-house High Society line. With 4.9-star reviews across 800+ Google + 150+ Weedmaps verified visits, we're proudly serving East Lansing, Lansing, Okemos, Haslett, Meridian Township, Bath, and DeWitt. Open daily 9 AM – 9 PM. 21+ ID required. Check out Pit Stop by High Society today!"</div></div>
+
+  <h3>Lenox · Standard · Macomb County / Detroit metro (typo-corrected)</h3>
+  <div class="copy"><div class="text">"High Society Cannabis Lenox is Macomb County's trusted cannabis dispensary on Gratiot Avenue (M-3) — serving the Detroit metro, the I-94 corridor, and travelers between Detroit and Port Huron. We carry the full premium menu: MI Jane flower, Uncle Arnie's cannabis-infused beverages, Choice Labs edibles, Jeeter pre-rolls, plus our in-house High Society line. With 4.7-star reviews across 440+ Google + 130+ Weedmaps verified visits, we're proudly serving Lenox, New Haven, Richmond, New Baltimore, Chesterfield Township, Casco Township, Mt. Clemens, and the Macomb County / I-94 corridor. Open daily 9 AM – 9 PM. 21+ ID required. Check out Pit Stop by High Society today!"</div></div>
+
+  <h3>Mt Pleasant · Standard · CMU adjacency · vibe surfaced</h3>
+  <div class="copy"><div class="text">"High Society Cannabis Mount Pleasant is Isabella County's trusted cannabis dispensary on N Mission Street — minutes from Central Michigan University, on the city's main commercial corridor, and ~5 minutes from US-127. We carry the full premium menu: MI Jane flower, Uncle Arnie's cannabis-infused beverages, Choice Labs edibles, Jeeter pre-rolls, plus our in-house High Society line. With 4.8-star reviews across 590+ Google + 145+ Weedmaps verified visits, we're known for our music, our atmosphere, and friendly staff. Proudly serving Mount Pleasant, Alma, Shepherd, Beal City, Coleman, Rosebush, Weidman, and the Isabella County / US-127 corridor. Open daily 9 AM – 9 PM. 21+ ID required. Check out Pit Stop by High Society today!"</div></div>
+
+  <h3>New Buffalo · Luxury / Lake Michigan / IL/IN/WI cross-border (light enhancement only)</h3>
+  <div class="copy"><div class="text">"Welcome to High Society Weed Dispensary in New Buffalo, Michigan – where luxury meets accessibility in cannabis retail. Nestled just off US-12 near Grand Beach, our newest location brings the state's most curated cannabis shopping experience to the Lake Michigan shoreline — minutes from the Indiana border and an easy drive from northwestern Indiana, the Chicago metro, and southeastern Wisconsin. Whether you're a New Buffalo local, a Lake Michigan beach visitor, or crossing state lines, our dispensary is your stop for premium flower, potent concentrates, delicious edibles, and top-shelf vapes. Explore exclusive in-house brands like Big Dawg and MI Jane, known for bold genetics and exceptional value. Our knowledgeable staff is here to guide you with honest recommendations, personalized service, and unbeatable prices. Open daily 9 AM – 9 PM. 21+ ID required. Check out Pit Stop by High Society today!"</div></div>
+</section>
+
+<section id="calendar">
+  <h2>📅 May 2026 Calendar — Cross-Department</h2>
+  <table>
+    <tr><th>Week</th><th>Department focus</th><th>Major deliverables</th></tr>
+    <tr><td>Week 1 (May 1-7)</td><td>Same-day rescue + diagnostic kickoff + Lenox AIQ onboarding</td><td>Lenox typo + opening date · NAP fixes (3 stores) · Mt Pleasant attributes · Big Rapids secondary swap (canary) · Lenox AIQ rotation onboarded · Description drafts · GM interviews scheduled (Charlotte + East Lansing)</td></tr>
+    <tr><td>Week 2 (May 8-14)</td><td>Description deploys + diagnostic completion</td><td>All 8 descriptions live · Saline + Birch Run secondary swap · Order-link redirect deployed · Charlotte + East Lansing diagnostics complete · Mt Pleasant noon-window AIQ live · Service area expansions live</td></tr>
+    <tr><td>Week 3 (May 15-21)</td><td>Foundation + V2 expansions + KP claims</td><td>Charlotte + East Lansing secondary swap · All 8 KP claims submitted · sameAs schema deployed · Wisconsin V2 + Ontario/OH V2 audiences uploaded · VIP cohort defined · Foundation infrastructure audit complete</td></tr>
+    <tr><td>Week 4 (May 22-31)</td><td>Hyperlocal launches + measurement</td><td>Lenox + Mt Pleasant + NB secondary swap · 8 hyperlocal pages live · Looker Studio dashboard live · 24 outreach pitches sent · Local Falcon scan all 8 stores · May report drafted · AIQ first-month performance review</td></tr>
+  </table>
+</section>
+
+<section id="kpis">
+  <h2>🎯 Chain KPIs &amp; Targets — May 2026</h2>
+
+  <div class="kpi-grid">
+    <div class="kpi"><b>Chain-wide reviews growth</b><div class="v">+150 net</div><div class="t">High confidence (current ~120/mo run-rate)</div></div>
+    <div class="kpi"><b>Lenox review velocity</b><div class="v">8 → 12/mo</div><div class="t">Moderate (AIQ onboarding lift)</div></div>
+    <div class="kpi"><b>Big Rapids review velocity</b><div class="v">8 → 12/mo</div><div class="t">Moderate (cadence + Q&amp;A)</div></div>
+    <div class="kpi"><b>Charlotte velocity defended</b><div class="v">≥100/mo</div><div class="t">High (defensive)</div></div>
+    <div class="kpi"><b>Charlotte Weedmaps net new</b><div class="v">+5 reviews</div><div class="t">Moderate (rebuild baseline)</div></div>
+    <div class="kpi"><b>Discovery searches MoM (chain avg)</b><div class="v">+5% to +10%</div><div class="t">Moderate</div></div>
+    <div class="kpi"><b>Direct searches MoM (chain avg)</b><div class="v">+3% to +7%</div><div class="t">Moderate</div></div>
+    <div class="kpi"><b>SoLV "dispensary near me" (chain avg)</b><div class="v">+3 to +6 pts</div><div class="t">Moderate</div></div>
+    <div class="kpi"><b>NAP consistency (BrightLocal)</b><div class="v">≥85% all 8 stores</div><div class="t">High (post May 28 cleanup)</div></div>
+    <div class="kpi"><b>Wisconsin V2 pilot — first redemptions</b><div class="v">≥10</div><div class="t">Stretch</div></div>
+    <div class="kpi"><b>Ontario/OH V2 pilot — first redemptions</b><div class="v">≥5</div><div class="t">Stretch</div></div>
+    <div class="kpi"><b>VIP cohort size (NB)</b><div class="v">defined + tested</div><div class="t">High</div></div>
+  </div>
+
+  <h3>Per-store priority KPIs (see individual strategy reports for full sets)</h3>
+  <table>
+    <tr><th>Store</th><th>Top May KPI</th></tr>
+    <tr><td>Saline</td><td>Pit Stop reinstated · "Paid parking" verified · Discovery +5-10%</td></tr>
+    <tr><td>Big Rapids</td><td>Photo cadence resumed · Q&amp;A 8 seeded · Reviews 8→12/mo</td></tr>
+    <tr><td>Birch Run</td><td>FB URL recovered · Description live · I-75 hyperlocal page live</td></tr>
+    <tr><td>Charlotte</td><td>Velocity diagnostic complete · Weedmaps rebuild · Velocity defended ≥100/mo</td></tr>
+    <tr><td>East Lansing</td><td>5-min visit diagnostic complete · NAP drift fixed · AIQ timing recalibrated</td></tr>
+    <tr><td>Lenox</td><td>Typo + opening date fixed · AIQ onboarded · Ontario/OH V2 piloted</td></tr>
+    <tr><td>Mt Pleasant</td><td>5 missing attributes populated · Noon-window AIQ live · Description live</td></tr>
+    <tr><td>New Buffalo</td><td>WI V2 piloted · VIP cohort formalized · ≥27 monthly AIQ pushes (defended)</td></tr>
+  </table>
+</section>
+
+<section id="guardrails">
+  <h2>⚠️ Compliance &amp; Guardrails (Chain-Wide)</h2>
+  <div class="alert alert-warn">
+    <ul style="margin: 0;">
+      <li><b>21+ language</b> required on every new page + GBP description chain-wide</li>
+      <li><b>No medical claims</b> in any copy (per state cannabis ad rules)</li>
+      <li><b>No pricing in GBP imagery</b> (Google rule + state cannabis rules)</li>
+      <li><b>No app-download or loyalty-enrollment-first CTAs</b> (chain North Star: revenue over loyalty)</li>
+      <li><b>No social media tactics</b> in playbook scope (Dispenza handles graphics/templates only for High Society — confirm with client; some chains permit social, NB/Ess/etc. don't)</li>
+      <li><b>Real client photos only</b> on hyperlocal pages — zero stock images, zero stock landmarks (Google location-signal hygiene)</li>
+      <li><b>Stagger NAP/category changes 2 stores/week × 4 weeks</b> — don't fire all 8 at once (Google may flag coordinated low-quality edits)</li>
+      <li><b>License # in footer</b> on every store subpage (state requirement)</li>
+      <li><b>Direct vs Discovery searches separated</b> in all KPI tables (Dispenza chain-wide standard)</li>
+      <li><b>SMS strategy = product-list-driven</b>, not subject-line copywriting (Darrell's tooling constraint — SMS subject lines are not customizable)</li>
+    </ul>
+  </div>
+</section>
+
+<footer>High Society · May 2026 Dispenza Execution Playbook · Chain-Wide · v1.0 · prepared by Dispenza Dispensary Marketing<br/>Cross-referenced with: 8 store GBP profiles · POS+GBP master file · Local Falcon Apr 3-4 baseline · AIQ messaging cadence calendar · master strategy summary doc</footer>
+
+</div>
+</body>
+</html>
