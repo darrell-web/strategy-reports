@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Noire Dispensary — May 2026 Local SEO &amp; Marketing Strategy</title>
+<style>
+  :root {
+    --noir-900: #0E0B14;
+    --noir-800: #1B1424;
+    --noir-700: #2A1B3D;
+    --plum-700: #4A1E5F;
+    --plum-500: #7C3FA8;
+    --plum-100: #F1E6F8;
+    --rose-500: #C53670;
+    --rose-100: #FBE3EC;
+    --gold: #C9A24A;
+    --gold-light: #F7EBC4;
+    --green: #2BA84A;
+    --green-100: #E6F6EA;
+    --red: #D64545;
+    --red-100: #FFE8E8;
+    --amber: #E8870C;
+    --amber-100: #FFF1DD;
+    --gray-900: #1F2937;
+    --gray-700: #4B5563;
+    --gray-500: #6B7280;
+    --gray-300: #D1D5DB;
+    --gray-100: #F3F4F6;
+    --gray-50: #F9FAFB;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: var(--gray-900);
+    background: var(--gray-50);
+    line-height: 1.6;
+  }
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 32px 80px; }
+
+  /* Cover */
+  .cover {
+    background: linear-gradient(135deg, var(--noir-900) 0%, var(--noir-700) 50%, var(--rose-500) 100%);
+    color: #fff;
+    padding: 80px 32px 100px;
+    margin-bottom: 48px;
+    border-bottom: 6px solid var(--gold);
+  }
+  .cover-inner { max-width: 1100px; margin: 0 auto; }
+  .cover .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 14px;
+    font-weight: 600;
+    opacity: 0.85;
+    margin-bottom: 16px;
+    color: var(--gold-light);
+  }
+  .cover h1 {
+    font-size: 56px;
+    line-height: 1.1;
+    margin: 0 0 20px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+  }
+  .cover h1 span { color: var(--gold); }
+  .cover .subtitle {
+    font-size: 21px;
+    opacity: 0.92;
+    max-width: 780px;
+    margin: 0 0 28px;
+    line-height: 1.45;
+  }
+  .cover .stamp {
+    display: inline-block;
+    background: rgba(255,255,255,0.10);
+    border: 1px solid rgba(255,255,255,0.30);
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 999px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 36px;
+  }
+  .cover .stamp .dot { color: var(--gold); margin-right: 8px; }
+  .cover-meta {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    padding-top: 28px;
+    border-top: 1px solid rgba(255,255,255,0.25);
+  }
+  .cover-meta div .label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0.7;
+  }
+  .cover-meta div .value { font-size: 16px; font-weight: 600; margin-top: 4px; }
+
+  /* Section */
+  section { margin-bottom: 56px; }
+  .section-header {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 8px;
+  }
+  .section-num {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--rose-500);
+    letter-spacing: 3px;
+  }
+  h2 {
+    font-size: 34px;
+    line-height: 1.2;
+    color: var(--noir-700);
+    margin: 0 0 8px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+  }
+  h3 {
+    font-size: 22px;
+    color: var(--plum-700);
+    margin: 28px 0 12px;
+  }
+  h4 { font-size: 17px; color: var(--gray-900); margin: 20px 0 8px; font-weight: 700; }
+  .lede {
+    font-size: 19px;
+    color: var(--gray-700);
+    max-width: 880px;
+    margin-bottom: 24px;
+  }
+
+  /* Cards */
+  .card {
+    background: #fff;
+    border: 1px solid var(--gray-300);
+    border-radius: 12px;
+    padding: 22px 26px;
+    margin: 16px 0;
+  }
+  .card.plum { background: var(--plum-100); border-color: var(--plum-500); }
+  .card.rose { background: var(--rose-100); border-color: var(--rose-500); }
+  .card.alert { background: var(--gold-light); border-left: 5px solid var(--gold); }
+  .card.dark { background: var(--noir-800); color: #E5E7EB; border-color: var(--noir-900); }
+  .card.dark h3, .card.dark h4 { color: var(--gold); }
+
+  /* Strategic bet */
+  .strategic-bet {
+    background: var(--noir-900);
+    color: #fff;
+    padding: 36px 40px;
+    border-radius: 16px;
+    margin: 22px 0;
+    border-left: 6px solid var(--gold);
+  }
+  .strategic-bet .label {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 12px;
+    color: var(--gold);
+    margin-bottom: 14px;
+    font-weight: 700;
+  }
+  .strategic-bet blockquote {
+    font-size: 22px;
+    line-height: 1.4;
+    margin: 0 0 14px;
+    font-weight: 600;
+  }
+  .strategic-bet blockquote em { color: var(--gold); font-style: normal; font-weight: 700; }
+  .strategic-bet p { font-size: 15px; opacity: 0.92; margin: 10px 0 0; line-height: 1.6; }
+
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    margin: 16px 0 24px;
+  }
+  th {
+    background: var(--noir-700);
+    color: #fff;
+    text-align: left;
+    padding: 12px 14px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  td { padding: 11px 14px; border-bottom: 1px solid var(--gray-100); font-size: 14.5px; vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  tr:nth-child(even) td { background: var(--gray-50); }
+  td.right, th.right { text-align: right; font-variant-numeric: tabular-nums; }
+  td.center, th.center { text-align: center; }
+  .ok { color: var(--green); font-weight: 700; }
+  .warn { color: var(--amber); font-weight: 700; }
+  .bad { color: var(--red); font-weight: 700; }
+
+  /* Scorecard rows */
+  .scorecard {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin: 22px 0;
+  }
+  .keyword-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #fff;
+    border: 1px solid var(--gray-300);
+    border-radius: 10px;
+    padding: 14px 16px;
+  }
+  .keyword-row.target { border-color: var(--rose-500); background: var(--rose-100); border-width: 2px; }
+  .rank-badge {
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: var(--green);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 17px;
+  }
+  .rank-badge.warn { background: var(--amber); }
+  .rank-badge.bad { background: var(--red); }
+  .keyword-row .kw { font-weight: 600; flex: 1; font-size: 14.5px; }
+  .keyword-row .solv {
+    font-variant-numeric: tabular-nums;
+    font-weight: 700;
+    color: var(--plum-700);
+    font-size: 13.5px;
+  }
+
+  /* Trend tiles */
+  .trend-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin: 16px 0;
+  }
+  .trend-tile {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px 22px;
+    border: 1px solid var(--gray-300);
+  }
+  .trend-tile .num { font-size: 32px; font-weight: 800; color: var(--plum-700); line-height: 1; font-variant-numeric: tabular-nums; }
+  .trend-tile .label {
+    font-size: 12px;
+    color: var(--gray-700);
+    margin-top: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+  }
+  .trend-tile .change.up { color: var(--green); font-weight: 700; font-size: 13px; margin-top: 6px; }
+  .trend-tile .change.down { color: var(--red); font-weight: 700; font-size: 13px; margin-top: 6px; }
+  .trend-tile .change.flat { color: var(--gray-700); font-weight: 600; font-size: 13px; margin-top: 6px; }
+
+  /* Pillar */
+  .pillar-num {
+    display: inline-block;
+    background: var(--plum-700);
+    color: #fff;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 36px;
+    font-weight: 800;
+    margin-right: 12px;
+    vertical-align: middle;
+  }
+  .pillar-num.zero { background: var(--gold); color: var(--noir-900); }
+  .pillar-meta {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+    background: var(--plum-100);
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin: 12px 0 22px;
+  }
+  .pillar-meta div .label {
+    font-size: 11px;
+    color: var(--plum-700);
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .pillar-meta div .value { font-size: 14.5px; color: var(--noir-700); font-weight: 600; }
+
+  /* Asks */
+  .asks {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+  .ask {
+    background: var(--plum-100);
+    border-radius: 10px;
+    padding: 18px 20px;
+    border-left: 4px solid var(--rose-500);
+  }
+  .ask .num {
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--rose-500);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  .ask .text { font-size: 14.5px; color: var(--noir-700); margin-top: 4px; font-weight: 500; line-height: 1.5; }
+
+  /* Guardrail boxes */
+  .guard-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin: 18px 0; }
+  .guard-block {
+    background: #fff;
+    border: 1px solid var(--gray-300);
+    border-radius: 10px;
+    padding: 20px 22px;
+  }
+  .guard-block.always { border-left: 5px solid var(--green); }
+  .guard-block.never  { border-left: 5px solid var(--red); }
+  .guard-block h4 {
+    margin: 0 0 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 13px;
+  }
+  .guard-block.always h4 { color: var(--green); }
+  .guard-block.never  h4 { color: var(--red); }
+  .guard-block ul { margin: 0; padding-left: 20px; }
+  .guard-block li { font-size: 14px; margin: 6px 0; color: var(--gray-700); }
+
+  ul.tight { margin: 8px 0; padding-left: 22px; }
+  ul.tight li { margin: 5px 0; }
+
+  blockquote.callout {
+    border-left: 4px solid var(--gold);
+    background: var(--gold-light);
+    margin: 14px 0;
+    padding: 14px 20px;
+    color: var(--noir-700);
+    font-size: 15px;
+    border-radius: 0 8px 8px 0;
+  }
+
+  hr { border: none; height: 1px; background: var(--gray-300); margin: 56px 0; }
+
+  .footer {
+    text-align: center;
+    color: var(--gray-500);
+    font-size: 13px;
+    padding: 32px 0 0;
+    border-top: 1px solid var(--gray-300);
+    margin-top: 56px;
+  }
+
+  @media print {
+    body { background: #fff; }
+    .cover { padding: 40px 32px; }
+    section { page-break-inside: avoid; }
+  }
+
+  @media (max-width: 800px) {
+    .cover h1 { font-size: 36px; }
+    .cover-meta { grid-template-columns: 1fr 1fr; }
+    .scorecard, .asks, .guard-grid, .trend-box, .pillar-meta { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== COVER ===== -->
+<header class="cover">
+  <div class="cover-inner">
+    <div class="eyebrow">Local SEO &amp; Marketing Strategy · Maplewood, NJ</div>
+    <h1>Noiré Dispensary<br/><span>May 2026 Strategy</span></h1>
+    <p class="subtitle">Launch the "Let's Get Wild" 6-week promo, ramp pre-delivery buzz toward June 15, and convert recent SEO wins into AOV growth — without giving up brand equity or starting a price war.</p>
+    <div class="stamp"><span class="dot">●</span> Prepared 2026-05-05 · Evidence-Backed</div>
+    <div class="cover-meta">
+      <div><div class="label">Period</div><div class="value">May 1 – May 31, 2026</div></div>
+      <div><div class="label">Prepared By</div><div class="value">Dispenza Dispensary Marketing</div></div>
+      <div><div class="label">For</div><div class="value">Giovanni &amp; Sharquana Paul</div></div>
+      <div><div class="label">Account Lead</div><div class="value">Darrell Clay</div></div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+<!-- ===== EXECUTIVE SUMMARY ===== -->
+<section>
+  <div class="section-header">
+    <div class="section-num">01</div>
+    <h2>Executive Summary</h2>
+  </div>
+  <p class="lede">Noire is in an enviable position. <strong>5.0 stars on 688 Google reviews</strong>, <strong>#1 ranking on every "weed" keyword</strong> (95–98% Share of Local Voice), <strong>6 of 7 target keywords now in the top 3</strong> (up from 4 of 7 in March), a 46.4% gross margin, and a stable $63 AOV every month since the Sweed migration in June 2025. The next 60 days are about converting that earned authority into revenue lift.</p>
+
+  <h3>Four forces shape May</h3>
+  <ul class="tight">
+    <li><strong>"Let's Get Wild" launches Mon, May 11</strong> — a 6-week bundle-driven promo, integrated into 3–4 of the weekly comms (not single-focus, to protect flower momentum).</li>
+    <li><strong>Delivery hard-launches Sun, June 15</strong> — the marketing campaign starts ~June 1 (Memorial Day weekend gives a natural launch ramp).</li>
+    <li><strong>The "everyday low pricing" pivot on flower</strong> is showing up in real numbers (March traffic surge, +50% flower units), but the brand promise stays <em>affordable luxury</em> — not low-cost leader.</li>
+    <li><strong>The April 11 Local Falcon scan reveals a single remaining ranking gap:</strong> "dispensary" plain at #9 (17.36% SoLV), while every other keyword is top 3. The pattern matches Joyleaf's exactly — the GBP carries "Noire <em>Weed</em> Dispensary" so Google reads "weed dispensary" perfectly but plain "dispensary" weakly. The Joyleaf-proven structural fix (website H1/meta only — no GBP rename) is the highest-leverage ranking move available this month.</li>
+  </ul>
+
+  <p>May translates each of those into shippable work: Wild Deal cadence + assets, GBP cleanup before delivery flips on, the About Us personal refresh, structural website fixes for "dispensary" rank, and front-of-funnel optimization (the 84% sign-in drop-off is the single largest revenue unlock available).</p>
+</section>
+
+<hr/>
+
+<!-- ===== 02 STATE OF PLAY ===== -->
+<section>
+  <div class="section-header">
+    <div class="section-num">02</div>
+    <h2>Where We Stand — April Snapshot</h2>
+  </div>
+
+  <h3>GBP Performance <span style="font-size:14px; color: var(--gray-500); font-weight:400;">(verified 2026-05-05)</span></h3>
+  <table>
+    <thead><tr><th>Metric</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Google rating</strong></td><td><span class="ok">5.0 ★ on 688 reviews</span></td></tr>
+      <tr><td>Cross-platform</td><td>Weedmaps 5/5 (4) · Leafly 5/5 (2) <span class="ok">✓</span></td></tr>
+      <tr><td>Owner attributes set</td><td>Black-owned ✓ · Women-owned ✓ · Small business ✓</td></tr>
+      <tr><td>Inclusion attributes</td><td>LGBTQ+ friendly ✓ · Transgender safespace ✓</td></tr>
+      <tr><td>Service options</td><td>In-store · Curbside · "Offers delivery" already live <span class="warn">⚠</span></td></tr>
+      <tr><td>Service area</td><td>7 NJ towns set (Union, Summit, Livingston, East Orange, Springfield, Irvington, West Orange)</td></tr>
+      <tr><td>Opening date</td><td><span class="bad">Not set</span> — should be 2023-10-28</td></tr>
+      <tr><td>Description</td><td>Generic; no ownership story, no adjacency, no delivery mention</td></tr>
+      <tr><td>Photos</td><td>Healthy mix; fresh customer photo "a week ago" — much improved vs. February's 11-photo baseline</td></tr>
+      <tr><td>Categories</td><td>Cannabis store (primary) + Homeopath / Vitamin &amp; Supplements / Holistic — secondaries unusual; worth confirming</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Keyword Rankings <span style="font-size:14px; color: var(--gray-500); font-weight:400;">(Local Falcon · April 11, 2026 · 2-mile grid)</span></h3>
+  <div class="scorecard">
+    <div class="keyword-row"><div class="rank-badge">1</div><div class="kw">weed near me</div><div class="solv">98.35% · ↑0.83</div></div>
+    <div class="keyword-row"><div class="rank-badge">1</div><div class="kw">weed dispensary</div><div class="solv">95.87% · ↑2.48</div></div>
+    <div class="keyword-row"><div class="rank-badge">1</div><div class="kw">weed</div><div class="solv">96.69% · ↑5.78</div></div>
+    <div class="keyword-row"><div class="rank-badge">2</div><div class="kw">cannabis</div><div class="solv">36.36% · ↑5.78</div></div>
+    <div class="keyword-row"><div class="rank-badge">3</div><div class="kw">cannabis near me</div><div class="solv">34.71% · ↑6.61</div></div>
+    <div class="keyword-row"><div class="rank-badge">3</div><div class="kw">dispensary near me</div><div class="solv">29.75% · ↑5.78</div></div>
+    <div class="keyword-row target"><div class="rank-badge bad">9</div><div class="kw"><strong>dispensary</strong> — May target</div><div class="solv">17.36% · ↑3.31</div></div>
+  </div>
+  <p><strong>Top-3 keywords: 6 of 7 ✅</strong> (up from 4 of 7 in March). Three of those sit at #1 with 95%+ SoLV — "weed" terms are essentially uncontested. The single remaining gap is <strong>"dispensary"</strong> — a structural pattern, not an authority gap.</p>
+
+  <h3>Competitive Landscape <span style="font-size:14px; color: var(--gray-500); font-weight:400;">(April 11 scan)</span></h3>
+  <table>
+    <thead><tr><th>Competitor</th><th>Strongest term</th><th>Read</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Apothecarium of Maplewood</strong></td><td>dispensary 55% · dispensary near me 47%</td><td>Structural leader on "dispensary" — recovering from a Q1 dip; collapsing on "cannabis"</td></tr>
+      <tr><td><strong>Elevated by TheCannaBossLady</strong></td><td>cannabis 62% · cannabis near me 60%</td><td><strong>Fastest-rising competitor.</strong> Gained 11.58 SoLV on "dispensary" in one cycle. Black-owned framing similar to Noire — new priority watch</td></tr>
+      <tr><td><strong>Noire (us)</strong></td><td>weed 97% · weed near me 98% · weed dispensary 96%</td><td>Owns "weed" cluster outright; closing on "cannabis"; long climb on "dispensary"</td></tr>
+      <tr><td>Legal Leaf NJ Springfield</td><td>dispensary 27% · cannabis 31%</td><td><span class="warn">⚠</span> Flagged as unlicensed in master summary; worth re-confirming licensing status</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Sweed E-Commerce Funnel <span style="font-size:14px; color: var(--gray-500); font-weight:400;">(14-month view)</span></h3>
+  <table>
+    <thead><tr><th>Step</th><th class="right">Sessions</th><th class="right">% of Total</th></tr></thead>
+    <tbody>
+      <tr><td>Catalog view</td><td class="right">45,235</td><td class="right">100.0%</td></tr>
+      <tr><td>Sign-in</td><td class="right">6,965</td><td class="right"><span class="warn">15.4% ⚠</span></td></tr>
+      <tr><td>Add to Cart</td><td class="right">5,190</td><td class="right">11.5%</td></tr>
+      <tr><td>Checkout</td><td class="right">3,243</td><td class="right">7.2%</td></tr>
+      <tr><td>Place Order</td><td class="right">2,156</td><td class="right">4.8%</td></tr>
+    </tbody>
+  </table>
+
+  <h3>POS Headlines <span style="font-size:14px; color: var(--gray-500); font-weight:400;">(Sweed migration: Jun 2025 → present)</span></h3>
+  <div class="trend-box">
+    <div class="trend-tile"><div class="num">$851K</div><div class="label">Net sales · 14 mo</div><div class="change flat">13,450 transactions</div></div>
+    <div class="trend-tile"><div class="num">$63.29</div><div class="label">AOV</div><div class="change flat">stable $62–$65 every month</div></div>
+    <div class="trend-tile"><div class="num">46.4%</div><div class="label">Gross margin</div><div class="change up">0.4% refund · 18.3% discount</div></div>
+  </div>
+  <blockquote class="callout">
+    <strong>AOV target:</strong> $70 pre-delivery, $80–$85 post-delivery. Current trajectory is flat. Hitting $70 in May/June requires structural mix change — bundle uptake and premium-SKU upsell — not promo timing alone.
+  </blockquote>
+</section>
+
+<hr/>
+
+<!-- ===== 03 STRATEGIC BET ===== -->
+<section>
+  <div class="section-header">
+    <div class="section-num">03</div>
+    <h2>The Strategic Bet for May</h2>
+  </div>
+  <p class="lede">May has <strong>two parallel bets</strong> — one revenue, one ranking. Both are high-leverage and neither blocks the other.</p>
+
+  <div class="strategic-bet">
+    <div class="label">Bet A · Revenue</div>
+    <blockquote>The fastest path from 4.8% conversion to 5.5–6% is <em>not more traffic</em> — it's fixing the front of the funnel.</blockquote>
+    <p>84.6% of catalog viewers never sign in. Every Sweed segment, every retention email, every loyalty enrollment starts at sign-in. That single fix outperforms anything else we could do this month.</p>
+    <p>The supporting bet: the "Let's Get Wild" deal lifts AOV without cannibalizing flower — because we're integrating it into 3–4 weekly comms (not single-focus), pairing edibles with flower bundles, and using it to drive bundle uptake (the $20-eighth → $15 model).</p>
+  </div>
+
+  <div class="strategic-bet">
+    <div class="label">Bet B · Ranking</div>
+    <blockquote>Make <em>"Noire Dispensary"</em> as recognizable to Google as "Noire Weed Dispensary" already is.</blockquote>
+    <p>Of 7 target keywords, only one — "dispensary" plain — is outside the top 3. The reason is structural: the GBP carries "Noire <em>Weed</em> Dispensary" in its name, which Google reads strongly for "weed dispensary" but weakly for plain "dispensary." Apothecarium owns 55% SoLV on "dispensary" because their name is just "The Apothecarium Dispensary."</p>
+    <p>The fix is identical to the Joyleaf playbook (deployed earlier this year and proven): structural website changes — H1, meta titles, schema — that emphasize "Noire Dispensary" without changing the GBP name (which carries suspension risk in NJ). Within 2–4 weeks of crawl, this typically moves the underperforming term meaningfully.</p>
+  </div>
+
+  <p>Combined, these two bets cover both immediate revenue and durable ranking. Everything below ladders up to them.</p>
+</section>
+
+<hr/>
+
+<!-- ===== 04 PILLAR 0 ===== -->
+<section>
+  <div class="section-header">
+    <div class="section-num">04A</div>
+    <h2><span class="pillar-num zero">0</span>Website Structural Fixes <span style="font-size:18px; color:var(--gray-500); font-weight:500;">— closes the "dispensary" gap</span></h2>
+  </div>
+  <div class="pillar-meta">
+    <div><div class="label">Why</div><div class="value">Joyleaf-proven · single biggest leverage item for ranking</div></div>
+    <div><div class="label">Owner</div><div class="value">Shay (with NM team for schema)</div></div>
+    <div><div class="label">Ship</div><div class="value">Week 1</div></div>
+  </div>
+
+  <p>The Joyleaf-proven approach. Recommended changes to noiredispensary.com:</p>
+  <table>
+    <thead><tr><th style="width:24%;">Element</th><th style="width:36%;">Current (likely)</th><th style="width:40%;">Proposed</th></tr></thead>
+    <tbody>
+      <tr><td>Homepage H1</td><td>"Noire Weed Dispensary" framing</td><td><code>Maplewood's Trusted Cannabis Dispensary</code> · subhead "Noire Dispensary"</td></tr>
+      <tr><td>Location/menu page H1</td><td>Same as homepage</td><td><code>Noire Dispensary — Maplewood, NJ</code></td></tr>
+      <tr><td>Homepage meta title</td><td>"Trusted Recreational Cannabis in Maplewood, NJ"</td><td><code>Noire Dispensary | Maplewood NJ Cannabis &amp; Delivery</code></td></tr>
+      <tr><td>About Us page H1</td><td>(TBD — current copy unknown)</td><td><code>About Noire Dispensary | Black-Owned, Family-Run in Maplewood</code></td></tr>
+      <tr><td>LocalBusiness schema</td><td>TBD</td><td>Add JSON-LD with <code>alternateName</code>: ["Noire Dispensary", "Noiré Dispensary", "Noire Cannabis Dispensary"]</td></tr>
+      <tr><td>Long-form SEO landing page</td><td>TBD</td><td>Audit; emphasize "Noire Dispensary" instead of "Weed Dispensary"</td></tr>
+    </tbody>
+  </table>
+
+  <div class="card alert">
+    <strong>Why it matters:</strong> Google reads the H1 as the most important on-page indicator. Today most pages tell Google "this is a weed dispensary." Updating these elements gives Google the clean "Noire Dispensary" association it currently lacks — without changing the GBP name.<br/><br/>
+    <strong>Expected impact:</strong> Within 2–4 weeks of crawl, "dispensary" should move from #9 toward #6–#7; "dispensary near me" should hold #3 with rising SoLV.<br/><br/>
+    <strong>Note:</strong> The current website is bot-blocked from external crawlers (403 to programmatic fetches). Before shipping H1/meta changes, Shay should pull current state from the CMS so we have a verified before/after.
+  </div>
+</section>
+
+<!-- ===== 04 PILLAR 1 ===== -->
+<section>
+  <div class="section-header">
+    <div class="section-num">04B</div>
+    <h2><span class="pillar-num">1</span>"Let's Get Wild" Deal Launch</h2>
+  </div>
+  <div class="pillar-meta">
+    <div><div class="label">Goal</div><div class="value">3–4 outreach touches/wk without breaking flower cadence</div></div>
+    <div><div class="label">Launch</div><div class="value">Mon, May 11 (runs ~6 weeks)</div></div>
+    <div><div class="label">Treatment</div><div class="value">Bolt-on — never a replacement</div></div>
+  </div>
+
+  <table>
+    <thead><tr><th>Sub-track</th><th>Owner</th><th>Deadline</th></tr></thead>
+    <tbody>
+      <tr><td>Wild assets (in-store TV, flyer, hero, social, push imagery)</td><td>Shay</td><td>Fri <strong>May 8</strong></td></tr>
+      <tr><td>Sweed comms templates (SMS / push / email)</td><td>Darrell</td><td>Sat <strong>May 9</strong> (after assets)</td></tr>
+      <tr><td>Initial dedicated email + SMS blast</td><td>Darrell</td><td>Mon <strong>May 11</strong></td></tr>
+      <tr><td>Soft sprinkle in weekend Fri–Sun comms</td><td>Darrell</td><td>May 9–10</td></tr>
+      <tr><td>1-month outreach calendar PDF for owner review</td><td>Darrell</td><td>Wk of May 12</td></tr>
+      <tr><td>Squeeze page noirerewards.com</td><td>Giovanni · Nick's team</td><td>Domain by EOD May 5; build follows</td></tr>
+    </tbody>
+  </table>
+
+  <h4>Cadence rules (from the 5/4 meeting)</h4>
+  <ul class="tight">
+    <li>Send to <strong>everyone</strong> (not edible-focused only) — the offer is bundle-driven</li>
+    <li>Integrate into 3–4 of the weekly outreaches (not all)</li>
+    <li>Lead some campaigns with edibles, others with flower — alternate so neither category gets cannibalized</li>
+    <li><strong>Push notifications:</strong> target Fri 3–7 PM, Sat 1–5 PM, Sun 1–4 PM (validated by Sweed busiest-times heatmap and GBP popular-times)</li>
+    <li><strong>Tuesday is the slowest weekday</strong> (avg 3 orders/hr) → "Wild Tuesday" candidate to lift the floor</li>
+  </ul>
+
+  <div class="card alert">
+    <strong>Brand guardrail:</strong> Use "affordable," "great pricing," "everyday low pricing on flower." <strong>Never</strong> use absolute superlatives ("low-cost leader," "cheapest in NJ," etc.) — vertically integrated competition would win that race; Noire has no grow op.
+  </div>
+</section>
+
+<!-- ===== 04 PILLAR 2 ===== -->
+<section>
+  <div class="section-header">
+    <div class="section-num">04C</div>
+    <h2><span class="pillar-num">2</span>GBP Optimization — Pre-Delivery Cleanup</h2>
+  </div>
+  <div class="pillar-meta">
+    <div><div class="label">Goal</div><div class="value">Get GBP to a state where June 1 delivery campaign flips a switch</div></div>
+    <div><div class="label">Owner</div><div class="value">Darrell + Giovanni</div></div>
+    <div><div class="label">Ship</div><div class="value">Week 1</div></div>
+  </div>
+
+  <h3>2a. Description rewrite (Wk 1)</h3>
+  <p>Current copy is generic. Proposed rewrite leans into the verifiable, on-record claims pulled from indexed press coverage:</p>
+  <blockquote class="callout">
+    Noire Weed Dispensary in Maplewood is <strong>Maplewood's first Black-owned, family-run cannabis dispensary</strong> and the <strong>first Black-owned adult-use cannabis shop in North Jersey</strong>. Owned by husband-and-wife team Giovanni and Sharquana Paul, Noire serves Maplewood, South Orange, West Orange, Irvington, Newark, Union, Springfield, and surrounding Essex County communities. We carry premium flower, pre-rolls, vape cartridges, edibles, concentrates, and accessories from trusted brands including Camino, WYLD, Verano, Cookies, Wana, Lowell, Fernway, and Rythm. Members of the <strong>Noire Dispensary Loyalty Program</strong> earn points on every purchase — sign up in-store or online. <strong>Delivery launching June 15, 2026.</strong> First Responders save 10% on every order.
+  </blockquote>
+
+  <h4>Why each line earns its keep</h4>
+  <ul class="tight">
+    <li>"Maplewood's first Black-owned, family-run" → high-CTR ownership signal + verifiable</li>
+    <li>"First Black-owned adult-use shop in North Jersey" → defensible regional claim (per Maplewood Patch + SAX press)</li>
+    <li>Husband-and-wife framing → narrative anchor for the About Us refresh</li>
+    <li>8 town adjacency mentions → non-branded discovery in surrounding markets</li>
+    <li>Brand list (Camino, WYLD, Verano, etc.) → matches verified top sellers</li>
+    <li>Loyalty mention by name → drives the sign-up funnel</li>
+    <li>Delivery + First Responder → the two always-on calls-to-action</li>
+  </ul>
+
+  <h3>2b. Other GBP fixes (Wk 1)</h3>
+  <table>
+    <thead><tr><th style="width:30%;">Fix</th><th>Why</th><th style="width:18%;">Effort</th></tr></thead>
+    <tbody>
+      <tr><td>Set <strong>Opening date</strong> to <strong>2023-10-28</strong></td><td>Tenure signal currently missing</td><td>&lt;1 min</td></tr>
+      <tr><td>Resolve <strong>"Offers delivery"</strong> attribute vs. site copy ("coming soon")</td><td>Maps users may discover Noire today and bounce when delivery doesn't exist yet</td><td>Decision call needed</td></tr>
+      <tr><td>Confirm <strong>secondary categories</strong> (Homeopath, Vitamin &amp; Supplements, Holistic)</td><td>Unusual; could be helping or hurting non-branded discovery</td><td>Owner conversation</td></tr>
+      <tr><td>Add <strong>"Delivery hours"</strong> under Add-more-hours</td><td>Flips on at 6/15 launch</td><td>&lt;2 min</td></tr>
+      <tr><td>Verify <strong>"Accepts debit cards"</strong></td><td>Google auto-added; confirm POS reality</td><td>Owner conversation</td></tr>
+    </tbody>
+  </table>
+  <div class="card alert">
+    <strong>Recommended decision on the delivery attribute:</strong> Keep it on, and use the description (above) + a pinned GBP Post to set the June 15 expectation. Buzz-builds for free; alternative (turn off and turn on at launch) loses the discovery window.
+  </div>
+
+  <h3>2c. Posts cadence (3/week)</h3>
+  <table>
+    <thead><tr><th>Day</th><th>Type</th><th>Theme</th></tr></thead>
+    <tbody>
+      <tr><td>Mon</td><td>Offer / Update</td><td>Wild Deal weekly feature</td></tr>
+      <tr><td>Wed</td><td>Update / Lifestyle</td><td>Brand spotlight (e.g., Camino loyalty hook), strain pick, or community moment</td></tr>
+      <tr><td>Fri</td><td>Update / Educational</td><td>Holiday tie-in (Mother's Day, Memorial Day) or owner story snippet</td></tr>
+    </tbody>
+  </table>
+
+  <h4>May Posts schedule</h4>
+  <ul class="tight">
+    <li><strong>Wk 1 (May 5–11):</strong> Mother's Day gift guide · Wild Deal teaser · Wild Deal launch (May 11)</li>
+    <li><strong>Wk 2 (May 12–18):</strong> Featured Wild bundle · About Us refresh + photo (post-Giovanni hand-off) · Loyalty Program sign-up CTA</li>
+    <li><strong>Wk 3 (May 19–25):</strong> Memorial Day weekend hours · "Delivery launching June 15" announcement (first time) · Memorial Day BBQ pairing pick</li>
+    <li><strong>Wk 4 (May 26–31):</strong> Memorial Day recap · Delivery service area reveal · Owner spotlight Q&amp;A</li>
+  </ul>
+
+  <h3>2d. Photos</h3>
+  <p>The photo gap vs. competitors needs an actual count. <strong>Action:</strong> pull a side-by-side photo count for Noire vs. the 4 "People also search for" competitors as part of the May review-cycle scan.</p>
+  <p>May photo upload targets (5+/week): Wild Deal in-store displays · Mother's Day gift packaging · Owner photo (Giovanni + Sharquana) · Delivery announcement creative · Customer-generated content via QR codes.</p>
+</section>
+
+<!-- ===== 04 PILLAR 3 ===== -->
+<section>
+  <div class="section-header">
+    <div class="section-num">04D</div>
+    <h2><span class="pillar-num">3</span>About Us Refresh + Owner Story</h2>
+  </div>
+  <div class="pillar-meta">
+    <div><div class="label">Goal</div><div class="value">Brand humanization moment</div></div>
+    <div><div class="label">Source</div><div class="value">Decision in 5/4 meeting</div></div>
+    <div><div class="label">Ship</div><div class="value">Week 2</div></div>
+  </div>
+
+  <h3>3a. Website</h3>
+  <ul class="tight">
+    <li>Replace generic About Us section with <strong>photo of Giovanni + Sharquana</strong> (Giovanni → Shay)</li>
+    <li>Add personal story copy — recommended frame:</li>
+  </ul>
+  <blockquote class="callout">
+    "We're Giovanni and Sharquana Paul — a husband-and-wife team and Brooklyn natives who built Noire while raising five kids. We finalized the Noire business plan in the hospital while Sharquana was in labor with our fifth. Five years of CBD retail experience and one shared belief — that great cannabis service starts with people you trust — led us to open Noire in October 2023 as the first Black-owned adult-use dispensary in North Jersey. We're proud members of the NAACP of South Orange &amp; Maplewood, NJCBA, NJCTA, and the North NJ Chamber of Commerce. Welcome to the family."
+  </blockquote>
+  <p><strong>Why this works:</strong> All on-record (verified via Maplewood Patch + SAX Advisory press), specific (Brooklyn, 5 kids, hospital story), converts ownership-signal CTR into emotional connection. Privacy was a stated concern — this version keeps it dignified.</p>
+
+  <h3>3b. GBP cross-link</h3>
+  <p>The About Us photo + story should also surface as a GBP Post the same week it goes live on the site (Wk 2).</p>
+
+  <h3>3c. Press page refresh</h3>
+  <p>The site has a <code>/press/</code> page; recommend Dispenza pulls the press logos into a stripe near About Us: <em>"As featured in Maplewood Patch, SAX Advisory, Cannabis Law Report."</em></p>
+</section>
+
+<!-- ===== 04 PILLAR 4 ===== -->
+<section>
+  <div class="section-header">
+    <div class="section-num">04E</div>
+    <h2><span class="pillar-num">4</span>Delivery Pre-Launch Ramp <span style="font-size:18px; color:var(--gray-500); font-weight:500;">— toward June 15</span></h2>
+  </div>
+  <div class="pillar-meta">
+    <div><div class="label">Goal</div><div class="value">Build June 15 buzz with no CX risk in May</div></div>
+    <div><div class="label">Owner</div><div class="value">Shay (web) · Darrell (comms)</div></div>
+    <div><div class="label">Ship</div><div class="value">Wks 3–5</div></div>
+  </div>
+
+  <table>
+    <thead><tr><th>Wk</th><th>Deliverable</th><th>Owner</th></tr></thead>
+    <tbody>
+      <tr><td>Wk 1</td><td>Delivery page added to web queue</td><td>Shay (Nick's team)</td></tr>
+      <tr><td>Wk 3</td><td>First "Delivery launching June 15" GBP Post</td><td>Darrell</td></tr>
+      <tr><td>Wk 4</td><td>Delivery service-area reveal (which 7 towns)</td><td>Darrell</td></tr>
+      <tr><td>Wk 4 (May 31)</td><td>Delivery page goes live</td><td>Shay</td></tr>
+      <tr><td>Wk 4 (May 31)</td><td>Delivery graphics pack ready (TVs, flyers, digital)</td><td>Shay</td></tr>
+      <tr><td>Wk 4 (May 31)</td><td>Sweed delivery campaign templates drafted</td><td>Darrell</td></tr>
+      <tr><td>Wk 4 (May 31)</td><td>Budtender talking-points one-pager</td><td>Darrell + Giovanni</td></tr>
+    </tbody>
+  </table>
+
+  <div class="card alert">
+    The 7-town service area is already configured on GBP — but <strong>South Orange (immediately adjacent) is missing.</strong> Recommend adding it before the June 1 campaign starts; it's the most surprising omission and the closest market.
+  </div>
+  <p><strong>Pricing per the 5/4 meeting:</strong> $5 delivery fee OR markup model · $50 minimum order (confirm before announcing).</p>
+</section>
+
+<!-- ===== 04 PILLAR 5 ===== -->
+<section>
+  <div class="section-header">
+    <div class="section-num">04F</div>
+    <h2><span class="pillar-num">5</span>Funnel &amp; AOV Optimization</h2>
+  </div>
+  <div class="pillar-meta">
+    <div><div class="label">Goal</div><div class="value">Highest-leverage work this month</div></div>
+    <div><div class="label">Visibility</div><div class="value">Lowest-visibility from outside</div></div>
+    <div><div class="label">Owner</div><div class="value">Shay + Darrell</div></div>
+  </div>
+
+  <h3>5a. Sign-in incentive — the 84.6% leak</h3>
+  <p><strong>Test:</strong> Add a one-time-discount sign-in modal/banner — <em>"Save 10% on your first order — create a free account."</em></p>
+  <ul class="tight">
+    <li>Goal: lift Catalog → Sign-in from 15.4% → 25%</li>
+    <li>Even modest progress (15.4% → 20%) is worth ~$10K/mo in incremental net sales at current conversion math</li>
+    <li><strong>Scope to Wk 2</strong> so we can measure 2–3 weeks of clean data before the June planning conversation</li>
+  </ul>
+
+  <h3>5b. Sign-up form audit</h3>
+  <ul class="tight">
+    <li>"Not Selected" is the largest gender bucket; visible 18–20 age stream is a data error (NJ rec is 21+)</li>
+    <li>Recommend: simplify gender field to "Prefer not to say" default, audit age-validation gating</li>
+    <li><strong>Scope to Wk 2–3</strong></li>
+  </ul>
+
+  <h3>5c. Demographics reporting hygiene</h3>
+  <p>"Cova Migration" + "Alpine Migration" dominate source attribution but they're <strong>historical, not active acquisition</strong>. For monthly reporting, filter those out and report only on Walk-In, Google, Leafly, Apple, Referral, Social Media — that's the live channel mix.</p>
+
+  <h3>5d. Wild Deal upsell training</h3>
+  <p><strong>Kenyana Ramos averages a $70.52 ticket</strong> — already at the team's stated pre-delivery target. Roll the Wild Deal upsell script to her first; she'll execute and validate. Then she trains Joanne (whose 794-second avg transaction time has the most room to compress).</p>
+</section>
+
+<hr/>
+
+<!-- ===== 05 CALENDAR ===== -->
+<section>
+  <div class="section-header">
+    <div class="section-num">05</div>
+    <h2>May Calendar at a Glance</h2>
+  </div>
+  <table>
+    <thead><tr><th style="width:14%;">Week</th><th style="width:22%;">Key dates</th><th>Deliverables</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Wk 1</strong> (May 1–4)</td><td>Pre-launch</td><td>GBP description rewrite. Set opening date. Add Mother's Day GBP post. Resolve delivery-attribute decision. Push noirerewards.com domain purchase + access.</td></tr>
+      <tr><td><strong>Wk 2</strong> (May 5–11)</td><td>Mother's Day (May 10) · <strong>WILD LAUNCH (May 11)</strong></td><td>Wild assets ship Fri May 8. Wild Sweed templates ready Sat May 9. Soft sprinkle Fri–Sun. Hard launch Mon May 11 with dedicated email + SMS. Sign-in incentive A/B test live.</td></tr>
+      <tr><td><strong>Wk 3</strong> (May 12–18)</td><td>Wild Wk 2</td><td>About Us refresh ships (photo + story). 1-month Wild outreach calendar PDF to GP &amp; SP. GBP Posts: bundle feature, About Us reveal, loyalty CTA. Sign-up form audit.</td></tr>
+      <tr><td><strong>Wk 4</strong> (May 19–25)</td><td>Memorial Day (May 25) · Wild Wk 3</td><td>First "Delivery launching June 15" GBP Post. Memorial Day weekend hours confirmed + posted. Memorial Day campaign blast. Delivery page build kicks off.</td></tr>
+      <tr><td><strong>Wk 5</strong> (May 26–31)</td><td>Wild Wk 4 → Delivery ramp</td><td>Delivery service-area reveal. Delivery page live (May 31). Delivery graphics pack ready. June campaign templates drafted. May results scan + June hand-off.</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<hr/>
+
+<!-- ===== 06 KPIs ===== -->
+<section>
+  <div class="section-header">
+    <div class="section-num">06</div>
+    <h2>KPIs &amp; Targets</h2>
+  </div>
+  <table>
+    <thead><tr><th>Metric</th><th>April Baseline</th><th>May Target</th><th>Stretch</th></tr></thead>
+    <tbody>
+      <tr><td>Wild Deal launch executed on time</td><td>—</td><td>Mon May 11</td><td>—</td></tr>
+      <tr><td>Catalog → Sign-in rate</td><td>15.4%</td><td>18%+</td><td>22%+</td></tr>
+      <tr><td>AOV</td><td>$62.90</td><td>$64+</td><td>$66+</td></tr>
+      <tr><td>Monthly transactions</td><td>1,207</td><td>1,250+</td><td>1,350+</td></tr>
+      <tr><td>Net sales</td><td>$75,916</td><td>$80,000+</td><td>$87,000+</td></tr>
+      <tr><td>Reviews added</td><td>TBD</td><td>30+</td><td>50+</td></tr>
+      <tr><td>GBP description includes ownership + adjacency + delivery</td><td><span class="bad">❌</span></td><td><span class="ok">✅</span></td><td><span class="ok">✅</span></td></tr>
+      <tr><td>About Us refresh live</td><td><span class="bad">❌</span></td><td><span class="ok">✅</span></td><td><span class="ok">✅</span></td></tr>
+      <tr><td>Delivery page live by May 31</td><td><span class="bad">❌</span></td><td><span class="ok">✅</span></td><td><span class="ok">✅</span></td></tr>
+      <tr><td>Website H1/meta "Dispensary" structural fixes shipped</td><td><span class="bad">❌</span></td><td><span class="ok">✅ Wk 1</span></td><td><span class="ok">✅</span></td></tr>
+      <tr><td>"Weed" / "Weed near me" / "Weed dispensary" rank</td><td>#1, 95–98% SoLV</td><td>hold #1, 95%+</td><td>hold #1, 97%+</td></tr>
+      <tr><td>"Cannabis" rank</td><td>#2, 36% SoLV</td><td>hold #2, 38%+ SoLV</td><td>move to #2, 42%+</td></tr>
+      <tr><td>"Cannabis Near Me" rank</td><td>#3, 35% SoLV</td><td>hold #3, 38%+</td><td>move to #2</td></tr>
+      <tr><td>"Dispensary Near Me" rank</td><td>#3, 30% SoLV</td><td>hold #3, 33%+</td><td>move to #2, 38%+</td></tr>
+      <tr><td>"Dispensary" rank</td><td>#9, 17% SoLV</td><td>#6–7, 22%+</td><td>#5, 28%+</td></tr>
+      <tr><td>Top-3 keywords</td><td>6 of 7</td><td>6 of 7 (defended)</td><td>7 of 7</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<hr/>
+
+<!-- ===== 07 REPORTING ===== -->
+<section>
+  <div class="section-header">
+    <div class="section-num">07</div>
+    <h2>Reporting Cadence</h2>
+  </div>
+  <ul class="tight">
+    <li><strong>Weekly (Mondays):</strong> Wild Deal performance snapshot — Sweed funnel + comms send rates</li>
+    <li><strong>Mid-month check-in (May 18):</strong> GBP description impact + sign-in rate read</li>
+    <li><strong>End-of-month report (Wk of June 1):</strong> Full May performance review + delivery-launch readiness checklist</li>
+  </ul>
+</section>
+
+<hr/>
+
+<!-- ===== 08 ASKS ===== -->
+<section>
+  <div class="section-header">
+    <div class="section-num">08</div>
+    <h2>What We Need From Noire</h2>
+  </div>
+  <p class="lede">To execute May on time:</p>
+  <div class="asks">
+    <div class="ask"><div class="num">Ask 01</div><div class="text"><strong>Approval to ship the website structural fixes</strong> (Pillar 0 — H1, meta, schema) by <strong>May 5</strong>. Dispenza dev can deploy if approved.</div></div>
+    <div class="ask"><div class="num">Ask 02</div><div class="text">Domain access for <strong>noirerewards.com</strong> (Giovanni → Nick's team, EOD May 5)</div></div>
+    <div class="ask"><div class="num">Ask 03</div><div class="text">About Us photo + personal-story text (Giovanni → Shay, Wk 1)</div></div>
+    <div class="ask"><div class="num">Ask 04</div><div class="text">Decision on the GBP <strong>"Offers delivery"</strong> attribute — keep on with "coming soon" framing (recommended) or temporarily remove</div></div>
+    <div class="ask"><div class="num">Ask 05</div><div class="text">Confirmation of secondary GBP categories (Homeopath / Vitamin &amp; Supplements / Holistic — keep or remove?)</div></div>
+    <div class="ask"><div class="num">Ask 06</div><div class="text">Confirmation of <strong>South Orange</strong> service-area inclusion (currently missing — relevant to eastern grid edge weakness)</div></div>
+    <div class="ask"><div class="num">Ask 07</div><div class="text">Delivery pricing confirmation ($5 fee OR markup; $50 minimum order)</div></div>
+    <div class="ask"><div class="num">Ask 08</div><div class="text">Memorial Day weekend hours (default to standard unless told otherwise)</div></div>
+  </div>
+</section>
+
+<hr/>
+
+<!-- ===== 09 GUARDRAILS ===== -->
+<section>
+  <div class="section-header">
+    <div class="section-num">09</div>
+    <h2>Strict Guardrails</h2>
+  </div>
+  <div class="guard-grid">
+    <div class="guard-block always">
+      <h4>Always</h4>
+      <ul>
+        <li>"Affordable luxury" framing in copy</li>
+        <li>21+ language on every public asset</li>
+        <li>License # in website footer (NJ regulatory)</li>
+        <li>Defensible ownership claims only — Black-owned, women-owned, husband-and-wife, North Jersey first (all verifiable)</li>
+        <li>Sweed SMS = product + price (no subject-line hooks; tool constraint)</li>
+      </ul>
+    </div>
+    <div class="guard-block never">
+      <h4>Never</h4>
+      <ul>
+        <li>"Low-cost leader," "cheapest," "lowest prices in NJ" — triggers price war Noire can't win</li>
+        <li>Medical claims (NJ regulatory)</li>
+        <li>Cannabis content on Meta/Google ads (use noirerewards.com squeeze page; main URL has "dispensary")</li>
+        <li>Single-focus Wild Deal comms — must integrate with flower-led campaigns</li>
+        <li>Promo announcements on Wild Deal that conflict with bundle clarity (rules live on the squeeze page)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="footer">
+  Questions, edits, or pushback — Darrell is the point of contact at Dispenza.<br/>
+  <em>Noiré Dispensary · 171 Maplewood Ave, Maplewood NJ · noiredispensary.com</em>
+</div>
+
+</div>
+</body>
+</html>

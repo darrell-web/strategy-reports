@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Noiré Dispensary — May 2026 Execution Playbook · Internal</title>
+<style>
+  :root {
+    --noir-900: #0E0B14;
+    --noir-800: #1B1424;
+    --noir-700: #2A1B3D;
+    --plum-700: #4A1E5F;
+    --plum-500: #7C3FA8;
+    --plum-100: #F1E6F8;
+    --rose-500: #C53670;
+    --rose-100: #FBE3EC;
+    --gold: #C9A24A;
+    --gold-light: #F7EBC4;
+    --green: #2BA84A;
+    --green-100: #E6F6EA;
+    --red: #D64545;
+    --red-100: #FFE8E8;
+    --amber: #E8870C;
+    --amber-100: #FFF1DD;
+    --gray-900: #1F2937;
+    --gray-700: #4B5563;
+    --gray-500: #6B7280;
+    --gray-300: #D1D5DB;
+    --gray-100: #F3F4F6;
+    --gray-50: #F9FAFB;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: var(--gray-900);
+    background: var(--gray-50);
+    line-height: 1.6;
+  }
+  .container { max-width: 1180px; margin: 0 auto; padding: 0 32px 80px; }
+
+  .cover {
+    background: linear-gradient(135deg, var(--noir-900) 0%, var(--noir-700) 50%, var(--plum-700) 100%);
+    color: #fff;
+    padding: 64px 32px 80px;
+    margin-bottom: 40px;
+    border-bottom: 6px solid var(--gold);
+  }
+  .cover-inner { max-width: 1180px; margin: 0 auto; }
+  .cover .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 13px;
+    font-weight: 600;
+    opacity: 0.85;
+    margin-bottom: 12px;
+    color: var(--gold-light);
+  }
+  .cover h1 {
+    font-size: 48px;
+    line-height: 1.1;
+    margin: 0 0 16px;
+    font-weight: 800;
+    letter-spacing: -0.4px;
+  }
+  .cover h1 span { color: var(--gold); }
+  .cover .subtitle {
+    font-size: 19px;
+    opacity: 0.92;
+    max-width: 820px;
+    margin: 0 0 24px;
+    line-height: 1.5;
+  }
+  .cover .stamp {
+    display: inline-block;
+    background: rgba(220, 53, 69, 0.18);
+    border: 1px solid rgba(255,255,255,0.30);
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 999px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 28px;
+  }
+  .cover .stamp .dot { color: var(--rose-500); margin-right: 8px; }
+  .cover-meta {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255,255,255,0.22);
+  }
+  .cover-meta div .label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0.7;
+  }
+  .cover-meta div .value { font-size: 15px; font-weight: 600; margin-top: 4px; }
+
+  /* Owner key */
+  .owner-key {
+    background: #fff;
+    border: 1px solid var(--gray-300);
+    border-radius: 12px;
+    padding: 18px 22px;
+    margin: 0 0 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px 28px;
+    font-size: 14px;
+  }
+  .owner-key .label {
+    text-transform: uppercase;
+    color: var(--plum-700);
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    margin-right: 6px;
+  }
+  .owner-key b { color: var(--noir-700); }
+
+  /* Department headers */
+  .dept-header {
+    background: var(--noir-700);
+    color: #fff;
+    padding: 18px 26px;
+    border-radius: 10px 10px 0 0;
+    margin: 36px 0 0;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .dept-header .icon { font-size: 22px; }
+  .dept-header h2 {
+    margin: 0;
+    font-size: 22px;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+  }
+  .dept-header .ct {
+    margin-left: auto;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: rgba(255,255,255,0.12);
+    padding: 5px 12px;
+    border-radius: 999px;
+    font-weight: 700;
+  }
+  .dept-body {
+    background: #fff;
+    border: 1px solid var(--gray-300);
+    border-top: none;
+    border-radius: 0 0 12px 12px;
+    padding: 4px 0;
+    margin-bottom: 16px;
+  }
+
+  /* Task card */
+  .task {
+    border-bottom: 1px solid var(--gray-100);
+    padding: 22px 28px;
+  }
+  .task:last-child { border-bottom: none; }
+  .task .id {
+    font-family: "SFMono-Regular", Consolas, monospace;
+    font-size: 12px;
+    color: var(--plum-700);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+  .task h3 {
+    font-size: 18px;
+    color: var(--noir-700);
+    margin: 4px 0 10px;
+    font-weight: 700;
+  }
+  .task .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 12px;
+    font-size: 13px;
+  }
+  .pill {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .pill.p0 { background: var(--red-100); color: var(--red); }
+  .pill.p1 { background: var(--amber-100); color: var(--amber); }
+  .pill.p2 { background: var(--gray-100); color: var(--gray-700); }
+  .pill.owner { background: var(--plum-100); color: var(--plum-700); }
+  .pill.due { background: var(--gold-light); color: #8B6914; }
+  .task .why {
+    background: var(--gray-50);
+    border-left: 3px solid var(--plum-500);
+    padding: 10px 14px;
+    margin: 10px 0;
+    font-size: 14px;
+    color: var(--gray-700);
+    border-radius: 0 6px 6px 0;
+  }
+  .task .why strong { color: var(--plum-700); }
+  .task ol, .task ul { margin: 10px 0; padding-left: 24px; }
+  .task ol li, .task ul li { margin: 5px 0; font-size: 14px; }
+  .task .accept {
+    background: var(--green-100);
+    border-left: 3px solid var(--green);
+    padding: 10px 14px;
+    margin: 12px 0 0;
+    font-size: 13px;
+    color: var(--gray-900);
+    border-radius: 0 6px 6px 0;
+  }
+  .task .accept strong { color: var(--green); }
+
+  /* Code blocks */
+  pre {
+    background: var(--noir-900);
+    color: #E5E7EB;
+    border-radius: 8px;
+    padding: 16px 18px;
+    overflow-x: auto;
+    font-family: "SFMono-Regular", Consolas, monospace;
+    font-size: 12.5px;
+    line-height: 1.55;
+    margin: 12px 0;
+  }
+  pre.copy {
+    background: var(--gold-light);
+    color: var(--noir-700);
+    border-left: 4px solid var(--gold);
+    white-space: pre-wrap;
+  }
+  code {
+    background: var(--gray-100);
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-family: "SFMono-Regular", Consolas, monospace;
+    font-size: 13px;
+    color: var(--plum-700);
+  }
+  pre code { background: transparent; padding: 0; color: inherit; font-size: inherit; }
+
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+    margin: 10px 0;
+    font-size: 13.5px;
+  }
+  th {
+    background: var(--noir-700);
+    color: #fff;
+    text-align: left;
+    padding: 9px 12px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  td { padding: 8px 12px; border-bottom: 1px solid var(--gray-100); vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  tr:nth-child(even) td { background: var(--gray-50); }
+
+  /* Library section */
+  .library {
+    background: #fff;
+    border: 1px solid var(--gray-300);
+    border-radius: 12px;
+    padding: 30px 32px;
+    margin: 30px 0;
+  }
+  .library h2 {
+    color: var(--noir-700);
+    margin: 0 0 8px;
+    font-size: 26px;
+  }
+  .library h3 {
+    color: var(--plum-700);
+    margin: 24px 0 8px;
+    font-size: 17px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+  .library .note {
+    font-size: 12px;
+    color: var(--gray-500);
+    font-style: italic;
+    margin: 0 0 8px;
+  }
+
+  /* Guardrails */
+  .guard-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin: 18px 0; }
+  .guard-block {
+    background: #fff;
+    border: 1px solid var(--gray-300);
+    border-radius: 10px;
+    padding: 20px 22px;
+  }
+  .guard-block.always { border-left: 5px solid var(--green); }
+  .guard-block.never  { border-left: 5px solid var(--red); }
+  .guard-block h4 {
+    margin: 0 0 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 13px;
+  }
+  .guard-block.always h4 { color: var(--green); }
+  .guard-block.never  h4 { color: var(--red); }
+  .guard-block ul { margin: 0; padding-left: 20px; }
+  .guard-block li { font-size: 13.5px; margin: 6px 0; color: var(--gray-700); }
+
+  /* Acceptance criteria checklist */
+  .checklist {
+    background: var(--noir-900);
+    color: #E5E7EB;
+    border-radius: 12px;
+    padding: 28px 32px;
+    margin: 30px 0;
+  }
+  .checklist h2 { color: var(--gold); margin: 0 0 18px; font-size: 22px; text-transform: uppercase; letter-spacing: 2px; }
+  .checklist .row {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 8px 0;
+    border-bottom: 1px solid #2D2740;
+    font-size: 14px;
+  }
+  .checklist .row:last-child { border-bottom: none; }
+  .checklist .box {
+    width: 18px;
+    height: 18px;
+    border: 1px solid #5C5276;
+    border-radius: 4px;
+    margin-top: 2px;
+    flex-shrink: 0;
+  }
+
+  hr { border: none; height: 1px; background: var(--gray-300); margin: 30px 0; }
+
+  .footer {
+    text-align: center;
+    color: var(--gray-500);
+    font-size: 13px;
+    padding: 32px 0 0;
+    border-top: 1px solid var(--gray-300);
+    margin-top: 40px;
+  }
+
+  @media print {
+    body { background: #fff; }
+    .task, .dept-header, .library, .checklist { page-break-inside: avoid; }
+  }
+  @media (max-width: 800px) {
+    .cover h1 { font-size: 32px; }
+    .cover-meta, .guard-grid { grid-template-columns: 1fr 1fr; }
+    .dept-header .ct { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="cover">
+  <div class="cover-inner">
+    <div class="eyebrow">Internal · Dispenza Team Only · Execution Playbook</div>
+    <h1>Noiré Dispensary<br/><span>May 2026 Playbook</span></h1>
+    <p class="subtitle">Turns the May 2026 Strategy Report into shippable, attributable tasks. Department-grouped, P0/P1/P2-prioritized, with click-by-click steps + paste-ready copy + acceptance criteria.</p>
+    <div class="stamp"><span class="dot">●</span> Internal · Not for Client Distribution</div>
+    <div class="cover-meta">
+      <div><div class="label">Period</div><div class="value">May 1 – May 31, 2026</div></div>
+      <div><div class="label">Companion</div><div class="value">2026-05_strategy-report</div></div>
+      <div><div class="label">Account Lead</div><div class="value">Darrell Clay</div></div>
+      <div><div class="label">Generated</div><div class="value">2026-05-05</div></div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+<div class="owner-key">
+  <span><span class="label">Owner Key</span></span>
+  <span><b>DC</b> = Darrell Clay (outreach lead, Sweed)</span>
+  <span><b>SS</b> = Shay Spatz (assets / website)</span>
+  <span><b>NM</b> = Nick Marx (web team)</span>
+  <span><b>GP</b> = Giovanni Paul (owner)</span>
+  <span><b>SP</b> = Sharquana Paul (owner)</span>
+</div>
+
+<!-- ================= WSF ================= -->
+<div class="dept-header"><span class="icon">🏗</span><h2>Website Structural Fixes — Pillar 0</h2><span class="ct">5 tasks</span></div>
+<div class="dept-body">
+
+  <div class="task">
+    <div class="id">WSF-01</div>
+    <h3>Homepage H1 + meta title rewrite</h3>
+    <div class="meta"><span class="pill p0">P0</span><span class="pill owner">SS</span><span class="pill due">Due Tue May 5</span></div>
+    <div class="why"><strong>Why:</strong> April 11 Local Falcon scan: "dispensary" rank is #9 (17.36% SoLV) while every other keyword is top 3. The GBP name is "Noire Weed Dispensary Maplewood" — Google reads "weed dispensary" perfectly but plain "dispensary" weakly. Joyleaf-proven fix: shift on-site copy emphasis from "Noire Weed Dispensary" to "Noire Dispensary."</div>
+    <ol>
+      <li>SS pulls current homepage H1 + meta title from CMS (live site is bot-blocked; we need source verified)</li>
+      <li>SS shares current state with DC for before/after baseline</li>
+      <li>Update H1 to: <code>Maplewood's Trusted Cannabis Dispensary</code> (subhead: "Noire Dispensary")</li>
+      <li>Update meta title to: <code>Noire Dispensary | Maplewood NJ Cannabis &amp; Delivery</code></li>
+      <li>Stage → GP review → deploy</li>
+    </ol>
+    <div class="accept"><strong>Acceptance:</strong> Homepage live with new H1 and meta title; before/after captured; deploy logged.</div>
+  </div>
+
+  <div class="task">
+    <div class="id">WSF-02</div>
+    <h3>Location/menu page H1 + meta title</h3>
+    <div class="meta"><span class="pill p0">P0</span><span class="pill owner">SS</span><span class="pill due">Due Tue May 5</span></div>
+    <ol>
+      <li>Pull current state of <code>/locations/maplewood/menu</code> H1 and meta</li>
+      <li>Update H1 to: <code>Noire Dispensary — Maplewood, NJ</code></li>
+      <li>Update meta title to: <code>Visit Noire Dispensary in Maplewood, NJ | Hours, Menu &amp; Delivery</code></li>
+      <li>Stage → review → deploy</li>
+    </ol>
+    <div class="accept"><strong>Acceptance:</strong> Location page live with new H1 + meta; deploy logged.</div>
+  </div>
+
+  <div class="task">
+    <div class="id">WSF-03</div>
+    <h3>LocalBusiness schema with alternateName</h3>
+    <div class="meta"><span class="pill p0">P0</span><span class="pill owner">SS / NM</span><span class="pill due">Due Wed May 6</span></div>
+    <div class="why"><strong>Why:</strong> Schema gives Google an explicit, machine-readable list of brand variants. Adding "Noire Dispensary" as an alternateName makes the dispensary-without-modifier read explicit.</div>
+    <p><strong>Paste-ready JSON-LD (homepage):</strong></p>
+<pre><code>{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Noiré Weed Dispensary Maplewood",
+  "alternateName": ["Noire Dispensary", "Noiré Dispensary", "Noire Cannabis Dispensary"],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "171 Maplewood Ave",
+    "addressLocality": "Maplewood",
+    "addressRegion": "NJ",
+    "postalCode": "07040",
+    "addressCountry": "US"
+  },
+  "telephone": "+1-973-922-1622",
+  "url": "https://noiredispensary.com",
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "10:00", "closes": "20:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "10:00", "closes": "19:00" }
+  ],
+  "areaServed": ["Maplewood","South Orange","West Orange","Irvington","Newark","Union","Springfield","Livingston","East Orange","Summit"]
+}</code></pre>
+    <div class="accept"><strong>Acceptance:</strong> JSON-LD live on homepage; passes Schema.org validator + Google Rich Results test.</div>
+  </div>
+
+  <div class="task">
+    <div class="id">WSF-04</div>
+    <h3>About Us page H1 update</h3>
+    <div class="meta"><span class="pill p1">P1</span><span class="pill owner">SS</span><span class="pill due">Due Wk 2</span></div>
+    <ol>
+      <li>While doing the About Us refresh (WEB-02), update H1 to: <code>About Noire Dispensary | Black-Owned, Family-Run in Maplewood</code></li>
+      <li>Update meta title: <code>About Us — Noire Dispensary | Black-Owned, Family-Run</code></li>
+    </ol>
+    <div class="accept"><strong>Acceptance:</strong> About Us page H1 + meta updated alongside the photo/story refresh.</div>
+  </div>
+
+  <div class="task">
+    <div class="id">WSF-05</div>
+    <h3>Long-form SEO landing page audit</h3>
+    <div class="meta"><span class="pill p1">P1</span><span class="pill owner">SS + DC</span><span class="pill due">Due Wk 3</span></div>
+    <div class="why"><strong>Why:</strong> The page at <code>/maplewoods-go-to-recreational-dispensary-for-premium-cannabis/</code> is a long-tail SEO landing. We need to confirm its H1 and copy lean toward "Noire Dispensary" framing rather than "Weed Dispensary."</div>
+    <ol>
+      <li>SS pulls current H1 + body copy from CMS</li>
+      <li>Audit for "weed dispensary" vs "dispensary" usage; aim for ~70/30 dispensary-led phrasing</li>
+      <li>Update if needed; keep slug intact (URL has equity)</li>
+    </ol>
+    <div class="accept"><strong>Acceptance:</strong> Page audited; changes (if any) shipped.</div>
+  </div>
+
+</div>
+
+<!-- ================= FND ================= -->
+<div class="dept-header"><span class="icon">🛡</span><h2>Foundation — Pre-Launch Cleanup (Wk 1)</h2><span class="ct">7 tasks</span></div>
+<div class="dept-body">
+
+  <div class="task">
+    <div class="id">FND-01</div>
+    <h3>Resolve GBP "Offers delivery" attribute</h3>
+    <div class="meta"><span class="pill p0">P0</span><span class="pill owner">DC + GP</span><span class="pill due">Due Tue May 5</span></div>
+    <div class="why"><strong>Why:</strong> GBP currently shows "Offers delivery" but the site says "coming soon" (no date). Customers searching delivery in Maplewood/Union discover Noire today and bounce when delivery isn't live yet.</div>
+    <ol>
+      <li>DC asks GP: Was attribute Google-auto-added or owner-enabled?</li>
+      <li>Decision (recommend: keep ON):
+        <ul>
+          <li><strong>If KEEP:</strong> GP/DC pin a GBP Post: <em>"Delivery launching June 15, 2026 — sign up for early access"</em> by Wk 3</li>
+          <li><strong>If TURN OFF:</strong> Toggle in GBP Manager (Edit profile → More → Service options → uncheck "Offers delivery") and re-enable June 15 morning</li>
+        </ul>
+      </li>
+      <li>Update site copy to mirror decision (Wk 3 deliverable for SS)</li>
+    </ol>
+    <div class="accept"><strong>Acceptance:</strong> GBP attribute state and site copy say the same thing.</div>
+  </div>
+
+  <div class="task">
+    <div class="id">FND-02</div>
+    <h3>GBP Description rewrite</h3>
+    <div class="meta"><span class="pill p0">P0</span><span class="pill owner">DC</span><span class="pill due">Due Wed May 6</span></div>
+    <div class="why"><strong>Why:</strong> Current description is generic. We have verifiable claims that can lift CTR meaningfully.</div>
+    <p><strong>Paste-ready copy:</strong></p>
+<pre class="copy">Noire Weed Dispensary in Maplewood is Maplewood's first Black-owned,
+family-run cannabis dispensary and the first Black-owned adult-use
+cannabis shop in North Jersey. Owned by husband-and-wife team Giovanni
+and Sharquana Paul, Noire serves Maplewood, South Orange, West Orange,
+Irvington, Newark, Union, Springfield, and surrounding Essex County
+communities. We carry premium flower, pre-rolls, vape cartridges,
+edibles, concentrates, and accessories from trusted brands including
+Camino, WYLD, Verano, Cookies, Wana, Lowell, Fernway, and Rythm.
+Members of the Noire Dispensary Loyalty Program earn points on every
+purchase — sign up in-store or online. Delivery launching June 15,
+2026. First Responders save 10% on every order.</pre>
+    <ol>
+      <li>GBP Manager → Edit profile → About → Description → paste</li>
+      <li>Save</li>
+      <li>Confirm preview on Maps within 24h (sometimes Google rewrites; if it does, escalate to GP)</li>
+    </ol>
+    <div class="accept"><strong>Acceptance:</strong> Description live; contains "Maplewood's first Black-owned," 8 town adjacency mentions, brand list, loyalty program by name, June 15 delivery, First Responder.</div>
+  </div>
+
+  <div class="task">
+    <div class="id">FND-03</div>
+    <h3>Set GBP Opening Date</h3>
+    <div class="meta"><span class="pill p0">P0</span><span class="pill owner">DC</span><span class="pill due">Due Wed May 6</span></div>
+    <div class="why"><strong>Why:</strong> Currently unset; tenure signal missing. Verifiable opening date is <strong>October 28, 2023</strong> (per Maplewood Patch).</div>
+    <ol>
+      <li>GBP Manager → Edit profile → About → Opening date → enter <strong>2023-10-28</strong></li>
+      <li>Save</li>
+    </ol>
+    <div class="accept"><strong>Acceptance:</strong> Opening date visible on profile.</div>
+  </div>
+
+  <div class="task">
+    <div class="id">FND-04</div>
+    <h3>Verify GBP secondary categories</h3>
+    <div class="meta"><span class="pill p0">P0</span><span class="pill owner">DC + GP</span><span class="pill due">Due Wed May 6</span></div>
+    <div class="why"><strong>Why:</strong> Current secondaries — Homeopath, Vitamin &amp; Supplements, Holistic Medicine Practitioner — are unusual for a recreational dispensary. May be helping discovery; may be confusing it.</div>
+    <ol>
+      <li>DC asks GP: Were these intentional? (could be tied to wellness positioning or a CBD-era carryover)</li>
+      <li>If unintentional: recommend removing all 3; Cannabis store should be the only category — secondaries dilute</li>
+      <li>If intentional, leave alone but document reasoning</li>
+    </ol>
+    <div class="accept"><strong>Acceptance:</strong> Decision documented; categories aligned with intent.</div>
+  </div>
+
+  <div class="task">
+    <div class="id">FND-05</div>
+    <h3>Add South Orange to GBP Service Area</h3>
+    <div class="meta"><span class="pill p0">P0</span><span class="pill owner">DC + GP</span><span class="pill due">Due Wed May 6</span></div>
+    <div class="why"><strong>Why:</strong> Currently 7 NJ towns set (Union, Summit, Livingston, East Orange, Springfield, Irvington, West Orange). <strong>South Orange (immediately adjacent) is missing</strong> — surprising omission.</div>
+    <ol>
+      <li>DC asks GP: Is South Orange exclusion intentional?</li>
+      <li>If no: GBP Manager → Edit profile → Contact → Service area → Add "South Orange, NJ" → Save</li>
+    </ol>
+    <div class="accept"><strong>Acceptance:</strong> South Orange added OR omission documented as intentional.</div>
+  </div>
+
+  <div class="task">
+    <div class="id">FND-06</div>
+    <h3>Verify "Accepts debit cards" attribute</h3>
+    <div class="meta"><span class="pill p1">P1</span><span class="pill owner">DC + GP</span><span class="pill due">Due Fri May 8</span></div>
+    <div class="why"><strong>Why:</strong> Google auto-added recently. Confirm POS reality (POS-debit, cashless ATM, both?).</div>
+    <ol>
+      <li>DC asks GP what POS actually supports</li>
+      <li>If incorrect, toggle off in GBP Manager</li>
+      <li>Document for accuracy</li>
+    </ol>
+    <div class="accept"><strong>Acceptance:</strong> Attribute matches POS reality.</div>
+  </div>
+
+  <div class="task">
+    <div class="id">FND-07</div>
+    <h3>Photo-volume comparison vs. competitors</h3>
+    <div class="meta"><span class="pill p1">P1</span><span class="pill owner">DC</span><span class="pill due">Due Fri May 8</span></div>
+    <div class="why"><strong>Why:</strong> Feb baseline noted Noire had 11 photos vs. competitors' 100+. Mix has clearly improved (gallery shows fresh customer + owner photos), but no hard count vs. Elevated, Nevaeh Verde, Bliss+Lex, West Orange Wellness.</div>
+    <ol>
+      <li>Open each competitor's GBP and count photos in each filter (All / Latest / Inside / By Owner / Street View)</li>
+      <li>Same for Noire</li>
+      <li>Document in <code>performance-reviews/2026-05-08-photo-volume-comparison.md</code></li>
+    </ol>
+    <div class="accept"><strong>Acceptance:</strong> Hard photo counts logged for Noire + 4 competitors.</div>
+  </div>
+
+</div>
+
+<!-- ================= OUT ================= -->
+<div class="dept-header"><span class="icon">📨</span><h2>Outreach (Sweed)</h2><span class="ct">6 tasks</span></div>
+<div class="dept-body">
+
+  <div class="task">
+    <div class="id">OUT-01</div>
+    <h3>Wild Deal Sweed templates</h3>
+    <div class="meta"><span class="pill p0">P0</span><span class="pill owner">DC</span><span class="pill due">Due Sat May 9</span></div>
+    <div class="why"><strong>Why:</strong> All Wild Deal launch comms route through these templates. Asset dependency on SS (Fri May 8).</div>
+    <p><strong>Templates needed:</strong></p>
+    <ul>
+      <li>Email — Launch announcement (Mon May 11)</li>
+      <li>Email — Weekly Wild feature (recurring × 6 weeks, Tue or Wed)</li>
+      <li>Email — Wild + flower bundle (recurring × 4, Thu)</li>
+      <li>SMS — Launch blast (Mon May 11)</li>
+      <li>SMS — Bundle reminder (recurring weekly Fri)</li>
+      <li>Push — Friday/Saturday peak window (recurring, 4–6 PM target)</li>
+      <li>Push — Wild Tuesday lift (recurring weekly)</li>
+    </ul>
+    <p><strong>SMS guardrail (per memory):</strong> Product + price only. No subject-line hooks (tool constraint).</p>
+    <div class="accept"><strong>Acceptance:</strong> 7 templates built in Sweed, drafts sent to GP + SP for review.</div>
+  </div>
+
+  <div class="task">
+    <div class="id">OUT-02</div>
+    <h3>Soft Wild Deal sprinkle</h3>
+    <div class="meta"><span class="pill p0">P0</span><span class="pill owner">DC</span><span class="pill due">Fri–Sun May 9–10</span></div>
+    <div class="why"><strong>Why:</strong> Hard launch is Mon May 11, but Darrell can sprinkle awareness comms through existing weekend cadence to start building anticipation.</div>
+    <ol>
+      <li>After OUT-01 completes Sat May 9, slot a single Wild push notification into the Sat or Sun cadence (don't displace existing flower comms)</li>
+      <li>Avoid SMS over the soft window — save the launch impact for Monday</li>
+    </ol>
+    <div class="accept"><strong>Acceptance:</strong> ≥1 Wild teaser in weekend cadence; no displacement of existing flower comms.</div>
+  </div>
+
+  <div class="task">
+    <div class="id">OUT-03</div>
+    <h3>Wild Deal launch — dedicated blast</h3>
+    <div class="meta"><span class="pill p0">P0</span><span class="pill owner">DC</span><span class="pill due">Mon May 11</span></div>
+    <div class="why"><strong>Why:</strong> Per 5/4 meeting, the launch needs an individualized comm "spelling out as much detail as possible in addition to the actual graphic."</div>
+    <ol>
+      <li>Schedule dedicated email + SMS for Mon May 11, ~10 AM ET</li>
+      <li>Email leads with the campaign hook + bundle examples; SMS leads with offer + price + link</li>
+      <li>QR code on in-store assets points to noirerewards.com (or temporary alternative if domain isn't ready — coordinate with NM)</li>
+    </ol>
+    <div class="accept"><strong>Acceptance:</strong> Email + SMS sent Mon May 11; deliverability >95%; click-throughs trackable in Sweed.</div>
+  </div>
+
+  <div class="task">
+    <div class="id">OUT-04</div>
+    <h3>1-month Wild outreach calendar PDF</h3>
+    <div class="meta"><span class="pill p1">P1</span><span class="pill owner">DC</span><span class="pill due">Wk of May 12</span></div>
+    <div class="why"><strong>Why:</strong> Per 5/4 meeting, GP + SP requested a high-level outreach calendar for the next month.</div>
+    <p><strong>Format:</strong> PDF, week-by-week, showing which days have which comms (email/SMS/push), what each one features, and how Wild interacts with the regular flower-centric cadence.</p>
+    <div class="accept"><strong>Acceptance:</strong> PDF emailed to GP + SP for review; one round of feedback incorporated.</div>
+  </div>
+
+  <div class="task">
+    <div class="id">OUT-05</div>
+    <h3>Wild Tuesday cadence test</h3>
+    <div class="meta"><span class="pill p1">P1</span><span class="pill owner">DC</span><span class="pill due">Wk 2 onwards</span></div>
+    <div class="why"><strong>Why:</strong> Tuesday is the slowest weekday (3 orders/hour avg). Test whether a "Wild Tuesday" focused comm lifts the floor.</div>
+    <ol>
+      <li>Add a Tuesday-only push notification each week of May (Wks 2–5), framed as "Wild Tuesday"</li>
+      <li>Track Tuesday transactions Wk-over-Wk</li>
+      <li>Decision point: Is Tuesday up vs. Wks-prior baseline?</li>
+    </ol>
+    <div class="accept"><strong>Acceptance:</strong> 4 Wild Tuesday pushes sent; data captured for end-of-month report.</div>
+  </div>
+
+  <div class="task">
+    <div class="id">OUT-06</div>
+    <h3>Sign-in incentive comms</h3>
+    <div class="meta"><span class="pill p1">P1</span><span class="pill owner">DC</span><span class="pill due">Wk 2</span></div>
+    <div class="why"><strong>Why:</strong> Catalog → Sign-in is 15.4%. Coordinated test with WEB-04.</div>
+    <ol>
+      <li>Once WEB-04 ships the modal, add a one-time email to non-signed-in known emails: <em>"Welcome back. Save 10% on your next order — sign in to redeem."</em></li>
+      <li>Track sign-in rate before/after</li>
+    </ol>
+    <div class="accept"><strong>Acceptance:</strong> Email scheduled; sign-in funnel monitored Wk 3 onwards.</div>
+  </div>
+
+</div>
+
+<!-- ================= GBP ================= -->
+<div class="dept-header"><span class="icon">🌐</span><h2>GBP &amp; Local SEO</h2><span class="ct">5 tasks</span></div>
+<div class="dept-body">
+
+  <div class="task">
+    <div class="id">GBP-01</div>
+    <h3>Posts schedule (3/week)</h3>
+    <div class="meta"><span class="pill p0">P0</span><span class="pill owner">DC</span><span class="pill due">Mondays each week</span></div>
+    <p><strong>Cadence:</strong> Mon (Offer/Update — Wild) · Wed (Update/Lifestyle) · Fri (Update/Educational)</p>
+    <table>
+      <thead><tr><th>Wk</th><th>Schedule</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Wk 1</strong> (May 5–11)</td><td>Mon May 5: Mother's Day gift guide · Wed May 7: Wild Deal teaser ("Something WILD is coming May 11") · Fri May 9: Mother's Day reminder + Wild Deal launch reminder · Mon May 11: WILD DEAL LAUNCH</td></tr>
+        <tr><td><strong>Wk 2</strong> (May 12–18)</td><td>Mon May 12: Wild bundle feature #1 · Wed May 14: About Us refresh + photo (post-go-live) · Fri May 16: Loyalty Program sign-up CTA</td></tr>
+        <tr><td><strong>Wk 3</strong> (May 19–25)</td><td>Mon May 19: Wild bundle feature #2 · Wed May 21: Memorial Day weekend hours · Fri May 23: <strong>"Delivery launching June 15"</strong> announcement (first time)</td></tr>
+        <tr><td><strong>Wk 4</strong> (May 26–31)</td><td>Mon May 26: Memorial Day recap · Wed May 28: Delivery service area reveal (which 7 towns) · Fri May 30: Owner spotlight (Q&amp;A excerpt from About Us refresh)</td></tr>
+      </tbody>
+    </table>
+    <div class="accept"><strong>Acceptance:</strong> 12 Posts shipped May 5–30; click + view metrics logged.</div>
+  </div>
+
+  <div class="task">
+    <div class="id">GBP-02</div>
+    <h3>Photos uploaded (5+/week)</h3>
+    <div class="meta"><span class="pill p0">P0</span><span class="pill owner">DC + SS</span><span class="pill due">Ongoing</span></div>
+    <p><strong>Wk 1:</strong> Wild Deal in-store displays (post-launch) · Mother's Day gift packaging · Storefront with current signage · Counter / staff at work · Customer-generated (encourage with QR codes)</p>
+    <p><strong>Wk 2:</strong> Owner photo (Giovanni + Sharquana — once SS receives from GP) · Wild bundle photo on counter · Camino loyalty hook display · Strain spotlight</p>
+    <p><strong>Wk 3–4:</strong> Memorial Day storefront / community · Delivery announcement creative · Behind-the-counter team shots · Weed-product flat-lays</p>
+    <div class="accept"><strong>Acceptance:</strong> 20+ photos uploaded across May; mix of inside / outside / product / team / customer.</div>
+  </div>
+
+  <div class="task">
+    <div class="id">GBP-03</div>
+    <h3>Q&amp;A seeding</h3>
+    <div class="meta"><span class="pill p1">P1</span><span class="pill owner">DC</span><span class="pill due">Wk 1</span></div>
+    <div class="why"><strong>Why:</strong> Owner-asked Q&amp;A populates the GBP with clean keyword-rich phrases Google indexes.</div>
+    <p><strong>Seed 8 questions (owner asks, owner answers):</strong></p>
+    <ol>
+      <li><em>"Is Noire a recreational dispensary?"</em></li>
+      <li><em>"Is Noire Black-owned?"</em></li>
+      <li><em>"Do Giovanni and Sharquana own Noire?"</em></li>
+      <li><em>"What loyalty program does Noire have?"</em></li>
+      <li><em>"Does Noire offer delivery?"</em> (answer mentions June 15)</li>
+      <li><em>"What's the closest dispensary to South Orange?"</em></li>
+      <li><em>"Does Noire offer First Responder discounts?"</em></li>
+      <li><em>"What brands does Noire carry?"</em></li>
+    </ol>
+    <div class="accept"><strong>Acceptance:</strong> All 8 Q&amp;As live on GBP.</div>
+  </div>
+
+  <div class="task">
+    <div class="id">GBP-04</div>
+    <h3>Review-velocity push</h3>
+    <div class="meta"><span class="pill p1">P1</span><span class="pill owner">DC + GP</span><span class="pill due">Ongoing</span></div>
+    <div class="why"><strong>Why:</strong> 688 reviews is a strong base; goal is +30 in May (stretch +50). Reviews mentioning specific adjacent towns add hyperlocal proximity-relevance.</div>
+    <ol>
+      <li>Refresh in-store QR-code signage with Mother's Day-themed insert (Wk 1)</li>
+      <li>Train budtenders to ask hometown ("Where are you driving in from?") — log it for May reviews</li>
+      <li>Reply to 100% of new reviews within 48 hours; vary brand form ("Noiré Dispensary," "Noire Maplewood," "our team at Noire")</li>
+    </ol>
+    <div class="accept"><strong>Acceptance:</strong> 30+ new May reviews; ≥5 mention an adjacent town by name.</div>
+  </div>
+
+  <div class="task">
+    <div class="id">GBP-05</div>
+    <h3>Local Falcon scan (May baseline)</h3>
+    <div class="meta"><span class="pill p1">P1</span><span class="pill owner">DC</span><span class="pill due">Wk 1 (early)</span></div>
+    <div class="why"><strong>Why:</strong> Need a fresh ranking baseline at the start of May to compare against end-of-May. Targets: 7 keywords on a 2-mile grid.</div>
+    <p><strong>Keywords:</strong> "weed near me" · "weed dispensary" · "weed" · "cannabis near me" · "cannabis" · "dispensary near me" · "dispensary"</p>
+    <p><strong>Save to:</strong> <code>performance-reviews/2026-05-XX-local-falcon-scan.md</code></p>
+    <div class="accept"><strong>Acceptance:</strong> Scan complete; .md file with ranks + SoLV per keyword.</div>
+  </div>
+
+</div>
+
+<!-- ================= WEB ================= -->
+<div class="dept-header"><span class="icon">🛠</span><h2>Web Development</h2><span class="ct">6 tasks</span></div>
+<div class="dept-body">
+
+  <div class="task">
+    <div class="id">WEB-01</div>
+    <h3>Squeeze page noirerewards.com</h3>
+    <div class="meta"><span class="pill p0">P0</span><span class="pill owner">NM team</span><span class="pill due">Target Wk 2 (after domain access)</span></div>
+    <div class="why"><strong>Why:</strong> Required for ad platforms — main URL contains "dispensary" (prohibited). Per 5/4 meeting, single one-pager with contest rules + button to main site.</div>
+    <ol>
+      <li>GP purchases domain via Network Solutions, grants BP+Noire access (FND prerequisite)</li>
+      <li>NM team spins up landing page from generic blueprint</li>
+      <li>Sharquana provides contest rules copy</li>
+      <li>Page live with: header (Noiré branding), rules block, CTA button to main site, footer with NAP + license #</li>
+      <li>Page does NOT need full SEO; minimal schema; noindex if practical</li>
+    </ol>
+    <div class="accept"><strong>Acceptance:</strong> noirerewards.com live, links to main site, mobile-responsive, age-gate (21+) compliant.</div>
+  </div>
+
+  <div class="task">
+    <div class="id">WEB-02</div>
+    <h3>About Us section refresh</h3>
+    <div class="meta"><span class="pill p0">P0</span><span class="pill owner">SS</span><span class="pill due">Wk 2 (after GP sends)</span></div>
+    <div class="why"><strong>Why:</strong> Core brand-humanization moment. Decision made in 5/4 meeting.</div>
+    <p><strong>Recommended copy</strong> (paste-ready, 5/4 meeting + indexed press):</p>
+<pre class="copy">We're Giovanni and Sharquana Paul — a husband-and-wife team and
+Brooklyn natives who built Noire while raising five kids. We
+finalized the Noire business plan in the hospital while Sharquana
+was in labor with our fifth. Five years of CBD retail experience
+and one shared belief — that great cannabis service starts with
+people you trust — led us to open Noire in October 2023 as the
+first Black-owned adult-use dispensary in North Jersey. We're
+proud members of the NAACP of South Orange &amp; Maplewood, NJCBA,
+NJCTA, and the North NJ Chamber of Commerce.
+
+Welcome to the family.</pre>
+    <ol>
+      <li>SS receives photo + final text from GP</li>
+      <li>SS swaps About Us section content (image + copy)</li>
+      <li>SS pushes to staging, GP/SP approves</li>
+      <li>SS deploys to production</li>
+      <li>DC pushes a GBP Post the same day announcing the refresh</li>
+    </ol>
+    <div class="accept"><strong>Acceptance:</strong> New About Us live; image renders on mobile + desktop; GBP cross-post live.</div>
+  </div>
+
+  <div class="task">
+    <div class="id">WEB-03</div>
+    <h3>Delivery page build</h3>
+    <div class="meta"><span class="pill p1">P1</span><span class="pill owner">SS</span><span class="pill due">Live by May 31</span></div>
+    <div class="why"><strong>Why:</strong> Per 5/4 meeting, dedicated delivery page goes live ~June 1 to support the marketing campaign.</div>
+    <p><strong>Page elements:</strong></p>
+    <ul>
+      <li>H1: <em>"Cannabis Delivery from Maplewood, NJ — Coming June 15"</em></li>
+      <li>Service area town list (with FND-05 confirmation including South Orange)</li>
+      <li>$50 minimum order</li>
+      <li>$5 delivery fee (or markup model — confirm with GP)</li>
+      <li>Hours (mirror in-store unless tighter)</li>
+      <li>"How it works" steps</li>
+      <li>Embedded Google map of service area</li>
+      <li>LocalBusiness schema with <code>areaServed</code> array</li>
+      <li>Email capture for "early access" notification</li>
+      <li>21+ language + license # in footer</li>
+    </ul>
+    <div class="accept"><strong>Acceptance:</strong> Page live by May 31; service area accurate; email capture flows to Sweed.</div>
+  </div>
+
+  <div class="task">
+    <div class="id">WEB-04</div>
+    <h3>Sign-in incentive modal/banner test</h3>
+    <div class="meta"><span class="pill p1">P1</span><span class="pill owner">SS</span><span class="pill due">Wk 2</span></div>
+    <div class="why"><strong>Why:</strong> Catalog → Sign-in is 15.4%. Lifting to 20% adds ~$10K/mo in incremental net sales at current conversion math. Highest-leverage funnel fix on the board.</div>
+    <p><strong>Test design:</strong></p>
+    <ul>
+      <li>Variant A: One-time-discount modal on first session ("Save 10% on your first order — create a free account")</li>
+      <li>Variant B: Persistent banner across catalog</li>
+      <li>Control: No incentive (current state)</li>
+      <li>Goal: 50/50 split A vs. B; record sign-in rate over 14 days</li>
+    </ul>
+    <div class="accept"><strong>Acceptance:</strong> A/B test live by Wk 2; results read at Wk 4 mid-month review; recommendation drafted for June.</div>
+  </div>
+
+  <div class="task">
+    <div class="id">WEB-05</div>
+    <h3>Sweed sign-up form audit</h3>
+    <div class="meta"><span class="pill p1">P1</span><span class="pill owner">SS + DC</span><span class="pill due">Wk 3</span></div>
+    <div class="why"><strong>Why:</strong> "Not Selected" is the largest gender bucket; 18–20 age stream is data error.</div>
+    <ol>
+      <li>Audit current sign-up form fields and validation</li>
+      <li>Recommend changes: default gender to "Prefer not to say"; hard age-gate at 21+ with clear date-of-birth validation; reduce required fields to email + phone + DOB only</li>
+      <li>SS implements changes; deploy to staging → review → production</li>
+    </ol>
+    <div class="accept"><strong>Acceptance:</strong> Form simplified; demographic data quality measurably better in next 14-day Sweed report.</div>
+  </div>
+
+  <div class="task">
+    <div class="id">WEB-06</div>
+    <h3>Press logos stripe near About Us</h3>
+    <div class="meta"><span class="pill p2">P2</span><span class="pill owner">SS</span><span class="pill due">Wk 3</span></div>
+    <div class="why"><strong>Why:</strong> Press exists (Maplewood Patch, SAX Advisory, Cannabis Law Report); leverage as social proof.</div>
+    <ol>
+      <li>Pull logos from /press/ page</li>
+      <li>Add a logo stripe immediately above or below the About Us section</li>
+      <li>Header: <em>"As featured in"</em></li>
+    </ol>
+    <div class="accept"><strong>Acceptance:</strong> Logos render on home page; click-through to source articles.</div>
+  </div>
+
+</div>
+
+<!-- ================= DES ================= -->
+<div class="dept-header"><span class="icon">🎨</span><h2>Design / Assets</h2><span class="ct">3 tasks</span></div>
+<div class="dept-body">
+
+  <div class="task">
+    <div class="id">DES-01</div>
+    <h3>Wild Deal asset pack</h3>
+    <div class="meta"><span class="pill p0">P0</span><span class="pill owner">SS</span><span class="pill due">Due Fri May 8</span></div>
+    <div class="why"><strong>Why:</strong> All comms downstream depend on this. Per 5/4 meeting: "every asset under the sun."</div>
+    <ul>
+      <li>Hero banner for website</li>
+      <li>In-store TV graphic (looped, ~30s)</li>
+      <li>Counter-top flyer (printable PDF)</li>
+      <li>Sandwich-board style for sidewalk</li>
+      <li>Push notification image (square, brand-consistent)</li>
+      <li>Email hero image</li>
+      <li>SMS image (if Sweed supports)</li>
+      <li>Social media variants (Instagram square, story, reel cover)</li>
+      <li>QR code variant pointing to noirerewards.com (update once domain live)</li>
+    </ul>
+    <div class="accept"><strong>Acceptance:</strong> Asset pack delivered to DC + GP via shared folder by Fri May 8 EOD.</div>
+  </div>
+
+  <div class="task">
+    <div class="id">DES-02</div>
+    <h3>About Us photo prep</h3>
+    <div class="meta"><span class="pill p1">P1</span><span class="pill owner">SS</span><span class="pill due">Wk 2 (upon receipt from GP)</span></div>
+    <ol>
+      <li>Receive original from GP</li>
+      <li>Color-correct, crop for web hero, resize for mobile</li>
+      <li>Generate 3 variants: home page, About Us section, GBP post crop</li>
+      <li>Send back to GP for final approval before deploying</li>
+    </ol>
+    <div class="accept"><strong>Acceptance:</strong> 3 variants delivered; deployed via WEB-02.</div>
+  </div>
+
+  <div class="task">
+    <div class="id">DES-03</div>
+    <h3>Delivery graphics pack</h3>
+    <div class="meta"><span class="pill p1">P1</span><span class="pill owner">SS</span><span class="pill due">May 31</span></div>
+    <div class="why"><strong>Why:</strong> Consistent look for in-store TVs, flyers, web, comms — all announcing June 15 delivery launch.</div>
+    <ul>
+      <li>"Delivery launching June 15" hero banner (web)</li>
+      <li>In-store TV graphic</li>
+      <li>Flyer for counter</li>
+      <li>GBP post creative</li>
+      <li>Push notification image</li>
+      <li>Email hero</li>
+      <li>Sweed campaign hero image</li>
+    </ul>
+    <div class="accept"><strong>Acceptance:</strong> Pack delivered May 31; consistent design language across all variants.</div>
+  </div>
+
+</div>
+
+<!-- ================= DAT ================= -->
+<div class="dept-header"><span class="icon">📊</span><h2>Data / Analytics</h2><span class="ct">5 tasks</span></div>
+<div class="dept-body">
+
+  <div class="task">
+    <div class="id">DAT-01</div>
+    <h3>Sign-in rate baseline + tracking</h3>
+    <div class="meta"><span class="pill p0">P0</span><span class="pill owner">DC</span><span class="pill due">Wk 1</span></div>
+    <ol>
+      <li>Pull Sweed Catalog → Sign-in rate for the past 30 days (baseline)</li>
+      <li>Set up weekly tracking</li>
+      <li>Watch for movement once WEB-04 ships</li>
+    </ol>
+    <div class="accept"><strong>Acceptance:</strong> Baseline logged; weekly tracking automated.</div>
+  </div>
+
+  <div class="task">
+    <div class="id">DAT-02</div>
+    <h3>Wild Deal performance dashboard</h3>
+    <div class="meta"><span class="pill p0">P0</span><span class="pill owner">DC</span><span class="pill due">Wk 2</span></div>
+    <p><strong>Metrics to track (weekly through end of June):</strong></p>
+    <ul>
+      <li>Wild Deal email open / click rate</li>
+      <li>Wild Deal SMS click rate</li>
+      <li>Wild Deal push click rate</li>
+      <li>Wild Deal-attributed orders (Sweed UTM tracking)</li>
+      <li>AOV on Wild orders vs. non-Wild orders</li>
+      <li>Bundle uptake rate (% of orders with 3+ flower units when offered)</li>
+    </ul>
+    <div class="accept"><strong>Acceptance:</strong> Weekly summary delivered Mondays, included in monthly report.</div>
+  </div>
+
+  <div class="task">
+    <div class="id">DAT-03</div>
+    <h3>Demographics data quality re-check</h3>
+    <div class="meta"><span class="pill p1">P1</span><span class="pill owner">DC</span><span class="pill due">Wk 4</span></div>
+    <ol>
+      <li>After WEB-05 ships, re-pull demographics report 14 days later</li>
+      <li>Compare "Not Selected" gender share before/after</li>
+      <li>Compare 18–20 age stream before/after</li>
+      <li>Document in monthly report</li>
+    </ol>
+    <div class="accept"><strong>Acceptance:</strong> Before/after comparison logged.</div>
+  </div>
+
+  <div class="task">
+    <div class="id">DAT-04</div>
+    <h3>Channel attribution filter (exclude migration)</h3>
+    <div class="meta"><span class="pill p1">P1</span><span class="pill owner">DC</span><span class="pill due">Wk 4</span></div>
+    <ol>
+      <li>For monthly reporting, build a Sweed report that excludes "Cova Migration" + "Alpine Migration" buckets</li>
+      <li>Report only on Walk-In, Google, Leafly, Apple, Referral, Social Media, Other</li>
+      <li>Use this filtered view for the May results scan</li>
+    </ol>
+    <div class="accept"><strong>Acceptance:</strong> Filtered channel-mix view used in monthly report; old "migration-dominant" view archived.</div>
+  </div>
+
+  <div class="task">
+    <div class="id">DAT-05</div>
+    <h3>End-of-month results scan</h3>
+    <div class="meta"><span class="pill p1">P1</span><span class="pill owner">DC</span><span class="pill due">Wk of June 1</span></div>
+    <p><strong>Outputs:</strong></p>
+    <ul>
+      <li>Local Falcon May scan vs. April baseline (ranking deltas)</li>
+      <li>GBP performance breakdown (calls, directions, web clicks, photo views)</li>
+      <li>Sweed funnel — Catalog through Place Order — May vs. April</li>
+      <li>Wild Deal attribution: orders, AOV lift, top SKUs</li>
+      <li>AOV trajectory chart vs. $70 target</li>
+      <li>Photo-volume comparison (FND-07 follow-through)</li>
+      <li>May → June handoff plan</li>
+    </ul>
+    <p><strong>Save to:</strong> <code>performance-reviews/2026-06-01-may-results.md</code></p>
+  </div>
+
+</div>
+
+<!-- ================= CLI ================= -->
+<div class="dept-header"><span class="icon">🤝</span><h2>Client Coordination</h2><span class="ct">3 tasks</span></div>
+<div class="dept-body">
+
+  <div class="task">
+    <div class="id">CLI-01</div>
+    <h3>Owner sign-off on May plan</h3>
+    <div class="meta"><span class="pill p0">P0</span><span class="pill owner">DC</span><span class="pill due">Mon May 5</span></div>
+    <ol>
+      <li>DC sends strategy report to GP + SP</li>
+      <li>Walk through key decisions on a 30-min call</li>
+      <li>Capture explicit sign-off on:
+        <ul>
+          <li>Wild Deal cadence (3–4×/week, integrated)</li>
+          <li>GBP description rewrite (paste-ready)</li>
+          <li>About Us refresh (photo + story)</li>
+          <li>Delivery 6/15 hard launch</li>
+          <li>Pricing structure ($50 min, $5 fee or markup)</li>
+          <li>South Orange service-area inclusion</li>
+          <li>Domain access timing for noirerewards.com</li>
+        </ul>
+      </li>
+    </ol>
+    <div class="accept"><strong>Acceptance:</strong> Email confirmation from GP capturing all 7 decisions.</div>
+  </div>
+
+  <div class="task">
+    <div class="id">CLI-02</div>
+    <h3>Mid-month check-in (May 18)</h3>
+    <div class="meta"><span class="pill p1">P1</span><span class="pill owner">DC</span><span class="pill due">Sun May 18</span></div>
+    <p><strong>Format:</strong> 30-min call with GP + SP.</p>
+    <p><strong>Agenda:</strong></p>
+    <ul>
+      <li>Wild Deal Wk 1 performance read</li>
+      <li>About Us refresh status</li>
+      <li>Sign-in incentive results so far</li>
+      <li>Delivery 6/15 launch readiness</li>
+      <li>Adjustments needed for back-half of May</li>
+    </ul>
+    <div class="accept"><strong>Acceptance:</strong> Meeting held; notes saved to <code>meeting-summaries/2026-05-18-mid-month-checkin.md</code>.</div>
+  </div>
+
+  <div class="task">
+    <div class="id">CLI-03</div>
+    <h3>End-of-month review + June planning</h3>
+    <div class="meta"><span class="pill p1">P1</span><span class="pill owner">DC</span><span class="pill due">Wk of June 1</span></div>
+    <p><strong>Format:</strong> 60-min call with GP + SP. Notes saved to <code>meeting-summaries/2026-06-01-may-recap-june-planning.md</code>.</p>
+    <div class="accept"><strong>Acceptance:</strong> May results report shared (DAT-05), June plan drafted.</div>
+  </div>
+
+</div>
+
+<hr/>
+
+<!-- ================= GUARDRAILS ================= -->
+<h2 style="color:var(--noir-700); font-size:26px; margin: 24px 0 8px;">Strict Guardrails (Reminders)</h2>
+<div class="guard-grid">
+  <div class="guard-block always">
+    <h4>Always</h4>
+    <ul>
+      <li>"Affordable luxury" framing</li>
+      <li>21+ language on every public asset</li>
+      <li>License # in website footer (NJ regulatory)</li>
+      <li>Defensible ownership claims only — Black-owned, women-owned, husband-and-wife, North Jersey first</li>
+      <li>Sweed SMS = product + price (no subject-line hooks; tool constraint)</li>
+      <li>Reply to 100% of GBP reviews within 48 hours</li>
+    </ul>
+  </div>
+  <div class="guard-block never">
+    <h4>Never</h4>
+    <ul>
+      <li>"Low-cost leader," "cheapest," "lowest prices in NJ" superlatives</li>
+      <li>Medical claims (NJ regulatory)</li>
+      <li>Cannabis content on Meta/Google ads (use noirerewards.com squeeze page)</li>
+      <li>Single-focus Wild Deal comms — must integrate with flower-led campaigns</li>
+      <li>Promo announcements on Wild Deal that conflict with bundle clarity (rules live on the squeeze page)</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ================= MASTER COPY LIBRARY ================= -->
+<div class="library">
+  <h2>📚 Master Copy Library</h2>
+  <p>Paste-ready copy for the most-used May comms. Pull from here every time.</p>
+
+  <h3>GBP description (paste-ready)</h3>
+  <p class="note">See FND-02 above for full block + acceptance criteria.</p>
+
+  <h3>About Us website copy (paste-ready)</h3>
+  <p class="note">See WEB-02 above for full block + deploy steps.</p>
+
+  <h3>Wild Deal launch SMS (paste-ready)</h3>
+<pre class="copy">Noiré Maplewood: It's WILD time. Our 6-week "Let's Get Wild"
+deal is LIVE. Bundle 3+ Good Greens 8ths → just $15 each
+(usually $20). Plus mix-and-match across edibles + flower for
+extra savings. Shop now: [link]. Rules: noirerewards.com.
+21+. Message rates may apply.</pre>
+
+  <h3>Wild Deal launch email subject line (Sweed-compatible)</h3>
+  <p class="note">Reminder: SMS subject lines aren't customizable in Darrell's tool — this is for email only.</p>
+<pre class="copy">Subject: Something WILD just landed at Noiré 🌿
+Preview: 6 weeks of bundle savings on flower, edibles, and more.</pre>
+
+  <h3>Delivery launch teaser GBP Post (paste-ready)</h3>
+<pre class="copy">Headline: Delivery is coming June 15.
+
+Body: We're bringing premium cannabis right to your door across
+Maplewood, South Orange, West Orange, Irvington, Newark, Union,
+Springfield, and Essex County. $50 minimum order. Sign up now
+to be first in line.
+
+CTA: Get notified</pre>
+
+  <h3>Sign-in incentive modal copy (paste-ready)</h3>
+<pre class="copy">Headline: Welcome to Noiré.
+
+Body: Save 10% on your first order — just sign in or create
+your free Noiré Loyalty account. Earn points on every visit.
+
+CTA: Sign in &amp; save</pre>
+
+  <h3>Memorial Day weekend hours post (template — confirm hours first)</h3>
+<pre class="copy">Headline: Memorial Day Weekend at Noiré
+
+Body: We're open all weekend with regular hours [confirm].
+Stock up for BBQs, beach days, and nights with friends.
+Wild bundle deals all weekend long.
+
+CTA: Shop now</pre>
+
+  <h3>Owner story snippet for GBP Post (Wk 4)</h3>
+<pre class="copy">Headline: Meet the family behind Noiré.
+
+Body: Giovanni and Sharquana Paul — a husband-and-wife team
+who finalized the Noire business plan while Sharquana was in
+labor with their fifth child. Maplewood's first Black-owned,
+family-run dispensary. Welcome to the family.
+
+CTA: Read our story</pre>
+</div>
+
+<!-- ================= ACCEPTANCE FOR THE MONTH ================= -->
+<div class="checklist">
+  <h2>✓ Acceptance Criteria for the Month</h2>
+  <p style="opacity:0.85; margin: 0 0 16px; font-size:14px;">By <strong>May 31</strong>, the following are true OR documented:</p>
+  <div class="row"><div class="box"></div><div><strong>Pillar 0 website structural fixes shipped</strong> — Homepage H1 + meta, Location/menu H1 + meta, schema, About Us H1</div></div>
+  <div class="row"><div class="box"></div><div><strong>"Dispensary" SoLV moved from 17.36% → 22%+</strong> in late-May Local Falcon scan</div></div>
+  <div class="row"><div class="box"></div><div><strong>6 of 7 keywords held in top 3</strong> (or moved to 7 of 7)</div></div>
+  <div class="row"><div class="box"></div><div>Wild Deal launched on time (Mon May 11)</div></div>
+  <div class="row"><div class="box"></div><div>GBP description includes ownership story + adjacency + delivery announcement</div></div>
+  <div class="row"><div class="box"></div><div>GBP opening date set (2023-10-28)</div></div>
+  <div class="row"><div class="box"></div><div>South Orange decision made (added or documented as intentionally excluded)</div></div>
+  <div class="row"><div class="box"></div><div>noirerewards.com squeeze page live</div></div>
+  <div class="row"><div class="box"></div><div>About Us refresh live (photo + story)</div></div>
+  <div class="row"><div class="box"></div><div>Sign-in incentive A/B test running with ≥14 days of data</div></div>
+  <div class="row"><div class="box"></div><div>Delivery page live by May 31</div></div>
+  <div class="row"><div class="box"></div><div>Delivery graphics pack ready for June 1 campaign</div></div>
+  <div class="row"><div class="box"></div><div>Local Falcon May scan complete</div></div>
+  <div class="row"><div class="box"></div><div>30+ new GBP reviews</div></div>
+  <div class="row"><div class="box"></div><div>12+ GBP Posts shipped</div></div>
+  <div class="row"><div class="box"></div><div>20+ photos uploaded</div></div>
+  <div class="row"><div class="box"></div><div>Mid-month check-in held (May 18)</div></div>
+  <div class="row"><div class="box"></div><div>May results report delivered Wk of June 1</div></div>
+</div>
+
+<div class="footer">
+  Internal · Dispenza Dispensary Marketing · Generated 2026-05-05<br/>
+  <em>Companion document to <code>2026-05_strategy-report</code></em>
+</div>
+
+</div>
+</body>
+</html>
