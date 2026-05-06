@@ -718,6 +718,24 @@
   </ol>
 </div>
 
+<div class="task task-p1">
+  <div class="task-head"><span class="task-id">DEV-10</span><span class="task-title">Cookie banner post-age-gate + privacy-policy update</span><span class="badge b-p1">P1</span></div>
+  <p>Per the 4/28 Q1 review (Dispenza action item #7 + Root'd action item #8), Root'd needs a cookie consent banner that fires <em>after</em> the age gate (so it doesn't double-modal) and a privacy-policy refresh from Rickey's attorney. Compliance for CA cannabis + standard cookie consent.</p>
+  <div class="task-meta">
+    <div><b>Deadline</b>Wk 2 (May 11) — once Rickey forwards the policy text</div>
+    <div><b>Owners</b>Nick Marx (Dispenza) implements · Rickey provides attorney-supplied policy text</div>
+    <div><b>Time</b>2 hr (banner injection + policy page swap + QA)</div>
+  </div>
+  <ol class="steps">
+    <li>Receive privacy-policy text from Rickey's attorney; replace the current /privacy-policy page content (preserve URL).</li>
+    <li>Implement cookie consent banner using a CA-compliant solution (Osano / OneTrust free tier / cookieyes — pick the option that injects last so it fires <em>after</em> the age gate).</li>
+    <li>Configure: Reject All option must be present; categories (Necessary / Analytics / Marketing) granular; banner must not fire before age verification (UX).</li>
+    <li>Add a "Cookie Settings" footer link so users can re-open the banner.</li>
+    <li>QA: complete the age gate, confirm cookie banner appears, test Reject All / Accept All / Customize flows; verify GA / AIQ tags fire conditionally based on consent.</li>
+  </ol>
+  <div class="accept"><b>Acceptance:</b> Cookie banner live, fires after age gate, respects consent for analytics/marketing tags. Privacy policy live with attorney-supplied language.</div>
+</div>
+
 <!-- CONTENT -->
 <div class="dept-head" id="content">
   <h2>✍️ Department: Content / Copywriting</h2>
@@ -844,6 +862,24 @@
     <tr><td><b>Required internal links</b></td><td>Homepage · all 5 neighborhood pages</td></tr>
   </table>
   <p>See Master Copy Library for ledes and meta descriptions.</p>
+</div>
+
+<div class="task task-p2">
+  <div class="task-head"><span class="task-id">CON-08</span><span class="task-title">Comparison pages for MSO brands not carried (social-equity positioning)</span><span class="badge b-p2">P2</span></div>
+  <p>From the persistent strategy themes (chatgpt exports + Q3 2025 review): Root'd's social-equity identity should not be undermined by direct promotion of MSO (multi-state operator) brands they don't carry. The play: build comparison pages that capture search demand for those brands while pivoting visitors back to Root'd's equity-positioned alternatives. Hidden brand SEO landing pages for top-searched cannabis brands (similar to Joyleaf's brand-page pilot for Camino + Doinks) — but with a comparison angle where appropriate.</p>
+  <div class="task-meta">
+    <div><b>Deadline</b>May Wk 4 — pilot 1 page; expand to 4-6 pages over Q2 if pilot performs</div>
+    <div><b>Owners</b>Content team drafts · Dev publishes · Account Lead reviews equity-tone</div>
+    <div><b>Time</b>4 hr per page (research + draft + publish)</div>
+  </div>
+  <ol class="steps">
+    <li>Pick the pilot MSO brand based on search volume and ethical-positioning fit (suggested: Cookies, Curaleaf, or another large MSO Root'd doesn't carry).</li>
+    <li>Page structure: H1 captures the brand-search intent ("[Brand] in Oakland — and what we carry instead at Root'd"). Tone: educational, not adversarial.</li>
+    <li>Body sections: who the brand is + what they're known for + Root'd's equity-aligned alternatives + lounge experience comparison + visit CTA.</li>
+    <li>Hide from primary nav (footer link only or unlinked) so the content-marketing surface doesn't clutter the brand experience.</li>
+    <li>FAQ schema for the brand-comparison questions; LocalBusiness schema on the page.</li>
+  </ol>
+  <div class="accept"><b>Acceptance:</b> Pilot page live by May 31; tracked separately in GSC for impressions on the target brand keyword + CTR to /shop.</div>
 </div>
 
 <!-- GBP -->
@@ -1191,6 +1227,20 @@
   <div class="task-head"><span class="task-id">SEO-04</span><span class="task-title">GBP Insights pull · weekly</span><span class="badge b-p2">P2</span></div>
   <div class="task-meta"><div><b>Deadline</b>Every Monday</div><div><b>Time</b>15 min</div></div>
   <p>Track: discovery searches, conversion rate, direction requests, web clicks, phone calls. Flag KPI #5 (conversion rate maintain 50%+) weekly. Document trend.</p>
+</div>
+
+<div class="task task-p2">
+  <div class="task-head"><span class="task-id">SEO-04b</span><span class="task-title">Tesla / Apple Maps in-car visibility investigation</span><span class="badge b-p2">P2</span></div>
+  <div class="task-meta"><div><b>Deadline</b>Wk 3 (May 18 mid-month check-in)</div><div><b>Time</b>2 hr (research + experiments)</div><div><b>Owners</b>Nick Marx · Darrell</div></div>
+  <p><b>Why:</b> Daniel raised this on the 4/28 Q1 review — how does Root'd get featured on Tesla's live in-car map? Open thread. Per Nick's call notes: Tesla pulls from Apple location data; getting featured requires Apple Maps presence (covered by FND-07). Darrell suggested investigating Yelp paid advertising as an additional surface (Apple historically pulls some signals from Yelp).</p>
+  <ol class="steps">
+    <li>Confirm FND-07 closes the Apple Maps Connect verification first (prerequisite).</li>
+    <li>Test Apple Maps + Siri voice routing for "cannabis dispensary near me" / "weed dispensary near me" from a Bay-Area device. Capture whether Root'd appears.</li>
+    <li>Research Yelp paid advertising in cannabis (does Yelp accept cannabis ads in CA? Pricing? Restrictions?). Document feasibility.</li>
+    <li>Test in a Tesla (if available — Daniel may have access via owner network) the in-car search experience. Capture whether Root'd surfaces and at what position.</li>
+    <li>Document findings + recommendation in <code>SEO-04b-tesla-apple-maps.md</code>; bring to mid-month check-in for Daniel.</li>
+  </ol>
+  <div class="accept"><b>Acceptance:</b> Findings documented; recommendation on Yelp paid (yes/no + cost) brought to mid-month check-in.</div>
 </div>
 
 <div class="task task-p0">
