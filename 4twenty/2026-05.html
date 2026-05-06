@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>4Twenty Market — May 2026 Local SEO &amp; Marketing Strategy</title>
+<style>
+  :root {
+    --black: #1A1A1A;
+    --charcoal: #2C2C2C;
+    --slate: #4A4A4A;
+    --yellow: #F4D03F;
+    --yellow-dark: #D4AC0D;
+    --yellow-light: #FFFBEC;
+    --green: #2D7A3F;
+    --green-dark: #1F5429;
+    --green-light: #E8F5E9;
+    --leaf: #4CAF50;
+    --gray-100: #F5F5F5;
+    --gray-200: #E5E7EB;
+    --gray-300: #D1D5DB;
+    --gray-500: #6B7280;
+    --gray-700: #374151;
+    --ok: #2BA84A;
+    --warn: #E8870C;
+    --bad: #D64545;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; color: var(--charcoal); background: #fafafa; line-height: 1.65; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 32px 80px; }
+
+  .cover { background: linear-gradient(135deg, var(--black) 0%, var(--charcoal) 55%, var(--green-dark) 100%); color: #fff; padding: 80px 32px 90px; margin-bottom: 48px; border-bottom: 8px solid var(--yellow); position: relative; }
+  .cover::after { content: ""; position: absolute; bottom: -8px; left: 0; right: 0; height: 8px; background: linear-gradient(90deg, var(--yellow) 0%, var(--leaf) 50%, var(--yellow) 100%); }
+  .cover-inner { max-width: 1100px; margin: 0 auto; }
+  .cover .eyebrow { text-transform: uppercase; letter-spacing: 4px; font-size: 13px; font-weight: 700; color: var(--yellow); margin-bottom: 18px; }
+  .cover h1 { font-size: 52px; line-height: 1.08; margin: 0 0 18px; font-weight: 800; letter-spacing: -0.6px; }
+  .cover h1 span { color: var(--yellow); }
+  .cover .subtitle { font-size: 20px; opacity: 0.92; max-width: 800px; margin: 0 0 30px; line-height: 1.45; }
+  .cover-meta { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; padding-top: 28px; border-top: 1px solid rgba(255,255,255,0.25); }
+  .cover-meta div .label { font-size: 11px; text-transform: uppercase; letter-spacing: 2px; opacity: 0.7; }
+  .cover-meta div .value { font-size: 16px; font-weight: 700; margin-top: 4px; }
+
+  section { margin-bottom: 56px; }
+  .section-num { display:inline-block; font-size:13px; font-weight:800; color: var(--yellow-dark); letter-spacing: 3px; margin-right: 12px; }
+  h2 { font-size: 32px; line-height: 1.2; color: var(--black); margin: 0 0 14px; font-weight: 800; letter-spacing: -0.3px; border-left: 6px solid var(--yellow); padding-left: 18px; }
+  h3 { font-size: 22px; color: var(--green-dark); margin: 28px 0 12px; font-weight: 700; }
+  h4 { font-size: 16px; color: var(--charcoal); margin: 20px 0 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+  p { font-size: 16px; color: var(--charcoal); }
+  .lede { font-size: 18.5px; color: var(--slate); max-width: 880px; margin-bottom: 24px; line-height: 1.55; }
+
+  .strategic-bet { background: var(--black); color: #fff; padding: 32px 36px; border-radius: 14px; margin: 22px 0; border-left: 6px solid var(--yellow); }
+  .strategic-bet .label { text-transform: uppercase; letter-spacing: 4px; font-size: 12px; color: var(--yellow); margin-bottom: 12px; font-weight: 800; }
+  .strategic-bet blockquote { font-size: 21px; line-height: 1.4; margin: 0 0 12px; font-weight: 600; color: #fff; }
+  .strategic-bet blockquote em { color: var(--yellow); font-style: normal; font-weight: 700; }
+  .strategic-bet p { font-size: 15px; opacity: 0.92; margin: 8px 0 0; line-height: 1.6; color: #fff; }
+
+  .card { background: #fff; border: 1px solid var(--gray-300); border-radius: 12px; padding: 22px 26px; margin: 16px 0; }
+  .card.yellow { background: var(--yellow-light); border-left: 5px solid var(--yellow); }
+  .card.green { background: var(--green-light); border-left: 5px solid var(--green); }
+
+  table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.05); margin: 16px 0 24px; }
+  th { background: var(--black); color: var(--yellow); text-align: left; padding: 12px 14px; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; }
+  td { padding: 11px 14px; border-bottom: 1px solid var(--gray-100); font-size: 14.5px; vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  tr:nth-child(even) td { background: var(--gray-100); }
+  td.right, th.right { text-align: right; font-variant-numeric: tabular-nums; }
+  td.center, th.center { text-align: center; }
+  .ok { color: var(--ok); font-weight: 700; }
+  .warn { color: var(--warn); font-weight: 700; }
+  .bad { color: var(--bad); font-weight: 700; }
+
+  .pillar { background: #fff; border: 1px solid var(--gray-300); border-radius: 12px; padding: 24px 28px; margin: 18px 0; }
+  .pillar-num { display: inline-block; background: var(--yellow); color: var(--black); width: 36px; height: 36px; border-radius: 50%; text-align: center; line-height: 36px; font-weight: 800; margin-right: 12px; vertical-align: middle; }
+  .pillar-num.zero { background: var(--green-dark); color: var(--yellow); }
+
+  .location-card { background: #fff; border: 1px solid var(--gray-300); border-radius: 14px; margin: 22px 0; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.04); }
+  .location-card .head { background: var(--black); color: #fff; padding: 20px 26px; border-bottom: 4px solid var(--yellow); }
+  .location-card .head h3 { color: #fff; margin: 0; font-size: 22px; }
+  .location-card .head .sub { color: var(--yellow); font-size: 12px; text-transform: uppercase; letter-spacing: 2px; margin-top: 4px; font-weight: 700; }
+  .location-card .body { padding: 22px 28px; }
+
+  ul { padding-left: 22px; }
+  li { margin-bottom: 6px; font-size: 15.5px; line-height: 1.55; }
+  li strong { color: var(--green-dark); }
+
+  footer { border-top: 4px solid var(--yellow); margin-top: 60px; padding: 28px 0 0; text-align: center; color: var(--gray-500); font-size: 13px; }
+  footer .brand { color: var(--black); font-weight: 800; letter-spacing: 2px; text-transform: uppercase; font-size: 14px; margin-bottom: 6px; }
+
+  @media (max-width: 720px) {
+    .cover { padding: 50px 22px 60px; }
+    .cover h1 { font-size: 36px; }
+    .cover-meta { grid-template-columns: 1fr; gap: 14px; }
+    .container { padding: 0 22px 60px; }
+    h2 { font-size: 26px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="cover-inner">
+    <div class="eyebrow">May 2026 · Local SEO &amp; Marketing Strategy</div>
+    <h1>4Twenty Market <span>·</span> Strategy Report</h1>
+    <div class="subtitle">Ship the chain-wide website template fix that unlocks "dispensary" + "cannabis" rankings simultaneously across all 3 stores. Resolve P0 GBP cleanup. Convert Oakland's dominance into revenue.</div>
+    <div class="cover-meta">
+      <div><div class="label">Prepared by</div><div class="value">Dispenza Dispensary Marketing</div></div>
+      <div><div class="label">For</div><div class="value">4Twenty Market portfolio</div></div>
+      <div><div class="label">Locations</div><div class="value">Oakland · Sacramento · WeHo</div></div>
+      <div><div class="label">Period</div><div class="value">May 1 – May 31, 2026</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+<section>
+  <span class="section-num">§ 1</span><h2 style="display:inline-block;">Executive Summary</h2>
+  <p class="lede">4Twenty Market is a 3-LLC partnership umbrella — Abyz, LLC (Oakland · Phytologie), Migliore, LLC (Sacramento · Abatin Wellness), and Ovest, LLC (West Hollywood · LAPCG) — operating as one customer-facing brand. Each store sits in a completely different competitive position.</p>
+  <p><strong>Oakland dominates</strong> (95–100% SoLV across all 5 keywords; the leverage is conversion not ranking). <strong>Sacramento splits</strong> (dominant on "weed" terms, structural gap on "dispensary"/"cannabis"). <strong>West Hollywood is gaining</strong> (+11.57 SoLV on "weed" — largest single-keyword move in the WeHo data).</p>
+  <p>But every page on <strong>4twentymarket.com</strong> shares the <strong>same template gaps</strong>: no meta description, no schema.org JSON-LD, no body copy, and the word "cannabis" appears nowhere in any H1, H2, H3, or <code>&lt;title&gt;</code>. Fixing the template once fixes all three stores at the same time. <strong>This is the highest-leverage move available this month</strong> — the same Joyleaf/Noire structural play, scaled to chain.</p>
+
+  <h3>May has three parallel bets</h3>
+
+  <div class="strategic-bet">
+    <div class="label">Bet A · Chain-wide ranking</div>
+    <blockquote>Ship the <em>template fix</em>. One engineering effort that benefits all 3 stores at once.</blockquote>
+    <p>Add meta descriptions, LocalBusiness JSON-LD with alternateName arrays, location-specific body copy, and "cannabis" keyword integration across all 3 location pages. Within 2–4 weeks of crawl, this typically moves underperforming terms meaningfully. Sacramento needs this most; Oakland and WeHo benefit too.</p>
+  </div>
+
+  <div class="strategic-bet">
+    <div class="label">Bet B · P0 GBP cleanup</div>
+    <blockquote>Resolve <em>documented CX harm</em>. Three items each have direct evidence they're costing customers right now.</blockquote>
+    <p>(a) Oakland "Offers delivery" attribute — the 3★ Google review citing "no delivery" is direct CX evidence. (b) Same on Sacramento (decommissioned May 2025 per POS). (c) The WeHo duplicate "4twenty Market" 2.9★ GBP listing dragging brand perception. All three ship Week 1.</p>
+  </div>
+
+  <div class="strategic-bet">
+    <div class="label">Bet C · Oakland visibility → revenue</div>
+    <blockquote>At 95–100% SoLV in a 1-mi grid, the <em>marginal SEO ROI is low</em>.</blockquote>
+    <p>Oakland's leverage shifts to GBP description rewrite, Posts cadence emphasizing in-stock brands (Stiiizy, Wyld, Camino, Raw Garden, Khalifa Kush — all confirmed in Oakland photo gallery), first-time customer review prompts. Same conversion lift applies to WeHo (smaller but trajectory is right).</p>
+  </div>
+</section>
+
+<section>
+  <span class="section-num">§ 2</span><h2 style="display:inline-block;">Where We Stand (April → May Snapshot)</h2>
+
+  <h3>Chain-wide GBP performance (29 months)</h3>
+  <table>
+    <thead><tr><th>Metric</th><th class="right">Baseline avg<br>(Nov '23 – Oct '24)</th><th class="right">Feb '26</th><th class="right">Δ</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Total GBP searches</strong></td><td class="right">18,188/mo</td><td class="right">10,155/mo</td><td class="right warn">-44.2%</td></tr>
+      <tr><td>Direct (branded)</td><td class="right">616/mo</td><td class="right">385/mo</td><td class="right">-37.5%</td></tr>
+      <tr><td>Discovery (non-branded)</td><td class="right">17,571/mo</td><td class="right">9,770/mo</td><td class="right">-44.4%</td></tr>
+      <tr><td>Web clicks</td><td class="right">2,755/mo</td><td class="right">3,118/mo</td><td class="right ok">+13.2%</td></tr>
+      <tr><td>Directions</td><td class="right">953/mo</td><td class="right">1,326/mo</td><td class="right ok">+39.1%</td></tr>
+      <tr><td>Phone calls</td><td class="right">346/mo</td><td class="right">305/mo</td><td class="right">-11.8%</td></tr>
+      <tr><td><strong>Total actions</strong></td><td class="right">4,054/mo</td><td class="right">4,749/mo</td><td class="right ok">+17.1%</td></tr>
+      <tr><td><strong>Conv rate</strong></td><td class="right">23.4%</td><td class="right"><strong>46.8%</strong></td><td class="right ok">+23.4 pp</td></tr>
+    </tbody>
+  </table>
+
+  <div class="card yellow">
+    <strong>Read:</strong> Search volume is down 44%, but action conversion has nearly doubled (23.4% → 46.8%). Visibility shrank; the people who do see the listings are far more likely to act. The ranking work in Bet A is about restoring the <strong>non-branded discovery flow</strong>.
+  </div>
+
+  <h3>Per-location keyword positioning (May 1, 2026 Local Falcon scans)</h3>
+
+  <h4>Oakland — total dominance</h4>
+  <table>
+    <thead><tr><th>Keyword</th><th class="right">Rank</th><th class="right">SoLV</th><th class="right">Δ vs Apr</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr><td>weed dispensary</td><td class="right ok">#1</td><td class="right ok">100.00%</td><td class="right">↔</td><td>Defended</td></tr>
+      <tr><td>weed</td><td class="right ok">#1</td><td class="right ok">100.00%</td><td class="right ok">↑2.48</td><td>Gained</td></tr>
+      <tr><td>weed near me</td><td class="right ok">#1</td><td class="right ok">99.17%</td><td class="right">↓0.83</td><td>Slight dip</td></tr>
+      <tr><td>dispensary</td><td class="right ok">#1</td><td class="right ok">95.04%</td><td class="right">↔</td><td>Stable</td></tr>
+      <tr><td>dispensary near me</td><td class="right ok">#1</td><td class="right">89.26%</td><td class="right">↔</td><td>Stable</td></tr>
+    </tbody>
+  </table>
+  <p>5 of 5 keywords #1 or near-#1. Defense, not offense.</p>
+
+  <h4>Sacramento — two-track split</h4>
+  <table>
+    <thead><tr><th>Keyword</th><th class="right">Rank</th><th class="right">SoLV</th><th class="right">Δ vs Apr</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr><td>weed near me</td><td class="right ok">#1</td><td class="right ok">85.95%</td><td class="right ok"><strong>↑16.53</strong></td><td>Recovered #1</td></tr>
+      <tr><td>weed dispensary</td><td class="right">#2</td><td class="right ok">71.90%</td><td class="right ok"><strong>↑18.18</strong></td><td>Biggest single gain</td></tr>
+      <tr><td>weed</td><td class="right">#3</td><td class="right">43.80%</td><td class="right ok">↑3.30</td><td>Solid</td></tr>
+      <tr><td>cannabis near me</td><td class="right">#3</td><td class="right">23.14%</td><td class="right ok">↑5.78</td><td>Gaining</td></tr>
+      <tr><td>cannabis</td><td class="right warn">#5</td><td class="right warn">16.53%</td><td class="right ok">↑1.65</td><td>Mid-pack</td></tr>
+      <tr><td>dispensary near me</td><td class="right warn">#6</td><td class="right warn">14.88%</td><td class="right ok">↑4.96</td><td>Gaining</td></tr>
+      <tr><td>dispensary</td><td class="right warn">#6</td><td class="right warn">13.22%</td><td class="right ok">↑3.30</td><td>Mid-pack</td></tr>
+    </tbody>
+  </table>
+  <div class="card green">
+    <strong>Same Joyleaf/Noire structural pattern.</strong> "Weed" terms dominate (GBP name does the work). "Dispensary"/"cannabis" terms sit mid-pack. Every keyword gained vs. April — unusual for a defending business; worth investigating what changed (covered in Pillar 5).
+  </div>
+
+  <h3>Verified facts established this scan cycle (2026-05-06)</h3>
+  <ul>
+    <li><strong>Oakland phone correction:</strong> website + Yelp confirm <strong>(510) 697-1566</strong> (not the (800) 420-3216 previously in client-profile)</li>
+    <li><strong>CA licenses verified:</strong> Oakland C12-0000132-LIC (Microbusiness · Abyz, LLC) · Sacramento C10-0000352-LIC (Retailer · Migliore, LLC) · WeHo C10-0000292-LIC (Retailer · Ovest, LLC)</li>
+    <li><strong>Entity structure:</strong> 3 separate LLCs hold 3 separate licenses; 4Twenty Market is the umbrella brand; OVEST LLC also owns the website domain</li>
+    <li><strong>WeHo "since 2004":</strong> confirmed via multiple sources; consistent with the GBP April 20, 2004 opening date</li>
+    <li><strong>Website chain-wide gaps:</strong> all 3 location pages on 4twentymarket.com are missing meta descriptions, JSON-LD schema, and body copy</li>
+  </ul>
+</section>
+
+<section>
+  <span class="section-num">§ 3</span><h2 style="display:inline-block;">Six Pillars for May</h2>
+
+  <div class="pillar">
+    <h3><span class="pillar-num zero">0</span>Website Structural Fixes (NEW · chain-wide template change)</h3>
+    <p><em>Single biggest leverage item. Ship in Week 1–2.</em></p>
+    <p>The Joyleaf-proven approach, scaled. Recommended changes to <strong>4twentymarket.com/{oakland,sacramento,west-hollywood}/</strong>:</p>
+    <table>
+      <thead><tr><th>Element</th><th>Current state</th><th>Proposed</th></tr></thead>
+      <tbody>
+        <tr><td>Meta description (all 3)</td><td class="bad">Not present</td><td>Per-location, paste-ready in playbook</td></tr>
+        <tr><td>JSON-LD schema (all 3)</td><td class="bad">Not present</td><td>LocalBusiness with alternateName array</td></tr>
+        <tr><td>Body copy paragraphs (all 3)</td><td class="bad">Not present</td><td>2–3 paragraphs per location featuring "cannabis dispensary [city]"</td></tr>
+        <tr><td>"Cannabis" in H2s (all 3)</td><td class="bad">Absent</td><td>"About Our [City] Cannabis Dispensary"</td></tr>
+        <tr><td>&lt;title&gt; standardization</td><td class="warn">Inconsistent</td><td>Standardized per-location format</td></tr>
+        <tr><td>License # format (WeHo)</td><td class="warn">C10-000292-LIC (truncated)</td><td>C10-0000292-LIC (BCC official)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="pillar">
+    <h3><span class="pillar-num">1</span>GBP Cleanup (per-location, P0)</h3>
+    <h4>Oakland</h4>
+    <ul>
+      <li>Toggle <strong>"Offers delivery" OFF</strong> (last delivery month: Aug 2024 per POS)</li>
+      <li>Investigate the <strong>"8450 Enterprise way" listing</strong> at the same street address</li>
+      <li>Add CA license # <strong>C12-0000132-LIC</strong> to GBP Description</li>
+      <li>Service area review (8-city sized for delivery; without delivery, decide keep-or-remove)</li>
+    </ul>
+    <h4>Sacramento</h4>
+    <ul>
+      <li>Toggle <strong>"Offers delivery" OFF</strong> (last delivery month: May 2025 per POS)</li>
+      <li>Resolve <strong>curbside attribute conflicts</strong></li>
+      <li>Add CA license # <strong>C10-0000352-LIC</strong> to GBP Description</li>
+      <li>Service area review (15-city, same logic)</li>
+    </ul>
+    <h4>West Hollywood</h4>
+    <ul>
+      <li>Claim/merge/report the <strong>duplicate "4twenty Market" 2.9★ GBP listing</strong> (P0 quick win)</li>
+      <li>Add CA license # <strong>C10-0000292-LIC</strong> to GBP Description</li>
+      <li>Medical-era secondary categories conversation — <em>do not auto-remove; owner conversation first</em></li>
+      <li>Apr 20, 2004 opening date — confirmed correct via DCC + multiple sources</li>
+    </ul>
+  </div>
+
+  <div class="pillar">
+    <h3><span class="pillar-num">2</span>Convert Visibility to Revenue (Oakland-led, WeHo-secondary)</h3>
+    <h4>Oakland</h4>
+    <ul>
+      <li>GBP description rewrite — Phytologie partnership story, in-stock brand mentions, ownership/community story</li>
+      <li>Posts cadence — minimum 3 Posts/week with brand-feature rotation</li>
+      <li>Review-prompting flow — staff scripts, in-store QR code, bag-stuffer cards</li>
+      <li>Resolve the "no delivery" 3★ review with an owner response acknowledging the change</li>
+    </ul>
+    <h4>West Hollywood</h4>
+    <ul>
+      <li>Owner response to recent reviews — protect the +11.57 "weed" gain</li>
+      <li>First Saturday content amplification (recurring monthly event)</li>
+      <li>LAPCG 2004 history as content angle — oldest operating dispensary in LA County</li>
+    </ul>
+  </div>
+
+  <div class="pillar">
+    <h3><span class="pillar-num">3</span>Sacramento Defense + Investigate the +18.18 SoLV gain</h3>
+    <h4>Defense work</h4>
+    <ul>
+      <li><strong>Perfect Union Eastside</strong> is the priority competitor — same zip 95817, ~0.5 mi away, head-to-head zero-sum dynamic</li>
+      <li><strong>STIIIZY Sacramento</strong> is the priority watch — exploded onto cannabis terms in Q4 2025 (0% → 39.67% in 5 months)</li>
+      <li><strong>Mainstage + All About Wellness</strong> — both came out of nowhere in late 2025; confirm whether new physical stores or rebrands</li>
+    </ul>
+    <h4>Investigate the +18.18 gain</h4>
+    <p>Every Sacramento keyword gained SoLV vs. April. That's unusual for a defending business and warrants root-cause analysis. Did our GBP cadence change? Did Perfect Union have a GBP issue? Was there an algo update? <strong>If we can identify what we did, we can repeat it.</strong></p>
+  </div>
+
+  <div class="pillar">
+    <h3><span class="pillar-num">4</span>Master Copy Library (paste-ready)</h3>
+    <p>Per-location: GBP description (200 words; license #; legacy framing; brand mentions; CTA), meta description (155 chars), body copy block (250–300 words), LocalBusiness JSON-LD (paste-ready), 4 GBP Posts (rotating: brand feature, deal/offer, community/event, review-prompt), 5 Q&amp;A seed pairs.</p>
+    <div class="card yellow">
+      <strong>Guardrails:</strong>
+      <ul>
+        <li>⚠ DO NOT change any GBP business name. All 3 carry brand-name SEO equity.</li>
+        <li>⚠ DO NOT auto-remove WeHo medical-era secondary categories. Owner conversation first.</li>
+        <li>⚠ DO NOT modify the website without staging + owner review.</li>
+        <li>⚠ License # must appear exactly as DCC formats it (7 digits with leading zero).</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="pillar">
+    <h3><span class="pillar-num">5</span>Reporting + Measurement</h3>
+    <ul>
+      <li>Per-keyword SoLV tracking — June 1 scan booked; same grid + radii so trends are comparable</li>
+      <li>GBP action conversion rate — track per-location; chain currently at 46.8% (Feb '26)</li>
+      <li>Cross-platform review velocity — 30/90-day pace + response rate (still to gather)</li>
+      <li>Sacramento +18.18 SoLV root cause — answer in writing before June scan</li>
+      <li>Cross-client awareness — KANNA Oakland and Root'd In The 510 are also Dispenza clients in the Oakland scan grid</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <span class="section-num">§ 4</span><h2 style="display:inline-block;">Per-Location Strategic Snapshots</h2>
+
+  <div class="location-card">
+    <div class="head">
+      <h3>Oakland</h3>
+      <div class="sub">Phytologie Wellness Center · Abyz, LLC · C12-0000132-LIC</div>
+    </div>
+    <div class="body">
+      <p><strong>Position:</strong> market leader (95–100% SoLV across 5 keywords)</p>
+      <p><strong>May focus:</strong> defend dominance + convert visibility to revenue (Bet C)</p>
+      <p><strong>Priority watches:</strong> KANNA Oakland (gained +95.87 on "weed near me" — biggest single-keyword competitor swing in any of our scan data), ZenSpace Delivery (rising "dispensary" competitor), Weed &amp; Cannabis Delivery Dispensary (1-review GBP with explosive May surge — possible spam)</p>
+      <p><strong>Cross-client awareness:</strong> KANNA Oakland and Root'd In The 510 are Dispenza clients in this same grid</p>
+    </div>
+  </div>
+
+  <div class="location-card">
+    <div class="head">
+      <h3>Sacramento</h3>
+      <div class="sub">Abatin Wellness Center · Migliore, LLC · C10-0000352-LIC</div>
+    </div>
+    <div class="body">
+      <p><strong>Position:</strong> two-track split — strong on "weed", structural gap on "dispensary"/"cannabis"</p>
+      <p><strong>May focus:</strong> ship template fix (Bet A); investigate +18.18 SoLV gain root cause (Pillar 5)</p>
+      <p><strong>Priority watches:</strong> Perfect Union Eastside (zero-sum head-to-head, same zip), STIIIZY Sacramento (Q4-2025 explosive newcomer)</p>
+    </div>
+  </div>
+
+  <div class="location-card">
+    <div class="head">
+      <h3>West Hollywood</h3>
+      <div class="sub">LAPCG · Ovest, LLC · C10-0000292-LIC · Since 2004</div>
+    </div>
+    <div class="body">
+      <p><strong>Position:</strong> gaining on weed terms (+11.57); 4.7★ on 248 Google + 4.9★ on 225 Leafly</p>
+      <p><strong>May focus:</strong> resolve duplicate listing (Bet B P0); LAPCG 2004 history as content angle</p>
+      <p><strong>Priority items:</strong> medical-era category cleanup conversation; First Saturday recurring event amplification</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <span class="section-num">§ 5</span><h2 style="display:inline-block;">The Path Forward</h2>
+  <table>
+    <thead><tr><th>Week</th><th>Focus</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Week 1 (May 4–10)</strong></td><td>P0 GBP cleanup (3 owner-side toggles) + WeHo duplicate listing claim/merge initiated + chain-wide meta description draft + JSON-LD schema draft for staging</td></tr>
+      <tr><td><strong>Week 2 (May 11–17)</strong></td><td>Template fix deployed across all 3 location pages → site re-crawl begins. Sacramento +18.18 root cause investigation completed</td></tr>
+      <tr><td><strong>Week 3 (May 18–24)</strong></td><td>Posts cadence at full velocity (3/week per location). First-Saturday content shipped. Staff review-prompt scripts deployed</td></tr>
+      <tr><td><strong>Week 4 (May 25–31)</strong></td><td>June 1 scan booked. Pre-scan GBP audit. Cross-client coordination call with KANNA + Root'd accounts</td></tr>
+    </tbody>
+  </table>
+  <p><strong>Companion:</strong> the Dispenza-only execution playbook lays out department-grouped, priority-ordered tasks with click-by-click steps, paste-ready copy, and acceptance criteria for everything in this report.</p>
+</section>
+
+<footer>
+  <div class="brand">Dispenza Dispensary Marketing</div>
+  <div>4Twenty Market — Oakland · Sacramento · West Hollywood</div>
+</footer>
+
+</div>
+
+</body>
+</html>

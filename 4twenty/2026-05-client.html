@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>4Twenty Market — May 2026 Marketing Strategy</title>
+<style>
+  :root {
+    --black: #1A1A1A;
+    --charcoal: #2C2C2C;
+    --slate: #4A4A4A;
+    --yellow: #F4D03F;
+    --yellow-dark: #D4AC0D;
+    --yellow-light: #FFFBEC;
+    --green: #2D7A3F;
+    --green-dark: #1F5429;
+    --green-light: #E8F5E9;
+    --leaf: #4CAF50;
+    --gray-100: #F5F5F5;
+    --gray-200: #E5E7EB;
+    --gray-300: #D1D5DB;
+    --gray-500: #6B7280;
+    --gray-700: #374151;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: var(--charcoal);
+    background: #fafafa;
+    line-height: 1.65;
+  }
+  .container { max-width: 1040px; margin: 0 auto; padding: 0 32px 80px; }
+
+  /* Cover */
+  .cover {
+    background: linear-gradient(135deg, var(--black) 0%, var(--charcoal) 55%, var(--green-dark) 100%);
+    color: #fff;
+    padding: 80px 32px 90px;
+    margin-bottom: 48px;
+    border-bottom: 8px solid var(--yellow);
+    position: relative;
+  }
+  .cover::after {
+    content: "";
+    position: absolute;
+    bottom: -8px; left: 0; right: 0;
+    height: 8px;
+    background: linear-gradient(90deg, var(--yellow) 0%, var(--leaf) 50%, var(--yellow) 100%);
+  }
+  .cover-inner { max-width: 1040px; margin: 0 auto; }
+  .cover .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--yellow);
+    margin-bottom: 18px;
+  }
+  .cover h1 {
+    font-size: 52px;
+    line-height: 1.08;
+    margin: 0 0 18px;
+    font-weight: 800;
+    letter-spacing: -0.6px;
+  }
+  .cover h1 span { color: var(--yellow); }
+  .cover .subtitle {
+    font-size: 20px;
+    opacity: 0.92;
+    max-width: 800px;
+    margin: 0 0 30px;
+    line-height: 1.45;
+  }
+  .cover-meta {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    padding-top: 28px;
+    border-top: 1px solid rgba(255,255,255,0.25);
+    margin-top: 16px;
+  }
+  .cover-meta div .label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0.7;
+  }
+  .cover-meta div .value { font-size: 16px; font-weight: 700; margin-top: 4px; }
+
+  /* Sections */
+  section { margin-bottom: 48px; }
+  h2 {
+    font-size: 32px;
+    line-height: 1.2;
+    color: var(--black);
+    margin: 0 0 14px;
+    font-weight: 800;
+    letter-spacing: -0.3px;
+    border-left: 6px solid var(--yellow);
+    padding-left: 18px;
+  }
+  h3 {
+    font-size: 22px;
+    color: var(--green-dark);
+    margin: 28px 0 12px;
+    font-weight: 700;
+  }
+  h4 {
+    font-size: 16px;
+    color: var(--charcoal);
+    margin: 20px 0 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  p { font-size: 16px; color: var(--charcoal); }
+  .lede {
+    font-size: 18.5px;
+    color: var(--slate);
+    max-width: 880px;
+    margin-bottom: 24px;
+    line-height: 1.55;
+  }
+
+  /* Theme card */
+  .themes {
+    background: var(--yellow-light);
+    border-left: 6px solid var(--yellow);
+    border-radius: 8px;
+    padding: 24px 28px;
+    margin: 24px 0;
+  }
+  .themes ol { margin: 12px 0 0; padding-left: 20px; }
+  .themes li { margin-bottom: 12px; font-size: 16px; }
+  .themes li strong { color: var(--green-dark); }
+
+  /* Highlight callout */
+  .highlight {
+    background: var(--green-dark);
+    color: #fff;
+    padding: 28px 32px;
+    border-radius: 12px;
+    margin: 22px 0;
+    border-left: 6px solid var(--yellow);
+  }
+  .highlight p { color: #fff; font-size: 17px; line-height: 1.55; margin: 0; }
+  .highlight strong { color: var(--yellow); }
+
+  /* Location card */
+  .location-card {
+    background: #fff;
+    border: 1px solid var(--gray-300);
+    border-radius: 14px;
+    margin: 22px 0;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+  }
+  .location-card .head {
+    background: var(--black);
+    color: #fff;
+    padding: 22px 28px;
+    border-bottom: 4px solid var(--yellow);
+  }
+  .location-card .head h3 {
+    color: #fff;
+    margin: 0;
+    font-size: 24px;
+  }
+  .location-card .head .sub {
+    color: var(--yellow);
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 4px;
+    font-weight: 700;
+  }
+  .location-card .body { padding: 24px 28px; }
+  .location-card .work-block { margin-bottom: 22px; }
+  .location-card .work-block:last-child { margin-bottom: 0; }
+  .location-card .work-block h4 {
+    color: var(--green-dark);
+    margin: 0 0 10px;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+  .location-card ul {
+    margin: 0;
+    padding-left: 22px;
+  }
+  .location-card li {
+    font-size: 15.5px;
+    margin-bottom: 8px;
+    line-height: 1.55;
+  }
+  .location-card li strong { color: var(--green-dark); }
+
+  /* Reporting card */
+  .reporting {
+    background: #fff;
+    border: 1px solid var(--gray-300);
+    border-radius: 12px;
+    padding: 26px 30px;
+    margin: 22px 0;
+  }
+  .reporting ul { margin: 12px 0 0; padding-left: 22px; }
+  .reporting li { margin-bottom: 8px; font-size: 16px; }
+
+  /* Footer */
+  footer {
+    border-top: 4px solid var(--yellow);
+    margin-top: 60px;
+    padding: 28px 0 0;
+    text-align: center;
+    color: var(--gray-500);
+    font-size: 13px;
+  }
+  footer .brand {
+    color: var(--black);
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+
+  /* Responsive */
+  @media (max-width: 720px) {
+    .cover { padding: 50px 22px 60px; }
+    .cover h1 { font-size: 36px; }
+    .cover-meta { grid-template-columns: 1fr; gap: 14px; }
+    .container { padding: 0 22px 60px; }
+    h2 { font-size: 26px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="cover-inner">
+    <div class="eyebrow">May 2026 · Marketing Strategy</div>
+    <h1>4Twenty Market <span>·</span> May Plan</h1>
+    <div class="subtitle">Stronger SEO foundations across the chain. Amplified Google Business Profile presence at every location. Each store's story brought forward.</div>
+    <div class="cover-meta">
+      <div>
+        <div class="label">Prepared by</div>
+        <div class="value">Dispenza Dispensary Marketing</div>
+      </div>
+      <div>
+        <div class="label">For</div>
+        <div class="value">Oakland · Sacramento · West Hollywood</div>
+      </div>
+      <div>
+        <div class="label">Period</div>
+        <div class="value">May 1 – May 31, 2026</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+<section>
+  <h2>What's coming in May</h2>
+  <p class="lede">May is focused on strengthening your local SEO foundations across the chain and amplifying your Google Business Profile presence at each of the three locations.</p>
+  <p>We're delivering a coordinated effort: one round of website enhancements that benefits all three stores, plus location-specific GBP work tailored to each market and each brand legacy.</p>
+
+  <div class="themes">
+    <h4 style="margin-top:0;">Themes for the month</h4>
+    <ol>
+      <li><strong>Bring each location's story forward.</strong> Phytologie's Bay Area heritage in Oakland, Abatin Wellness's path-to-wellness lineage in Sacramento, and LAPCG's two-decade legacy in West Hollywood are all SEO and brand-trust assets. We're putting them front-and-center.</li>
+      <li><strong>Brand-carry visibility.</strong> The premium brands you carry — Stiiizy, Wyld, Camino, Sherbinskis, Raw Garden, Khalifa Kush, Mary's Medicinals, and more — are search magnets. We're weaving them into your website pages and your GBP rhythm so brand-curious shoppers find you first.</li>
+      <li><strong>Polished GBP cadence.</strong> Three posts a week per location, refreshed descriptions, expanded Q&amp;A inventory, and a tighter service-area picture for each store.</li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <h2>Chain-wide enhancements</h2>
+  <p class="lede">One effort. All three stores benefit at once.</p>
+  <p>We're shipping a single round of website improvements to <strong>4twentymarket.com</strong> that benefits Oakland, Sacramento, and West Hollywood simultaneously:</p>
+  <ul>
+    <li><strong>Refreshed page foundations</strong> so Google and search-aware AI tools can clearly read each location's identity, address, hours, and offerings</li>
+    <li><strong>Location-specific narrative copy</strong> added to each page, telling the story of the location's roots and community connection</li>
+    <li><strong>Brand-carry highlights</strong> woven into the on-page experience</li>
+    <li><strong>Local-area context</strong> — neighborhoods, nearby landmarks, and community references that ground each page in its market</li>
+    <li><strong>Regulatory polish</strong> — your CA license numbers formatted to match official state records on every page</li>
+  </ul>
+  <div class="highlight">
+    <p>This is the highest-leverage SEO work available this month and the work compounds: <strong>every location benefits at the same time.</strong></p>
+  </div>
+</section>
+
+<section>
+  <h2>Per-location May work</h2>
+
+  <div class="location-card">
+    <div class="head">
+      <h3>Oakland</h3>
+      <div class="sub">8440 Enterprise Way · Coliseum Area</div>
+    </div>
+    <div class="body">
+      <div class="work-block">
+        <h4>On-page (4twentymarket.com/oakland/)</h4>
+        <ul>
+          <li>Refreshed page foundations for stronger search visibility</li>
+          <li><strong>Phytologie Wellness Center heritage</strong> story (since 2014) integrated into the page</li>
+          <li>Coliseum / East Bay / Edgewater neighborhood context added</li>
+          <li>Brand-carry highlights featured: <strong>Stiiizy, Wyld, Camino, Raw Garden, Khalifa Kush, Mary's Medicinals</strong></li>
+          <li>License number formatted to official CA state records</li>
+        </ul>
+      </div>
+      <div class="work-block">
+        <h4>Google Business Profile</h4>
+        <ul>
+          <li><strong>Refreshed description</strong> leading with the Phytologie heritage and your premium brand carry</li>
+          <li><strong>3 Posts per week through May</strong> — rotating across brand features, daily deals, community stories, and customer-review highlights</li>
+          <li><strong>Expanded Q&amp;A inventory</strong> so the most common customer questions are answered upfront</li>
+          <li>License number added to the description for regulatory trust</li>
+          <li>Service-area refinement for clarity and honesty</li>
+          <li><strong>Customer review push</strong> targeting first-time visitors via in-store QR codes and bag-stuffer cards</li>
+          <li>Attribute review to make sure your GBP reflects current operations accurately</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="location-card">
+    <div class="head">
+      <h3>Sacramento</h3>
+      <div class="sub">2100 29th Street · Newton Booth</div>
+    </div>
+    <div class="body">
+      <div class="work-block">
+        <h4>On-page (4twentymarket.com/sacramento/)</h4>
+        <ul>
+          <li>Refreshed page foundations</li>
+          <li><strong>Abatin Wellness Center's path-to-wellness</strong> story integrated</li>
+          <li>Newton Booth / Midtown / East Sacramento / Land Park / Curtis Park neighborhood context added</li>
+          <li>Brand-carry highlights featured</li>
+          <li>License number formatted to official CA state records</li>
+        </ul>
+      </div>
+      <div class="work-block">
+        <h4>Google Business Profile</h4>
+        <ul>
+          <li><strong>Refreshed description</strong> leading with the Abatin lineage and your serving Sacramento's central neighborhoods</li>
+          <li><strong>3 Posts per week through May</strong></li>
+          <li><strong>Expanded Q&amp;A inventory</strong></li>
+          <li>License number added to the description</li>
+          <li>Service-area refinement focused on Sacramento and the immediately neighboring cities</li>
+          <li>Attribute review to confirm current operations are reflected accurately</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="location-card">
+    <div class="head">
+      <h3>West Hollywood</h3>
+      <div class="sub">7213 Santa Monica Blvd · Since 2004</div>
+    </div>
+    <div class="body">
+      <div class="work-block">
+        <h4>On-page (4twentymarket.com/west-hollywood/)</h4>
+        <ul>
+          <li>Refreshed page foundations</li>
+          <li><strong>"Since 2004" heritage</strong> prominently featured — LA County's longest-operating cannabis dispensary</li>
+          <li>LAPCG legacy story integrated into the page</li>
+          <li>WeHo neighborhood context — Trader Joe's, Plummer Park, the Santa Monica Boulevard corridor</li>
+          <li>Brand-carry highlights featured: <strong>Stiiizy, Sherbinskis, Raw Garden, Camino, Wyld, Rove, Khalifa Kush</strong></li>
+          <li>License number formatted to official CA state records</li>
+        </ul>
+      </div>
+      <div class="work-block">
+        <h4>Google Business Profile</h4>
+        <ul>
+          <li><strong>Refreshed description</strong> leading with the "Since 2004" heritage and First Saturday community event</li>
+          <li><strong>3 Posts per week through May</strong>, including a multi-Post First Saturday lead-up</li>
+          <li><strong>Expanded Q&amp;A inventory</strong> including the LAPCG history and First Saturday event details</li>
+          <li>License number added to the description</li>
+          <li><strong>First Saturday content amplification</strong> — recurring monthly content rhythm, establishing the WeHo monthly community event as a brand asset</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Reporting</h2>
+  <p>At the end of May, you'll receive a <strong>per-location performance recap</strong> covering:</p>
+  <div class="reporting">
+    <ul>
+      <li>GBP action volumes — calls, direction requests, website clicks per location</li>
+      <li>Review momentum across Google, Weedmaps, and Leafly per location</li>
+      <li>Posts cadence and engagement across all three GBPs</li>
+      <li>Search visibility highlights</li>
+    </ul>
+  </div>
+  <p>A fresh <strong>Local Falcon scan on June 1</strong> will give us a clean month-over-month read on ranking changes across your seven priority keywords at each location, ready for our June planning session.</p>
+</section>
+
+<section>
+  <h2>Why this combination</h2>
+  <p>Each store sits in a different competitive position — <strong>Oakland</strong> is in defense mode, <strong>Sacramento</strong> has room to expand on key search terms, and <strong>West Hollywood</strong> is on a clear upward trajectory. The May plan respects those differences while taking advantage of the chain's shared website to ship enhancements once that benefit all three locations.</p>
+  <p>Pairing the website foundation work with consistent, branded GBP cadence is the single most reliable lever for moving local rankings and turning search visibility into walk-in traffic. <strong>That's where May's effort lives.</strong></p>
+  <p>We'll regroup in early June to review what shipped, what moved, and where to push next.</p>
+</section>
+
+<footer>
+  <div class="brand">Dispenza Dispensary Marketing</div>
+  <div>Prepared 2026-05-06 · 4Twenty Market — Oakland · Sacramento · West Hollywood</div>
+</footer>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>4Twenty Market — May 2026 Dispenza Execution Playbook</title>
+<style>
+  :root {
+    --black: #1A1A1A;
+    --charcoal: #2C2C2C;
+    --slate: #4A4A4A;
+    --yellow: #F4D03F;
+    --yellow-dark: #D4AC0D;
+    --yellow-light: #FFFBEC;
+    --green: #2D7A3F;
+    --green-dark: #1F5429;
+    --green-light: #E8F5E9;
+    --leaf: #4CAF50;
+    --gray-100: #F5F5F5;
+    --gray-200: #E5E7EB;
+    --gray-300: #D1D5DB;
+    --gray-500: #6B7280;
+    --gray-700: #374151;
+    --p0: #D64545;
+    --p0-bg: #FFE8E8;
+    --p1: #E8870C;
+    --p1-bg: #FFF1DD;
+    --p2: #2BA84A;
+    --p2-bg: #E6F6EA;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; color: var(--charcoal); background: #fafafa; line-height: 1.65; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 32px 80px; }
+
+  .cover { background: linear-gradient(135deg, var(--black) 0%, var(--charcoal) 50%, var(--green-dark) 100%); color: #fff; padding: 70px 32px 80px; margin-bottom: 48px; border-bottom: 8px solid var(--yellow); position: relative; }
+  .cover::after { content: ""; position: absolute; bottom: -8px; left: 0; right: 0; height: 8px; background: linear-gradient(90deg, var(--yellow) 0%, var(--leaf) 50%, var(--yellow) 100%); }
+  .cover-inner { max-width: 1100px; margin: 0 auto; }
+  .cover .eyebrow { text-transform: uppercase; letter-spacing: 4px; font-size: 13px; font-weight: 700; color: var(--yellow); margin-bottom: 18px; }
+  .cover .internal-stamp { display: inline-block; background: rgba(214, 69, 69, 0.95); color: #fff; padding: 6px 14px; border-radius: 4px; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 18px; }
+  .cover h1 { font-size: 46px; line-height: 1.1; margin: 0 0 16px; font-weight: 800; letter-spacing: -0.5px; }
+  .cover h1 span { color: var(--yellow); }
+  .cover .subtitle { font-size: 18px; opacity: 0.92; max-width: 800px; margin: 0 0 28px; line-height: 1.45; }
+
+  section { margin-bottom: 48px; }
+  h2 { font-size: 30px; line-height: 1.2; color: var(--black); margin: 0 0 14px; font-weight: 800; letter-spacing: -0.3px; border-left: 6px solid var(--yellow); padding-left: 16px; }
+  h3 { font-size: 20px; color: var(--green-dark); margin: 24px 0 10px; font-weight: 700; }
+  h4 { font-size: 15px; color: var(--charcoal); margin: 18px 0 8px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+  p { font-size: 15.5px; }
+
+  .guardrails { background: var(--yellow-light); border-left: 6px solid var(--yellow-dark); padding: 18px 24px; border-radius: 6px; margin: 18px 0 28px; }
+  .guardrails h4 { margin: 0 0 10px; color: var(--yellow-dark); }
+  .guardrails ul { margin: 0; padding-left: 20px; }
+  .guardrails li { font-size: 14.5px; margin-bottom: 6px; }
+
+  .owner-key { background: var(--black); color: var(--yellow); padding: 16px 22px; border-radius: 8px; margin: 18px 0; font-size: 14px; }
+  .owner-key strong { color: #fff; }
+
+  .task { background: #fff; border: 1px solid var(--gray-300); border-radius: 10px; padding: 20px 24px; margin: 14px 0; }
+  .task-head { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; flex-wrap: wrap; }
+  .task-id { background: var(--black); color: var(--yellow); padding: 4px 10px; border-radius: 4px; font-size: 11px; font-weight: 700; letter-spacing: 1px; font-family: ui-monospace, "SF Mono", monospace; }
+  .pri { padding: 4px 10px; border-radius: 4px; font-size: 11px; font-weight: 800; letter-spacing: 1px; }
+  .pri.p0 { background: var(--p0-bg); color: var(--p0); }
+  .pri.p1 { background: var(--p1-bg); color: var(--p1); }
+  .pri.p2 { background: var(--p2-bg); color: var(--p2); }
+  .task-title { font-size: 17px; font-weight: 700; color: var(--black); flex: 1; min-width: 240px; }
+  .task-meta { display: flex; gap: 18px; flex-wrap: wrap; font-size: 13px; color: var(--gray-700); margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid var(--gray-200); }
+  .task-meta span strong { color: var(--green-dark); }
+  .task .why { background: var(--green-light); border-left: 4px solid var(--green); padding: 12px 16px; border-radius: 4px; font-size: 14.5px; margin: 10px 0; }
+  .task .why strong { color: var(--green-dark); }
+  .task ol, .task ul { padding-left: 22px; }
+  .task li { font-size: 14.5px; margin-bottom: 4px; }
+  .task .acceptance { background: var(--yellow-light); border-left: 4px solid var(--yellow); padding: 10px 16px; border-radius: 4px; font-size: 14px; margin-top: 12px; }
+  .task .acceptance strong { color: var(--yellow-dark); }
+
+  pre { background: var(--black); color: #E5E7EB; padding: 16px 18px; border-radius: 8px; overflow-x: auto; font-size: 12.5px; line-height: 1.55; font-family: ui-monospace, "SF Mono", Menlo, monospace; margin: 12px 0; }
+  pre code { color: inherit; }
+  .json-block { border-left: 4px solid var(--yellow); }
+
+  table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.05); margin: 14px 0 22px; }
+  th { background: var(--black); color: var(--yellow); text-align: left; padding: 11px 13px; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; }
+  td { padding: 10px 13px; border-bottom: 1px solid var(--gray-100); font-size: 14px; vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  tr:nth-child(even) td { background: var(--gray-100); }
+
+  .copy-block { background: #fff; border: 2px dashed var(--yellow); border-radius: 8px; padding: 16px 20px; margin: 12px 0; font-size: 14.5px; }
+  .copy-block .label { font-size: 11px; text-transform: uppercase; letter-spacing: 2px; color: var(--yellow-dark); font-weight: 800; margin-bottom: 8px; }
+
+  details { background: #fff; border: 1px solid var(--gray-300); border-radius: 8px; margin: 12px 0; padding: 0; }
+  summary { padding: 14px 20px; cursor: pointer; font-weight: 700; color: var(--black); user-select: none; list-style: none; }
+  summary::-webkit-details-marker { display: none; }
+  summary::before { content: "▸ "; color: var(--yellow-dark); font-weight: 800; }
+  details[open] summary::before { content: "▾ "; }
+  details > div { padding: 0 20px 16px; }
+
+  .checklist { background: var(--green-light); border-left: 6px solid var(--green); padding: 18px 24px; border-radius: 6px; }
+  .checklist ul { list-style: none; padding-left: 0; }
+  .checklist li { padding: 6px 0; font-size: 15px; }
+  .checklist li::before { content: "☐ "; color: var(--green-dark); font-weight: 800; }
+
+  footer { border-top: 4px solid var(--yellow); margin-top: 60px; padding: 28px 0 0; text-align: center; color: var(--gray-500); font-size: 13px; }
+  footer .brand { color: var(--black); font-weight: 800; letter-spacing: 2px; text-transform: uppercase; font-size: 14px; margin-bottom: 6px; }
+
+  @media (max-width: 720px) {
+    .cover { padding: 50px 22px 60px; }
+    .cover h1 { font-size: 32px; }
+    .container { padding: 0 22px 60px; }
+    h2 { font-size: 24px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="cover-inner">
+    <div class="internal-stamp">Internal · Dispenza Team Only</div>
+    <div class="eyebrow">May 2026 · Execution Playbook</div>
+    <h1>4Twenty Market <span>·</span> May Playbook</h1>
+    <div class="subtitle">Department-grouped, P0/P1/P2-prioritized tasks with click-by-click steps, paste-ready copy, JSON-LD blocks, and acceptance criteria. Companion to the May Strategy Report.</div>
+  </div>
+</div>
+
+<div class="container">
+
+<section>
+  <div class="owner-key">
+    <strong>Owner key:</strong>
+    <strong>DC</strong> = Darrell Clay (Dispenza account lead) ·
+    <strong>WEB</strong> = web/dev resource (4twentymarket.com CMS) ·
+    <strong>OWNER</strong> = client owner-side action ·
+    <strong>GBP</strong> = Dispenza GBP team ·
+    <strong>CONT</strong> = Dispenza content team
+  </div>
+
+  <div class="guardrails">
+    <h4>Chain-wide guardrails</h4>
+    <ul>
+      <li>⚠ <strong>DO NOT change any GBP business name.</strong> All 3 carry SEO equity in their current names.</li>
+      <li>⚠ <strong>DO NOT auto-remove WeHo medical-era secondary categories</strong> — owner conversation first.</li>
+      <li>⚠ <strong>DO NOT modify the website without staging + owner review.</strong></li>
+      <li>⚠ <strong>License # must appear exactly as DCC formats it</strong> — 7 digits with leading zero (e.g., C10-0000292-LIC).</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>🏗 Pillar 0 — Website Structural Fixes (Chain-wide template change)</h2>
+  <p>The fix that benefits all 3 stores at once. Sequence: meta descriptions Week 1 → JSON-LD Week 1 → body copy Week 2 → standardized title tags Week 2.</p>
+
+  <div class="task">
+    <div class="task-head"><span class="task-id">WSF-01</span><span class="pri p0">P0</span><span class="task-title">Add meta descriptions to all 3 location pages</span></div>
+    <div class="task-meta"><span><strong>Owner:</strong> WEB</span><span><strong>Deadline:</strong> Tue May 5</span></div>
+    <div class="why"><strong>Why:</strong> None of the 3 pages have meta descriptions per audit 2026-05-06. Baseline SEO + biggest single quick-win.</div>
+    <h4>Steps</h4>
+    <ol>
+      <li>WEB pulls current <code>&lt;head&gt;</code> markup for each of /oakland/, /sacramento/, /west-hollywood/</li>
+      <li>Insert <code>&lt;meta name="description" content="..."&gt;</code> per copy below</li>
+      <li>Stage → owner review → deploy</li>
+      <li>Verify with View Source on production after deploy</li>
+    </ol>
+    <h4>Paste-ready meta descriptions</h4>
+<pre>&lt;!-- /oakland/ --&gt;
+&lt;meta name="description" content="4Twenty Market Oakland — your Coliseum-area cannabis dispensary at 8440 Enterprise Way. Building on the Phytologie Wellness Center legacy since 2014. Open daily 9AM–9PM."&gt;
+
+&lt;!-- /sacramento/ --&gt;
+&lt;meta name="description" content="4Twenty Market Sacramento — Newton Booth's trusted cannabis dispensary at 2100 29th St, building on the Abatin Wellness Center legacy. Open daily 9AM–9PM."&gt;
+
+&lt;!-- /west-hollywood/ --&gt;
+&lt;meta name="description" content="4Twenty Market West Hollywood — LA County's longest-operating cannabis dispensary on Santa Monica Blvd, since 2004 (formerly LAPCG). Open Mon–Fri 9AM–9PM."&gt;</pre>
+    <div class="acceptance"><strong>Acceptance:</strong> All 3 pages return a non-empty meta description tag in HTML source on production.</div>
+  </div>
+
+  <div class="task">
+    <div class="task-head"><span class="task-id">WSF-02</span><span class="pri p0">P0</span><span class="task-title">Add LocalBusiness JSON-LD schema to all 3 pages</span></div>
+    <div class="task-meta"><span><strong>Owner:</strong> WEB</span><span><strong>Deadline:</strong> Wed May 6</span></div>
+    <div class="why"><strong>Why:</strong> No structured data on any page. Schema gives Google an explicit, machine-readable list of brand variants — alternateName arrays close the "dispensary" tokenization gap.</div>
+
+    <details>
+      <summary>Oakland JSON-LD (paste-ready)</summary>
+      <div>
+<pre class="json-block">&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "additionalType": "https://schema.org/LocalBusiness",
+  "name": "4Twenty Market Weed Dispensary Oakland",
+  "alternateName": [
+    "4Twenty Market Oakland",
+    "Phytologie Wellness Center",
+    "Phytologie Oakland",
+    "Oakland Cannabis Dispensary",
+    "Coliseum Cannabis Store"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "8440 Enterprise Way",
+    "addressLocality": "Oakland",
+    "addressRegion": "CA",
+    "postalCode": "94621",
+    "addressCountry": "US"
+  },
+  "telephone": "+1-510-697-1566",
+  "url": "https://4twentymarket.com/oakland/",
+  "priceRange": "$$",
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "09:00",
+    "closes": "21:00"
+  }],
+  "identifier": {
+    "@type": "PropertyValue",
+    "propertyID": "CA-DCC-License",
+    "value": "C12-0000132-LIC"
+  }
+}
+&lt;/script&gt;</pre>
+      </div>
+    </details>
+
+    <details>
+      <summary>Sacramento JSON-LD (paste-ready)</summary>
+      <div>
+<pre class="json-block">&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "additionalType": "https://schema.org/LocalBusiness",
+  "name": "Abatin Weed Dispensary Sacramento",
+  "alternateName": [
+    "Abatin Wellness Center",
+    "Abatin Sacramento",
+    "4Twenty Market Sacramento",
+    "Sacramento Cannabis Dispensary",
+    "Newton Booth Cannabis Store",
+    "Midtown Sacramento Dispensary"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "2100 29th Street",
+    "addressLocality": "Sacramento",
+    "addressRegion": "CA",
+    "postalCode": "95817",
+    "addressCountry": "US"
+  },
+  "telephone": "+1-916-822-5699",
+  "url": "https://4twentymarket.com/sacramento/",
+  "priceRange": "$$",
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "09:00",
+    "closes": "21:00"
+  }],
+  "identifier": {
+    "@type": "PropertyValue",
+    "propertyID": "CA-DCC-License",
+    "value": "C10-0000352-LIC"
+  }
+}
+&lt;/script&gt;</pre>
+      </div>
+    </details>
+
+    <details>
+      <summary>West Hollywood JSON-LD (paste-ready)</summary>
+      <div>
+<pre class="json-block">&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "additionalType": "https://schema.org/LocalBusiness",
+  "name": "4Twenty Market Weed Dispensary West Hollywood",
+  "alternateName": [
+    "4Twenty Market West Hollywood",
+    "Los Angeles Patients and Caregivers Group",
+    "LAPCG",
+    "West Hollywood Cannabis Dispensary",
+    "Santa Monica Boulevard Dispensary",
+    "WeHo Cannabis Store"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "7213 Santa Monica Blvd",
+    "addressLocality": "West Hollywood",
+    "addressRegion": "CA",
+    "postalCode": "90046",
+    "addressCountry": "US"
+  },
+  "telephone": "+1-310-295-6802",
+  "url": "https://4twentymarket.com/west-hollywood/",
+  "priceRange": "$$",
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "21:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "20:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "10:00", "closes": "19:00" }
+  ],
+  "foundingDate": "2004-04-20",
+  "identifier": {
+    "@type": "PropertyValue",
+    "propertyID": "CA-DCC-License",
+    "value": "C10-0000292-LIC"
+  }
+}
+&lt;/script&gt;</pre>
+      </div>
+    </details>
+
+    <div class="acceptance"><strong>Acceptance:</strong> All 3 schema blocks live + validating; pass Schema.org validator AND Google Rich Results test with no errors.</div>
+  </div>
+
+  <div class="task">
+    <div class="task-head"><span class="task-id">WSF-03</span><span class="pri p0">P0</span><span class="task-title">Add body copy paragraphs to each location page</span></div>
+    <div class="task-meta"><span><strong>Owner:</strong> WEB + CONT</span><span><strong>Deadline:</strong> Wed May 13</span></div>
+    <div class="why"><strong>Why:</strong> All 3 pages currently have H1 + category tiles only. Track-B keywords ("dispensary", "cannabis") have no on-page text relevance signals.</div>
+    <p>Body copy blocks are in the Master Copy Library §6 below. CONT delivers final copy → WEB inserts beneath H1, above "Shop by Category" → stage → owner review → deploy → request indexing via Search Console.</p>
+    <div class="acceptance"><strong>Acceptance:</strong> Each location page has a 250–300-word body copy block; "cannabis" appears ≥2× per page; "dispensary" appears ≥3× per page; license # appears in body or footer.</div>
+  </div>
+
+  <div class="task">
+    <div class="task-head"><span class="task-id">WSF-04</span><span class="pri p0">P0</span><span class="task-title">Add a "cannabis" H2 to each page</span></div>
+    <div class="task-meta"><span><strong>Owner:</strong> WEB</span><span><strong>Deadline:</strong> Wed May 13</span></div>
+    <div class="why"><strong>Why:</strong> "Cannabis" keyword is absent from every H1, H2, H3, and &lt;title&gt; across all 3 pages.</div>
+    <p>Insert immediately above the body copy block:</p>
+    <ul>
+      <li>Oakland: <code>&lt;h2&gt;About Our Oakland Cannabis Dispensary&lt;/h2&gt;</code></li>
+      <li>Sacramento: <code>&lt;h2&gt;About Our Sacramento Cannabis Dispensary&lt;/h2&gt;</code></li>
+      <li>WeHo: <code>&lt;h2&gt;About Our West Hollywood Cannabis Dispensary&lt;/h2&gt;</code></li>
+    </ul>
+  </div>
+
+  <div class="task">
+    <div class="task-head"><span class="task-id">WSF-05</span><span class="pri p1">P1</span><span class="task-title">Standardize &lt;title&gt; tags</span></div>
+    <div class="task-meta"><span><strong>Owner:</strong> WEB</span><span><strong>Deadline:</strong> Fri May 15</span></div>
+    <p>Inconsistent titles — Oak/Sac have "(Home)" template artifact; WeHo has different structure. Standardize:</p>
+    <ul>
+      <li>Oakland: <code>4Twenty Market Oakland | Cannabis Dispensary on Enterprise Way</code></li>
+      <li>Sacramento: <code>Abatin x 4Twenty Market | Sacramento Cannabis Dispensary on 29th St</code></li>
+      <li>WeHo: <code>4Twenty Market West Hollywood | LA County's Cannabis Dispensary Since 2004</code></li>
+    </ul>
+  </div>
+
+  <div class="task">
+    <div class="task-head"><span class="task-id">WSF-06</span><span class="pri p1">P1</span><span class="task-title">Fix WeHo license # leading-zero typo</span></div>
+    <div class="task-meta"><span><strong>Owner:</strong> WEB</span><span><strong>Deadline:</strong> Fri May 15</span></div>
+    <div class="why"><strong>Why:</strong> Website prints license as <code>C10-000292-LIC</code> (6 digits); BCC official format is <code>C10-0000292-LIC</code> (7 digits). Minor compliance fix.</div>
+    <p>Find/replace in CMS: <code>C10-000292-LIC</code> → <code>C10-0000292-LIC</code>. Search any other pages site-wide.</p>
+  </div>
+</section>
+
+<section>
+  <h2>🛡 Pillar 1 — GBP Cleanup (Owner-side P0s)</h2>
+
+  <div class="task">
+    <div class="task-head"><span class="task-id">GBP-01</span><span class="pri p0">P0</span><span class="task-title">Toggle "Offers delivery" OFF at Oakland</span></div>
+    <div class="task-meta"><span><strong>Owner:</strong> OWNER + DC</span><span><strong>Deadline:</strong> Mon May 4</span></div>
+    <div class="why"><strong>Why:</strong> Oakland decommissioned delivery in August 2024 per POS data. The 3★ Google review citing "no delivery" is direct CX evidence of customer harm.</div>
+    <ol>
+      <li>OWNER signs into Google Business Profile dashboard for Oakland</li>
+      <li>Edit Business Profile → "More" tab → Service options</li>
+      <li>Set "Delivery" to <strong>OFF</strong></li>
+      <li>Set "No delivery" as a negative attribute</li>
+      <li>Save; verify on logged-out browser session</li>
+    </ol>
+  </div>
+
+  <div class="task">
+    <div class="task-head"><span class="task-id">GBP-02</span><span class="pri p0">P0</span><span class="task-title">Toggle "Offers delivery" OFF at Sacramento + resolve curbside</span></div>
+    <div class="task-meta"><span><strong>Owner:</strong> OWNER + DC</span><span><strong>Deadline:</strong> Mon May 4</span></div>
+    <p>Same procedure as GBP-01. Sacramento decommissioned delivery May 2025 per POS. Plus: confirm with owner whether curbside pickup is currently offered; set GBP "Curbside pickup" attribute to match operational truth.</p>
+  </div>
+
+  <div class="task">
+    <div class="task-head"><span class="task-id">GBP-03</span><span class="pri p0">P0</span><span class="task-title">Claim/merge/report duplicate "4twenty Market" 2.9★ listing (WeHo)</span></div>
+    <div class="task-meta"><span><strong>Owner:</strong> OWNER + DC</span><span><strong>Deadline:</strong> Tue May 5</span></div>
+    <div class="why"><strong>Why:</strong> Duplicate doing active brand damage — 2.9★ on 7 reviews appearing in dispensary scan results.</div>
+    <ol>
+      <li>OWNER searches "4twenty Market" on Google Maps (lowercase "t" — that's how it's spelled on the duplicate)</li>
+      <li>Click duplicate → "Suggest an edit" → "Close or remove"</li>
+      <li>Select "Duplicate of another place" → enter primary listing URL/pin</li>
+      <li>If not auto-merged within 14 days: escalate via GBP support with screenshots showing both listings + ownership of primary</li>
+    </ol>
+  </div>
+
+  <div class="task">
+    <div class="task-head"><span class="task-id">GBP-04</span><span class="pri p0">P0</span><span class="task-title">Add CA license # to GBP Description (all 3)</span></div>
+    <div class="task-meta"><span><strong>Owner:</strong> GBP</span><span><strong>Deadline:</strong> Wed May 6</span></div>
+    <p>Append to existing GBP description (do not replace — Pillar 2 handles full rewrite):</p>
+    <ul>
+      <li>Oakland: <code>License: C12-0000132-LIC</code></li>
+      <li>Sacramento: <code>License: C10-0000352-LIC</code></li>
+      <li>WeHo: <code>License: C10-0000292-LIC</code></li>
+    </ul>
+  </div>
+
+  <div class="task">
+    <div class="task-head"><span class="task-id">GBP-05</span><span class="pri p1">P1</span><span class="task-title">Investigate Oakland "8450 Enterprise way" listing</span></div>
+    <div class="task-meta"><span><strong>Owner:</strong> DC + OWNER</span><span><strong>Deadline:</strong> Fri May 8</span></div>
+    <p>Listing at the same street address (8440 Enterprise Way) labeled "8450 Enterprise way" appears as RETAIL SPACE RENTAL AGENCY with 0.0★ — appears in 96/121 dispensary data points and 52/121 dispensary-near-me data points. DC pulls the listing, captures details. Owner conversation: legitimate co-located rental business OR phantom/duplicate? If phantom: report.</p>
+  </div>
+
+  <div class="task">
+    <div class="task-head"><span class="task-id">GBP-06</span><span class="pri p1">P1</span><span class="task-title">Service area review (Oakland 8-city + Sacramento 15-city)</span></div>
+    <div class="task-meta"><span><strong>Owner:</strong> DC + OWNER</span><span><strong>Deadline:</strong> Fri May 15</span></div>
+    <p>Both service areas were sized for delivery zones. Recommendation: keep but trim to 3–4 nearest cities each. Honesty first, but don't sacrifice discovery hints unnecessarily.</p>
+  </div>
+
+  <div class="task">
+    <div class="task-head"><span class="task-id">GBP-07</span><span class="pri p2">P2</span><span class="task-title">WeHo medical-era category cleanup conversation</span></div>
+    <div class="task-meta"><span><strong>Owner:</strong> DC + OWNER</span><span><strong>Deadline:</strong> Fri May 22</span></div>
+    <p><strong>DO NOT auto-remove.</strong> 6 secondary categories leaning medical/wellness — almost certainly LAPCG-era carryover. May be defensible for SEO. Owner conversation first.</p>
+  </div>
+</section>
+
+<section>
+  <h2>📈 Pillar 2 — GBP Description Rewrites + Posts Cadence</h2>
+
+  <div class="task">
+    <div class="task-head"><span class="task-id">GBP-08</span><span class="pri p1">P1</span><span class="task-title">GBP description rewrites (all 3)</span></div>
+    <div class="task-meta"><span><strong>Owner:</strong> GBP</span><span><strong>Deadline:</strong> Fri May 8</span></div>
+    <p>See Master Copy Library §1 for paste-ready descriptions. Each contains license #, brand-feature mentions, legacy framing, and CTA.</p>
+  </div>
+
+  <div class="task">
+    <div class="task-head"><span class="task-id">GBP-09</span><span class="pri p1">P1</span><span class="task-title">Posts cadence — 3 Posts/week per location</span></div>
+    <div class="task-meta"><span><strong>Owner:</strong> GBP</span><span><strong>Deadline:</strong> Begin Mon May 4</span></div>
+    <p>Cadence: Mon/Wed/Fri per location. 4-week rotation:</p>
+    <ul>
+      <li><strong>Week 1:</strong> Brand feature (Stiiizy / Wyld / Camino / Raw Garden / Khalifa Kush)</li>
+      <li><strong>Week 2:</strong> Deal/offer (tied to existing daily-deals page)</li>
+      <li><strong>Week 3:</strong> Community/event (First Saturday at WeHo; community connection at Oak/Sac)</li>
+      <li><strong>Week 4:</strong> Review-prompt (showcase a recent positive review)</li>
+    </ul>
+    <div class="acceptance"><strong>Acceptance:</strong> ≥12 Posts shipped per location across May; brand-feature rotation hits ≥4 distinct brands per location.</div>
+  </div>
+
+  <div class="task">
+    <div class="task-head"><span class="task-id">GBP-10</span><span class="pri p1">P1</span><span class="task-title">Resolve the Oakland 3★ "no delivery" review</span></div>
+    <div class="task-meta"><span><strong>Owner:</strong> GBP + OWNER</span><span><strong>Deadline:</strong> Wed May 6 (after GBP-01 ships)</span></div>
+    <div class="copy-block">
+      <div class="label">Paste-ready response (edit before posting)</div>
+      "Thank you for sharing this. We hear you on delivery — we made the difficult decision to move to in-store + pickup only in 2024 to focus on the experience our budtenders deliver in person. We've now updated our Google listing to make that clear so no future customers are surprised. If you're up for giving us another shot, our pickup orders typically take under 15 minutes from order to bag-in-hand. We'd love to make it right."
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>📝 Pillar 3 — Sacramento Defense + Investigation</h2>
+
+  <div class="task">
+    <div class="task-head"><span class="task-id">SAC-01</span><span class="pri p0">P0</span><span class="task-title">Investigate the Sacramento +18.18 SoLV gain</span></div>
+    <div class="task-meta"><span><strong>Owner:</strong> DC + GBP</span><span><strong>Deadline:</strong> Fri May 15</span></div>
+    <div class="why"><strong>Why:</strong> Every Sacramento keyword gained SoLV vs. April. Repeatable cause = repeatable strategy. External cause = plan for reversion.</div>
+    <h4>Investigation checklist</h4>
+    <ol>
+      <li>Sacramento GBP change log between April 1 and May 1</li>
+      <li>Perfect Union Eastside GBP status — visible suspension, attribute changes, review purges?</li>
+      <li>STIIIZY Sacramento April→May trajectory on weed terms</li>
+      <li>Algo update timing (publicly-reported Google updates Apr 25 – May 1)</li>
+      <li>Scan time differences (sample variance check)</li>
+      <li>Sacramento GBP review velocity April vs. previous months</li>
+    </ol>
+    <div class="acceptance"><strong>Acceptance:</strong> 1-page memo filed at <code>Sacramento (Abatin)/performance-reviews/2026-05-15_sac-solv-investigation.md</code> by Fri May 15; included in June planning.</div>
+  </div>
+
+  <div class="task">
+    <div class="task-head"><span class="task-id">SAC-02</span><span class="pri p1">P1</span><span class="task-title">Perfect Union Eastside priority watch (weekly)</span></div>
+    <div class="task-meta"><span><strong>Owner:</strong> DC</span><span><strong>Cadence:</strong> Recurring weekly</span></div>
+    <p>Same zip 95817, ~0.5 mi away, head-to-head zero-sum. Weekly: pull SoLV per keyword, check GBP for new Posts/photos/reviews, log attribute changes.</p>
+  </div>
+
+  <div class="task">
+    <div class="task-head"><span class="task-id">SAC-03</span><span class="pri p1">P1</span><span class="task-title">STIIIZY Sacramento priority watch (weekly)</span></div>
+    <div class="task-meta"><span><strong>Owner:</strong> DC</span><span><strong>Cadence:</strong> Recurring weekly</span></div>
+    <p>Track SoLV expansion across all 7 Sacramento keywords. Watch for STIIIZY brand-name appearances in Posts/Reviews. Note new STIIIZY locations in NorCal.</p>
+  </div>
+</section>
+
+<section>
+  <h2>🌟 Pillar 4 — West Hollywood Momentum + Defects</h2>
+
+  <div class="task">
+    <div class="task-head"><span class="task-id">WEHO-01</span><span class="pri p1">P1</span><span class="task-title">LAPCG 2004 history content angle</span></div>
+    <div class="task-meta"><span><strong>Owner:</strong> GBP + CONT</span><span><strong>Deadline:</strong> Wk 2</span></div>
+    <div class="why"><strong>Why:</strong> LAPCG is the oldest operating cannabis dispensary in LA County. Defensible content angle no competitor can match.</div>
+    <ul>
+      <li>1 GBP Post: "Operating on Santa Monica Blvd since 2004 — LA County's longest-tenured cannabis dispensary."</li>
+      <li>Update GBP description (Master Copy Library §1) to lead with "Since 2004"</li>
+      <li>Body copy on /west-hollywood/ features the 2004 lineage prominently</li>
+    </ul>
+  </div>
+
+  <div class="task">
+    <div class="task-head"><span class="task-id">WEHO-02</span><span class="pri p1">P1</span><span class="task-title">First Saturday content amplification</span></div>
+    <div class="task-meta"><span><strong>Owner:</strong> GBP + CONT</span><span><strong>Deadline:</strong> May 26 + 30 leading up to June 6</span></div>
+    <ol>
+      <li>Mon May 26: "First Saturday returns June 6 at 4Twenty Market West Hollywood. Save the date."</li>
+      <li>Fri May 30: "June 6 — First Saturday at 7213 Santa Monica Blvd. Music, deals, community."</li>
+      <li>Photo upload: any First-Saturday-branded asset</li>
+      <li>After event: 1 Post recapping with photos</li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <h2>🥇 Pillar 5 — Oakland Conversion Lift</h2>
+
+  <div class="task">
+    <div class="task-head"><span class="task-id">OAK-01</span><span class="pri p1">P1</span><span class="task-title">Oakland GBP description rewrite</span></div>
+    <div class="task-meta"><span><strong>Owner:</strong> GBP + CONT</span><span><strong>Deadline:</strong> Fri May 8</span></div>
+    <p>See Master Copy Library §1 (Oakland section). Phytologie partnership lead, brand anchors, license #, CTA.</p>
+  </div>
+
+  <div class="task">
+    <div class="task-head"><span class="task-id">OAK-02</span><span class="pri p1">P1</span><span class="task-title">Oakland Posts cadence (3/week)</span></div>
+    <div class="task-meta"><span><strong>Owner:</strong> GBP</span><span><strong>Deadline:</strong> Begin Mon May 4</span></div>
+    <p>Brand rotation: Stiiizy · Wyld · Camino · Raw Garden · Khalifa Kush · Mary's Medicinals · BeMore Blunt · Brite. All confirmed in current GBP photo gallery + description.</p>
+  </div>
+
+  <div class="task">
+    <div class="task-head"><span class="task-id">OAK-03</span><span class="pri p1">P1</span><span class="task-title">First-time customer review-prompt flow</span></div>
+    <div class="task-meta"><span><strong>Owner:</strong> OWNER + GBP</span><span><strong>Deadline:</strong> Fri May 8</span></div>
+    <ol>
+      <li><strong>Staff script</strong> for first-timers: "If you had a great experience today, a quick Google review really helps us. There's a QR code at the front."</li>
+      <li><strong>In-store QR code</strong> at register + exit; QR points to <code>https://search.google.com/local/writereview?placeid=[OAKLAND_PLACE_ID]</code></li>
+      <li><strong>Bag-stuffer card</strong> (1-color, ~1000 cards): "Loved your visit? Leave us a Google review → [QR]"</li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <h2>📊 Pillar 6 — Reporting + Measurement</h2>
+
+  <div class="task">
+    <div class="task-head"><span class="task-id">REP-01</span><span class="pri p0">P0</span><span class="task-title">Book the June 1, 2026 Local Falcon scan</span></div>
+    <div class="task-meta"><span><strong>Owner:</strong> DC</span><span><strong>Deadline:</strong> This week</span></div>
+    <p>Same grid + same radii (Oak 1mi, Sac 2mi, WeHo 1mi) preserves trend comparability.</p>
+  </div>
+
+  <div class="task">
+    <div class="task-head"><span class="task-id">REP-02</span><span class="pri p1">P1</span><span class="task-title">Per-location KPI tracker (May)</span></div>
+    <div class="task-meta"><span><strong>Owner:</strong> DC</span><span><strong>Deadline:</strong> Fri May 31</span></div>
+    <p>Track per location: SoLV per keyword, GBP actions, conversion rate, review velocity, Posts shipped vs target. Output: <code>All Stores/performance-reviews/2026-06-01_may-kpi-rollup.md</code></p>
+  </div>
+
+  <div class="task">
+    <div class="task-head"><span class="task-id">REP-03</span><span class="pri p1">P1</span><span class="task-title">Cross-client awareness — Oakland coordination</span></div>
+    <div class="task-meta"><span><strong>Owner:</strong> DC</span><span><strong>Deadline:</strong> Wk 4</span></div>
+    <p>KANNA Oakland and Root'd In The 510 are also Dispenza clients in the Oakland scan grid. Internal coordination call so we're not running zero-sum strategies.</p>
+  </div>
+</section>
+
+<section>
+  <h2>📚 Master Copy Library</h2>
+
+  <details>
+    <summary>§1 GBP Descriptions (paste-ready, all 3)</summary>
+    <div>
+      <h4>Oakland</h4>
+      <div class="copy-block">
+4Twenty Market Oakland is the Coliseum-area's go-to cannabis dispensary, located at 8440 Enterprise Way. Building on the legacy of Phytologie Wellness Center, a trusted name in Bay Area cannabis since 2014, we offer a curated selection of premium flower, edibles, vapes, and pre-rolls from brands you trust — Stiiizy, Wyld, Camino, Raw Garden, Khalifa Kush, Mary's Medicinals, and more. Open daily 9AM–9PM with in-store and pickup ordering. Stop by before the next Oakland A's, Roots, or Warriors event, or any time you need a welcoming, knowledgeable shopping experience. License: C12-0000132-LIC.
+      </div>
+      <h4>Sacramento</h4>
+      <div class="copy-block">
+Abatin x 4Twenty Market is Sacramento's trusted cannabis dispensary, in the heart of Newton Booth at 2100 29th St. Building on the legacy of Abatin Wellness Center's path-to-wellness mission, we serve Midtown, East Sac, Land Park, and Curtis Park with premium flower, edibles, vapes, and concentrates from the brands you know — including in-store and pickup ordering. Open daily 9AM–9PM. Whether you're new to cannabis or know exactly what you want, our team helps you find the right product for your day. License: C10-0000352-LIC.
+      </div>
+      <h4>West Hollywood</h4>
+      <div class="copy-block">
+4Twenty Market West Hollywood is LA County's longest-operating cannabis dispensary, on Santa Monica Blvd since 2004 — formerly known as LAPCG, the Los Angeles Patients and Caregivers Group. We offer a curated selection of premium flower, vapes, edibles, and concentrates from Stiiizy, Sherbinskis, Raw Garden, Camino, Wyld, Rove, and more. Open Mon–Fri 9AM–9PM, Sat 9AM–8PM, Sun 10AM–7PM, with in-store and pickup ordering. Visit us between Trader Joe's and Plummer Park, or join us the first Saturday of every month for music, deals, and community. License: C10-0000292-LIC.
+      </div>
+    </div>
+  </details>
+
+  <details>
+    <summary>§3 Sample GBP Posts (4-Post rotation per location)</summary>
+    <div>
+      <h4>Oakland — sample 4 Posts</h4>
+      <div class="copy-block">
+        <strong>Brand feature (Wk 1):</strong> "🔥 Stiiizy lineup just restocked at 4Twenty Market Oakland. Pods, 40s pre-rolls, live resin — the complete experience under one roof. Stop in at 8440 Enterprise Way or order pickup."<br><br>
+        <strong>Deal (Wk 2):</strong> "Daily Deals are live every day at 4Twenty Market Oakland. Tap the link to see today's flower, edibles, and vape specials. Refreshed every morning."<br><br>
+        <strong>Community (Wk 3):</strong> "Game day or just a Tuesday — we're 5 minutes from the Coliseum and Oracle Arena. Knowledgeable budtenders, premium flower, and a curated brand mix you won't find elsewhere in this corridor."<br><br>
+        <strong>Review-prompt (Wk 4):</strong> "'Awesome selection and nice starter gift bag for new customers.' — recent Google review. Thank you. New here? Stop by — we still do the gift bag for first-timers."
+      </div>
+
+      <h4>Sacramento — sample 4 Posts</h4>
+      <div class="copy-block">
+        <strong>Brand:</strong> "Camino edibles in Sacramento. Sleep, Bliss, Excite, and the new mocktail flavors — flight gummies that actually deliver. Stop by Abatin x 4Twenty Market at 2100 29th St."<br><br>
+        <strong>Deal:</strong> "Daily Deals refresh every morning at Abatin x 4Twenty Market Sacramento. Today's specials → [link]. Open 9AM–9PM."<br><br>
+        <strong>Community:</strong> "Sacramento's Newton Booth neighborhood has changed a lot. We've been here through it. Walk-in welcome — Midtown, East Sac, Land Park, Curtis Park, all 5 minutes away."<br><br>
+        <strong>Review-prompt:</strong> "Five stars from another regular today. We see you, we appreciate you. New to Abatin? Tell us what you like and we'll guide you."
+      </div>
+
+      <h4>WeHo — sample 4 Posts</h4>
+      <div class="copy-block">
+        <strong>Brand:</strong> "Sherbinskis is back at 4Twenty Market West Hollywood. Sunset Sherbet, Bacio Gelato, the genetics that put them on the map — from a brand that started right here in LA."<br><br>
+        <strong>Deal:</strong> "Daily Deals at 4Twenty Market West Hollywood — refreshed every morning. Tap to see today's."<br><br>
+        <strong>First Saturday (Wk 3):</strong> "First Saturday returns June 6 at 4Twenty Market West Hollywood. Music, deals, the WeHo community we've served since 2004. Save the date."<br><br>
+        <strong>Heritage:</strong> "Twenty-two years on Santa Monica Blvd. From the medical era to today, same address, same neighborhood, same commitment. Thanks WeHo."
+      </div>
+    </div>
+  </details>
+
+  <details>
+    <summary>§4 Q&amp;A Seed Pairs (5 per location)</summary>
+    <div>
+      <h4>Oakland</h4>
+      <ol>
+        <li><strong>Q:</strong> Do you offer delivery? <strong>A:</strong> We don't currently offer delivery. We offer in-store and pickup ordering at 8440 Enterprise Way. Pickup orders are typically ready in under 15 minutes.</li>
+        <li><strong>Q:</strong> Are you near the Oakland Coliseum? <strong>A:</strong> Yes, approximately 5 minutes from the Oakland Coliseum and Oracle Arena.</li>
+        <li><strong>Q:</strong> What's your relationship to Phytologie? <strong>A:</strong> 4Twenty Market Oakland is built on the legacy of Phytologie Wellness Center, a trusted Bay Area cannabis name since 2014. Same location, same commitment to quality.</li>
+        <li><strong>Q:</strong> What brands do you carry? <strong>A:</strong> We carry Stiiizy, Wyld, Camino, Raw Garden, Khalifa Kush, Mary's Medicinals, BeMore Blunt, Brite, and many more.</li>
+        <li><strong>Q:</strong> Do I need a medical card? <strong>A:</strong> No, we serve adult-use customers 21+ and medical patients with a valid recommendation.</li>
+      </ol>
+      <h4>Sacramento</h4>
+      <ol>
+        <li><strong>Q:</strong> Do you offer delivery? <strong>A:</strong> We currently offer in-store and pickup ordering at 2100 29th St.</li>
+        <li><strong>Q:</strong> What neighborhoods do you serve? <strong>A:</strong> We're in Newton Booth, easy walk-in access from Midtown, East Sacramento, Land Park, and Curtis Park.</li>
+        <li><strong>Q:</strong> What's the relationship between Abatin Wellness and 4Twenty Market? <strong>A:</strong> Abatin x 4Twenty Market builds on the Abatin Wellness Center legacy and path-to-wellness approach.</li>
+        <li><strong>Q:</strong> Do you have parking? <strong>A:</strong> Yes, street parking is generally available on 29th St.</li>
+        <li><strong>Q:</strong> How fresh is the flower? <strong>A:</strong> We turn inventory frequently and our budtenders can speak to harvest dates.</li>
+      </ol>
+      <h4>WeHo</h4>
+      <ol>
+        <li><strong>Q:</strong> How long have you been there? <strong>A:</strong> Since 2004 — first as LAPCG, then as 4Twenty Market West Hollywood. Same address, same community.</li>
+        <li><strong>Q:</strong> What's First Saturday? <strong>A:</strong> Every first Saturday of the month we host a community event with music, deals, and special promotions.</li>
+        <li><strong>Q:</strong> Do you have wheelchair access? <strong>A:</strong> Yes, our location is wheelchair accessible at the entrance.</li>
+        <li><strong>Q:</strong> What brands do you carry? <strong>A:</strong> Stiiizy, Sherbinskis, Raw Garden, Camino, Wyld, Rove, Khalifa Kush, and many more.</li>
+        <li><strong>Q:</strong> Are you the oldest dispensary in LA? <strong>A:</strong> We're LA County's longest-operating cannabis dispensary, serving the West Hollywood community since 2004.</li>
+      </ol>
+    </div>
+  </details>
+
+  <details>
+    <summary>§6 Website Body Copy Blocks (for WSF-03)</summary>
+    <div>
+      <h4>Oakland</h4>
+<pre>&lt;section class="location-intro"&gt;
+  &lt;h2&gt;About Our Oakland Cannabis Dispensary&lt;/h2&gt;
+  &lt;p&gt;4Twenty Market Oakland is the Coliseum-area's go-to cannabis dispensary, located at 8440 Enterprise Way — five minutes from the Oakland Coliseum, Oracle Arena, and Edgewater Park Plaza. We're proud to build on the legacy of &lt;strong&gt;Phytologie Wellness Center&lt;/strong&gt;, a trusted Bay Area cannabis name since 2014.&lt;/p&gt;
+  &lt;p&gt;We carry premium flower, edibles, vapes, pre-rolls, and concentrates from brands you trust — &lt;strong&gt;Stiiizy, Wyld, Camino, Raw Garden, Khalifa Kush, Mary's Medicinals&lt;/strong&gt;, and many more. Whether you're new to cannabis or know exactly what you're looking for, our budtenders are here to guide you.&lt;/p&gt;
+  &lt;p&gt;Open daily 9AM–9PM with in-store and pickup ordering. Visit our Oakland cannabis dispensary at 8440 Enterprise Way. License: C12-0000132-LIC.&lt;/p&gt;
+&lt;/section&gt;</pre>
+
+      <h4>Sacramento</h4>
+<pre>&lt;section class="location-intro"&gt;
+  &lt;h2&gt;About Our Sacramento Cannabis Dispensary&lt;/h2&gt;
+  &lt;p&gt;Abatin x 4Twenty Market is Sacramento's trusted cannabis dispensary in the heart of Newton Booth at 2100 29th Street, building on the legacy of the &lt;strong&gt;Abatin Wellness Center&lt;/strong&gt; and its path-to-wellness approach to cannabis retail.&lt;/p&gt;
+  &lt;p&gt;We serve Midtown, East Sacramento, Land Park, Curtis Park, and the broader Sacramento area with premium flower, edibles, vapes, pre-rolls, and concentrates from the brands you know. Whether you're a longtime customer or visiting our Sacramento dispensary for the first time, our team is here to help you find the right product for your day.&lt;/p&gt;
+  &lt;p&gt;Open daily 9AM–9PM with in-store and pickup ordering. Visit our Sacramento cannabis dispensary at 2100 29th Street. License: C10-0000352-LIC.&lt;/p&gt;
+&lt;/section&gt;</pre>
+
+      <h4>West Hollywood</h4>
+<pre>&lt;section class="location-intro"&gt;
+  &lt;h2&gt;About Our West Hollywood Cannabis Dispensary&lt;/h2&gt;
+  &lt;p&gt;4Twenty Market West Hollywood is &lt;strong&gt;LA County's longest-operating cannabis dispensary&lt;/strong&gt;, serving the WeHo community on Santa Monica Boulevard since &lt;strong&gt;2004&lt;/strong&gt;. Originally founded as LAPCG (the Los Angeles Patients and Caregivers Group), we've been the Santa Monica Blvd cannabis dispensary through the medical era and into the adult-use era today — same address, same community, same commitment.&lt;/p&gt;
+  &lt;p&gt;Our curated selection includes &lt;strong&gt;Stiiizy, Sherbinskis, Raw Garden, Camino, Wyld, Rove, Khalifa Kush&lt;/strong&gt;, and more. Visit us between Trader Joe's and Plummer Park — open Monday through Friday 9AM–9PM, Saturday 9AM–8PM, Sunday 10AM–7PM with in-store and pickup ordering. Don't miss &lt;strong&gt;First Saturday&lt;/strong&gt;, our monthly community event the first Saturday of every month.&lt;/p&gt;
+  &lt;p&gt;Visit our West Hollywood cannabis dispensary at 7213 Santa Monica Boulevard. License: C10-0000292-LIC.&lt;/p&gt;
+&lt;/section&gt;</pre>
+    </div>
+  </details>
+</section>
+
+<section>
+  <h2>✅ Acceptance Criteria Summary</h2>
+  <div class="checklist">
+    <ul>
+      <li>Meta descriptions live on all 3 location pages (WSF-01)</li>
+      <li>LocalBusiness JSON-LD live + validating on all 3 (WSF-02)</li>
+      <li>Body copy + cannabis H2 live on all 3 (WSF-03, WSF-04)</li>
+      <li>&lt;title&gt; tags standardized (WSF-05)</li>
+      <li>WeHo license # leading-zero fixed (WSF-06)</li>
+      <li>Oakland + Sacramento delivery toggles OFF (GBP-01, GBP-02)</li>
+      <li>WeHo duplicate listing claim/merge initiated (GBP-03)</li>
+      <li>License # in all 3 GBP descriptions (GBP-04)</li>
+      <li>Oakland 8450 Enterprise way listing investigated (GBP-05)</li>
+      <li>GBP description rewrites live (GBP-08)</li>
+      <li>≥12 Posts shipped per location across May (GBP-09)</li>
+      <li>Oakland 3★ "no delivery" review responded to (GBP-10)</li>
+      <li>Sacramento +18.18 SoLV root cause memo filed (SAC-01)</li>
+      <li>WeHo "Since 2004" content angle live in description + ≥2 Posts (WEHO-01)</li>
+      <li>Oakland review-prompt flow operational (OAK-03)</li>
+      <li>June 1 scan booked (REP-01)</li>
+      <li>May KPI rollup filed by Jun 1 (REP-02)</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="brand">Dispenza Dispensary Marketing · Internal Use Only</div>
+  <div>4Twenty Market — Oakland · Sacramento · West Hollywood</div>
+</footer>
+
+</div>
+
+</body>
+</html>
