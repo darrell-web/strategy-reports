@@ -1070,6 +1070,24 @@
   </ol>
 </div>
 
+<div class="task task-p1">
+  <div class="task-head"><span class="task-id">CON-08</span><span class="task-title">Standardize delivery descriptions site-wide</span><span class="badge b-p1">P1</span></div>
+  <div class="task-meta">
+    <div><b>Deadline</b>Wk 2 (parallel with DEV-05 Roselle Park page)</div>
+    <div><b>Time</b>3 hr (audit + harmonization across pages)</div>
+    <div><b>Owners</b>Jason (Joyleaf) leads · Dispenza Content team supports</div>
+  </div>
+  <p><b>Why:</b> Per the 4/28 strategy meeting, an AI audit (Claude) flagged inconsistent delivery language between the dedicated delivery page and the main site. Inconsistent copy creates user confusion AND dilutes the keyword signal Google reads when crawling delivery-related pages. Jason owns the harmonization on the Joyleaf side; Dispenza cross-references during the Pillar 1 deploy.</p>
+  <ol class="steps">
+    <li>Jason exports current delivery copy from: homepage delivery sections, /dispensary-location delivery callouts, /delivery (or whatever the delivery page slug is), GBP description, and any blog FAQ blocks mentioning delivery.</li>
+    <li>Dispenza Content team reviews the export, identifies the conflicts (e.g., delivery cities listed differently, fee/minimum stated differently, or "fast" vs. "same-day" vs. unstated turnaround).</li>
+    <li>Define one canonical delivery copy block (~120 words) referencing: 17-city service area (Clark · Union · Linden · Garwood · Roselle · Carteret · Cranford · Millburn · Elizabeth · Maplewood · Kenilworth · Springfield · Rahway · Roselle Park · Hillside · Irvington · Woodbridge), fee/minimum (per Joyleaf), turnaround language. Ship to Jason for sign-off.</li>
+    <li>Jason deploys the canonical block to every page where delivery is referenced. Dispenza verifies via post-deploy crawl.</li>
+    <li>Update GBP description if needed to match (already done via FND-04 ownership; just confirm).</li>
+  </ol>
+  <p><b>Acceptance:</b> Delivery copy block harmonized across ≥4 pages; AI audit re-run shows no conflicts; canonical copy committed to <code>CON-08-canonical-delivery-copy.md</code>.</p>
+</div>
+
 <div class="dept-head" id="gbp">
   <h2>📍 Department: GBP / Local Listings</h2>
   <div class="sub">8 tasks. Owns the Google Business Profile entirely — Q&amp;A, posts, photos, attributes, review responses. The May 1 Q&amp;A seeding + delivery-attribute toggle are the two highest-leverage GBP tactics in the entire month combined.</div>
@@ -1406,6 +1424,22 @@
     <div><b>Time</b>15 min</div>
   </div>
   <p>Pull GBP Insights for the prior 7 days. Track: discovery searches, web clicks, direction requests, phone calls, conversion rate. Add to the May KPI tracker. Trend graph required for end-of-month report.</p>
+</div>
+
+<div class="task task-p1">
+  <div class="task-head"><span class="task-id">SEO-04b</span><span class="task-title">Conquest competitor watch · AYR Union + ZenLeaf Elizabeth (weekly)</span><span class="badge b-p1">P1</span></div>
+  <div class="task-meta">
+    <div><b>Deadline</b>Every Monday</div>
+    <div><b>Time</b>15 min</div>
+  </div>
+  <p><b>Why:</b> Per the Joyleaf Jan '26 strategy session and client-profile, <b>AYR Dispensary Union and ZenLeaf Cannabis Dispensary (Elizabeth) are Joyleaf's stated primary conquest targets</b>. Currently absent from any weekly tracking. AYR Union is #2 on "dispensary" by 3.3-mi SoLV (37.19%), and ZenLeaf is #15 (7.44%). Neither was named on the v3 strategy until the 5/6 audit-pass; standing weekly tracking on both prevents future gaps.</p>
+  <ol class="steps">
+    <li>For each of AYR Union (2536 US-22, Union NJ) and Zen Leaf Cannabis Dispensary (117 Spring St, Elizabeth NJ), open their public GBP listing and capture: review count, rating, last 3 GBP Posts (date + topic), most recent photo upload date.</li>
+    <li>Run a Local Falcon competitor-rank check (or use SEO-02 weekly scan) capturing each conquest target's SoLV on "dispensary" + "dispensary near me."</li>
+    <li>Append weekly entry to <code>SEO-04b-conquest-tracker.csv</code> (date, target, reviews, rating, posts last 7d, photos last 7d, SoLV "dispensary," SoLV "dispensary near me," notes).</li>
+    <li>If either target adds &gt;10 reviews in a week OR posts a coordinated promotional sequence, flag in #joyleaf-may-execution as competitive pressure intelligence.</li>
+  </ol>
+  <p><b>Acceptance:</b> 4 weekly entries by May 31; trend included in SEO-05 May report.</p>
 </div>
 
 <div class="task task-p0">
