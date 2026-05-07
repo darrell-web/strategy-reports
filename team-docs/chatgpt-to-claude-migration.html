@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dispenza SOP — ChatGPT to Claude / Claude Code Migration</title>
+<style>
+  :root {
+    --ink-900: #0F1419;
+    --ink-700: #2C3440;
+    --ink-500: #5A6473;
+    --ink-300: #B5BCC6;
+    --ink-100: #E8ECF1;
+    --ink-50:  #F6F8FB;
+    --brand-900: #1A1A2E;
+    --brand-700: #2D2D5F;
+    --brand-500: #6366F1;
+    --brand-300: #A5B4FC;
+    --brand-100: #EEF0FF;
+    --accent: #F59E0B;
+    --accent-light: #FEF3C7;
+    --green: #16A34A;
+    --green-100: #DCFCE7;
+    --red: #DC2626;
+    --red-100: #FEE2E2;
+    --code-bg: #1F2330;
+    --code-fg: #E8ECF1;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: var(--ink-900);
+    background: var(--ink-50);
+    line-height: 1.6;
+  }
+  .container { max-width: 1080px; margin: 0 auto; padding: 0 28px 72px; }
+
+  .cover {
+    background: linear-gradient(135deg, var(--brand-900) 0%, var(--brand-700) 55%, var(--brand-500) 100%);
+    color: #fff;
+    padding: 64px 28px 72px;
+    margin-bottom: 40px;
+    border-bottom: 5px solid var(--accent);
+  }
+  .cover-inner { max-width: 1080px; margin: 0 auto; }
+  .cover .eyebrow {
+    text-transform: uppercase; letter-spacing: 3px;
+    font-size: 13px; font-weight: 600; opacity: 0.85;
+    margin-bottom: 14px;
+  }
+  .cover h1 {
+    font-size: 48px; line-height: 1.1; margin: 0 0 16px; font-weight: 800;
+  }
+  .cover h1 span { color: var(--accent); }
+  .cover .subtitle {
+    font-size: 19px; opacity: 0.92; max-width: 760px; margin: 0 0 26px;
+  }
+  .cover-meta {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 20px; padding-top: 24px;
+    border-top: 1px solid rgba(255,255,255,0.25);
+  }
+  .cover-meta .label {
+    font-size: 11px; text-transform: uppercase; letter-spacing: 2px; opacity: 0.7;
+  }
+  .cover-meta .value { font-size: 15px; font-weight: 600; margin-top: 4px; }
+
+  .toc {
+    background: #fff;
+    border: 1px solid var(--ink-100);
+    border-radius: 10px;
+    padding: 22px 26px;
+    margin-bottom: 40px;
+  }
+  .toc h3 {
+    margin: 0 0 12px; font-size: 13px;
+    text-transform: uppercase; letter-spacing: 2px; color: var(--ink-500);
+  }
+  .toc ol { margin: 0; padding-left: 22px; }
+  .toc li { margin: 4px 0; font-size: 15px; }
+  .toc a { color: var(--brand-700); text-decoration: none; font-weight: 500; }
+  .toc a:hover { text-decoration: underline; }
+
+  section { margin-bottom: 48px; }
+  .section-header { display: flex; align-items: baseline; gap: 14px; margin-bottom: 10px; }
+  .section-num {
+    font-size: 13px; font-weight: 700; color: var(--accent);
+    letter-spacing: 3px;
+  }
+  h2 {
+    font-size: 30px; line-height: 1.2; color: var(--brand-900);
+    margin: 0 0 8px; font-weight: 700;
+  }
+  .section-lead { color: var(--ink-700); font-size: 16px; margin: 0 0 20px; max-width: 800px; }
+
+  h3 {
+    font-size: 19px; color: var(--brand-700);
+    margin: 26px 0 10px; font-weight: 700;
+  }
+  p { margin: 0 0 12px; }
+
+  ol.steps { padding-left: 0; list-style: none; counter-reset: step; }
+  ol.steps > li {
+    counter-increment: step;
+    position: relative;
+    padding: 14px 18px 14px 56px;
+    background: #fff;
+    border: 1px solid var(--ink-100);
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  ol.steps > li::before {
+    content: counter(step);
+    position: absolute; left: 16px; top: 14px;
+    width: 28px; height: 28px;
+    background: var(--brand-500); color: #fff;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 13px;
+  }
+  ol.steps > li strong { color: var(--ink-900); }
+
+  ul.bullets { padding-left: 22px; margin: 6px 0 14px; }
+  ul.bullets li { margin: 4px 0; }
+
+  code, pre {
+    font-family: "SF Mono", Menlo, Consolas, monospace;
+    font-size: 13.5px;
+  }
+  code {
+    background: var(--ink-100); color: var(--brand-900);
+    padding: 1px 6px; border-radius: 4px;
+  }
+  pre {
+    background: var(--code-bg); color: var(--code-fg);
+    padding: 14px 16px; border-radius: 8px;
+    overflow-x: auto; margin: 10px 0 16px;
+    font-size: 13px; line-height: 1.5;
+  }
+  pre code { background: transparent; color: inherit; padding: 0; }
+
+  .callout {
+    border-left: 4px solid var(--brand-500);
+    background: var(--brand-100);
+    padding: 14px 18px; border-radius: 6px;
+    margin: 14px 0; font-size: 15px;
+  }
+  .callout.warn { border-color: var(--accent); background: var(--accent-light); }
+  .callout.success { border-color: var(--green); background: var(--green-100); }
+  .callout.danger { border-color: var(--red); background: var(--red-100); }
+  .callout strong { color: var(--ink-900); }
+
+  table {
+    width: 100%; border-collapse: collapse;
+    background: #fff; margin: 14px 0;
+    border-radius: 8px; overflow: hidden;
+    border: 1px solid var(--ink-100);
+  }
+  th, td {
+    padding: 12px 14px; text-align: left;
+    border-bottom: 1px solid var(--ink-100);
+    font-size: 14.5px; vertical-align: top;
+  }
+  th {
+    background: var(--ink-50); color: var(--ink-700);
+    font-size: 12px; text-transform: uppercase;
+    letter-spacing: 1.5px; font-weight: 700;
+  }
+  tr:last-child td { border-bottom: none; }
+
+  .compare {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 16px; margin: 18px 0;
+  }
+  .compare-card {
+    background: #fff; border: 1px solid var(--ink-100);
+    border-radius: 10px; padding: 18px 20px;
+  }
+  .compare-card h4 {
+    margin: 0 0 10px; font-size: 15px;
+    text-transform: uppercase; letter-spacing: 1.5px;
+    color: var(--ink-500); font-weight: 700;
+  }
+  .compare-card.gpt h4 { color: #10a37f; }
+  .compare-card.claude h4 { color: var(--accent); }
+  .compare-card ul { padding-left: 20px; margin: 0; }
+  .compare-card li { font-size: 14.5px; margin: 4px 0; }
+
+  .checklist { background: #fff; border: 1px solid var(--ink-100); border-radius: 10px; padding: 18px 22px; }
+  .checklist li { list-style: none; padding: 6px 0 6px 28px; position: relative; }
+  .checklist li::before {
+    content: "☐"; position: absolute; left: 0; top: 4px;
+    color: var(--brand-500); font-size: 18px; font-weight: 700;
+  }
+
+  footer {
+    text-align: center; padding-top: 32px;
+    color: var(--ink-500); font-size: 13px;
+    border-top: 1px solid var(--ink-100); margin-top: 48px;
+  }
+  footer strong { color: var(--ink-700); }
+
+  @media (max-width: 720px) {
+    .cover h1 { font-size: 34px; }
+    .cover-meta { grid-template-columns: 1fr; }
+    .compare { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="cover-inner">
+    <div class="eyebrow">Dispenza Internal SOP</div>
+    <h1>Migrating From <span>ChatGPT</span> to Claude &amp; Claude Code</h1>
+    <p class="subtitle">A step-by-step playbook to export your existing ChatGPT projects and chats, set up Claude (and Claude Code for developers), and rebuild your workflows on Anthropic's tools — without losing context.</p>
+    <div class="cover-meta">
+      <div><div class="label">Audience</div><div class="value">All Dispenza Team Members</div></div>
+      <div><div class="label">Time to Complete</div><div class="value">~30–60 min per person</div></div>
+      <div><div class="label">Last Updated</div><div class="value">May 7, 2026</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="toc">
+    <h3>What's in this SOP</h3>
+    <ol>
+      <li><a href="#overview">Why we're switching &amp; what to expect</a></li>
+      <li><a href="#export">Phase 1 — Export your ChatGPT data</a></li>
+      <li><a href="#organize">Phase 2 — Organize what you exported</a></li>
+      <li><a href="#claude-setup">Phase 3 — Set up your Claude account</a></li>
+      <li><a href="#projects">Phase 4 — Rebuild Projects &amp; Custom GPTs in Claude</a></li>
+      <li><a href="#claude-code">Phase 5 — (Devs) Install Claude Code</a></li>
+      <li><a href="#migrate-chats">Phase 6 — Bring active threads into Claude</a></li>
+      <li><a href="#cheatsheet">ChatGPT → Claude feature cheat sheet</a></li>
+      <li><a href="#checklist">Final migration checklist</a></li>
+      <li><a href="#help">Where to get help</a></li>
+    </ol>
+  </div>
+
+  <!-- 1. OVERVIEW -->
+  <section id="overview">
+    <div class="section-header"><div class="section-num">01</div><h2>Why we're switching &amp; what to expect</h2></div>
+    <p class="section-lead">Dispenza is standardizing on Anthropic's Claude (chat) and Claude Code (CLI) for AI work. Claude has stronger long-context reasoning, better tool use for our marketing automation, and Claude Code lets engineers and analysts work directly against project files without copy-pasting.</p>
+
+    <div class="compare">
+      <div class="compare-card gpt">
+        <h4>What you had in ChatGPT</h4>
+        <ul>
+          <li>Conversations &amp; saved chats</li>
+          <li>Custom GPTs (instructions + knowledge files)</li>
+          <li>Projects (folders of related chats)</li>
+          <li>Memory (auto-recall across chats)</li>
+          <li>GPT Store, Code Interpreter, Canvas</li>
+        </ul>
+      </div>
+      <div class="compare-card claude">
+        <h4>What you'll have in Claude</h4>
+        <ul>
+          <li>Conversations &amp; chat history</li>
+          <li>Projects (instructions + knowledge files)</li>
+          <li>Same — Claude Projects replace both</li>
+          <li>Memory (manual file-based, more controllable)</li>
+          <li>Artifacts, Tool Use, Claude Code (CLI)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="callout"><strong>Bottom line:</strong> Most things you used in ChatGPT have a direct equivalent in Claude. The export we'll do in Phase 1 captures everything you need, and Phases 4–6 walk through rebuilding it.</div>
+  </section>
+
+  <!-- 2. EXPORT -->
+  <section id="export">
+    <div class="section-header"><div class="section-num">02</div><h2>Phase 1 — Export your ChatGPT data</h2></div>
+    <p class="section-lead">OpenAI lets you download a complete archive of your ChatGPT data — every conversation, custom GPT, and uploaded file. The download arrives via email within 24 hours (usually under an hour).</p>
+
+    <ol class="steps">
+      <li>Go to <a href="https://chat.openai.com" target="_blank">chat.openai.com</a> and sign in with your work account.</li>
+      <li>Click your profile picture (bottom-left) → <strong>Settings</strong>.</li>
+      <li>Open the <strong>Data Controls</strong> tab.</li>
+      <li>Find <strong>Export data</strong> and click <strong>Export</strong>. Confirm by clicking <strong>Confirm export</strong> in the popup.</li>
+      <li>Wait for the email from OpenAI titled <em>"ChatGPT — Your data export is ready"</em>. The download link is valid for 24 hours.</li>
+      <li>Click the link, download the <code>.zip</code> file, and save it to your computer (suggested: <code>~/Documents/chatgpt-export-2026/</code>).</li>
+    </ol>
+
+    <div class="callout warn"><strong>If you have a ChatGPT Team/Enterprise account:</strong> Your workspace admin may need to approve the export or run it on your behalf. Ping the admin in #it-help if "Export data" is greyed out.</div>
+
+    <h3>What's inside the export</h3>
+    <table>
+      <thead><tr><th>File</th><th>What it contains</th><th>Keep?</th></tr></thead>
+      <tbody>
+        <tr><td><code>conversations.json</code></td><td>Every chat, with full message history</td><td>Yes — primary source</td></tr>
+        <tr><td><code>chat.html</code></td><td>Browseable HTML view of all chats</td><td>Yes — easiest to read</td></tr>
+        <tr><td><code>user.json</code></td><td>Your account profile</td><td>Skip</td></tr>
+        <tr><td><code>message_feedback.json</code></td><td>Your thumbs-up/down history</td><td>Skip</td></tr>
+        <tr><td><code>model_comparisons.json</code></td><td>A/B test data</td><td>Skip</td></tr>
+        <tr><td>Custom GPTs &amp; knowledge files</td><td>Listed inside <code>conversations.json</code> + uploaded source files</td><td>Yes — for Phase 4</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- 3. ORGANIZE -->
+  <section id="organize">
+    <div class="section-header"><div class="section-num">03</div><h2>Phase 2 — Organize what you exported</h2></div>
+    <p class="section-lead">Don't try to migrate everything. Most chats are throwaway. Sort what's worth bringing over before you start rebuilding.</p>
+
+    <ol class="steps">
+      <li><strong>Unzip the archive</strong> into a clearly named folder (e.g., <code>chatgpt-export-2026/</code>).</li>
+      <li><strong>Open <code>chat.html</code></strong> in your browser. This gives you a scrollable view of every conversation.</li>
+      <li><strong>Triage your chats</strong> into three buckets:
+        <ul class="bullets">
+          <li><strong>Active</strong> — ongoing work you'll continue (client strategy, in-progress copy, code projects). <em>Bring these over.</em></li>
+          <li><strong>Reference</strong> — past work you may want to look up later (campaign briefs, research, prompts that worked). <em>Archive locally; don't migrate.</em></li>
+          <li><strong>Trash</strong> — quick lookups, one-off questions. <em>Ignore.</em></li>
+        </ul>
+      </li>
+      <li><strong>For each Custom GPT you built</strong>, copy its system instructions and any uploaded knowledge files into a folder named after the GPT (e.g., <code>custom-gpts/AlpineIQ-Copy-Coach/</code>). You'll rebuild these as Claude Projects in Phase 4.</li>
+      <li><strong>For each ChatGPT Project</strong>, note the project's name, instructions, and which chats it contained.</li>
+    </ol>
+
+    <div class="callout"><strong>Time-saving tip:</strong> Don't try to convert every old chat into a perfect document. The goal is to capture <em>what you want to keep working on</em>, not preserve a museum.</div>
+  </section>
+
+  <!-- 4. CLAUDE SETUP -->
+  <section id="claude-setup">
+    <div class="section-header"><div class="section-num">04</div><h2>Phase 3 — Set up your Claude account</h2></div>
+    <p class="section-lead">Claude lives at <a href="https://claude.ai" target="_blank">claude.ai</a>. Use your Dispenza work email for the account.</p>
+
+    <ol class="steps">
+      <li>Go to <a href="https://claude.ai/signup" target="_blank">claude.ai/signup</a>.</li>
+      <li>Sign up with your <strong>@dispenza.com</strong> email (or whatever your work email is).</li>
+      <li>Verify your email and complete the onboarding prompts.</li>
+      <li>If we have a Claude Team workspace, accept the invite from your admin (check email for "You've been invited to a Claude Team workspace"). Otherwise, your admin will upgrade your account to the team plan once you sign up.</li>
+      <li>Open <strong>Settings → Profile</strong> and add a short profile description (your role + main projects). Claude uses this to tailor responses.</li>
+    </ol>
+
+    <h3>Plans, in plain English</h3>
+    <table>
+      <thead><tr><th>Plan</th><th>Best for</th><th>Includes Projects?</th></tr></thead>
+      <tbody>
+        <tr><td>Free</td><td>Trying it out</td><td>No</td></tr>
+        <tr><td>Pro</td><td>Individual heavy users</td><td>Yes</td></tr>
+        <tr><td>Max</td><td>Power users (more usage + Claude Code)</td><td>Yes</td></tr>
+        <tr><td>Team</td><td>Shared workspace + admin controls</td><td>Yes (shared)</td></tr>
+      </tbody>
+    </table>
+    <div class="callout warn"><strong>Check with your manager</strong> on which plan you've been provisioned before paying out-of-pocket.</div>
+  </section>
+
+  <!-- 5. PROJECTS -->
+  <section id="projects">
+    <div class="section-header"><div class="section-num">05</div><h2>Phase 4 — Rebuild Projects &amp; Custom GPTs in Claude</h2></div>
+    <p class="section-lead">Claude Projects = ChatGPT Projects + Custom GPTs combined. Each project holds custom instructions, knowledge files, and a dedicated chat history.</p>
+
+    <h3>Create a new Project</h3>
+    <ol class="steps">
+      <li>In Claude, click <strong>Projects</strong> in the left sidebar → <strong>Create Project</strong>.</li>
+      <li>Name it after the client or workstream (e.g., <em>"Joyleaf — Local SEO"</em> or <em>"AlpineIQ Copy Coach"</em>).</li>
+      <li>Paste your old ChatGPT system instructions (or Custom GPT instructions) into <strong>Custom Instructions</strong>. Edit for clarity if needed.</li>
+      <li>Upload the project's knowledge files (PDFs, Docs, CSVs) into <strong>Project Knowledge</strong>. Limit ~200K tokens of context.</li>
+      <li>Start a new chat inside the project. Test that Claude is using the instructions correctly with a few real-world prompts.</li>
+    </ol>
+
+    <h3>Mapping ChatGPT concepts to Claude</h3>
+    <table>
+      <thead><tr><th>ChatGPT</th><th>Claude</th><th>What changes</th></tr></thead>
+      <tbody>
+        <tr><td>Custom GPT</td><td>Project (with custom instructions)</td><td>Same idea; no public store, lives in your workspace</td></tr>
+        <tr><td>GPT Knowledge files</td><td>Project Knowledge</td><td>Drag-and-drop upload, supports more file types</td></tr>
+        <tr><td>ChatGPT Project folder</td><td>Project</td><td>One Claude Project per ChatGPT Project</td></tr>
+        <tr><td>System Prompt</td><td>Custom Instructions</td><td>Direct copy-paste works fine</td></tr>
+        <tr><td>"Memory"</td><td>Manual: keep notes in Project instructions</td><td>More transparent, less magical</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- 6. CLAUDE CODE -->
+  <section id="claude-code">
+    <div class="section-header"><div class="section-num">06</div><h2>Phase 5 — (Devs &amp; analysts) Install Claude Code</h2></div>
+    <p class="section-lead">Claude Code is Anthropic's CLI — Claude operating directly inside your terminal and project folders. Skip this section if you don't write code or work with local files.</p>
+
+    <h3>Install</h3>
+    <ol class="steps">
+      <li><strong>Install Node.js 18+</strong> if you don't already have it: <a href="https://nodejs.org" target="_blank">nodejs.org</a> (download the LTS).</li>
+      <li>Open Terminal (Mac) or PowerShell (Windows) and run:
+        <pre><code>npm install -g @anthropic-ai/claude-code</code></pre>
+      </li>
+      <li>Navigate to a project folder and start Claude Code:
+        <pre><code>cd ~/projects/my-project
+claude</code></pre>
+      </li>
+      <li>The first time, Claude Code will prompt you to authenticate. Choose <strong>"Log in with Claude.ai"</strong> and approve in your browser.</li>
+      <li>Once authenticated, just type your request in plain English. Claude reads/writes files in that folder.</li>
+    </ol>
+
+    <div class="callout success"><strong>First thing to try:</strong> in any existing project folder, run <code>claude</code>, then type <code>/init</code>. Claude reads the codebase and writes a <code>CLAUDE.md</code> file documenting it. That file becomes context for every future session in that folder.</div>
+
+    <h3>Useful slash commands</h3>
+    <table>
+      <thead><tr><th>Command</th><th>What it does</th></tr></thead>
+      <tbody>
+        <tr><td><code>/init</code></td><td>Generate a project context file (<code>CLAUDE.md</code>)</td></tr>
+        <tr><td><code>/help</code></td><td>Full list of commands</td></tr>
+        <tr><td><code>/clear</code></td><td>Reset the conversation</td></tr>
+        <tr><td><code>/config</code></td><td>Change theme, model, settings</td></tr>
+        <tr><td><code>/review</code></td><td>Review a pull request</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- 7. MIGRATE CHATS -->
+  <section id="migrate-chats">
+    <div class="section-header"><div class="section-num">07</div><h2>Phase 6 — Bring active threads into Claude</h2></div>
+    <p class="section-lead">For ongoing chats you flagged as "Active" in Phase 2, you have three options. Pick one per thread — don't try to import full chat histories verbatim.</p>
+
+    <h3>Option A — Summary handoff (recommended for most chats)</h3>
+    <ol class="steps">
+      <li>In ChatGPT, ask the chat: <em>"Write a complete handoff brief for a new AI assistant: what we're working on, decisions made, open questions, and the next 3 steps."</em></li>
+      <li>Copy the result.</li>
+      <li>Paste it as the first message in a new Claude conversation (inside the relevant Claude Project).</li>
+      <li>Tell Claude: <em>"This is the context. Pick up where ChatGPT left off."</em></li>
+    </ol>
+
+    <h3>Option B — Full transcript paste (for shorter critical chats)</h3>
+    <ol class="steps">
+      <li>Open the chat in <code>chat.html</code> from your export.</li>
+      <li>Copy the full conversation text.</li>
+      <li>Paste into a new Claude chat with: <em>"Below is a full ChatGPT transcript. Read it, then continue from the last message."</em></li>
+    </ol>
+
+    <h3>Option C — File upload (for long, document-heavy chats)</h3>
+    <ol class="steps">
+      <li>Save the conversation to a <code>.txt</code> or <code>.md</code> file.</li>
+      <li>Upload it as a Project Knowledge file in the matching Claude Project.</li>
+      <li>Reference it in chats: <em>"Per the migration brief in our project knowledge…"</em></li>
+    </ol>
+
+    <div class="callout danger"><strong>Don't:</strong> upload <code>conversations.json</code> directly. It's not human-readable and wastes context window. Always extract the chat you actually need first.</div>
+  </section>
+
+  <!-- 8. CHEAT SHEET -->
+  <section id="cheatsheet">
+    <div class="section-header"><div class="section-num">08</div><h2>ChatGPT → Claude feature cheat sheet</h2></div>
+    <p class="section-lead">Quick reference for "where did this go?" questions during your first week.</p>
+
+    <table>
+      <thead><tr><th>If you used ChatGPT for…</th><th>In Claude, use…</th></tr></thead>
+      <tbody>
+        <tr><td>Quick chat / Q&amp;A</td><td>Claude.ai default chat</td></tr>
+        <tr><td>Custom GPT for repeated workflows</td><td>Claude Project + custom instructions</td></tr>
+        <tr><td>Code Interpreter (run Python on uploads)</td><td>Claude's <strong>Analysis Tool</strong> (sidebar) or Claude Code locally</td></tr>
+        <tr><td>Canvas (collaborative doc editing)</td><td>Claude <strong>Artifacts</strong> (auto-opens for code/docs)</td></tr>
+        <tr><td>Web browsing</td><td>Claude's <strong>Web Search</strong> tool (toggle in chat)</td></tr>
+        <tr><td>DALL·E image gen</td><td>Not in Claude — use Midjourney, Ideogram, or Sora externally</td></tr>
+        <tr><td>Voice mode</td><td>Voice mode (Pro+ on mobile)</td></tr>
+        <tr><td>Memory</td><td>Project instructions or pinned files (manual, more controllable)</td></tr>
+        <tr><td>API for apps</td><td>Anthropic API at <a href="https://console.anthropic.com" target="_blank">console.anthropic.com</a></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- 9. CHECKLIST -->
+  <section id="checklist">
+    <div class="section-header"><div class="section-num">09</div><h2>Final migration checklist</h2></div>
+    <p class="section-lead">Print this or copy it into your task manager. You're done when every box is checked.</p>
+
+    <ul class="checklist">
+      <li>Exported my full ChatGPT archive and saved it locally</li>
+      <li>Triaged old chats into Active / Reference / Trash</li>
+      <li>Saved Custom GPT instructions + knowledge files for each one I'll rebuild</li>
+      <li>Created a Claude.ai account with my Dispenza work email</li>
+      <li>Joined the Dispenza team workspace (or confirmed plan with manager)</li>
+      <li>Created a Claude Project for each active client / workstream</li>
+      <li>Pasted Custom GPT instructions into the matching Project</li>
+      <li>Uploaded knowledge files into Project Knowledge</li>
+      <li>(Devs only) Installed Claude Code and ran <code>/init</code> on at least one project</li>
+      <li>Migrated my top 3–5 active threads using Option A, B, or C</li>
+      <li>Tested a real client task end-to-end in Claude before deleting ChatGPT export</li>
+      <li>Bookmarked <a href="https://claude.ai" target="_blank">claude.ai</a> and removed ChatGPT from my browser shortcuts</li>
+    </ul>
+  </section>
+
+  <!-- 10. HELP -->
+  <section id="help">
+    <div class="section-header"><div class="section-num">10</div><h2>Where to get help</h2></div>
+    <ul class="bullets">
+      <li><strong>Internal questions</strong> — post in our team Slack channel. Tag your manager for plan/account issues.</li>
+      <li><strong>Claude help center</strong> — <a href="https://support.anthropic.com" target="_blank">support.anthropic.com</a></li>
+      <li><strong>Claude Code docs</strong> — <a href="https://docs.claude.com/en/docs/claude-code/overview" target="_blank">docs.claude.com/claude-code</a></li>
+      <li><strong>Inside Claude Code</strong> — type <code>/help</code> for commands, or report bugs at <a href="https://github.com/anthropics/claude-code/issues" target="_blank">github.com/anthropics/claude-code/issues</a></li>
+      <li><strong>Prompting tips</strong> — Anthropic's prompt engineering guide at <a href="https://docs.claude.com/en/docs/build-with-claude/prompt-engineering" target="_blank">docs.claude.com/prompt-engineering</a></li>
+    </ul>
+
+    <div class="callout success"><strong>Pro tip for week one:</strong> When in doubt, just ask Claude. "How do I do X in Claude that I used to do in ChatGPT?" gets you a useful answer about 95% of the time.</div>
+  </section>
+
+  <footer>
+    <p><strong>Dispenza Dispensary Marketing</strong> — Internal SOP · Last updated May 7, 2026</p>
+    <p>Questions about this document? Reach out to the Operations lead.</p>
+  </footer>
+
+</div>
+</body>
+</html>
