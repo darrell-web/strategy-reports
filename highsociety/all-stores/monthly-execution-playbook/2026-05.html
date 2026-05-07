@@ -553,6 +553,41 @@
   <p>The AIQ calendar holds 31 daily email slots/month but only ~9 actually go out (~2/week). Either prune to 2/wk rhythm (less work, accurate cadence) or activate the 22 unused slots. Account Lead decision needed.</p>
 </div>
 
+<div class="task task-p0">
+  <div class="task-head"><span class="task-id">AIQ-08</span><span class="task-title">Weekend-promo content — match client-authored offer language exactly</span><span class="badge b-p0">P0</span></div>
+  <p><b>Why:</b> The client-authored May promo strategy uses specific offer names that customers will see in-store and that AIQ messaging needs to mirror exactly. Generic "weekend deal" copy creates a disconnect between AIQ touchpoint and storefront execution.</p>
+  <p><b>Weekend-by-weekend offer names (use verbatim in AIQ copy):</b></p>
+  <ul class="tight">
+    <li><strong>Weekend 1 (May 2-4) — Return Traffic:</strong> "25% off storewide (non-sale items)"</li>
+    <li><strong>Weekend 2 (May 9-11) — Mother's Day:</strong> "Free Doozy Gummies"</li>
+    <li><strong>Weekend 3 (May 16-18) — Basket Size:</strong> No incentive — heavy deli emphasis (BOGO Ounce + multi-unit). AIQ messaging leans on "value menu builds the cart."</li>
+    <li><strong>Weekend 4 (May 23-25) — Memorial Day:</strong> "Free Bag Weekend" — biggest push of the month</li>
+    <li><strong>Weekend 5 (May 30-31) — Margin Push:</strong> "Vendor-supported free item" (specific item TBD per store from vendor pipeline)</li>
+    <li><strong>New Buffalo all month:</strong> "$150 spend = Loaded Gift Bag" (while supplies last)</li>
+  </ul>
+  <p><b>Cadence rule:</b> Weekend-promo emails / SMS sends land <strong>Thursday and Friday</strong> for weekend-search intent capture. Avoid Monday-Wednesday weekend-promo sends (intent gap).</p>
+  <div class="task-meta">
+    <div><b>Owner</b>Darrell + Dispenza outreach</div>
+    <div><b>Deadline</b>Wk 1 (build templates) · ongoing per weekend</div>
+  </div>
+  <div class="accept"><b>Acceptance:</b> 5 weekend templates built using exact client offer language; sends scheduled for Thu/Fri; New Buffalo $150/Loaded Gift Bag in steady-state monthly cadence.</div>
+</div>
+
+<div class="task task-p0">
+  <div class="task-head"><span class="task-id">AIQ-09</span><span class="task-title">GBP post Thursday/Friday weekend-intent cadence (~40 posts in May)</span><span class="badge b-p0">P0</span></div>
+  <p><b>Why:</b> 5 weekends × 8 stores = 40 unique GBP posts minimum if we run a full weekend-promo cadence at the GBP layer. Posts should land Thu/Fri to surface to weekend-intent searchers.</p>
+  <ol class="steps">
+    <li>For each weekend (1-5), draft a per-store GBP post incorporating the offer name (per AIQ-08 list) AND the store-specific local angle (e.g., New Buffalo cross-state corridor, Mt Pleasant CMU campus, Charlotte highway pit-stop framing, Big Rapids Ferris State, etc.).</li>
+    <li>Schedule each batch of 8 posts to publish Thursday morning of the weekend (e.g., Wk 1: post Thu May 1; Wk 2: post Thu May 8; etc.).</li>
+    <li>Track GBP post views + clicks per store per weekend; report at month-end.</li>
+  </ol>
+  <div class="task-meta">
+    <div><b>Owner</b>Dispenza GBP team</div>
+    <div><b>Deadline</b>Recurring Thursday morning each week</div>
+  </div>
+  <div class="accept"><b>Acceptance:</b> ≥35 of the 40 target GBP posts shipped on Thu/Fri timing window; metrics tracked.</div>
+</div>
+
 <div class="dept-head" id="design">
   <h2>🎨 Department: Design</h2>
   <div class="sub">Asset production for 8 stores. Hyperlocal page hero imagery, GBP photo refreshes, AIQ campaign graphics for new initiatives (Lenox Power Hour, Mt Pleasant lunch-hour, WI V2 wallet drops, VIP-cohort campaigns).</div>
@@ -608,6 +643,22 @@
 <div class="task task-p1">
   <div class="task-head"><span class="task-id">SEO-05</span><span class="task-title">Backlink baseline + 24 outreach pitches (3 per store × 8)</span><span class="badge b-p1">P1</span></div>
   <p>3 outreach pitches per store sent by May 28. Per-store target list in each strategy report (FSU campus paper for Big Rapids · Frankenmuth Tourism for Birch Run · Lansing State Journal for Charlotte · State News for East Lansing · Macomb Daily for Lenox · CM Life for Mt Pleasant · Visit Michigan / NW Indiana cannabis press for NB · Ann Arbor Observer for Saline).</p>
+</div>
+
+<div class="task task-p1">
+  <div class="task-head"><span class="task-id">SEO-06</span><span class="task-title">POS data export — corrected formulas + New Buffalo data backfill</span><span class="badge b-p1">P1</span></div>
+  <p><b>Why:</b> Per the chain client-profile audit (#11 + #12), the master POS export <code>2026-04-29_pos-gbp-data-master.xlsx</code> has two known data-quality issues: (a) all <code>▲ mo</code> and <code>▲ base</code> delta columns return <code>#REF!</code> errors (broken formulas — same pattern as Joyleaf POS); (b) Total rows on Charlotte, East Lansing, Lenox, Mt Pleasant, and Saline undercount their actual monthly sums (broken SUM ranges); and (c) <strong>New Buffalo POS data is missing entirely</strong> from the export. Without clean data, Q2 trend reporting is structurally inaccurate.</p>
+  <ol class="steps">
+    <li>Account Lead (LEAD-XX) requests a corrected export from High Society's data team. Specify: (a) fix <code>#REF!</code> formula errors in delta columns, (b) repair SUM ranges in Total rows for the 5 affected stores, (c) include New Buffalo monthly data Oct '24 through latest available month.</li>
+    <li>SEO/Analytics validates corrected export against a manual spot-check (3 random month/store cells per store) before integrating into reports.</li>
+    <li>Update <code>All Stores/performance-reviews/2026-04-29_pos-gbp-summary.md</code> with corrected per-store AVO + sales totals + New Buffalo numbers.</li>
+    <li>Re-run the AVO-gap analysis with clean data; update the May 2026 promo-strategy alignment doc if any per-store target needs revision.</li>
+  </ol>
+  <div class="task-meta">
+    <div><b>Owner</b>Darrell requests · SEO/Analytics validates</div>
+    <div><b>Deadline</b>Wk 2 (May 11) — needed before mid-month check-in</div>
+  </div>
+  <div class="accept"><b>Acceptance:</b> Corrected POS export received; New Buffalo data integrated; summary doc updated; no <code>#REF!</code> values in monthly trend tables.</div>
 </div>
 
 <div class="dept-head" id="lead">
