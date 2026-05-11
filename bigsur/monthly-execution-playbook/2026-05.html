@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Big Sur Canna — May 2026 Execution Playbook (Dispenza Internal)</title>
+<style>
+  :root {
+    --teal: #1d4044;
+    --teal-light: #2c5f64;
+    --gold: #c9a04e;
+    --gold-dark: #a8842f;
+    --sage: #889e7a;
+    --cream: #f7f0e4;
+    --rust: #b8633a;
+    --charcoal: #2b2b2b;
+    --gray: #6a6a6a;
+    --light-gray: #ececec;
+    --bg: #fafaf7;
+    --good: #2f7d4f;
+    --bad: #b8473a;
+    --warn: #c97a2f;
+  }
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; line-height: 1.55; color: var(--charcoal); background: var(--bg); margin: 0; padding: 0; }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 40px 28px 80px; }
+  header.hero { background: linear-gradient(135deg, var(--teal) 0%, var(--charcoal) 100%); color: var(--cream); padding: 56px 28px; border-radius: 8px 8px 0 0; }
+  header.hero .label { font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); font-weight: 600; }
+  header.hero h1 { font-size: 32px; margin: 8px 0 10px; font-weight: 700; line-height: 1.15; }
+  header.hero p.sub { font-size: 16px; margin: 0; opacity: 0.85; }
+  header.hero .internal {
+    display: inline-block; background: var(--rust); color: white;
+    font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 3px;
+    letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 16px;
+  }
+  .container { background: white; padding: 40px 44px; border-radius: 0 0 8px 8px; box-shadow: 0 2px 14px rgba(0,0,0,0.04); }
+  h2 { color: var(--teal); font-size: 22px; margin: 36px 0 14px; border-bottom: 2px solid var(--gold); padding-bottom: 8px; }
+  h2:first-child { margin-top: 0; }
+  h3 { color: var(--teal-light); font-size: 17px; margin: 22px 0 10px; }
+  h4 { color: var(--charcoal); font-size: 14px; margin: 14px 0 6px; text-transform: uppercase; letter-spacing: 0.06em; }
+  p { margin: 8px 0; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0 18px; font-size: 13px; }
+  th { background: var(--teal); color: var(--cream); text-align: left; padding: 9px 11px; font-weight: 600; }
+  td { padding: 8px 11px; border-bottom: 1px solid var(--light-gray); vertical-align: top; }
+  tr:nth-child(even) td { background: #f9f6f1; }
+  .dept {
+    background: white; border: 1px solid var(--light-gray); border-radius: 8px;
+    padding: 20px 24px; margin: 18px 0;
+  }
+  .dept-header {
+    display: flex; align-items: center; gap: 12px; margin-bottom: 14px;
+    padding-bottom: 10px; border-bottom: 2px solid var(--gold);
+  }
+  .dept-icon {
+    background: var(--teal); color: white; width: 36px; height: 36px;
+    border-radius: 6px; display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 16px;
+  }
+  .dept-header h3 { margin: 0; color: var(--teal); }
+  .task {
+    background: var(--cream); padding: 14px 16px; border-radius: 6px;
+    margin: 10px 0; border-left: 4px solid var(--gold);
+  }
+  .task .task-title { font-weight: 700; color: var(--teal); margin-bottom: 4px; }
+  .task .reasoning {
+    font-size: 12px; color: var(--gray); font-style: italic;
+    margin-top: 6px; padding-top: 6px; border-top: 1px dashed #d4cebf;
+  }
+  .reasoning strong { color: var(--teal); font-style: normal; }
+  .copy-block {
+    background: #2b2b2b; color: #e8e8e8;
+    padding: 14px 18px; border-radius: 6px; font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 12.5px; line-height: 1.5; margin: 10px 0;
+    white-space: pre-wrap;
+  }
+  .copy-meta { font-size: 11px; color: var(--gold); margin-bottom: 4px; letter-spacing: 0.06em; text-transform: uppercase; }
+  .guardrail {
+    background: #fdf4ec; border-left: 5px solid var(--warn);
+    padding: 12px 16px; margin: 12px 0; border-radius: 0 6px 6px 0;
+    font-size: 13px;
+  }
+  .guardrail strong { color: var(--warn); }
+  .priority {
+    display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 8px;
+    border-radius: 3px; letter-spacing: 0.06em; text-transform: uppercase;
+    color: white; vertical-align: middle; margin-right: 6px;
+  }
+  .priority.p1 { background: var(--rust); }
+  .priority.p2 { background: var(--gold); }
+  .priority.p3 { background: var(--sage); }
+  ul, ol { margin: 6px 0 10px; padding-left: 20px; }
+  li { margin: 4px 0; }
+  .footer-meta { text-align: center; font-size: 12px; color: var(--gray); margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--light-gray); }
+  @media (max-width: 680px) {
+    .container { padding: 24px 20px; }
+    header.hero { padding: 32px 20px; }
+    header.hero h1 { font-size: 24px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <div class="internal">Internal · Dispenza Only · Do Not Share</div>
+  <div class="label">Execution Playbook · May 2026</div>
+  <h1>Big Sur Canna-Botanicals</h1>
+  <p class="sub">Tactical execution plan with master copy library, reasoning, and guardrails</p>
+</header>
+
+<main class="container">
+
+<h2>Account Snapshot &amp; May Mandate</h2>
+<p><strong>Client tier:</strong> Defend-and-expand (weed side dominant · cannabis side gap closing).<br>
+<strong>POS access:</strong> Treez, full 28-month history (BSCB Enterprises, shopId <code>5d269b0a75941307f4f7823a</code>).<br>
+<strong>Channel:</strong> 100% in-store (NO e-commerce). 87.8% walk-in / 12.2% special queue. 95.5% cash payments.<br>
+<strong>WYLD share:</strong> 8 of top-20 lifetime SKUs = 42% of top-20 revenue.<br>
+<strong>April POS reality:</strong> $258K net sales (-16.9% YoY), 27.85% discount density (28-mo high), GM 42.4%, AOV $52.51.<br>
+<strong>April SEO reality:</strong> Q1 GBP conv rate 92.7% (+25 pts vs Nov '24 baseline), weed-side SoLV 100%, cannabis-side SoLV 60–66% (improving).</p>
+
+<div class="guardrail">
+  <strong>May Mandate (one sentence):</strong> Defend the rank lead, capture peak tourism intent, and shift Big Sur from "more visits" to "richer baskets" — without further discount escalation.
+</div>
+
+<h2>Top-Level Guardrails (Read Before Acting)</h2>
+<div class="guardrail">
+  <strong>1. No e-commerce framing.</strong> Big Sur has zero online ordering channel (POS Order Source = 100% "Normal"). Never recommend "online order" funnel work in copy or strategy. The "online" reference in the old SEO summary likely meant Special queue pre-orders.
+</div>
+<div class="guardrail">
+  <strong>2. Discount discipline.</strong> Discount % is at a 28-month high (27.85%). Do NOT propose new % off promos as a default. Lead with bundles, loyalty redemption, and value pairings instead.
+</div>
+<div class="guardrail">
+  <strong>3. SMS subject lines are not customizable.</strong> Per platform constraint — frame SMS recommendations as which SKUs to feature, not subject-line copy.
+</div>
+<div class="guardrail">
+  <strong>4. Cadence discipline.</strong> Big Sur's stance is intentionally limited SMS/email cadence to avoid audience fatigue. Loyalty points &gt; deep discounts. Do not propose blast-frequency increases.
+</div>
+<div class="guardrail">
+  <strong>5. Element 7 watch.</strong> Element 7 Monterey added 223 reviews in 2 months. We are NOT running a reviews arms race. Steady 15+/month review velocity is the target — sustainable, not reactive.
+</div>
+<div class="guardrail">
+  <strong>6. Cannabis Lounge — pre-build only.</strong> County approval not yet landed. Do NOT pitch lounge SEO content publicly. Internal foundation work (keyword research, schema scaffolding, page templates) is OK in May.
+</div>
+
+<!-- ============ GBP / LOCAL SEO ============ -->
+<div class="dept">
+  <div class="dept-header">
+    <div class="dept-icon">📍</div>
+    <h3>GBP &amp; Local SEO</h3>
+  </div>
+
+  <div class="task">
+    <div class="task-title"><span class="priority p1">P1</span>Sustain weed-side SoLV at 100%</div>
+    <p><strong>Action:</strong> Maintain GBP post cadence of 2–3 posts/week minimum. Pin a "freshness / hours / weekend" tagline post weekly. Refresh 6–8 GBP photos in week 1 (Katie + Chantel deliverables).</p>
+    <div class="reasoning"><strong>Why:</strong> May 1 scan held SoLV 100% on weed/weed near me/weed dispensary but ARP ticked +0.01/+0.03 — small drift away from perfect 1.0. Active GBP signals are the cheapest defense against drift.</div>
+  </div>
+
+  <div class="task">
+    <div class="task-title"><span class="priority p1">P1</span>Push "cannabis near me" toward SoLV 70%</div>
+    <p><strong>Action:</strong> (1) Confirm primary GBP category is "Cannabis store" (it is — per Local Falcon scan). (2) Add 3 secondary GBP categories if not present: Marijuana dispensary, CBD store, Alternative medicine practitioner. (3) Update GBP description to lead with "cannabis" terminology in first 100 chars (currently "weed"-led per Local Falcon listing title "Big Sur Canna Weed Dispensary").</p>
+    <div class="reasoning"><strong>Why:</strong> Current cannabis-side SoLV 64.3% (cannabis near me) is the lowest-hanging gap term — already trending +1.43 pts. A small GBP category + description push should compound the trend.</div>
+  </div>
+
+  <div class="task">
+    <div class="task-title"><span class="priority p2">P2</span>Review velocity program</div>
+    <p><strong>Action:</strong> Refresh QR placards at register week 1. Brief budtenders on review-ask script (below). Target net new reviews in May: 15+ (current count 239). Track response cadence weekly.</p>
+    <div class="copy-meta">Budtender review-ask script:</div>
+    <div class="copy-block">"Hey, if anything we did today was helpful — finding what you wanted, answering a question — a quick Google review goes a long way for us. There's a QR right at the register if you've got 30 seconds. Appreciate you."</div>
+    <div class="reasoning"><strong>Why:</strong> 15/month is sustainable and out-paces typical organic decay. We're not chasing Element 7's 223-in-2-months velocity — that pace is reactive and unsustainable. Steady wins the trend battle.</div>
+  </div>
+
+  <div class="task">
+    <div class="task-title"><span class="priority p2">P2</span>Schema deepening — hidden Brands Page</div>
+    <p><strong>Action:</strong> Add Product schema for top-20 SKUs, Offer schema for active price points, Organization schema for BSCB Enterprises (use legal entity name in structured data only — not display copy). Lead Product entries with WYLD SKUs given 42% top-20 revenue share.</p>
+    <div class="reasoning"><strong>Why:</strong> Brands Page already exists as hidden SEO target. Structured data is the lowest-effort way to make it discoverable. WYLD-first ordering matches actual demand pattern.</div>
+  </div>
+
+  <div class="task">
+    <div class="task-title"><span class="priority p3">P3</span>FAQ schema on landmark pages</div>
+    <p><strong>Action:</strong> Add FAQ schema to Carmel, Pacific Grove, Monterey, Pebble Beach, and Cannery Row landing pages. Three Q/A pairs per page minimum. Lead questions: "Is there a cannabis dispensary near [landmark]?", "What's the closest dispensary to [landmark]?", "How far is Big Sur Canna from [landmark]?".</p>
+    <div class="reasoning"><strong>Why:</strong> AI-overview surfaces and Google's "People also ask" boxes consume FAQ schema directly. Landmark-anchored questions match tourist search intent.</div>
+  </div>
+</div>
+
+<!-- ============ CONTENT ============ -->
+<div class="dept">
+  <div class="dept-header">
+    <div class="dept-icon">✍️</div>
+    <h3>Content &amp; Editorial</h3>
+  </div>
+
+  <div class="task">
+    <div class="task-title"><span class="priority p1">P1</span>Tourism content rollout — 3 blog pieces in May</div>
+    <p><strong>Action — Week 2 publish:</strong> "Cannabis Near Highway 1 — A Stop-By-Stop Guide" (1,200–1,500 words; embed map; internal link to Carmel landing).</p>
+    <p><strong>Action — Week 3 publish:</strong> "Memorial Day at Pebble Beach — What to Pack, What to Pair" (lifestyle angle; pair with pre-roll tin bundle).</p>
+    <p><strong>Action — Week 4 publish:</strong> "Cannabis for Pebble Beach Golf Days" (AT&amp;T Pro-Am pre-build; reusable in 2027 cycle).</p>
+    <div class="reasoning"><strong>Why:</strong> Tourism intent dominates Big Sur's geography. Aug 2025 had highest phone-call volume of 28 months. May–Aug content engine needs to be live by Memorial Day weekend.</div>
+  </div>
+
+  <div class="task">
+    <div class="task-title"><span class="priority p2">P2</span>"Getting Here" landmark pages</div>
+    <p><strong>Action:</strong> Build 3 Getting Here pages this month — from Carmel (week 2), from Pacific Grove (week 3), from Monterey (week 4). Each: embedded Google Map, driving directions, parking notes, landmark anchors, 1 photo of storefront from arrival angle.</p>
+    <div class="reasoning"><strong>Why:</strong> Matches Mountain Source's validated landmark-Getting-Here pattern. Captures "directions to" intent which correlates with the +29% directions trend.</div>
+  </div>
+
+  <div class="task">
+    <div class="task-title"><span class="priority p3">P3</span>Lounge SEO foundation (silent)</div>
+    <p><strong>Action:</strong> Keyword research for consumption-lounge searches in Monterey market. Build hidden page template (not yet published). Catalog terms: "cannabis lounge Monterey", "consumption lounge near me", "21+ cannabis lounge California", etc.</p>
+    <div class="reasoning"><strong>Why:</strong> Lounge approval is the single largest 2026–2027 growth horizon. Day-one of approval, we want to be discoverable. Silent build means no public risk if approval delays.</div>
+  </div>
+</div>
+
+<!-- ============ EMAIL ============ -->
+<div class="dept">
+  <div class="dept-header">
+    <div class="dept-icon">📧</div>
+    <h3>Email (via Happy Cabbage)</h3>
+  </div>
+
+  <div class="task">
+    <div class="task-title"><span class="priority p1">P1</span>Loyalty points re-engagement — Week 1</div>
+    <p><strong>Audience:</strong> Members with earned-but-unredeemed points balance &gt;100 pts and last visit &gt; 45 days.</p>
+    <p><strong>Send window:</strong> Tuesday or Wednesday, 10–11 AM PT.</p>
+    <div class="copy-meta">Subject line:</div>
+    <div class="copy-block">Your points are waiting. So is summer.</div>
+    <div class="copy-meta">Preview text:</div>
+    <div class="copy-block">A quick look at what you've earned at Big Sur.</div>
+    <div class="copy-meta">Body opener:</div>
+    <div class="copy-block">Hey {{first_name}},
+
+You've quietly racked up loyalty points with us — and we'd hate to see them just sit there as the season warms up.
+
+Stop in this week and we'll help you put them to work — toward an edible for the trail, a pairing for the patio, or whatever fits your weekend.
+
+— The Big Sur Canna team
+26352 Carmel Rancho Ln · Open 9–9 daily</div>
+    <div class="reasoning"><strong>Why:</strong> 8.33M points earned vs 5.72M spent lifetime = ~2.6M outstanding. 68.7% redemption rate is high — the audience uses points when reminded. Re-engagement is margin-positive (redemption is far cheaper than acquiring new transactions).</div>
+  </div>
+
+  <div class="task">
+    <div class="task-title"><span class="priority p2">P2</span>Memorial Day weekend tease — Week 3 (May 21)</div>
+    <p><strong>Audience:</strong> All opted-in members.</p>
+    <div class="copy-meta">Subject line:</div>
+    <div class="copy-block">Memorial Day in Big Sur. We've got the pairings.</div>
+    <div class="copy-meta">Body opener:</div>
+    <div class="copy-block">Long weekend coming up — beach hikes, Pebble Beach views, late dinners outdoors. Stop in and we'll help you pair the right cannabis to the right plan.
+
+A few favorites this weekend:
+• WYLD Boysenberry 1:1:1 — daytime, balanced, perfect for the trail
+• Camino Sours Watermelon Lemonade — patio social
+• A Pure Beauty preroll — sunset over Carmel
+
+Open all weekend, 9 to 9. See you soon.</div>
+    <div class="reasoning"><strong>Why:</strong> Lifestyle pairing > discount-led. Three SKUs named are all in top-20 lifetime revenue (WYLD #2, Camino, Pure Beauty). Drives mix without leaning on % off.</div>
+  </div>
+
+  <div class="task">
+    <div class="task-title"><span class="priority p3">P3</span>Tier 1 loyalty member exclusive — Week 4 (preview AT&amp;T Pro-Am)</div>
+    <p><strong>Audience:</strong> Top-tier loyalty members only.</p>
+    <p>Content: Early heads-up on Pebble Beach Pro-Am pre-roll tin gift bundles. Limited quantity. No discount — exclusivity framing.</p>
+    <div class="reasoning"><strong>Why:</strong> Tier-1 exclusivity rewards top spenders without erosion of margin. Pro-Am-themed gift tins position Big Sur as a premium / tourism-grade brand.</div>
+  </div>
+</div>
+
+<!-- ============ SMS ============ -->
+<div class="dept">
+  <div class="dept-header">
+    <div class="dept-icon">💬</div>
+    <h3>SMS (via Alpine IQ / Happy Cabbage)</h3>
+  </div>
+
+  <div class="guardrail">
+    <strong>Reminder:</strong> SMS subject lines are NOT customizable on this stack. Recommendations are SKU-feature recommendations, not subject-line copy.
+  </div>
+
+  <div class="task">
+    <div class="task-title"><span class="priority p2">P2</span>Single Memorial Day SMS — Friday May 22 mid-afternoon</div>
+    <p><strong>Send:</strong> 1 SMS only this month. Audience: opted-in segment, last visit &lt; 90 days.</p>
+    <div class="copy-meta">Body:</div>
+    <div class="copy-block">Big Sur Canna · Long weekend essentials are stocked — WYLD, Camino, Pure Beauty, and the rest. Stop in 9–9 all weekend. 26352 Carmel Rancho Ln.</div>
+    <div class="reasoning"><strong>Why:</strong> One send protects cadence discipline. Friday afternoon catches the pre-weekend pickup window. Three named brands match top-20 SKU pattern. No % off — feature-led.</div>
+  </div>
+</div>
+
+<!-- ============ IN-STORE / OPS ============ -->
+<div class="dept">
+  <div class="dept-header">
+    <div class="dept-icon">🏪</div>
+    <h3>In-Store / Operations Partnership</h3>
+  </div>
+
+  <div class="task">
+    <div class="task-title"><span class="priority p1">P1</span>WYLD bundle pilot — launch Week 2</div>
+    <p><strong>Bundle 1:</strong> Two WYLD gummies (any flavor) — 5% off bundle (vs current ~28% discount density).</p>
+    <p><strong>Bundle 2:</strong> WYLD gummy + Pure Beauty preroll — 8% off bundle.</p>
+    <p><strong>Bundle 3:</strong> WYLD gummy + Camino gummy + 1g eighth — 10% off bundle.</p>
+    <p><strong>Track:</strong> Attach rate, bundle revenue %, GM% on bundle baskets vs solo baskets.</p>
+    <div class="reasoning"><strong>Why:</strong> 8 of top-20 SKUs are WYLD; 3 of top-20 are Camino; eighths drive higher ticket. Bundle discount is materially lower than blended store discount (27.85%) so GM% should LIFT on bundle baskets. This is the cleanest test of "lift AOV without deepening discount."</div>
+  </div>
+
+  <div class="task">
+    <div class="task-title"><span class="priority p2">P2</span>Budtender upsell script — flower 3.5g push</div>
+    <div class="copy-meta">Counter prompt:</div>
+    <div class="copy-block">"Are you grabbing prerolls, or do you want me to show you the eighths? Same flower, better ticket, lasts you the whole weekend."</div>
+    <p><strong>Track:</strong> Daily eighth vs preroll mix vs Apr baseline (eighths 21.9% of category, prerolls 9.3%).</p>
+    <div class="reasoning"><strong>Why:</strong> Eighths AOV beats prerolls and margins are stronger. Recovering AOV from $52.51 → $58 requires basket-mix shifts like this one.</div>
+  </div>
+
+  <div class="task">
+    <div class="task-title"><span class="priority p2">P2</span>Edibles + cartridge cross-merch</div>
+    <p><strong>Action:</strong> In-store endcap pairing display — edible + cartridge, lifestyle-framed (hike / beach / patio). Two signs/wk. Coordinate with Katie on print.</p>
+    <div class="reasoning"><strong>Why:</strong> Edibles are #1 by revenue (24.7%), cartridges #3 (13.1%). Cross-merch captures multi-product tourist baskets without discount.</div>
+  </div>
+</div>
+
+<!-- ============ COMPETITIVE / DEFENSIVE ============ -->
+<div class="dept">
+  <div class="dept-header">
+    <div class="dept-icon">🛡️</div>
+    <h3>Competitive Watch &amp; Reporting</h3>
+  </div>
+
+  <div class="task">
+    <div class="task-title"><span class="priority p1">P1</span>Weekly Element 7 monitor</div>
+    <p><strong>Action:</strong> Every Monday — pull Element 7 Monterey GBP review count, photo count, post count. Track velocity. Flag immediately if they appear in any of Big Sur's top-3 SoLV cells on weed/weed near me/weed dispensary.</p>
+    <div class="reasoning"><strong>Why:</strong> 223 reviews in 2 months is the fastest competitive velocity in the market. Worth a 10-minute weekly check; not worth a 10-hour reactive response.</div>
+  </div>
+
+  <div class="task">
+    <div class="task-title"><span class="priority p2">P2</span>Mid-month Local Falcon scan</div>
+    <p><strong>Action:</strong> Run abbreviated 5-keyword scan (weed, weed near me, dispensary near me, cannabis near me, cannabis) on May 22. Compare to May 1 baseline. Flag any cell where ranking dropped &gt;1.0.</p>
+    <div class="reasoning"><strong>Why:</strong> Memorial Day weekend is high-stakes traffic — confirming rank stability before the weekend gives lead time for any GBP push if needed.</div>
+  </div>
+
+  <div class="task">
+    <div class="task-title"><span class="priority p2">P2</span>Internal mid-month KPI checkpoint — May 22</div>
+    <p><strong>What we review internally:</strong></p>
+    <ul>
+      <li>GBP performance pulse (searches, actions, conv rate WTD)</li>
+      <li>Bundle attach rate (Week 2 data)</li>
+      <li>Loyalty re-engagement email open + redemption response</li>
+      <li>Review velocity (target 7+ by mid-month)</li>
+      <li>POS trend (Net Sales WTD vs prior month, discount %)</li>
+    </ul>
+    <div class="reasoning"><strong>Why:</strong> Mid-month checkpoint gives one course-correction window before Memorial Day weekend. Anything off-trend gets re-routed Friday morning.</div>
+  </div>
+</div>
+
+<!-- ============ WYLD CO-PROMO EXPLORATION ============ -->
+<div class="dept">
+  <div class="dept-header">
+    <div class="dept-icon">🤝</div>
+    <h3>WYLD Co-Promo Exploration (Q2/Q3 prep)</h3>
+  </div>
+
+  <div class="task">
+    <div class="task-title"><span class="priority p3">P3</span>Initial WYLD brand team outreach — late May</div>
+    <p><strong>Action:</strong> Account-level outreach to WYLD's California regional team. Share Big Sur's WYLD dominance data (8 of top-20 SKUs, 42% of top-20 revenue, $289K lifetime in top-20). Pitch concept: Big Sur × WYLD summer co-promo similar to Noiré's "LET'S GET WYLD" model.</p>
+    <div class="reasoning"><strong>Why:</strong> Big Sur is the strongest WYLD-affinity account in the Dispenza portfolio. We have validated co-promo mechanics elsewhere. Late-May outreach gives 4–6 weeks for Q3 launch planning.</div>
+  </div>
+</div>
+
+<h2>Master Copy Library Index</h2>
+<table>
+  <thead><tr><th>Channel</th><th>Asset</th><th>Status</th></tr></thead>
+  <tbody>
+    <tr><td>Email</td><td>Loyalty points re-engagement (Week 1)</td><td>Ready in playbook</td></tr>
+    <tr><td>Email</td><td>Memorial Day pairings tease (Week 3)</td><td>Ready in playbook</td></tr>
+    <tr><td>Email</td><td>Tier 1 exclusive Pro-Am preview (Week 4)</td><td>Brief noted; final copy in mid-May</td></tr>
+    <tr><td>SMS</td><td>Memorial Day single send (May 22)</td><td>Ready in playbook</td></tr>
+    <tr><td>GBP Posts</td><td>2–3/wk freshness/hours/weekend cadence</td><td>To draft Week 1</td></tr>
+    <tr><td>Budtender</td><td>Review-ask script + eighth upsell prompt</td><td>Ready in playbook</td></tr>
+    <tr><td>Blog</td><td>"Cannabis Near Highway 1" (Week 2)</td><td>To draft Week 1</td></tr>
+    <tr><td>Blog</td><td>"Memorial Day at Pebble Beach" (Week 3)</td><td>To draft Week 2</td></tr>
+    <tr><td>Blog</td><td>"Cannabis for Pebble Beach Golf Days" (Week 4)</td><td>To draft Week 3</td></tr>
+  </tbody>
+</table>
+
+<h2>May KPI Tracker</h2>
+<table>
+  <thead><tr><th>KPI</th><th>April baseline</th><th>May target</th><th>Owner</th></tr></thead>
+  <tbody>
+    <tr><td>GBP conv rate</td><td>~90%</td><td>Sustain 85%+</td><td>SEO</td></tr>
+    <tr><td>Directions / mo</td><td>459 (Mar)</td><td>475+</td><td>SEO</td></tr>
+    <tr><td>Weed-side SoLV</td><td>100%</td><td>Hold 100%</td><td>SEO</td></tr>
+    <tr><td>Cannabis-side SoLV (best term)</td><td>65.7%</td><td>Push 1 over 70%</td><td>SEO</td></tr>
+    <tr><td>Net new Google reviews</td><td>—</td><td>15+</td><td>In-store / SEO</td></tr>
+    <tr><td>Net Sales (POS)</td><td>$258K</td><td>Flat-to-up MoM</td><td>Ops + Marketing</td></tr>
+    <tr><td>Discount %</td><td>27.85%</td><td>Reduce to 22%</td><td>Ops + Marketing</td></tr>
+    <tr><td>AOV</td><td>$52.51</td><td>Recover to $58</td><td>Ops + Marketing</td></tr>
+    <tr><td>WYLD bundle attach rate</td><td>n/a (new)</td><td>Establish baseline</td><td>Ops + Marketing</td></tr>
+    <tr><td>Email loyalty re-engagement redemption %</td><td>n/a (new)</td><td>Establish baseline</td><td>Email</td></tr>
+  </tbody>
+</table>
+
+<div class="footer-meta">
+  Dispenza-internal execution document · May 11, 2026 · Do not share externally.<br>
+  Companion docs: April 2026 Performance Review (client-facing) · May 2026 Strategy Report (client-facing).
+</div>
+
+</main>
+</div>
+</body>
+</html>
