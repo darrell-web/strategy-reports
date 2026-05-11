@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Big Sur Canna — May 2026 Strategy Report</title>
+<title>Big Sur Canna — May 2026 Internal Strategy (Dispenza Cross-Department)</title>
 <style>
   :root {
     --teal: #1d4044;
@@ -19,56 +19,61 @@
     --bg: #fafaf7;
     --good: #2f7d4f;
     --bad: #b8473a;
+    --warn: #c97a2f;
   }
   * { box-sizing: border-box; }
   body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; line-height: 1.55; color: var(--charcoal); background: var(--bg); margin: 0; padding: 0; }
-  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 28px 80px; }
-  header.hero { background: linear-gradient(135deg, var(--teal) 0%, var(--teal-light) 100%); color: var(--cream); padding: 56px 28px; border-radius: 8px 8px 0 0; }
+  .wrap { max-width: 1000px; margin: 0 auto; padding: 40px 28px 80px; }
+  header.hero { background: linear-gradient(135deg, var(--teal) 0%, var(--charcoal) 100%); color: var(--cream); padding: 56px 28px; border-radius: 8px 8px 0 0; }
+  header.hero .internal { display: inline-block; background: var(--rust); color: white; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 3px; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 14px; }
   header.hero .label { font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); font-weight: 600; }
-  header.hero h1 { font-size: 36px; margin: 8px 0 10px; font-weight: 700; line-height: 1.15; }
-  header.hero p.sub { font-size: 17px; margin: 0; opacity: 0.85; }
+  header.hero h1 { font-size: 34px; margin: 8px 0 10px; font-weight: 700; line-height: 1.15; }
+  header.hero p.sub { font-size: 16px; margin: 0; opacity: 0.85; }
   .container { background: white; padding: 40px 44px; border-radius: 0 0 8px 8px; box-shadow: 0 2px 14px rgba(0,0,0,0.04); }
-  h2 { color: var(--teal); font-size: 24px; margin: 36px 0 14px; border-bottom: 2px solid var(--gold); padding-bottom: 8px; }
+  h2 { color: var(--teal); font-size: 22px; margin: 36px 0 14px; border-bottom: 2px solid var(--gold); padding-bottom: 8px; }
   h2:first-child { margin-top: 0; }
-  h3 { color: var(--teal-light); font-size: 18px; margin: 24px 0 10px; }
-  h4 { color: var(--charcoal); font-size: 15px; margin: 16px 0 6px; }
-  p { margin: 10px 0; }
-  table { width: 100%; border-collapse: collapse; margin: 14px 0 20px; font-size: 14px; }
-  th { background: var(--teal); color: var(--cream); text-align: left; padding: 10px 12px; font-weight: 600; }
-  td { padding: 9px 12px; border-bottom: 1px solid var(--light-gray); }
+  h3 { color: var(--teal-light); font-size: 17px; margin: 22px 0 10px; }
+  h4 { color: var(--charcoal); font-size: 14px; margin: 14px 0 6px; text-transform: uppercase; letter-spacing: 0.06em; }
+  p { margin: 8px 0; }
+  code { background: #f3efe6; padding: 1px 5px; border-radius: 3px; font-size: 12.5px; }
+  a { color: var(--teal-light); }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0 18px; font-size: 13px; }
+  th { background: var(--teal); color: var(--cream); text-align: left; padding: 9px 11px; font-weight: 600; }
+  td { padding: 8px 11px; border-bottom: 1px solid var(--light-gray); vertical-align: top; }
   tr:nth-child(even) td { background: #f9f6f1; }
-  .num { text-align: right; font-variant-numeric: tabular-nums; }
-  .pillar {
-    background: white; border: 1px solid var(--light-gray); border-left: 5px solid var(--gold);
-    border-radius: 0 8px 8px 0; padding: 20px 24px; margin: 18px 0;
-  }
-  .pillar h3 { margin-top: 0; color: var(--teal); }
-  .pillar .why { font-size: 13px; color: var(--gray); font-style: italic; margin: 6px 0 12px; }
-  .priority-tag {
-    display: inline-block; background: var(--gold); color: white;
-    font-size: 11px; font-weight: 700; padding: 2px 10px; border-radius: 3px;
-    letter-spacing: 0.06em; text-transform: uppercase; margin-right: 8px; vertical-align: middle;
-  }
-  .priority-tag.p1 { background: var(--rust); }
-  .priority-tag.p2 { background: var(--gold); }
-  .priority-tag.p3 { background: var(--sage); }
-  .callout { background: var(--cream); border-left: 5px solid var(--gold); padding: 16px 20px; margin: 18px 0; border-radius: 0 6px 6px 0; }
-  .callout strong { color: var(--teal); }
-  ul, ol { margin: 8px 0 12px; padding-left: 22px; }
-  li { margin: 5px 0; }
-  .calendar { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 16px 0; }
-  .cal-card {
-    background: var(--cream); padding: 16px; border-radius: 6px;
-    border-top: 4px solid var(--gold);
-  }
-  .cal-card h4 { margin-top: 0; color: var(--teal); }
-  .cal-card .week { font-size: 11px; color: var(--gray); text-transform: uppercase; letter-spacing: 0.08em; }
+  .pre-section { background: var(--cream); border-left: 5px solid var(--gold); padding: 16px 22px; margin: 16px 0; border-radius: 0 6px 6px 0; }
+  .pre-section strong { color: var(--teal); }
+  .dept { background: white; border: 1px solid var(--light-gray); border-radius: 8px; padding: 22px 26px; margin: 22px 0; }
+  .dept-head { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding-bottom: 14px; border-bottom: 3px solid var(--gold); margin-bottom: 14px; }
+  .dept-title { display: flex; align-items: center; gap: 14px; }
+  .dept-icon { background: var(--teal); color: white; width: 42px; height: 42px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 22px; }
+  .dept-name h3 { margin: 0; color: var(--teal); font-size: 18px; }
+  .dept-name .owner { font-size: 12px; color: var(--gray); text-transform: uppercase; letter-spacing: 0.06em; }
+  .dept-priority { background: var(--rust); color: white; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 3px; letter-spacing: 0.06em; text-transform: uppercase; }
+  .dept-priority.p2 { background: var(--gold); }
+  .dept-priority.p3 { background: var(--sage); }
+  .commit { background: var(--cream); padding: 14px 16px; border-radius: 6px; margin: 10px 0; border-left: 4px solid var(--gold); }
+  .commit-title { font-weight: 700; color: var(--teal); margin-bottom: 4px; }
+  .commit-meta { font-size: 11px; color: var(--gray); text-transform: uppercase; letter-spacing: 0.06em; margin-top: 6px; }
+  .ev { font-size: 12px; color: var(--gray); font-style: italic; background: #f3efe6; padding: 6px 10px; border-radius: 4px; margin-top: 8px; }
+  .ev strong { color: var(--teal); font-style: normal; }
+  .issue { background: #fdf4ec; border-left: 5px solid var(--warn); padding: 12px 16px; margin: 12px 0; border-radius: 0 6px 6px 0; font-size: 13.5px; }
+  .issue strong { color: var(--warn); }
+  .critical { background: #fbe9e7; border-left: 5px solid var(--bad); padding: 12px 16px; margin: 12px 0; border-radius: 0 6px 6px 0; font-size: 13.5px; }
+  .critical strong { color: var(--bad); }
+  ul, ol { margin: 6px 0 10px; padding-left: 20px; }
+  li { margin: 4px 0; }
+  .stat-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 14px 0; }
+  .stat { background: var(--cream); padding: 12px; border-radius: 6px; border-left: 4px solid var(--gold); }
+  .stat .label { font-size: 11px; color: var(--gray); text-transform: uppercase; letter-spacing: 0.06em; }
+  .stat .val { font-size: 18px; font-weight: 700; color: var(--teal); }
+  pre.code { background: #2b2b2b; color: #e8e8e8; padding: 12px 16px; border-radius: 6px; font-size: 12px; overflow-x: auto; }
   .footer-meta { text-align: center; font-size: 12px; color: var(--gray); margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--light-gray); }
-  @media (max-width: 680px) {
-    .container { padding: 24px 20px; }
+  @media (max-width: 720px) {
+    .container { padding: 26px 22px; }
     header.hero { padding: 32px 20px; }
-    header.hero h1 { font-size: 26px; }
-    .calendar { grid-template-columns: 1fr; }
+    header.hero h1 { font-size: 24px; }
+    .stat-row { grid-template-columns: repeat(2, 1fr); }
   }
 </style>
 </head>
@@ -76,148 +81,449 @@
 <div class="wrap">
 
 <header class="hero">
-  <div class="label">Strategic Plan · May 2026</div>
+  <div class="internal">Dispenza Internal · Cross-Department Coordination</div>
+  <div class="label">Strategy · May 2026</div>
   <h1>Big Sur Canna-Botanicals</h1>
-  <p class="sub">Defending the lead, closing the gap, and capturing peak-season tourism</p>
+  <p class="sub">What every Dispenza department contributes to close the cannabis-side ranking gap and recover discovery search volume</p>
 </header>
 
 <main class="container">
 
-<h2>Strategic Context</h2>
-<p>Big Sur Canna enters May 2026 in a strong but nuanced position. The Local SEO engine is operating at its highest historical efficiency — Q1 2026 Google Business Profile conversion rate averaged <strong>92.7%</strong>, more than 25 points above the pre-Dispenza baseline. Rank dominance on weed-side terms is locked in at 100% Share of Local Voice. Branded recall is steady. The cannabis-term gap is narrowing.</p>
-<p>The structural challenge sits downstream of search visibility: April POS came in at <strong>$258K</strong> (-16.9% YoY), with a 28-month trend of margin compression and rising discount density. May strategy is therefore framed as <strong>"defend and convert"</strong> — defend the rank lead, capture peak tourism, and shift the in-store conversion lever to lift AOV without further discount erosion.</p>
+<h2>Why This Document Exists</h2>
+<p>Big Sur's April 2026 GBP impressions dropped 25.7% YoY — concentrated almost entirely in non-branded Discovery searches (-39.7% YoY) while branded Direct searches grew (+11.1% YoY). The diagnosis from the April performance review is confirmed: this is a <strong>ranking-driven impression loss</strong>, not a market collapse. The two highest-volume April search terms — "dispensary near me" (408) and "dispensary" (407) — are exactly where Big Sur ranks #5 with 60–61% Share of Local Voice.</p>
+<p>The May 11 website audit found <strong>fixable on-site defects that explain a meaningful portion of that rank gap</strong>: missing H1s on five key landing pages, a factually wrong meta description on <code>/about-us</code>, no FAQPage schema anywhere, orphaned tourism content, and a brand featured-list that contradicts actual top-selling SKUs. None of these are speculative — every one is documented at <code>2026-05-11_website-audit-baseline.md</code> in the client folder.</p>
+<p>This document is internal. It tells <strong>each Dispenza department what they specifically own this month</strong>, with measurable acceptance criteria. The companion May Playbook holds the tactical click-by-click execution.</p>
 
-<h2>Three Strategic Pillars for May</h2>
-
-<div class="pillar">
-  <h3><span class="priority-tag p1">Pillar 1</span> Defend Weed-Side Dominance &amp; Close Cannabis-Side Gap</h3>
-  <p class="why">Why: Holding 100% SoLV on weed terms is the financial moat. Element 7 Monterey (223 reviews in 2 months) is the most active competitive threat. The cannabis/dispensary side has improving trend signal — capitalize before competitors do.</p>
-  <h4>What we'll do</h4>
-  <ul>
-    <li>Weekly GBP post cadence (2–3 posts/wk minimum) emphasizing freshness, in-stock items, weekend hours</li>
-    <li>Review-velocity push: budtender QR placards refreshed; staff incentive for verified review asks (target 15+ new reviews in May)</li>
-    <li>Schema deepening on the hidden Brands Page — Product, Offer, and Organization markup</li>
-    <li>FAQ schema on landmark/location pages targeting "cannabis near [landmark]" queries</li>
-    <li>Two new activity-based pages launched: "Cannabis for Memorial Day at Pebble Beach" and "Big Sur Hiking & THC Edibles — Memorial Day Guide"</li>
-  </ul>
-  <h4>KPI we'll move</h4>
-  <ul>
-    <li>Hold "weed" / "weed near me" / "weed dispensary" at SoLV 100%</li>
-    <li>Push at least one cannabis-side term over SoLV 70% (target: "cannabis near me", currently 64.3%)</li>
-    <li>Net new Google reviews in May: 15+</li>
-  </ul>
+<div class="stat-row">
+  <div class="stat"><div class="label">Top gap term</div><div class="val">"dispensary near me"</div></div>
+  <div class="stat"><div class="label">Apr search vol</div><div class="val">408</div></div>
+  <div class="stat"><div class="label">Big Sur ARP</div><div class="val">5.34</div></div>
+  <div class="stat"><div class="label">Target SoLV May 31</div><div class="val">70%+</div></div>
 </div>
 
-<div class="pillar">
-  <h3><span class="priority-tag p1">Pillar 2</span> Capture Peak Tourism Season Demand</h3>
-  <p class="why">Why: May–August is Big Sur's documented peak window. August 2025 saw the highest phone-call volume in the 28-month dataset (117 calls). Tourism intent searches monetize at higher AOV than locals — a margin-positive segment to lean into.</p>
-  <h4>What we'll do</h4>
-  <ul>
-    <li>Memorial Day weekend (May 23–25) content + GBP post campaign — golf, beach, Highway 1, holiday-weekend pairings</li>
-    <li>AT&amp;T Pebble Beach Pro-Am tie-in content — "Cannabis Stops Near Pebble Beach", pre-roll tin gift bundles</li>
-    <li>Activity-based blog content rollout (3 pieces): "Cannabis Near Highway 1", "Dispensary Near Monterey Aquarium", "Cannabis Near Cannery Row"</li>
-    <li>"Getting Here" pages for Carmel, Pacific Grove, and Monterey routes with embedded directions, parking notes, and landmark anchors</li>
-    <li>GBP photo refresh featuring outdoor / road-trip / lifestyle imagery (Katie + Chantel coordination)</li>
-  </ul>
-  <h4>KPI we'll move</h4>
-  <ul>
-    <li>Directions requests: 475+ in May (vs 459 in March)</li>
-    <li>Discovery (non-branded) searches: reverse the 6-month decline</li>
-    <li>Branded weekend phone-call volume: track Mon vs Sat/Sun split</li>
-  </ul>
+<h2>The Single May Mandate (One Sentence)</h2>
+<div class="pre-section">
+<p style="margin:0; font-size:15px;"><strong>Push at least one cannabis-side term ("dispensary near me", "dispensary", or "cannabis near me") above 70% Share of Local Voice by May 31 — by fixing the website defects that block it, accelerating the trends already moving the right direction, and capturing peak tourism intent into the existing high-conversion-rate funnel.</strong></p>
 </div>
 
-<div class="pillar">
-  <h3><span class="priority-tag p2">Pillar 3</span> Lift AOV &amp; Defend Margin via Mix Shift (Not Discount)</h3>
-  <p class="why">Why: April discount density at 27.85% is a 28-month high. Gross margin slipped to 42.4% (from 49% in Dec '23). The traffic engine is healthy — the next leg of growth is per-basket efficiency, not promotional depth.</p>
-  <h4>What we'll do</h4>
-  <ul>
-    <li>WYLD-anchored bundle program — Big Sur's #1 brand by lifetime SKU revenue (42% of top-20 revenue). Test 2-pack and 3-pack edibles bundles with modest 5–10% bundle discount (vs current 27.9% blended discount)</li>
-    <li>Edibles + Cartridge cross-merchandise: tourist-friendly pairings featured in GBP posts, in-store signage, budtender talking points</li>
-    <li>Flower 3.5g (eighth) upsell push — eighths drive higher ticket and have stronger margins than prerolls</li>
-    <li>Loyalty-tier email campaign — re-engage members who have earned but not redeemed points (8.33M earned · 5.72M redeemed lifetime; 2.6M points outstanding represents reactivation opportunity)</li>
-    <li>Coordinate with Big Sur ops team on budtender upsell scripts — pair-with prompts at checkout for the top-5 SKUs</li>
-  </ul>
-  <h4>KPI we'll move</h4>
-  <ul>
-    <li>AOV: $52.51 → recover toward $58 by month-end</li>
-    <li>Discount %: 27.85% → reduce toward 22%</li>
-    <li>Bundle attach rate (new metric to establish in May)</li>
-  </ul>
+<h2>Critical Issues the Whole Team Should Be Aware Of</h2>
+<div class="critical">
+<strong>BLOCKER 1 — <code>/about-us</code> meta description is factually false.</strong> Current text in the live Google snippet: <em>"We are a California-based company offering a variety of weed delivery methods to customers in California and select out-of-state locations."</em> Big Sur has zero delivery, single Carmel location, no out-of-state operations (POS Order Source = 100% Normal walk-in). This snippet appears on Google for high-intent branded searches and trains the algorithm for wrong intent. <strong>Web/Dev fix this in Week 1 — non-negotiable.</strong>
+</div>
+<div class="critical">
+<strong>BLOCKER 2 — Five key landing pages have NO H1 element at all.</strong> <code>/dispensary-location/carmel</code>, <code>/cannabis-flower</code>, <code>/brands/wyld</code>, <code>/faq</code>, and <code>/contact-us</code> all render with zero H1s. The cannabis-side ranking gap cannot close while pages targeting those queries lack the strongest on-page rank signal. <strong>Web/Dev + Content jointly fix in Week 1.</strong>
+</div>
+<div class="issue">
+<strong>BLOCKER 3 — <code>/cannabis-flower</code> body trains Google for online-ordering intent.</strong> Page contains "BUY CANNABIS FLOWER ONLINE" heading + FAQ Qs "Is it legal to buy Cannabis flowers online?" and "Is it safe to buy Marijuana online for recreational use?" Big Sur cannot fulfill online intent. Content owns the rewrite in Week 2.
+</div>
+<div class="issue">
+<strong>BLOCKER 4 — FAQ page has 8 questions but no FAQPage schema.</strong> Same on <code>/cannabis-flower</code>, <code>/brands/wyld</code>, and <code>/dispensary-location/carmel</code>. Zero AI-overview surface. Web/Dev adds schema; Content audits/extends Q&amp;A bank.
 </div>
 
-<h2>May Content & Campaign Calendar</h2>
+<h2>Department Contributions</h2>
 
-<div class="calendar">
-  <div class="cal-card">
-    <div class="week">Week 1 · May 11–17</div>
-    <h4>Foundation</h4>
-    <ul>
-      <li>GBP photo refresh (Katie + Chantel)</li>
-      <li>Hidden Brands Page schema deepening</li>
-      <li>Review-velocity QR placards refreshed in-store</li>
-      <li>Loyalty re-engagement email #1 (points reminder)</li>
-    </ul>
+<!-- ============================ LOCAL SEO ============================ -->
+<div class="dept">
+  <div class="dept-head">
+    <div class="dept-title">
+      <div class="dept-icon">📍</div>
+      <div class="dept-name">
+        <h3>Local SEO</h3>
+        <div class="owner">GBP · Local Falcon · Reviews · Citations</div>
+      </div>
+    </div>
+    <div class="dept-priority">P1</div>
   </div>
-  <div class="cal-card">
-    <div class="week">Week 2 · May 18–24</div>
-    <h4>Tourism Content Launch</h4>
-    <ul>
-      <li>"Cannabis Near Highway 1" blog publish</li>
-      <li>"Getting Here from Carmel" landmark page</li>
-      <li>WYLD bundle pilot in-store</li>
-      <li>GBP post cadence: 2 posts (Mon, Thu)</li>
-    </ul>
+
+  <div class="commit">
+    <div class="commit-title">Commit 1 — Push "cannabis near me" past 70% SoLV by May 31</div>
+    <p>Currently 64.3% SoLV at ARP 4.13 — lowest-hanging gap term. Local Falcon May 1 scan showed +1.43 pts MoM movement. Work this commit drives: (a) GBP secondary category audit (add Marijuana dispensary, CBD store, Alternative medicine practitioner if missing), (b) GBP description rewrite leading with "cannabis" terminology in first 100 chars (currently "weed"-led), (c) GBP services list deepening (add eighths, gummies, vape carts, tinctures as services).</p>
+    <p class="ev"><strong>Evidence:</strong> May 1 Local Falcon scan trend; April top-search-queries list (cannabis near me has 26 + 19 + 18 = 63 monthly searches across variants); GBP listing currently titled "Big Sur Canna Weed Dispensary" — weed-leading.</p>
+    <div class="commit-meta">Acceptance: cannabis near me SoLV ≥ 70% on May 31 Local Falcon scan</div>
   </div>
-  <div class="cal-card">
-    <div class="week">Week 3 · May 25–31</div>
-    <h4>Memorial Day Push</h4>
-    <ul>
-      <li>Memorial Day weekend GBP campaign (May 23–25)</li>
-      <li>"Memorial Day at Pebble Beach" blog publish</li>
-      <li>Eighth-flower upsell signage live in-store</li>
-      <li>Email + SMS to loyalty Tier 1 — Memorial Day pairings</li>
-    </ul>
+
+  <div class="commit">
+    <div class="commit-title">Commit 2 — Hold weed-side SoLV at 100% on all three terms</div>
+    <p>"weed", "weed near me", "weed dispensary" all sit at SoLV 100% — but ARP ticked +0.01 / +0.03 on the May 1 scan (drift away from 1.0). Maintain weekly 2–3 GBP post cadence; refresh 6–8 photos in Week 1 (coordinate with Creative); pin a freshness/hours/weekend post per week.</p>
+    <p class="ev"><strong>Evidence:</strong> May 1 Local Falcon ARP delta history; 28-month phone-call seasonality peaking in August.</p>
+    <div class="commit-meta">Acceptance: weed-side SoLV remains 100% on May 31 scan</div>
   </div>
-  <div class="cal-card">
-    <div class="week">Week 4 · June 1–7</div>
-    <h4>Pro-Am Pre-Build</h4>
-    <ul>
-      <li>"Cannabis for Pebble Beach Golf Days" content live</li>
-      <li>Pre-roll tin gift bundles in-store + GBP feature</li>
-      <li>Mid-month KPI review (rank, GBP, POS)</li>
-      <li>WYLD bundle attach-rate read</li>
-    </ul>
+
+  <div class="commit">
+    <div class="commit-title">Commit 3 — Run a review-velocity push for 15+ net new reviews</div>
+    <p>Element 7 Monterey accumulated 223 reviews in 2 months — we are not matching that pace. Target sustainable 15/month. Refresh QR placards Week 1, brief budtenders on ask script, track velocity weekly Monday morning.</p>
+    <p class="ev"><strong>Evidence:</strong> Competitive watch flagged Element 7 as fastest-velocity competitor in Monterey market. Big Sur currently 239 reviews at 4.8★.</p>
+    <div class="commit-meta">Acceptance: net new Google reviews ≥ 15 by May 31</div>
+  </div>
+
+  <div class="commit">
+    <div class="commit-title">Commit 4 — Mid-month Local Falcon scan on May 22</div>
+    <p>5-keyword abbreviated scan (weed, weed near me, dispensary near me, cannabis near me, cannabis). Compare to May 1. Flag any cell where rank dropped &gt;1.0 — escalates to a Friday-morning GBP push before Memorial Day weekend.</p>
+    <p class="ev"><strong>Evidence:</strong> May 1 baseline scan saved at <code>performance-reviews/2026-04/2026-05-11_local-falcon-trend-reports.md</code>.</p>
+    <div class="commit-meta">Acceptance: scan run and reported to account team by May 23 EOD</div>
+  </div>
+
+  <div class="commit">
+    <div class="commit-title">Commit 5 — Weekly Element 7 monitor</div>
+    <p>Every Monday: pull Element 7 Monterey GBP review count, photo count, post count delta. Flag immediately if Element 7 appears in any top-3 SoLV cell on Big Sur's weed-side terms.</p>
+    <div class="commit-meta">Acceptance: 4 monitor reports filed (May 12, 19, 26, June 2)</div>
   </div>
 </div>
 
-<h2>Forward Initiatives — Eyes on the Horizon</h2>
+<!-- ============================ WEB / DEV ============================ -->
+<div class="dept">
+  <div class="dept-head">
+    <div class="dept-title">
+      <div class="dept-icon">⚙️</div>
+      <div class="dept-name">
+        <h3>Web / Dev</h3>
+        <div class="owner">On-page · Schema · Technical SEO · Infrastructure</div>
+      </div>
+    </div>
+    <div class="dept-priority">P1</div>
+  </div>
 
-<div class="callout">
-  <strong>Cannabis Lounge Pre-Launch SEO Foundation.</strong> When county approval lands, the lounge represents the single largest expansion lever in Big Sur's 2026–2027 horizon. May work will quietly pre-build the GBP/schema/keyword foundation for consumption-lounge searches across the Monterey market — Q3 SEO targeting (lounge / consumption / 21+) so we're not starting from zero on approval day.
+  <div class="commit">
+    <div class="commit-title">Commit 1 — Fix the false <code>/about-us</code> meta description (Week 1, Day 1)</div>
+    <p>Replace current text with: <em>"Big Sur Canna+Botanicals is a boutique cannabis dispensary in Carmel-By-The-Sea, California, serving Monterey County visitors and locals since 2017. Walk-in shopping, in-store pickup, and curbside available daily 10am–7pm."</em> Update both <code>&lt;meta name="description"&gt;</code> and og:description.</p>
+    <p class="ev"><strong>Evidence:</strong> Audit baseline §2 — current text claims delivery + out-of-state, both false per POS data.</p>
+    <div class="commit-meta">Acceptance: deployed by May 13 EOD; verify via curl + browser inspect</div>
+  </div>
+
+  <div class="commit">
+    <div class="commit-title">Commit 2 — Add H1s to 5 critical pages (Week 1)</div>
+    <p>Pages and exact H1 copy (drafted by Content; deployed by Web/Dev):</p>
+    <ul>
+      <li><code>/dispensary-location/carmel</code> → <strong>"Cannabis Dispensary in Carmel, California"</strong></li>
+      <li><code>/cannabis-flower</code> → <strong>"Cannabis Flower in Carmel — Premium Strains, Lab-Tested"</strong></li>
+      <li><code>/brands/wyld</code> → <strong>"WYLD Gummies &amp; Edibles at Big Sur Canna+Botanicals"</strong></li>
+      <li><code>/faq</code> → <strong>"Cannabis Dispensary FAQs — Big Sur Canna+Botanicals"</strong></li>
+      <li><code>/contact-us</code> → <strong>"Contact Big Sur Canna+Botanicals — Carmel Dispensary"</strong></li>
+    </ul>
+    <p class="ev"><strong>Evidence:</strong> Audit baseline §2 confirms all 5 pages currently render with zero H1 elements.</p>
+    <div class="commit-meta">Acceptance: H1s live by May 15; verify via Playwright headless check</div>
+  </div>
+
+  <div class="commit">
+    <div class="commit-title">Commit 3 — Add FAQPage schema (Week 2)</div>
+    <p>Deploy FAQPage JSON-LD on <code>/faq</code> covering the 8 existing questions. Also extend to <code>/cannabis-flower</code> (has 8 Q&amp;As), <code>/dispensary-location/carmel</code> (has 6 Q&amp;As), <code>/brands/wyld</code> (FAQ section present). Each page gets its own FAQPage block.</p>
+    <p class="ev"><strong>Evidence:</strong> Audit found FAQ content present on 4 pages but only Organization + LocalBusiness schemas exist site-wide.</p>
+    <div class="commit-meta">Acceptance: 4 FAQPage schemas validated via Google Rich Results Test by May 20</div>
+  </div>
+
+  <div class="commit">
+    <div class="commit-title">Commit 4 — Add Review/AggregateRating schema (Week 2)</div>
+    <p>Surface Big Sur's 239 Google reviews + 4.8★ rating via AggregateRating schema attached to the LocalBusiness entity. Optionally add featured Review schema with 3–5 verbatim reviews + dates.</p>
+    <div class="commit-meta">Acceptance: rich review snippet appears in Rich Results Test by May 22</div>
+  </div>
+
+  <div class="commit">
+    <div class="commit-title">Commit 5 — Build <code>/robots.txt</code></div>
+    <p>Current state: 404. Deploy a minimal robots.txt referencing the sitemap index:</p>
+    <pre class="code">User-agent: *
+Allow: /
+Disallow: /data-request
+Disallow: /privacy-policy
+Disallow: /terms-of-service
+Disallow: /end-user-agreement
+
+Sitemap: https://bigsurcannabotanicals.com/sitemap.xml</pre>
+    <div class="commit-meta">Acceptance: returns 200 with correct content by May 15</div>
+  </div>
+
+  <div class="commit">
+    <div class="commit-title">Commit 6 — Fix the <code>/contact-us</code> title typo</div>
+    <p>Current: "Contact Us - BIg Sur Canna+Botanicals Dispensary Carmel, CA" (capital I in "BIg"). Fix to "Contact Us — Big Sur Canna+Botanicals Dispensary Carmel, CA".</p>
+    <div class="commit-meta">Acceptance: deployed by May 13</div>
+  </div>
+
+  <div class="commit">
+    <div class="commit-title">Commit 7 — Reconcile contact email mismatch</div>
+    <p>Site body: <code>info@bigsurcannabotanicals.com</code>. Schema contactPoint: <code>bigsurbotanical@outlook.com</code>. Confirm with client which is correct and align both to one address.</p>
+    <div class="commit-meta">Acceptance: single email source-of-truth confirmed and deployed by May 17</div>
+  </div>
+
+  <div class="commit">
+    <div class="commit-title">Commit 8 — Update footer copyright</div>
+    <p>"© 2023" → "© 2026 Big Sur Canna+Botanicals". Small but a documented freshness/trust signal.</p>
+    <div class="commit-meta">Acceptance: live by May 13</div>
+  </div>
+
+  <div class="commit">
+    <div class="commit-title">Commit 9 — Build BreadcrumbList schema site-wide (Week 3)</div>
+    <p>Add BreadcrumbList JSON-LD to all category pages (<code>/cannabis-*</code>), all brand pages (<code>/brands/*</code>), and the Carmel location page. Improves SERP appearance + helps crawl context.</p>
+    <div class="commit-meta">Acceptance: validated on at least 12 pages by May 29</div>
+  </div>
+
+  <div class="commit">
+    <div class="commit-title">Commit 10 — Internal linking refactor on <code>/dispensary-location/carmel</code> (Week 3)</div>
+    <p>Currently the Carmel page's "Featured Cannabis Categories" section links to URL-encoded menu filter URLs (e.g., <code>/best-california-dispensaries-menu/?menu?refinementList%5Broot_types%5D%5B0%5D=concentrates</code>). Re-point these to the dedicated category pages (<code>/cannabis-concentrates</code>, <code>/cannabis-edibles</code>, <code>/cannabis-vapes-and-vape-carts</code>, <code>/cannabis-pre-rolls</code>, <code>/cannabis-flower</code>). Adds inbound internal links to the 9 category pages that currently have none from the location page.</p>
+    <div class="commit-meta">Acceptance: 5+ category pages receive new inbound internal links by May 27</div>
+  </div>
 </div>
 
-<div class="callout">
-  <strong>WYLD Co-Promotional Concept.</strong> Big Sur has the strongest WYLD demand baseline of any client in the portfolio. We are evaluating a Big Sur × WYLD co-promotional model (similar in structure to programs we've validated elsewhere) tied to peak summer tourism — potential Q2/Q3 launch. Initial discussion with the WYLD brand team to be initiated in late May.
+<!-- ============================ CONTENT ============================ -->
+<div class="dept">
+  <div class="dept-head">
+    <div class="dept-title">
+      <div class="dept-icon">✍️</div>
+      <div class="dept-name">
+        <h3>Content &amp; Editorial</h3>
+        <div class="owner">Page copy · Blog · Landing pages · Metadata</div>
+      </div>
+    </div>
+    <div class="dept-priority">P1</div>
+  </div>
+
+  <div class="commit">
+    <div class="commit-title">Commit 1 — Rewrite <code>/cannabis-flower</code> body to remove online-ordering language (Week 2)</div>
+    <p>Remove the "BUY CANNABIS FLOWER ONLINE" heading and FAQ questions "Is it legal to buy Cannabis flowers online?" and "Is it safe to buy Marijuana online for recreational use?". Replace with in-store / pickup / pre-order language. Replacement heading: "Cannabis Flower in Carmel — Premium Strains, Lab-Tested". Replacement FAQ questions: "Can I reserve flower for pickup?", "What's the difference between sativa, indica, and hybrid?", "How is your flower tested?"</p>
+    <p class="ev"><strong>Evidence:</strong> POS data confirms 100% walk-in, no online channel. Current copy trains Google for unfulfillable intent.</p>
+    <div class="commit-meta">Acceptance: page rewritten, deployed, and validated by May 22</div>
+  </div>
+
+  <div class="commit">
+    <div class="commit-title">Commit 2 — Expand Carmel location body to surface 15+ cities from schema (Week 2)</div>
+    <p>Current "Locations Where Our Dispensary Provides Service" section lists 3 cities. Schema's areaServed lists 20. Rewrite the section to include: Carmel-By-The-Sea, Monterey, Pacific Grove, Pebble Beach, Big Sur, Seaside, Marina, Del Rey Oaks, Sand City, Carmel Valley, Carmel Valley Village, Carmel Highlands, Del Monte Forest, Moss Landing, Salinas, Castroville. Same for zip codes (expand from 1 → 15+).</p>
+    <p class="ev"><strong>Evidence:</strong> Schema vs body inconsistency documented in audit baseline §2.</p>
+    <div class="commit-meta">Acceptance: section live with 15+ cities + 15+ zips by May 22</div>
+  </div>
+
+  <div class="commit">
+    <div class="commit-title">Commit 3 — Surface orphaned tourism blogs on homepage + location page (Week 2)</div>
+    <p>Four tourism blog posts EXIST but have zero internal links from money pages:</p>
+    <ul>
+      <li><code>/blog/cannabis-101/cannabis-near-highway-1-your-coastal-cannabis-destination</code></li>
+      <li><code>/blog/cannabis-101/cannabis-for-golf-at-pebble-beach-swing-relax-repeat</code></li>
+      <li><code>/blog/cannabis-101/thc-edibles-for-big-sur-hiking-find-your-natural-high</code></li>
+      <li><code>/blog/cannabis-101/best-dispensary-near-monterey-bay-aquarium-a-stop-worth-making</code></li>
+    </ul>
+    <p>Add a "Big Sur Cannabis Travel Guide" section on the homepage linking to all 4 with descriptive anchor text (the title of each post). Add same module to <code>/dispensary-location/carmel</code>.</p>
+    <p class="ev"><strong>Evidence:</strong> Audit baseline §5 — these posts target the exact tourism intent the GBP queries reveal but currently flow zero internal PageRank.</p>
+    <div class="commit-meta">Acceptance: new module live on <code>/</code> and <code>/dispensary-location/carmel</code> by May 22</div>
+  </div>
+
+  <div class="commit">
+    <div class="commit-title">Commit 4 — Write 2 NEW blog posts targeting May intent (Weeks 2 &amp; 4)</div>
+    <p>Skip rebuilding what exists. Add two pieces filling specific gaps:</p>
+    <ul>
+      <li><strong>Week 2:</strong> "Memorial Day at Pebble Beach — A Cannabis Pairing Guide" — captures Memorial Day weekend search spike, links to existing Pebble Beach golf post and <code>/brands/wyld</code></li>
+      <li><strong>Week 4:</strong> "Where to Buy Cannabis in Monterey — A 2026 Local's Guide" — directly targets the "monterey dispensary" / "dispensary monterey ca" / "dispensary monterey" cluster (93 monthly searches per April GBP data)</li>
+    </ul>
+    <div class="commit-meta">Acceptance: both posts published with proper schema + internal links by May 29</div>
+  </div>
+
+  <div class="commit">
+    <div class="commit-title">Commit 5 — Draft H1 copy and meta descriptions for all Web/Dev fixes</div>
+    <p>Content delivers exact H1 text (per Web/Dev Commit 2) plus rewritten meta descriptions for all 5 pages that need them. Hand off Day 1 of Week 1 so Web/Dev isn't blocked.</p>
+    <div class="commit-meta">Acceptance: Content delivers all copy briefs to Web/Dev by May 13</div>
+  </div>
+
+  <div class="commit">
+    <div class="commit-title">Commit 6 — Optional: build 1 net-new location page <code>/dispensary-location/monterey</code> (Week 4)</div>
+    <p>Mirror the structure of <code>/dispensary-location/carmel</code> (which has solid H2 + FAQ structure). Targets "monterey dispensary" / "dispensary monterey ca" cluster directly. Use schema's existing Monterey areaServed entity.</p>
+    <p class="ev"><strong>Evidence:</strong> April GBP top-queries: "monterey dispensary" (39), "dispensary monterey ca" (30), "dispensary monterey" (24) = 93 monthly searches with no targeted landing page.</p>
+    <div class="commit-meta">Acceptance: page launched with H1, H2s, FAQ, internal links, schema by May 31 (stretch goal)</div>
+  </div>
 </div>
 
-<div class="callout">
-  <strong>Competitive Defense Posture vs Element 7.</strong> Element 7 Monterey accumulated 223 reviews in 2 months — the fastest competitive velocity in the market. We are not engaging in a reviews arms race; we are leaning into the differentiators they cannot replicate (locality, tenure, tourism content, WYLD depth, lounge horizon).
+<!-- ============================ EMAIL ============================ -->
+<div class="dept">
+  <div class="dept-head">
+    <div class="dept-title">
+      <div class="dept-icon">📧</div>
+      <div class="dept-name">
+        <h3>Email</h3>
+        <div class="owner">Happy Cabbage · Alpine IQ</div>
+      </div>
+    </div>
+    <div class="dept-priority">P2</div>
+  </div>
+
+  <div class="commit">
+    <div class="commit-title">Commit 1 — Loyalty points re-engagement send (Week 1)</div>
+    <p>Audience: members with unredeemed points balance &gt;100 + last visit &gt;45 days. Lifetime liability is 2.6M unredeemed points — high-leverage reactivation. Single send; subject line and body in May Playbook.</p>
+    <p class="ev"><strong>Evidence:</strong> POS — 8.33M points earned · 5.72M spent · 68.7% redemption rate. Active loyalty audience.</p>
+    <div class="commit-meta">Acceptance: send completed by May 14; open rate + visit attribution reported by May 28</div>
+  </div>
+
+  <div class="commit">
+    <div class="commit-title">Commit 2 — Memorial Day pairings tease (Week 3)</div>
+    <p>Audience: all opted-in members. Lifestyle pairing copy (no % off). Features 3 brands aligned to top-20 lifetime SKU revenue: WYLD, Camino, Pure Beauty. Drives basket mix, not discount.</p>
+    <div class="commit-meta">Acceptance: send completed by May 21; bundle/pairing attach rate WTD captured by May 28</div>
+  </div>
+
+  <div class="commit">
+    <div class="commit-title">Commit 3 — Tier-1 Pro-Am preview (Week 4)</div>
+    <p>Top-tier loyalty only. Exclusive heads-up on Pebble Beach Pro-Am pre-roll tin gift bundles (Q3 launch). No discount — exclusivity framing. Margin-positive segment cultivation.</p>
+    <div class="commit-meta">Acceptance: send completed by May 28; engagement rate vs Tier-1 baseline reported</div>
+  </div>
 </div>
 
-<h2>Measurement & Reporting Cadence</h2>
+<!-- ============================ SMS ============================ -->
+<div class="dept">
+  <div class="dept-head">
+    <div class="dept-title">
+      <div class="dept-icon">💬</div>
+      <div class="dept-name">
+        <h3>SMS</h3>
+        <div class="owner">Alpine IQ · Happy Cabbage</div>
+      </div>
+    </div>
+    <div class="dept-priority">P3</div>
+  </div>
+
+  <div class="commit">
+    <div class="commit-title">Commit 1 — Single Memorial Day SMS (May 22 mid-afternoon)</div>
+    <p>One send only this month. Audience: opted-in segment, last visit &lt; 90 days. Friday afternoon catches pre-weekend pickup window. Feature 3 brands: WYLD, Camino, Pure Beauty. No discount.</p>
+    <p class="ev"><strong>Guardrail:</strong> Big Sur cadence is intentionally limited to avoid audience fatigue. One send is the budget for May. SMS subject lines are NOT customizable on the platform — features must come from body copy + SKU selection.</p>
+    <div class="commit-meta">Acceptance: send completed at 2pm PT May 22; click-through to menu measured</div>
+  </div>
+</div>
+
+<!-- ============================ CREATIVE ============================ -->
+<div class="dept">
+  <div class="dept-head">
+    <div class="dept-title">
+      <div class="dept-icon">🎨</div>
+      <div class="dept-name">
+        <h3>Creative</h3>
+        <div class="owner">Graphics · Photo · Video (Katie · Chantel)</div>
+      </div>
+    </div>
+    <div class="dept-priority">P2</div>
+  </div>
+
+  <div class="commit">
+    <div class="commit-title">Commit 1 — GBP photo refresh (Week 1)</div>
+    <p>6–8 new photos uploaded to Google Business Profile in Week 1. Mix: 2 storefront/exterior (tourism-frame), 2 interior/budtender (lifestyle), 2–3 product close-ups (WYLD-led — anchor on top-revenue brand), 1–2 lifestyle (coastal / road-trip angle).</p>
+    <p class="ev"><strong>Why now:</strong> Local Falcon ARP +0.01/+0.03 drift on weed-side terms suggests Google looking for freshness signals. Photo freshness is a documented ranking lever.</p>
+    <div class="commit-meta">Acceptance: 6+ photos uploaded by May 17</div>
+  </div>
+
+  <div class="commit">
+    <div class="commit-title">Commit 2 — In-store endcap signage (Week 2)</div>
+    <p>Pairing-display signage for budtender bundles: edibles + cartridges, WYLD + Pure Beauty preroll, eighth + cartridge cross-merch. Print + install by May 18.</p>
+    <div class="commit-meta">Acceptance: 2 endcap signs live in-store by May 18; photographed for GBP post</div>
+  </div>
+
+  <div class="commit">
+    <div class="commit-title">Commit 3 — Review QR placard refresh (Week 1)</div>
+    <p>Replace existing register placards. Updated copy: "Loved your visit? Leave us a review. ⭐" with QR to Google review link. Coordinate with budtender ask script.</p>
+    <div class="commit-meta">Acceptance: 4+ placards live in-store by May 14</div>
+  </div>
+</div>
+
+<!-- ============================ ANALYTICS ============================ -->
+<div class="dept">
+  <div class="dept-head">
+    <div class="dept-title">
+      <div class="dept-icon">📊</div>
+      <div class="dept-name">
+        <h3>Analytics &amp; Insights</h3>
+        <div class="owner">POS+GBP correlation · Reporting · KPI tracking</div>
+      </div>
+    </div>
+    <div class="dept-priority">P2</div>
+  </div>
+
+  <div class="commit">
+    <div class="commit-title">Commit 1 — Weekly KPI pulse (every Monday)</div>
+    <p>Compact 5-line summary every Monday morning to the account team: GBP searches WTD, rank delta vs May 1, review-velocity count, POS WTD vs prior month, discount % trend. Format: Slack post or email — not a full deck.</p>
+    <div class="commit-meta">Acceptance: 4 pulses delivered (May 12, 19, 26, June 2)</div>
+  </div>
+
+  <div class="commit">
+    <div class="commit-title">Commit 2 — Mid-month full correlation checkpoint (May 22)</div>
+    <p>Pull Treez POS WTD + GBP WTD + mid-month Local Falcon scan. Correlate: did rank moves on the gap terms produce measurable Discovery search lift? Flag if rank improvement is NOT translating to impression recovery (would suggest market-side issue).</p>
+    <div class="commit-meta">Acceptance: full checkpoint memo delivered by May 23</div>
+  </div>
+
+  <div class="commit">
+    <div class="commit-title">Commit 3 — Bundle attach-rate baseline (Week 2 onward)</div>
+    <p>WYLD bundle program is new for Big Sur — Analytics establishes the baseline measurement (attach rate %, bundle revenue %, GM% on bundle vs solo baskets) and reports weekly starting Week 2.</p>
+    <div class="commit-meta">Acceptance: 3 weekly bundle reports filed by May 31</div>
+  </div>
+
+  <div class="commit">
+    <div class="commit-title">Commit 4 — End-of-month June handoff memo</div>
+    <p>Capture what worked, what didn't, what carries into June. Specifically: which department's commit moved the needle most on the cannabis-side gap.</p>
+    <div class="commit-meta">Acceptance: memo delivered by June 3</div>
+  </div>
+</div>
+
+<!-- ============================ ACCOUNT ============================ -->
+<div class="dept">
+  <div class="dept-head">
+    <div class="dept-title">
+      <div class="dept-icon">🤝</div>
+      <div class="dept-name">
+        <h3>Account Management</h3>
+        <div class="owner">Client coordination · Cross-dept synthesis</div>
+      </div>
+    </div>
+    <div class="dept-priority">P1</div>
+  </div>
+
+  <div class="commit">
+    <div class="commit-title">Commit 1 — Confirm contact email source-of-truth with client (Week 1)</div>
+    <p>Body email <code>info@bigsurcannabotanicals.com</code> vs schema contactPoint <code>bigsurbotanical@outlook.com</code>. Quick client check; Web/Dev cannot deploy fix without this.</p>
+    <div class="commit-meta">Acceptance: confirmation received by May 14</div>
+  </div>
+
+  <div class="commit">
+    <div class="commit-title">Commit 2 — Coordinate WYLD brand outreach (late May)</div>
+    <p>Big Sur is the strongest WYLD-affinity account in Dispenza's portfolio (42% of top-20 SKU revenue). Initiate California regional WYLD team conversation about a co-promo concept — similar mechanic to Noiré's "LET'S GET WYLD" model. Q3 launch target.</p>
+    <div class="commit-meta">Acceptance: initial WYLD team contact made by May 28; concept brief in draft</div>
+  </div>
+
+  <div class="commit">
+    <div class="commit-title">Commit 3 — Surface website fixes that need client sign-off</div>
+    <p>Some Web/Dev fixes (Carmel page city/zip expansion; meta description rewrite; H1 copy) benefit from client review. Account batches all into a single client review packet sent by May 13 with 48-hour turnaround request.</p>
+    <div class="commit-meta">Acceptance: packet sent and signed off by May 16</div>
+  </div>
+
+  <div class="commit">
+    <div class="commit-title">Commit 4 — Lounge approval listening</div>
+    <p>Cannabis lounge expansion is pending county approval. Account is the listening post — if approval lands in May, immediately escalate to Content + Web/Dev so the pre-built lounge SEO foundation can deploy.</p>
+    <div class="commit-meta">Acceptance: ongoing — flag at the weekly internal stand-up if any signal received</div>
+  </div>
+</div>
+
+<h2>Department Dependency Map</h2>
 <table>
-  <thead><tr><th>Cadence</th><th>What we report</th><th>To whom</th></tr></thead>
+  <thead><tr><th>Dependency</th><th>From → To</th><th>Deadline</th></tr></thead>
   <tbody>
-    <tr><td>Weekly</td><td>GBP performance pulse, rank scan deltas, content publishing log</td><td>Big Sur ops team via shared dashboard</td></tr>
-    <tr><td>Monthly</td><td>Full performance review HTML — SEO + POS correlation, wins, May→June priorities</td><td>Big Sur leadership</td></tr>
-    <tr><td>Ad-hoc</td><td>Competitive flags (e.g., Element 7 movement), lounge approval triggers</td><td>Real-time to Big Sur ops</td></tr>
+    <tr><td>H1 + meta copy briefs</td><td>Content → Web/Dev</td><td>May 13 EOD</td></tr>
+    <tr><td>Contact email confirmation</td><td>Account → Web/Dev</td><td>May 14 EOD</td></tr>
+    <tr><td>Client sign-off packet</td><td>Account → Client → Web/Dev</td><td>May 16 EOD</td></tr>
+    <tr><td>FAQ Q&amp;A bank for schema</td><td>Content → Web/Dev</td><td>May 17 EOD</td></tr>
+    <tr><td>WYLD-led GBP photos</td><td>Creative → Local SEO</td><td>May 17 EOD</td></tr>
+    <tr><td>Bundle attach-rate baseline definition</td><td>Analytics → Ops</td><td>May 18 EOD</td></tr>
+    <tr><td>Mid-month checkpoint memo</td><td>Analytics → all depts</td><td>May 23 EOD</td></tr>
+    <tr><td>Tourism module copy</td><td>Content → Web/Dev</td><td>May 20 EOD</td></tr>
+    <tr><td>New blog: Memorial Day + Monterey Guide</td><td>Content → Web/Dev → SEO</td><td>May 22 / May 29</td></tr>
+  </tbody>
+</table>
+
+<h2>Single Department-Level Scorecard for May 31</h2>
+<table>
+  <thead><tr><th>Department</th><th>Pass criterion</th></tr></thead>
+  <tbody>
+    <tr><td>Local SEO</td><td>cannabis near me SoLV ≥ 70% AND weed-side SoLV held at 100% AND 15+ new reviews</td></tr>
+    <tr><td>Web/Dev</td><td>All 5 H1s live · <code>/about-us</code> meta fixed · FAQPage schema on 4 pages · robots.txt 200 · BreadcrumbList on 12+ pages</td></tr>
+    <tr><td>Content</td><td><code>/cannabis-flower</code> rewritten · Carmel page surfaces 15+ cities · 2 new blog posts published · tourism module on homepage live</td></tr>
+    <tr><td>Email</td><td>3 sends shipped on schedule · loyalty redemption response captured · Tier-1 send delivered</td></tr>
+    <tr><td>SMS</td><td>1 Memorial Day send shipped · CTR to menu captured</td></tr>
+    <tr><td>Creative</td><td>6+ GBP photos uploaded · 2 in-store endcap signs live · review QR placards refreshed</td></tr>
+    <tr><td>Analytics</td><td>4 weekly pulses · mid-month memo · bundle baseline established · June handoff memo</td></tr>
+    <tr><td>Account</td><td>Client packet signed off · WYLD outreach initiated · email source-of-truth confirmed</td></tr>
   </tbody>
 </table>
 
 <div class="footer-meta">
-  Prepared by Dispenza Dispensary Marketing · May 11, 2026<br>
-  This is a forward-looking strategic plan. Tactical execution details are maintained in Dispenza's internal May 2026 Playbook.
+  Dispenza Internal · Prepared May 11, 2026 · Source-of-truth audit at <code>2026-05-11_website-audit-baseline.md</code><br>
+  Companion docs: April 2026 Performance Review (client-facing) · May 2026 Execution Playbook (Dispenza-internal tactical)
 </div>
 
 </main>
