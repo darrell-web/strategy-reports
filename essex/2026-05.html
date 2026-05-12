@@ -124,12 +124,16 @@
 <strong>BLOCKER 3 — NO schema markup anywhere on essexapothecary.com.</strong> Zero JSON-LD — no Organization, no LocalBusiness, no FAQPage, no AggregateRating. (The GBP we manage has comprehensive structured data; the website we manage doesn't mirror it.) Web/Dev priority for Week 2.
 </div>
 
-<div class="issue">
-<strong>BLOCKER 4 — 3 highest-volume search queries missing from Local Falcon scan setup.</strong> "dispensary near me" (8,421 monthly searches), "cannabis near me", "dispensary lynn ma" — none were in the April 17 scan. Local SEO adds these to the scan config Week 1.
+<div class="critical">
+<strong>BLOCKER 4 — Essex ranks #4 (ARP 3.82) on its #1 search query.</strong> "Dispensary near me" drives <strong>8,421 monthly searches — 31.5% of ALL search demand</strong> to Essex's profile. Local Falcon (April 17) shows ARP 3.82 / <strong>SoLV 51.24%</strong> — meaning Essex appears in top-3 on only about half the local grid cells for this term. "Cannabis near me" sits at the same rank (3.83 / 51.24%). Closing this gap is the single highest-leverage SEO target for May.
 </div>
 
 <div class="issue">
-<strong>BLOCKER 5 — Homepage H1 is just "Welcome to"</strong> (no completion). 4 placeholder "John Doe" customer reviews live in production on the homepage. <code>robots.txt</code> returns 404. Footer copyright "© 2025 Dispenza LLC". Web/Dev hygiene fixes in Week 1.
+<strong>BLOCKER 5 — "dispensary lynn ma" (946 monthly searches) is still missing from Local Falcon scan setup.</strong> Two previously-missing keywords (cannabis near me, dispensary near me) were already in the scan but their PDFs surfaced late. The remaining gap is the geo-anchored Lynn term. Local SEO adds it to scan config Week 1.
+</div>
+
+<div class="issue">
+<strong>BLOCKER 6 — Homepage H1 is just "Welcome to"</strong> (no completion). 4 placeholder "John Doe" customer reviews live in production on the homepage. <code>robots.txt</code> returns 404. Footer copyright "© 2025 Dispenza LLC". Web/Dev hygiene fixes in Week 1.
 </div>
 
 <h2>Department Contributions</h2>
@@ -148,38 +152,57 @@
   </div>
 
   <div class="commit">
-    <div class="commit-title">Commit 1 — Add 3 missing keywords to Local Falcon scan setup</div>
-    <p>Add "dispensary near me" (8,421/6mo), "cannabis near me", "dispensary lynn ma" (946/6mo) to the scheduled scan configuration. Run a fresh full 10-keyword scan May 13 as the new baseline.</p>
-    <div class="commit-meta">Acceptance: 10-keyword scan configuration live + May 13 baseline scan complete</div>
+    <div class="commit-title">Commit 1 — Add the 1 missing keyword to Local Falcon scan setup</div>
+    <p>Current scan covers 9 keywords. Only <strong>"dispensary lynn ma"</strong> (946/6mo) is missing — geo-anchored, high commercial intent. Add to the scheduled scan configuration. Run a fresh full 10-keyword scan May 13 as the new baseline.</p>
+    <div class="commit-meta">Acceptance: "dispensary lynn ma" added · 10-keyword scan complete by May 13</div>
   </div>
 
   <div class="commit">
-    <div class="commit-title">Commit 2 — Push one cannabis-side term over 70% SoLV by May 31</div>
-    <p>Currently "dispensary" 54.55%, "cannabis" 52.89%. Work via GBP we manage: (a) confirm and optimize primary + secondary categories, (b) rewrite GBP description to lead with "cannabis dispensary in Lynn" in first 100 chars (currently weed-led), (c) add more services to the GBP services list (eighths, gummies, vape carts, tinctures, pickup, online ordering).</p>
-    <div class="commit-meta">Acceptance: at least 1 cannabis-side term ≥ 70% SoLV on May 31 scan</div>
+    <div class="commit-title">Commit 2 — Push "dispensary near me" SoLV from 51.24% → 70%+ by May 31</div>
+    <p>This is the single highest-leverage SEO target for May. "Dispensary near me" drives <strong>31.5% of all GBP search demand</strong> (8,421/6mo) but Essex ranks ARP 3.82 (~#4) with SoLV 51.24% — only half the local grid cells. Work via GBP we manage:</p>
+    <ul>
+      <li>(a) rewrite GBP description to lead with "cannabis dispensary in Lynn" in first 100 chars (currently weed-led)</li>
+      <li>(b) audit and deepen secondary GBP categories (Marijuana dispensary, CBD store, Wellness center)</li>
+      <li>(c) add 12+ services to the GBP services list (eighths, gummies, vape carts, tinctures, in-store pickup, online ordering for pickup)</li>
+      <li>(d) site-side support — the new <code>/lynn-ma-cannabis-dispensary</code> page (Web/Dev) + 10 unique titles (replacing the West Lynn duplicate-title bug) gives 6 dedicated geographic landing pages competing for this intent</li>
+    </ul>
+    <div class="commit-meta">Acceptance: "dispensary near me" SoLV ≥ 65% on May 31 scan (stretch: 70%+). Same lift expected on "cannabis near me" (currently 51.24%) as a side benefit.</div>
   </div>
 
   <div class="commit">
-    <div class="commit-title">Commit 3 — Hold weed-side SoLV at 99-100% via active GBP management</div>
+    <div class="commit-title">Commit 3 — Hold/improve the broader cannabis-side cluster</div>
+    <p>Current scan positions across the 4 cannabis-side terms:</p>
+    <ul>
+      <li>dispensary: ARP 3.53 / SoLV 54.55%</li>
+      <li>cannabis: ARP 3.56 / SoLV 52.89%</li>
+      <li>dispensary near me: ARP 3.82 / SoLV 51.24% ← #1 GBP query</li>
+      <li>cannabis near me: ARP 3.83 / SoLV 51.24%</li>
+    </ul>
+    <p>The work in Commit 2 should lift all 4 in tandem since they share the same intent cluster. Track all 4 on the May 22 mid-month + May 31 end-month scans.</p>
+    <div class="commit-meta">Acceptance: all 4 cannabis-side terms show measurable SoLV lift on May 31 scan</div>
+  </div>
+
+  <div class="commit">
+    <div class="commit-title">Commit 4 — Hold weed-side SoLV at 99-100% via active GBP management</div>
     <p>"weed" 100%, "weed dispensary" 99.17%, "weed near me" 99.17%, "weed delivery" 99.17%. Maintain via weekly 2-3 GBP post cadence (Local SEO writes + publishes), upload fresh photos to GBP weekly (Creative-sourced; Dispenza uploads).</p>
     <div class="commit-meta">Acceptance: weed-side SoLV remains 99%+ on May 31 scan</div>
   </div>
 
   <div class="commit">
-    <div class="commit-title">Commit 4 — Respond to every Google review within 24 hours</div>
+    <div class="commit-title">Commit 5 — Respond to every Google review within 24 hours</div>
     <p>Dispenza-managed GBP response cadence. Reply to every new review (positive AND negative) within 24 hours of posting. Use named-budtender thank-yous where they appear in reviews (Gio, Moses, Ashley, Jess) — confirmed POS employees. Targets: drive review engagement signal + reinforce named-team-member visibility.</p>
     <p class="ev"><strong>Evidence:</strong> Currently at 289 reviews, 4.9★. Active review response is a documented GBP ranking signal Dispenza controls.</p>
     <div class="commit-meta">Acceptance: 100% reply rate on May reviews · sample tracked weekly</div>
   </div>
 
   <div class="commit">
-    <div class="commit-title">Commit 5 — Mid-month + month-end Local Falcon scans</div>
-    <p>May 22 (mid-month) and May 31 scans on the new 10-keyword baseline. Compare ARP + SoLV deltas. Flag any cell where rank drops &gt;0.5 on weed-side.</p>
-    <div class="commit-meta">Acceptance: 2 scans run + comparison memos filed by May 23 and June 1</div>
+    <div class="commit-title">Commit 6 — Mid-month + month-end Local Falcon scans (10-keyword baseline)</div>
+    <p>May 22 (mid-month) and May 31 scans on the new 10-keyword baseline (9 current + "dispensary lynn ma"). Compare ARP + SoLV deltas. Lead tracking: "dispensary near me" trend (per Commit 2). Flag any weed-side rank drop &gt;0.5.</p>
+    <div class="commit-meta">Acceptance: 2 scans + comparison memos filed by May 23 and June 1</div>
   </div>
 
   <div class="commit">
-    <div class="commit-title">Commit 6 — Weekly competitive monitor (Diem, Mass Green, Insa, Alternative Therapies)</div>
+    <div class="commit-title">Commit 7 — Weekly competitive monitor (Diem, Mass Green, Insa, Alternative Therapies)</div>
     <p>The 4 dispensaries in Google's "People also search for" panel for Essex. Every Monday: pull review counts + photo counts + GBP post activity. Track velocity.</p>
     <div class="commit-meta">Acceptance: 4 weekly monitor reports filed (May 18, 25, June 1, 8)</div>
   </div>
@@ -550,7 +573,7 @@
     <tr><td>Client packet sent</td><td>Account → Heather → Web/Dev</td><td>May 13 / signed May 16</td></tr>
     <tr><td>10 unique titles + metas brief</td><td>Content → Web/Dev</td><td>May 13</td></tr>
     <tr><td>3 client questions sent</td><td>Account → Heather → Web/Dev</td><td>May 14-15</td></tr>
-    <tr><td>3 missing Local Falcon keywords added</td><td>Local SEO → scan config</td><td>May 13</td></tr>
+    <tr><td>"dispensary lynn ma" added to scan config</td><td>Local SEO → scan config</td><td>May 13</td></tr>
     <tr><td>/lynn-ma-cannabis-dispensary brief</td><td>Content → Web/Dev</td><td>May 15</td></tr>
     <tr><td>SMS opt-in form spec</td><td>Web/Dev → Alpine IQ integration</td><td>May 18</td></tr>
     <tr><td>Email graphics (6 packages)</td><td>Creative → Email</td><td>May 14</td></tr>
@@ -564,7 +587,7 @@
 <table>
   <thead><tr><th>Department</th><th>Pass criterion (Dispenza-execution only)</th></tr></thead>
   <tbody>
-    <tr><td>Local SEO</td><td>1+ cannabis-side term ≥ 70% SoLV · weed-side held 99%+ · 3 missing keywords added · 100% review reply rate · 4 competitive monitor reports</td></tr>
+    <tr><td>Local SEO</td><td><strong>"dispensary near me" SoLV 65%+ (stretch 70%)</strong> · all 4 cannabis-side terms lifted · weed-side held 99%+ · "dispensary lynn ma" added to scan · 100% review reply rate · 4 competitive monitor reports</td></tr>
     <tr><td>Web/Dev</td><td>10 unique titles + metas live · H1 fixed · schema deployed · /lynn-ma page live · /rewards page live · SMS opt-in form live · John Doe removed · robots.txt 200 · footer 2026</td></tr>
     <tr><td>Content</td><td>10 title+meta briefs delivered · social-equity copy live · 2 new blog posts · /lynn-ma page brief delivered · /rewards copy delivered</td></tr>
     <tr><td>Email</td><td>6+ sends shipped · welcome flow active · post-purchase review flow live · loyalty + SMS opt-in drives sent</td></tr>
