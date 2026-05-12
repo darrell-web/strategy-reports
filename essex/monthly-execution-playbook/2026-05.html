@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Essex Apothecary — May 2026 Execution Playbook (Dispenza Tactical)</title>
+<title>Essex Apothecary — May 2026 Execution Playbook</title>
 <style>
   :root {
     --forest: #2d4a3a;
@@ -72,21 +72,22 @@
   <div class="internal">Tactical Execution Plan</div>
   <div class="label">Execution Playbook · May 2026</div>
   <h1>Essex Apothecary</h1>
-  <p class="sub">Click-by-click execution with paste-ready copy, JSON-LD blocks, and acceptance criteria</p>
+  <p class="sub">Click-by-click execution through Dispenza-controlled channels — website, GBP, email, SMS, Local Falcon, brand outreach</p>
 </header>
 
 <main class="container">
 
 <h2>How to use this playbook</h2>
-<p>This is the tactical companion to the May 2026 Strategy. Every task ID below maps to a department commit in the Strategy doc. Acceptance criteria are independently testable — if it can't be checked with a curl, a Rich Results Test, a Local Falcon scan, or a POS export, it doesn't ship.</p>
+<p>This is the tactical companion to the May 2026 Strategy. Every task ID maps to a department commit in the Strategy. Acceptance criteria are independently testable — if it can't be checked with curl, a Rich Results Test, a Local Falcon scan, the Dispenza admin tool, or our own POS/email/SMS dashboards, it doesn't ship.</p>
+<p><strong>Scope:</strong> All tasks below are executable by Dispenza alone — no dependency on Essex's in-store team, POS configuration changes, or vendor decisions. Recommendations for Essex's team to consider live in the May client performance review, not this playbook.</p>
 
 <h2>Six Guardrails (Read Before Acting)</h2>
-<div class="guardrail"><strong>1. SMS opt-in is the channel constraint.</strong> Currently 69 customers (1.8%). Until that grows, do NOT plan SMS-led campaigns. Channel growth IS the May SMS work.</div>
-<div class="guardrail"><strong>2. Hours are Mon–Sat 9am–10pm · Sun 9am–6pm.</strong> Confirmed across GBP, site, schema. Use these in all copy.</div>
-<div class="guardrail"><strong>3. The ACV in Dispenza admin is WRONG.</strong> Real ACV ~$33 (pre-discount or total-with-tax). Account must fix in admin tool. Do not cite the inflated $50 ACV in client comms.</div>
-<div class="guardrail"><strong>4. Discount discipline is working — don't break it.</strong> April discount % = 10.9% (28-month low). Do NOT propose new % off promos as the default. Lead with bundles, loyalty redemption, brand-deal mechanics.</div>
-<div class="guardrail"><strong>5. Customer reviews name budtenders.</strong> Gio (Giovanny Lugo), Moses (Moses Valentin), Ashley (Ashley Lewin), Jess (Jessica Mitchell) are confirmed staff. "Meena" is unconfirmed — verify with Heather before publishing in copy.</div>
-<div class="guardrail"><strong>6. Pickup is 25.6% of orders.</strong> Use "reserve for pickup" / "order ahead" language in copy — NOT pure "walk-in only" framing. Pickup is a real channel.</div>
+<div class="guardrail"><strong>1. SMS opt-in growth is digital-only.</strong> We grow opt-ins via the website form + email campaign + GBP posts. In-store opt-in tactics depend on Essex's team — they're documented for Heather separately, not committed here.</div>
+<div class="guardrail"><strong>2. Hours are Mon–Sat 9am–10pm · Sun 9am–6pm.</strong> Use these in all copy.</div>
+<div class="guardrail"><strong>3. The ACV in Dispenza admin is WRONG.</strong> Real ACV ~$33. Account fixes in admin (ACC-01). Do not cite the inflated $50 figure in any client comms.</div>
+<div class="guardrail"><strong>4. Discount discipline is working — don't break it.</strong> April discount % = 10.9% (28-month low). Do NOT propose new % off promos. Lead with loyalty redemption, brand deal mechanics, lifestyle pairings.</div>
+<div class="guardrail"><strong>5. Budtender names confirmed via POS:</strong> Gio (Giovanny Lugo), Moses (Moses Valentin), Ashley (Ashley Lewin), Jess (Jessica Mitchell). "Meena" is unconfirmed — verify with Heather via ACC-04 before using in copy.</div>
+<div class="guardrail"><strong>6. Pickup is 25.6% of orders.</strong> Use "reserve for pickup" / "order ahead" framing in copy — NOT delivery, NOT walk-in-only.</div>
 
 <!-- ============ WEB / DEV ============ -->
 <div class="dept">
@@ -101,9 +102,7 @@
     <p><strong>Steps for each page:</strong></p>
     <ol>
       <li>Open CMS entry for the page</li>
-      <li>Replace <code>&lt;title&gt;</code> tag with the page-specific title below</li>
-      <li>Replace <code>&lt;meta name="description"&gt;</code> with the page-specific meta below</li>
-      <li>Replace <code>og:title</code> and <code>og:description</code> to match</li>
+      <li>Replace <code>&lt;title&gt;</code> tag, <code>&lt;meta name="description"&gt;</code>, <code>og:title</code>, <code>og:description</code> with the page-specific text below</li>
       <li>Deploy</li>
       <li>Verify via <code>curl -sL https://essexapothecary.com/[path] | grep title</code></li>
       <li>Submit URL to Google Search Console for re-indexing</li>
@@ -111,27 +110,27 @@
     <div class="copy-meta">Paste-ready unique titles + metas:</div>
     <div class="copy-block">/about-us
   TITLE: About Essex Apothecary — Woman-Owned Lynn, MA Cannabis Dispensary
-  META:  Essex Apothecary is a woman-owned, social-equity-certified cannabis dispensary in Lynn, MA. Founded by Heather and serving the North Shore community since 2022.
+  META:  Essex Apothecary is a woman-owned, social-equity-certified cannabis dispensary in Lynn, MA, serving the North Shore community since 2022.
 
 /east-lynn-ma-cannabis-dispensary
   TITLE: East Lynn, MA Cannabis Dispensary — Essex Apothecary
-  META:  Essex Apothecary serves East Lynn with premium cannabis. Near Lynn Shore and Pine Grove Cemetery. Walk-in or in-store pickup. Daily 9am–10pm.
+  META:  Essex Apothecary serves East Lynn with premium cannabis. Near Lynn Shore and Pine Grove Cemetery. Walk-in or reserve for pickup. Daily 9am–10pm.
 
 /lynnfield-ma-cannabis-dispensary-2
   TITLE: Lynnfield, MA Cannabis Dispensary — Essex Apothecary
-  META:  Lynnfield's nearest premium cannabis dispensary is Essex Apothecary in Lynn — flower, edibles, vapes, concentrates and more. Walk-in or pickup. 9am–10pm.
+  META:  Lynnfield's nearest premium cannabis dispensary is Essex Apothecary in Lynn — flower, edibles, vapes, concentrates and more. Daily 9am–10pm.
 
 /peabody-cannabis-dispensary
   TITLE: Peabody Cannabis Dispensary — Essex Apothecary in Lynn, MA
-  META:  Peabody's closest premium dispensary is Essex Apothecary in Lynn. Curated flower, edibles, vapes. Woman-owned, daily 9am–10pm. Walk-in or pickup.
+  META:  Peabody's closest premium dispensary is Essex Apothecary in Lynn. Curated flower, edibles, vapes. Woman-owned, daily 9am–10pm.
 
 /revere-ma-cannabis-dispensary
   TITLE: Revere, MA Cannabis Dispensary — Essex Apothecary
-  META:  Revere customers come to Essex Apothecary in Lynn for premium cannabis. Short drive, easy parking, woman-owned. 50+ brands. Daily 9am–10pm.
+  META:  Revere customers come to Essex Apothecary in Lynn for premium cannabis. Short drive, easy parking, woman-owned. 50+ brands.
 
 /saugus-ma-cannabis-dispensary
   TITLE: Saugus, MA Cannabis Dispensary — Essex Apothecary
-  META:  Saugus's nearest premium cannabis dispensary is Essex Apothecary in Lynn. Flower, edibles, vapes, concentrates and more. Free parking. 9am–10pm.
+  META:  Saugus's nearest premium cannabis dispensary is Essex Apothecary in Lynn. Flower, edibles, vapes, concentrates. Free parking. Daily 9am–10pm.
 
 /neighborhoods
   TITLE: Neighborhoods We Serve — Essex Apothecary Cannabis Dispensary
@@ -139,7 +138,7 @@
 
 /cannabis-brands
   TITLE: Cannabis Brands at Essex Apothecary — 50+ Curated MA Brands
-  META:  Browse 50+ premium cannabis brands at Essex Apothecary in Lynn, MA. Top Massachusetts brands featuring Glorious Cannabis, Crude Boy, Fire Styxx, Bostica, and more.
+  META:  Browse 50+ premium cannabis brands at Essex Apothecary in Lynn, MA. Featuring Glorious Cannabis, Crude Boy, Fire Styxx, Bostica, and more.
 
 /faqs
   TITLE: Cannabis Dispensary FAQs — Essex Apothecary in Lynn, MA
@@ -147,8 +146,8 @@
 
 /careers
   TITLE: Careers at Essex Apothecary — Woman-Owned Lynn, MA Dispensary
-  META:  Join the Essex Apothecary team. Open positions at our woman-owned, social-equity-certified cannabis dispensary in Lynn, MA. Apply today.</div>
-    <div class="reasoning"><strong>Why:</strong> Google deduplicates by title+meta. 10 pages sharing one title means 9 are invisible for their target queries. Mechanical fix unlocks 5 geo landing pages to compete for their respective neighborhood queries (East Lynn, Lynnfield, Peabody, Revere, Saugus).</div>
+  META:  Join the Essex Apothecary team. Open positions at our woman-owned, social-equity-certified cannabis dispensary in Lynn, MA.</div>
+    <div class="reasoning"><strong>Why:</strong> Google deduplicates by title+meta. 10 pages sharing one title means 9 are invisible for their target queries. Mechanical fix unlocks 5 geo landing pages to compete for their respective neighborhood queries.</div>
     <div class="accept">✓ Accept when: 10 unique titles validated via curl + GSC re-index requested · Deadline May 18</div>
   </div>
 
@@ -156,28 +155,25 @@
     <div class="id">WEB-02</div>
     <div class="title"><span class="priority p0">P0</span>Fix homepage H1 + remove "John Doe" placeholder reviews</div>
     <ol>
-      <li>Open homepage CMS entry</li>
-      <li>Find the hero H1 element currently rendering "Welcome to" only</li>
-      <li>Replace with: <strong>"Welcome to Essex Apothecary — Lynn, MA's Woman-Owned Cannabis Dispensary"</strong></li>
-      <li>Find the customer reviews carousel</li>
-      <li>Delete or replace all entries with "John Doe" name (~4 placeholders)</li>
-      <li>Pull 4 additional verbatim reviews from Google to fill in (keep the existing 6 real ones)</li>
+      <li>Open homepage CMS</li>
+      <li>Replace hero H1 from "Welcome to" to <strong>"Welcome to Essex Apothecary — Lynn, MA's Woman-Owned Cannabis Dispensary"</strong></li>
+      <li>Delete the 4+ "John Doe" placeholder entries from the reviews carousel</li>
+      <li>Pull 4 additional verbatim Google reviews to fill in (keep existing 6 real ones)</li>
       <li>Deploy</li>
     </ol>
-    <div class="reasoning"><strong>Why:</strong> "Welcome to" alone has zero keyword value as an H1. Placeholder reviews are unfinished implementation visible to users — trust risk + duplicate-content perception.</div>
     <div class="accept">✓ Accept when: Playwright headless test confirms full H1 + zero "John Doe" by May 15</div>
   </div>
 
   <div class="task">
     <div class="id">WEB-03</div>
-    <div class="title"><span class="priority p0">P0</span>Deploy Organization + LocalBusiness JSON-LD on homepage (Week 1)</div>
+    <div class="title"><span class="priority p0">P0</span>Deploy LocalBusiness + AggregateRating JSON-LD on homepage</div>
     <ol>
-      <li>Add the JSON-LD block below to the homepage <code>&lt;head&gt;</code></li>
+      <li>Add the JSON-LD block below to homepage <code>&lt;head&gt;</code></li>
       <li>Deploy</li>
       <li>Validate via Google Rich Results Test</li>
       <li>Confirm star-rating snippet eligibility</li>
     </ol>
-    <div class="copy-meta">Paste-ready JSON-LD (uses values from GBP back-office + AggregateRating from 4.9★/289 reviews):</div>
+    <div class="copy-meta">Paste-ready JSON-LD:</div>
     <div class="copy-block">&lt;script type="application/ld+json"&gt;
 {
   "@context": "https://schema.org",
@@ -187,7 +183,6 @@
   "description": "Woman-owned, social-equity-certified cannabis dispensary in Lynn, MA serving the North Shore.",
   "url": "https://essexapothecary.com",
   "telephone": "+13394404321",
-  "email": "info@essexapothecary.com",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "233 Western Avenue",
@@ -233,34 +228,60 @@
   ]
 }
 &lt;/script&gt;</div>
-    <div class="reasoning"><strong>Why:</strong> Website currently has zero schema. GBP has comprehensive structured data. Mirroring on the website (a) lets Google connect the GBP entity to the domain authoritatively, (b) makes star-rating rich snippets eligible for SERPs, (c) gives Google a single source of truth for hours/address/areaServed.</div>
-    <div class="accept">✓ Accept when: Rich Results Test validates · star rating shown in test preview · Deadline May 18</div>
+    <div class="accept">✓ Accept when: Rich Results Test validates · star rating shown · Deadline May 18</div>
   </div>
 
   <div class="task">
     <div class="id">WEB-04</div>
-    <div class="title"><span class="priority p1">P1</span>Build <code>/lynn-ma-cannabis-dispensary</code> page (Week 2)</div>
+    <div class="title"><span class="priority p1">P1</span>Build <code>/lynn-ma-cannabis-dispensary</code> landing page (Week 2)</div>
     <ol>
-      <li>Content delivers full page brief (CON-04)</li>
-      <li>Mirror the structure of <code>/west-lynn-ma-cannabis-dispensary</code> (which has correct H2 + FAQ structure)</li>
-      <li>Add LocalBusiness JSON-LD + FAQPage JSON-LD</li>
-      <li>Add 6+ internal links (to <code>/cannabis-flower</code>, <code>/cannabis-edibles</code>, <code>/cannabis-brands</code>, <code>/east-lynn-ma-cannabis-dispensary</code>, <code>/west-lynn-ma-cannabis-dispensary</code>, <code>/about-us</code>)</li>
-      <li>Deploy + add to sitemap.xml</li>
+      <li>Use Content's brief (CON-04)</li>
+      <li>Mirror <code>/west-lynn-ma-cannabis-dispensary</code> structure</li>
+      <li>Add LocalBusiness + FAQPage JSON-LD</li>
+      <li>Add 6+ internal links (categories + geo pages + about)</li>
+      <li>Deploy + update sitemap.xml</li>
       <li>Submit URL to Google Search Console</li>
     </ol>
-    <div class="reasoning"><strong>Why:</strong> "dispensary lynn ma" = 946/6mo searches with no targeted landing page. "dispensary near me" = 8,421/6mo. A Lynn-named landing page captures both intents directly.</div>
+    <div class="reasoning"><strong>Why:</strong> "dispensary lynn ma" = 946/6mo searches · "dispensary near me" = 8,421/6mo. No targeted landing page currently exists.</div>
     <div class="accept">✓ Accept when: page live with H1, H2s, FAQ schema, 6+ internal links, submitted to GSC · Deadline May 22</div>
   </div>
 
   <div class="task">
     <div class="id">WEB-05</div>
-    <div class="title"><span class="priority p1">P1</span>FAQPage schema on <code>/faqs</code> (Week 2)</div>
+    <div class="title"><span class="priority p0">P0</span>Build SMS opt-in form on website (Week 1) — DIGITAL CHANNEL FOR OPT-IN GROWTH</div>
     <ol>
-      <li>Pull the existing FAQ questions from the page accordion (homepage has 6 questions visible on home and likely on /faqs)</li>
-      <li>Build FAQPage JSON-LD block</li>
-      <li>Inject in head</li>
-      <li>Validate via Rich Results Test</li>
+      <li>Add a homepage opt-in banner: phone field + "Get 100 loyalty points instantly when you opt in to texts" CTA</li>
+      <li>Build a dedicated <code>/sms-alerts</code> page with the same form + explainer copy</li>
+      <li>Integrate the form submission with Alpine IQ / Happy Cabbage SMS platform (auto-add to opted-in segment)</li>
+      <li>Trigger a confirmation email + send 100 bonus loyalty points programmatically</li>
+      <li>Track form conversions in analytics dashboard</li>
     </ol>
+    <div class="copy-meta">Suggested homepage banner copy:</div>
+    <div class="copy-block">📱 Get text alerts on weekly deals + 100 bonus loyalty points just for opting in.
+[phone field]                   [Sign me up]
+By submitting, you consent to recurring marketing texts from Essex Apothecary. Reply STOP to unsubscribe. Msg & data rates apply.</div>
+    <div class="reasoning"><strong>Why:</strong> Current SMS opt-in is 1.8% (69 of 3,731). Website is highest-volume Dispenza-controlled customer touchpoint — capturing opt-ins digitally is the lever we own.</div>
+    <div class="accept">✓ Accept when: form live on homepage + /sms-alerts page · 50+ digital opt-ins captured by May 31</div>
+  </div>
+
+  <div class="task">
+    <div class="id">WEB-06</div>
+    <div class="title"><span class="priority p0">P0</span>Build / enhance <code>/rewards</code> page driving loyalty signup (Week 2)</div>
+    <ol>
+      <li>Build a dedicated rewards landing page (or enhance existing if present)</li>
+      <li>Content delivers copy (CON-05)</li>
+      <li>Include a direct loyalty enrollment CTA that links to the loyalty platform's signup flow</li>
+      <li>Mention the 100-bonus-point sign-up incentive (matches SMS opt-in incentive — combined "join + opt-in" path)</li>
+      <li>Add prominent links from homepage hero, footer, and the SMS opt-in confirmation</li>
+    </ol>
+    <div class="reasoning"><strong>Why:</strong> Drives DIGITAL loyalty enrollment via Dispenza-controlled channel. Current loyalty conversion 5.9% (56 of 942 monthly new customers). Email + website work in parallel.</div>
+    <div class="accept">✓ Accept when: /rewards page live with enrollment CTA by May 22</div>
+  </div>
+
+  <div class="task">
+    <div class="id">WEB-07</div>
+    <div class="title"><span class="priority p1">P1</span>FAQPage schema on <code>/faqs</code> (Week 2)</div>
+    <p>Pull existing 6+ FAQ questions, build FAQPage JSON-LD block, inject in head, validate.</p>
     <div class="copy-meta">FAQPage JSON-LD template:</div>
     <div class="copy-block">&lt;script type="application/ld+json"&gt;
 {
@@ -270,96 +291,57 @@
     {
       "@type": "Question",
       "name": "What are your hours of operation?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Essex Apothecary is open Monday through Saturday 9 AM to 10 PM, and Sunday 9 AM to 6 PM."
-      }
+      "acceptedAnswer": {"@type":"Answer","text":"Essex Apothecary is open Monday through Saturday 9 AM to 10 PM, and Sunday 9 AM to 6 PM."}
     },
     {
       "@type": "Question",
       "name": "How can I pay for recreational cannabis?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "We accept cash and debit card payments. We are not cash-only."
-      }
+      "acceptedAnswer": {"@type":"Answer","text":"We accept cash and debit card payments."}
     },
     {
       "@type": "Question",
       "name": "What form of ID do I need to purchase recreational cannabis?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "You must be 21 years of age or older with a valid government-issued photo ID. We accept driver's licenses, state ID cards, and passports."
-      }
+      "acceptedAnswer": {"@type":"Answer","text":"You must be 21 years of age or older with a valid government-issued photo ID."}
     },
     {
       "@type": "Question",
       "name": "Can I pre-order cannabis products online for in-store pickup?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. Browse our menu at essexapothecary.dispensary.shop, build your cart, and we'll have your order ready for pickup at the store."
-      }
+      "acceptedAnswer": {"@type":"Answer","text":"Yes. Browse our menu at essexapothecary.dispensary.shop, build your cart, and we'll have your order ready for pickup at the store."}
     },
     {
       "@type": "Question",
       "name": "Do you offer parking at your location?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. We have a free parking lot at 233 Western Avenue with wheelchair-accessible parking and entrance."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Are your budtenders available to provide recommendations?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. Our knowledgeable budtenders are available throughout open hours to help with product selection, dosage guidance, and strain recommendations."
-      }
+      "acceptedAnswer": {"@type":"Answer","text":"Yes. We have a free parking lot at 233 Western Avenue with wheelchair-accessible parking and entrance."}
     }
   ]
 }
 &lt;/script&gt;</div>
-    <div class="accept">✓ Accept when: FAQPage schema validated via Rich Results Test · Deadline May 22</div>
+    <div class="accept">✓ Accept when: FAQPage schema validated · Deadline May 22</div>
   </div>
 
   <div class="task">
-    <div class="id">WEB-06</div>
-    <div class="title"><span class="priority p1">P1</span>Deploy <code>/robots.txt</code></div>
+    <div class="id">WEB-08</div>
+    <div class="title"><span class="priority p1">P1</span>Deploy <code>/robots.txt</code> + update footer copyright</div>
     <div class="copy-block">User-agent: *
 Allow: /
 Disallow: /invest
 
 Sitemap: https://essexapothecary.com/sitemap.xml</div>
-    <div class="accept">✓ Accept when: curl returns 200 + GSC accepts sitemap · Deadline May 15</div>
-  </div>
-
-  <div class="task">
-    <div class="id">WEB-07</div>
-    <div class="title"><span class="priority p2">P2</span>Update footer copyright</div>
-    <p>"© Copyright - 2025 Dispenza LLC" → "© Copyright 2026 Essex Apothecary". Use dynamic year if templatable.</p>
-    <div class="accept">✓ Accept when: footer renders 2026 · Deadline May 15</div>
-  </div>
-
-  <div class="task">
-    <div class="id">WEB-08</div>
-    <div class="title"><span class="priority p2">P2</span>Refresh sitemap.xml + 301 redirects on old paths</div>
-    <ol>
-      <li>Regenerate sitemap.xml with current date</li>
-      <li>Set up 301 redirects: <code>/about</code> → <code>/about-us</code>, <code>/menu</code> → <code>/our-menu</code>, <code>/shop</code> → <code>/our-menu</code>, <code>/contact</code> → <code>/contact-us</code>, <code>/faq</code> → <code>/faqs</code>, <code>/locations</code> → <code>/neighborhoods</code>, <code>/rewards</code> → (decide: keep or redirect to dispensary.shop loyalty)</li>
-    </ol>
-    <div class="accept">✓ Accept when: sitemap updated · 7 paths return 301 · Deadline May 27</div>
+    <p>Update footer: "© Copyright - 2025 Dispenza LLC" → "© Copyright 2026 Essex Apothecary".</p>
+    <div class="accept">✓ Accept when: curl returns 200 on robots.txt + footer 2026 · Deadline May 15</div>
   </div>
 
   <div class="task">
     <div class="id">WEB-09</div>
-    <div class="title"><span class="priority p2">P2</span>Update contact email (after Account confirms ACC-03)</div>
-    <p>Footer email currently <code>hr@essexapothecary.com</code>. Replace with confirmed customer-facing email (e.g., <code>info@essexapothecary.com</code>).</p>
-    <div class="accept">✓ Accept when: footer email updated · Deadline May 18</div>
+    <div class="title"><span class="priority p2">P2</span>Refresh sitemap + 301 redirects on 7 old paths</div>
+    <p>Regenerate sitemap.xml. Set up 301 redirects: <code>/about</code> → <code>/about-us</code>, <code>/menu</code> → <code>/our-menu</code>, <code>/shop</code> → <code>/our-menu</code>, <code>/contact</code> → <code>/contact-us</code>, <code>/faq</code> → <code>/faqs</code>, <code>/locations</code> → <code>/neighborhoods</code>, <code>/rewards</code> → keep (per WEB-06).</p>
+    <div class="accept">✓ Accept when: sitemap updated · 6 paths return 301 · Deadline May 27</div>
   </div>
 
   <div class="task">
     <div class="id">WEB-10</div>
     <div class="title"><span class="priority p3">P3</span>BreadcrumbList schema on geo pages (Week 3)</div>
-    <p>Apply BreadcrumbList JSON-LD to all 6 geo pages + <code>/cannabis-brands</code> + new <code>/lynn-ma-cannabis-dispensary</code>.</p>
+    <p>Apply BreadcrumbList JSON-LD to 6 geo pages + new <code>/lynn-ma-cannabis-dispensary</code> + <code>/cannabis-brands</code>.</p>
     <div class="accept">✓ Accept when: 7+ pages validated · Deadline May 29</div>
   </div>
 </div>
@@ -374,7 +356,7 @@ Sitemap: https://essexapothecary.com/sitemap.xml</div>
   <div class="task">
     <div class="id">CON-01</div>
     <div class="title"><span class="priority p0">P0</span>Deliver 10-page title/meta brief to Web/Dev (May 13)</div>
-    <p>The paste-ready text is already in WEB-01. Content's role: review, clean, finalize, hand off to Web/Dev May 13 EOD as a single brief document.</p>
+    <p>Paste-ready text is in WEB-01. Content reviews, finalizes, hands off May 13 EOD.</p>
     <div class="accept">✓ Accept when: brief sent to Web/Dev by May 13 EOD</div>
   </div>
 
@@ -382,77 +364,65 @@ Sitemap: https://essexapothecary.com/sitemap.xml</div>
     <div class="id">CON-02</div>
     <div class="title"><span class="priority p1">P1</span>Add "social equity certified" to homepage + About page</div>
     <ol>
-      <li>Open homepage CMS</li>
-      <li>Find the hero subhead area (below H1)</li>
-      <li>Add tagline: <strong>"Lynn's woman-owned, social-equity-certified cannabis dispensary."</strong></li>
-      <li>Open About page</li>
-      <li>Add to first paragraph: weave "social-equity certified" into existing copy</li>
-      <li>Update About meta description to mention social equity</li>
+      <li>Homepage hero subhead: add tagline <strong>"Lynn's woman-owned, social-equity-certified cannabis dispensary."</strong></li>
+      <li>About page: weave into first paragraph + meta description</li>
       <li>Deploy</li>
     </ol>
-    <div class="reasoning"><strong>Why:</strong> Per scope memo, this is one of Essex's two load-bearing brand differentiators (alongside woman-owned). Currently surfaced ONLY in internal docs, not anywhere on the website. Trust + brand-positioning gain.</div>
     <div class="accept">✓ Accept when: phrase appears on homepage + About + About meta · Deadline May 18</div>
   </div>
 
   <div class="task">
     <div class="id">CON-03</div>
     <div class="title"><span class="priority p1">P1</span>Audit "buy online" copy + replace with pickup framing</div>
-    <ol>
-      <li>Use curl or Playwright to scan all category pages + homepage for "buy online", "shop online", "purchase online"</li>
-      <li>Replace with: "reserve for pickup", "order ahead, pickup in-store", "browse our menu and we'll have it ready"</li>
-      <li>Update meta descriptions referencing online ordering on geo landing pages</li>
-    </ol>
-    <div class="reasoning"><strong>Why:</strong> POS shows 25.6% pickup channel (real and significant) but no delivery. Copy needs to match the actual fulfillment model — orders are pre-ordered for in-store pickup, not delivered.</div>
-    <div class="accept">✓ Accept when: audit completed + 5+ instances rewritten · Deadline May 22</div>
+    <p>Scan category pages + homepage for "buy online", "shop online", "purchase online". Replace with: "reserve for pickup", "order ahead, pickup in-store".</p>
+    <div class="accept">✓ Accept when: 5+ instances rewritten · Deadline May 22</div>
   </div>
 
   <div class="task">
     <div class="id">CON-04</div>
     <div class="title"><span class="priority p1">P1</span><code>/lynn-ma-cannabis-dispensary</code> page brief (deliver May 15)</div>
-    <p>Content delivers the full brief to Web/Dev with:</p>
     <ul>
       <li><strong>H1:</strong> "Lynn, MA Cannabis Dispensary — Essex Apothecary"</li>
       <li><strong>Meta:</strong> "Essex Apothecary is the trusted cannabis dispensary serving Lynn, MA and the North Shore. Woman-owned, social-equity certified, 9am–10pm daily."</li>
       <li><strong>H2 sections:</strong> "Lynn Cannabis at Essex Apothecary" · "What Makes Essex Different" · "First-Time Customer Guide" · "Pickup &amp; Walk-In Options" · "Neighborhoods We Serve" · "FAQ"</li>
-      <li><strong>Body sections:</strong> Lynn-specific cannabis culture, the woman-owned/social-equity story, what 50+ brands means (mention Glorious Cannabis featured), pickup vs walk-in clear explanation, team intros (Gio, Moses, Ashley, Jess named — verify Meena first)</li>
-      <li><strong>FAQ:</strong> 6 questions covering "Where is Essex Apothecary?", "What hours are you open in Lynn?", "How do I order ahead?", "Is parking free?", "Do you offer first-time customer deals?", "What brands do you carry?"</li>
-      <li><strong>Internal links:</strong> /cannabis-flower, /cannabis-edibles, /cannabis-brands, /east-lynn, /west-lynn, /about-us</li>
+      <li><strong>Body sections:</strong> Lynn cannabis culture, woman-owned/social-equity story, 50+ brands featured (Glorious Cannabis spotlight), pickup vs walk-in clarity, named team intros (Gio, Moses, Ashley, Jess — verify Meena first per ACC-04)</li>
+      <li><strong>6 FAQ Q&amp;As:</strong> "Where is Essex Apothecary?", "What hours are you open in Lynn?", "How do I order ahead?", "Is parking free?", "Do you offer first-time customer deals?", "What brands do you carry?"</li>
+      <li><strong>Internal links:</strong> /cannabis-flower, /cannabis-edibles, /cannabis-brands, /east-lynn-ma-cannabis-dispensary, /west-lynn-ma-cannabis-dispensary, /about-us, /rewards</li>
     </ul>
     <div class="accept">✓ Accept when: brief delivered to Web/Dev by May 15</div>
   </div>
 
   <div class="task">
     <div class="id">CON-05</div>
-    <div class="title"><span class="priority p1">P1</span>Blog: "What Makes a Great Lynn Cannabis Dispensary?" (publish Week 3)</div>
+    <div class="title"><span class="priority p1">P1</span><code>/rewards</code> page copy (deliver May 18)</div>
+    <p>Compelling loyalty-program copy. Pairs with WEB-06.</p>
     <ul>
-      <li>Slug: <code>/blog/what-makes-a-great-lynn-cannabis-dispensary-a-locals-buyer-guide</code></li>
-      <li>Length: 1,200–1,500 words</li>
-      <li>H1: "What Makes a Great Lynn Cannabis Dispensary? A Local's Buyer Guide"</li>
-      <li>Sections: how to evaluate a dispensary (selection, education, service, rewards), what Essex's positioning looks like (woman-owned, social equity, named team), spotlight on Glorious Cannabis sub-brands (Crude Boy, Fire Styxx, Glorious flower), FAQ section</li>
-      <li>FAQPage schema with 3 Q&amp;As</li>
-      <li>Internal links: <code>/lynn-ma-cannabis-dispensary</code>, <code>/cannabis-brands</code>, <code>/about-us</code></li>
+      <li><strong>H1:</strong> "Essex Rewards — Earn With Every Visit"</li>
+      <li><strong>Sections:</strong> How it works (1 point per $1) · Why join (members-only deals, birthday bonus, early access) · How to sign up (link to enrollment flow) · FAQ</li>
+      <li><strong>Sign-up incentive surface:</strong> "Get 100 bonus points just for joining + 100 more for opting into texts"</li>
     </ul>
-    <div class="accept">✓ Accept when: post published with schema + internal links · Deadline May 22</div>
+    <div class="accept">✓ Accept when: rewards page copy delivered to Web/Dev by May 18</div>
   </div>
 
   <div class="task">
     <div class="id">CON-06</div>
-    <div class="title"><span class="priority p1">P1</span>Blog: "Top Cannabis Strains in Massachusetts — Spring 2026" (publish Week 4)</div>
-    <ul>
-      <li>Slug: <code>/blog/top-cannabis-strains-in-massachusetts-spring-2026</code></li>
-      <li>H1: "Top Cannabis Strains in Massachusetts Right Now — Spring 2026"</li>
-      <li>Heather provides top 8–10 SKUs from POS data — Content writes strain profiles for each</li>
-      <li>Lean into named Essex brand stories: Crude Boy carts (top revenue), Fire Styxx infused prerolls, Bostica Drip flower, Apotho Therapeutics prerolls, Choice Chew gummies</li>
-      <li>FAQPage schema with 4 Q&amp;As (Sativa vs Indica vs Hybrid, how to choose strain, top sativa, top indica, top hybrid)</li>
-    </ul>
-    <div class="accept">✓ Accept when: post published · Deadline May 29</div>
+    <div class="title"><span class="priority p1">P1</span>Blog: "What Makes a Great Lynn Cannabis Dispensary?" (publish Week 3)</div>
+    <p>1,200-1,500 words. FAQPage schema. Names confirmed team members. Internal links to <code>/lynn-ma-cannabis-dispensary</code>, <code>/cannabis-brands</code>, <code>/rewards</code>, <code>/about-us</code>.</p>
+    <div class="accept">✓ Accept when: post published with schema + internal links · Deadline May 22</div>
   </div>
 
   <div class="task">
     <div class="id">CON-07</div>
+    <div class="title"><span class="priority p1">P1</span>Blog: "Top Cannabis Strains in Massachusetts — Spring 2026" (publish Week 4)</div>
+    <p>1,500 words featuring top-revenue SKUs from POS: Crude Boy carts, Fire Styxx prerolls, Bostica Drip flower, Apotho Therapeutics prerolls, Choice Chew gummies. FAQPage schema with 4 Q&amp;As.</p>
+    <div class="accept">✓ Accept when: post published · Deadline May 29</div>
+  </div>
+
+  <div class="task">
+    <div class="id">CON-08</div>
     <div class="title"><span class="priority p3">P3</span>Fill empty meta descriptions</div>
-    <p>Pages with empty meta descriptions per audit: <code>/current-strains</code>, <code>/knowledge-base</code>, <code>/invest</code>. Write 140-160 char meta descriptions for each.</p>
-    <div class="accept">✓ Accept when: zero blank metas in sitemap pages · Deadline May 29</div>
+    <p>Pages with empty metas: <code>/current-strains</code>, <code>/knowledge-base</code>, <code>/invest</code>. Write 140-160 char metas for each.</p>
+    <div class="accept">✓ Accept when: zero blank metas · Deadline May 29</div>
   </div>
 </div>
 
@@ -467,86 +437,90 @@ Sitemap: https://essexapothecary.com/sitemap.xml</div>
     <div class="id">SEO-01</div>
     <div class="title"><span class="priority p0">P0</span>Add 3 missing keywords to Local Falcon scan setup (May 13)</div>
     <ol>
-      <li>Log into Local Falcon</li>
-      <li>Open Essex Apothecary scan configuration</li>
-      <li>Add 3 keywords: <strong>"dispensary near me"</strong>, <strong>"cannabis near me"</strong>, <strong>"dispensary lynn ma"</strong></li>
-      <li>Keep existing 7 keywords</li>
-      <li>Run a fresh full scan as the new 10-keyword baseline</li>
-      <li>File baseline at <code>performance-reviews/2026-05/2026-05-13_local-falcon-trend-reports.md</code></li>
+      <li>Open Local Falcon Essex configuration</li>
+      <li>Add: <strong>"dispensary near me"</strong>, <strong>"cannabis near me"</strong>, <strong>"dispensary lynn ma"</strong></li>
+      <li>Run fresh 10-keyword baseline scan</li>
+      <li>File at <code>performance-reviews/2026-05/2026-05-13_local-falcon-trend-reports.md</code></li>
     </ol>
-    <div class="reasoning"><strong>Why:</strong> "dispensary near me" is the #1 GBP search query (8,421/6mo) but wasn't being tracked. Other 2 are similarly high-volume.</div>
-    <div class="accept">✓ Accept when: 10-keyword scan complete + baseline filed · Deadline May 13</div>
+    <div class="accept">✓ Accept when: 10-keyword scan complete · Deadline May 13</div>
   </div>
 
   <div class="task">
     <div class="id">SEO-02</div>
-    <div class="title"><span class="priority p0">P0</span>GBP description rewrite (Week 1)</div>
+    <div class="title"><span class="priority p0">P0</span>GBP description rewrite — cannabis-led first 100 chars (Week 1)</div>
     <ol>
-      <li>Log into GBP dashboard for Essex Apothecary</li>
-      <li>Open the business description editor</li>
-      <li>Replace current description with the text below (leads with "cannabis dispensary" in first 100 chars)</li>
+      <li>Log into Essex GBP dashboard</li>
+      <li>Replace description with text below</li>
       <li>Save</li>
     </ol>
     <div class="copy-meta">Replacement GBP description:</div>
     <div class="copy-block">Essex Apothecary is a woman-owned cannabis dispensary in Lynn, MA, proudly social-equity certified and serving the North Shore community. Our adult-use dispensary offers premium cannabis products — marijuana flower, pre-rolls, vapes, edibles, concentrates, tinctures, topicals, accessories, and CBD — from over 50 trusted Massachusetts brands. Visit our in-store cannabis gift shop featuring stylish apparel and cannabis accessories. Walk-in shopping and in-store pickup available daily — Monday through Saturday 9am to 10pm, Sunday 9am to 6pm. 233 Western Ave, Lynn MA 01904.</div>
-    <div class="reasoning"><strong>Why:</strong> Currently description leads with "trusted recreational weed dispensary" — weed-first framing. Switching to "cannabis dispensary" leading the first 100 chars helps cannabis-side ranking.</div>
-    <div class="accept">✓ Accept when: GBP description saved with cannabis-led copy · Deadline May 14</div>
+    <div class="reasoning"><strong>Why:</strong> Current GBP description leads with "trusted recreational weed dispensary" — weed-first. Cannabis-led first 100 chars helps cannabis-side ranking.</div>
+    <div class="accept">✓ Accept when: GBP description saved · Deadline May 14</div>
   </div>
 
   <div class="task">
     <div class="id">SEO-03</div>
-    <div class="title"><span class="priority p1">P1</span>GBP services list deepening (Week 1)</div>
-    <p>In GBP "Services" tab, add (if missing): Cannabis flower · Pre-rolls · Edibles · Vapes / Vape cartridges · Concentrates · Tinctures · Topicals · CBD · In-store pickup · Online ordering for pickup · Loyalty program · First-time customer deals.</p>
+    <div class="title"><span class="priority p1">P1</span>GBP services list deepening</div>
+    <p>In GBP "Services" tab, add: Cannabis flower · Pre-rolls · Edibles · Vapes · Vape cartridges · Concentrates · Tinctures · Topicals · CBD · In-store pickup · Online ordering for pickup · Loyalty program · First-time customer deals.</p>
     <div class="accept">✓ Accept when: 12+ services present · Deadline May 17</div>
   </div>
 
   <div class="task">
     <div class="id">SEO-04</div>
-    <div class="title"><span class="priority p1">P1</span>Review velocity push — 15+ new reviews</div>
-    <ol>
-      <li>Coordinate with Creative on QR placard refresh (CRE-02)</li>
-      <li>Brief budtenders on review-ask script (script below)</li>
-      <li>Pull weekly Monday morning review count</li>
-    </ol>
-    <div class="copy-meta">Budtender review-ask script:</div>
-    <div class="copy-block">"Hey — quick favor if anyone helped you out today. A Google review takes 30 seconds, and we'll add 100 loyalty points to your account. Just tap the QR by the register."</div>
-    <div class="reasoning"><strong>Why:</strong> Combines review request with SMS-adjacent loyalty incentive. Sustainable cadence vs aggressive ask.</div>
-    <div class="accept">✓ Accept when: 15+ new reviews by May 31</div>
+    <div class="title"><span class="priority p1">P1</span>GBP review response cadence — reply within 24 hours to every review</div>
+    <p>Dispenza monitors GBP reviews daily. For each new review (positive or negative), reply within 24 hours using budtender-named thank-yous where named in the review:</p>
+    <div class="copy-meta">Sample positive review response (when "Gio" is named):</div>
+    <div class="copy-block">Thanks so much for the kind words and the shout-out to Gio — we'll make sure he sees this. We're glad we could make your visit a great one. See you next time!
+
+— The Essex Apothecary team</div>
+    <div class="copy-meta">Sample positive review response (no specific name):</div>
+    <div class="copy-block">Thanks for taking the time to leave us a review! We're so glad you had a good experience. We'll see you soon.
+
+— The Essex Apothecary team</div>
+    <div class="reasoning"><strong>Why:</strong> Active review response is a documented GBP ranking signal that Dispenza controls directly. Surfacing named-team-member responses reinforces personal-service positioning.</div>
+    <div class="accept">✓ Accept when: 100% reply rate on May reviews · sample audit by Analytics weekly</div>
   </div>
 
   <div class="task">
     <div class="id">SEO-05</div>
-    <div class="title"><span class="priority p1">P1</span>GBP weekly post cadence</div>
-    <p>2-3 posts per week. Cadence:</p>
+    <div class="title"><span class="priority p1">P1</span>GBP weekly post cadence (2-3 posts/week)</div>
     <ul>
-      <li><strong>Monday:</strong> Munchea / edibles feature + 5 for 30 / 4 for 36 deal</li>
-      <li><strong>Wednesday:</strong> CBD 10% + 4 8ths for 70 (matches in-store deals)</li>
+      <li><strong>Monday:</strong> Munchea Mondays edibles feature (auto-apply deals from POS — Choice Chews 5 for $33, etc.)</li>
+      <li><strong>Wednesday:</strong> CBD 10% + 4 8ths for $70 + 1/2g deals</li>
       <li><strong>Friday:</strong> Staff Stack + 14g Deal + weekend hours reminder</li>
       <li><strong>Sunday:</strong> Save-the-Tax</li>
     </ul>
     <div class="copy-meta">Sample Monday post:</div>
     <div class="copy-block">Munchea Mondays at Essex 🍃
 5 Munchea edibles for $40 · 4 for $36 · 3 for $30 · 2 for $25
-Plus Choice Chews 5 for $33 — all day, every Monday.
+Plus Choice Chews 5 for $33 — every Monday.
 Walk in or reserve for pickup.
 9am–10pm · 233 Western Ave · 4.9★ at 289 reviews
 
 #MondayDeals #LynnMA #cannabis</div>
-    <div class="accept">✓ Accept when: 10+ posts in May (2-3/wk × 4 weeks) · Tracked weekly</div>
+    <div class="accept">✓ Accept when: 10+ posts in May · Tracked weekly</div>
   </div>
 
   <div class="task">
     <div class="id">SEO-06</div>
-    <div class="title"><span class="priority p1">P1</span>Mid-month Local Falcon scan (May 22)</div>
-    <p>Same 10-keyword grid. Compare against May 13 new baseline. Flag any rank drop &gt; 0.5 on weed-side or any improvement on cannabis-side.</p>
-    <div class="accept">✓ Accept when: scan run + delta memo filed by May 23</div>
+    <div class="title"><span class="priority p1">P1</span>GBP photo upload — Dispenza directly uploads (Week 1)</div>
+    <p>Creative provides images (CRE-01); Local SEO uploads 6-8 photos to Essex GBP dashboard.</p>
+    <div class="accept">✓ Accept when: 6+ photos visible on GBP · Deadline May 17</div>
   </div>
 
   <div class="task">
     <div class="id">SEO-07</div>
+    <div class="title"><span class="priority p1">P1</span>Mid-month + month-end Local Falcon scans</div>
+    <p>May 22 + May 31 scans. Compare to May 13 baseline. Flag any rank drop &gt; 0.5 on weed-side or improvement on cannabis-side.</p>
+    <div class="accept">✓ Accept when: 2 scans + delta memos filed (by May 23 and June 1)</div>
+  </div>
+
+  <div class="task">
+    <div class="id">SEO-08</div>
     <div class="title"><span class="priority p2">P2</span>Weekly competitive monitor</div>
-    <p>Monday mornings, pull review/photo/post counts for Diem Cannabis · Mass Green Retail · Insa Cannabis Dispensary · Alternative Therapies Group (Google's "People also search for" set).</p>
-    <div class="accept">✓ Accept when: 4 monitor reports filed (May 18, 25, June 1, 8)</div>
+    <p>Mondays — pull review/photo/post counts for Diem Cannabis · Mass Green Retail · Insa Cannabis Dispensary · Alternative Therapies Group.</p>
+    <div class="accept">✓ Accept when: 4 reports filed (May 18, 25, June 1, 8)</div>
   </div>
 </div>
 
@@ -560,12 +534,9 @@ Walk in or reserve for pickup.
   <div class="task">
     <div class="id">EMA-01</div>
     <div class="title"><span class="priority p1">P1</span>Loyalty re-engagement send (Week 1)</div>
-    <p><strong>Audience:</strong> 457 email-opted-in customers with unredeemed points &gt; 100 AND last visit &gt; 45 days.</p>
-    <p><strong>Send:</strong> Tuesday May 13 or Wednesday May 14, 10–11am ET.</p>
+    <p><strong>Audience:</strong> Email opt-ins with unredeemed loyalty points (139,500 outstanding) and last visit &gt; 45 days. <strong>Send:</strong> Tuesday May 13 or Wednesday May 14, 10–11am ET.</p>
     <div class="copy-meta">Subject:</div>
     <div class="copy-block">Your loyalty points are waiting at Essex Apothecary.</div>
-    <div class="copy-meta">Preview text:</div>
-    <div class="copy-block">{{points_balance}} points and counting. Stop in this week.</div>
     <div class="copy-meta">Body:</div>
     <div class="copy-block">Hi {{first_name}},
 
@@ -582,28 +553,77 @@ A few of our regulars who love helping people pick:
 
 — The Essex Apothecary team
 Proudly woman-owned + social-equity certified</div>
-    <div class="accept">✓ Accept when: send delivered May 13-14 · open rate + redemption response captured by May 28</div>
+    <div class="accept">✓ Accept when: send delivered May 13-14 · open rate + redemption attribution captured by May 28</div>
   </div>
 
   <div class="task">
     <div class="id">EMA-02</div>
-    <div class="title"><span class="priority p1">P1</span>First-time customer welcome flow (Week 2 launch)</div>
-    <p>Auto-send triggered when new customer opts in to email. Drives loyalty enrollment via the FTC pre-roll deal.</p>
+    <div class="title"><span class="priority p0">P0</span>Loyalty enrollment drive — non-loyalty email customers (Week 2, May 19)</div>
+    <p><strong>Audience:</strong> Email opt-ins NOT enrolled in loyalty. <strong>Goal:</strong> Drive digital loyalty signups via the new <code>/rewards</code> page (WEB-06).</p>
+    <div class="copy-meta">Subject:</div>
+    <div class="copy-block">100 bonus points just for joining Essex Rewards.</div>
+    <div class="copy-meta">Body:</div>
+    <div class="copy-block">Hi {{first_name}},
+
+You've shopped with us — but you haven't joined our loyalty program yet. Here's what you're missing:
+
+✓ 1 point on every $1 (turns into real product credit)
+✓ Bonus points on your birthday
+✓ Members-only deals throughout the year
+✓ Early access to new drops
+
+And as a quick welcome — sign up this week and we'll add 100 bonus points to your account.
+
+Join in 30 seconds → [/rewards link]
+
+— The Essex Apothecary team
+Open 9am–10pm Mon–Sat, 9am–6pm Sunday</div>
+    <div class="accept">✓ Accept when: send delivered by May 19; new loyalty enrollments attributed captured</div>
+  </div>
+
+  <div class="task">
+    <div class="id">EMA-03</div>
+    <div class="title"><span class="priority p0">P0</span>SMS opt-in drive — email campaign (Week 2, May 20)</div>
+    <p><strong>Audience:</strong> Email opt-ins NOT already SMS-opted-in (~388 customers). Cross-channel acquisition.</p>
+    <div class="copy-meta">Subject:</div>
+    <div class="copy-block">Get the deals first. Opt in to texts + get 100 points.</div>
+    <div class="copy-meta">Body:</div>
+    <div class="copy-block">Hi {{first_name}},
+
+Some of our best deals only go out via text. If you'd like to be on the list (along with a 100 loyalty point thank-you for opting in):
+
+📱 Add yourself in 5 seconds → [/sms-alerts link]
+
+What you'll get:
+✓ Weekly deal alerts before they go public
+✓ Heads-up on new drops (Crude Boy, Fire Styxx, Bostica)
+✓ A friendly nudge on Sundays for Save-the-Tax
+
+You can unsubscribe any time by replying STOP.
+
+— The Essex Apothecary team</div>
+    <div class="accept">✓ Accept when: send delivered by May 20; SMS opt-in delta captured weekly</div>
+  </div>
+
+  <div class="task">
+    <div class="id">EMA-04</div>
+    <div class="title"><span class="priority p1">P1</span>First-time customer welcome flow auto-send (Week 2 launch)</div>
+    <p>Auto-trigger when new customer opts into email. Single welcome message + FTC offer reminder + loyalty CTA + SMS opt-in CTA.</p>
     <div class="copy-meta">Subject:</div>
     <div class="copy-block">Welcome to Essex Apothecary — here's your $0.01 preroll.</div>
     <div class="copy-meta">Body:</div>
     <div class="copy-block">Welcome, {{first_name}}!
 
-Glad to have you on our list. Here's your first-time customer offer:
+We're glad to have you on our list. Three quick things:
 
 🎁 $0.01 PREROLL with any purchase $20 or more
-   (just mention this email at the register — no code needed)
+   (mention this email at the register — no code needed)
 
-While you're here, get the most out of your visits:
+🏆 Join Essex Rewards (free + 100 bonus points)
+   [/rewards link]
 
-✓ Join our loyalty program (free + earn points on every $)
-✓ Opt in to text alerts (+100 bonus points just for opting in)
-✓ Ask your budtender for a recommendation — we don't bite
+📱 Get text alerts on weekly deals (+100 more bonus points)
+   [/sms-alerts link]
 
 Open 9am–10pm Mon–Sat, 9am–6pm Sunday
 233 Western Ave, Lynn MA
@@ -615,9 +635,16 @@ Woman-owned · Social-equity certified · Proudly North Shore</div>
   </div>
 
   <div class="task">
-    <div class="id">EMA-03</div>
-    <div class="title"><span class="priority p2">P2</span>VIP cohort Memorial Day exclusive (Week 3)</div>
-    <p><strong>Audience:</strong> 166 customers with 50+ lifetime transactions. Curated list pulled from POS Customer Sales Performance.</p>
+    <div class="id">EMA-05</div>
+    <div class="title"><span class="priority p2">P2</span>Memorial Day pairings tease (Week 3, May 21)</div>
+    <p><strong>Audience:</strong> All opted-in. Lifestyle pairing copy featuring Crude Boy carts, Choice Chews bundles, Bostica 8ths. No discount.</p>
+    <div class="accept">✓ Accept when: send delivered by May 21</div>
+  </div>
+
+  <div class="task">
+    <div class="id">EMA-06</div>
+    <div class="title"><span class="priority p2">P2</span>VIP cohort Memorial Day exclusive (Week 3, May 22)</div>
+    <p><strong>Audience:</strong> 166 customers with 50+ lifetime transactions (curated from POS).</p>
     <div class="copy-meta">Subject:</div>
     <div class="copy-block">Memorial Day at Essex — a quiet heads-up for our regulars.</div>
     <div class="copy-meta">Body:</div>
@@ -627,7 +654,7 @@ You've been part of the Essex family for a while now — we wanted to give you a
 
 Memorial Day weekend (May 23-25), our team will be holding a small reserve of fan favorites:
 
-✦ Glorious Cannabis Crude Boy carts (the new flavors landed)
+✦ Glorious Cannabis Crude Boy carts (new flavors landed)
 ✦ Bostica 8ths (Drip + Gush Mints)
 ✦ Fire Styxx infused prerolls (Pink Panther + Tiger's Breath)
 ✦ Choice Chew gummy bundles
@@ -636,9 +663,31 @@ No promo code, no discount — just first-pick on the good stuff. Ask any team m
 
 Thanks for being one of our regulars. It matters.
 
-— Heather + the Essex team
+— The Essex Apothecary team
 233 Western Ave, Lynn MA · Open all weekend</div>
-    <div class="accept">✓ Accept when: send delivered by May 22 · attribution captured weekend POS</div>
+    <div class="accept">✓ Accept when: send delivered May 22 · Memorial Day weekend POS attribution captured</div>
+  </div>
+
+  <div class="task">
+    <div class="id">EMA-07</div>
+    <div class="title"><span class="priority p2">P2</span>Post-purchase review request automated flow (Week 3 launch)</div>
+    <p>If Happy Cabbage supports POS purchase triggers: auto-send 24-48 hours post-purchase asking for a Google review. Direct link to Google review URL.</p>
+    <div class="copy-meta">Subject:</div>
+    <div class="copy-block">How was your visit, {{first_name}}?</div>
+    <div class="copy-meta">Body:</div>
+    <div class="copy-block">Hi {{first_name}},
+
+Hope you enjoyed your visit at Essex Apothecary the other day.
+
+If our team made your experience a good one, would you take 30 seconds to leave a Google review? It genuinely helps us — and we'll add 100 loyalty points to your account as a thank-you.
+
+⭐ Leave a review → [Google review link]
+
+If anything wasn't right, please tell us directly — reply to this email and Heather will see it.
+
+— The Essex team</div>
+    <div class="reasoning"><strong>Why:</strong> Replaces in-store review-velocity tactics (which depend on budtender behavior) with a Dispenza-controlled digital channel.</div>
+    <div class="accept">✓ Accept when: automated flow live by May 22 (if POS-trigger supported); 10+ sends in May</div>
   </div>
 </div>
 
@@ -651,25 +700,25 @@ Thanks for being one of our regulars. It matters.
 
   <div class="task">
     <div class="id">SMS-01</div>
-    <div class="title"><span class="priority p0">P0</span>SMS opt-in campaign — in-store launch (Week 1)</div>
-    <p><strong>Goal:</strong> 69 → 150+ opt-ins by May 31. Three coordinated tactics:</p>
-    <ol>
-      <li><strong>Register-side QR + signage</strong> (Creative CRE-03): "Opt in to texts → 100 bonus loyalty points instantly"</li>
-      <li><strong>Budtender script</strong> at checkout (script below)</li>
-      <li><strong>FTC deal gated on SMS opt-in</strong>: First-time customer $0.01 preroll requires SMS opt-in for redemption</li>
-    </ol>
-    <div class="copy-meta">Budtender SMS opt-in script:</div>
-    <div class="copy-block">"While I'm finishing up — we just launched a text-alert thing. Opt in and you get 100 loyalty points right now, plus you'll hear about deals before anyone else. Takes about 5 seconds, want me to add you?"</div>
-    <div class="accept">✓ Accept when: opt-in count ≥ 150 by May 31 (was 69 May 12) · Track weekly</div>
+    <div class="title"><span class="priority p1">P1</span>Single Memorial Day SMS to existing 69 opt-ins (May 22, 2pm ET)</div>
+    <div class="copy-meta">Body (158 chars max):</div>
+    <div class="copy-block">Essex Apothecary - long weekend essentials stocked: Glorious carts, Choice Chews 5 for $33, Bostica 8ths. Open all weekend 9-10. 233 Western Ave Lynn</div>
+    <div class="accept">✓ Accept when: send delivered at 2pm ET May 22</div>
   </div>
 
   <div class="task">
     <div class="id">SMS-02</div>
-    <div class="title"><span class="priority p2">P2</span>Single Memorial Day SMS to existing 69 opt-ins (May 22, 2pm ET)</div>
-    <div class="copy-meta">Body (158 chars max):</div>
-    <div class="copy-block">Essex Apothecary - long weekend essentials stocked: Glorious carts, Choice Chews 5 for $33, Bostica 8ths. Open all weekend 9-10. 233 Western Ave Lynn</div>
-    <div class="reasoning"><strong>Why:</strong> Don't burn the small opt-in base. Single send. Features the 3 highest-revenue / highest-deal-volume products per POS data.</div>
-    <div class="accept">✓ Accept when: send delivered at 2pm ET May 22</div>
+    <div class="title"><span class="priority p1">P1</span>Weekly SMS opt-in growth tracking (Mondays)</div>
+    <p>Friday EOD each week: pull total opt-in count + weekly delta. Source counts from website form fills (WEB-05) + email-campaign-driven opt-ins (EMA-03).</p>
+    <div class="accept">✓ Accept when: opt-in count ≥ 120 by May 31 (was 69 May 12); 4 weekly tracking reports filed</div>
+  </div>
+
+  <div class="task">
+    <div class="id">SMS-03</div>
+    <div class="title"><span class="priority p3">P3</span>Confirmation SMS after web-form opt-in</div>
+    <p>When a customer opts in via the website form (WEB-05), auto-send a confirmation SMS:</p>
+    <div class="copy-block">Essex Apothecary: You're in! 100 loyalty points added to your account. We send 1-2 messages a week with the best deals. Reply STOP to unsubscribe. Msg & data rates may apply.</div>
+    <div class="accept">✓ Accept when: confirmation auto-send active by May 18</div>
   </div>
 </div>
 
@@ -682,132 +731,44 @@ Thanks for being one of our regulars. It matters.
 
   <div class="task">
     <div class="id">CRE-01</div>
-    <div class="title"><span class="priority p1">P1</span>GBP photo refresh — 6-8 photos (Week 1)</div>
-    <p>Coordinate with Angela (per scope memo, Angela uploads ~20 images/month to shared folder).</p>
-    <p><strong>Mix recipe:</strong></p>
+    <div class="title"><span class="priority p1">P1</span>GBP photo set — 6-8 fresh images (Week 1)</div>
+    <p>Source 6-8 photos for Dispenza to upload to Essex GBP (SEO-06 handles upload).</p>
+    <p><strong>Mix:</strong></p>
     <ul>
-      <li>2 storefront shots — emphasize the green Essex Apothecary signage</li>
-      <li>2 interior / team shots — Gio, Moses, Ashley, Jess if comfort with on-camera (named team members)</li>
-      <li>2-3 product close-ups — feature Glorious Cannabis SKUs (Crude Boy cart, Fire Styxx preroll, Bostica 8th)</li>
-      <li>1-2 in-store experience — display, vending machines (per scope memo), gift shop apparel</li>
+      <li>2 product close-ups — feature Glorious Cannabis SKUs (Crude Boy cart, Fire Styxx preroll, Bostica 8th)</li>
+      <li>2 lifestyle / deal-display shots</li>
+      <li>2 storefront / brand-shot — emphasize green Essex Apothecary signage</li>
+      <li>1-2 Memorial Day–themed</li>
     </ul>
-    <div class="accept">✓ Accept when: 6+ photos uploaded to GBP by May 17</div>
+    <div class="accept">✓ Accept when: 6+ photos delivered to Local SEO by May 15</div>
   </div>
 
   <div class="task">
     <div class="id">CRE-02</div>
-    <div class="title"><span class="priority p1">P1</span>Review QR placard refresh (Week 1, by May 14)</div>
-    <p>Design 5"×7" placards combining review-ask + SMS opt-in incentive in one ask.</p>
-    <div class="copy-meta">Placard copy:</div>
-    <div class="copy-block">Loved your visit?
-
-⭐ Leave a Google review — +100 loyalty points
-📱 Opt in to texts — +100 loyalty points
-
-[QR code linking to combined review+opt-in flow]
-
-Essex Apothecary</div>
-    <div class="accept">✓ Accept when: 4+ placards in-store by May 14</div>
+    <div class="title"><span class="priority p1">P1</span>Email header + visual assets for 7 May sends</div>
+    <p>Design branded, mobile-optimized email headers for: loyalty re-engagement (EMA-01), loyalty enrollment drive (EMA-02), SMS opt-in drive (EMA-03), FTC welcome (EMA-04), Memorial Day pairings (EMA-05), VIP exclusive (EMA-06), post-purchase review request (EMA-07).</p>
+    <div class="accept">✓ Accept when: 7 email graphic packages delivered to Email by May 14</div>
   </div>
 
   <div class="task">
     <div class="id">CRE-03</div>
-    <div class="title"><span class="priority p1">P1</span>SMS opt-in signage (Week 1)</div>
-    <p>2 placards specifically for SMS opt-in at each cash drawer:</p>
-    <div class="copy-block">📱 Get the deals before everyone else
-
-Opt in to Essex texts and:
-✓ 100 loyalty points instantly
-✓ Weekly deal alerts
-✓ Early access to drops
-
-Ask your budtender or scan →
-[QR code]</div>
-    <div class="accept">✓ Accept when: 2+ signs in-store by May 14</div>
+    <div class="title"><span class="priority p2">P2</span>Memorial Day GBP post graphics (Week 3)</div>
+    <p>3-4 Memorial Day–themed graphics for Local SEO to publish during long weekend (May 22-25). Lifestyle, lightly branded.</p>
+    <div class="accept">✓ Accept when: 3+ graphics delivered to Local SEO by May 20</div>
   </div>
 
   <div class="task">
     <div class="id">CRE-04</div>
-    <div class="title"><span class="priority p2">P2</span>In-store loyalty conversion signage (Week 2)</div>
-    <p>Reinforces the loyalty enrollment push (OPS-01). Place at register where budtenders make the ask.</p>
-    <div class="copy-block">Already shopping with us? Make it count.
-
-Join Essex Rewards (free):
-✓ 1 point per $1 spent
-✓ Bonus points on birthdays
-✓ Early access to drops
-✓ Members-only deals
-
-Ask your budtender or scan →</div>
-    <div class="accept">✓ Accept when: 2+ signs in-store by May 18</div>
-  </div>
-</div>
-
-<!-- ============ OPS ============ -->
-<div class="dept">
-  <div class="dept-head">
-    <div class="dept-icon">🏪</div>
-    <h3>In-Store / Ops — Tactical</h3>
+    <div class="title"><span class="priority p2">P2</span>Website hero imagery refresh (Week 2-3)</div>
+    <p>Replace any stale homepage hero imagery. Surface woman-owned + social-equity-certified positioning visually. Coordinate with Web/Dev on placement.</p>
+    <div class="accept">✓ Accept when: new hero imagery live on homepage by May 27</div>
   </div>
 
   <div class="task">
-    <div class="id">OPS-01</div>
-    <div class="title"><span class="priority p0">P0</span>Loyalty conversion training (Week 2 — May 18-20)</div>
-    <ol>
-      <li>Account schedules 30-minute team meeting with Heather</li>
-      <li>Avery Wayman + Kirstin Snook lead — share their loyalty-enrollment technique</li>
-      <li>Capture the script in writing for distribution to all 18 budtenders</li>
-      <li>Daily reminders for 2 weeks post-training</li>
-    </ol>
-    <div class="copy-meta">Template loyalty enrollment script (based on inferred Avery/Kirstin approach):</div>
-    <div class="copy-block">"Are you part of our loyalty program? It's free, you earn a point per dollar, and you get bonus points just for joining today. Want me to add you in 30 seconds?"
-
-Key elements that drive enrollment:
-1. Lead with "free" — removes the friction
-2. State the value concretely (1 pt / $1)
-3. Use "30 seconds" as the time-cost cue
-4. Make it active ("want me to add you?") not passive</div>
-    <div class="reasoning"><strong>Why:</strong> Avery has enrolled 253 customers lifetime, Kirstin 203. Team average is much lower. Their technique = the lever. Even if half the team adopts, loyalty conversion jumps materially.</div>
-    <div class="accept">✓ Accept when: training delivered + script distributed by May 20; weekly loyalty conversion tracked</div>
-  </div>
-
-  <div class="task">
-    <div class="id">OPS-02</div>
-    <div class="title"><span class="priority p1">P1</span>VIP cohort program launch (Week 3)</div>
-    <ol>
-      <li>Pull list of 166 customers with 50+ lifetime transactions from POS</li>
-      <li>Heather + Account decide on the VIP benefit (free preroll on birthday is a common-sense default; or free $10 apparel item annually; or 5% rotating bonus discount on top-tier purchases)</li>
-      <li>Tag the 166 customers as a Customer Group in POS (Dutchie supports customer groups)</li>
-      <li>Coordinate the launch email with EMA-03</li>
-    </ol>
-    <div class="accept">✓ Accept when: VIP benefit defined + customer group tagged + email sent by May 22</div>
-  </div>
-
-  <div class="task">
-    <div class="id">OPS-03</div>
-    <div class="title"><span class="priority p1">P1</span>UNKNOWN brand POS cleanup (Week 3-4)</div>
-    <ol>
-      <li>Heather + designated team member spends 2-3 hours auditing the 2,264 SKUs in Product Catalog</li>
-      <li>For each SKU tagged UNKNOWN brand, identify correct brand and update</li>
-      <li>Focus on top-50 SKUs first (highest revenue impact)</li>
-      <li>Run a fresh Sales by Product Variant report May 31 to verify UNKNOWN share dropped</li>
-    </ol>
-    <div class="reasoning"><strong>Why:</strong> 50% of POS revenue ($1.47M) is UNKNOWN-brand-tagged. Brand analytics is blind until fixed. Brand co-promo conversations (Glorious Cannabis) need accurate data.</div>
-    <div class="accept">✓ Accept when: UNKNOWN brand share drops to ≤ 30% by May 31</div>
-  </div>
-
-  <div class="task">
-    <div class="id">OPS-04</div>
-    <div class="title"><span class="priority p2">P2</span>Dead-SKU cleanup (Week 4)</div>
-    <p>15+ accessory SKUs (bongs, grinders, pipes from SPS Wholesale) have zero lifetime sales. Decision: clearance discount or remove from active inventory.</p>
-    <div class="accept">✓ Accept when: decision made + executed by May 31</div>
-  </div>
-
-  <div class="task">
-    <div class="id">OPS-05</div>
-    <div class="title"><span class="priority p1">P1</span>FTC deal SMS-opt-in gating (Week 1)</div>
-    <p>Coordinate with Heather: configure the $0.01-preroll FTC deal in POS to require SMS opt-in for redemption. Budtenders capture the opt-in at register before applying the discount.</p>
-    <div class="accept">✓ Accept when: deal configured + budtenders briefed by May 18</div>
+    <div class="id">CRE-05</div>
+    <div class="title"><span class="priority p2">P2</span>SMS opt-in form visual treatment (Week 1)</div>
+    <p>Design the visual treatment for the website SMS opt-in form (WEB-05) — banner illustration, button styling, mobile responsiveness. Coordinate with Web/Dev.</p>
+    <div class="accept">✓ Accept when: form visual delivered to Web/Dev by May 14</div>
   </div>
 </div>
 
@@ -824,9 +785,11 @@ Key elements that drive enrollment:
     <div class="copy-block">📊 Essex — Week of [DATE]
 GBP: searches [N] (WoW [+/-N%]) · actions [N]
 Rank: weed SoLV [X%] · cannabis-side best [X%] (vs May 13 baseline)
-Reviews: net new [N] · running total [N] (target 15+ in May)
-Loyalty enrollments WTD: [N] (WoW [+/-N])
-SMS opt-ins WTD: [N] (running total [N], target 150 by May 31)
+Reviews: net new [N] · running total [N]
+Website /rewards form fills WTD: [N]
+Website /sms-alerts form fills WTD: [N]
+Loyalty enrollments (from POS Customers Activity) WTD: [N]
+SMS opt-in count: [N] (running total, target 120 by May 31)
 POS: Net Sales WTD $[N] · discount % [X%]
 Flag: [any anomaly worth 1-line note]</div>
     <div class="accept">✓ Accept when: 4 pulses delivered (May 19, 26, June 2, June 9)</div>
@@ -835,17 +798,19 @@ Flag: [any anomaly worth 1-line note]</div>
   <div class="task">
     <div class="id">ANA-02</div>
     <div class="title"><span class="priority p1">P1</span>Mid-month correlation checkpoint (May 22-23)</div>
-    <p>Pull May 22 mid-month Local Falcon scan + WTD GBP + WTD POS. Correlate cannabis-side rank movement to discovery search volume.</p>
+    <p>Pull May 22 Local Falcon scan + WTD GBP + WTD POS. Correlate cannabis-side rank movement to discovery search volume. Has the title/meta fix been re-indexed yet? Are website form fills converting?</p>
     <div class="accept">✓ Accept when: memo delivered by May 23</div>
   </div>
 
   <div class="task">
     <div class="id">ANA-03</div>
-    <div class="title"><span class="priority p1">P1</span>Loyalty conversion + SMS opt-in weekly tracking (Week 2 onward)</div>
-    <p>Friday EOD each week, pull from POS Customer Activity:</p>
+    <div class="title"><span class="priority p1">P1</span>Weekly digital-channel attribution (Week 2 onward)</div>
+    <p>Friday EOD each week:</p>
     <ul>
-      <li>Loyalty enrollments this week / new customer creates this week = loyalty conversion %</li>
-      <li>SMS opt-in count delta vs prior week</li>
+      <li>Loyalty enrollments this week / new customer creates = loyalty conversion %</li>
+      <li>SMS opt-in count delta (digital vs in-store split if discernible)</li>
+      <li>Form fills on /rewards + /sms-alerts</li>
+      <li>Email-campaign conversion to enrollment / opt-in</li>
     </ul>
     <div class="accept">✓ Accept when: 3 weekly reports filed (May 22, 29, June 5)</div>
   </div>
@@ -853,7 +818,7 @@ Flag: [any anomaly worth 1-line note]</div>
   <div class="task">
     <div class="id">ANA-04</div>
     <div class="title"><span class="priority p2">P2</span>End-of-month June handoff memo</div>
-    <p>Identify which department's commits moved the needle most. What didn't work. What carries into June.</p>
+    <p>Which Dispenza-driven commits moved the needle most. What didn't work. What carries into June.</p>
     <div class="accept">✓ Accept when: memo delivered by June 3</div>
   </div>
 </div>
@@ -867,53 +832,33 @@ Flag: [any anomaly worth 1-line note]</div>
 
   <div class="task">
     <div class="id">ACC-01</div>
-    <div class="title"><span class="priority p0">P0</span>Fix ACV in Dispenza ROI admin tool (Week 1, by May 14)</div>
+    <div class="title"><span class="priority p0">P0</span>Fix ACV in Dispenza ROI admin tool (May 14)</div>
     <ol>
       <li>Log into <code>https://dispenza.com/admin/Reports/show_report/?business_id=333&amp;location_id=409</code></li>
-      <li>Update ACV configuration from $50.00 to $33.18 (pre-discount) or $33.29 (with tax — pick based on tool's convention)</li>
-      <li>Confirm April 2026 report regenerates with corrected EGVDR / TGS values</li>
+      <li>Update ACV from $50.00 → $33.18 (pre-discount) or $33.29 (with tax)</li>
+      <li>Confirm April 2026 report regenerates with corrected EGVDR / TGS</li>
     </ol>
     <div class="accept">✓ Accept when: ACV updated · April report shows corrected values · Deadline May 14</div>
   </div>
 
   <div class="task">
     <div class="id">ACC-02</div>
-    <div class="title"><span class="priority p1">P1</span>Confirm "Meena" identity with Heather (Week 1)</div>
-    <p>Two Google reviews name "Meena" as a memorable team member. POS employee list doesn't show "Meena". Likely nickname or former employee. Account asks Heather May 13 phone or email.</p>
-    <div class="accept">✓ Accept when: Meena identity confirmed by May 14</div>
-  </div>
-
-  <div class="task">
-    <div class="id">ACC-03</div>
-    <div class="title"><span class="priority p1">P1</span>Confirm contact email source-of-truth (Week 1)</div>
-    <p>Site footer = <code>hr@essexapothecary.com</code>. Confirm with Heather whether this is intentional or should be <code>info@</code>. Web/Dev (WEB-09) needs this answer to deploy the fix.</p>
-    <div class="accept">✓ Accept when: confirmation received by May 14</div>
-  </div>
-
-  <div class="task">
-    <div class="id">ACC-04</div>
-    <div class="title"><span class="priority p1">P1</span>Client review packet for website fixes (Week 1, by May 13)</div>
-    <p>Batch into single packet for Heather sign-off (48-hour turnaround):</p>
+    <div class="title"><span class="priority p0">P0</span>Send client review packet for website fixes (May 13)</div>
+    <p>Single packet to Heather, 48-hour turnaround:</p>
     <ul>
-      <li>10 new unique page titles + meta descriptions (WEB-01)</li>
+      <li>10 new unique titles + metas (WEB-01)</li>
       <li>New homepage H1 (WEB-02)</li>
       <li>Social-equity-certified positioning copy (CON-02)</li>
       <li>New <code>/lynn-ma-cannabis-dispensary</code> page brief (CON-04)</li>
+      <li>New <code>/rewards</code> page copy (CON-05)</li>
     </ul>
     <div class="accept">✓ Accept when: packet sent May 13 · sign-off received by May 16</div>
   </div>
 
   <div class="task">
-    <div class="id">ACC-05</div>
-    <div class="title"><span class="priority p2">P2</span>Clarify delivery positioning with Heather (Week 1-2)</div>
-    <p>Local Falcon shows Essex ranking #1-2 for "weed delivery" with SoLV 99.17%. Plus 25.6% of POS orders are pickup channel. Account asks Heather: lean INTO delivery messaging or distance from it? Decision drives Content's category-page copy work (CON-03).</p>
-    <div class="accept">✓ Accept when: positioning documented by May 18</div>
-  </div>
-
-  <div class="task">
-    <div class="id">ACC-06</div>
-    <div class="title"><span class="priority p2">P2</span>Glorious Cannabis brand outreach (Late May)</div>
-    <p>Account-level outreach to Glorious Cannabis Massachusetts regional rep. Pitch a summer co-promotional concept (parallel to Big Sur × WYLD model). Heather has direct vendor relationship — Account coordinates with her.</p>
+    <div class="id">ACC-03</div>
+    <div class="title"><span class="priority p1">P1</span>Initiate Glorious Cannabis brand outreach (Late May)</div>
+    <p>Account-level outreach to Glorious Cannabis MA regional rep. Pitch Q2/Q3 summer co-promo. Heather looped for vendor context.</p>
     <div class="copy-meta">Initial outreach email:</div>
     <div class="copy-block">Subject: Glorious Cannabis × Essex Apothecary — summer co-promo concept
 
@@ -930,7 +875,35 @@ Open to a 20-minute call to walk through the concept?
 Best,
 Darrell Clay
 Dispenza Dispensary Marketing</div>
-    <div class="accept">✓ Accept when: outreach sent by May 28; concept brief in draft</div>
+    <div class="accept">✓ Accept when: outreach sent by May 28 · concept brief in draft</div>
+  </div>
+
+  <div class="task">
+    <div class="id">ACC-04</div>
+    <div class="title"><span class="priority p1">P1</span>Three quick client questions (Week 1)</div>
+    <p>Single email to Heather, three quick yes/no items:</p>
+    <ol>
+      <li>Confirm contact email — footer shows <code>hr@essexapothecary.com</code>; should we use <code>info@</code>?</li>
+      <li>Confirm "Meena" identity — named in 2 Google reviews, not in POS employee list</li>
+      <li>Delivery positioning — we rank #1-2 for "weed delivery" (SoLV 99%); embrace or distance?</li>
+    </ol>
+    <div class="accept">✓ Accept when: answers received by May 15</div>
+  </div>
+
+  <div class="task">
+    <div class="id">ACC-05</div>
+    <div class="title"><span class="priority p1">P1</span>Compile in-store / POS / vendor recommendations for the May client deliverable</div>
+    <p>Several findings from POS + audit analysis are most efficiently addressed by Heather's in-store team rather than Dispenza. Account compiles these as a clearly-labeled "Recommendations for the Essex Team" section in the May client performance review — NOT as Dispenza playbook commitments.</p>
+    <p>Items to surface:</p>
+    <ul>
+      <li>Loyalty enrollment training (Avery + Kirstin's technique)</li>
+      <li>Brand data hygiene in POS (UNKNOWN-brand cleanup)</li>
+      <li>VIP cohort benefit definition (166 super-loyal customers)</li>
+      <li>Dead-SKU cleanup (15+ accessory SKUs with zero sales)</li>
+      <li>POS-side FTC SMS gating option</li>
+      <li>In-store budtender SMS opt-in and review-ask scripts (Dispenza can supply)</li>
+    </ul>
+    <div class="accept">✓ Accept when: recommendations section included in May client performance review</div>
   </div>
 </div>
 
@@ -941,24 +914,25 @@ Dispenza Dispensary Marketing</div>
     <tr><td>10 unique titles + metas</td><td>Paste-ready in WEB-01</td><td>Web/Dev</td></tr>
     <tr><td>New homepage H1</td><td>Paste-ready in WEB-02</td><td>Web/Dev</td></tr>
     <tr><td>LocalBusiness + AggregateRating JSON-LD</td><td>Paste-ready in WEB-03</td><td>Web/Dev</td></tr>
-    <tr><td>FAQPage JSON-LD (6 Q&amp;As)</td><td>Paste-ready in WEB-05</td><td>Web/Dev</td></tr>
-    <tr><td>robots.txt</td><td>Paste-ready in WEB-06</td><td>Web/Dev</td></tr>
+    <tr><td>Website SMS opt-in form copy</td><td>Paste-ready in WEB-05</td><td>Web/Dev</td></tr>
+    <tr><td>FAQPage JSON-LD (5 Q&amp;As)</td><td>Paste-ready in WEB-07</td><td>Web/Dev</td></tr>
+    <tr><td>robots.txt</td><td>Paste-ready in WEB-08</td><td>Web/Dev</td></tr>
     <tr><td>/lynn-ma-cannabis-dispensary brief</td><td>Outlined in CON-04</td><td>Content</td></tr>
-    <tr><td>"Great Lynn Dispensary" blog brief</td><td>Outlined in CON-05</td><td>Content</td></tr>
-    <tr><td>"Top MA Strains Spring 2026" blog brief</td><td>Outlined in CON-06</td><td>Content</td></tr>
+    <tr><td>/rewards page copy outline</td><td>Outlined in CON-05</td><td>Content</td></tr>
+    <tr><td>"Great Lynn Dispensary" blog brief</td><td>Outlined in CON-06</td><td>Content</td></tr>
+    <tr><td>"Top MA Strains Spring 2026" blog brief</td><td>Outlined in CON-07</td><td>Content</td></tr>
     <tr><td>GBP description rewrite</td><td>Paste-ready in SEO-02</td><td>Local SEO</td></tr>
-    <tr><td>GBP weekly post sample</td><td>Paste-ready in SEO-05</td><td>Local SEO</td></tr>
-    <tr><td>Budtender review-ask script</td><td>Paste-ready in SEO-04</td><td>Local SEO + Ops</td></tr>
+    <tr><td>GBP review response samples</td><td>Paste-ready in SEO-04</td><td>Local SEO</td></tr>
+    <tr><td>GBP weekly post template</td><td>Paste-ready in SEO-05</td><td>Local SEO</td></tr>
     <tr><td>Loyalty re-engagement email</td><td>Paste-ready in EMA-01</td><td>Email</td></tr>
-    <tr><td>First-time customer welcome email</td><td>Paste-ready in EMA-02</td><td>Email</td></tr>
-    <tr><td>VIP Memorial Day email</td><td>Paste-ready in EMA-03</td><td>Email</td></tr>
-    <tr><td>SMS opt-in budtender script</td><td>Paste-ready in SMS-01</td><td>SMS + Ops</td></tr>
-    <tr><td>Memorial Day SMS</td><td>Paste-ready in SMS-02</td><td>SMS</td></tr>
-    <tr><td>QR placard copy (review + opt-in)</td><td>Paste-ready in CRE-02</td><td>Creative</td></tr>
-    <tr><td>SMS opt-in signage</td><td>Paste-ready in CRE-03</td><td>Creative</td></tr>
-    <tr><td>Loyalty conversion signage</td><td>Paste-ready in CRE-04</td><td>Creative</td></tr>
-    <tr><td>Loyalty enrollment script template</td><td>Paste-ready in OPS-01</td><td>Ops</td></tr>
-    <tr><td>Glorious Cannabis outreach email</td><td>Paste-ready in ACC-06</td><td>Account</td></tr>
+    <tr><td>Loyalty enrollment drive email</td><td>Paste-ready in EMA-02</td><td>Email</td></tr>
+    <tr><td>SMS opt-in drive email</td><td>Paste-ready in EMA-03</td><td>Email</td></tr>
+    <tr><td>FTC welcome flow email</td><td>Paste-ready in EMA-04</td><td>Email</td></tr>
+    <tr><td>VIP Memorial Day email</td><td>Paste-ready in EMA-06</td><td>Email</td></tr>
+    <tr><td>Post-purchase review request email</td><td>Paste-ready in EMA-07</td><td>Email</td></tr>
+    <tr><td>Memorial Day SMS</td><td>Paste-ready in SMS-01</td><td>SMS</td></tr>
+    <tr><td>SMS opt-in confirmation auto-send</td><td>Paste-ready in SMS-03</td><td>SMS</td></tr>
+    <tr><td>Glorious Cannabis outreach email</td><td>Paste-ready in ACC-03</td><td>Account</td></tr>
     <tr><td>Weekly KPI pulse format</td><td>Template in ANA-01</td><td>Analytics</td></tr>
   </tbody>
 </table>
@@ -967,24 +941,25 @@ Dispenza Dispensary Marketing</div>
 <table>
   <thead><tr><th>KPI</th><th>April / current baseline</th><th>May target</th><th>Owner</th></tr></thead>
   <tbody>
-    <tr><td>Loyalty conversion rate</td><td>5.9% (56 / 942)</td><td>≥ 12% (100+ / 900)</td><td>Ops + Local SEO</td></tr>
-    <tr><td>SMS opt-in count (cumulative)</td><td>69</td><td>150+</td><td>SMS + Ops + Creative</td></tr>
     <tr><td>Cannabis-side SoLV (best term)</td><td>54.55%</td><td>1+ term ≥ 70%</td><td>Local SEO</td></tr>
     <tr><td>Weed-side SoLV (all 4 terms)</td><td>99-100%</td><td>Hold 99%+</td><td>Local SEO</td></tr>
-    <tr><td>Net new Google reviews</td><td>—</td><td>15+</td><td>Local SEO + In-Store</td></tr>
+    <tr><td>GBP review reply rate</td><td>(unknown)</td><td>100% within 24hr</td><td>Local SEO</td></tr>
+    <tr><td>SMS opt-in count (cumulative)</td><td>69</td><td>120+</td><td>Web/Dev + Email + SMS</td></tr>
+    <tr><td>Website /rewards form fills</td><td>0 (new page)</td><td>30+ by May 31</td><td>Web/Dev + Content + Email</td></tr>
+    <tr><td>Website /sms-alerts form fills</td><td>0 (new page)</td><td>50+ by May 31</td><td>Web/Dev + Email</td></tr>
     <tr><td>Pages with unique title + meta</td><td>~26 / 36 (10 duplicated)</td><td>36 / 36</td><td>Web/Dev</td></tr>
-    <tr><td>Schema markup deployed</td><td>0 schemas</td><td>3+ schema types</td><td>Web/Dev</td></tr>
-    <tr><td>UNKNOWN brand share (POS)</td><td>50%</td><td>≤ 30%</td><td>Ops + Account</td></tr>
-    <tr><td>Net Sales (POS)</td><td>$90,014</td><td>Flat-to-up MoM</td><td>Ops + Marketing</td></tr>
-    <tr><td>Discount %</td><td>10.9%</td><td>Sustain &lt; 12%</td><td>Ops</td></tr>
-    <tr><td>AOV</td><td>~$37.85</td><td>Recover toward $40</td><td>Ops + Marketing</td></tr>
+    <tr><td>Schema markup deployed</td><td>0 schemas</td><td>3+ types</td><td>Web/Dev</td></tr>
+    <tr><td>Blog posts published in May</td><td>0</td><td>2</td><td>Content</td></tr>
+    <tr><td>Email sends in May</td><td>0</td><td>5+</td><td>Email</td></tr>
+    <tr><td>GBP posts in May</td><td>0</td><td>10+</td><td>Local SEO</td></tr>
     <tr><td>ACV in Dispenza admin tool</td><td>$50.00 (wrong)</td><td>$33.29 (corrected)</td><td>Account</td></tr>
+    <tr><td>Glorious Cannabis outreach</td><td>(none)</td><td>Initial contact + concept brief</td><td>Account</td></tr>
   </tbody>
 </table>
 
 <div class="footer-meta">
   Prepared by Dispenza Dispensary Marketing · May 12, 2026<br>
-  Companion docs: April 2026 Performance Review · May 2026 Strategy Report<br>
+  Companion docs: April 2026 Performance Review (includes retailer-side recommendations) · May 2026 Strategy Report<br>
   Source-of-truth audit at <code>2026-05-12_website-audit-baseline.md</code>
 </div>
 
