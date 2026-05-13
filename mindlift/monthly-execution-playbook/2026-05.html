@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MindLift Dispensary — May 2026 Execution Playbook</title>
+<style>
+  :root {
+    --primary: #4a2c6f;
+    --primary-light: #6b4a91;
+    --gold: #d4a843;
+    --gold-dark: #a07f29;
+    --sage: #8aa380;
+    --cream: #faf3e3;
+    --rust: #d96b3b;
+    --charcoal: #2b2b2b;
+    --gray: #6a6a6a;
+    --light-gray: #ececec;
+    --bg: #fbf8f3;
+    --good: #2f7d4f;
+    --bad: #b8473a;
+    --warn: #c97a2f;
+  }
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; line-height: 1.55; color: var(--charcoal); background: var(--bg); margin: 0; padding: 0; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 40px 28px 80px; }
+  header.hero { background: linear-gradient(135deg, var(--primary) 0%, var(--charcoal) 100%); color: var(--cream); padding: 56px 28px; border-radius: 8px 8px 0 0; }
+  header.hero .internal { display: inline-block; background: var(--rust); color: white; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 3px; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 14px; }
+  header.hero .label { font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); font-weight: 600; }
+  header.hero h1 { font-size: 32px; margin: 8px 0 10px; font-weight: 700; line-height: 1.15; }
+  header.hero p.sub { font-size: 16px; margin: 0; opacity: 0.92; }
+  .container { background: white; padding: 40px 44px; border-radius: 0 0 8px 8px; box-shadow: 0 2px 14px rgba(0,0,0,0.05); }
+  h2 { color: var(--primary); font-size: 22px; margin: 36px 0 14px; border-bottom: 2px solid var(--gold); padding-bottom: 8px; }
+  h2:first-child { margin-top: 0; }
+  h3 { color: var(--primary-light); font-size: 17px; margin: 22px 0 10px; }
+  h4 { color: var(--charcoal); font-size: 14px; margin: 14px 0 6px; text-transform: uppercase; letter-spacing: 0.06em; }
+  p { margin: 8px 0; }
+  code { background: #f3efe6; padding: 1px 5px; border-radius: 3px; font-size: 12.5px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0 18px; font-size: 13px; }
+  th { background: var(--primary); color: var(--cream); text-align: left; padding: 9px 11px; font-weight: 600; }
+  td { padding: 8px 11px; border-bottom: 1px solid var(--light-gray); vertical-align: top; }
+  tr:nth-child(even) td { background: #faf6ee; }
+  .dept { background: white; border: 1px solid var(--light-gray); border-radius: 8px; padding: 22px 26px; margin: 22px 0; }
+  .dept-head { display: flex; align-items: center; gap: 12px; padding-bottom: 10px; border-bottom: 2px solid var(--gold); margin-bottom: 14px; }
+  .dept-icon { background: var(--primary); color: white; width: 36px; height: 36px; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 16px; }
+  .dept-head h3 { margin: 0; color: var(--primary); }
+  .task { background: var(--cream); padding: 16px 18px; border-radius: 6px; margin: 14px 0; border-left: 5px solid var(--gold); }
+  .task .id { font-size: 11px; color: var(--gray); letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700; }
+  .task .title { font-weight: 700; color: var(--primary); margin: 4px 0 6px; font-size: 15px; }
+  .task .reasoning { font-size: 12px; color: var(--gray); font-style: italic; margin-top: 8px; padding-top: 8px; border-top: 1px dashed #d4cebf; }
+  .task .reasoning strong { color: var(--primary); font-style: normal; }
+  .task .accept { font-size: 12px; color: var(--good); font-weight: 600; margin-top: 8px; }
+  .copy-block { background: #2b2b2b; color: #e8e8e8; padding: 12px 16px; border-radius: 6px; font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 12.5px; line-height: 1.5; margin: 10px 0; white-space: pre-wrap; overflow-x: auto; }
+  .copy-meta { font-size: 11px; color: var(--gold-dark); margin-bottom: 4px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600; }
+  .guardrail { background: #fdf4ec; border-left: 5px solid var(--warn); padding: 12px 16px; margin: 12px 0; border-radius: 0 6px 6px 0; font-size: 13px; }
+  .guardrail strong { color: var(--warn); }
+  .priority { display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 3px; letter-spacing: 0.06em; text-transform: uppercase; color: white; vertical-align: middle; margin-right: 6px; }
+  .priority.p0 { background: var(--bad); }
+  .priority.p1 { background: var(--rust); }
+  .priority.p2 { background: var(--gold); }
+  .priority.p3 { background: var(--sage); }
+  ul, ol { margin: 6px 0 10px; padding-left: 20px; }
+  li { margin: 4px 0; }
+  .footer-meta { text-align: center; font-size: 12px; color: var(--gray); margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--light-gray); }
+  @media (max-width: 720px) { .container { padding: 26px 22px; } header.hero { padding: 32px 20px; } header.hero h1 { font-size: 24px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <div class="internal">Tactical Execution Plan</div>
+  <div class="label">Execution Playbook · May 2026</div>
+  <h1>MindLift Dispensary</h1>
+  <p class="sub">Click-by-click execution through Dispenza-controlled channels — website schema + content rewrites, GBP defense, Phillipsburg landing page, ROI tool calibration</p>
+</header>
+
+<main class="container">
+
+<h2>How to use this playbook</h2>
+<p>This is the tactical companion to the May 2026 Strategy. Every task ID maps to a department commit in the Strategy. Acceptance criteria are independently testable — if it can't be checked with curl, the Google Rich Results Test, a Local Falcon scan, the Dispenza admin tool, or a Playwright headless verification, it doesn't ship.</p>
+<p><strong>Scope:</strong> All tasks below are executable by Dispenza alone — no dependency on MindLift's in-store team, regulatory checks, photo refresh, or operations decisions. Recommendations for MindLift's team to consider live in the April Performance Review (client-facing), not this playbook.</p>
+
+<h2>Six Guardrails (Read Before Acting)</h2>
+<div class="guardrail"><strong>1. Weed-term moat is locked at 100% SoLV across all 4 terms.</strong> Do not propose copy changes that pivot AWAY from weed-friendly language — we re-emphasize cannabis/dispensary terms IN ADDITION TO, never instead of, the weed-term foundation.</div>
+<div class="guardrail"><strong>2. Hours are Sun 10am–8pm · Mon–Sat 9am–10pm storefront · 24/7 delivery every day.</strong> Use these in all copy. The 24/7 delivery is the brand differentiator — lead with it, don't bury it.</div>
+<div class="guardrail"><strong>3. The Dispenza ROI tool ACV is wrong but not catastrophically.</strong> Tool shows $50.00; Treez actual = ~$53-58. Account corrects to $55 in admin (ACC-01). Don't cite the inflated number in client comms until corrected.</div>
+<div class="guardrail"><strong>4. Triple-minority ownership + LGBTQ+ welcome are confirmed via GBP attributes</strong> but should be confirmed with Heather (ACC-04) before being amplified externally — we want to ensure the framing matches her preferred voice. Until confirmed, use generic "minority-owned + woman-led" placeholder framing.</div>
+<div class="guardrail"><strong>5. Credit card acceptance is in GBP attributes but unverified.</strong> Account confirms with client (ACC-04) before any copy mentions card acceptance. False claim = chargeback + regulatory risk.</div>
+<div class="guardrail"><strong>6. Phillipsburg satellite GBP is NOT yet live (per Darrell 2026-05-12).</strong> Build the website landing page now to be ready when satellite verification completes. Don't reference the Phillipsburg GBP as "live" in any copy until confirmed.</div>
+
+<!-- ============ WEB / DEV ============ -->
+<div class="dept">
+  <div class="dept-head">
+    <div class="dept-icon">⚙️</div>
+    <h3>Web / Dev — Tactical</h3>
+  </div>
+
+  <div class="task">
+    <div class="id">WEB-01</div>
+    <div class="title"><span class="priority p0">P0</span>Deploy <code>robots.txt</code> (Week 1, in-flight)</div>
+    <ol>
+      <li>Add file at root of site (Dispenza SGEN CMS or direct file upload)</li>
+      <li>Deploy</li>
+      <li>Verify via <code>curl -s https://mindliftdispensary.com/robots.txt</code> returns 200</li>
+    </ol>
+    <div class="copy-meta">Paste-ready robots.txt:</div>
+    <div class="copy-block">User-agent: *
+Allow: /
+Disallow: /template
+Disallow: /404
+Disallow: /loyalty-sign-in
+
+Sitemap: https://mindliftdispensary.com/sitemap.xml</div>
+    <div class="reasoning"><strong>Why:</strong> Currently returns 404. Baseline technical SEO miss. Confirmed via 2026-05-12 Playwright audit.</div>
+    <div class="accept">✓ Accept when: <code>curl</code> returns 200 + sitemap reference visible · Deadline May 16</div>
+  </div>
+
+  <div class="task">
+    <div class="id">WEB-02</div>
+    <div class="title"><span class="priority p0">P0</span>Add homepage H1 + tightened meta description (Week 1)</div>
+    <ol>
+      <li>Open homepage CMS entry</li>
+      <li>Replace the hero "Welcome To" / "Dispensary" H2 elements with a single semantic H1</li>
+      <li>Tighten meta description from current 315 chars to ≤160 (preserve 24-hour USP)</li>
+      <li>Deploy</li>
+      <li>Verify via Playwright headless: H1 count = 1 + meta length ≤160</li>
+    </ol>
+    <div class="copy-meta">New homepage H1:</div>
+    <div class="copy-block">MindLift Dispensary — 24/7 Cannabis Delivery &amp; Plainfield NJ Dispensary</div>
+    <div class="copy-meta">New meta description (157 chars):</div>
+    <div class="copy-block">Plainfield NJ's 24/7 cannabis delivery and dispensary. Black, women, &amp; Asian-owned. Flower, vapes, edibles, concentrates. Order online for pickup or delivery.</div>
+    <div class="reasoning"><strong>Why:</strong> Homepage currently has zero H1 tags. Google relies on H1 for primary topic signal. Confirmed via Playwright audit.</div>
+    <div class="accept">✓ Accept when: <code>document.querySelectorAll('h1').length === 1</code> · meta length ≤160 chars · Deadline May 16</div>
+  </div>
+
+  <div class="task">
+    <div class="id">WEB-03</div>
+    <div class="title"><span class="priority p0">P0</span>Fix <code>/about-us</code> double-H1 + 150-char title (Week 1)</div>
+    <ol>
+      <li>Open <code>/about-us</code> CMS entry</li>
+      <li>Keep the second H1 ("About MINDLIFT DISPENSARY") as the H1. Change the first H1 ("ABOUT US") to H2 — or remove if redundant after Content delivers the rewrite</li>
+      <li>Replace title with the tightened ≤60-char version below</li>
+      <li>Deploy</li>
+    </ol>
+    <div class="copy-meta">New title (60 chars):</div>
+    <div class="copy-block">About MindLift | Plainfield's Minority-Owned 24/7 Dispensary</div>
+    <div class="copy-meta">New meta description (157 chars):</div>
+    <div class="copy-block">Meet MindLift — Plainfield NJ's Black, women, &amp; Asian-owned cannabis dispensary with 24/7 delivery. LGBTQ+ welcome. Premium cannabis since July 2025.</div>
+    <div class="reasoning"><strong>Why:</strong> Current title is 150 chars (brand duplicated) + 2 H1s. Both confirmed via Playwright audit.</div>
+    <div class="accept">✓ Accept when: <code>document.querySelectorAll('h1').length === 1</code> on /about-us · title ≤60 chars · Deadline May 16</div>
+  </div>
+
+  <div class="task">
+    <div class="id">WEB-04</div>
+    <div class="title"><span class="priority p0">P0</span>Deploy Organization + LocalBusiness JSON-LD on homepage (Week 2)</div>
+    <ol>
+      <li>Add the JSON-LD block below to homepage <code>&lt;head&gt;</code></li>
+      <li>Deploy</li>
+      <li>Validate via Google Rich Results Test (https://search.google.com/test/rich-results)</li>
+      <li>Confirm AggregateRating snippet eligibility (star rating in SERP)</li>
+    </ol>
+    <div class="copy-meta">Paste-ready JSON-LD:</div>
+    <div class="copy-block">&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "CannabisStore",
+  "@id": "https://mindliftdispensary.com/#cannabisstore",
+  "name": "MindLift Recreational Weed Dispensary",
+  "alternateName": "MindLift Dispensary",
+  "description": "Plainfield NJ's 24/7 cannabis delivery and dispensary. Black, women, &amp; Asian-owned. No-minimum delivery across Union County.",
+  "url": "https://mindliftdispensary.com",
+  "telephone": "+19085882322",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "517 Park Avenue",
+    "addressLocality": "Plainfield",
+    "addressRegion": "NJ",
+    "postalCode": "07060",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "40.6160101",
+    "longitude": "-74.4186817"
+  },
+  "openingHoursSpecification": [
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"09:00","closes":"22:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"10:00","closes":"20:00"}
+  ],
+  "priceRange": "$$",
+  "paymentAccepted": "Cash, Credit Card, Debit Card",
+  "currenciesAccepted": "USD",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "624",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "sameAs": [
+    "https://www.instagram.com/mindliftdispensary/",
+    "https://www.facebook.com/people/MindLift-Dispensary/61577983367347/",
+    "https://www.linkedin.com/company/mindlift-dispensary/"
+  ],
+  "areaServed": [
+    {"@type":"City","name":"Plainfield"},
+    {"@type":"City","name":"North Plainfield"},
+    {"@type":"City","name":"South Plainfield"},
+    {"@type":"City","name":"Scotch Plains"},
+    {"@type":"City","name":"Westfield"},
+    {"@type":"City","name":"Fanwood"},
+    {"@type":"City","name":"Dunellen"},
+    {"@type":"City","name":"Watchung"},
+    {"@type":"City","name":"Edison"},
+    {"@type":"City","name":"Phillipsburg"},
+    {"@type":"AdministrativeArea","name":"Union County"}
+  ],
+  "amenityFeature": [
+    {"@type":"LocationFeatureSpecification","name":"Free WiFi","value":true},
+    {"@type":"LocationFeatureSpecification","name":"Wheelchair Accessible Entrance","value":true},
+    {"@type":"LocationFeatureSpecification","name":"Wheelchair Accessible Parking","value":true},
+    {"@type":"LocationFeatureSpecification","name":"Free Parking Lot","value":true},
+    {"@type":"LocationFeatureSpecification","name":"LGBTQ+ Friendly","value":true},
+    {"@type":"LocationFeatureSpecification","name":"Transgender Safespace","value":true},
+    {"@type":"LocationFeatureSpecification","name":"24 Hour Delivery","value":true}
+  ]
+}
+&lt;/script&gt;</div>
+    <div class="reasoning"><strong>Why:</strong> Sitewide JSON-LD count = 0 per audit. Schema unlocks star-rating SERP snippet (5.0/624 reviews), knowledge-panel reinforcement, and entity-relevance for the Phillipsburg satellite when it launches.</div>
+    <div class="accept">✓ Accept when: Rich Results Test validates · star rating shown in test preview · Deadline May 22</div>
+  </div>
+
+  <div class="task">
+    <div class="id">WEB-05</div>
+    <div class="title"><span class="priority p1">P1</span>Deploy FAQPage JSON-LD on homepage + <code>/delivery</code> (Week 2)</div>
+    <ol>
+      <li>Wrap the 6 existing FAQ buttons on homepage in FAQPage schema (questions + answers)</li>
+      <li>Wrap the 6 existing FAQ buttons on /delivery in FAQPage schema (after Content rewrite from CON-02)</li>
+      <li>Deploy</li>
+      <li>Validate via Rich Results Test</li>
+    </ol>
+    <div class="copy-meta">Homepage FAQPage JSON-LD template:</div>
+    <div class="copy-block">&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Where is MindLift located?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "MindLift is at 517 Park Avenue, Plainfield, NJ 07060 — near downtown Plainfield and Green Brook Park. We serve walk-in customers Sun 10am-8pm and Mon-Sat 9am-10pm, with 24/7 delivery to Union County and North Jersey."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need a medical card to purchase products at MindLift?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. MindLift is a New Jersey adult-use (recreational) dispensary. Anyone 21 or older with a valid government-issued ID can shop with us — no medical card required."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I place an order online for pickup?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Browse our menu at mindliftdispensary.com/menu, place your order online, and select in-store pickup at checkout. We'll have it ready when you arrive."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What types of cannabis products does MindLift offer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We carry flower, pre-rolls, vapes, edibles, concentrates, tinctures, topicals, and accessories from top NJ-licensed brands including Crops, Verano, Haze, Avexia, Chef Matt, Agri-Kind, Jersey Smooth, URBNJ, Grön, and Kind Tree."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are MindLift's products lab-tested for quality and safety?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Every product on our menu is sourced from New Jersey-licensed cultivators and processors and lab-tested per state regulations for potency, pesticides, and contaminants. Lab results are available on request."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can MindLift give me recommendations on which products to choose?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. Our budtenders are trained to help first-time customers and experienced shoppers alike find the right strain, format, and dose for your goals. Walk in any time or call us at (908) 588-2322."
+      }
+    }
+  ]
+}
+&lt;/script&gt;</div>
+    <div class="reasoning"><strong>Why:</strong> 12 FAQ questions visible in DOM across home + /delivery but zero FAQPage schema. Rich-result trigger rate on FAQPage is typically 20–40% — easy organic CTR lift.</div>
+    <div class="accept">✓ Accept when: 2 FAQPage schemas validated via Rich Results Test · Deadline May 23</div>
+  </div>
+
+  <div class="task">
+    <div class="id">WEB-06</div>
+    <div class="title"><span class="priority p1">P1</span>Build <code>/phillipsburg</code> landing page (Week 3)</div>
+    <ol>
+      <li>Use Content's brief + body copy (CON-04)</li>
+      <li>Mirror structure of <code>/stores/mindlift-cannabis-dispensary-plainfield-nj</code></li>
+      <li>Add LocalBusiness JSON-LD (different geo from Plainfield mothership; Phillipsburg-anchored service area)</li>
+      <li>Add FAQPage JSON-LD on the page's FAQ section</li>
+      <li>Add internal links from <code>/delivery</code> "Phillipsburg" mentions + footer + <code>/stores</code>; add to sitemap.xml</li>
+      <li>Submit URL to Google Search Console for indexing</li>
+    </ol>
+    <div class="reasoning"><strong>Why:</strong> Phillipsburg satellite GBP is planned (not yet live per Darrell). The satellite needs an entity-relevance website anchor — without one, the GBP has no on-site SEO backing.</div>
+    <div class="accept">✓ Accept when: page live with H1, H2s, LocalBusiness + FAQPage schema, sitemap updated, GSC indexed · Deadline May 23</div>
+  </div>
+
+  <div class="task">
+    <div class="id">WEB-07</div>
+    <div class="title"><span class="priority p1">P1</span>Replace og:image with storefront photo + add Twitter Cards (Week 2)</div>
+    <ol>
+      <li>Coordinate with Local SEO on the storefront photo refresh (LSEO-05)</li>
+      <li>Update <code>og:image</code> to the new storefront photo (1200×630 preferred)</li>
+      <li>Add Twitter Card meta tags below</li>
+      <li>Deploy</li>
+      <li>Validate via Twitter card-debug tool + Facebook sharing debugger</li>
+    </ol>
+    <div class="copy-meta">Paste-ready Twitter Card meta:</div>
+    <div class="copy-block">&lt;meta name="twitter:card" content="summary_large_image"&gt;
+&lt;meta name="twitter:title" content="MindLift Dispensary — 24/7 Cannabis Delivery &amp; Plainfield NJ Dispensary"&gt;
+&lt;meta name="twitter:description" content="Plainfield NJ's 24/7 cannabis delivery and dispensary. Black, women, &amp; Asian-owned. No-minimum delivery across Union County."&gt;
+&lt;meta name="twitter:image" content="https://mindliftdispensary.com/sites/sg_mindliftdispens2538/uploads/2026/05/mindlift-storefront.jpg"&gt;</div>
+    <div class="accept">✓ Accept when: og:image is storefront-not-logo · Twitter card validates · Deadline May 22</div>
+  </div>
+
+  <div class="task">
+    <div class="id">WEB-08</div>
+    <div class="title"><span class="priority p2">P2</span>Fix footer social block (Week 1)</div>
+    <ol>
+      <li>Footer "Yelp" icon currently links to LinkedIn (mislabel). Either remove the Yelp icon OR change the link target to the actual Yelp listing.</li>
+      <li>YouTube + TikTok icons have no <code>href</code>. Either remove (if accounts don't exist) or wire them up (if they do). Account checks with client (ACC-04).</li>
+      <li>Deploy</li>
+    </ol>
+    <div class="accept">✓ Accept when: footer social row has accurate labels + no broken links by May 18</div>
+  </div>
+
+  <div class="task">
+    <div class="id">WEB-09</div>
+    <div class="title"><span class="priority p2">P2</span>Deploy BreadcrumbList schema on non-home pages (Week 3)</div>
+    <ol>
+      <li>Add BreadcrumbList JSON-LD to <code>/about-us</code>, <code>/delivery</code>, <code>/stores/mindlift-cannabis-dispensary-plainfield-nj</code>, <code>/phillipsburg</code> (when built), and <code>/contact</code></li>
+      <li>Validate via Rich Results Test</li>
+    </ol>
+    <div class="copy-meta">Example for /stores/mindlift-cannabis-dispensary-plainfield-nj:</div>
+    <div class="copy-block">&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://mindliftdispensary.com/"},
+    {"@type":"ListItem","position":2,"name":"Stores","item":"https://mindliftdispensary.com/stores"},
+    {"@type":"ListItem","position":3,"name":"Plainfield, NJ","item":"https://mindliftdispensary.com/stores/mindlift-cannabis-dispensary-plainfield-nj"}
+  ]
+}
+&lt;/script&gt;</div>
+    <div class="accept">✓ Accept when: 5+ pages with BreadcrumbList validated · Deadline May 29</div>
+  </div>
+
+  <div class="task">
+    <div class="id">WEB-10</div>
+    <div class="title"><span class="priority p3">P3</span>Console-error sweep across all 22 sitemap pages (Week 4)</div>
+    <ol>
+      <li>Headless Playwright sweep across all 22 URLs in sitemap-pages.xml</li>
+      <li>Capture console errors, network 4xx/5xx, and broken image references</li>
+      <li>File patch list + fix Tier-1 (errors that affect crawlability or rendering)</li>
+    </ol>
+    <div class="reasoning"><strong>Why:</strong> 1 console error logged on <code>/contact</code> during May 12 audit. Sweep before locking in schema deployment to ensure clean foundation.</div>
+    <div class="accept">✓ Accept when: error log + patch list filed by May 30</div>
+  </div>
+</div>
+
+<!-- ============ CONTENT ============ -->
+<div class="dept">
+  <div class="dept-head">
+    <div class="dept-icon">✍️</div>
+    <h3>Content &amp; Editorial — Tactical</h3>
+  </div>
+
+  <div class="task">
+    <div class="id">CON-01</div>
+    <div class="title"><span class="priority p0">P0</span>Rewrite <code>/about-us</code> with founder story + brand differentiators (Week 2)</div>
+    <ol>
+      <li>Coordinate with Account on Heather interview (ACC-03) before drafting</li>
+      <li>Draft 600+ word rewrite using the structure + draft copy below</li>
+      <li>Confirm DEI ownership framing matches Heather's preferred voice</li>
+      <li>Hand to Web/Dev May 17 for deployment by May 20</li>
+    </ol>
+    <div class="copy-meta">Draft body copy (~620 words):</div>
+    <div class="copy-block">[H1] About MindLift — Plainfield's Triple-Minority-Owned 24/7 Cannabis Dispensary
+
+MindLift opened its doors at 517 Park Avenue in Plainfield, New Jersey on July 10, 2025 — built from the ground up by a team committed to one idea: that a dispensary can be both serious about quality and serious about belonging.
+
+[H2] Our Story
+We're a Black-owned, women-owned, and Asian-owned cannabis dispensary, registered as a small business and proud to be one of New Jersey's most inclusive adult-use shops. Plainfield is our home — a city with deep cultural roots in Union County, sitting at the cross-section of public transit, downtown commerce, and the working communities that make North Jersey unique.
+
+When we built MindLift, we asked a simple question: what would a dispensary look like if it actually reflected the people who shop here? Our answer was a store designed around three values — quality cannabis, transparent pricing, and a welcoming space for every customer who walks through the door, regardless of background, identity, or experience level.
+
+[H2] What Makes MindLift Different
+
+[H3] 24/7 Cannabis Delivery — Every Day of the Week
+We deliver. Every hour. Every day. While most New Jersey dispensaries close their delivery windows at 8 or 10 PM, MindLift delivers 24 hours a day, seven days a week — including overnight, weekends, and holidays. No minimum order. No delivery fee on your first order. If you're in our service area — Plainfield, North Plainfield, Fanwood, Scotch Plains, Westfield, South Plainfield, Dunellen, Watchung, Edison, and Phillipsburg — we'll get to you.
+
+[H3] An Inclusive Space
+MindLift is LGBTQ+ friendly and a Transgender safespace. Our team is trained to welcome every customer with the same respect, the same product knowledge, and the same care. If it's your first time in a dispensary, we'll walk you through it. If you're a regular, we'll remember what you like.
+
+[H3] Curated Cannabis from Trusted NJ Brands
+Our menu is built around top-quality New Jersey-licensed flower, pre-rolls, vapes, edibles, concentrates, tinctures, topicals, and accessories. We work with brands customers can trust — Crops, Verano, Haze, Avexia, Chef Matt, Agri-Kind, Jersey Smooth, URBNJ, Grön, and Kind Tree — and we update the menu daily.
+
+[H3] Walk In or Order Ahead
+You can shop with us in three ways: walk in during our storefront hours (Sun 10am–8pm, Mon–Sat 9am–10pm), place an order online for in-store pickup, or order delivery 24/7. Whatever works for your day works for us.
+
+[H2] The Plainfield Community
+We're rooted in Plainfield. We hire locally. We support neighborhood events. We treat our budtenders as professionals — because they are. Customer reviews on Google (5.0 stars across 624+ reviews and counting) keep telling us we're getting that part right.
+
+[H2] Visit MindLift
+Find us at 517 Park Avenue, Plainfield, NJ 07060 — minutes from downtown Plainfield, the Plainfield train station, and Green Brook Park. Call us at (908) 588-2322 or send us a text at the same number. Hours, deliveries, and full menu are always live at mindliftdispensary.com.
+
+NJ License Number: RE000097
+
+[CTA button] BROWSE THE MENU →</div>
+    <div class="reasoning"><strong>Why:</strong> Current page is 282 words, 2 H1s, 0 mentions of any brand differentiator. This rewrite surfaces every confirmed competitive moat and reframes the about page as a brand-story page rather than a generic "here's our store" page.</div>
+    <div class="accept">✓ Accept when: 600+ words delivered + Heather-confirmed framing + handed to Web/Dev by May 17 · live by May 20</div>
+  </div>
+
+  <div class="task">
+    <div class="id">CON-02</div>
+    <div class="title"><span class="priority p0">P0</span>Rewrite <code>/delivery</code> with 24/7 + no-minimum + service-area copy (Week 2)</div>
+    <ol>
+      <li>Draft 1,000+ word rewrite using the structure below</li>
+      <li>List all service-area cities</li>
+      <li>Provide the 6 FAQ Q&amp;As in a format Web/Dev can wrap in FAQPage schema (WEB-05)</li>
+      <li>Hand to Web/Dev May 17 for deployment by May 22</li>
+    </ol>
+    <div class="copy-meta">Section structure + key copy:</div>
+    <div class="copy-block">[H1] Cannabis Delivery in Plainfield NJ — 24/7, No Minimum, No Fee on Your First Order
+
+[Hero subhead] MindLift delivers cannabis 24 hours a day, every day of the week — across Plainfield, Union County, and North Jersey. Place your first order with no delivery fee.
+
+[2 CTAs] ORDER PLAINFIELD DELIVERY · ORDER PHILLIPSBURG DELIVERY
+
+[H2] How MindLift Delivery Works
+
+Step 1 — Browse: enter your delivery address at mindliftdispensary.com/menu. We'll show you the menu for your zone.
+Step 2 — Order: pick flower, edibles, vapes, concentrates, or any other category. Bundle deals show automatically.
+Step 3 — Confirm: choose your payment method (cash on delivery or pre-paid via our secure cashless link).
+Step 4 — Delivery: a real MindLift driver brings it to you. Average ETA in the Plainfield core: 30-45 minutes. Phillipsburg ETAs vary by distance.
+
+[H2] Service Area — Where We Deliver
+
+Primary zone (no-fee on first order):
+- Plainfield
+- North Plainfield
+- South Plainfield
+- Fanwood
+- Scotch Plains
+- Westfield
+- Dunellen
+- Watchung
+- Edison
+
+Phillipsburg zone:
+- Phillipsburg
+- Lopatcong
+- Greenwich
+(see /phillipsburg for Phillipsburg-specific information)
+
+Extended zone: We service additional cities across Union County and North Jersey on request. Add your address at checkout to confirm coverage.
+
+[H2] 24/7 Delivery — Why Round-the-Clock Matters
+
+Most New Jersey dispensaries close their delivery windows at 8 or 10 PM. MindLift delivers around the clock. If you're a shift worker, finishing a late evening, or just don't want to make a trip — we're available.
+
+Sunday through Saturday, 24 hours a day. No exceptions for holidays.
+
+[H2] Pricing &amp; Fees
+
+- Delivery fee on your first order: $0 (use promo code FIRST at checkout)
+- Standard delivery fee thereafter: [TO CONFIRM WITH ACCOUNT]
+- Phillipsburg zone fee: $4.99
+- No minimum order — order one item or twenty
+
+[H2] What You Need to Order
+
+- Government-issued ID (matching the name on the order — drivers verify at delivery)
+- Be 21 or older (NJ adult-use law)
+- Be present at delivery to receive the order in person
+
+[H2] Frequently Asked Questions
+
+Q: Do you really deliver 24 hours a day, 7 days a week?
+A: Yes. Every hour, every day, including holidays. Order anytime at mindliftdispensary.com/menu.
+
+Q: What are your delivery fees?
+A: First order is free with promo FIRST. After that, fees vary by zone — typically $0–$4.99 depending on distance.
+
+Q: How do you calculate delivery distance?
+A: Distance is calculated from our Plainfield location (517 Park Ave) to your address. Phillipsburg uses our Phillipsburg satellite hub.
+
+Q: Do you deliver throughout New Jersey?
+A: We deliver across Union County and North Jersey, plus the Phillipsburg corridor. Enter your address at checkout to confirm we cover your zone.
+
+Q: Is delivery to Phillipsburg, NJ $4.99?
+A: Yes. Phillipsburg is one of our extended delivery zones at a flat $4.99 fee.
+
+Q: Where can I place a delivery order?
+A: Online at mindliftdispensary.com/menu or by calling (908) 588-2322.
+
+[CTA] ORDER NOW →</div>
+    <div class="reasoning"><strong>Why:</strong> Current /delivery page is 216 words. No service-area city list. 24/7 buried in a single FAQ. This rewrite leads with the USPs that should already be obvious.</div>
+    <div class="accept">✓ Accept when: 1,000+ word rewrite delivered to Web/Dev May 17 · live with FAQ schema May 22</div>
+  </div>
+
+  <div class="task">
+    <div class="id">CON-03</div>
+    <div class="title"><span class="priority p1">P1</span>Expand <code>/stores/mindlift-cannabis-dispensary-plainfield-nj</code> to 500+ words (Week 2)</div>
+    <ol>
+      <li>Current page has correct H1 + H2 structure (do not change). Expand body copy from 294 → 500+ words.</li>
+      <li>Integrate brand differentiators: DEI ownership, LGBTQ+, 24/7 delivery, no-minimum, free Wi-Fi, wheelchair-accessible, free parking</li>
+      <li>Add NJ License Number RE000097</li>
+      <li>Add internal links: /delivery, /about-us, /menu, /phillipsburg (when live)</li>
+      <li>Hand to Web/Dev May 19 for deployment + LocalBusiness schema wrap (WEB-04 derivative) by May 22</li>
+    </ol>
+    <div class="reasoning"><strong>Why:</strong> This IS the deep-location page that GBP should link to (per scope memory). Currently solid structure but thin content and missing differentiators. Web/Dev wraps in LocalBusiness schema after expansion.</div>
+    <div class="accept">✓ Accept when: 500+ word expansion + LocalBusiness schema wrap + live by May 22</div>
+  </div>
+
+  <div class="task">
+    <div class="id">CON-04</div>
+    <div class="title"><span class="priority p1">P1</span>Write <code>/phillipsburg</code> landing page brief + body copy (Week 3)</div>
+    <ol>
+      <li>Draft 800–1,000 word brief + body copy</li>
+      <li>Structure mirrors /stores/...plainfield-nj but with Phillipsburg-specific geo + zone</li>
+      <li>Include 5–6 Phillipsburg-specific FAQ Q&amp;As (Web/Dev wraps in schema)</li>
+      <li>Hand to Web/Dev May 20</li>
+    </ol>
+    <div class="copy-meta">Page structure:</div>
+    <div class="copy-block">[H1] MindLift Cannabis Delivery — Phillipsburg NJ
+[H2] Cannabis delivery to Phillipsburg, Lopatcong, and Greenwich
+[H3] How MindLift Phillipsburg Delivery Works
+[H3] Service zone + ETAs (Phillipsburg core, Lopatcong, Greenwich)
+[H3] Hours: 24/7
+[H3] Pricing: $4.99 delivery fee · first order free
+[H2] Why Phillipsburg residents choose MindLift
+- Black + women + Asian-owned
+- 24/7 availability
+- No minimum order
+- Direct text/call line for delivery support
+[H2] FAQ
+1. How fast is delivery to Phillipsburg?
+2. What's the delivery fee?
+3. Do you deliver to Lopatcong or Greenwich?
+4. Where does the driver bring the order?
+5. What payment methods do you accept?
+[CTA] ORDER PHILLIPSBURG DELIVERY →</div>
+    <div class="reasoning"><strong>Why:</strong> Phillipsburg satellite GBP is planned. Landing page anchors entity relevance + provides the website surface for the GBP's place-pack ranking signal.</div>
+    <div class="accept">✓ Accept when: copy delivered to Web/Dev May 20 · live page by May 23</div>
+  </div>
+
+  <div class="task">
+    <div class="id">CON-05</div>
+    <div class="title"><span class="priority p1">P1</span>Rewrite GBP description (Week 2)</div>
+    <ol>
+      <li>Account approves the new description (text below)</li>
+      <li>Local SEO updates GBP description (LSEO-01)</li>
+    </ol>
+    <div class="copy-meta">New GBP description (~140 words; cannabis-led first 100 chars):</div>
+    <div class="copy-block">Plainfield's 24/7 cannabis dispensary. Black, women, &amp; Asian-owned. No-minimum delivery across Union County and North Jersey. MindLift Dispensary at 517 Park Ave serves walk-in shoppers Sun 10am-8pm and Mon-Sat 9am-10pm, with 24-hour delivery every day to Plainfield, South Plainfield, Scotch Plains, Edison, and the Phillipsburg corridor. Our menu — flower, pre-rolls, vapes, edibles, concentrates, tinctures, topicals, and accessories — is curated daily from trusted NJ-licensed brands like Crops, Verano, Haze, Avexia, and Grön. LGBTQ+ friendly and a Transgender safespace. First-time delivery is free. Order online for fast in-store pickup or 24/7 cannabis delivery, and experience why customers across New Jersey choose us.</div>
+    <div class="reasoning"><strong>Why:</strong> Current description is weed-led (we're at 100% weed-term SoLV — defended). Re-bias toward cannabis/dispensary terminology to support the Kota Canna defense without losing the delivery framing.</div>
+    <div class="accept">✓ Accept when: Account approves text + Local SEO updates GBP by May 16</div>
+  </div>
+
+  <div class="task">
+    <div class="id">CON-06</div>
+    <div class="title"><span class="priority p1">P1</span>4 May blog posts targeting cannabis/dispensary intent (Weeks 2–4)</div>
+    <ol>
+      <li>Draft and publish 4 blog posts (briefs below)</li>
+      <li>Each: 1,200–1,500 words, "dispensary" in URL slug + H1 + metadata, FAQPage schema with 3 Q&amp;As, internal links to /stores/...plainfield-nj + /about-us + /delivery</li>
+      <li>Coordinate publishing dates with Local SEO for GBP-post amplification</li>
+    </ol>
+    <div class="copy-meta">Blog calendar:</div>
+    <div class="copy-block">Week 2 (publish May 16):
+  Title: What Makes a Plainfield Cannabis Dispensary Worth the Trip?
+  Slug: /blog/plainfield-cannabis-dispensary
+  Target: "cannabis dispensary plainfield" + "dispensary near me"
+  Hook: 5 things that separate a great NJ dispensary from a forgettable one
+  CTA: Visit /stores/mindlift-cannabis-dispensary-plainfield-nj
+
+Week 3 (publish May 21):
+  Title: Cannabis Delivery FAQs — 24/7 Service in Union County
+  Slug: /blog/cannabis-delivery-faqs-union-county
+  Target: "cannabis delivery near me" + "dispensary delivery"
+  Hook: Everything you wanted to know about NJ cannabis delivery
+  CTA: Visit /delivery
+
+Week 4 (publish May 27):
+  Title: Memorial Day Cannabis Picks for NJ Locals
+  Slug: /blog/memorial-day-cannabis-nj
+  Target: holiday + brand-discovery
+  Hook: 5 picks for a chill long weekend (flower, pre-rolls, edibles, vapes, drinks)
+  CTA: Visit /menu
+
+Week 4 (publish May 30):
+  Title: Triple Minority-Owned in Plainfield: The MindLift Story
+  Slug: /blog/triple-minority-owned-plainfield-dispensary
+  Target: "minority-owned dispensary nj" + brand build
+  Hook: Heather's story — why we built MindLift the way we did
+  CTA: Visit /about-us</div>
+    <div class="reasoning"><strong>Why:</strong> Blog cadence supports Kota Canna defense (cannabis/dispensary-term content), surfaces Phillipsburg + Plainfield local intent, and builds brand-recall signals (a leading indicator of Direct-search-share lift).</div>
+    <div class="accept">✓ Accept when: 4 posts published by May 30 with schema + internal links</div>
+  </div>
+
+  <div class="task">
+    <div class="id">CON-07</div>
+    <div class="title"><span class="priority p2">P2</span>Fix Daily Deals carousel alt text (Week 2)</div>
+    <ol>
+      <li>Replace "Double Click to View" alt text on Daily Deals carousel images with descriptive alt text (the actual deal name + price)</li>
+      <li>Deliver alt-text spec to Web/Dev</li>
+    </ol>
+    <div class="reasoning"><strong>Why:</strong> "Double Click to View" is a UI hint, not image content. Accessibility + alt-text-quality is a minor SEO signal Google reads.</div>
+    <div class="accept">✓ Accept when: 13+ deal images have descriptive alt text by May 22</div>
+  </div>
+</div>
+
+<!-- ============ LOCAL SEO ============ -->
+<div class="dept">
+  <div class="dept-head">
+    <div class="dept-icon">📍</div>
+    <h3>Local SEO — Tactical</h3>
+  </div>
+
+  <div class="task">
+    <div class="id">LSEO-01</div>
+    <div class="title"><span class="priority p0">P0</span>Deploy the rewritten GBP description (Week 2)</div>
+    <ol>
+      <li>Wait for Content + Account approval of CON-05 text</li>
+      <li>Update GBP description via Dispenza's GBP management dashboard</li>
+      <li>Save change + verify live</li>
+    </ol>
+    <div class="accept">✓ Accept when: GBP description matches CON-05 verbiage by May 16 · screenshot saved for audit trail</div>
+  </div>
+
+  <div class="task">
+    <div class="id">LSEO-02</div>
+    <div class="title"><span class="priority p0">P0</span>Add the 3 delivery keywords back to monthly Local Falcon scan cadence (Week 1)</div>
+    <ol>
+      <li>Edit Local Falcon scan config for MindLift</li>
+      <li>Add: weed delivery · cannabis delivery · dispensary delivery (currently 2 months stale, last 3/11)</li>
+      <li>Run a fresh 10-keyword baseline scan May 14</li>
+    </ol>
+    <div class="copy-meta">Current 7-keyword baseline (May 8 scan):</div>
+    <div class="copy-block">weed                  ARP 1.00  SoLV 100.00%  (✓ #1 every cell)
+weed dispensary       ARP 1.00  SoLV 100.00%  (✓ #1 every cell)
+weed near me          ARP 1.00  SoLV 100.00%  (✓ #1 every cell)
+cannabis              ARP 6.32  SoLV  18.18%  (↑4.96)
+cannabis near me      ARP 5.75  SoLV  30.58%  (↓4.96)
+dispensary            ARP 6.50  SoLV   9.09%  (↓11.57)
+dispensary near me    ARP 6.34  SoLV   9.92%  (↓20.66 ← largest bleed)
+
+Stale 3 (last 3/11):
+weed delivery         ARP 1.06  SoLV 100.00%
+cannabis delivery     ARP 2.85  SoLV  69.42%  (↑28.10)
+dispensary delivery   ARP 3.33  SoLV  64.46%  (↑29.75)</div>
+    <div class="accept">✓ Accept when: 10 keywords configured + May 14 baseline scan complete</div>
+  </div>
+
+  <div class="task">
+    <div class="id">LSEO-03</div>
+    <div class="title"><span class="priority p1">P1</span>Mid-month + end-month Local Falcon scans (May 22 + May 31)</div>
+    <ol>
+      <li>Run full 10-keyword scan May 22 (mid-month checkpoint)</li>
+      <li>Run full 10-keyword scan May 31 (end-month closeout)</li>
+      <li>File comparison memos: ARP + SoLV deltas vs the May 14 baseline</li>
+      <li>Flag any weed-term SoLV drop &gt;1 point</li>
+    </ol>
+    <div class="accept">✓ Accept when: 2 scans + comparison memos filed by May 23 and June 1</div>
+  </div>
+
+  <div class="task">
+    <div class="id">LSEO-04</div>
+    <div class="title"><span class="priority p1">P1</span>Weekly competitive monitor (4 Plainfield competitors)</div>
+    <ol>
+      <li>Every Monday: pull review count + photo count + GBP post activity for Kota Canna · Plant Base · CannaVerde · Cloud Nine</li>
+      <li>Track Kota Canna review velocity specifically — that's the leading indicator of new-business-boost decay</li>
+      <li>File monitor report</li>
+    </ol>
+    <div class="copy-meta">Monitor template:</div>
+    <div class="copy-block">📊 MindLift Competitive Monitor — Week of [DATE]
+
+Kota Canna Dispensary (206 Watchung Ave, Plainfield)
+  Reviews: [count] (Δ from last week: +/-X)
+  Photos: [count]
+  GBP Posts: [count this week]
+
+Plant Base Dispensary (148 E 2nd St, Plainfield)
+  Reviews: [count] (Δ from last week: +/-X)
+  Photos: [count]
+  GBP Posts: [count this week]
+
+CannaVerde Cannabis Dispensary NJ (102a E Front St, Plainfield)
+  Reviews: [count] (Δ from last week: +/-X)
+  Photos: [count]
+  GBP Posts: [count this week]
+
+Cloud Nine Dispensary (513 US-22, North Plainfield)
+  Reviews: [count] (Δ from last week: +/-X)
+  Photos: [count]
+  GBP Posts: [count this week]
+
+Trend notes: [...]</div>
+    <div class="accept">✓ Accept when: 4 weekly monitor reports filed (May 18, 25, June 1, 8)</div>
+  </div>
+
+  <div class="task">
+    <div class="id">LSEO-05</div>
+    <div class="title"><span class="priority p1">P1</span>GBP photo cadence — 4-5 weekly uploads (May 1–31)</div>
+    <ol>
+      <li>Weekly themes: storefront · delivery (driver/vehicle) · interior · team · product drops</li>
+      <li>Each photo uploaded with descriptive alt text incorporating target keywords ("cannabis dispensary Plainfield", "24/7 cannabis delivery", "dispensary near me")</li>
+      <li>Coordinate with client on the storefront photo refresh (flagged in Performance Review — current GBP photo shows "LIFT DISPENSARY" signage + construction dumpster)</li>
+    </ol>
+    <div class="accept">✓ Accept when: 16+ photos uploaded May 1–31 with target alt text · storefront refresh photo received from client</div>
+  </div>
+
+  <div class="task">
+    <div class="id">LSEO-06</div>
+    <div class="title"><span class="priority p1">P1</span>Respond to every Google review within 24 hours</div>
+    <ol>
+      <li>Monitor GBP review feed at least 2× daily (morning + evening)</li>
+      <li>Reply to every new review (positive AND negative) within 24 hours</li>
+      <li>Use named-budtender thank-yous when reviewers mention specific team members</li>
+    </ol>
+    <div class="copy-meta">Sample positive review response (no specific name mentioned):</div>
+    <div class="copy-block">Thanks for the kind words! We're so glad we could make your visit a great one. See you again soon — and don't forget, we deliver 24/7 across the area if you ever want to skip the trip. 🙏</div>
+    <div class="copy-meta">Sample positive review response (specific team member named):</div>
+    <div class="copy-block">Thanks so much for shouting out [NAME] — we'll make sure they see this. So glad they helped you find what you were looking for. See you next time! 🌿</div>
+    <div class="copy-meta">Sample negative-review response:</div>
+    <div class="copy-block">Thank you for taking the time to share this — it's the only way we can improve. We'd like to make this right. Please reach out at (908) 588-2322 or sales@mindliftdispensary.com so we can talk through what happened. We hear you and we want to fix it.</div>
+    <div class="accept">✓ Accept when: 100% reply rate on May reviews · weekly sample tracked</div>
+  </div>
+
+  <div class="task">
+    <div class="id">LSEO-07</div>
+    <div class="title"><span class="priority p1">P1</span>GBP posts — 4 per week (Weeks 1–4)</div>
+    <ol>
+      <li>Schedule 4 GBP posts per week through May 31</li>
+      <li>Vary by theme: brand differentiator · product drop · service announcement · community/local</li>
+      <li>Each post features target keywords ("dispensary near me" or "cannabis dispensary Plainfield") in image overlay alt text and post body</li>
+      <li>Pair publishing dates with blog post launches (CON-06) for cross-amplification</li>
+    </ol>
+    <div class="copy-meta">Sample Monday post — "Triple Minority Owned":</div>
+    <div class="copy-block">🌿 MindLift is Plainfield's triple-minority-owned cannabis dispensary — Black, women, and Asian-owned. We built this place to be the kind of dispensary we wanted to walk into ourselves. Curated cannabis · 24/7 delivery · No minimum. 517 Park Ave, Plainfield · (908) 588-2322</div>
+    <div class="copy-meta">Sample Tuesday post — "24/7 Delivery":</div>
+    <div class="copy-block">🌙 You don't keep 9-to-5 hours. Neither does our delivery. MindLift delivers cannabis 24 hours a day, 7 days a week across Plainfield, Union County, and beyond. First delivery is on us — promo code FIRST. Order at mindliftdispensary.com.</div>
+    <div class="copy-meta">Sample Thursday post — "Cannabis Brand Spotlight":</div>
+    <div class="copy-block">🔥 This week's spotlight: [BRAND] at MindLift. [Product highlight + price + photo]. Pickup or 24/7 delivery — Plainfield, Scotch Plains, Edison, and beyond. (908) 588-2322 · mindliftdispensary.com.</div>
+    <div class="copy-meta">Sample Saturday post — "Community/Local":</div>
+    <div class="copy-block">💜 Plainfield-rooted. Plainfield-staffed. Plainfield-supported. We're proud to be the dispensary near me for Union County — and to deliver 24/7 to North Plainfield, Fanwood, Scotch Plains, Edison, Westfield, and beyond. 517 Park Ave · mindliftdispensary.com</div>
+    <div class="accept">✓ Accept when: 16+ GBP posts published May 1–31 with rotating themes + target keywords</div>
+  </div>
+</div>
+
+<!-- ============ ACCOUNT ============ -->
+<div class="dept">
+  <div class="dept-head">
+    <div class="dept-icon">📊</div>
+    <h3>Account — Tactical</h3>
+  </div>
+
+  <div class="task">
+    <div class="id">ACC-01</div>
+    <div class="title"><span class="priority p0">P0</span>Update Dispenza ROI tool ACV from $50 → $55 (mothership location_id=420)</div>
+    <ol>
+      <li>Log in to Dispenza admin (https://dispenza.com/admin)</li>
+      <li>Navigate to MindLift business (business_id=339) → mothership location (location_id=420)</li>
+      <li>Update ACV setting from $50.00 to $55.00 (net-basis conservative)</li>
+      <li>Verify ROI report regenerates with new attribution math</li>
+      <li>Document the change in the MindLift scope notes</li>
+    </ol>
+    <div class="reasoning"><strong>Why:</strong> Treez April actual = $57.94 gross / $53.45 net. Tool understates attributed revenue by ~10%. Recent 4-month AOV trajectory: Jan $52 → Feb $53 → Mar $58 → Apr $58 → May MTD $55.</div>
+    <div class="accept">✓ Accept when: ACV = $55.00 in admin · TGS 6-mo updates from $19,694.50 to ~$21,665 · Deadline May 16</div>
+  </div>
+
+  <div class="task">
+    <div class="id">ACC-02</div>
+    <div class="title"><span class="priority p0">P0</span>Decision: GBP website-link target (Week 2)</div>
+    <ol>
+      <li>Bring decision to Heather: GBP currently points to <code>/menu/?utm_source=gmb-plainfield&amp;utm_campaign=dispenza</code> · alternative is <code>/stores/mindlift-cannabis-dispensary-plainfield-nj?utm_source=gmb-plainfield&amp;utm_campaign=dispenza</code></li>
+      <li>Tradeoffs to present: /menu is conversion-direct (Jane menu loads immediately) · /stores page is entity-relevance optimal (full LocalBusiness schema, deep location signal)</li>
+      <li>Document decision in scope notes</li>
+      <li>If changed, update GBP link via Dispenza GBP dashboard. Preserve UTMs.</li>
+    </ol>
+    <div class="accept">✓ Accept when: decision logged · GBP link confirmed-or-updated by May 22</div>
+  </div>
+
+  <div class="task">
+    <div class="id">ACC-03</div>
+    <div class="title"><span class="priority p0">P0</span>Schedule + run Heather interview for /about-us rewrite (Week 1)</div>
+    <ol>
+      <li>Email Heather to schedule a 15-min phone interview before May 16</li>
+      <li>Interview topics: ownership story (Black + women + Asian), why 24/7 delivery, LGBTQ+ welcome framing, community connection to Plainfield, license details, anything she wants reflected in the brand voice</li>
+      <li>Record + transcribe</li>
+      <li>Hand notes to Content (CON-01) by May 17</li>
+    </ol>
+    <div class="accept">✓ Accept when: interview scheduled by May 15 · transcript or notes available to Content by May 17</div>
+  </div>
+
+  <div class="task">
+    <div class="id">ACC-04</div>
+    <div class="title"><span class="priority p1">P1</span>Confirm 5 client-side facts before copy goes live (Week 1-2)</div>
+    <ol>
+      <li>Credit-card acceptance: ask Heather about processor setup (Aeropay? Cashless ATM? Other?). Required before Content amplifies the "accepts credit cards" claim.</li>
+      <li>Curbside pickup: confirm whether NJ regulation permits cannabis curbside (gap flagged in Performance Review). If yes, Local SEO enables GBP attribute.</li>
+      <li>Standard delivery fee (post-first-order): document the actual fee for /delivery copy.</li>
+      <li>Memorial Day weekend hours: confirm any change so GBP posts + website hours can pre-schedule.</li>
+      <li>YouTube + TikTok account existence: confirm so Web/Dev can wire or remove footer icons (WEB-08).</li>
+    </ol>
+    <div class="accept">✓ Accept when: 5 facts logged in MindLift scope notes by May 17</div>
+  </div>
+
+  <div class="task">
+    <div class="id">ACC-05</div>
+    <div class="title"><span class="priority p1">P1</span>Weekly KPI pulses to Heather (every Monday May 19, 26 · June 2, 9)</div>
+    <ol>
+      <li>Generate weekly KPI pulse covering: SoLV deltas on the 4 priority terms (dispensary near me, dispensary, cannabis, cannabis delivery), GBP action volumes, Direct vs Discovery split, schema deployment status, content publishing status</li>
+      <li>Email Heather Monday AM</li>
+    </ol>
+    <div class="copy-meta">Pulse template:</div>
+    <div class="copy-block">📊 MindLift — Week of [DATE]
+
+LOCAL FALCON SoLV (4 priority terms)
+- "dispensary near me" SoLV: [X%] (Δ vs last week: +/-Y)
+- "dispensary" SoLV: [X%] (Δ vs last week: +/-Y)
+- "cannabis" SoLV: [X%] (Δ vs last week: +/-Y)
+- "cannabis delivery" SoLV: [X%] (Δ vs last week: +/-Y)
+
+WEED-TERM DEFENSE (hold 100%)
+- weed / weed dispensary / weed near me / weed delivery: [status]
+
+GBP ACTIONS (this week)
+- Website clicks: [X]
+- Directions: [X]
+- Calls: [X]
+- Chat: [X]
+- Total interactions: [X]
+
+DIRECT vs DISCOVERY (this week)
+- Direct (branded): [X%]
+- Discovery (non-branded): [X%]
+
+SCHEMA DEPLOYMENT STATUS
+- robots.txt: [deployed / pending]
+- Organization + LocalBusiness JSON-LD: [deployed / pending]
+- FAQPage JSON-LD (home + /delivery): [deployed / pending]
+- BreadcrumbList JSON-LD (5 pages): [deployed / pending]
+
+CONTENT STATUS
+- /about-us rewrite: [drafted / live]
+- /delivery rewrite: [drafted / live]
+- /stores expansion: [drafted / live]
+- /phillipsburg landing page: [drafted / live]
+- Blog cadence: [X of 4 published]
+
+UPCOMING (next 7 days)
+[list]
+
+QUESTIONS FOR HEATHER
+[list, if any]</div>
+    <div class="accept">✓ Accept when: 4 weekly pulses sent · all KPI fields filled · no placeholder values</div>
+  </div>
+
+  <div class="task">
+    <div class="id">ACC-06</div>
+    <div class="title"><span class="priority p1">P1</span>May 31 close-out + June preview (June 3)</div>
+    <ol>
+      <li>End-of-month summary: final SoLV results vs targets, GBP action totals, POS revenue (await client data), schema deployment confirmation, /phillipsburg launch confirmation, blog cadence completion</li>
+      <li>June workstream preview: delivery-channel deep dive (using delivery-only Treez data), Phillipsburg satellite GBP launch coordination if it goes live, blog cadence continuation, additional brand-differentiator content (LGBTQ+ Pride campaign for June?)</li>
+      <li>Deliver via email + saved to <code>performance-reviews/2026-05/2026-05-31_closeout.md</code></li>
+    </ol>
+    <div class="accept">✓ Accept when: close-out delivered by June 3</div>
+  </div>
+</div>
+
+<h2>May Deadline Calendar (Summary)</h2>
+
+<table>
+  <thead><tr><th>Date</th><th>Owner</th><th>Item</th></tr></thead>
+  <tbody>
+    <tr><td>May 14</td><td>Local SEO</td><td>LSEO-02 · 10-keyword Local Falcon baseline scan</td></tr>
+    <tr><td>May 15</td><td>Account · Content</td><td>ACC-03 Heather interview scheduled · CON-01/02 H1 + meta drafts</td></tr>
+    <tr><td>May 16</td><td>Web/Dev · Local SEO · Account</td><td>WEB-01 robots.txt · WEB-02 homepage H1 · WEB-03 /about-us H1 · LSEO-01 GBP description live · ACC-01 ROI ACV updated</td></tr>
+    <tr><td>May 17</td><td>Content · Account</td><td>CON-01 /about-us copy delivered · CON-02 /delivery copy delivered · ACC-04 5 facts logged</td></tr>
+    <tr><td>May 18</td><td>Web/Dev · Local SEO</td><td>WEB-08 footer fix · LSEO-04 competitive monitor #1</td></tr>
+    <tr><td>May 19</td><td>Content · Account</td><td>CON-03 /stores expansion delivered · ACC-05 weekly pulse #1</td></tr>
+    <tr><td>May 20</td><td>Web/Dev · Content</td><td>WEB /about-us live · CON-04 /phillipsburg copy delivered</td></tr>
+    <tr><td>May 22</td><td>Web/Dev · Local SEO</td><td>WEB-04 JSON-LD live · WEB-07 og:image · LSEO-03 mid-month scan · ACC-02 GBP link decision</td></tr>
+    <tr><td>May 23</td><td>Web/Dev · Local SEO</td><td>WEB-05 FAQPage schema · WEB-06 /phillipsburg page live · LSEO-04 competitive monitor #2</td></tr>
+    <tr><td>May 26</td><td>Account</td><td>ACC-05 weekly pulse #2</td></tr>
+    <tr><td>May 29</td><td>Web/Dev</td><td>WEB-09 BreadcrumbList on 5 pages</td></tr>
+    <tr><td>May 30</td><td>Content · Web/Dev</td><td>CON-06 4 blog posts live · WEB-10 console-error sweep</td></tr>
+    <tr><td>May 31</td><td>Local SEO</td><td>LSEO-03 end-month scan</td></tr>
+    <tr><td>June 1</td><td>Local SEO · Account</td><td>LSEO-04 competitive monitor #3 · LSEO-03 comparison memo</td></tr>
+    <tr><td>June 2</td><td>Account</td><td>ACC-05 weekly pulse #3 (May closeout preview)</td></tr>
+    <tr><td>June 3</td><td>Account</td><td>ACC-06 May closeout + June preview delivered</td></tr>
+  </tbody>
+</table>
+
+<div class="footer-meta">
+  Prepared by Dispenza Dispensary Marketing · May 13, 2026 · Internal — Tactical Execution<br>
+  Paired with: 2026-05_strategy-report.html (cross-department strategy) · 2026-04_performance-review.html (client-facing April recap).
+</div>
+
+</main>
+</div>
+</body>
+</html>

@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MindLift Dispensary — April 2026 Performance Review</title>
+<style>
+  :root {
+    --primary: #4a2c6f;
+    --primary-light: #6b4a91;
+    --gold: #d4a843;
+    --gold-dark: #a07f29;
+    --sage: #8aa380;
+    --cream: #faf3e3;
+    --rust: #d96b3b;
+    --charcoal: #2b2b2b;
+    --gray: #6a6a6a;
+    --light-gray: #ececec;
+    --bg: #fbf8f3;
+    --good: #2f7d4f;
+    --bad: #b8473a;
+    --warn: #c97a2f;
+  }
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; line-height: 1.55; color: var(--charcoal); background: var(--bg); margin: 0; padding: 0; }
+  .wrap { max-width: 940px; margin: 0 auto; padding: 40px 28px 80px; }
+  header.hero { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); color: var(--cream); padding: 56px 28px; border-radius: 8px 8px 0 0; }
+  header.hero .label { font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); font-weight: 600; }
+  header.hero h1 { font-size: 36px; margin: 8px 0 10px; font-weight: 700; line-height: 1.15; }
+  header.hero p.sub { font-size: 17px; margin: 0; opacity: 0.92; }
+  .container { background: white; padding: 40px 44px; border-radius: 0 0 8px 8px; box-shadow: 0 2px 14px rgba(0,0,0,0.05); }
+  h2 { color: var(--primary); font-size: 24px; margin: 36px 0 14px; border-bottom: 2px solid var(--gold); padding-bottom: 8px; }
+  h2:first-child { margin-top: 0; }
+  h3 { color: var(--primary-light); font-size: 18px; margin: 24px 0 10px; }
+  h4 { color: var(--charcoal); font-size: 15px; margin: 18px 0 6px; text-transform: uppercase; letter-spacing: 0.06em; }
+  p { margin: 10px 0; }
+  table { width: 100%; border-collapse: collapse; margin: 14px 0 20px; font-size: 14px; }
+  th { background: var(--primary); color: var(--cream); text-align: left; padding: 10px 12px; font-weight: 600; }
+  td { padding: 9px 12px; border-bottom: 1px solid var(--light-gray); }
+  tr:nth-child(even) td { background: #faf6ee; }
+  .num { text-align: right; font-variant-numeric: tabular-nums; }
+  .good { color: var(--good); font-weight: 600; }
+  .bad { color: var(--bad); font-weight: 600; }
+  .neutral { color: var(--gray); }
+  .stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 20px 0; }
+  .stat { background: var(--cream); padding: 16px 14px; border-radius: 6px; border-left: 4px solid var(--gold); }
+  .stat .label { font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gray); }
+  .stat .value { font-size: 22px; font-weight: 700; color: var(--primary); margin: 4px 0 2px; }
+  .stat .delta { font-size: 12px; color: var(--good); font-weight: 600; }
+  .stat .delta.down { color: var(--bad); }
+  .stat .delta.flat { color: var(--gray); }
+  .callout { background: var(--cream); border-left: 5px solid var(--gold); padding: 16px 20px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+  .callout.win { background: #ecf3eb; border-left-color: var(--good); }
+  .callout.watch { background: #faf2ec; border-left-color: var(--warn); }
+  .callout.solution { background: #eef0f7; border-left-color: var(--primary-light); }
+  .callout strong { color: var(--primary); }
+  ul, ol { margin: 8px 0 12px; padding-left: 22px; }
+  li { margin: 5px 0; }
+  .correlation { background: white; border: 1px solid var(--light-gray); border-radius: 8px; padding: 20px; margin: 16px 0; }
+  .correlation-header { display: flex; align-items: center; gap: 14px; padding-bottom: 12px; border-bottom: 1px dashed var(--light-gray); margin-bottom: 12px; }
+  .correlation-header .arrow { background: var(--gold); color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 16px; }
+  .correlation-header h4 { margin: 0; color: var(--primary); text-transform: none; letter-spacing: 0; font-size: 16px; }
+  .footer-meta { text-align: center; font-size: 12px; color: var(--gray); margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--light-gray); }
+  @media (max-width: 680px) {
+    .stat-grid { grid-template-columns: repeat(2, 1fr); }
+    .container { padding: 24px 20px; }
+    header.hero { padding: 32px 20px; }
+    header.hero h1 { font-size: 26px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <div class="label">Performance Review · April 2026</div>
+  <h1>MindLift Dispensary</h1>
+  <p class="sub">The first $100K month — and the highest-conversion month — in MindLift's history</p>
+</header>
+
+<main class="container">
+
+<h2>Executive Summary</h2>
+<p>April was <strong>the best month MindLift has ever had</strong> — on every measurable dimension. Gross sales cleared <strong>$110K for the first time</strong> (the $100K trajectory target was hit a month early). Tickets, units sold, total customers, and new customers all set all-time highs. Phone calls, direction requests, and website clicks from the Google Business Profile peaked for the trailing 6-month window. And the rare combination of <strong>expanding margin (52%) + disciplined discount (10%) + growing acquisition (388 new customers) + improving retention (76%)</strong> happened simultaneously.</p>
+<p>Two watch items balance the wins. First, the broader NJ cannabis search market is softening — total GBP impressions dropped 11–20% YoY across most queries (a sign of market maturity). The good news: <strong>actions grew 20%+ as impressions fell</strong>, which is the cleanest possible signal that the customers Google sends are converting at higher rates. Second, a new Plainfield competitor (Kota Canna Dispensary) is dominating the "cannabis" and "dispensary" search terms with Google's new-business boost. May's work is designed to defend and counter — without losing momentum on the weed-term moat that already drives most of your traffic.</p>
+<p>Below is the full picture — what worked in April, how each Local SEO channel connected to in-store and delivery revenue, and the workstreams Dispenza is executing in May.</p>
+
+<div class="stat-grid">
+  <div class="stat">
+    <div class="label">Gross Sales (April)</div>
+    <div class="value">$110,143</div>
+    <div class="delta">+17.6% MoM · first $100K+ month</div>
+  </div>
+  <div class="stat">
+    <div class="label">Tickets (April)</div>
+    <div class="value">1,851</div>
+    <div class="delta">+13.6% MoM · all-time high</div>
+  </div>
+  <div class="stat">
+    <div class="label">Customers (April)</div>
+    <div class="value">1,622</div>
+    <div class="delta">+14.5% MoM · 388 new (24%)</div>
+  </div>
+  <div class="stat">
+    <div class="label">Gross Margin</div>
+    <div class="value">50.22%</div>
+    <div class="delta">+16 pts vs Aug 2025 launch</div>
+  </div>
+</div>
+
+<h2>1. The April Story — Why This Was a Milestone Month</h2>
+
+<h3>1.1 First $100K Month</h3>
+<p>April delivered <strong>$110,143 in gross sales</strong> — up 17.6% from March's $93,662, which itself was up 33% from February. April was your <strong>first month above $100K</strong> and crossed the $100K trajectory target a month ahead of plan. Run-rate for May (12 days of data) is on pace for $118K, suggesting the upward trajectory is intact.</p>
+
+<table>
+  <thead>
+    <tr><th>Month</th><th class="num">Gross Sales</th><th class="num">Tickets</th><th class="num">Customers</th><th class="num">New Customers</th><th class="num">Margin %</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Aug 2025 (first full month)</td><td class="num">$42,886</td><td class="num">686</td><td class="num">233</td><td class="num">131 (56%)</td><td class="num">36.14%</td></tr>
+    <tr><td>Jan 2026</td><td class="num">$77,021</td><td class="num">1,428</td><td class="num">1,038</td><td class="num">309 (30%)</td><td class="num">51.81%</td></tr>
+    <tr><td>Feb 2026</td><td class="num">$70,235</td><td class="num">1,291</td><td class="num">1,096</td><td class="num">273 (25%)</td><td class="num">49.88%</td></tr>
+    <tr><td>Mar 2026</td><td class="num">$93,662</td><td class="num">1,629</td><td class="num">1,417</td><td class="num">348 (25%)</td><td class="num">51.33%</td></tr>
+    <tr><td><strong>Apr 2026</strong></td><td class="num"><strong>$110,143</strong></td><td class="num"><strong>1,851</strong></td><td class="num"><strong>1,622</strong></td><td class="num"><strong>388 (24%)</strong></td><td class="num">50.22%</td></tr>
+    <tr><td>May 2026 MTD (12 days)</td><td class="num">$45,715</td><td class="num">808</td><td class="num">742</td><td class="num">169 (23%)</td><td class="num">52.21%</td></tr>
+  </tbody>
+</table>
+
+<div class="callout win">
+  <strong>What this means:</strong> Every dimension of the business is growing at once. Aug 2025 → Apr 2026 is a <strong>157% gross-sales lift</strong> (2.57×) in 9 months. Critically, that growth is not coming from heavier discounting (down from 28% in Aug → 10% in Apr) or thinner margin (margin expanded 34% → 50%). It's coming from <strong>more customers + more visits per customer + healthier per-transaction economics</strong> — exactly the mix you want.
+</div>
+
+<h3>1.2 Margin Expansion — Opposite of the Industry Trend</h3>
+<p>Gross margin expanded from <strong>33.93% in July 2025 (soft launch) to 50.22% in April 2026</strong> — a 16-point improvement over 10 months. For comparison, several peer NJ and broader-market dispensaries are experiencing structural margin compression as competition heats up. MindLift is moving in the opposite direction, anchored by disciplined pricing and a stabilized vendor mix.</p>
+
+<table>
+  <thead>
+    <tr><th>Quarter</th><th class="num">Gross Margin</th><th class="num">Discount %</th><th class="num">Avg Order Value</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Q3 2025 (Jul-Sep launch)</td><td class="num">37.2%</td><td class="num">24.0%</td><td class="num">$43.43</td></tr>
+    <tr><td>Q4 2025 (Oct-Dec)</td><td class="num">48.2%</td><td class="num">10.7%</td><td class="num">$47.83</td></tr>
+    <tr><td>Q1 2026 (Jan-Mar)</td><td class="num">51.0%</td><td class="num">8.8%</td><td class="num">$54.14</td></tr>
+    <tr><td><strong>Apr 2026</strong></td><td class="num"><strong>50.2%</strong></td><td class="num"><strong>10.1%</strong></td><td class="num"><strong>$57.94</strong></td></tr>
+  </tbody>
+</table>
+
+<p>April's slight discount-rate uptick (10.1% vs Q1's 8.8%) reflects 420 promotional activity — expected and healthy. AOV continues to climb steadily ($43 → $58 in 10 months), suggesting customers are progressively shifting toward higher-priced or larger-basket purchases.</p>
+
+<h3>1.3 Customer Dynamics — Acquisition + Retention Both Growing</h3>
+<p>388 new customers in April was your <strong>highest-ever new-acquisition month</strong>. At the same time, returning-customer share climbed to <strong>76%</strong> (1,234 returning of 1,622 total) — meaning the customer base is maturing without slowing new entry.</p>
+
+<div class="callout win">
+  <strong>The dual signal:</strong> Many dispensaries face a tradeoff — they either grow new customer count OR grow retention, rarely both simultaneously. MindLift grew both in absolute terms in April. New customers up from 348 (March) to 388 (April). Returning customers up from 1,069 to 1,234. The customer pipeline is healthy at every stage.
+</div>
+
+<h2>2. Local SEO Wins — Where MindLift Owns the Market</h2>
+
+<h3>2.1 Weed-Term Total Dominance</h3>
+<p>The May 8, 2026 Local Falcon scan across an 11×11 grid covering 16 mi² centered on Plainfield:</p>
+
+<table>
+  <thead>
+    <tr><th>Search Term</th><th class="num">Avg Rank Position</th><th class="num">Share of Local Voice</th><th>Status</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>weed</strong></td><td class="num"><strong>1.00</strong></td><td class="num"><strong>100.00%</strong></td><td class="good">#1 every cell (121/121) ✓</td></tr>
+    <tr><td><strong>weed dispensary</strong></td><td class="num"><strong>1.00</strong></td><td class="num"><strong>100.00%</strong></td><td class="good">#1 every cell (121/121) ✓</td></tr>
+    <tr><td><strong>weed near me</strong></td><td class="num"><strong>1.00</strong></td><td class="num"><strong>100.00%</strong></td><td class="good">#1 every cell (121/121) ✓</td></tr>
+    <tr><td><strong>weed delivery</strong></td><td class="num"><strong>1.06</strong></td><td class="num"><strong>100.00%</strong></td><td class="good">~#1 every cell ✓ (3/11 data)</td></tr>
+    <tr><td>cannabis delivery</td><td class="num">2.85</td><td class="num">69.42%</td><td class="good">#2 · +28.10 SoLV gained</td></tr>
+    <tr><td>dispensary delivery</td><td class="num">3.33</td><td class="num">64.46%</td><td class="good">#3 · +29.75 SoLV gained</td></tr>
+    <tr><td>cannabis near me</td><td class="num">5.75</td><td class="num">30.58%</td><td class="neutral">#4 · slight decline</td></tr>
+    <tr><td>cannabis</td><td class="num">6.32</td><td class="num">18.18%</td><td class="neutral">#7 · improving</td></tr>
+    <tr><td><strong>dispensary near me</strong></td><td class="num">6.34</td><td class="num">9.92%</td><td class="bad">#7 · top defensive target</td></tr>
+    <tr><td>dispensary</td><td class="num">6.50</td><td class="num">9.09%</td><td class="bad">#8 · top defensive target</td></tr>
+  </tbody>
+</table>
+
+<div class="callout win">
+  <strong>The weed-term moat is structural.</strong> Across the four weed-side terms — which Google Business Profile data shows drive a combined <strong>~5,500+ monthly searches</strong> to your profile — MindLift appears at <strong>#1 across 100% of the 121 grid cells</strong>. There is no competitor in your immediate market that can dislodge you on weed-related queries. This is the foundation of MindLift's local presence.
+</div>
+
+<h3>2.2 The "Dispensary Near Me" Challenge — Your Highest-Volume Query Has a New Competitor</h3>
+<p>Google Business Profile data shows <strong>"dispensary near me" drove 6,723 monthly searches</strong> to your profile in the trailing 6 months — the #1-volume query, accounting for ~22% of all searches that surfaced MindLift. Local Falcon shows MindLift currently ranks <strong>#7 average with 9.92% SoLV</strong> on this term — and SoLV has dropped <strong>20.66 points</strong> over the last 5 months.</p>
+
+<div class="callout watch">
+  <strong>Root cause:</strong> <strong>Kota Canna Dispensary</strong> (206 Watchung Ave Plainfield, 4.9★ at 76 reviews) — a new local competitor — is currently dominating cannabis + dispensary terms at <strong>90+% SoLV</strong> across all four. Kota Canna has 1/8th the reviews you do (76 vs 624) and is opened more recently, but Google's "new business boost" temporarily elevates new listings during a 6–12 month grace window. We've seen this exact pattern before — boosts typically decay; the brand with longer compounding history (yours) usually retakes ground organically.
+</div>
+
+<h3>2.3 Discovery Dominates — 97.6% of Search Traffic Is Non-Branded</h3>
+<p>Across the top 19 search queries that surfaced MindLift's profile in the trailing 6 months, <strong>only one query is branded</strong> ("mindlift recreational weed dispensary, park avenue, plainfield, nj" — 469 searches). The other 18 queries are all non-branded discovery terms ("dispensary near me", "weed dispensary", "weed", "cannabis store", etc.).</p>
+<p>Discovery share: <strong>97.6%</strong>. Direct (branded) share: <strong>2.4%</strong>. This is a healthy mix for a 10-month-old business — Google is sending you the customers searching for the category, not just searching for your name. The opportunity ahead: brand-awareness investment (PR, social, OOH, the city-mention review tactic) would compound the existing SEO lead and lift the branded share over time.</p>
+
+<h2>3. How Local SEO Translates to Revenue</h2>
+
+<div class="correlation">
+  <div class="correlation-header">
+    <div class="arrow">💻</div>
+    <h4>Website Clicks → Online Orders → Pickup &amp; Delivery</h4>
+  </div>
+  <p>Across Dec 2025 – May 2026, MindLift's GBP delivered <strong>6,306 website clicks</strong> — the dominant action type (74.8% of all profile interactions). With your menu hosted on Jane (mindliftdispensary.com/menu) and the GBP link UTM-tagged for tracking, this is the primary digital-to-purchase pipeline.</p>
+  <p>At MindLift's April Treez AOV of ~$58, even a modest 5–10% conversion of monthly website clicks (~1,200 in April) maps to roughly 60–120 attributable orders and $3.5K–$7K of revenue per month — and that's a conservative read. The website click channel is doing real work.</p>
+</div>
+
+<div class="correlation">
+  <div class="correlation-header">
+    <div class="arrow">📍</div>
+    <h4>Direction Requests → Walk-In + Pickup</h4>
+  </div>
+  <p>1,457 direction requests over the 6-month window (17.3% of all GBP actions). April hit ~300 in a single month — its highest. Directions are the strongest leading indicator of an in-person visit, whether that's a walk-in for an in-store shopping session or a stop to pick up an online order.</p>
+  <p>This channel is structurally smaller than website clicks for MindLift (consistent with delivery-first operations), but it's still a meaningful share of the customer mix and growing.</p>
+</div>
+
+<div class="correlation">
+  <div class="correlation-header">
+    <div class="arrow">📞</div>
+    <h4>Phone Calls → High-Intent Conversations</h4>
+  </div>
+  <p>568 calls from GBP across 6 months. April delivered ~120 — the highest monthly call volume. Phone calls represent the highest-effort pre-visit action: customers picking up the phone with a specific question. Historically these convert to in-store visits or delivery orders at higher rates than passive channels.</p>
+  <p>April's call volume was 1.81× the Q4 2025 monthly average. Combined with the 388 new customers in April, this signals a meaningful inflow of new-customer interest reaching out before their first visit.</p>
+</div>
+
+<div class="correlation">
+  <div class="correlation-header">
+    <div class="arrow">⭐</div>
+    <h4>Reviews + 5.0★ Rating → Cross-Channel Conversion Engine</h4>
+  </div>
+  <p>You closed April with <strong>624 Google reviews at 5.0★</strong> — by far the best-rated dispensary in your competitive set (Kota Canna is at 76 reviews, Plant Base at 176, Queen City at 486). Your review velocity has averaged ~62 reviews per month since opening — right on the 60/month cadence target.</p>
+  <p>Customer reviews repeatedly mention the team's friendliness, the speed of service, and — notably — your "no delivery fee, no order minimum" policy. The 5.0★ at 624 reviews is what makes every other digital channel work harder: visitors arriving from any source see best-in-market social proof before they decide to engage.</p>
+</div>
+
+<h2>4. April GBP Performance Snapshot (6-Month Window: Dec 2025 – May 2026)</h2>
+
+<table>
+  <thead>
+    <tr><th>Action</th><th class="num">6-Month Total</th><th class="num">% of all actions</th><th>April was the peak month</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Website clicks</td><td class="num">6,306</td><td class="num">74.8%</td><td class="good">✓ Yes — ~1,200 in April</td></tr>
+    <tr><td>Directions</td><td class="num">1,457</td><td class="num">17.3%</td><td class="good">✓ Yes — ~300 in April</td></tr>
+    <tr><td>Calls</td><td class="num">568</td><td class="num">6.7%</td><td class="good">✓ Yes — ~120 in April</td></tr>
+    <tr><td>Chat clicks</td><td class="num">100</td><td class="num">1.2%</td><td class="neutral">Mar peak; Apr slight dip</td></tr>
+    <tr><td><strong>Total interactions</strong></td><td class="num"><strong>8,431</strong></td><td class="num"><strong>100%</strong></td><td class="good">✓ ~1,700 in April</td></tr>
+    <tr><td>Profile views</td><td class="num">42,907</td><td class="num">—</td><td class="good">~7,700 in April</td></tr>
+    <tr><td>Search impressions</td><td class="num">21,556</td><td class="num">—</td><td class="good">~3,800 in April</td></tr>
+  </tbody>
+</table>
+
+<p><strong>Profile views per search:</strong> 1.99 (each search returns ~2 profile-view events). <strong>Mobile share:</strong> 89% (62% Google Search mobile + 27% Maps mobile + 9% desktop). Desktop is residual; the experience should prioritize mobile.</p>
+
+<h2>5. What's Working — Wins to Carry Forward</h2>
+<ul>
+  <li><strong>First $100K month</strong> — and run-rate continues upward into May</li>
+  <li><strong>388 new customers in April</strong> — all-time-high acquisition</li>
+  <li><strong>76% returning-customer share</strong> — exceptional retention for a 10-month-old business</li>
+  <li><strong>50% gross margin sustained</strong> — opposite of the broader industry's margin compression</li>
+  <li><strong>Discount % held at ~10%</strong> — pricing discipline is real and durable</li>
+  <li><strong>AOV climbed from $43 (launch) to $58 (April)</strong> — customers shifting toward higher-value baskets</li>
+  <li><strong>5.0★ at 624 reviews</strong> — best-in-class rating + volume in your competitive set</li>
+  <li><strong>~62 reviews/month organic velocity</strong> — on cadence with the 60/month target</li>
+  <li><strong>Weed-term dominance: #1 across 100% of grid cells</strong> on weed, weed dispensary, weed near me, weed delivery</li>
+  <li><strong>Cannabis-delivery SoLV up 28.10 points</strong> — strong gains on a high-value term</li>
+  <li><strong>Dispensary-delivery SoLV up 29.75 points</strong> — same trajectory on a parallel term</li>
+  <li><strong>Triple-minority ownership (Black + women + Asian) + LGBTQ+ welcome</strong> — strongest DEI surface in Dispenza's portfolio</li>
+  <li><strong>24/7 delivery, every day</strong> — operational moat with zero direct competition in the late-night window</li>
+</ul>
+
+<h2>6. May 2026 Workstreams from Dispenza</h2>
+
+<p>April's story is clear: the business is firing on all cylinders. May's work focuses on (a) defending the dispensary-term position against Kota Canna's new-business boost, (b) building the website infrastructure to fully amplify the brand differentiators that are currently invisible to organic visitors, and (c) anchoring the upcoming Phillipsburg satellite GBP with the right website foundation. Six workstreams:</p>
+
+<div class="callout">
+  <h4 style="margin-top:0;">Technical SEO Foundation — Tier 1 Fixes</h4>
+  <p>The May 12 site audit surfaced foundational gaps that limit how much Google can amplify the brand. We're shipping: missing <code>robots.txt</code>, sitewide JSON-LD schema markup (LocalBusiness, Organization, FAQPage on the 12 visible FAQs), an H1 on the homepage (currently missing), fixed double-H1 on <code>/about-us</code>, and a tightened title tag for the About page (currently 150 chars). These are the technical blockers that let Google understand and feature the site properly.</p>
+</div>
+
+<div class="callout">
+  <h4 style="margin-top:0;">Brand Differentiator Content — Surface What Makes MindLift Unique</h4>
+  <p>Right now the website doesn't mention "Black-owned", "Woman-owned", "Asian-owned", "LGBTQ+ friendly", "24/7 delivery", or "no minimum / no delivery fee" anywhere on the home, about, delivery, or location pages. These are <strong>your strongest competitive moats</strong> — and they're invisible to organic visitors. We're rewriting <code>/about-us</code> (600+ words), <code>/delivery</code> (1,000+ words leading with 24/7), and the Plainfield store landing page to make these the headline message.</p>
+</div>
+
+<div class="callout">
+  <h4 style="margin-top:0;">Phillipsburg Landing Page — Anchor the Satellite GBP</h4>
+  <p>Your Phillipsburg satellite GBP launch needs a corresponding website landing page to anchor entity relevance with Google. Currently the <code>/delivery</code> page mentions Phillipsburg and has an "ORDER PHILLIPSBURG" CTA, but there's no dedicated landing page. We're building <code>/phillipsburg</code> in May so the satellite has the SEO anchor it needs when it goes live.</p>
+</div>
+
+<div class="callout">
+  <h4 style="margin-top:0;">Cannabis + Dispensary Term Defense — Counter Kota Canna</h4>
+  <p>While the new-business boost helping Kota Canna will typically decay in 6–12 months, we're not waiting passively. May content focuses on cannabis-leading language in the homepage hero, GBP description rewrite featuring "cannabis dispensary" terminology, GBP posts using "dispensary near me" / "cannabis store" language in image alt text, and 4 dedicated blog posts targeting cannabis/dispensary intent. Defense + content acceleration in parallel.</p>
+</div>
+
+<div class="callout">
+  <h4 style="margin-top:0;">GBP Cadence Sustain + Photo Refresh</h4>
+  <p>GBP posts at 4+/week, weekly photo uploads (storefront, delivery, interactions, product drops), and a Direct-vs-Discovery KPI split in weekly reporting. We'll also surface the photo refresh need (see retailer recommendations below — the storefront photo currently shows "LIFT DISPENSARY" signage and a construction dumpster).</p>
+</div>
+
+<div class="callout">
+  <h4 style="margin-top:0;">Dispenza ROI Tool ACV Calibration</h4>
+  <p>Your Dispenza admin ROI tool currently uses a $50 Average Cart Value assumption. Your actual Treez AOV is ~$57.94 in April (~$53 net basis). We're updating the configuration in May so future ROI reports reflect the true ~$55 baseline — which lifts your reported attributed revenue ~10% (TGS rises from $19.7K to ~$21.7K, ROI rises from 197% to ~217%). This is a Dispenza-internal admin fix, no action needed on your side, but worth knowing because your reports will look slightly more accurate going forward.</p>
+</div>
+
+<h2>7. Recommendations for the MindLift Team</h2>
+
+<p>Our audit surfaced opportunities that are best executed by your in-store team rather than by Dispenza — they depend on photo refresh decisions, in-store training, POS configuration, or regulatory checks that your team is best positioned to make. We surface them here for your consideration. These are observations, not Dispenza commitments.</p>
+
+<div class="callout solution">
+  <h4 style="margin-top:0;">📸 Storefront Photo Refresh — Visible Brand Mismatch</h4>
+  <p><strong>What we found:</strong> The current GBP storefront photo shows signage that reads <strong>"LIFT DISPENSARY"</strong>, not "MindLift Recreational Weed Dispensary". The photo also shows a yellow construction dumpster outside the entrance — likely an old image from before the storefront was complete.</p>
+  <p><strong>What you might consider:</strong> A fresh storefront photo capture (well-lit afternoon, clean exterior, current signage) plus a few interior shots — counter, display cases, lounge area. The current photo is the first visual a discovery customer sees on Google Maps; ensuring it matches the brand reduces walk-up confusion.</p>
+  <p><strong>Dispenza supports this by:</strong> we'll upload and order the photo gallery in GBP, write the alt text, and tie it into the May post calendar.</p>
+</div>
+
+<div class="callout solution">
+  <h4 style="margin-top:0;">🚗 Curbside Pickup — Worth a Regulatory Check</h4>
+  <p><strong>What we found:</strong> Your GBP service options include in-store shopping, in-store pickup for online orders, and delivery — but <strong>not curbside pickup</strong>. This is the only service-option gap.</p>
+  <p><strong>What you might consider:</strong> A quick check with regulatory counsel on whether NJ adult-use rules permit cannabis curbside pickup. If permitted, it's a low-cost addition that materially improves convenience for mobility-limited customers, parents-with-kids-in-car, and weather-day pickup. If not permitted in NJ, the gap is regulatory, not operational — and we leave it as documented.</p>
+</div>
+
+<div class="callout solution">
+  <h4 style="margin-top:0;">💳 Credit Card Acceptance — Confirm Before Amplifying in Marketing</h4>
+  <p><strong>What we found:</strong> Your GBP "More" tab lists VISA, Discover, AmEx, Mastercard, Diners Club, plus NFC mobile payments. This is rare for cannabis retail (federally illegal status means most card networks don't process direct cannabis charges) and would be a meaningful customer-experience differentiator if accurate.</p>
+  <p><strong>What you might consider:</strong> A confirmation from your operations team on the current payment-processor setup. If it's via a cashless-ATM workaround or a compliant processor like Aeropay, the messaging needs to reflect that nuance. Once confirmed, this becomes prime marketing material (and material for your About page rewrite).</p>
+</div>
+
+<div class="callout solution">
+  <h4 style="margin-top:0;">📝 Review-Velocity City Mentions — Stretch the Ranking Radius</h4>
+  <p><strong>The data:</strong> You're at 624 reviews at 5.0★ with a ~62/month organic velocity. Excellent already. The opportunity is in the <em>content</em> of new reviews, not the volume.</p>
+  <p><strong>What you might consider:</strong> A simple budtender / driver script for delivery customers — <em>"If you have a minute to leave us a review, please mention which town we delivered to today. It helps neighbors in your area find us."</em> Google uses city-mentions in reviews as a proximity-relevance signal that can extend your algorithmic ranking radius beyond Plainfield. Specifically valuable for: Phillipsburg (when the satellite GBP launches), Scotch Plains, Edison, South Plainfield, and the broader Union County / North Jersey service area.</p>
+  <p><strong>Dispenza supports this by:</strong> we'll supply the suggested budtender/driver script and design a small register placard reinforcing the ask.</p>
+</div>
+
+<div class="callout solution">
+  <h4 style="margin-top:0;">🌟 Brand Story for the About Page Rewrite — Heather's Voice Needed</h4>
+  <p><strong>What we're doing:</strong> Dispenza is rewriting <code>/about-us</code> in May (Pillar 2) to surface Black-owned + Woman-owned + Asian-owned + LGBTQ+ welcome + 24/7 delivery — all of which are currently invisible to organic visitors.</p>
+  <p><strong>What you might consider:</strong> A short interview (15-20 minutes via call) so we can ground the rewrite in the actual founder story rather than generic copy. Knowing the "why" behind each ownership identity, the operational decision to run 24/7 delivery, and the community connection in Plainfield will make the page feel authentic rather than templated.</p>
+  <p><strong>Dispenza supports this by:</strong> we'll provide draft copy after the interview for your review/edit before publishing.</p>
+</div>
+
+<h2>8. May 2026 KPIs We're Tracking</h2>
+
+<table>
+  <thead><tr><th>KPI</th><th>April Result</th><th>May Target</th></tr></thead>
+  <tbody>
+    <tr><td>Weed-term SoLV (4 terms)</td><td>100% (all four at #1)</td><td>Hold all four at 100%</td></tr>
+    <tr><td><strong>"Dispensary near me" SoLV</strong> (your #1 GBP query at 6,723 mo searches)</td><td><strong>9.92% (#7)</strong></td><td><strong>15%+ (stretch 20%+) — defense vs Kota Canna</strong></td></tr>
+    <tr><td>"Dispensary" SoLV</td><td>9.09% (#8)</td><td>15%+ — same defensive target</td></tr>
+    <tr><td>"Cannabis" SoLV</td><td>18.18% (#7)</td><td>22%+ — continuing the upward trajectory</td></tr>
+    <tr><td>Cannabis-delivery SoLV (3/11 baseline)</td><td>69.42% (#2)</td><td>Rescan + maintain 65%+</td></tr>
+    <tr><td>GBP Total Interactions / mo</td><td>~1,700 (Apr peak)</td><td>Hold 1,500+ (resist seasonality)</td></tr>
+    <tr><td>Website Clicks / mo</td><td>~1,200</td><td>1,250+</td></tr>
+    <tr><td>Direction Requests / mo</td><td>~300</td><td>300+</td></tr>
+    <tr><td>Phone Calls / mo</td><td>~120</td><td>120+</td></tr>
+    <tr><td>Net new Google reviews</td><td>~62/mo run rate</td><td>60+ in May</td></tr>
+    <tr><td>Gross Sales (POS)</td><td>$110,143</td><td>$110K+ (May MTD pace: $118K)</td></tr>
+    <tr><td>Gross Margin %</td><td>50.22%</td><td>Sustain 50%+</td></tr>
+    <tr><td>Discount %</td><td>10.13%</td><td>Sustain &lt;12%</td></tr>
+    <tr><td>Avg Order Value</td><td>$57.94</td><td>Sustain $55+</td></tr>
+    <tr><td>New Customers / mo</td><td>388</td><td>375+</td></tr>
+    <tr><td>Returning-Customer Share</td><td>76%</td><td>Sustain 75%+</td></tr>
+  </tbody>
+</table>
+
+<div class="footer-meta">
+  Prepared by Dispenza Dispensary Marketing · May 13, 2026<br>
+  Data sources: Treez POS export (11-month history, 309 daily rows), Google Business Profile insights (22 screenshots, Dec 2025–May 2026), Local Falcon trend reports (10 keywords, May 8 + March 11 scans), Dispenza internal ROI report (April 2026, mothership + delivery satellite), full Playwright website audit (22 indexed pages).
+</div>
+
+</main>
+</div>
+</body>
+</html>

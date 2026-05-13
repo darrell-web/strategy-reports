@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MindLift Dispensary — May 2026 Cross-Department Coordination Plan</title>
+<style>
+  :root {
+    --primary: #4a2c6f;
+    --primary-light: #6b4a91;
+    --gold: #d4a843;
+    --gold-dark: #a07f29;
+    --sage: #8aa380;
+    --cream: #faf3e3;
+    --rust: #d96b3b;
+    --charcoal: #2b2b2b;
+    --gray: #6a6a6a;
+    --light-gray: #ececec;
+    --bg: #fbf8f3;
+    --good: #2f7d4f;
+    --bad: #b8473a;
+    --warn: #c97a2f;
+  }
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; line-height: 1.55; color: var(--charcoal); background: var(--bg); margin: 0; padding: 0; }
+  .wrap { max-width: 1000px; margin: 0 auto; padding: 40px 28px 80px; }
+  header.hero { background: linear-gradient(135deg, var(--primary) 0%, var(--charcoal) 100%); color: var(--cream); padding: 56px 28px; border-radius: 8px 8px 0 0; }
+  header.hero .internal { display: inline-block; background: var(--rust); color: white; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 3px; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 14px; }
+  header.hero .label { font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); font-weight: 600; }
+  header.hero h1 { font-size: 34px; margin: 8px 0 10px; font-weight: 700; line-height: 1.15; }
+  header.hero p.sub { font-size: 16px; margin: 0; opacity: 0.92; }
+  .container { background: white; padding: 40px 44px; border-radius: 0 0 8px 8px; box-shadow: 0 2px 14px rgba(0,0,0,0.05); }
+  h2 { color: var(--primary); font-size: 22px; margin: 36px 0 14px; border-bottom: 2px solid var(--gold); padding-bottom: 8px; }
+  h2:first-child { margin-top: 0; }
+  h3 { color: var(--primary-light); font-size: 17px; margin: 22px 0 10px; }
+  h4 { color: var(--charcoal); font-size: 14px; margin: 14px 0 6px; text-transform: uppercase; letter-spacing: 0.06em; }
+  p { margin: 8px 0; }
+  code { background: #f3efe6; padding: 1px 5px; border-radius: 3px; font-size: 12.5px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0 18px; font-size: 13px; }
+  th { background: var(--primary); color: var(--cream); text-align: left; padding: 9px 11px; font-weight: 600; }
+  td { padding: 8px 11px; border-bottom: 1px solid var(--light-gray); vertical-align: top; }
+  tr:nth-child(even) td { background: #faf6ee; }
+  .pre-section { background: var(--cream); border-left: 5px solid var(--gold); padding: 16px 22px; margin: 16px 0; border-radius: 0 6px 6px 0; }
+  .pre-section strong { color: var(--primary); }
+  .dept { background: white; border: 1px solid var(--light-gray); border-radius: 8px; padding: 22px 26px; margin: 22px 0; }
+  .dept-head { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding-bottom: 14px; border-bottom: 3px solid var(--gold); margin-bottom: 14px; }
+  .dept-title { display: flex; align-items: center; gap: 14px; }
+  .dept-icon { background: var(--primary); color: white; width: 42px; height: 42px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 22px; }
+  .dept-name h3 { margin: 0; color: var(--primary); font-size: 18px; }
+  .dept-name .owner { font-size: 12px; color: var(--gray); text-transform: uppercase; letter-spacing: 0.06em; }
+  .dept-priority { background: var(--rust); color: white; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 3px; letter-spacing: 0.06em; text-transform: uppercase; }
+  .dept-priority.p2 { background: var(--gold); }
+  .dept-priority.p3 { background: var(--sage); }
+  .commit { background: var(--cream); padding: 14px 16px; border-radius: 6px; margin: 10px 0; border-left: 4px solid var(--gold); }
+  .commit-title { font-weight: 700; color: var(--primary); margin-bottom: 4px; }
+  .commit-meta { font-size: 11px; color: var(--gray); text-transform: uppercase; letter-spacing: 0.06em; margin-top: 6px; }
+  .ev { font-size: 12px; color: var(--gray); font-style: italic; background: #f3efe6; padding: 6px 10px; border-radius: 4px; margin-top: 8px; }
+  .ev strong { color: var(--primary); font-style: normal; }
+  .issue { background: #fdf4ec; border-left: 5px solid var(--warn); padding: 12px 16px; margin: 12px 0; border-radius: 0 6px 6px 0; font-size: 13.5px; }
+  .issue strong { color: var(--warn); }
+  .critical { background: #fbe9e7; border-left: 5px solid var(--bad); padding: 12px 16px; margin: 12px 0; border-radius: 0 6px 6px 0; font-size: 13.5px; }
+  .critical strong { color: var(--bad); }
+  .scope-note { background: #eef0f7; border-left: 5px solid var(--primary-light); padding: 12px 16px; margin: 12px 0; border-radius: 0 6px 6px 0; font-size: 13px; }
+  ul, ol { margin: 6px 0 10px; padding-left: 20px; }
+  li { margin: 4px 0; }
+  .stat-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 14px 0; }
+  .stat { background: var(--cream); padding: 12px; border-radius: 6px; border-left: 4px solid var(--gold); }
+  .stat .label { font-size: 11px; color: var(--gray); text-transform: uppercase; letter-spacing: 0.06em; }
+  .stat .val { font-size: 18px; font-weight: 700; color: var(--primary); }
+  .footer-meta { text-align: center; font-size: 12px; color: var(--gray); margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--light-gray); }
+  @media (max-width: 720px) {
+    .container { padding: 26px 22px; }
+    header.hero { padding: 32px 20px; }
+    header.hero h1 { font-size: 24px; }
+    .stat-row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <div class="internal">Cross-Department Coordination Plan</div>
+  <div class="label">Strategy · May 2026</div>
+  <h1>MindLift Dispensary</h1>
+  <p class="sub">Defend the weed-term moat. Build the brand-differentiator surface area. Anchor the Phillipsburg satellite. May's coordinated execution.</p>
+</header>
+
+<main class="container">
+
+<h2>Why This Document Exists</h2>
+<p>For the first time, Dispenza has the full data picture for MindLift Dispensary: <strong>11 months of Treez POS data (309 daily rows, Jul 2025 → May 2026)</strong>, <strong>22 GBP back-office + Performance screenshots</strong>, <strong>2 Dispenza internal ROI reports</strong> (mothership + delivery satellite, Apr 2026), <strong>10 Local Falcon trend reports</strong> (May 8 core + March 11 delivery scans), and a <strong>full Playwright website audit</strong> of mindliftdispensary.com (22 indexed pages).</p>
+<p>That picture surfaces a clarifying truth: <strong>April was MindLift's best month ever ($110K gross, first $100K month, 388 new customers, 76% retention, 50% margin) — yet the brand differentiators that make the business unique (Black-owned + women-owned + Asian-owned + LGBTQ+ welcome + 24/7 delivery + no minimum / no fee) are invisible on the website.</strong> The May plan is built to fix that gap and defend a new dispensary-term threat from Kota Canna's Google new-business boost.</p>
+
+<div class="scope-note">
+  <strong>This document covers only actions Dispenza can execute directly.</strong> Recommendations that depend on MindLift's in-store team, regulatory checks, or operations decisions (photo refresh, curbside enablement, payment-processor confirmation) are surfaced separately in the April Performance Review (client-facing) as observations the MindLift team may want to consider. They are <strong>not</strong> commitments in this plan.
+</div>
+
+<p>The companion May Playbook holds the click-by-click execution + Master Copy Library. This document tells <strong>each Dispenza department what they specifically own this month</strong>, with measurable acceptance criteria.</p>
+
+<div class="stat-row">
+  <div class="stat"><div class="label">Weed-term SoLV</div><div class="val">100% (all 4)</div></div>
+  <div class="stat"><div class="label">"Dispensary near me" SoLV</div><div class="val">9.92% ↓20.66pts</div></div>
+  <div class="stat"><div class="label">Website JSON-LD count</div><div class="val">0 (sitewide)</div></div>
+  <div class="stat"><div class="label">Brand-differentiator mentions on site</div><div class="val">0</div></div>
+</div>
+
+<h2>The Single May Mandate</h2>
+<div class="pre-section">
+<p style="margin:0; font-size:15px;"><strong>Through Dispenza-controlled digital channels — website, GBP, content, schema markup, and ROI attribution — defend "dispensary near me" SoLV against Kota Canna's new-business boost, lift "cannabis" + "dispensary" SoLV by 5+ points each, surface the four brand differentiators (DEI ownership · LGBTQ+ welcome · 24/7 delivery · no minimum) across the home / about / delivery / store pages, build the /phillipsburg landing page to anchor the satellite GBP, deploy site-wide JSON-LD schema, fix the missing/duplicate H1s, and recalibrate the ROI tool ACV from $50 → $55.</strong></p>
+</div>
+
+<h2>Critical Issues — All Dispenza-Fixable</h2>
+
+<div class="critical">
+<strong>BLOCKER 1 — Zero JSON-LD schema markup anywhere on mindliftdispensary.com.</strong> Every page audited (home, about, delivery, menu, contact, /stores/...plainfield-nj) returns <code>script[type="application/ld+json"]</code> count = 0. No Organization, no LocalBusiness, no FAQPage on the 12 visible FAQs, no AggregateRating surfacing the 624 reviews / 5.0★, no BreadcrumbList. Web/Dev priority for Weeks 2–3.
+</div>
+
+<div class="critical">
+<strong>BLOCKER 2 — Homepage has NO H1 tag.</strong> Every heading on the homepage is H2. The hero "Welcome To" + "Dispensary" elements are styled as H2s. Google relies on H1 for primary topic signal. Combined with the schema gap, the site's two highest-leverage on-page signals are both broken on the homepage. Web/Dev Week 1.
+</div>
+
+<div class="critical">
+<strong>BLOCKER 3 — <code>/about-us</code> has TWO H1s + a 150-character title.</strong> The page has both "ABOUT US" and "About MINDLIFT DISPENSARY" as H1 elements. Title tag is "About MindLift Dispensary Recreational &amp; Delivery - Our Mission, Values, and Story - MindLift Dispensary Recreational &amp; Delivery Cannabis Dispensaries" (150 chars — brand name duplicated). Web/Dev + Content joint fix Week 1.
+</div>
+
+<div class="critical">
+<strong>BLOCKER 4 — Brand differentiators are entirely absent from website copy.</strong> Across the four most-strategic pages, the keyword counts are: "Black-owned" 0 · "Woman-owned" 0 · "Asian-owned" 0 · "minority" 0 · "LGBTQ" 0 · "24/7" surfaces once as an FAQ question on <code>/delivery</code> (never as a USP) · "no minimum" 0. The strongest competitive moats are invisible to organic visitors. Content rewrites of <code>/about-us</code>, <code>/delivery</code>, and <code>/stores/mindlift-cannabis-dispensary-plainfield-nj</code> are the largest content win available this month.
+</div>
+
+<div class="critical">
+<strong>BLOCKER 5 — "Dispensary near me" SoLV dropped 20.66 points in 5 months.</strong> This is your #1-volume GBP query (6,723 monthly searches = 22% of all impressions). Local Falcon shows ARP 6.34 / SoLV 9.92% as of May 8. Root cause: Kota Canna Dispensary (76 reviews, 4.9★, Plainfield) dominates cannabis + dispensary terms at 90+ SoLV via Google's new-business boost. Defense is the top GBP + Content priority for May.
+</div>
+
+<div class="issue">
+<strong>BLOCKER 6 — <code>robots.txt</code> returns HTTP 404.</strong> File doesn't exist. No sitemap discovery hint to crawlers. Web/Dev Week 1 deploys with sitemap reference.
+</div>
+
+<div class="issue">
+<strong>BLOCKER 7 — <code>/delivery</code> is 216 words and doesn't list service-area cities.</strong> The page meant to defend your 100% SoLV "weed delivery" position and climb on "cannabis delivery" (+28 SoLV in 5 months) is severely under-built. No "Plainfield", "Union County", "Scotch Plains", "Edison" mentions on the page. No "no minimum / no delivery fee on 1st order" call-out despite both being confirmed differentiators. Content rewrite Week 2.
+</div>
+
+<div class="issue">
+<strong>BLOCKER 8 — No <code>/phillipsburg</code> landing page despite active satellite-GBP expansion.</strong> Sitemap lists 22 pages; no Phillipsburg page. The <code>/delivery</code> page mentions "Phillipsburg" twice and has an "ORDER PHILLIPSBURG" CTA, but no dedicated entity-relevance anchor for the satellite GBP. Build Week 3.
+</div>
+
+<div class="issue">
+<strong>BLOCKER 9 — GBP website link points to <code>/menu/</code>, not the deep location page.</strong> Currently <code>http://mindliftdispensary.com/menu/?utm_source=gmb-plainfield&amp;utm_campaign=dispenza</code>. The deep page <code>/stores/mindlift-cannabis-dispensary-plainfield-nj</code> exists and has correct H1 + H2 + service-area coverage but no schema yet. Decide with Heather: re-point GBP to the stores page (preserve UTMs), or keep /menu-direct for conversion priority. Account decision Week 2.
+</div>
+
+<div class="issue">
+<strong>BLOCKER 10 — Dispenza ROI tool ACV configured at $50.00.</strong> Treez April actual = $57.94 gross / $53.45 net per ticket. Tool understates attributed revenue by ~10%. Account updates in Dispenza admin Week 2.
+</div>
+
+<h2>Department Contributions</h2>
+
+<!-- LOCAL SEO -->
+<div class="dept">
+  <div class="dept-head">
+    <div class="dept-title">
+      <div class="dept-icon">📍</div>
+      <div class="dept-name">
+        <h3>Local SEO</h3>
+        <div class="owner">GBP · Local Falcon · Competitive Monitoring · Review Response</div>
+      </div>
+    </div>
+    <div class="dept-priority">P1</div>
+  </div>
+
+  <div class="commit">
+    <div class="commit-title">Commit 1 — Push "dispensary near me" SoLV from 9.92% → 15%+ by May 31</div>
+    <p>The single highest-leverage SEO target for May. "Dispensary near me" drives <strong>22% of all GBP search demand</strong> (6,723/mo) and SoLV has dropped 20.66 points in 5 months due to Kota Canna's new-business boost. Work via the GBP we manage:</p>
+    <ul>
+      <li>(a) Rewrite GBP description to lead with "cannabis dispensary in Plainfield" + "dispensary near me" intent in first 100 chars (currently weed-led; weed-term moat is 100% locked so we can safely re-emphasize cannabis/dispensary)</li>
+      <li>(b) Audit and deepen secondary GBP categories. Current: Cannabis Store (PRIMARY) + Cannabis Club + Delivery Service. Add Marijuana dispensary as a secondary if available.</li>
+      <li>(c) Add 12+ services to GBP services list (eighths, gummies, vape carts, tinctures, concentrates, edibles, pre-rolls, topicals, accessories, in-store pickup, online ordering for pickup, delivery)</li>
+      <li>(d) Site-side support — schema + H1 + content rewrites coming from Web/Dev + Content compound directly into this number</li>
+    </ul>
+    <div class="commit-meta">Acceptance: "dispensary near me" SoLV ≥ 15% on May 31 scan (stretch: 20%+). Same lift expected on "dispensary" (currently 9.09%) as a side benefit.</div>
+  </div>
+
+  <div class="commit">
+    <div class="commit-title">Commit 2 — Hold the four weed-term moats at 100% SoLV</div>
+    <p>"weed" 100% · "weed dispensary" 100% · "weed near me" 100% · "weed delivery" 100%. Maintain via 4+ weekly GBP post cadence (Local SEO writes + publishes), weekly photo uploads, and active review response. Flag any rank drop &gt;0.5 in mid-month + month-end scans.</p>
+    <div class="commit-meta">Acceptance: all 4 weed-term SoLV figures remain 100% on May 31 scan</div>
+  </div>
+
+  <div class="commit">
+    <div class="commit-title">Commit 3 — Re-enable monthly delivery-term Local Falcon scans</div>
+    <p>Current cadence: 7 core keywords scanned monthly, last May 8. The 3 delivery keywords (weed delivery, cannabis delivery, dispensary delivery) were last scanned <strong>March 11 — 2 months stale</strong>. Configure Local Falcon to run all 10 keywords monthly. Run a fresh 10-keyword baseline May 22 (mid-month) and May 31 (end-month).</p>
+    <div class="commit-meta">Acceptance: delivery keywords added to monthly cadence · 10-keyword scans complete May 22 + May 31</div>
+  </div>
+
+  <div class="commit">
+    <div class="commit-title">Commit 4 — Respond to every Google review within 24 hours</div>
+    <p>Dispenza-managed GBP response cadence. Reply to every new review (positive AND negative) within 24 hours of posting. Use named-budtender thank-yous when reviewers mention specific team members. Maintain the 60/month review-velocity target organically — no review arms race, just steady compounding.</p>
+    <p class="ev"><strong>Evidence:</strong> Currently at 624 reviews, 5.0★ — ~62/month organic velocity since opening (matches the 60/mo target). Active review response is a documented GBP ranking signal Dispenza controls.</p>
+    <div class="commit-meta">Acceptance: 100% reply rate on May reviews · sample tracked weekly</div>
+  </div>
+
+  <div class="commit">
+    <div class="commit-title">Commit 5 — Weekly GBP photo cadence: 4-5 uploads per week</div>
+    <p>Themed: storefront (refresh needed — coordinate with client per the Performance Review observation), delivery driver / vehicle, product display cases, team interactions, product drops. All uploaded with descriptive alt text incorporating "dispensary near me", "cannabis dispensary Plainfield", and brand-differentiator terms (24/7 delivery, no minimum).</p>
+    <div class="commit-meta">Acceptance: 16+ photos uploaded May 1–31 with target alt text</div>
+  </div>
+
+  <div class="commit">
+    <div class="commit-title">Commit 6 — Weekly competitive monitor (Kota Canna · Plant Base · CannaVerde · Cloud Nine)</div>
+    <p>The 4 immediate-Plainfield competitors. Every Monday: pull review counts + photo counts + GBP post activity. Track Kota Canna's review velocity specifically — that's the leading indicator of when Google's new-business boost begins to decay.</p>
+    <div class="commit-meta">Acceptance: 4 weekly monitor reports filed (May 18, 25, June 1, 8)</div>
+  </div>
+
+  <div class="commit">
+    <div class="commit-title">Commit 7 — Direct vs Discovery KPI split in weekly reporting</div>
+    <p>Per the GBP Direct vs Discovery Dispenza standard, weekly reporting separates branded ("mindlift") searches from non-branded discovery searches. Current split: 2.4% Direct / 97.6% Discovery. Tracking this monthly trend is a leading indicator of brand-awareness compounding (or stagnation).</p>
+    <div class="commit-meta">Acceptance: Direct vs Discovery split appears in each weekly KPI pulse</div>
+  </div>
+</div>
+
+<!-- WEB / DEV -->
+<div class="dept">
+  <div class="dept-head">
+    <div class="dept-title">
+      <div class="dept-icon">⚙️</div>
+      <div class="dept-name">
+        <h3>Web / Dev</h3>
+        <div class="owner">On-page · Schema · Technical SEO · Phillipsburg Landing Page</div>
+      </div>
+    </div>
+    <div class="dept-priority">P1</div>
+  </div>
+
+  <div class="commit">
+    <div class="commit-title">Commit 1 — Deploy <code>robots.txt</code> + add homepage H1 (Week 1, in-flight)</div>
+    <p>Deploy minimal <code>robots.txt</code> with sitemap reference + standard allow rules. Add an H1 to the homepage replacing the styled-as-H2 "Welcome To" / "Dispensary" hero elements. Single semantic H1 anchored to brand + USP + city.</p>
+    <p class="ev"><strong>Evidence:</strong> Current state — robots.txt returns 404; homepage H1 array is empty (every heading is H2). Both confirmed via 2026-05-12 Playwright audit.</p>
+    <div class="commit-meta">Acceptance: robots.txt returns 200 + homepage has exactly one H1 + meta description tightened to ≤160 chars by May 16</div>
+  </div>
+
+  <div class="commit">
+    <div class="commit-title">Commit 2 — Fix <code>/about-us</code> double-H1 + 150-char title (Week 1, in-flight)</div>
+    <p>Replace the duplicate H1 (currently both "ABOUT US" and "About MINDLIFT DISPENSARY" are H1s). Keep ONE H1; the second becomes H2. Tighten title tag from 150 chars to ≤60. Paste-ready strings in Playbook WEB-02.</p>
+    <div class="commit-meta">Acceptance: <code>/about-us</code> has exactly one H1 + title length ≤60 chars by May 16</div>
+  </div>
+
+  <div class="commit">
+    <div class="commit-title">Commit 3 — Deploy sitewide JSON-LD schema (Week 2)</div>
+    <p>Add Organization + LocalBusiness schema in <code>&lt;head&gt;</code> sitewide (mirror GBP entity: 517 Park Ave Plainfield NJ, (908) 588-2322, hours, areaServed, sameAs to Instagram + Facebook + LinkedIn, aggregateRating 5.0/624). Add FAQPage schema on homepage (6 visible FAQs) + <code>/delivery</code> (6 visible FAQs). Paste-ready JSON-LD in Playbook WEB-04.</p>
+    <p class="ev"><strong>Evidence:</strong> Every page audited returns JSON-LD count = 0. FAQs are visible in DOM on home + /delivery but lack the schema wrapping needed for Google rich results.</p>
+    <div class="commit-meta">Acceptance: 4+ schema types validated via Google Rich Results Test by May 22 (Organization sitewide, LocalBusiness on home + /stores page, FAQPage on home + /delivery, AggregateRating on home)</div>
+  </div>
+
+  <div class="commit">
+    <div class="commit-title">Commit 4 — Build <code>/phillipsburg</code> landing page (Week 3)</div>
+    <p>Mirror the structure of <code>/stores/mindlift-cannabis-dispensary-plainfield-nj</code>. Targets the satellite GBP's entity-relevance anchor. H1 = "MindLift Cannabis Delivery — Phillipsburg NJ". Service area: Phillipsburg core + Lopatcong + Greenwich. Hours: 24/7 delivery. Featured CTA: "Order Phillipsburg Delivery". Content brief in Playbook CON-03.</p>
+    <div class="commit-meta">Acceptance: page launched with H1, H2 hierarchy, LocalBusiness schema, and internal links from /delivery + /stores by May 23</div>
+  </div>
+
+  <div class="commit">
+    <div class="commit-title">Commit 5 — Replace og:image with storefront photo (Week 2)</div>
+    <p>Current Open Graph og:image is the logo only. Replace with a representative storefront / interior photo (coordinate with the Performance Review's storefront-photo refresh observation). Add Twitter Card meta tags while we're in the head section.</p>
+    <div class="commit-meta">Acceptance: og:image + twitter:card validated via card-debug tools by May 22</div>
+  </div>
+
+  <div class="commit">
+    <div class="commit-title">Commit 6 — Fix footer Yelp→LinkedIn mislabel + wire up YouTube/TikTok icons (Week 1)</div>
+    <p>Footer "yelp" icon links to LinkedIn (mislabel). YouTube + TikTok icons have no href (broken). Decide with Account: remove if accounts don't exist, or wire up if they do.</p>
+    <div class="commit-meta">Acceptance: footer social row fixed by May 18</div>
+  </div>
+
+  <div class="commit">
+    <div class="commit-title">Commit 7 — BreadcrumbList schema on non-home pages (Week 3)</div>
+    <p>Add BreadcrumbList JSON-LD to <code>/about-us</code>, <code>/delivery</code>, <code>/stores/...plainfield-nj</code>, <code>/phillipsburg</code> (when built), and <code>/contact</code>.</p>
+    <div class="commit-meta">Acceptance: 5+ pages validated by May 29</div>
+  </div>
+
+  <div class="commit">
+    <div class="commit-title">Commit 8 — Console-error sweep across all 22 indexed pages (Week 4)</div>
+    <p>1 console error logged on <code>/contact</code> during the May 12 Playwright audit. Sweep all 22 sitemap-listed pages for client-side errors before locking in the schema deployment.</p>
+    <div class="commit-meta">Acceptance: error log filed + any critical errors patched by May 30</div>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<div class="dept">
+  <div class="dept-head">
+    <div class="dept-title">
+      <div class="dept-icon">✍️</div>
+      <div class="dept-name">
+        <h3>Content &amp; Editorial</h3>
+        <div class="owner">Page rewrites · Brand-differentiator copy · Phillipsburg brief · GBP description</div>
+      </div>
+    </div>
+    <div class="dept-priority">P1</div>
+  </div>
+
+  <div class="commit">
+    <div class="commit-title">Commit 1 — Deliver homepage H1 + tightened meta description (May 15)</div>
+    <p>H1: "MindLift Dispensary — 24/7 Cannabis Delivery &amp; Plainfield NJ Dispensary" (anchors USP + city + brand in one line). Meta description: tighten current 315-char version to ≤160 chars while preserving the 24-hour USP.</p>
+    <div class="commit-meta">Acceptance: H1 + meta delivered to Web/Dev by May 15</div>
+  </div>
+
+  <div class="commit">
+    <div class="commit-title">Commit 2 — Rewrite <code>/about-us</code> with founder story + brand differentiators (Week 2)</div>
+    <p>Current page is 282 words, has TWO H1s, and contains <strong>zero mentions</strong> of Black-owned, women-owned, Asian-owned, LGBTQ+, 24/7 delivery, or the actual business model (delivery is 0 mentions). Rewrite to 600+ words covering:</p>
+    <ul>
+      <li>Founder story (request 15-min interview with Heather — flagged in Performance Review)</li>
+      <li>Triple-minority ownership (Black + women + Asian-owned)</li>
+      <li>Small-business + community focus</li>
+      <li>LGBTQ+ friendly + Transgender safespace statement</li>
+      <li>24/7 delivery model + service area (Plainfield + Union County + N Jersey)</li>
+      <li>License number (RE000097)</li>
+    </ul>
+    <p>Single H1: "About MindLift — Plainfield's Triple-Minority-Owned 24/7 Cannabis Dispensary". Title ≤60 chars.</p>
+    <div class="commit-meta">Acceptance: 600+ word rewrite + new title + meta delivered to Web/Dev by May 17 · Web/Dev deploys by May 20</div>
+  </div>
+
+  <div class="commit">
+    <div class="commit-title">Commit 3 — Rewrite <code>/delivery</code> with 24/7 + no-minimum + service-area copy (Week 2)</div>
+    <p>Current page is 216 words and doesn't list service-area cities (Plainfield: 0 mentions, Union County: 0, Scotch Plains: 0, Edison: 0). 24/7 is buried in a single FAQ question. Rewrite to 1,000+ words:</p>
+    <ul>
+      <li>Hero subhead: "24/7 cannabis delivery. No minimum. No fee on first order."</li>
+      <li>Service-area section: Plainfield · North Plainfield · Fanwood · Scotch Plains · Westfield · South Plainfield · Dunellen · Watchung · Edison · Phillipsburg (linked to /phillipsburg)</li>
+      <li>Delivery hours: 24 hours every day of the week (call-out box)</li>
+      <li>How it works (4 steps)</li>
+      <li>Pricing transparency (no fee for first order, then $X — confirm with Account)</li>
+      <li>FAQ section: 6+ Q&amp;As wrapped in FAQPage schema (Web/Dev wraps)</li>
+    </ul>
+    <div class="commit-meta">Acceptance: 1,000+ word rewrite delivered to Web/Dev by May 17 · Web/Dev deploys + Web/Dev adds FAQPage schema by May 22</div>
+  </div>
+
+  <div class="commit">
+    <div class="commit-title">Commit 4 — Expand <code>/stores/mindlift-cannabis-dispensary-plainfield-nj</code> to 500+ words (Week 2)</div>
+    <p>Current page is 294 words. Has correct H1 + H2 structure + good service-area list. Missing: brand differentiators (DEI ownership, LGBTQ+, 24/7 mentioned only once in hours table), license number, credit-card acceptance call-out, and LocalBusiness schema (Web/Dev wraps). Expand to 500+ words anchored on Plainfield-specific intent.</p>
+    <div class="commit-meta">Acceptance: 500+ word expansion + brand-differentiator integration delivered to Web/Dev by May 19</div>
+  </div>
+
+  <div class="commit">
+    <div class="commit-title">Commit 5 — Write <code>/phillipsburg</code> landing page brief + body copy (Week 3)</div>
+    <p>Full brief + body copy (~800-1,000 words) for Web/Dev. H1, H2 structure, service-area focus on Phillipsburg + Lopatcong + Greenwich, 24/7 delivery framing, "Order Phillipsburg Delivery" CTA, FAQ accordion with 5-6 Phillipsburg-specific Q&amp;As (delivery zone borders, ETA, fee policy, ID requirements, payment options).</p>
+    <p class="ev"><strong>Evidence:</strong> Phillipsburg satellite GBP is planned (not yet live per Darrell). Per scope memory, the satellite needs a corresponding website landing page to anchor entity relevance.</p>
+    <div class="commit-meta">Acceptance: brief + copy delivered to Web/Dev by May 20 · live page by May 23</div>
+  </div>
+
+  <div class="commit">
+    <div class="commit-title">Commit 6 — Rewrite GBP description to lead with cannabis-dispensary terms (Week 2)</div>
+    <p>Current GBP description is 120 words, weed-led ("premium cannabis at MindLift"). The weed-term moat is locked at 100% — we can safely re-bias the description to emphasize "cannabis dispensary" terminology that supports the Kota Canna defensive battle. Keep delivery-first framing in the second half.</p>
+    <p>New first 100 chars: "Plainfield's 24/7 cannabis dispensary. Black, women &amp; Asian-owned. No-minimum delivery across Union County."</p>
+    <div class="commit-meta">Acceptance: new GBP description published by Local SEO May 16 · text approved by Account first</div>
+  </div>
+
+  <div class="commit">
+    <div class="commit-title">Commit 7 — 4 May blog posts targeting cannabis/dispensary intent (Weeks 2–4)</div>
+    <p>Calendar-relevant blog cadence supporting the Kota Canna defense:</p>
+    <ul>
+      <li>Week 2: "What Makes a Plainfield Cannabis Dispensary Worth the Trip?" (target: "cannabis dispensary plainfield")</li>
+      <li>Week 3: "Cannabis Delivery FAQs: 24/7 Service in Union County" (target: "cannabis delivery near me" + "dispensary delivery")</li>
+      <li>Week 4: "Memorial Day Cannabis Picks for NJ Locals" (target: holiday + brand + "dispensary near me")</li>
+      <li>Week 4: "Triple Minority-Owned in Plainfield: The MindLift Story" (target: "minority-owned dispensary nj" + brand build)</li>
+    </ul>
+    <p>Each post: 1,200-1,500 words, "dispensary" in URL slug + H1 + metadata, FAQPage schema with 3 Q&amp;As, internal links to /stores/...plainfield-nj + /about-us + /delivery.</p>
+    <div class="commit-meta">Acceptance: 4 posts published by May 30 with schema + internal links</div>
+  </div>
+</div>
+
+<!-- ACCOUNT -->
+<div class="dept">
+  <div class="dept-head">
+    <div class="dept-title">
+      <div class="dept-icon">📊</div>
+      <div class="dept-name">
+        <h3>Account</h3>
+        <div class="owner">Client coordination · ROI tool calibration · KPI reporting</div>
+      </div>
+    </div>
+    <div class="dept-priority">P1</div>
+  </div>
+
+  <div class="commit">
+    <div class="commit-title">Commit 1 — Update Dispenza ROI tool ACV from $50 → $55 (mothership listing 420)</div>
+    <p>Treez April actual: $57.94 gross / $53.45 net per ticket. Configure $55 (net-basis conservative) for location_id=420. Hold off on location_id=424 (delivery satellite) until delivery-only POS analysis surfaces channel-specific AOV — delivery AOV typically runs higher and may warrant its own setting.</p>
+    <p class="ev"><strong>Evidence:</strong> 11-month Treez POS data confirms recent AOV trajectory: Jan $52.16 → Feb $52.75 → Mar $57.52 → Apr $57.94 → May MTD $55.43.</p>
+    <div class="commit-meta">Acceptance: location_id=420 ACV updated in Dispenza admin by May 16 · attribution math rebuilds at ~+10% reported revenue</div>
+  </div>
+
+  <div class="commit">
+    <div class="commit-title">Commit 2 — Decide GBP website-link target with client (Heather)</div>
+    <p>GBP currently points to <code>/menu/?utm_source=gmb-plainfield&amp;utm_campaign=dispenza</code>. The deep location page <code>/stores/mindlift-cannabis-dispensary-plainfield-nj</code> exists and is structurally cleaner. Per scope memory tactic: "GBP linked to deep location pages, NOT directly to menus, for entity relevance" — but the menu-direct link may be intentional for conversion. Bring decision to Heather, document choice, and update GBP link if changed (preserve UTMs either way).</p>
+    <div class="commit-meta">Acceptance: decision documented + GBP link updated (or confirmed-as-is) by May 22</div>
+  </div>
+
+  <div class="commit">
+    <div class="commit-title">Commit 3 — Coordinate Heather-interview for /about-us rewrite (Week 1, in-flight)</div>
+    <p>15-min phone interview with Heather to ground the brand-differentiator content rewrite in actual founder voice (not generic templated copy). Schedule before May 17 to keep Content Commit 2 on track.</p>
+    <div class="commit-meta">Acceptance: interview scheduled by May 15 · transcript or notes available to Content by May 17</div>
+  </div>
+
+  <div class="commit">
+    <div class="commit-title">Commit 4 — Confirm credit-card claim with client before marketing amplification</div>
+    <p>GBP "More" tab lists VISA, Discover, AmEx, Mastercard, Diners Club + NFC mobile. Rare for cannabis retail. Before Content uses this as a differentiator in the /about-us or /delivery rewrites, confirm the processor setup (Aeropay? Cashless ATM workaround? Other?) so messaging accurately reflects reality.</p>
+    <div class="commit-meta">Acceptance: confirmation logged in MindLift scope notes by May 17</div>
+  </div>
+
+  <div class="commit">
+    <div class="commit-title">Commit 5 — Weekly KPI pulses to Heather (every Monday)</div>
+    <p>Bi-weekly is the implicit default but May has heavy execution. Weekly pulses through May covering: SoLV deltas on the 4 priority terms (dispensary near me, dispensary, cannabis, cannabis delivery), GBP action volumes, schema deployment status, content publishing status. Direct vs Discovery split included.</p>
+    <div class="commit-meta">Acceptance: 4 weekly pulse emails sent (May 19, 26, June 2, 9 — last one is June for May-31 closeout)</div>
+  </div>
+
+  <div class="commit">
+    <div class="commit-title">Commit 6 — May 31 close-out: full month-end summary + next-month strategy preview</div>
+    <p>End-of-month summary: SoLV results vs targets, GBP action totals, POS revenue (await client data), schema deployment status, /phillipsburg launch confirmation. Plus a preview of June workstreams (delivery-channel deep dive, Phillipsburg satellite GBP launch coordination if it goes live, blog cadence continuation).</p>
+    <div class="commit-meta">Acceptance: close-out delivered by June 3</div>
+  </div>
+</div>
+
+<h2>May KPI Targets</h2>
+
+<table>
+  <thead><tr><th>KPI</th><th>April Result / Current</th><th>May Target</th><th>Stretch</th></tr></thead>
+  <tbody>
+    <tr><td>Weed-term SoLV (4 terms)</td><td>100% (all four #1)</td><td>Hold 100%</td><td>—</td></tr>
+    <tr><td><strong>"Dispensary near me" SoLV</strong></td><td><strong>9.92% (#7)</strong></td><td><strong>≥ 15%</strong></td><td><strong>20%+</strong></td></tr>
+    <tr><td>"Dispensary" SoLV</td><td>9.09% (#8)</td><td>≥ 15%</td><td>20%+</td></tr>
+    <tr><td>"Cannabis" SoLV</td><td>18.18% (#7)</td><td>≥ 22%</td><td>25%+</td></tr>
+    <tr><td>"Cannabis near me" SoLV</td><td>30.58% (#4)</td><td>Hold + improve</td><td>35%+</td></tr>
+    <tr><td>"Cannabis delivery" SoLV</td><td>69.42% (#2 · 3/11 baseline)</td><td>Rescan + hold 65%+</td><td>75%+ (overtake Plant Base)</td></tr>
+    <tr><td>"Dispensary delivery" SoLV</td><td>64.46% (#3 · 3/11 baseline)</td><td>Rescan + hold 60%+</td><td>70%+</td></tr>
+    <tr><td>Total GBP interactions / mo</td><td>~1,700 (Apr peak)</td><td>Hold 1,500+</td><td>1,800+</td></tr>
+    <tr><td>Website JSON-LD schema count</td><td><strong>0</strong></td><td><strong>4+ types (Org · LocalBiz · FAQPage · AggregateRating)</strong></td><td>+ BreadcrumbList on 5 pages</td></tr>
+    <tr><td>Brand-differentiator mentions on /about-us</td><td>0</td><td>5+ (Black + women + Asian + LGBTQ+ + 24/7)</td><td>—</td></tr>
+    <tr><td>Phillipsburg landing page live</td><td>No</td><td>Yes (May 23)</td><td>+ FAQPage schema</td></tr>
+    <tr><td>Net new Google reviews</td><td>~62/mo run rate</td><td>60+ in May</td><td>—</td></tr>
+    <tr><td>Direct vs Discovery split</td><td>2.4% / 97.6%</td><td>Direct ≥ 2.8%</td><td>Direct ≥ 3.5% (signals brand-awareness compounding)</td></tr>
+    <tr><td>Dispenza ROI tool ACV (loc 420)</td><td>$50.00</td><td>$55.00 (net basis)</td><td>—</td></tr>
+  </tbody>
+</table>
+
+<h2>Risk Watch — Kota Canna Recovery Curve</h2>
+
+<p>Kota Canna Dispensary (76 reviews, 4.9★, Plainfield) is currently dominating cannabis + dispensary terms via Google's new-business boost (90+ SoLV across all 4 terms). The boost typically decays in 6–12 months. We're tracking three signals:</p>
+
+<ul>
+  <li><strong>Kota Canna review velocity</strong> — if reviews are accumulating fast, the boost may extend. If slow, decay is starting.</li>
+  <li><strong>Kota Canna GBP post activity</strong> — declining engagement signals Google may begin to de-prioritize.</li>
+  <li><strong>MindLift's incremental SoLV gains on each scan</strong> — even 2-3 points/month of recovery indicates the boost is working in MindLift's favor.</li>
+</ul>
+
+<p>If by end of June Kota Canna still holds 85%+ SoLV on dispensary-near-me, we escalate to accelerated content + backlink work. If MindLift's SoLV climbs to 25%+ by end of June, the recovery curve is on track and we maintain the defensive cadence.</p>
+
+<div class="footer-meta">
+  Prepared by Dispenza Dispensary Marketing · May 13, 2026 · Internal — Cross-Department Coordination<br>
+  Data sources: Treez POS (11 months, 309 daily rows), GBP (22 screenshots), Local Falcon (10 keywords), Dispenza admin ROI (mothership + delivery satellite), Playwright site audit (22 pages).
+</div>
+
+</main>
+</div>
+</body>
+</html>
