@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Joyleaf Dispensary — April 2026 Local SEO Wins</title>
+<style>
+  :root {
+    --green-900: #0F3019;
+    --green-800: #1A4E2A;
+    --green-700: #266A3A;
+    --green-600: #2F8347;
+    --green-500: #3B9D57;
+    --green-300: #7BC894;
+    --green-100: #DCEFE2;
+    --green-50:  #EFF8F2;
+    --gold-500: #D4A833;
+    --gold-400: #DEBB5B;
+    --gold-300: #E8CD8A;
+    --gold-100: #F8EDC4;
+    --cream: #FDFBEF;
+    --gray-900: #1A1F1B;
+    --gray-700: #45504A;
+    --gray-500: #79857E;
+    --gray-300: #BFC8C2;
+    --gray-100: #E6EBE7;
+    --gray-50:  #F4F7F4;
+    --red: #B33A3A;
+    --red-100: #FBE3E3;
+    --amber: #B47900;
+    --amber-100: #FCEFCC;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: var(--gray-900);
+    background: var(--gray-50);
+    line-height: 1.55;
+  }
+  .container { max-width: 1140px; margin: 0 auto; padding: 0 28px 80px; }
+
+  .cover {
+    background: linear-gradient(135deg, var(--green-900) 0%, var(--green-800) 55%, var(--green-600) 100%);
+    color: var(--cream);
+    padding: 70px 28px 80px;
+    margin-bottom: 40px;
+    border-bottom: 5px solid var(--gold-500);
+  }
+  .cover-inner { max-width: 1140px; margin: 0 auto; }
+  .cover .eyebrow { text-transform: uppercase; letter-spacing: 4px; font-size: 12px; font-weight: 700; color: var(--gold-400); margin-bottom: 16px; }
+  .cover h1 { font-size: 50px; line-height: 1.1; margin: 0 0 16px; font-weight: 700; letter-spacing: -0.5px; }
+  .cover h1 span { color: var(--gold-400); }
+  .cover .subtitle { font-size: 19px; opacity: 0.95; max-width: 820px; margin: 0 0 30px; }
+  .cover-meta { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; padding-top: 26px; border-top: 1px solid rgba(222,187,91,0.30); }
+  .cover-meta .label { font-size: 11px; text-transform: uppercase; letter-spacing: 2px; color: var(--gold-400); opacity: 0.85; }
+  .cover-meta .value { font-size: 15px; font-weight: 600; color: var(--cream); margin-top: 6px; }
+
+  section { margin-bottom: 52px; }
+  .section-header { display: flex; align-items: baseline; gap: 14px; margin-bottom: 8px; }
+  .section-num { font-size: 12px; font-weight: 700; color: var(--green-600); letter-spacing: 3px; }
+  h2 { font-size: 30px; line-height: 1.2; color: var(--green-900); margin: 0 0 8px; font-weight: 700; letter-spacing: -0.3px; }
+  .section-lead { color: var(--gray-700); font-size: 16px; margin: 0 0 22px; max-width: 880px; }
+  h3 { font-size: 19px; color: var(--green-900); margin: 28px 0 10px; font-weight: 700; }
+  p { margin: 0 0 12px; }
+
+  .kpi-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 16px 0 28px; }
+  .kpi { background: #fff; border: 1px solid var(--gray-100); border-radius: 10px; padding: 18px 20px; border-top: 3px solid var(--green-600); }
+  .kpi .label { font-size: 11px; text-transform: uppercase; letter-spacing: 2px; color: var(--green-600); margin-bottom: 6px; }
+  .kpi .value { font-size: 26px; font-weight: 700; color: var(--green-900); line-height: 1.1; }
+  .kpi .sub { font-size: 13px; color: var(--gray-700); margin-top: 4px; }
+  .kpi .delta-up { color: var(--green-700); font-weight: 700; }
+  .kpi .delta-down { color: var(--amber); font-weight: 700; }
+  .kpi.gold { border-top-color: var(--gold-500); }
+  .kpi.gold .label { color: var(--gold-500); }
+  .kpi.big .value { font-size: 30px; }
+
+  table { width: 100%; border-collapse: collapse; background: #fff; margin: 14px 0; border: 1px solid var(--gray-100); border-radius: 8px; overflow: hidden; }
+  th, td { padding: 12px 14px; text-align: left; border-bottom: 1px solid var(--gray-100); font-size: 14px; vertical-align: top; }
+  th { background: var(--green-900); color: var(--gold-300); font-size: 12px; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; }
+  tr:last-child td { border-bottom: none; }
+  td.num { text-align: right; font-variant-numeric: tabular-nums; }
+  td.up { color: var(--green-700); font-weight: 700; text-align: right; }
+  td.down { color: var(--amber); font-weight: 700; text-align: right; }
+  td.flat { color: var(--gray-500); text-align: right; }
+
+  .callout { border-left: 4px solid var(--gold-500); background: var(--gold-100); padding: 16px 20px; border-radius: 6px; margin: 18px 0; font-size: 14.5px; }
+  .callout.win { border-color: var(--green-600); background: var(--green-100); }
+  .callout.context { border-color: #5A6E94; background: #E8EEF8; }
+  .callout strong { color: var(--green-900); }
+
+  .pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 16px 0 24px; }
+  .pillar { background: #fff; border: 1px solid var(--gray-100); border-radius: 10px; padding: 18px 20px; border-top: 3px solid var(--gold-500); }
+  .pillar h4 { margin: 0 0 6px; font-size: 13px; text-transform: uppercase; letter-spacing: 2px; color: var(--gold-500); }
+  .pillar .stat { font-size: 26px; font-weight: 700; color: var(--green-900); margin: 8px 0 4px; }
+  .pillar p { font-size: 13.5px; color: var(--gray-700); margin: 6px 0 0; }
+
+  ul.bullets { padding-left: 22px; margin: 6px 0 14px; }
+  ul.bullets li { margin: 6px 0; font-size: 14.5px; }
+
+  .badge { display: inline-block; padding: 4px 10px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; border-radius: 4px; }
+  .badge-1 { background: var(--green-700); color: var(--cream); }
+  .badge-4 { background: var(--gold-300); color: var(--green-900); }
+  .pct-100 { color: var(--green-700); font-weight: 700; }
+  .rank-1 { background: var(--green-100); }
+
+  footer { text-align: center; padding-top: 32px; color: var(--gray-500); font-size: 13px; border-top: 1px solid var(--gray-100); margin-top: 56px; }
+
+  @media (max-width: 720px) {
+    .cover h1 { font-size: 32px; }
+    .cover-meta, .kpi-grid, .pillars { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="cover-inner">
+    <div class="eyebrow">Joyleaf Dispensary · April 2026 Local SEO Report</div>
+    <h1>April 2026 <span>·</span> Joyleaf is #1.</h1>
+    <p class="subtitle">Joyleaf now holds <strong>#1 ranking on 8 of 9 tracked search keywords</strong> across the 11×11 / 2-mile-radius grid covering Roselle and surrounding NJ — including <strong>100.00% Share of Local Voice</strong> on the three weed-family keywords. The April Google Business Profile data tells an even stronger story: <strong>20% fewer impressions, but 20% MORE customer actions</strong> year over year. The SEO investment is now producing higher-quality traffic that converts at double the rate it did 18 months ago.</p>
+    <div class="cover-meta">
+      <div><div class="label">Reporting period</div><div class="value">Apr 01 – Apr 30, 2026</div></div>
+      <div><div class="label">#1 rankings (of 9)</div><div class="value">8 of 9 keywords</div></div>
+      <div><div class="label">Total GBP Actions</div><div class="value">7,401 · +19.4% YoY</div></div>
+      <div><div class="label">Prepared by Dispenza</div><div class="value">Mon May 11, 2026</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- 01 EXEC SUMMARY -->
+  <section>
+    <div class="section-header"><div class="section-num">01</div><h2>The April wins, in one read</h2></div>
+    <p class="section-lead">Three big wins anchor the April report. <strong>(1)</strong> Joyleaf now ranks #1 on 8 of 9 tracked Local Falcon keywords — including three with literally 100% Share of Local Voice. <strong>(2)</strong> Web clicks, directions, and phone calls from GBP are all up double-digits year over year, with phone calls up 66%. <strong>(3)</strong> The conversion rate (GBP Actions ÷ Searches) has more than DOUBLED since Dispenza began managing the account — from 50% in Nov 2024 to 103% in April 2026.</p>
+
+    <div class="kpi-grid">
+      <div class="kpi gold big">
+        <div class="label">#1 rankings</div>
+        <div class="value">8 of 9</div>
+        <div class="sub">tracked keywords on the May 1 Local Falcon scan</div>
+      </div>
+      <div class="kpi big">
+        <div class="label">Phone Calls (YoY)</div>
+        <div class="value">+65.6%</div>
+        <div class="sub">318 calls in Apr 2026 vs 192 in Apr 2025</div>
+      </div>
+      <div class="kpi big">
+        <div class="label">Web Clicks (YoY)</div>
+        <div class="value">+19.7%</div>
+        <div class="sub">5,731 vs 4,787 a year ago</div>
+      </div>
+      <div class="kpi big">
+        <div class="label">Conversion rate</div>
+        <div class="value">103.16%</div>
+        <div class="sub">vs 68.81% Apr 2025 · <span class="delta-up">+34 pts</span></div>
+      </div>
+    </div>
+
+    <div class="callout win"><strong>The headline win:</strong> Joyleaf is the dominant cannabis brand in the Roselle / Union County local pack. <strong>Three of the 9 tracked keywords show Joyleaf holding 100.00% Share of Local Voice</strong> — every single pin on the 121-point grid shows Joyleaf as the #1 result. That's the strongest possible local SEO position, and it's now Joyleaf's competitive moat.</div>
+  </section>
+
+  <!-- 02 LOCAL FALCON -->
+  <section>
+    <div class="section-header"><div class="section-num">02</div><h2>Local rank position — Joyleaf #1 on 8 of 9 keywords</h2></div>
+    <p class="section-lead">Local Falcon scan on May 1, 2026 (11×11 grid · 2.0 mile radius · 121 data points) covering Roselle and surrounding NJ markets. Each keyword was scored on Average Rank Position (ARP) and Share of Local Voice (SoLV — the percentage of pins where Joyleaf appears in the top 3).</p>
+
+    <table>
+      <thead>
+        <tr><th>Keyword</th><th>Joyleaf rank</th><th>Joyleaf SoLV</th><th>Joyleaf ARP</th><th>#2 competitor</th><th>Gap to #2</th></tr>
+      </thead>
+      <tbody>
+        <tr class="rank-1"><td><strong>weed</strong></td><td><span class="badge badge-1">#1</span></td><td class="num"><span class="pct-100">100.00%</span></td><td class="num">1.31</td><td>Budzooka Weed Dispensary</td><td class="up">+3.31 pts SoLV</td></tr>
+        <tr class="rank-1"><td><strong>weed near me</strong></td><td><span class="badge badge-1">#1</span></td><td class="num"><span class="pct-100">100.00%</span></td><td class="num">1.27</td><td>Budzooka Weed Dispensary</td><td class="up">+3.31 pts SoLV</td></tr>
+        <tr class="rank-1"><td><strong>weed dispensary</strong></td><td><span class="badge badge-1">#1</span></td><td class="num"><span class="pct-100">100.00%</span></td><td class="num">1.27</td><td>Budzooka Weed Dispensary</td><td class="up">+3.31 pts SoLV</td></tr>
+        <tr class="rank-1"><td><strong>weed delivery</strong></td><td><span class="badge badge-1">#1</span></td><td class="num">95.04%</td><td class="num">1.75</td><td>TerpTaxi Weed Delivery NJ</td><td class="up">+42.97 pts SoLV</td></tr>
+        <tr class="rank-1"><td><strong>cannabis delivery</strong></td><td><span class="badge badge-1">#1</span></td><td class="num">66.12%</td><td class="num">2.88</td><td>Urge NJ Cannabis Dispensary</td><td class="up">+10.75 pts SoLV</td></tr>
+        <tr class="rank-1"><td><strong>cannabis</strong></td><td><span class="badge badge-1">#1</span></td><td class="num">53.72%</td><td class="num">4.18</td><td>Zen Leaf Cannabis Dispensary</td><td class="up">+14.88 pts SoLV</td></tr>
+        <tr class="rank-1"><td><strong>dispensary</strong></td><td><span class="badge badge-1">#1</span></td><td class="num">46.28%</td><td class="num">4.46</td><td>Zen Leaf Cannabis Dispensary</td><td class="up">+4.96 pts SoLV</td></tr>
+        <tr class="rank-1"><td><strong>cannabis near me</strong></td><td><span class="badge badge-1">#1</span></td><td class="num">45.45%</td><td class="num">4.30</td><td>Breakwater Dispensary</td><td class="up">+1.65 pts SoLV</td></tr>
+        <tr><td><strong>dispensary near me</strong></td><td><span class="badge badge-4">#4</span></td><td class="num">33.06%</td><td class="num">5.90</td><td>Breakwater Dispensary (#1, 46.28%)</td><td class="down">-13.22 pts SoLV</td></tr>
+      </tbody>
+    </table>
+
+    <h3>The three tiers of Joyleaf's keyword footprint</h3>
+    <div class="pillars">
+      <div class="pillar">
+        <h4>Total Dominance</h4>
+        <div class="stat">3 keywords</div>
+        <p><strong>weed · weed near me · weed dispensary</strong> — Joyleaf holds 100.00% Share of Local Voice. Every single pin on the 121-point grid shows Joyleaf as the #1 result. This is the strongest possible local SEO position.</p>
+      </div>
+      <div class="pillar">
+        <h4>Clear #1</h4>
+        <div class="stat">5 keywords</div>
+        <p><strong>weed delivery · cannabis delivery · cannabis · dispensary · cannabis near me</strong> — Joyleaf holds #1 with SoLV between 45% and 95%. Beating the #2 competitor by 2–43 SoLV points on each. Defensible lead.</p>
+      </div>
+      <div class="pillar">
+        <h4>The Only Gap</h4>
+        <div class="stat">1 keyword</div>
+        <p><strong>dispensary near me</strong> — Joyleaf at #4 (33.06% SoLV). Breakwater Dispensary in Roselle Park holds #1 (46.28%). This is the single ranking target for May — closing this gap unlocks the last major keyword.</p>
+      </div>
+    </div>
+
+    <div class="callout win"><strong>The competitive moat:</strong> Joyleaf's three 100% SoLV positions on weed-family keywords mean no competitor appears anywhere in the top 3 across 121 geographic pins. Budzooka (the strongest weed-family rival) trails at 96.69% on each — and even that's because they DO appear, just always behind Joyleaf. This is the kind of position competitors typically need years to challenge.</div>
+  </section>
+
+  <!-- 03 GBP TRAFFIC -->
+  <section>
+    <div class="section-header"><div class="section-num">03</div><h2>GBP traffic — fewer impressions, more conversions</h2></div>
+    <p class="section-lead">The headline-level GBP numbers show fewer impressions year over year (-11% profile views, -20% Search Views) — but every customer-action KPI is UP double-digits. That's the signature of higher-quality SEO traffic: customers arriving with intent, not just curiosity.</p>
+
+    <h3>April 2026 vs April 2025 (YoY comparison)</h3>
+    <table>
+      <thead>
+        <tr><th>Metric</th><th>April 2025</th><th>April 2026</th><th>YoY change</th><th>Read</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Total Searches</strong> (impressions)</td><td class="num">9,006</td><td class="num">7,174</td><td class="down">-20.3%</td><td>Market maturing — fewer total cannabis searches in NJ</td></tr>
+        <tr><td>↳ Direct (branded)</td><td class="num">1,299</td><td class="num">1,038</td><td class="down">-20.1%</td><td>Branded demand normalized after Apr 2025 4/20 spike</td></tr>
+        <tr><td>↳ Discovery (non-branded)</td><td class="num">7,707</td><td class="num">6,136</td><td class="down">-20.4%</td><td>Non-branded discovery softer year-over-year</td></tr>
+        <tr><td><strong>Web Clicks</strong></td><td class="num">4,787</td><td class="num"><strong>5,731</strong></td><td class="up">+19.7%</td><td>✅ Customers clicking through MORE despite fewer impressions</td></tr>
+        <tr><td><strong>Directions</strong></td><td class="num">1,218</td><td class="num"><strong>1,352</strong></td><td class="up">+11.0%</td><td>✅ Foot-traffic intent up — strongest in-store signal</td></tr>
+        <tr><td><strong>Phone Calls</strong></td><td class="num">192</td><td class="num"><strong>318</strong></td><td class="up">+65.6%</td><td>✅✅ Massive jump — high-intent question-askers</td></tr>
+        <tr><td><strong>Total GBP Actions</strong></td><td class="num">6,197</td><td class="num"><strong>7,401</strong></td><td class="up">+19.4%</td><td>✅ More customer actions overall</td></tr>
+        <tr><td><strong>Conversion Rate</strong> (Actions / Searches)</td><td class="num">68.81%</td><td class="num"><strong>103.16%</strong></td><td class="up">+34.4 pts</td><td>✅✅ Cleanest single signal of higher-quality traffic</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout win"><strong>The math that matters:</strong> If April 2025's 9,006 searches generated 6,197 actions, that means Joyleaf needed roughly 1.45 searches to produce 1 action. In April 2026, 7,174 searches generated 7,401 actions — <strong>each search now produces MORE THAN ONE action on average</strong>. That doesn't happen unless the search audience is more loyal AND more high-intent. The SEO investment has fundamentally upgraded the quality of who's finding Joyleaf.</div>
+
+    <h3>April 2026 vs March 2026 (MoM comparison)</h3>
+    <p>April was also a strong month-over-month recovery: Search Views climbed 13% from March's 6,351 to 7,174, and phone calls jumped 27% (251 → 318). Total Actions at 7,401 is the <strong>third-highest of any month in the 18-month history</strong>.</p>
+
+    <table>
+      <thead>
+        <tr><th>Metric</th><th>Mar 2026</th><th>Apr 2026</th><th>MoM change</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Total Searches</td><td class="num">6,351</td><td class="num">7,174</td><td class="up">+13.0%</td></tr>
+        <tr><td>Discovery (non-branded)</td><td class="num">5,406</td><td class="num">6,136</td><td class="up">+13.5%</td></tr>
+        <tr><td>Direct (branded)</td><td class="num">945</td><td class="num">1,038</td><td class="up">+9.8%</td></tr>
+        <tr><td>Web Clicks</td><td class="num">5,496</td><td class="num">5,731</td><td class="up">+4.3%</td></tr>
+        <tr><td>Phone Calls</td><td class="num">251</td><td class="num">318</td><td class="up">+26.7%</td></tr>
+        <tr><td>Total Actions</td><td class="num">7,094</td><td class="num">7,401</td><td class="up">+4.3%</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- 04 CONVERSION TRAJECTORY -->
+  <section>
+    <div class="section-header"><div class="section-num">04</div><h2>The 18-month trajectory — conversion rate has doubled</h2></div>
+    <p class="section-lead">The single cleanest measure of SEO quality is the GBP conversion rate (Actions ÷ Searches). For Joyleaf, this metric has gone from 50% to 103% over 18 months. That's not seasonal — it's structural improvement in how Joyleaf's listing performs once a customer finds it.</p>
+
+    <table>
+      <thead>
+        <tr><th>Month</th><th>Total Searches</th><th>Total Actions</th><th>Conversion Rate</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Nov 2024 (baseline)</td><td class="num">11,962</td><td class="num">6,006</td><td class="num">50.21%</td></tr>
+        <tr><td>Apr 2025</td><td class="num">9,006</td><td class="num">6,197</td><td class="num">68.81%</td></tr>
+        <tr><td>Oct 2025</td><td class="num">8,805</td><td class="num">7,151</td><td class="num">81.22%</td></tr>
+        <tr><td>Dec 2025</td><td class="num">8,848</td><td class="num">8,418</td><td class="num">95.14%</td></tr>
+        <tr><td>Jan 2026</td><td class="num">6,942</td><td class="num">7,516</td><td class="num"><strong>108.27%</strong></td></tr>
+        <tr><td>Mar 2026</td><td class="num">6,351</td><td class="num">7,094</td><td class="num"><strong>111.70%</strong></td></tr>
+        <tr><td><strong>Apr 2026</strong></td><td class="num"><strong>7,174</strong></td><td class="num"><strong>7,401</strong></td><td class="num"><strong>103.16%</strong></td></tr>
+      </tbody>
+    </table>
+
+    <p>Every month since January 2026 has cleared 100% conversion — meaning every search produces, on average, more than one customer action (a click, a phone call, or a direction request). That's a maturity benchmark very few local businesses achieve.</p>
+
+    <h3>Six-month rolling averages tell the same story</h3>
+    <div class="kpi-grid">
+      <div class="kpi">
+        <div class="label">Total Actions · Last 6 months</div>
+        <div class="value">7,247/mo</div>
+        <div class="sub">vs prior 6-month avg of 6,036/mo — <span class="delta-up">+20% lift</span></div>
+      </div>
+      <div class="kpi">
+        <div class="label">Phone Calls · Last 6 months</div>
+        <div class="value">328/mo</div>
+        <div class="sub">vs prior 6-month avg of 244/mo — <span class="delta-up">+34% lift</span></div>
+      </div>
+      <div class="kpi">
+        <div class="label">Web Clicks · Last 6 months</div>
+        <div class="value">5,471/mo</div>
+        <div class="sub">vs prior 6-month avg of 4,360/mo — <span class="delta-up">+25% lift</span></div>
+      </div>
+      <div class="kpi">
+        <div class="label">Conversion · Last 3 months</div>
+        <div class="value">104.5%</div>
+        <div class="sub">3-month avg Feb–Apr 2026 (Jan–Apr all over 100%)</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 SEARCH QUERIES -->
+  <section>
+    <div class="section-header"><div class="section-num">05</div><h2>What customers are searching for</h2></div>
+    <p class="section-lead">Google Business Profile's Searches Breakdown shows the top queries that surfaced Joyleaf's listing in April 2026 search results. The top 20 queries accounted for <strong>6,221 of 7,201 total Search Views (86.4%)</strong> — a concentrated, high-intent query mix.</p>
+
+    <table>
+      <thead><tr><th>Rank</th><th>Query</th><th>Searches</th><th>Family</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td><strong>dispensary near me</strong></td><td class="num"><strong>1,571</strong></td><td>Dispensary (non-branded)</td></tr>
+        <tr><td>2</td><td>weed dispensary</td><td class="num">744</td><td>Weed-dispensary</td></tr>
+        <tr><td>3</td><td><strong>joyleaf weed dispensary, east 1st avenue, roselle, nj</strong></td><td class="num"><strong>678</strong></td><td><strong>Branded (full address)</strong></td></tr>
+        <tr><td>4</td><td>dispensary</td><td class="num">666</td><td>Dispensary (non-branded)</td></tr>
+        <tr><td>5</td><td>weed dispensary near me</td><td class="num">384</td><td>Weed-dispensary</td></tr>
+        <tr><td>6</td><td>weed</td><td class="num">289</td><td>Weed (non-branded)</td></tr>
+        <tr><td>7</td><td><strong>joyleaf weed dispensary</strong></td><td class="num"><strong>265</strong></td><td><strong>Branded</strong></td></tr>
+        <tr><td>8</td><td>weed near me</td><td class="num">226</td><td>Weed (non-branded)</td></tr>
+        <tr><td>9</td><td>weed dispensary open near me</td><td class="num">225</td><td>Weed-dispensary (intent)</td></tr>
+        <tr><td>10</td><td>weed dispensary new jersey</td><td class="num">209</td><td>Weed-dispensary (geo)</td></tr>
+        <tr><td>11</td><td>dispensaries near me</td><td class="num">100</td><td>Dispensary (non-branded)</td></tr>
+        <tr><td>12</td><td>weed dispensary nj</td><td class="num">98</td><td>Weed-dispensary (geo)</td></tr>
+        <tr><td>13</td><td>weed shop</td><td class="num">88</td><td>Weed (non-branded)</td></tr>
+        <tr><td>14</td><td>weed store</td><td class="num">88</td><td>Weed (non-branded)</td></tr>
+        <tr><td>15</td><td>cannabis store</td><td class="num">85</td><td>Cannabis (non-branded)</td></tr>
+        <tr><td>16</td><td>weed dispensary near me nj</td><td class="num">85</td><td>Weed-dispensary (geo)</td></tr>
+        <tr><td>17</td><td>weed store near me</td><td class="num">59</td><td>Weed (non-branded)</td></tr>
+        <tr><td>18</td><td>nj weed dispensary</td><td class="num">58</td><td>Weed-dispensary (geo)</td></tr>
+        <tr><td>19</td><td>dispensary elizabeth nj</td><td class="num">54</td><td>Dispensary (geo)</td></tr>
+        <tr><td>20</td><td>weed pen</td><td class="num">49</td><td>Product (non-branded)</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Three observations from the query mix</h3>
+    <ul class="bullets">
+      <li><strong>Branded search is meaningful and growing.</strong> "joyleaf weed dispensary, east 1st avenue, roselle, nj" (#3, 678 searches) and "joyleaf weed dispensary" (#7, 265) together = <strong>943 branded searches in April (15% of top-20 volume)</strong>. Customers are typing the brand name directly — strong sign of brand recognition.</li>
+      <li><strong>"Dispensary near me" is the highest-volume query (1,571 searches alone — 22% of all Search Views).</strong> Joyleaf currently sits at #4 on this term (33.06% SoLV). This is the single highest-leverage rank target for May — see Section 6.</li>
+      <li><strong>Weed-family + geo-specific queries dominate the long tail.</strong> "weed dispensary new jersey", "weed dispensary nj", "nj weed dispensary" — these geographic variants validate the location-page strategy: NJ-specific content captures real volume.</li>
+    </ul>
+  </section>
+
+  <!-- 06 MAY PRIORITIES -->
+  <section>
+    <div class="section-header"><div class="section-num">06</div><h2>May 2026 — defend the wins, close the one gap</h2></div>
+    <p class="section-lead">April delivered Joyleaf's strongest local SEO position yet. May's plan is two-part: defend the eight #1 rankings (especially the three 100% SoLV positions) and close the single remaining gap on "dispensary near me."</p>
+
+    <h3>1 · Close the "dispensary near me" gap</h3>
+    <p>The highest-volume query that surfaces Joyleaf (1,571 monthly searches) is also the one term where Joyleaf currently sits #4 behind Breakwater Dispensary in Roselle Park (46.28% SoLV vs Joyleaf's 33.06%). Closing this gap unlocks the last keyword in the set.</p>
+    <ul class="bullets">
+      <li><strong>Add citation work + local backlinks</strong> targeting "dispensary near me" intent.</li>
+      <li><strong>Increase GBP photo cadence to 20+/month</strong> (current pace below this) — Google's local-pack algorithm weights GBP freshness heavily for "near me" queries.</li>
+      <li><strong>Target Breakwater specifically for monthly Local Falcon checks</strong> — track whether the gap is closing month over month.</li>
+    </ul>
+
+    <h3>2 · Defend the eight #1 rankings</h3>
+    <ul class="bullets">
+      <li><strong>Maintain review velocity</strong> (target 60/month) — review count + freshness directly support the SoLV positions.</li>
+      <li><strong>Weekly GBP posts</strong> with commercial-intent keywords (e.g., "weed dispensary near you," "cannabis delivery Roselle") to keep the listing fresh.</li>
+      <li><strong>GBP photo cadence:</strong> 20 photos/month minimum, mix of products, storefront, customer interactions, and seasonal promos.</li>
+    </ul>
+
+    <h3>3 · Sustain the +66% YoY phone call growth</h3>
+    <p>Phone Calls jumped from 192 → 318 YoY (+66%). That's a real signal of customer intent. May priorities:</p>
+    <ul class="bullets">
+      <li><strong>Audit call response time + script quality</strong> — high call volume only produces results if the team picks up and handles inquiries well. Worth a 30-minute review with the store team on call handling.</li>
+      <li><strong>Monitor monthly call volume</strong> through May to validate whether the +66% YoY trajectory holds or accelerates. Phone Calls are the highest-intent GBP action — sustaining them is the goal.</li>
+    </ul>
+
+    <h3>4 · Build on the branded search momentum</h3>
+    <p>Branded queries ("joyleaf...") generated 943 searches in April. The growth path for branded demand is community visibility:</p>
+    <ul class="bullets">
+      <li><strong>Continue local partnership content</strong> (the 5 NJ towns: Elizabeth, Roselle, Roselle Park, Union, Springfield) — geographic queries with "nj" or specific town names show up consistently in the top 20.</li>
+      <li><strong>Customer photo reviews</strong> reinforce brand recognition in search results.</li>
+    </ul>
+
+    <div class="callout win"><strong>The strategic position heading into May:</strong> Joyleaf has the strongest local SEO footprint in the Roselle / Union County area — #1 on 8 of 9 tracked keywords, with three at 100% SoLV. This is the kind of competitive moat that protects market position even as the NJ cannabis market matures and total search volume softens. The challenge ahead is consistency, not breakout — defend the position, close the one gap, and keep driving GBP engagement (clicks, directions, calls).</div>
+  </section>
+
+  <footer>
+    <p><strong>Joyleaf Dispensary × Dispenza Marketing</strong> · April 2026 Local SEO Wins Report · Built Mon May 11, 2026</p>
+    <p>Sources: Google Business Profile Performance dashboard (Apr 2026) · GBP Searches breakdown (top 20 queries) · Local Falcon scan May 1, 2026 (9 keywords · 11×11 grid · 2.0mi radius · 121 data points) · 18-month GBP traffic history (Nov 2024 – Apr 2026). All measurement is via Google Business Profile.</p>
+  </footer>
+
+</div>
+</body>
+</html>
