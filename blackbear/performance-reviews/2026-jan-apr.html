@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Black Bear Dispensary — Jan to April 2026 Local SEO Report</title>
+<style>
+  :root {
+    --primary: #1e3a2e;
+    --primary-light: #3d5e4f;
+    --gold: #c79a3a;
+    --gold-dark: #8c6a1f;
+    --brown: #6b4f3a;
+    --cream: #f8f0e1;
+    --bg: #fbf7ee;
+    --charcoal: #2b2b2b;
+    --gray: #6a6a6a;
+    --light-gray: #e5dfcf;
+    --good: #2f7d3e;
+    --bad: #b13a3a;
+    --warn: #c97a2f;
+    --neutral: #6a6a6a;
+  }
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; line-height: 1.55; color: var(--charcoal); background: var(--bg); margin: 0; padding: 0; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 40px 28px 80px; }
+  header.hero { background: linear-gradient(135deg, var(--primary) 0%, var(--brown) 100%); color: var(--cream); padding: 56px 32px; border-radius: 8px 8px 0 0; }
+  header.hero .label { font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); font-weight: 600; }
+  header.hero h1 { font-size: 34px; margin: 10px 0 12px; font-weight: 700; line-height: 1.2; }
+  header.hero p.sub { font-size: 16px; margin: 0; opacity: 0.92; }
+  .container { background: white; padding: 40px 44px; border-radius: 0 0 8px 8px; box-shadow: 0 2px 14px rgba(30,58,46,0.08); }
+  h2 { color: var(--primary); font-size: 24px; margin: 40px 0 14px; border-bottom: 2px solid var(--gold); padding-bottom: 8px; }
+  h2:first-child { margin-top: 0; }
+  h3 { color: var(--primary-light); font-size: 18px; margin: 24px 0 10px; }
+  h4 { color: var(--charcoal); font-size: 13px; margin: 14px 0 6px; text-transform: uppercase; letter-spacing: 0.06em; }
+  p { margin: 10px 0; font-size: 14.5px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0 18px; font-size: 13px; }
+  th { background: var(--primary); color: var(--cream); text-align: left; padding: 9px 11px; font-weight: 600; }
+  td { padding: 8px 11px; border-bottom: 1px solid var(--light-gray); }
+  tr:nth-child(even) td { background: #faf7ee; }
+  .num { text-align: right; font-variant-numeric: tabular-nums; }
+  .good { color: var(--good); font-weight: 600; }
+  .bad { color: var(--bad); font-weight: 600; }
+  .neutral { color: var(--gray); }
+  .stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 16px 0 22px; }
+  .stat { background: var(--cream); padding: 12px 14px; border-radius: 6px; border-left: 4px solid var(--gold); }
+  .stat .label { font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gray); }
+  .stat .value { font-size: 20px; font-weight: 700; color: var(--primary); margin: 3px 0 2px; }
+  .stat .delta { font-size: 12px; font-weight: 600; }
+  .delta.up { color: var(--good); }
+  .delta.down { color: var(--bad); }
+  .delta.flat { color: var(--gray); }
+  .callout { background: var(--cream); border-left: 5px solid var(--gold); padding: 14px 18px; margin: 16px 0; border-radius: 0 6px 6px 0; font-size: 14px; }
+  .callout.win { background: #ecf3eb; border-left-color: var(--good); }
+  .callout.watch { background: #faf2ec; border-left-color: var(--warn); }
+  .callout.bad { background: #fbe9e7; border-left-color: var(--bad); }
+  .callout strong { color: var(--primary); }
+  .store-section { background: white; border: 1px solid var(--light-gray); border-radius: 8px; padding: 26px 30px; margin: 24px 0; }
+  .store-section.urban { border-top: 4px solid var(--primary); }
+  .store-section.rural { border-top: 4px solid var(--gold); }
+  .store-section.new { border-top: 4px solid var(--brown); }
+  .store-head { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding-bottom: 14px; border-bottom: 1px solid var(--light-gray); margin-bottom: 18px; }
+  .store-title h3 { margin: 0; color: var(--primary); font-size: 22px; }
+  .store-title .meta { font-size: 12px; color: var(--gray); text-transform: uppercase; letter-spacing: 0.06em; margin-top: 4px; }
+  .store-badge { display: inline-block; padding: 4px 10px; border-radius: 12px; font-size: 11px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; }
+  .badge-urban { background: var(--primary); color: white; }
+  .badge-rural { background: var(--gold); color: var(--charcoal); }
+  .badge-new { background: var(--brown); color: white; }
+  .badge-winner { background: var(--good); color: white; }
+  ul, ol { margin: 8px 0 12px; padding-left: 22px; }
+  li { margin: 4px 0; font-size: 14px; }
+  .scope-note { background: #eef0f7; border-left: 5px solid var(--primary-light); padding: 12px 16px; margin: 14px 0; border-radius: 0 6px 6px 0; font-size: 13px; }
+  .footer-meta { text-align: center; font-size: 12px; color: var(--gray); margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--light-gray); }
+  @media (max-width: 720px) {
+    .container { padding: 26px 22px; }
+    .store-section { padding: 22px 20px; }
+    header.hero { padding: 32px 20px; }
+    header.hero h1 { font-size: 26px; }
+    .stat-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <div class="label">Local SEO Performance · Jan to April 2026</div>
+  <h1>Black Bear Dispensary</h1>
+  <p class="sub">Google Business Profile performance across all 5 PA locations + the Winona MN expansion. Per-store sections below.</p>
+</header>
+
+<main class="container">
+
+<h2>Executive Summary</h2>
+
+<div class="scope-note">
+<strong>Scope note:</strong> Black Bear does not currently share POS data with Dispenza, so this report focuses entirely on Google Business Profile discovery traffic and bottom funnel interactions (calls · directions · website clicks · chat clicks). KPIs are GBP-only; revenue / AOV / transaction counts are not in scope.
+</div>
+
+<p>Jan-April 2026 was a mixed quarter across the Black Bear portfolio. Four of five PA locations saw year-over-year declines on discovery impressions (profile views down 25 to 44%) and on Business Profile interactions (down 11 to 45%). The exception is <strong>Meadville</strong>, which posted +26.9% YoY interactions and +46.2% YoY calls — the only PA store with positive YoY action growth in the period. The new Winona MN location went live April 13 and delivered 2,698 interactions in its first 18 days.</p>
+
+<p><strong>The core pattern is consistent across PA:</strong> discovery impressions softened materially (likely a combination of seasonal cannabis-search softening + algorithm reweighting) but the customers Google did send converted at high rates — Meadville at 48.9% conversion, Clarion at 42.6%, Grove City at 38.4%. The Pittsburgh-area stores (Bridgeville at 18.7%, Regent Square at 16.8%) show lower per-impression conversion, which is the highest-leverage optimization target for May.</p>
+
+<div class="stat-grid">
+  <div class="stat">
+    <div class="label">Portfolio BPI (Jan-Apr 2026)</div>
+    <div class="value">14,784</div>
+    <div class="delta flat">across all 5 PA stores</div>
+  </div>
+  <div class="stat">
+    <div class="label">Best YoY (PA portfolio)</div>
+    <div class="value">Meadville</div>
+    <div class="delta up">+26.9% YoY · only positive</div>
+  </div>
+  <div class="stat">
+    <div class="label">Worst YoY (PA portfolio)</div>
+    <div class="value">Regent Square</div>
+    <div class="delta down">−45.4% YoY interactions</div>
+  </div>
+  <div class="stat">
+    <div class="label">Newest location</div>
+    <div class="value">Winona MN</div>
+    <div class="delta up">2,698 BPI in 18 days</div>
+  </div>
+</div>
+
+<h2>Portfolio Comparison — Jan to April 2026</h2>
+
+<table>
+  <thead>
+    <tr><th>Store</th><th class="num">BPI</th><th class="num">YoY</th><th class="num">Profile Views</th><th class="num">Conv. Rate</th><th class="num">Reviews</th><th>Rating</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>Regent Square</strong> (Pittsburgh)</td><td class="num"><strong>3,596</strong></td><td class="num bad">−45.4%</td><td class="num">21,372</td><td class="num">16.8%</td><td class="num">90</td><td>4.8★</td></tr>
+    <tr><td><strong>Bridgeville</strong> (Pittsburgh)</td><td class="num"><strong>3,680</strong></td><td class="num neutral">no YoY</td><td class="num">19,692</td><td class="num">18.7%</td><td class="num">35</td><td>5.0★</td></tr>
+    <tr><td><strong>Grove City</strong> (Mercer County)</td><td class="num"><strong>3,343</strong></td><td class="num bad">−18.1%</td><td class="num">8,698</td><td class="num">38.4%</td><td class="num">213</td><td>4.9★</td></tr>
+    <tr><td><strong>Meadville</strong> (Crawford County)</td><td class="num"><strong>2,505</strong></td><td class="num good">+26.9%</td><td class="num">5,120</td><td class="num good">48.9%</td><td class="num">75</td><td>4.9★</td></tr>
+    <tr><td><strong>Clarion</strong> (Clarion County)</td><td class="num"><strong>1,664</strong></td><td class="num bad">−11.5%</td><td class="num">3,905</td><td class="num">42.6%</td><td class="num">86</td><td>5.0★</td></tr>
+    <tr><td>Winona, MN <em>(opened Apr 13)</em></td><td class="num">2,698<em> (April only)</em></td><td class="num neutral">N/A — new</td><td class="num">4,099 (April)</td><td class="num">65.8%</td><td class="num">(new)</td><td>(new)</td></tr>
+  </tbody>
+</table>
+
+<div class="callout watch">
+<strong>Two patterns are clearly visible across the portfolio:</strong>
+<ul>
+  <li><strong>Discovery softening is portfolio-wide</strong> — profile views down 25-44% YoY at all 4 PA stores with YoY data. Likely a combination of broader cannabis-search softening + the recent Google "Offers delivery" attribute removal at most PA stores. Worth confirming with paid Local Falcon scans across the entire 5-store PA footprint.</li>
+  <li><strong>Rural PA stores (Clarion · Grove City · Meadville) convert at 2-3× the rate of Pittsburgh-area stores (Bridgeville · Regent Square)</strong>. The urban stores have larger impression volume but customers browse more without acting. Refresh of photos, GBP description, and post cadence at the urban stores is the single biggest lever to lift conversion.</li>
+</ul>
+</div>
+
+<h2>Per-Store Reports</h2>
+
+<!-- ============ REGENT SQUARE ============ -->
+<div class="store-section urban">
+<div class="store-head">
+  <div class="store-title">
+    <h3>1. Regent Square</h3>
+    <div class="meta">Pittsburgh PA 15218 · opened Apr 20, 2024 · ~25 months</div>
+  </div>
+  <span class="store-badge badge-urban">Urban Pittsburgh</span>
+</div>
+
+<div class="stat-grid">
+  <div class="stat"><div class="label">Total BPI</div><div class="value">3,596</div><div class="delta down">−45.4% YoY</div></div>
+  <div class="stat"><div class="label">Website Clicks</div><div class="value">1,990</div><div class="delta down">−59.0% YoY</div></div>
+  <div class="stat"><div class="label">Directions</div><div class="value">1,158</div><div class="delta down">−6.1% YoY</div></div>
+  <div class="stat"><div class="label">Calls</div><div class="value">409</div><div class="delta down">−17.2% YoY</div></div>
+  <div class="stat"><div class="label">Chat Clicks</div><div class="value">39</div><div class="delta flat">only PA store w/ active chat</div></div>
+  <div class="stat"><div class="label">Profile Views</div><div class="value">21,372</div><div class="delta down">−43.7% YoY · largest in PA</div></div>
+  <div class="stat"><div class="label">Searches</div><div class="value">12,104</div><div class="delta down">−47.7% YoY</div></div>
+  <div class="stat"><div class="label">Action Conv. Rate</div><div class="value">16.8%</div><div class="delta down">lowest in PA portfolio</div></div>
+</div>
+
+<h4>Top 5 search queries</h4>
+<table>
+  <thead><tr><th>Query</th><th class="num">Volume</th><th>Type</th></tr></thead>
+  <tbody>
+    <tr><td>black bear dispensary</td><td class="num">3,621</td><td>Direct (branded)</td></tr>
+    <tr><td>dispensary near me</td><td class="num">1,937</td><td>Discovery</td></tr>
+    <tr><td>black bear</td><td class="num">1,470</td><td>Direct (branded)</td></tr>
+    <tr><td>blackbear dispensary</td><td class="num">948</td><td>Direct (branded)</td></tr>
+    <tr><td>dispensary</td><td class="num">910</td><td>Discovery</td></tr>
+  </tbody>
+</table>
+
+<h4>Action mix</h4>
+<p>Website clicks 55.3% · Directions 32.2% · Calls 11.4% · Chat 1.1%. Mobile share 89%. Branded share of top 12 queries: ~65% (highest in PA portfolio — strong brand recall).</p>
+
+<div class="callout bad">
+<strong>Regent Square has the worst Jan-Apr YoY pattern in the PA portfolio.</strong> BPI down 45%, website clicks down 59%. Despite the largest raw impression volume (21K profile views), conversion is lowest (16.8%). The audience is browsing without acting — likely a photo / description / post-cadence refresh issue. Worth a dedicated May review focused on lifting conversion.
+</div>
+<div class="callout">
+<strong>Notable:</strong> "medical dispensary near me" surfaces at #14 (140 searches) — strong interception of PA medical-card-curious customers landing on the hemp listing. "thca" at #20 (36 searches) — only PA store with cannabinoid-category search volume.
+</div>
+</div>
+
+<!-- ============ BRIDGEVILLE ============ -->
+<div class="store-section urban">
+<div class="store-head">
+  <div class="store-title">
+    <h3>2. Bridgeville</h3>
+    <div class="meta">Pittsburgh PA 15017 · opened June 13, 2025 · ~11 months</div>
+  </div>
+  <span class="store-badge badge-urban">Urban Pittsburgh</span>
+</div>
+
+<div class="stat-grid">
+  <div class="stat"><div class="label">Total BPI</div><div class="value">3,680</div><div class="delta flat">no YoY (under 12 months)</div></div>
+  <div class="stat"><div class="label">Website Clicks</div><div class="value">2,474</div><div class="delta flat">67.2% of actions</div></div>
+  <div class="stat"><div class="label">Directions</div><div class="value">872</div><div class="delta flat">23.7%</div></div>
+  <div class="stat"><div class="label">Calls</div><div class="value">334</div><div class="delta flat">9.1%</div></div>
+  <div class="stat"><div class="label">Profile Views</div><div class="value">19,692</div><div class="delta flat">2nd largest in PA</div></div>
+  <div class="stat"><div class="label">Searches</div><div class="value">12,220</div><div class="delta flat">similar to Regent Sq</div></div>
+  <div class="stat"><div class="label">Action Conv. Rate</div><div class="value">18.7%</div><div class="delta down">below rural PA avg</div></div>
+  <div class="stat"><div class="label">Mobile share</div><div class="value">89%</div><div class="delta flat">portfolio standard</div></div>
+</div>
+
+<h4>Top 5 search queries</h4>
+<table>
+  <thead><tr><th>Query</th><th class="num">Volume</th><th>Type</th></tr></thead>
+  <tbody>
+    <tr><td>black bear dispensary</td><td class="num">3,548</td><td>Direct (branded)</td></tr>
+    <tr><td>dispensary near me</td><td class="num">2,135</td><td>Discovery</td></tr>
+    <tr><td>black bear</td><td class="num">1,640</td><td>Direct (branded)</td></tr>
+    <tr><td>blackbear dispensary</td><td class="num">956</td><td>Direct (branded)</td></tr>
+    <tr><td>dispensary</td><td class="num">942</td><td>Discovery</td></tr>
+  </tbody>
+</table>
+
+<h4>Action mix</h4>
+<p>Website clicks 67.2% · Directions 23.7% · Calls 9.1%. Mobile share 89%. Branded share of top 13: ~61%. Top GBP photo signals: Pittsburgh-branded social accounts (@blackbeardispensarypgh + blackbear.disp_pgh).</p>
+
+<div class="callout watch">
+<strong>Bridgeville's WhatsApp chat was REJECTED by Google</strong> (link <code>wa.me/14126993785</code>). The SAME link is APPROVED and live at Regent Square. Worth re-attempting the chat configuration at Bridgeville referencing Regent Square as precedent.
+</div>
+<div class="callout">
+<strong>Listing under 12 months old</strong> — no YoY comparison available yet. The 4-month Jan-Apr 2026 baseline is the start of the comparison window for next year's YoY analysis.
+</div>
+</div>
+
+<!-- ============ GROVE CITY ============ -->
+<div class="store-section rural">
+<div class="store-head">
+  <div class="store-title">
+    <h3>3. Grove City</h3>
+    <div class="meta">Mercer County PA 16127 · opened July 9, 2021 · ~5 years (OLDEST PA STORE)</div>
+  </div>
+  <span class="store-badge badge-rural">Rural / Outlets Corridor</span>
+</div>
+
+<div class="stat-grid">
+  <div class="stat"><div class="label">Total BPI</div><div class="value">3,343</div><div class="delta down">−18.1% YoY</div></div>
+  <div class="stat"><div class="label">Profile Views</div><div class="value">8,698</div><div class="delta down">−43.2% YoY</div></div>
+  <div class="stat"><div class="label">Searches</div><div class="value">4,472</div><div class="delta down">−41.5% YoY</div></div>
+  <div class="stat"><div class="label">Action Conv. Rate</div><div class="value">38.4%</div><div class="delta flat">strong</div></div>
+  <div class="stat"><div class="label">Google Reviews</div><div class="value">213</div><div class="delta up">highest in PA</div></div>
+  <div class="stat"><div class="label">Rating</div><div class="value">4.9★</div><div class="delta flat">portfolio standard</div></div>
+  <div class="stat"><div class="label">Mobile share</div><div class="value">88%</div><div class="delta flat">portfolio standard</div></div>
+  <div class="stat"><div class="label">Branded share (top 10)</div><div class="value">~60%</div><div class="delta flat">strong brand recall</div></div>
+</div>
+
+<h4>Top 5 search queries</h4>
+<table>
+  <thead><tr><th>Query</th><th class="num">Volume</th><th>Type</th></tr></thead>
+  <tbody>
+    <tr><td>black bear dispensary</td><td class="num">912</td><td>Direct (branded)</td></tr>
+    <tr><td>dispensary near me</td><td class="num">584</td><td>Discovery</td></tr>
+    <tr><td>black bear hemp dispensary</td><td class="num">516</td><td>Direct (branded)</td></tr>
+    <tr><td>black bear</td><td class="num">449</td><td>Direct (branded)</td></tr>
+    <tr><td>weed dispensary</td><td class="num">410</td><td>Discovery</td></tr>
+  </tbody>
+</table>
+
+<div class="callout">
+<strong>Most established PA store</strong> — 213 reviews accumulated over ~5 years (3.7/month velocity). Located near Grove City Premium Outlets + I-79 corridor. Wednesday afternoon "as busy as it gets" peak captured live in the front-end Popular Times view.
+</div>
+<div class="callout">
+<strong>Notable unique queries:</strong> "gas" (82 searches — cannabis slang for high-quality flower), "smoke shop" (74), "weed pen" (41), 4 "open now" intent variants (~92 combined). Configure Pickup hours to capture the open-now intent better.
+</div>
+</div>
+
+<!-- ============ MEADVILLE ============ -->
+<div class="store-section rural">
+<div class="store-head">
+  <div class="store-title">
+    <h3>4. Meadville</h3>
+    <div class="meta">Crawford County PA 16335 · opened Nov 4, 2022 · ~3.5 years</div>
+  </div>
+  <span class="store-badge badge-winner">PA Portfolio Winner</span>
+</div>
+
+<div class="stat-grid">
+  <div class="stat"><div class="label">Total BPI</div><div class="value">2,505</div><div class="delta up">+26.9% YoY ✓</div></div>
+  <div class="stat"><div class="label">Website Clicks</div><div class="value">1,951</div><div class="delta up">+25.5% YoY ✓</div></div>
+  <div class="stat"><div class="label">Directions</div><div class="value">345</div><div class="delta up">+25.0% YoY ✓</div></div>
+  <div class="stat"><div class="label">Calls</div><div class="value">209</div><div class="delta up">+46.2% YoY ✓</div></div>
+  <div class="stat"><div class="label">Profile Views</div><div class="value">5,120</div><div class="delta down">−25.9% YoY</div></div>
+  <div class="stat"><div class="label">Action Conv. Rate</div><div class="value">48.9%</div><div class="delta up">HIGHEST in PA portfolio</div></div>
+  <div class="stat"><div class="label">Mobile share</div><div class="value">87%</div><div class="delta flat">portfolio standard</div></div>
+  <div class="stat"><div class="label">Vape-search rank</div><div class="value">#8</div><div class="delta flat">"vape shops near me" 69</div></div>
+</div>
+
+<h4>Top 5 search queries</h4>
+<table>
+  <thead><tr><th>Query</th><th class="num">Volume</th><th>Type</th></tr></thead>
+  <tbody>
+    <tr><td>black bear dispensary</td><td class="num">375</td><td>Direct (branded)</td></tr>
+    <tr><td>black bear hemp dispensary</td><td class="num">357</td><td>Direct (branded)</td></tr>
+    <tr><td>dispensary near me</td><td class="num">293</td><td>Discovery</td></tr>
+    <tr><td>weed dispensary</td><td class="num">216</td><td>Discovery</td></tr>
+    <tr><td>dispensary</td><td class="num">207</td><td>Discovery</td></tr>
+  </tbody>
+</table>
+
+<div class="callout win">
+<strong>The ONLY PA store with positive YoY action growth.</strong> Even though impressions are down 26% YoY, the customers Google sends are converting at much higher rates than a year ago — driving 26.9% more total interactions. This is the cleanest "fewer impressions but more action" signal in the Black Bear portfolio.
+</div>
+<div class="callout">
+<strong>Vape-shop discovery niche is unique to Meadville</strong> — "vape shops near me" (69) + "vape shop meadville pa" (17) + "vape shops meadville pa" (16) = ~102 combined searches. The Vaporizer Store GBP category is delivering. Worth a vape-product post cadence to amplify.
+</div>
+<div class="callout">
+<strong>Named-staff search:</strong> "bekah black bear dispensary" appears at #18 — an employee name search. Worth confirming the spelling and amplifying via posts that name-drop staff.
+</div>
+</div>
+
+<!-- ============ CLARION ============ -->
+<div class="store-section rural">
+<div class="store-head">
+  <div class="store-title">
+    <h3>5. Clarion</h3>
+    <div class="meta">Clarion County PA 16214 · opening date not in GBP · college town</div>
+  </div>
+  <span class="store-badge badge-rural">Rural / College Town</span>
+</div>
+
+<div class="stat-grid">
+  <div class="stat"><div class="label">Total BPI</div><div class="value">1,664</div><div class="delta down">−11.5% YoY</div></div>
+  <div class="stat"><div class="label">Website Clicks</div><div class="value">1,223</div><div class="delta down">−14.1% YoY</div></div>
+  <div class="stat"><div class="label">Directions</div><div class="value">283</div><div class="delta up">+1.8% YoY ✓</div></div>
+  <div class="stat"><div class="label">Calls</div><div class="value">158</div><div class="delta down">−11.2% YoY</div></div>
+  <div class="stat"><div class="label">Profile Views</div><div class="value">3,905</div><div class="delta down">−42.2% YoY</div></div>
+  <div class="stat"><div class="label">Action Conv. Rate</div><div class="value">42.6%</div><div class="delta up">strong</div></div>
+  <div class="stat"><div class="label">Mobile share</div><div class="value">87%</div><div class="delta flat">portfolio standard</div></div>
+  <div class="stat"><div class="label">Branded share (top 10)</div><div class="value">~63%</div><div class="delta up">strong brand recall</div></div>
+</div>
+
+<h4>Top 5 search queries</h4>
+<table>
+  <thead><tr><th>Query</th><th class="num">Volume</th><th>Type</th></tr></thead>
+  <tbody>
+    <tr><td>black bear dispensary</td><td class="num">313</td><td>Direct (branded)</td></tr>
+    <tr><td>black bear hemp dispensary</td><td class="num">298</td><td>Direct (branded)</td></tr>
+    <tr><td>black bear</td><td class="num">263</td><td>Direct (branded)</td></tr>
+    <tr><td>dispensary near me</td><td class="num">222</td><td>Discovery</td></tr>
+    <tr><td>weed dispensary</td><td class="num">162</td><td>Discovery</td></tr>
+  </tbody>
+</table>
+
+<div class="callout">
+<strong>Only PA store with positive YoY directions</strong> (+1.8%) despite the broader -11.5% BPI decline. The trip-takers are still committed. Conversion at 42.6% confirms high-intent traffic.
+</div>
+<div class="callout">
+<strong>Brand-specific product searches appearing:</strong> "cornbread hemp gummies for pain" at #24 (a CBD/Delta-9 brand) — worth confirming if Clarion stocks Cornbread Hemp and amplifying. "curaleaf" at #25 — competitor brand interception (Curaleaf is a PA medical chain; their customers are finding Black Bear Clarion).
+</div>
+</div>
+
+<!-- ============ WINONA MN ============ -->
+<div class="store-section new">
+<div class="store-head">
+  <div class="store-title">
+    <h3>6. Winona, MN</h3>
+    <div class="meta">Winona MN 55987 · opened April 13, 2026 · ~30 days old at audit</div>
+  </div>
+  <span class="store-badge badge-new">Newest Location</span>
+</div>
+
+<div class="stat-grid">
+  <div class="stat"><div class="label">April BPI</div><div class="value">2,698</div><div class="delta up">in 18 active days</div></div>
+  <div class="stat"><div class="label">Website Clicks (Apr)</div><div class="value">2,382</div><div class="delta up">88.3% of actions</div></div>
+  <div class="stat"><div class="label">Directions (Apr)</div><div class="value">256</div><div class="delta up">9.5%</div></div>
+  <div class="stat"><div class="label">Calls (Apr)</div><div class="value">60</div><div class="delta up">2.2%</div></div>
+  <div class="stat"><div class="label">Profile Views (Apr)</div><div class="value">4,099</div><div class="delta up">opening month</div></div>
+  <div class="stat"><div class="label">Action Conv. Rate (Apr)</div><div class="value">65.8%</div><div class="delta up">exceptional for new listing</div></div>
+  <div class="stat"><div class="label">Mobile share</div><div class="value">83%</div><div class="delta flat">portfolio standard</div></div>
+  <div class="stat"><div class="label">April peak day</div><div class="value">Apr 14</div><div class="delta up">~350 BPI · ribbon week</div></div>
+</div>
+
+<h4>Top 5 search queries (April 2026 only)</h4>
+<table>
+  <thead><tr><th>Query</th><th class="num">Volume</th><th>Type</th></tr></thead>
+  <tbody>
+    <tr><td>winona dispensary</td><td class="num">655</td><td>Discovery (geo)</td></tr>
+    <tr><td>weed</td><td class="num">351</td><td>Discovery</td></tr>
+    <tr><td>dispensary winona mn</td><td class="num">284</td><td>Discovery (geo)</td></tr>
+    <tr><td>dispensary</td><td class="num">280</td><td>Discovery</td></tr>
+    <tr><td>weed dispensary</td><td class="num">279</td><td>Discovery</td></tr>
+  </tbody>
+</table>
+
+<div class="callout win">
+<strong>Strongest opening-month conversion rate in the Black Bear portfolio.</strong> 65.8% of profile-view sessions converted to a Business Profile action. Apr 14 (day after ribbon cutting) was the absolute peak. Post-opening daily baseline settles ~100-150 BPI/day, suggesting May-and-beyond run-rate of ~3,500-4,500 BPI/month if the trajectory holds.
+</div>
+<div class="callout bad">
+<strong>GBP business name violation:</strong> Winona's listing is published as "Black Bear <strong>Weed</strong> Dispensary Winona" — uses "Weed" in the title, violating the binding payment-processor compliance rule. <strong>Recommend renaming to "Black Bear Hemp Dispensary - Winona"</strong> to match the compliant PA-portfolio convention. As supporting evidence: "black bear weed dispensary winona" (39) outranks "black bear dispensary winona" (16) in April searches — confirming the GBP name is shaping customer search behavior. Renaming will redirect those searches to the cleaner variant AND resolve the compliance risk.
+</div>
+</div>
+
+<h2>Cross-Portfolio Observations</h2>
+
+<h3>1. Discovery softening is portfolio-wide (PA)</h3>
+<p>All 4 PA stores with YoY data show profile-view declines of 25% to 44%. Searches are down 30% to 48%. The pattern is too consistent across rural and urban PA to be location-specific — likely drivers include a broader cannabis-search market softening (similar pattern seen at Essex Apothecary in MA), Google's recent removal of "Offers delivery" attribute at most PA stores, and the standard Q1-to-Q2 seasonal pattern. <strong>Worth a Local Falcon scan baseline across all 5 PA locations</strong> to track ranking position alongside the impression decline.</p>
+
+<h3>2. Brand recall is strong (60-65% branded share)</h3>
+<p>Across all 4 mature PA stores, the top 10-12 search queries are ~60-65% branded ("black bear dispensary" + variants). This is dramatically higher than typical Dispenza-portfolio clients (most are 2-25% branded share, dominated by Discovery). Black Bear's multi-year compounding has produced exceptional brand recall — worth treating as a real asset and continuing brand-awareness investment.</p>
+
+<h3>3. Description / title inconsistency at 4 of 5 PA stores</h3>
+<p>GBP titles correctly use "Hemp Dispensary" across all 5 PA stores (compliant with the payment-processor rule). But the descriptions at Clarion · Grove City · Meadville · Regent Square all use "Black Bear <strong>Weed</strong> Dispensary" in the opening line. Only Bridgeville's description is clean. <strong>Recommend a portfolio-wide description rewrite</strong> to align the "Hemp" naming across both title and description fields. Same fix needed at Winona MN (with the GBP rename).</p>
+
+<h3>4. Urban vs rural conversion gap</h3>
+<p>Rural PA stores (Clarion 42.6% · Meadville 48.9% · Grove City 38.4%) convert at 2-3× the rate of Pittsburgh-area stores (Bridgeville 18.7% · Regent Square 16.8%). The rural audience is more action-prone; the urban audience browses more without acting. The single highest-leverage May optimization is <strong>lifting Bridgeville + Regent Square conversion through photo refresh, GBP description rewrite, and post cadence intensification</strong>.</p>
+
+<h3>5. Service-options "Offers delivery" removal</h3>
+<p>Google removed the "Offers delivery" attribute from Clarion + Grove City (confirmed in back-office tabs). May have also impacted Meadville and Regent Square (some service-options inconsistencies observed). This change correlates with the YoY discovery decline timing — worth confirming with client whether delivery is actually offered and re-adding if applicable, or updating descriptions to reflect the no-delivery reality.</p>
+
+<h3>6. DEI ownership attribute inconsistency</h3>
+<p>Bridgeville surfaces 5 ownership identity attributes (women + small + disabled + Latino + veteran). Regent Square surfaces 4 (Latino + disabled + women + small — NO veteran). Clarion has 2. Grove City + Meadville have 1 each (veteran only). If the same owner-of-record applies portfolio-wide, all PA stores should match Bridgeville's 5-attribute set. <strong>Recommend a single audit + portfolio-wide update.</strong></p>
+
+<h2>May 2026 Recommendations (GBP-only — no POS data in scope)</h2>
+
+<div class="callout">
+<strong>Tier 1 — Compliance + Brand Consistency (P0)</strong>
+<ul>
+  <li><strong>Winona MN:</strong> Rename GBP from "Black Bear Weed Dispensary Winona" to "Black Bear Hemp Dispensary - Winona" (payment-processor compliance). Rewrite description to remove stale ribbon-cutting reference.</li>
+  <li><strong>4 PA stores (Clarion · Grove City · Meadville · Regent Square):</strong> Rewrite descriptions to use "Black Bear Hemp Dispensary" instead of "Black Bear Weed Dispensary".</li>
+  <li><strong>All 6 stores:</strong> Audit DEI ownership attribute surface; align portfolio-wide if same owner-of-record applies.</li>
+</ul>
+</div>
+
+<div class="callout">
+<strong>Tier 2 — Conversion Lift on Urban Stores (P1)</strong>
+<ul>
+  <li><strong>Regent Square + Bridgeville:</strong> Photo gallery refresh — fresh exterior, interior, product, and team shots. Target 4-5 new photos per week through May.</li>
+  <li><strong>Regent Square:</strong> Re-attempt WhatsApp chat using the SAME `wa.me/14126993785` URL from Bridgeville's rejected attempt. Reference Regent Square's APPROVED status as precedent.</li>
+  <li><strong>Bridgeville + Regent Square:</strong> GBP post cadence at 3-4 posts per week. Lead with seasonal product launches, brand differentiators, and customer reviews.</li>
+</ul>
+</div>
+
+<div class="callout">
+<strong>Tier 3 — Discovery Recovery (P1)</strong>
+<ul>
+  <li><strong>Service area + Pickup hours:</strong> Configure Pickup hours at all 5 PA stores (only Regent Square has them set today). Review service-area cities at each store and clean up far-flung outliers (Clarion's Zionhill, Meadville's Frenchtown + Fredericksburg).</li>
+  <li><strong>Local Falcon baseline:</strong> Schedule first scans across all 5 PA stores + Winona. Suggested keyword set: dispensary near me · cannabis store · hemp dispensary [city] · weed dispensary · dispensary [city] · cannabis dispensary · dispensary [county] pa.</li>
+  <li><strong>"Offers delivery" follow-up:</strong> Confirm with client whether delivery is offered at any PA store; re-add attribute if applicable, or finalize the no-delivery messaging.</li>
+</ul>
+</div>
+
+<div class="callout">
+<strong>Tier 4 — Brand Amplification (P2)</strong>
+<ul>
+  <li><strong>Pet products:</strong> Multiple reviews + Regent Square's category-set already surface pet products as a differentiator. Amplify in descriptions + Posts portfolio-wide.</li>
+  <li><strong>Veteran discount:</strong> Confirmed in Grove City review voice but not surfaced in any description. Add a "veteran discount" line to all 5 PA descriptions.</li>
+  <li><strong>Meadville vape niche:</strong> "Vape shops near me" delivers ~5% of Meadville's search volume. Build a vape-focused post and content cadence at Meadville specifically.</li>
+  <li><strong>Cannabinoid education:</strong> Regent Square uniquely surfaces "thca" search volume (36). Worth a Regent Square-specific THCA + Delta-9 + CBG content push.</li>
+</ul>
+</div>
+
+<div class="footer-meta">
+  Prepared by Dispenza Dispensary Marketing · May 13, 2026 · GBP performance scope only (no POS data) · Sources: GBP Performance dashboards (Jan-Apr 2026 with YoY), Business Information back-office tabs, "Reviews from the web" panels<br>
+  Data baselines per location: <code>clients/Black Bear Dispensary/[Location]/performance-reviews/2026-05/2026-05-13_gbp-baseline.md</code>
+</div>
+
+</main>
+</div>
+</body>
+</html>
