@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Black Bear — May 2026 Execution Playbook (Dispenza-Only)</title>
+<style>
+  :root {
+    --forest-900: #122318;
+    --forest-700: #1e3a2e;
+    --forest-500: #2f5840;
+    --forest-100: #e6efe9;
+    --gold: #c79a3a;
+    --gold-light: #f5e9c8;
+    --brown: #6b4f3a;
+    --brown-100: #efe6dc;
+    --cream: #f8f0e1;
+    --bg-paper: #fbf7ee;
+    --green: #2BA84A;
+    --green-100: #E6F6EA;
+    --red: #B7322B;
+    --red-100: #FBE6E5;
+    --amber: #C97A0A;
+    --amber-100: #FCEBD0;
+    --gray-900: #1F2937;
+    --gray-700: #4B5563;
+    --gray-500: #6B7280;
+    --gray-300: #D1D5DB;
+    --gray-100: #F3F4F6;
+    --gray-50: #F9FAFB;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; color: var(--gray-900); background: var(--bg-paper); line-height: 1.6; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 32px 80px; }
+
+  /* Cover */
+  .cover { background: linear-gradient(135deg, var(--forest-900) 0%, var(--brown) 100%); color: #fff; padding: 70px 32px 90px; margin-bottom: 40px; border-bottom: 6px solid var(--gold); }
+  .cover-inner { max-width: 1100px; margin: 0 auto; }
+  .cover .eyebrow { text-transform: uppercase; letter-spacing: 3px; font-size: 13px; font-weight: 600; opacity: 0.85; margin-bottom: 14px; }
+  .cover h1 { font-size: 48px; line-height: 1.1; margin: 0 0 16px; font-weight: 800; }
+  .cover h1 span { color: var(--gold); }
+  .cover .subtitle { font-size: 20px; opacity: 0.92; max-width: 760px; margin: 0 0 24px; }
+  .cover .stamp { display: inline-block; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.35); color: #fff; padding: 9px 16px; border-radius: 999px; font-size: 12px; text-transform: uppercase; letter-spacing: 2px; font-weight: 700; }
+
+  /* Sections */
+  section { margin-bottom: 56px; }
+  h2 { font-size: 30px; line-height: 1.2; color: var(--forest-900); margin: 0 0 12px; font-weight: 700; }
+  h3 { font-size: 20px; color: var(--forest-700); margin: 28px 0 12px; }
+  h4 { font-size: 16px; color: var(--gray-900); margin: 18px 0 8px; font-weight: 700; }
+  h5 { font-size: 14px; color: var(--brown); margin: 14px 0 6px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; }
+  .lede { font-size: 17px; color: var(--gray-700); max-width: 880px; margin-bottom: 20px; }
+
+  /* Department block */
+  .dept { background: #fff; border: 1px solid var(--gray-300); border-radius: 12px; padding: 0; margin: 18px 0; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+  .dept-header { background: var(--forest-700); color: #fff; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; }
+  .dept-header h2 { color: #fff; margin: 0; font-size: 22px; }
+  .dept-body { padding: 24px 28px; }
+
+  /* Task */
+  .task { border-left: 4px solid var(--gold); padding: 12px 18px; margin: 14px 0; background: var(--cream); border-radius: 0 8px 8px 0; }
+  .task-meta { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-bottom: 6px; }
+  .task h4 { margin: 4px 0 6px; font-size: 16px; color: var(--forest-900); }
+  .task .desc { color: var(--gray-700); font-size: 14px; margin: 6px 0; }
+  .task .why { background: #fff; border-radius: 6px; padding: 8px 12px; margin: 8px 0; font-size: 14px; }
+  .task .why strong { color: var(--forest-700); }
+
+  /* Pills */
+  .pill { display: inline-block; padding: 3px 10px; border-radius: 999px; font-size: 10px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; }
+  .pill.p0 { background: var(--red-100); color: var(--red); }
+  .pill.p1 { background: var(--amber-100); color: var(--amber); }
+  .pill.p2 { background: var(--forest-100); color: var(--forest-700); }
+  .pill.pa { background: var(--brown-100); color: var(--brown); }
+  .pill.mn { background: var(--gold-light); color: var(--brown); }
+  .pill.all { background: var(--cream); color: var(--gray-900); border: 1px solid var(--gray-300); }
+  .pill.wk { background: var(--gray-100); color: var(--gray-700); }
+
+  /* Tables */
+  table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.05); margin: 14px 0 24px; }
+  th { background: var(--brown); color: #fff; text-align: left; padding: 10px 12px; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; }
+  td { padding: 10px 12px; border-bottom: 1px solid var(--gray-100); font-size: 14px; vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  tr:nth-child(even) td { background: var(--gray-50); }
+
+  /* Copy block */
+  .copy-block { background: #fff; border: 1px solid var(--gray-300); border-radius: 10px; padding: 20px; margin: 14px 0; }
+  .copy-block .label { font-size: 11px; font-weight: 800; color: var(--brown); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px; }
+  .copy-block .copy { background: var(--cream); border-radius: 6px; padding: 14px 18px; font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 13px; color: var(--forest-900); white-space: pre-wrap; word-wrap: break-word; }
+  .copy-block .reasoning { font-size: 13px; color: var(--gray-700); margin-top: 10px; padding-top: 10px; border-top: 1px dashed var(--gray-300); }
+  .copy-block .reasoning strong { color: var(--forest-700); }
+
+  /* TOC */
+  .toc { background: #fff; border: 1px solid var(--gray-300); border-radius: 12px; padding: 22px 28px; margin: 18px 0 32px; }
+  .toc ul { margin: 0; padding-left: 18px; }
+  .toc li { margin: 4px 0; font-size: 15px; }
+  .toc a { color: var(--forest-700); text-decoration: none; }
+  .toc a:hover { text-decoration: underline; }
+
+  /* Guardrails */
+  .guardrail { background: var(--red-100); border-left: 5px solid var(--red); padding: 14px 20px; margin: 14px 0; border-radius: 0 8px 8px 0; }
+  .guardrail strong { color: var(--red); }
+
+  /* Calendar */
+  .cal { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 18px 0; }
+  .cal .col { background: #fff; border: 1px solid var(--gray-300); border-radius: 10px; padding: 16px; }
+  .cal .col h4 { margin: 0 0 8px; color: var(--gold); font-size: 13px; letter-spacing: 2px; text-transform: uppercase; }
+  .cal .col ul { margin: 0; padding-left: 16px; font-size: 13px; }
+  .cal .col li { margin: 4px 0; color: var(--gray-700); }
+
+  /* KPI grid */
+  .kpi-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 18px 0; }
+  .kpi-card { background: #fff; border: 1px solid var(--gray-300); border-radius: 10px; padding: 16px; text-align: center; }
+  .kpi-card .num { font-size: 28px; font-weight: 800; color: var(--forest-700); line-height: 1; }
+  .kpi-card .lbl { font-size: 11px; text-transform: uppercase; letter-spacing: 2px; color: var(--gray-700); margin-top: 6px; }
+
+  @media (max-width: 760px) {
+    .cover h1 { font-size: 32px; }
+    .cal, .kpi-grid { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header class="cover">
+  <div class="cover-inner">
+    <div class="eyebrow">Dispenza × Black Bear Dispensary</div>
+    <h1>May 2026 <span>Execution Playbook</span></h1>
+    <p class="subtitle">Dispenza-only work, department-grouped, with copy-ready language for every external surface. Retailer-side actions (in-store, POS, vendor) live in the May 13 meeting recap.</p>
+    <span class="stamp">v1.0 · 2026-05-13 · Internal</span>
+  </div>
+</header>
+
+<div class="container">
+
+<!-- TOC -->
+<section>
+  <h2>How to use this playbook</h2>
+  <p class="lede">Everything here is Dispenza-owned and ready to execute. Departments are ordered by critical path (blocking work first). Master Copy Library at the bottom contains all external-facing copy — emails to Shea, GBP post bodies, blog briefs, landing-page schema. No copy here is final until Darrell reviews; the reasoning notes explain the choice so we can adjust without losing intent.</p>
+
+  <div class="toc">
+    <strong>Contents</strong>
+    <ul>
+      <li><a href="#path">Critical-path overview</a></li>
+      <li><a href="#foundation">🛡 Foundation Layer — bug list to Shea, sitemap, UTMs</a></li>
+      <li><a href="#webdev">🛠 Web Development — /winona/ + /meadville/ greenfield, 4 PA page rewrites</a></li>
+      <li><a href="#content">✍️ Content / Copywriting — 4 blogs, location pages, GBP descriptions</a></li>
+      <li><a href="#gbp">📍 GBP / Local Listings — photo cadence, posts, chat retry, citations</a></li>
+      <li><a href="#design">🎨 Design — GBP graphics, vape category visuals, blog hero art</a></li>
+      <li><a href="#seo">📊 SEO / Analytics — schema, reporting cadence, Flowhub integration</a></li>
+      <li><a href="#account">🤝 Account Lead — Shea coordination, Jesse asks, monthly invite</a></li>
+      <li><a href="#copy">📋 Master Copy Library</a></li>
+      <li><a href="#calendar">📅 May calendar at a glance</a></li>
+      <li><a href="#kpis">🎯 KPI targets · what success looks like on May 31</a></li>
+      <li><a href="#guardrails">⚠️ Compliance &amp; guardrails</a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- Critical path -->
+<section id="path">
+  <h2>Critical-path overview</h2>
+  <p class="lede">Three concurrent tracks. Foundation (bugs/sitemap/UTM) and Web Dev (greenfield pages) gate the rest; Content + GBP run in parallel on top of them.</p>
+  <table>
+    <thead><tr><th>Track</th><th>Blocks</th><th>Week 1</th><th>Week 2</th><th>Week 3</th><th>Week 4</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><strong>Foundation</strong></td>
+        <td>Everything downstream</td>
+        <td>Bug list email → Shea · UTM Winona</td>
+        <td>Sitemap module enabled</td>
+        <td>Site bugs verified resolved</td>
+        <td>Flowhub kickoff</td>
+      </tr>
+      <tr>
+        <td><strong>Web Dev</strong></td>
+        <td>Content lever 10</td>
+        <td>Briefs + schema templates</td>
+        <td>/winona/ + /meadville/ live</td>
+        <td>4 PA pages rewritten</td>
+        <td>QA + Search Console resubmit</td>
+      </tr>
+      <tr>
+        <td><strong>Content</strong></td>
+        <td>—</td>
+        <td>Vape blog draft</td>
+        <td>Vape blog publish · 2nd blog draft</td>
+        <td>2nd blog publish · 3rd + 4th draft</td>
+        <td>3rd + 4th publish</td>
+      </tr>
+      <tr>
+        <td><strong>GBP</strong></td>
+        <td>—</td>
+        <td>Photo dump intake · post cadence start</td>
+        <td>Bridgeville chat retry · Winona subheader follow-up</td>
+        <td>Citation audit · Weedmaps consistency</td>
+        <td>Review-velocity push at Bridgeville</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- Department: Foundation -->
+<section id="foundation">
+  <div class="dept">
+    <div class="dept-header"><h2>🛡 Department: Foundation Layer</h2><span style="font-size:12px; opacity:0.8;">Owner: Darrell + Shea coordination</span></div>
+    <div class="dept-body">
+      <p>Blocking work that unlocks everything downstream. Most of this is sub-1-day effort that compounds heavily — every day it's incomplete, the May 31 KPIs slip proportionally.</p>
+
+      <div class="task">
+        <div class="task-meta"><span class="pill p0">P0</span><span class="pill mn">MN</span><span class="pill wk">Week 1</span></div>
+        <h4>F-1 · Email Shea with Winona/PA bug list</h4>
+        <div class="desc">Single email, numbered bug list, severity-tagged, with reproduction notes. See <a href="#copy">Master Copy Library → "Email to Shea"</a> for the full text.</div>
+        <div class="why"><strong>Why:</strong> Winona BPI KPI is bound to bug resolution. Every persisting day = ~132 lost website sessions (88% click-share × 150 BPI/day).</div>
+      </div>
+
+      <div class="task">
+        <div class="task-meta"><span class="pill p0">P0</span><span class="pill mn">MN</span><span class="pill wk">Week 1</span></div>
+        <h4>F-2 · Append UTM parameters to Winona GBP website URL</h4>
+        <div class="desc">Update the GBP listing's website URL to <code>https://blackbeardispensary.com/winona/?utm_campaign=Dispenza&amp;utm_source=GMB</code> (after /winona/ page ships in Week 2; in the interim, point to the temporary current Winona landing destination with same params).</div>
+        <div class="why"><strong>Why:</strong> Without UTMs, GA4 can't separate GBP traffic from organic. PA stores already use this pattern (e.g., Bridgeville: <code>utm_source=gmb-bridgeville</code>). Standardize MN to the same scheme.</div>
+              </div>
+
+      <div class="task">
+        <div class="task-meta"><span class="pill p0">P0</span><span class="pill all">All sites</span><span class="pill wk">Week 1–2</span></div>
+        <h4>F-3 · Enable RankMath sitemap module</h4>
+        <div class="desc">WordPress admin → RankMath → Sitemap Settings → toggle on. Verify <code>https://blackbeardispensary.com/sitemap_index.xml</code> returns <code>200</code> + <code>application/xml</code>. Resubmit in Google Search Console.</div>
+        <div class="why"><strong>Why:</strong> Currently 404 to Googlebot. Crawl budget is wasted on the 404. Cost: ~10 min config; impact: discovery layer unlocks for every new URL we ship in May.</div>
+      </div>
+
+      <div class="task">
+        <div class="task-meta"><span class="pill p1">P1</span><span class="pill mn">MN</span><span class="pill wk">Week 4</span></div>
+        <h4>F-4 · Flowhub integration kick-off (Winona)</h4>
+        <div class="desc">Once Jesse sends credentials to bp@dispensa.com, Dispenza ops connects Flowhub API → ingest sales + customer feed → start GBP↔in-store correlation analysis. June reporting becomes POS-aware for Winona.</div>
+        <div class="why"><strong>Why:</strong> Establishes Winona ACV for revenue attribution. Validates the 70–90% directional-request-to-store conversion assumption Darrell uses across the portfolio.</div>
+      </div>
+
+      <div class="task">
+        <div class="task-meta"><span class="pill p1">P1</span><span class="pill pa">PA</span><span class="pill wk">Week 3</span></div>
+        <h4>F-5 · Staging-domain URL scrub</h4>
+        <div class="desc">Every prod page leaks 5–6 references to <code>blackbeardispensarywp.seogstage.com</code> (image src + at least one anchor on /franchise/). Run a WP DB find/replace; re-upload the 2 staging-served images (Minosota_outline2.png, Pinnsylvania_bg.png) to production media library.</div>
+        <div class="why"><strong>Why:</strong> Splits image SEO across non-canonical domain. Low traffic impact but high hygiene — one robots.txt config change away from the staging server becoming indexable and duplicating prod content.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Department: Web Dev -->
+<section id="webdev">
+  <div class="dept">
+    <div class="dept-header"><h2>🛠 Department: Web Development / Engineering</h2><span style="font-size:12px; opacity:0.8;">Owner: Shea + Darrell oversight</span></div>
+    <div class="dept-body">
+      <p>Two greenfield pages + four rewrites + one schema overhaul. Sequence: ship the greenfield first to establish the template, then rewrite the duplicates against it.</p>
+
+      <div class="task">
+        <div class="task-meta"><span class="pill p0">P0</span><span class="pill mn">MN</span><span class="pill wk">Week 2</span></div>
+        <h4>W-1 · Build /winona/ landing page</h4>
+        <div class="desc">Unique title ("Winona Weed Dispensary | Black Bear Dispensary"), unique meta, H1 with city name, 400+ words of Winona-specific copy (address, hours, Mississippi River / Acoustic Café neighborhood references, deli-style flower mention, parking + accessibility callouts), LocalBusiness schema with Winona NAP + geo + hours, image alt text with "Winona MN cannabis dispensary." Match Jesse's preference for "Weed Dispensary" in the subheader (MN-only override).</div>
+        <div class="why"><strong>Why:</strong> Currently 404. Winona has zero web presence outside /shop/store-menus/. Greenfield = highest expected ROI per build-hour because no existing rankings get disrupted.</div>
+      </div>
+
+      <div class="task">
+        <div class="task-meta"><span class="pill p0">P0</span><span class="pill pa">PA</span><span class="pill wk">Week 2</span></div>
+        <h4>W-2 · Build /meadville/ landing page</h4>
+        <div class="desc">Unique title ("Meadville PA Hemp Dispensary | Black Bear"), city-specific meta, H1 with Meadville + Crawford County, 400+ words of city copy (downtown Meadville references, French Creek, Allegheny College proximity, vape category callout — see Content lever 10), LocalBusiness schema, alt text with city. This becomes the template for the 4 PA rewrites in Week 3.</div>
+        <div class="why"><strong>Why:</strong> Currently 404 — the only PA store with positive YoY growth has no landing page to capture organic momentum. Highest urgency among PA URL fixes.</div>
+      </div>
+
+      <div class="task">
+        <div class="task-meta"><span class="pill p0">P0</span><span class="pill all">All</span><span class="pill wk">Week 2</span></div>
+        <h4>W-3 · /shop/store-menus/winona/ + add Winona to hub</h4>
+        <div class="desc">Add Winona to /shop/store-menus/ hub list (currently missing — only Clarion, Meadville, Grove City, Regent Square). Build /shop/store-menus/winona/ menu page mirroring the Bridgeville pattern. Add Bridgeville to the hub list too (existing page, just not linked).</div>
+        <div class="why"><strong>Why:</strong> 88% of Winona GBP actions go to the website. The menu page is the cart-add destination. Currently 404 — every Winona website-click is hitting a dead end.</div>
+      </div>
+
+      <div class="task">
+        <div class="task-meta"><span class="pill p1">P1</span><span class="pill pa">PA</span><span class="pill wk">Week 3</span></div>
+        <h4>W-4 · Rewrite 4 PA cosmetic-duplicate location pages</h4>
+        <div class="desc">/bridgeville/, /regent-square/, /grove-city/, /clarion/ — each gets the same uniqueness treatment as /meadville/. Use the Meadville template (W-2) as the wireframe; vary by neighborhood references, parking/accessibility detail, local landmarks, and store-specific phone in the contact block.</div>
+        <div class="why"><strong>Why:</strong> Currently identical title/meta/H1 across all four. Google will continue treating them as thin duplicates until each presents a distinct topical fingerprint.</div>
+      </div>
+
+      <div class="task">
+        <div class="task-meta"><span class="pill p1">P1</span><span class="pill all">All</span><span class="pill wk">Week 2–3</span></div>
+        <h4>W-5 · LocalBusiness / Store schema per location</h4>
+        <div class="desc">Add per-location JSON-LD <code>Store</code> (or <code>LocalBusiness</code>) blocks on each city landing page. Required properties: <code>name</code>, <code>address</code>, <code>geo</code>, <code>telephone</code>, <code>openingHoursSpecification</code>, <code>priceRange</code>, <code>paymentAccepted</code>, <code>hasMap</code>, <code>image</code>. Add a single <code>Organization</code> block on the homepage with <code>sameAs</code> array linking the 3 social profiles.</div>
+        <div class="why"><strong>Why:</strong> Current site has no LocalBusiness/Store schema anywhere — generic Person/Organization graph + Article wrapper on every page (wrong type for service pages). Schema unlocks rich-result eligibility + signals authoritative local entity.</div>
+      </div>
+
+      <div class="task">
+        <div class="task-meta"><span class="pill p1">PA</span><span class="pill all">All</span><span class="pill wk">Week 2</span></div>
+        <h4>W-6 · /contact/ page</h4>
+        <div class="desc">Currently 404. Build with NAP for all 6 locations (PA group + MN), general inquiry <code>info@blackbeardispensary.com</code>, Constant Contact opt-in form (already integrated sitewide).</div>
+        <div class="why"><strong>Why:</strong> Standard NAP citation page closes the basic site-completeness gap and gives Google an authoritative source for cross-location contact data.</div>
+      </div>
+
+      <div class="task">
+        <div class="task-meta"><span class="pill p1">PA</span><span class="pill pa">PA</span><span class="pill wk">Week 2</span></div>
+        <h4>W-7 · Strip Article schema from service/landing pages</h4>
+        <div class="desc">RankMath is wrapping every page including /shop/, /about-us/, /bridgeville/ in Article schema. Article should only apply to /blog/ posts. Configure RankMath schema rules per post type.</div>
+        <div class="why"><strong>Why:</strong> Article schema author attribution is leaking "dispenza dispenza" as the author on every page — agency identity leak. Wrong schema type for service/store pages.</div>
+      </div>
+
+      <div class="task">
+        <div class="task-meta"><span class="pill p2">P2</span><span class="pill all">All</span><span class="pill wk">Week 4</span></div>
+        <h4>W-8 · 301-redirect inconsistent menu URLs</h4>
+        <div class="desc">Standardize <code>/shop/store-menus/{city}/</code> across all stores. Currently mixed: <code>bridgeville</code>, <code>browse-clarion</code>, <code>browse-meadville</code>, <code>shop-grove-city</code>, <code>shop-regent-square</code>. Pick one convention (no prefix), 301 the old paths to the new.</div>
+        <div class="why"><strong>Why:</strong> URL convention consistency strengthens internal-link semantics. Low-priority cleanup — defer if Web Dev capacity is constrained in May.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Department: Content -->
+<section id="content">
+  <div class="dept">
+    <div class="dept-header"><h2>✍️ Department: Content / Copywriting</h2><span style="font-size:12px; opacity:0.8;">Owner: Zach + Dispenza content team</span></div>
+    <div class="dept-body">
+      <p>Four blog posts published in May. Each one recaptures a specific search bucket the GBP name change cost us, or amplifies a search bucket Black Bear is uniquely positioned to win.</p>
+
+      <div class="task">
+        <div class="task-meta"><span class="pill p0">P0</span><span class="pill pa">PA · Meadville</span><span class="pill wk">Week 2</span></div>
+        <h4>C-1 · Blog 1 — "Best Vape Shop Near Meadville, PA" (Meadville-specific)</h4>
+        <div class="desc">~1,200 words. Lead with vape category positioning. Target keywords: "vape shop near me," "vape shop Meadville," "vape pen," "best vapes Meadville." Internal links: /meadville/, /shop/store-menus/browse-meadville/. CTA: directions + same-day pickup.</div>
+        <div class="why"><strong>Why:</strong> "Vape shop near me" is in Meadville's GBP top 10 queries — unprecedented in Dispenza portfolio. Window is open while raided competitors are offline. Compress the timeline.</div>
+      </div>
+
+      <div class="task">
+        <div class="task-meta"><span class="pill p0">P0</span><span class="pill pa">PA · Portfolio</span><span class="pill wk">Week 3</span></div>
+        <h4>C-2 · Blog 2 — "Recreational vs Medical Dispensary in Pennsylvania" (educational)</h4>
+        <div class="desc">~1,400 words. Targets "recreational dispensary," "medical dispensary," "Pennsylvania cannabis laws." Recaptures search volume around medical-vs-rec confusion. Use "weed" terminology in body copy + headers (NOT H1/title — keep H1 around "dispensary"). Distribution: link from all 5 PA landing pages.</div>
+        <div class="why"><strong>Why:</strong> Per Jesse's May 13 ask — recreational dispensary searches are happening and we want to be the answer page in PA. Body-copy "weed" usage recaptures lost terminology without H1 processor exposure.</div>
+      </div>
+
+      <div class="task">
+        <div class="task-meta"><span class="pill p1">P1</span><span class="pill pa">PA · Clarion</span><span class="pill wk">Week 4</span></div>
+        <h4>C-3 · Blog 3 — "Black Bear vs CuraLeaf: Hemp-Derived Alternatives" (Clarion intercept)</h4>
+        <div class="desc">~1,300 words. Comparison/alternative framing. Targets CuraLeaf-branded search Black Bear is already intercepting at Clarion. Body emphasizes federal-legal hemp positioning, deli/in-store experience, local ownership. Include the ELYXR-as-Stiiizy-alternative pattern from the Black Bear master strategy.</div>
+        <div class="why"><strong>Why:</strong> Clarion already shows CuraLeaf at rank ~25 in its search-query data — Google is already routing some CuraLeaf-intent traffic our way. Content converts that traffic instead of leaving it bouncing.</div>
+      </div>
+
+      <div class="task">
+        <div class="task-meta"><span class="pill p1">P1</span><span class="pill mn">MN · Winona</span><span class="pill wk">Week 4</span></div>
+        <h4>C-4 · Blog 4 — "Deli-Style Flower at Black Bear Winona" (MN moat)</h4>
+        <div class="desc">~1,100 words. Lead with deli format explanation, why ~95% of MN stores don't offer it, the cultivation-license context (Jesse's friend), freshness positioning. Target keywords: "Winona dispensary," "deli flower Minnesota," "fresh cannabis Winona." Use "weed" terminology throughout — MN exception per Jesse's override.</div>
+        <div class="why"><strong>Why:</strong> Differentiates Winona on a structural moat (format + future in-house supply) rather than transactional discounting. Mirror the Michigan client playbook that Darrell referenced on the May 13 call.</div>
+      </div>
+
+      <div class="task">
+        <div class="task-meta"><span class="pill p1">P1</span><span class="pill pa">PA</span><span class="pill wk">Week 1–2</span></div>
+        <h4>C-5 · Rewrite 4 GBP store descriptions to remove "Weed Dispensary"</h4>
+        <div class="desc">Regent Square, Grove City, Meadville, Clarion descriptions all contain "Weed Dispensary" in body. Rewrite to "Hemp Dispensary" / "Cannabis Dispensary" framing. Each ~750 chars max; preserve store-specific neighborhood/landmark anchors and any DEI ownership identities. Bridgeville is already compliant — leave it.</div>
+        <div class="why"><strong>Why:</strong> Payment-processor risk is on the PA side; GBP description body is a processor-facing surface. PA-only — Winona description retains "Weed" per Jesse.</div>
+      </div>
+
+      <div class="task">
+        <div class="task-meta"><span class="pill p1">P1</span><span class="pill pa">PA</span><span class="pill wk">Week 2–3</span></div>
+        <h4>C-6 · 6 PA location page copy decks (for W-1, W-2, W-4)</h4>
+        <div class="desc">Write 400-word city-specific body copy for each of /winona/, /meadville/, /bridgeville/, /regent-square/, /grove-city/, /clarion/. Each leads with city geo + neighborhood anchors. Master Copy Library has the Bridgeville template; clone and adapt.</div>
+        <div class="why"><strong>Why:</strong> Web Dev (W-1/W-2/W-4) is blocked on this copy. Ship it Week 2 or the location-page work slips.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Department: GBP -->
+<section id="gbp">
+  <div class="dept">
+    <div class="dept-header"><h2>📍 Department: GBP / Local Listings</h2><span style="font-size:12px; opacity:0.8;">Owner: Darrell + Dispenza ops</span></div>
+    <div class="dept-body">
+
+      <div class="task">
+        <div class="task-meta"><span class="pill p0">P0</span><span class="pill all">All 6 stores</span><span class="pill wk">Week 1–4</span></div>
+        <h4>G-1 · Photo cadence — 3–4 uploads/store/week</h4>
+        <div class="desc">Trickle Jesse's 30+ photo dumps (per PA store) at 3–4/week. Mix exterior, interior, new SKU drops, and individual product close-ups. Stagger across stores so Google sees activity on different listings at different days of the week. Winona: continue with photos already on file + new in-store + product shots.</div>
+        <div class="why"><strong>Why:</strong> Google's local algorithm rewards listing activity. Six-month-stale photos depress profile strength. Cadence (not volume) drives the lift.</div>
+      </div>
+
+      <div class="task">
+        <div class="task-meta"><span class="pill p0">P0</span><span class="pill all">All 6 stores</span><span class="pill wk">Week 1–4</span></div>
+        <h4>G-2 · GBP post cadence — 2 posts/store/week</h4>
+        <div class="desc">12 posts/week portfolio-wide. Cycle through: offer post (Mon), product spotlight (Wed), event/seasonal (Fri). Meadville gets 2x vape-themed posts in May. Winona gets 2x deli-style flower posts. Bridgeville gets review-prompt post. All posts go through copy library — no off-script.</div>
+        <div class="why"><strong>Why:</strong> Posts are a major Google freshness signal and a direct conversion lever in the bottom-funnel.</div>
+      </div>
+
+      <div class="task">
+        <div class="task-meta"><span class="pill p1">P1</span><span class="pill pa">PA · Bridgeville</span><span class="pill wk">Week 2</span></div>
+        <h4>G-3 · Bridgeville WhatsApp chat re-application</h4>
+        <div class="desc">Use a different WhatsApp number than Regent Square's (which was approved). Submit fresh chat link on Bridgeville GBP. If second rejection, retire chat at Bridgeville and double down on call/website-click conversion paths.</div>
+        <div class="why"><strong>Why:</strong> Regent Square has same product (chat link) approved — Bridgeville's rejection likely flagged on duplicate-link logic rather than policy. Worth one retry on a new number.</div>
+      </div>
+
+      <div class="task">
+        <div class="task-meta"><span class="pill p1">P1</span><span class="pill pa">PA · Bridgeville</span><span class="pill wk">Week 3–4</span></div>
+        <h4>G-4 · Bridgeville review velocity campaign</h4>
+        <div class="desc">QR code cards printed + delivered to Bridgeville. Budtender prompt script (no name-tagging — see guardrail). Email follow-up to recent online-order customers asking for review. Target +10 reviews in May, recency &lt; 7 days by 5/31.</div>
+        <div class="why"><strong>Why:</strong> Bridgeville is below the 35% conversion baseline and review recency is the most-easily-influenced of the three known local-ranking signals.</div>
+      </div>
+
+      <div class="task">
+        <div class="task-meta"><span class="pill p1">P1</span><span class="pill mn">MN · Winona</span><span class="pill wk">Week 3</span></div>
+        <h4>G-5 · Winona Weedmaps NAP consistency audit</h4>
+        <div class="desc">Winona is now on Weedmaps. Confirm name + address + phone match GBP exactly (no "Hemp" vs "Weed" mismatch, no abbreviation differences). Update Weedmaps profile if not aligned. Same audit for Leafly if listing exists.</div>
+        <div class="why"><strong>Why:</strong> Citation consistency is a foundational local-SEO signal. Weedmaps is high-authority — mismatch dilutes the backlink + entity confidence.</div>
+      </div>
+
+      <div class="task">
+        <div class="task-meta"><span class="pill p2">P2</span><span class="pill all">All</span><span class="pill wk">Week 4</span></div>
+        <h4>G-6 · Top-10 citation audit per store</h4>
+        <div class="desc">For each of the 6 stores, verify NAP across the top 10 cannabis directories (Weedmaps, Leafly, Yelp, BBB, Facebook, Apple Maps, Bing Places, Foursquare, AllStays, Mapquest). Flag inconsistencies, queue June fix list.</div>
+        <div class="why"><strong>Why:</strong> Foundational citation consistency. Defer if Week 4 capacity is constrained — not blocking any KPI.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Department: Design -->
+<section id="design">
+  <div class="dept">
+    <div class="dept-header"><h2>🎨 Department: Design</h2><span style="font-size:12px; opacity:0.8;">Owner: Dispenza design team</span></div>
+    <div class="dept-body">
+
+      <div class="task">
+        <div class="task-meta"><span class="pill p0">P0</span><span class="pill pa">PA · Meadville</span><span class="pill wk">Week 1–2</span></div>
+        <h4>D-1 · Vape category GBP graphic series (Meadville, 4 designs)</h4>
+        <div class="desc">Hero callout for "Vape Shop in Meadville." 4 designs: (1) carts shot with rotating brand callouts, (2) disposable line drops, (3) "stocked weekly" cadence, (4) 710 (July 10) save-the-date teaser. All in Appalachian-vintage palette (forest green / gold / brown). No pricing on graphics (moderation risk per KANNA precedent).</div>
+        <div class="why"><strong>Why:</strong> Vape category is Meadville's high-intent search; graphics amplify on the listing surface customers are actually looking at.</div>
+      </div>
+
+      <div class="task">
+        <div class="task-meta"><span class="pill p1">P1</span><span class="pill mn">MN · Winona</span><span class="pill wk">Week 2</span></div>
+        <h4>D-2 · Winona deli-style flower visuals (2 designs)</h4>
+        <div class="desc">In-store deli case photography → graphic treatments showing the format. Caption highlights "fresh, weighed in-store" positioning. Reinforces the structural moat narrative for the C-4 blog.</div>
+        <div class="why"><strong>Why:</strong> Deli is the differentiator Jesse named on May 13. Customers can't see deli on a menu — visual proof is what makes it tangible.</div>
+      </div>
+
+      <div class="task">
+        <div class="task-meta"><span class="pill p1">P1</span><span class="pill pa">PA</span><span class="pill wk">Week 1</span></div>
+        <h4>D-3 · Bridgeville review-push QR card</h4>
+        <div class="desc">Print-ready 3"x4" card with QR linking to Bridgeville Google review form. Black Bear vintage typography. Two variants: in-store counter (placed at register) + budtender hand-off card. ~250 print run.</div>
+        <div class="why"><strong>Why:</strong> Cheap physical asset that compounds across every transaction. Drives the +10 review KPI.</div>
+      </div>
+
+      <div class="task">
+        <div class="task-meta"><span class="pill p1">P1</span><span class="pill all">All</span><span class="pill wk">Week 2–4</span></div>
+        <h4>D-4 · Blog hero artwork (4 pieces)</h4>
+        <div class="desc">One hero illustration / photograph per blog (C-1 through C-4). All in Appalachian-vintage style. Reuse Black Bear stock photography where it fits; commission/composite where it doesn't.</div>
+        <div class="why"><strong>Why:</strong> Visual content increases on-page engagement signals and social-share rates.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Department: SEO / Analytics -->
+<section id="seo">
+  <div class="dept">
+    <div class="dept-header"><h2>📊 Department: SEO / Analytics</h2><span style="font-size:12px; opacity:0.8;">Owner: Dispenza SEO team</span></div>
+    <div class="dept-body">
+
+      <div class="task">
+        <div class="task-meta"><span class="pill p0">P0</span><span class="pill all">All</span><span class="pill wk">Week 2</span></div>
+        <h4>S-1 · LocalBusiness schema templates (per-location)</h4>
+        <div class="desc">Author 6 location-specific LocalBusiness JSON-LD snippets (1 per store) for Web Dev to drop into each landing page. Include geo coordinates, structured hours, address, telephone, image, sameAs, priceRange "$$", paymentAccepted, hasMap, areaServed.</div>
+        <div class="why"><strong>Why:</strong> Blocks W-5 deployment. Pre-author so Web Dev doesn't get blocked.</div>
+      </div>
+
+      <div class="task">
+        <div class="task-meta"><span class="pill p0">P0</span><span class="pill mn">MN</span><span class="pill wk">Week 1</span></div>
+        <h4>S-2 · Winona GBP UTM audit + correction</h4>
+        <div class="desc">Audit current Winona GBP website URL. Append UTMs. Verify in GA4 within 24 hours that <code>utm_source=GMB</code> traffic is registering correctly. Standardize all 6 stores to the same UTM scheme.</div>
+        <div class="why"><strong>Why:</strong> Without this, May reporting can't separate organic from GBP-attributed traffic for Winona — the highest-traffic location.</div>
+      </div>
+
+      <div class="task">
+        <div class="task-meta"><span class="pill p1">P1</span><span class="pill all">All</span><span class="pill wk">Week 4</span></div>
+        <h4>S-3 · Google Search Console resubmit after sitemap fix</h4>
+        <div class="desc">After F-3 lands the sitemap, resubmit in GSC. Monitor indexation of the 6 location pages + 2 menu pages + 4 May blogs over the following 10 days. Surface any "Discovered – not indexed" or "Crawled – not indexed" issues for triage.</div>
+        <div class="why"><strong>Why:</strong> Closes the loop on the sitemap fix; surfaces any per-page indexation blockers early.</div>
+      </div>
+
+      <div class="task">
+        <div class="task-meta"><span class="pill p1">P1</span><span class="pill all">All</span><span class="pill wk">Ongoing</span></div>
+        <h4>S-4 · Mid-month KPI check + final May report</h4>
+        <div class="desc">May 19 mid-month pulse (BPI run-rate vs KPI targets). May 31 close-out: full May report draft for June 1 client delivery. Format: same as Jan–Apr report, per-location + cross-portfolio + tiered May 31 → June recs.</div>
+        <div class="why"><strong>Why:</strong> Tight cycle on a recovery month means mid-month course-correction matters. Final report becomes June strategy input.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Department: Account Lead -->
+<section id="account">
+  <div class="dept">
+    <div class="dept-header"><h2>🤝 Department: Account Lead (Darrell)</h2><span style="font-size:12px; opacity:0.8;">Owner: Darrell Clay</span></div>
+    <div class="dept-body">
+
+      <div class="task">
+        <div class="task-meta"><span class="pill p0">P0</span><span class="pill wk">Week 1</span></div>
+        <h4>A-1 · Email Shea — full bug list + sitemap kickoff</h4>
+        <div class="desc">Single consolidated email per Master Copy Library. CC: Zach. BCC: bp@dispensa.com. Track resolution daily until all 5 bugs closed.</div>
+        <div class="why"><strong>Why:</strong> Single source of truth — avoids the telephone-game Darrell flagged on the May 13 call.</div>
+      </div>
+
+      <div class="task">
+        <div class="task-meta"><span class="pill p0">P0</span><span class="pill wk">Week 1</span></div>
+        <h4>A-2 · Email Zach — search-term list for blog topics</h4>
+        <div class="desc">Pull top 30 highest-volume + highest-intent search terms from Jan–Apr data across all 6 stores. Rank by (volume × purchase intent). Hand Zach the prioritized list as content-seed input.</div>
+        <div class="why"><strong>Why:</strong> Zach is owning blog production on the Black Bear side. Better blog topics = faster KPI lift.</div>
+      </div>
+
+      <div class="task">
+        <div class="task-meta"><span class="pill p0">P0</span><span class="pill wk">Week 1</span></div>
+        <h4>A-3 · Wrap-up email to Jesse + Zach</h4>
+        <div class="desc">May 13 meeting recap email per the draft already in <code>clients/Black Bear Dispensary/performance-reviews/2026-05/2026-05-13_followup-email-to-zach-jesse.md</code>. Includes Jan–Apr report link, monthly cadence invite, action-item split.</div>
+        <div class="why"><strong>Why:</strong> Closes the loop on the May 13 verbal commitments. Recurring monthly invite anchors cadence.</div>
+      </div>
+
+      <div class="task">
+        <div class="task-meta"><span class="pill p1">P1</span><span class="pill wk">Week 1</span></div>
+        <h4>A-4 · Set recurring monthly meeting</h4>
+        <div class="desc">Same time on the calendar, monthly recurrence. Send to Jesse + Zach. Time defaults to the same slot as May 13 unless they push back.</div>
+        <div class="why"><strong>Why:</strong> Cadence locks accountability and prevents the gap that opened up between the last review and May 13.</div>
+      </div>
+
+      <div class="task">
+        <div class="task-meta"><span class="pill p1">P1</span><span class="pill wk">Week 4</span></div>
+        <h4>A-5 · June strategy seed memo</h4>
+        <div class="desc">Internal-only one-pager: what May proved, what to double down on in June, what to retire. Frames the June strategy doc.</div>
+        <div class="why"><strong>Why:</strong> Continuity. Black Bear is a multi-location recovery story — narrative thread matters.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Master Copy Library -->
+<section id="copy">
+  <h2>📋 Master Copy Library</h2>
+  <p class="lede">All external-facing copy lives here. Each block includes the reasoning so we can adjust without losing intent. Nothing here ships without Darrell's final review.</p>
+
+  <h3>Email to Shea — Winona/PA bug list</h3>
+  <div class="copy-block">
+    <div class="label">A-1 · Email to Shea (web dev)</div>
+    <div class="copy">Subject: Black Bear — urgent website fixes (Winona + PA)
+
+Hi Shea,
+
+Quick consolidated list of fixes Black Bear needs this week. Five items, with the Winona ones being highest urgency since 88% of their GBP traffic routes to the website right now and these bugs are blocking conversions.
+
+WINONA (Minnesota):
+
+1. State picker fails to appear for some users. Replicated on Cody's iPhone (on-site manager at Winona) over the weekend. Other users see the picker normally. Suspect iOS-specific issue.
+
+2. No way back to MN once a customer lands on the PA side of the site. The location dropdown in the PA menu doesn't include any way to return to Minnesota — looks like the state selection may be cached permanently until the user clears their browser cache. Need an in-dropdown "Switch state" or similar.
+
+3. Winona subheader currently shows "Hemp Dispensary." Jesse wants it changed to "Weed Dispensary" to match the Winona GBP and the MN customer search intent. This is a Winona-only change — PA pages stay "Hemp Dispensary."
+
+PENNSYLVANIA:
+
+4. Bridgeville label in the location dropdown is missing the state suffix. Should read "Bridgeville, PA" — currently just "Bridgeville," which reads as a city anywhere.
+
+5. PA delivery copy is unclear. Customers are expecting same-day delivery and canceling orders when they realize it isn't. Zach is drafting updated language — I'll forward when ready. Goal is to set the right expectation upfront.
+
+Let me know if you need anything else from me. Cody can be looped in directly on bug #1 if helpful for repro. I'll be checking in daily until these are closed.
+
+Thanks,
+Darrell
+
+Darrell Clay
+Account Manager · Dispenza Dispensary Marketing
+darrell@dispenza.com</div>
+    <div class="reasoning"><strong>Reasoning:</strong> Single email, severity-ordered (Winona first because of the 88% click impact). Reproduction notes for bug #1 because that's the highest-effort to verify. Explicit MN-only scoping on bug #3 to prevent PA-side regression. Closing the loop with "checking in daily" sets cadence expectation without micromanaging.</div>
+  </div>
+
+  <h3>Email to Zach — search-term list + content seeds</h3>
+  <div class="copy-block">
+    <div class="label">A-2 · Email to Zach</div>
+    <div class="copy">Subject: Black Bear — May content seeds (search terms + blog briefs)
+
+Hey Zach,
+
+As promised, attached is the prioritized search-term list across all 6 stores from the Jan–Apr GBP data. Ordered by (monthly volume × purchase intent). A few seeds worth knowing as you scope content:
+
+Highest-leverage targets per location:
+
+— Meadville: "vape shop near me" sits in top 10 of GBP queries. Unprecedented in our portfolio. Lead the May blog cycle with this; we'll stack a 710 (July 10) campaign on top.
+
+— Clarion: CuraLeaf-branded search showing up at rank ~25. Means Google is already routing some CuraLeaf-intent traffic to your listing. Comparison/alternative blog converts that traffic instead of leaving it bouncing.
+
+— Bridgeville + Regent Square: "dispensary near me" is the single biggest opportunity (~3,000 combined monthly searches). Body copy in any blog you write that mentions either store should sprinkle that phrase naturally.
+
+— Winona: "weed dispensary," "weed," and "dispensary near me" are dominating discovery. Per Jesse, we're leaning into "weed" terminology on Winona-specific content. Deli-style flower is the moat to lean on.
+
+Blog topic suggestions ranked by lift:
+
+1. "Best Vape Shop Near Meadville, PA" (Week 2 publish)
+2. "Recreational vs Medical Dispensary in Pennsylvania" (Week 3)
+3. "Black Bear vs CuraLeaf: Hemp-Derived Alternatives" (Week 4, Clarion-focused)
+4. "Deli-Style Flower at Black Bear Winona" (Week 4, MN-only)
+
+Briefs for each are in the May execution playbook (link below). Once Jesse sends the state-approved PA brand list, we'll layer brand-specific blogs into June.
+
+Holler with questions.
+
+Best,
+Darrell
+
+[Execution playbook link] · [Strategy report link]</div>
+    <div class="reasoning"><strong>Reasoning:</strong> Leads with the highest-leverage finding per store so Zach can prioritize without re-reading the full report. Explicit on the "weed" Winona-only nuance because that's the single most-confusing PA-vs-MN rule split. Ranked blog list anchors cadence.</div>
+  </div>
+
+  <h3>GBP description rewrite — Regent Square (PA, "Hemp Dispensary")</h3>
+  <div class="copy-block">
+    <div class="label">C-5 · Regent Square GBP description</div>
+    <div class="copy">Black Bear Hemp Dispensary in Regent Square is your neighborhood source for THCA flower, Delta-9 hemp products, vapes, edibles, and CBD beverages in Pittsburgh's East End. Walk-in welcome at 1011 S Braddock Ave — minutes from Forest Hills, Edgewood, Swissvale, and Squirrel Hill. Established 2021, locally owned. Order ahead online for in-store pickup, or stop in any day of the week and let our budtenders show you what's fresh on the shelf. Veteran-friendly, ADA accessible, debit cards accepted.</div>
+    <div class="reasoning"><strong>Reasoning:</strong> "Hemp Dispensary" replaces "Weed Dispensary" (P0 compliance). Neighborhood anchors (Forest Hills, Edgewood, Swissvale, Squirrel Hill) recapture local-intent search. "Walk-in welcome" + "Order ahead online for in-store pickup" surfaces the two conversion paths. ADA + debit-card callouts close common accessibility/payment objections. Under 750 chars.</div>
+  </div>
+
+  <div class="copy-block">
+    <div class="label">C-5 · Meadville GBP description</div>
+    <div class="copy">Black Bear Hemp Dispensary in Meadville is Crawford County's destination for THCA flower, Delta-9 hemp, vapes, vape pens, edibles, and CBD beverages. Walk in at 18860 Park Ave Plaza — easy access from downtown Meadville, Allegheny College, French Creek, and Vernon Township. We restock vapes and disposables weekly. Locally owned, veteran-friendly, ADA accessible. Order online for in-store pickup or stop by 7 days a week — same brand mix as our 4 other PA locations, with the deepest vape selection in the area.</div>
+    <div class="reasoning"><strong>Reasoning:</strong> Leans into the "vape shop" opportunity (3 vape mentions, "deepest vape selection in the area"). Allegheny College + French Creek + Vernon Township anchor Crawford County intent. Cross-references "4 other PA locations" to surface the chain trust signal. Under 750 chars.</div>
+  </div>
+
+  <div class="copy-block">
+    <div class="label">C-5 · Grove City GBP description</div>
+    <div class="copy">Black Bear Hemp Dispensary in Grove City is your local source for THCA flower, Delta-9 hemp, vapes, edibles, and CBD beverages — minutes off I-79 at 119 W Pine St. Easy to find from Grove City Premium Outlets, Pine Township, and surrounding Mercer County. Locally owned, veteran-friendly, walk-in welcome. Order ahead online for in-store pickup or stop by any day of the week. Friendly staff, fresh inventory, hometown service.</div>
+    <div class="reasoning"><strong>Reasoning:</strong> I-79 + Premium Outlets are the two biggest geographic anchors for Grove City search intent (the outlets pull regional traffic). "Hometown service" matches the rural/smaller-town tone that converts in Grove City + Clarion better than urban-energetic copy.</div>
+  </div>
+
+  <div class="copy-block">
+    <div class="label">C-5 · Clarion GBP description</div>
+    <div class="copy">Black Bear Hemp Dispensary in Clarion serves Clarion County and travelers along I-80 with THCA flower, Delta-9 hemp products, vapes, edibles, and CBD beverages. Find us at 41 Greenville Pike — easy stop for Cook Forest camping season, Clarion University students (21+), and anyone passing through. Locally owned, veteran-friendly, walk-in welcome. Order ahead online or stop by any day of the week.</div>
+    <div class="reasoning"><strong>Reasoning:</strong> Cook Forest reference picks up Jesse's May 13 callout that summer camping traffic spikes drive Clarion conversions. I-80 + Clarion University expand the search radius without over-specificity. "Travelers along I-80" specifically signals tourist intent — Clarion is the highest-conversion regional pass-through stop.</div>
+  </div>
+
+  <h3>GBP post copy — Meadville vape category (4 designs)</h3>
+  <div class="copy-block">
+    <div class="label">G-2 · Meadville vape post #1 (offer)</div>
+    <div class="copy">🌲 Fresh vape drops, every week.
+
+Black Bear Meadville is restocking carts, disposables, and pens every week — the deepest vape selection in Crawford County. Walk in 11 AM – 8 PM daily or order ahead for pickup.
+
+🔗 [link to Meadville menu]</div>
+    <div class="reasoning"><strong>Reasoning:</strong> "Deepest vape selection in Crawford County" anchors superlative + geo. Walk-in hours + pickup CTA covers both conversion paths.</div>
+  </div>
+
+  <div class="copy-block">
+    <div class="label">G-2 · Meadville vape post #2 (product spotlight)</div>
+    <div class="copy">Looking for a smooth, full-spectrum cart? Meadville's stocked with the brands you trust — disposables for on-the-go, 510-thread carts for your battery setup, and live-resin options if flavor's the priority.
+
+Stop in or check the live menu before you come down. 18860 Park Ave Plaza.
+
+🔗 [Meadville menu link]</div>
+    <div class="reasoning"><strong>Reasoning:</strong> Category-keyword loading without naming any specific brand (since Jesse's brand list is still pending). 510-thread / live-resin / disposables covers the three vape-buyer personas.</div>
+  </div>
+
+  <div class="copy-block">
+    <div class="label">G-2 · Meadville vape post #3 (cadence reinforcement)</div>
+    <div class="copy">Vape Wednesday at Black Bear Meadville. New brands hitting the case this week — come check what's fresh. Veteran-friendly, ADA accessible, walk-ins welcome 7 days a week.
+
+Open today 11 AM – 8 PM.</div>
+    <div class="reasoning"><strong>Reasoning:</strong> Day-tagged ("Vape Wednesday") gives the cadence a name customers can anchor to. ADA + Veteran-friendly + 7 days drops the friction.</div>
+  </div>
+
+  <div class="copy-block">
+    <div class="label">G-2 · Meadville vape post #4 (710 teaser)</div>
+    <div class="copy">7/10 is coming. 🌲
+
+The biggest vape and concentrate day of the year. We're stocking up at Meadville now — disposables, live resin, full-spectrum carts. Save the date: July 10.
+
+Browse the menu now → [link]</div>
+    <div class="reasoning"><strong>Reasoning:</strong> Builds anticipation for 710 (July 10 dab day) two months out. Anchors a campaign moment customers can plan around. Reinforces vape positioning ahead of competitive backfill.</div>
+  </div>
+
+  <h3>GBP post copy — Winona deli flower (2 designs)</h3>
+  <div class="copy-block">
+    <div class="label">G-2 · Winona deli flower post #1</div>
+    <div class="copy">Real deli-style flower at Black Bear Winona. 🌲
+
+Pick your strain, watch us weigh it fresh, walk out with the cleanest product in Minnesota. Less than 5% of MN stores do this — we do it every day.
+
+Open 11 AM – 7 PM, 7 days a week. 104 E 4th St.</div>
+    <div class="reasoning"><strong>Reasoning:</strong> Leads with the structural differentiator (deli format) rather than discounting. "Less than 5% of MN stores do this" cites Jesse's May 13 framing — converts a rare format into a buying reason. Address closes the local-intent loop.</div>
+  </div>
+
+  <div class="copy-block">
+    <div class="label">G-2 · Winona deli flower post #2</div>
+    <div class="copy">Why our flower is fresher than anyone else's in Winona:
+
+🌲 We weigh it out for you — no pre-packed jars sitting on shelves.
+🌲 We rotate strains weekly — what's on display is what's selling.
+🌲 In-house cultivation coming this year — even fresher then.
+
+Come see the case. 104 E 4th St, downtown Winona.</div>
+    <div class="reasoning"><strong>Reasoning:</strong> Three-line structural framing converts the "freshness" claim into specifics. Forward-references the cultivation license without overcommitting on timing. Downtown Winona anchor pulls the address into search.</div>
+  </div>
+
+  <h3>Blog brief — "Best Vape Shop Near Meadville, PA"</h3>
+  <div class="copy-block">
+    <div class="label">C-1 · Blog brief</div>
+    <div class="copy">Working title: Best Vape Shop Near Meadville, PA — Black Bear's Vape Selection Guide
+
+Target keywords (in order of priority):
+— vape shop near me (primary)
+— vape shop Meadville
+— best vapes Meadville PA
+— vape pen Meadville
+— disposable vape Meadville
+— 710 (secondary, for July campaign tie-in)
+
+H1: Looking for a Vape Shop Near Meadville? Here's What We Carry.
+
+Recommended structure:
+— Intro (~150 words): Why Meadville customers are searching for vape shops right now (don't directly reference competitor raids — frame as "Meadville has fewer vape options than it used to"). Position Black Bear as the local, fresh-stock alternative.
+— Section 1: Cartridge formats (~250 words): 510-thread carts, distillate vs live resin, what each is for. Mention brands as they apply (Jesse's PA brand list TBD).
+— Section 2: Disposables (~250 words): when to go disposable, battery life, popular formats.
+— Section 3: Vape pens / pod systems (~200 words): rechargeables, pod-based, refillable options.
+— Section 4: How we keep inventory fresh (~150 words): weekly restocks, where the brands come from, the PA state-approved-vendor process (lightly — don't overload).
+— CTA (~100 words): Walk-in hours, address, menu link, "Save the date for 7/10."
+
+Length target: 1,100–1,300 words.
+Internal links: /meadville/, /shop/store-menus/browse-meadville/, blog index, /about-us/.
+Schema: Article with author "Black Bear Team" (or rename WP user — see W-7).
+Image alts: "vape shop Meadville Black Bear Dispensary," "Black Bear Meadville cart selection," etc.
+
+Tone notes: Vintage Appalachian aesthetic in copy — slightly conversational, owner-operator voice. Not transactional discount-marketing. We're the experts standing behind the counter.</div>
+    <div class="reasoning"><strong>Reasoning:</strong> Brief prioritizes "vape shop near me" because that's the existing top-10 query. Avoids over-leveraging the competitor-raid context (which would expose us to legal/perception risk) while still positioning Black Bear as the steady stockist. Owner-operator voice matches Jesse's actual brand DNA per the May 13 conversation.</div>
+  </div>
+
+  <h3>Location page copy — /meadville/ (template for the 4 PA rewrites)</h3>
+  <div class="copy-block">
+    <div class="label">C-6 · /meadville/ body copy</div>
+    <div class="copy">H1: Meadville, PA Hemp Dispensary — Black Bear
+
+Welcome to Black Bear Hemp Dispensary in Meadville. We're Crawford County's local source for premium THCA flower, Delta-9 hemp products, vape carts and disposables, edibles, tinctures, CBD beverages, and pet CBD — all federally legal under the 2018 Farm Bill, all available walk-in or for in-store pickup.
+
+Located at 18860 Park Ave Plaza, we're a few minutes from downtown Meadville, Allegheny College, French Creek, and the surrounding Vernon Township. Easy parking, ADA-accessible entrance, veteran-friendly, walk-ins welcome 7 days a week. We're open 11 AM – 8 PM Monday through Thursday, 11 AM – 9 PM Friday and Saturday, and 11 AM – 4 PM on Sunday.
+
+Why customers choose Black Bear Meadville:
+
+🌲 Deepest vape selection in Crawford County. We restock carts, disposables, and 510-thread options every week. Whether you're looking for distillate convenience or live-resin flavor, our budtenders will help you match the right format to your battery and your day.
+
+🌲 Federally-legal hemp, locally sourced. Every product on our shelves is third-party tested. We can walk you through THCA flower, Delta-9 edibles, and the cannabinoid spectrum so you know what you're buying and why.
+
+🌲 Friendly hometown service. We're not a corporate chain. We're a family business that knows the regulars by name, answers questions without judgment, and recommends what we'd buy ourselves.
+
+🌲 Five Pennsylvania locations + our newest store in Winona, Minnesota. Meadville is the Crawford County flagship; our other PA stores are in Regent Square, Bridgeville, Grove City, and Clarion.
+
+How to order:
+
+— Walk-in at 18860 Park Ave Plaza, Meadville, PA 16335
+— Call us at (814) 393-6941
+— Browse our online menu and order ahead for in-store pickup
+— Same-day pickup available; ask in-store about local delivery options
+
+We accept credit cards, debit cards, and NFC mobile payments. ATM on-site if you'd rather pay cash.
+
+Stop by, say hi, and let us show you the freshest selection in Meadville. The kettle's on.
+
+— The Black Bear Meadville Team</div>
+    <div class="reasoning"><strong>Reasoning:</strong> ~400+ words of unique copy. Leads with the federally-legal positioning (legal compliance signal). Vape callout positioned as the differentiator (matches the top-10 search query). Crawford County + Allegheny College + French Creek + Vernon Township are geo anchors that broaden the search radius. Cross-references the 5 PA stores + Winona to surface chain trust. NAP closes consistently with GBP. Tone leans into owner-operator brand voice ("The kettle's on") rather than transactional. Reusable template for the 4 PA rewrites — swap city/landmarks/phone/hours and the structure carries.</div>
+  </div>
+
+  <h3>Location page copy — /winona/ (MN, "Weed Dispensary" tone)</h3>
+  <div class="copy-block">
+    <div class="label">C-6 · /winona/ body copy</div>
+    <div class="copy">H1: Winona Weed Dispensary — Black Bear
+
+Welcome to Black Bear Weed Dispensary in Winona, Minnesota — the only deli-style flower experience in town and your local source for adult-use cannabis.
+
+We opened our doors at 104 E 4th St on April 13, 2026 — right in downtown Winona, minutes from the Mississippi River, Acoustic Café, and the Winona State campus. We're open 11 AM – 7 PM, 7 days a week.
+
+What makes Black Bear Winona different:
+
+🌲 Real deli-style flower. We weigh it out for you. Less than 5% of dispensaries in Minnesota do this, and you can taste the difference — the product on our shelf rotates weekly, and what's in the jar is what we'd buy ourselves.
+
+🌲 Cultivation license coming. Our in-house cultivation partner is licensed and will be supplying Black Bear Winona later this year. That means even fresher flower, deeper strain variety, and better pricing as the program matures.
+
+🌲 The full menu. THCA flower, infused pre-rolls, vape carts, edibles, gummies, tinctures, beverages. As Minnesota's vape and concentrate supply stabilizes, those categories are filling in fast.
+
+🌲 Locally owned. Jesse and Carrie Worsk run Black Bear. Jesse's an Army combat veteran with deep cannabis-industry roots (he ran new-store openings for medical cannabis in PA and OH before launching Black Bear). Winona's their flagship Minnesota location.
+
+Visit us:
+
+Address: 104 E 4th St, Winona, MN 55987
+Phone: (507) 474-0097
+Hours: 11 AM – 7 PM, 7 days a week
+Parking: On-site, free street, free lot
+Accessibility: Full wheelchair access — entrance, parking, seating, restroom
+
+We accept debit cards, credit cards, and NFC payments.
+
+Veteran-owned, LGBTQ+ friendly, transgender safespace.
+
+Browse our online menu, place a pickup order, or walk in — we'd love to meet you. Welcome to the bear.
+
+— Jesse, Carrie, and the Black Bear Winona Team</div>
+    <div class="reasoning"><strong>Reasoning:</strong> "Weed Dispensary" in H1 and lede per Jesse's MN-only override. Deli-style is the lead differentiator (matches Jesse's May 13 framing). Cultivation reference forward-builds the moat narrative. Owner names (Jesse + Carrie) personalize — same trust signal that's drove the brand recall in PA. DEI attributes surfaced (Veteran-owned, LGBTQ+ friendly, safespace) for Winona's market context. NAP exactly matches the GBP.</div>
+  </div>
+
+  <h3>Bridgeville review-push budtender script (no name-tag)</h3>
+  <div class="copy-block">
+    <div class="label">G-4 · Bridgeville review prompt</div>
+    <div class="copy">When customer reaches the register / pickup:
+
+"If we hit it today, we'd love a quick review. There's a QR code right here — takes about 30 seconds, and it really helps locals find us. No pressure either way, but if you're up for it, it means a lot."
+
+Then hand them a QR card (D-3 design) or point at the counter card.
+
+DO NOT say: "If you mention my name…" — Google may be penalizing budtender-name-tagged reviews as solicitation. Per the May 13 conversation, we're staying away from name prompts until Darrell verifies the policy.</div>
+    <div class="reasoning"><strong>Reasoning:</strong> Conversational, low-pressure, anchored to the customer's actual experience ("if we hit it today"). 30-second framing reduces friction. Explicit DO NOT clause forestalls the budtender-name pattern that's getting riskier per the May 13 finding.</div>
+  </div>
+</section>
+
+<!-- Calendar -->
+<section id="calendar">
+  <h2>📅 May calendar at a glance</h2>
+  <div class="cal">
+    <div class="col">
+      <h4>Week 1 · May 12–18</h4>
+      <ul>
+        <li>A-1 Email Shea (bugs)</li>
+        <li>A-2 Email Zach (seeds)</li>
+        <li>A-3 Wrap-up to Jesse + Zach</li>
+        <li>F-1 / F-2 Foundation kickoff</li>
+        <li>D-3 QR card to print</li>
+        <li>G-1 Photo intake from Jesse</li>
+      </ul>
+    </div>
+    <div class="col">
+      <h4>Week 2 · May 19–25</h4>
+      <ul>
+        <li>W-1 /winona/ ships</li>
+        <li>W-2 /meadville/ ships</li>
+        <li>W-3 store-menus hub + /winona/ menu</li>
+        <li>C-1 Vape blog draft → publish</li>
+        <li>G-3 Bridgeville chat retry</li>
+        <li>F-3 Sitemap module live</li>
+      </ul>
+    </div>
+    <div class="col">
+      <h4>Week 3 · May 26 – Jun 1</h4>
+      <ul>
+        <li>W-4 4 PA pages rewritten</li>
+        <li>C-2 Recreational blog publish</li>
+        <li>C-3 / C-4 Drafts</li>
+        <li>G-4 Bridgeville review push</li>
+        <li>G-5 Winona Weedmaps audit</li>
+        <li>S-4 Mid-month KPI pulse</li>
+      </ul>
+    </div>
+    <div class="col">
+      <h4>Week 4 · Jun 2–8</h4>
+      <ul>
+        <li>C-3 CuraLeaf blog publish</li>
+        <li>C-4 Winona deli blog publish</li>
+        <li>F-4 Flowhub kickoff (if creds)</li>
+        <li>F-5 Staging URL scrub</li>
+        <li>S-3 Search Console resubmit</li>
+        <li>A-5 June seed memo</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- KPIs -->
+<section id="kpis">
+  <h2>🎯 KPI targets · what success looks like on May 31</h2>
+  <div class="kpi-grid">
+    <div class="kpi-card"><div class="num">4,500</div><div class="lbl">Winona May BPI (5K stretch)</div></div>
+    <div class="kpi-card"><div class="num">+30%</div><div class="lbl">Meadville vs Apr</div></div>
+    <div class="kpi-card"><div class="num">≥35%</div><div class="lbl">Regent Sq + Bridgeville conv.</div></div>
+    <div class="kpi-card"><div class="num">+10</div><div class="lbl">Bridgeville reviews</div></div>
+  </div>
+  <div class="kpi-grid">
+    <div class="kpi-card"><div class="num">4</div><div class="lbl">Blogs published</div></div>
+    <div class="kpi-card"><div class="num">2</div><div class="lbl">Location pages live (W, M)</div></div>
+    <div class="kpi-card"><div class="num">4</div><div class="lbl">PA pages rewritten</div></div>
+    <div class="kpi-card"><div class="num">5/5</div><div class="lbl">Bugs resolved by Shea</div></div>
+  </div>
+</section>
+
+<!-- Guardrails -->
+<section id="guardrails">
+  <h2>⚠️ Compliance &amp; guardrails</h2>
+
+  <div class="guardrail">
+    <strong>PA payment-processor rule:</strong> Never put "weed" in PA GBP titles. Title convention is "Black Bear Hemp Dispensary - [City]." This rule applies to PA only.
+  </div>
+
+  <div class="guardrail">
+    <strong>Winona "Weed Dispensary" override (MN only):</strong> Per Jesse's May 13 directive, keep "Weed Dispensary" in the Winona GBP title and Winona-side website subheader. Force Google to remove it if they will — don't preemptively scrub. PA rules do NOT apply to Winona.
+  </div>
+
+  <div class="guardrail">
+    <strong>Budtender-name reviews:</strong> Pending investigation. Until Darrell confirms, do NOT prompt customers to mention budtenders by name in reviews. Bridgeville review push uses generic prompts (see G-4 script). Adjust if/when policy is clarified.
+  </div>
+
+  <div class="guardrail">
+    <strong>POS-derived metrics:</strong> Until Flowhub integration is verified live (F-4), all KPIs and reporting stay GBP-only across all 6 stores. Do not reference revenue, AOV, transactions, customer counts, or any POS-derived metric.
+  </div>
+
+  <div class="guardrail">
+    <strong>Pricing on GBP graphics:</strong> Do not display prices on GBP visual content. Per the KANNA Oakland precedent — pricing on GBP graphics triggers moderation review and risks listing suspension.
+  </div>
+
+  <div class="guardrail">
+    <strong>Franchise DEI attributes:</strong> Black Bear's stores have varied owner DEI attributes (some Latino-owned, some veteran-owned, etc.) because of the franchise model. Do not edit GBP DEI attributes without explicit confirmation from Jesse for that specific store.
+  </div>
+
+  <div class="guardrail">
+    <strong>Hemp legality framing:</strong> Always reference "federally legal under the 2018 Farm Bill" or similar in product copy. Do not imply state-level adult-use legality in PA. Winona MN is the only adult-use license; PA stores are hemp-derived federally legal products.
+  </div>
+</section>
+
+<section style="text-align:center; color:var(--gray-500); font-size:13px; margin-bottom:0;">
+  <hr style="border:none; border-top:1px solid var(--gray-300); margin: 40px 0 24px;" />
+  <p>Black Bear Dispensary × Dispenza · May 2026 Execution Playbook · Drafted 2026-05-13 · v1.0 internal</p>
+  <p>Source documents: May 13 strategy meeting · May 13 website audit · Jan–Apr 2026 GBP Performance dashboards · Black Bear scope memory</p>
+</section>
+
+</div>
+</body>
+</html>

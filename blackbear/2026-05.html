@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Black Bear — May 2026 Local SEO Strategy</title>
+<style>
+  :root {
+    --forest-900: #122318;
+    --forest-700: #1e3a2e;
+    --forest-500: #2f5840;
+    --forest-100: #e6efe9;
+    --gold: #c79a3a;
+    --gold-light: #f5e9c8;
+    --brown: #6b4f3a;
+    --brown-100: #efe6dc;
+    --cream: #f8f0e1;
+    --bg-paper: #fbf7ee;
+    --green: #2BA84A;
+    --green-100: #E6F6EA;
+    --red: #B7322B;
+    --red-100: #FBE6E5;
+    --amber: #C97A0A;
+    --amber-100: #FCEBD0;
+    --gray-900: #1F2937;
+    --gray-700: #4B5563;
+    --gray-500: #6B7280;
+    --gray-300: #D1D5DB;
+    --gray-100: #F3F4F6;
+    --gray-50: #F9FAFB;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: var(--gray-900); background: var(--bg-paper); line-height: 1.6;
+  }
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 32px 80px; }
+
+  /* Cover */
+  .cover {
+    background: linear-gradient(135deg, var(--forest-900) 0%, var(--forest-700) 55%, var(--brown) 100%);
+    color: #fff; padding: 80px 32px 100px; margin-bottom: 48px; border-bottom: 6px solid var(--gold);
+  }
+  .cover-inner { max-width: 1100px; margin: 0 auto; }
+  .cover .eyebrow { text-transform: uppercase; letter-spacing: 3px; font-size: 14px; font-weight: 600; opacity: 0.85; margin-bottom: 16px; }
+  .cover h1 { font-size: 54px; line-height: 1.08; margin: 0 0 20px; font-weight: 800; }
+  .cover h1 span { color: var(--gold); }
+  .cover .subtitle { font-size: 22px; opacity: 0.92; max-width: 780px; margin: 0 0 28px; }
+  .cover .stamp { display: inline-block; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.35); color: #fff; padding: 10px 18px; border-radius: 999px; font-size: 13px; text-transform: uppercase; letter-spacing: 2px; font-weight: 700; margin-bottom: 36px; }
+  .cover .stamp .dot { color: var(--gold); margin-right: 8px; }
+  .cover-meta { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; padding-top: 28px; border-top: 1px solid rgba(255,255,255,0.25); }
+  .cover-meta div .label { font-size: 12px; text-transform: uppercase; letter-spacing: 2px; opacity: 0.7; }
+  .cover-meta div .value { font-size: 16px; font-weight: 600; margin-top: 4px; }
+
+  /* Sections */
+  section { margin-bottom: 56px; }
+  .section-header { display: flex; align-items: baseline; gap: 16px; margin-bottom: 8px; }
+  .section-num { font-size: 14px; font-weight: 700; color: var(--gold); letter-spacing: 3px; }
+  h2 { font-size: 34px; line-height: 1.2; color: var(--forest-900); margin: 0 0 8px; font-weight: 700; }
+  h3 { font-size: 22px; color: var(--forest-700); margin: 28px 0 12px; }
+  h4 { font-size: 17px; color: var(--gray-900); margin: 20px 0 8px; font-weight: 700; }
+  .lede { font-size: 19px; color: var(--gray-700); max-width: 880px; margin-bottom: 24px; }
+
+  /* Cards */
+  .card { background: #fff; border: 1px solid var(--gray-300); border-radius: 12px; padding: 24px 28px; margin: 16px 0; }
+  .card.forest { background: var(--forest-100); border-color: var(--forest-500); }
+  .card.gold { background: var(--gold-light); border-color: var(--gold); }
+  .card.brown { background: var(--brown-100); border-color: var(--brown); }
+  .card.alert { background: var(--amber-100); border-left: 5px solid var(--amber); }
+  .card.evidence { background: #FBFEFC; border: 1px solid var(--forest-500); border-left: 6px solid var(--forest-700); }
+  .card .label { font-size: 11px; font-weight: 800; color: var(--forest-700); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 10px; }
+
+  /* Strategic bet block */
+  .strategic-bet { background: var(--forest-900); color: #fff; padding: 44px; border-radius: 16px; margin: 24px 0 40px; }
+  .strategic-bet .label { text-transform: uppercase; letter-spacing: 4px; font-size: 13px; color: var(--gold); margin-bottom: 16px; font-weight: 700; }
+  .strategic-bet blockquote { font-size: 27px; line-height: 1.3; margin: 0; font-weight: 600; }
+  .strategic-bet blockquote em { color: var(--gold); font-style: normal; }
+  .bet-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 28px; }
+  .bet-cols .col { border: 1px solid rgba(255,255,255,0.25); border-radius: 12px; padding: 20px; background: rgba(255,255,255,0.05); }
+  .bet-cols .col h4 { color: var(--gold); margin: 0 0 10px; font-size: 15px; letter-spacing: 2px; text-transform: uppercase; }
+  .bet-cols .col p { margin: 0; opacity: 0.92; font-size: 15px; }
+
+  /* Tables */
+  table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.05); margin: 16px 0 24px; }
+  th { background: var(--forest-700); color: #fff; text-align: left; padding: 12px 14px; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; }
+  td { padding: 12px 14px; border-bottom: 1px solid var(--gray-100); font-size: 15px; vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  tr:nth-child(even) td { background: var(--gray-50); }
+
+  /* Pills */
+  .pill { display: inline-block; padding: 4px 12px; border-radius: 999px; font-size: 11px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; }
+  .pill.high { background: var(--green-100); color: var(--green); }
+  .pill.med { background: var(--amber-100); color: var(--amber); }
+  .pill.stretch { background: var(--red-100); color: var(--red); }
+  .pill.evidence { background: var(--forest-100); color: var(--forest-700); }
+  .pill.pa { background: var(--brown-100); color: var(--brown); }
+  .pill.mn { background: var(--gold-light); color: var(--brown); }
+
+  /* KPI grid */
+  .kpi-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 24px 0; }
+  .kpi-card { background: #fff; border: 1px solid var(--gray-300); border-radius: 10px; padding: 20px; text-align: center; }
+  .kpi-card .num { font-size: 32px; font-weight: 800; color: var(--forest-700); line-height: 1; }
+  .kpi-card .lbl { font-size: 12px; text-transform: uppercase; letter-spacing: 2px; color: var(--gray-700); margin-top: 8px; }
+  .kpi-card .delta { font-size: 13px; margin-top: 8px; color: var(--gray-500); }
+
+  /* Timeline */
+  .timeline { border-left: 3px solid var(--gold); padding-left: 24px; margin: 24px 0; }
+  .timeline .step { position: relative; padding: 12px 0 20px; }
+  .timeline .step::before { content: ""; position: absolute; left: -33px; top: 18px; width: 14px; height: 14px; border-radius: 50%; background: var(--forest-700); border: 3px solid var(--gold); }
+  .timeline .step .week { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); font-weight: 700; }
+  .timeline .step h4 { margin: 4px 0 6px; }
+  .timeline .step p { margin: 0; color: var(--gray-700); font-size: 15px; }
+
+  /* Two-col */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+
+  /* Lever */
+  .lever { background: #fff; border: 1px solid var(--gray-300); border-left: 5px solid var(--forest-700); border-radius: 10px; padding: 22px 26px; margin: 16px 0; }
+  .lever .meta { display: flex; gap: 10px; align-items: center; margin-bottom: 8px; flex-wrap: wrap; }
+  .lever h4 { margin: 6px 0 8px; font-size: 18px; }
+  .lever .why { color: var(--gray-700); font-size: 15px; margin: 8px 0; }
+  .lever .ev { background: var(--forest-100); padding: 10px 14px; border-radius: 6px; font-size: 14px; margin-top: 8px; color: var(--forest-900); }
+  .lever .ev strong { color: var(--forest-700); }
+
+  /* Quote bar */
+  .quote { border-left: 4px solid var(--gold); padding: 8px 18px; color: var(--gray-700); font-style: italic; background: var(--cream); margin: 12px 0; }
+
+  @media (max-width: 760px) {
+    .cover h1 { font-size: 38px; }
+    .cover-meta { grid-template-columns: 1fr 1fr; }
+    .kpi-grid { grid-template-columns: 1fr 1fr; }
+    .two-col, .bet-cols { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header class="cover">
+  <div class="cover-inner">
+    <div class="eyebrow">Dispenza × Black Bear Dispensary</div>
+    <h1>May 2026 <span>Local SEO Strategy</span></h1>
+    <p class="subtitle">Stop the PA bleed. Press the Winona lead. Two markets, two rule sets, one disciplined content engine.</p>
+    <div class="stamp"><span class="dot">●</span> Evidence-backed · Quantified targets · KPI-bound</div>
+    <div class="cover-meta">
+      <div><div class="label">Period</div><div class="value">May 1 – May 31, 2026</div></div>
+      <div><div class="label">Locations</div><div class="value">5 PA + 1 MN</div></div>
+      <div><div class="label">Account Lead</div><div class="value">Darrell Clay</div></div>
+      <div><div class="label">Baseline data</div><div class="value">Jan – Apr 2026 GBP</div></div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+<!-- Section 1 -->
+<section>
+  <div class="section-header"><span class="section-num">SECTION 01</span></div>
+  <h2>Why this plan will hit its KPIs</h2>
+  <p class="lede">The Jan–Apr data isn't ambiguous: brand recall is exceptional (56–65% branded share across PA), Meadville is already growing YoY, and Winona is converting at 65% in its first 18 days. The four PA stores that softened did so for known, recoverable reasons — the GBP name change and a state-mandated vendor consolidation that emptied shelves. Both are mechanically reversible. May's plan is a recovery + amplification cycle, not a rebuild.</p>
+
+  <div class="card evidence">
+    <div class="label">Confidence summary</div>
+    <ul style="margin:0;padding-left:18px;">
+      <li><span class="pill high">HIGH</span> &nbsp; Winona hits 4,500 BPI in May (already trending; 88% of clicks go to website — fixing the bugs is mechanical lift)</li>
+      <li><span class="pill high">HIGH</span> &nbsp; Meadville holds +27% YoY momentum with vape-category amplification (vape shop near me already in top 10, unprecedented in portfolio)</li>
+      <li><span class="pill med">MEDIUM</span> &nbsp; Regent Square + Bridgeville return to ≥35% conversion baseline as PA shelves rebuild to 90%+ and photo cadence resumes</li>
+      <li><span class="pill med">MEDIUM</span> &nbsp; Grove City + Clarion add discovery volume via content build-out (rural markets, lower competitive density)</li>
+      <li><span class="pill stretch">STRETCH</span> &nbsp; Winona breaks 5,000 BPI by 5/31</li>
+      <li><span class="pill stretch">STRETCH</span> &nbsp; Bridgeville WhatsApp chat re-approved on a new number</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Section 2 -->
+<section>
+  <div class="section-header"><span class="section-num">SECTION 02</span></div>
+  <h2>Where we stand</h2>
+  <p class="lede">Jan – Apr 2026 GBP performance across all 6 locations. Full per-store detail in the <a href="https://darrell-web.github.io/strategy-reports/blackbear/performance-reviews/2026-jan-apr.html">Jan–Apr Performance Review</a>.</p>
+
+  <table>
+    <thead>
+      <tr><th>Location</th><th>BPI (Jan–Apr)</th><th>YoY BPI</th><th>Profile views</th><th>Conv. rate</th><th>State of play</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Regent Square</strong> <span class="pill pa">PA</span></td><td>3,596</td><td style="color:var(--red)">−45.4%</td><td>21,372</td><td>16.8%</td><td>Highest views, lowest conversion — listing-page hygiene gap</td></tr>
+      <tr><td><strong>Bridgeville</strong> <span class="pill pa">PA</span></td><td>3,680</td><td>n/a (new)</td><td>~21,000</td><td>~17.5%</td><td>89% mobile; chat REJECTED; needs review velocity</td></tr>
+      <tr><td><strong>Grove City</strong> <span class="pill pa">PA</span></td><td>3,343</td><td style="color:var(--red)">−18.1%</td><td>~8,800</td><td>38.0%</td><td>Above baseline; needs top-funnel volume</td></tr>
+      <tr><td><strong>Meadville</strong> <span class="pill pa">PA</span></td><td>2,505</td><td style="color:var(--green)">+26.9%</td><td>5,124</td><td>48.9%</td><td><strong>Only PA store with YoY growth</strong>; vape shop near me top 10</td></tr>
+      <tr><td><strong>Clarion</strong> <span class="pill pa">PA</span></td><td>1,664</td><td style="color:var(--red)">−11.5%</td><td>3,945</td><td>42.2%</td><td>Smallest market; only PA store with +YoY directional requests</td></tr>
+      <tr><td><strong>Winona MN</strong> <span class="pill mn">MN</span></td><td>2,698 (Apr only)</td><td>n/a (launch)</td><td>4,099</td><td><strong>65.8%</strong></td><td>Highest conv. rate in portfolio history; 88% website-clicks</td></tr>
+    </tbody>
+  </table>
+
+  <h3>The patterns that matter</h3>
+  <div class="two-col">
+    <div class="card forest">
+      <h4 style="margin-top:0;">PA discovery softening is reversible</h4>
+      <p style="margin:0;">The GBP name change removed "weed" from titles. Regent Square alone lost ~2,500 monthly "weed dispensary" searches. Compounded by months of bare shelves from the PA vendor consolidation. <strong>Shelves are now at 75–80% of normal depth and rebuilding.</strong> The listings need to signal that recovery; rankings will trail by 4–6 weeks.</p>
+    </div>
+    <div class="card gold">
+      <h4 style="margin-top:0;">Winona is the highest-conversion asset in the portfolio</h4>
+      <p style="margin:0;">65.8% conversion in April is the highest opening month we've recorded across any client. 88% of those actions go to the website. Translation: <strong>the .com is where Winona makes or loses every dollar.</strong> Fixing the state picker + caching bugs is the single highest-ROI move in May.</p>
+    </div>
+  </div>
+  <div class="two-col">
+    <div class="card brown">
+      <h4 style="margin-top:0;">Meadville's vape window is open right now</h4>
+      <p style="margin:0;">"Vape shop near me" sits in the top 10 of Meadville's search queries — <strong>unprecedented across the entire Dispenza portfolio.</strong> Cause: the surrounding vape shops were raided (hemp products seized). Black Bear is the last vape retailer of consequence in town. This window will close as competitors backfill. Treat it as a 2026-Q2/Q3 land-grab.</p>
+    </div>
+    <div class="card evidence">
+      <h4 style="margin-top:0;">Brand recall is the cushion</h4>
+      <p style="margin:0;">56–65% of search volume is branded (direct) — exceptional. Customers know the name. The job for May isn't building brand awareness — it's converting more of that searched-by-name traffic and recapturing the discovery layer lost to the title change.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Section 3 -->
+<section>
+  <div class="section-header"><span class="section-num">SECTION 03</span></div>
+  <h2>The strategic bet for May</h2>
+
+  <div class="strategic-bet">
+    <div class="label">May's thesis</div>
+    <blockquote>
+      <em>Two markets, two rule sets, one playbook.</em><br/>
+      In PA, defend the brand through the algorithm shift while shelf depth recovers — content + photos do the work. In MN, remove every friction point between a 65% conversion rate and Winona's first $1M month — fix the site, ship the page, capture every "weed" search Google will allow.
+    </blockquote>
+    <div class="bet-cols">
+      <div class="col">
+        <h4>PA — Defend &amp; Diversify</h4>
+        <p>Photo refresh (every store, every week) · 4 content pieces · 2 location-page rewrites · review velocity push at Bridgeville · vape category amplification at Meadville · CuraLeaf interception at Clarion.</p>
+      </div>
+      <div class="col">
+        <h4>MN — Remove Friction</h4>
+        <p>Fix 5 website bugs · ship /winona/ and /shop/store-menus/winona/ · keep "Weed Dispensary" in GBP + change Winona site subheader to match · UTM the GBP website link · Flowhub integration once credentials land.</p>
+      </div>
+    </div>
+  </div>
+
+  <h3>Why one playbook isn't enough</h3>
+  <p>The portfolio has split into two markets that behave nothing alike:</p>
+  <ul>
+    <li><strong>PA is regulated, branded, recovering, and processor-sensitive.</strong> The naming convention is "Hemp Dispensary" because PA payment processors enforce against "weed." The state vendor list controls what we can stock and sell. Our job is to retain market share while shelves rebuild.</li>
+    <li><strong>MN is unregulated-light, unbranded, growing, and search-driven.</strong> Jesse's directive on May 13: keep "Weed Dispensary" in the GBP and force Google to remove it if they will. The Winona subheader changes the other direction — from "Hemp" to "Weed" — because MN customers search for "weed."</li>
+  </ul>
+  <div class="quote">Reading the data as one portfolio will lead to bad decisions. Reading them as two markets sharing a brand will lead to right ones.</div>
+</section>
+
+<!-- Section 4 -->
+<section>
+  <div class="section-header"><span class="section-num">SECTION 04</span></div>
+  <h2>KPIs &amp; math behind each target</h2>
+  <p class="lede">Every number below is bound to a measurable GBP signal. POS access is in flight (Flowhub credentials → bp@dispensa.com); revenue-tied KPIs will be added to the June report once data is flowing.</p>
+
+  <div class="kpi-grid">
+    <div class="kpi-card"><div class="num">4,500</div><div class="lbl">Winona May BPI</div><div class="delta">5,000 stretch · base 2,698 in 18 days</div></div>
+    <div class="kpi-card"><div class="num">+30%</div><div class="lbl">Meadville BPI vs Apr</div><div class="delta">vape category amplification</div></div>
+    <div class="kpi-card"><div class="num">≥35%</div><div class="lbl">Regent Sq + Bridgeville conv.</div><div class="delta">currently 16–17%</div></div>
+    <div class="kpi-card"><div class="num">+10</div><div class="lbl">Bridgeville reviews</div><div class="delta">recency &lt; 7 days at 5/31</div></div>
+  </div>
+  <div class="kpi-grid">
+    <div class="kpi-card"><div class="num">4</div><div class="lbl">Blogs published</div><div class="delta">vape · recreational · medical · CuraLeaf intercept</div></div>
+    <div class="kpi-card"><div class="num">2</div><div class="lbl">Location pages shipped</div><div class="delta">/meadville/ + /winona/ (greenfield)</div></div>
+    <div class="kpi-card"><div class="num">3–4</div><div class="lbl">GBP photos / store / wk</div><div class="delta">~80 photos uploaded total May</div></div>
+    <div class="kpi-card"><div class="num">100%</div><div class="lbl">Site bug list resolved</div><div class="delta">5 Winona/PA bugs via Shea</div></div>
+  </div>
+
+  <h3>The math behind the headline KPIs</h3>
+
+  <div class="card evidence">
+    <div class="label">KPI 1 · Winona 4,500 BPI</div>
+    <p style="margin:0 0 8px;">Apr 13 → Apr 30: <strong>2,698 BPI in 18 days = ~150 BPI/day</strong>. Maintaining the post-opening daily baseline of 100–150 across 31 May days yields a floor of <strong>3,100 (low) → 4,650 (high)</strong>. Stretch to 5,000 requires ~161/day average. Mother's Day, Memorial Day, and graduation season are tailwinds; the 5 website bugs are headwinds that should be removed in week 1.</p>
+    <p style="margin:8px 0 0;font-size:14px;color:var(--gray-700);"><strong>Sensitivity:</strong> Every full day the state-picker bug persists is ~88% × ~150 = <strong>~132 lost website sessions</strong> at current run rate. Five lost days = 660 sessions = roughly one full week of organic discovery wasted.</p>
+  </div>
+
+  <div class="card evidence">
+    <div class="label">KPI 2 · Meadville +30% vs April</div>
+    <p style="margin:0 0 8px;">Apr BPI estimate: ~660 (April share of Jan–Apr 2,505). Target May BPI: <strong>~860</strong>. Vape category contribution: "vape shop near me" already in top 10 (~80 monthly impressions) → with a Meadville vape blog + 4 GBP graphics targeting vape + 710 (July 10 dab day) early-build, we expect "vape" terms to compound 30–50% across May–June.</p>
+    <p style="margin:8px 0 0;font-size:14px;color:var(--gray-700);"><strong>Why this is High confidence:</strong> Meadville already grew +27% YoY against the portfolio's worst macro headwind. The vape opportunity is incremental, not foundational.</p>
+  </div>
+
+  <div class="card evidence">
+    <div class="label">KPI 3 · Regent Square + Bridgeville back to ≥35% conversion</div>
+    <p style="margin:0 0 8px;">Current conversion in the 16–18% range. Portfolio baseline is 35%. <strong>Conversion is a listing-hygiene problem, not a discovery problem</strong> — both stores get plenty of profile views (Regent ~21K, Bridgeville ~21K). The fix: weekly photo cadence + GBP post cadence + Bridgeville review velocity + Bridgeville chat re-attempt on a new number.</p>
+    <p style="margin:8px 0 0;font-size:14px;color:var(--gray-700);"><strong>Conversion lift mechanics:</strong> a 5pp lift on Regent Square alone (16.8% → 21.8%) = +1,070 monthly bottom-funnel actions at current views.</p>
+  </div>
+
+  <div class="card evidence">
+    <div class="label">KPI 4 · Bridgeville +10 reviews in May, recency &lt; 7 days</div>
+    <p style="margin:0 0 8px;">Bridgeville sits at 35 reviews, latest ~6 weeks old. Review recency is one of the three known Google Local algorithm signals (alongside proximity and prominence). 10 new reviews at ~3.2/mo baseline velocity is a 3× lift — achievable with QR codes + budtender prompts.</p>
+    <p style="margin:8px 0 0;font-size:14px;color:var(--gray-700);"><strong>Caveat (live finding from May 13):</strong> Google may be starting to penalize budtender-name-tagged reviews as solicitation signal. Darrell investigating. Strategy will adjust if confirmed.</p>
+  </div>
+</section>
+
+<!-- Section 5 -->
+<section>
+  <div class="section-header"><span class="section-num">SECTION 05</span></div>
+  <h2>Risk register — what could break the plan</h2>
+
+  <table>
+    <thead><tr><th>Risk</th><th>Likelihood</th><th>Impact</th><th>Mitigation</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><strong>Winona website bugs persist past Week 1</strong></td>
+        <td><span class="pill med">Medium</span></td>
+        <td><span class="pill stretch">High</span></td>
+        <td>Bugs already in Shea's queue (Darrell emailed live during the May 13 call). Daily check-in until resolved. Track loss per persisting day (see KPI 1 sensitivity).</td>
+      </tr>
+      <tr>
+        <td><strong>Google forces removal of "Weed" from Winona GBP</strong></td>
+        <td><span class="pill med">Medium</span></td>
+        <td><span class="pill med">Medium</span></td>
+        <td>Per Jesse: leave it; force Google to act. If removed, we forfeit ~600 monthly "weed/weed dispensary" searches and pivot to content-driven "weed" optimization on the .com (MN-specific neighborhood + product blogs).</td>
+      </tr>
+      <tr>
+        <td><strong>PA vendor shelf depth slips back below 75%</strong></td>
+        <td><span class="pill high">Low</span></td>
+        <td><span class="pill stretch">High</span></td>
+        <td>Outside Dispenza's control. Mitigation: photo cadence to signal activity to Google even if SKU mix stays narrow; content focused on what IS in stock per Jesse's state-approved-brand list.</td>
+      </tr>
+      <tr>
+        <td><strong>Bridgeville chat re-application also rejected</strong></td>
+        <td><span class="pill med">Medium</span></td>
+        <td><span class="pill high">Low</span></td>
+        <td>Test with a different WhatsApp number than Regent Square's. If 2nd rejection, drop chat at Bridgeville and lean harder on call/directions/website-click conversion.</td>
+      </tr>
+      <tr>
+        <td><strong>New vape shops backfill in Meadville</strong></td>
+        <td><span class="pill med">Medium</span></td>
+        <td><span class="pill med">Medium</span></td>
+        <td>Compress the timeline. Publish vape blog by Week 2, not Week 4. Stack 4+ vape-themed GBP posts in May. Build the 710 (July 10) campaign in June to lock the moment.</td>
+      </tr>
+      <tr>
+        <td><strong>Budtender-tagged reviews trigger Google penalty</strong></td>
+        <td><span class="pill med">Medium</span></td>
+        <td><span class="pill med">Medium</span></td>
+        <td>Darrell verifying. If confirmed: pivot Bridgeville review-push to generic prompts ("Did we earn it? Leave us a review") without staff-name tags. Risk-adjusted KPI of +10 reviews holds either way.</td>
+      </tr>
+      <tr>
+        <td><strong>Flowhub credentials delay past May</strong></td>
+        <td><span class="pill med">Medium</span></td>
+        <td><span class="pill high">Low</span></td>
+        <td>May reporting stays GBP-only (unchanged). POS-correlation reporting becomes a June deliverable. No KPI in May depends on POS.</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- Section 6 -->
+<section>
+  <div class="section-header"><span class="section-num">SECTION 06</span></div>
+  <h2>May at a glance</h2>
+  <p class="lede">Sequenced for blast radius: smallest-cost / highest-leverage fixes first, content compounding in the back half.</p>
+
+  <div class="timeline">
+    <div class="step">
+      <div class="week">Week 1 · May 12–18</div>
+      <h4>Remove the Winona conversion blockers</h4>
+      <p>Email to Shea with full bug list. UTM parameters appended to Winona GBP website URL. Winona subheader changes Hemp → Weed. Greenfield content brief for /winona/ and /meadville/. First 30+ photo dump request to Jesse.</p>
+    </div>
+    <div class="step">
+      <div class="week">Week 2 · May 19–25</div>
+      <h4>Ship the two greenfield location pages</h4>
+      <p>/meadville/ and /winona/ go live with unique title, meta, H1, 400+ words city-specific copy, LocalBusiness schema. Bridgeville WhatsApp re-attempt with a new number. Vape blog (Meadville) drafted. Bridgeville review push QR codes printed.</p>
+    </div>
+    <div class="step">
+      <div class="week">Week 3 · May 26 – Jun 1</div>
+      <h4>Rewrite the duplicate PA location pages</h4>
+      <p>/bridgeville/, /regent-square/, /grove-city/, /clarion/ rebuilt off the /meadville/ template. Vape blog publishes. Recreational dispensary blog drafted. CuraLeaf alternative blog drafted for Clarion. Photo cadence at 3–4/store/week sustained.</p>
+    </div>
+    <div class="step">
+      <div class="week">Week 4 · Jun 2–8</div>
+      <h4>Compound the content engine</h4>
+      <p>Recreational + CuraLeaf-alternative blogs publish. /sitemap_index.xml live and resubmitted to Google Search Console. Flowhub integration kick-off (if credentials landed). Mid-cycle KPI check against KPI grid. June strategy seed.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Section 7 -->
+<section>
+  <div class="section-header"><span class="section-num">SECTION 07</span></div>
+  <h2>What we need from Black Bear</h2>
+  <p class="lede">Three things from Jesse, two from Zach. Everything else is Dispenza-owned.</p>
+
+  <div class="two-col">
+    <div class="card brown">
+      <h4 style="margin-top:0;">Jesse</h4>
+      <ol style="margin:0;padding-left:20px;">
+        <li><strong>Flowhub POS credentials</strong> → bp@dispensa.com. Unlocks Winona correlation reporting starting June.</li>
+        <li><strong>State-approved PA vendor/brand list.</strong> Drives keyword + content prioritization (those brands have actual local search volume because they're conglomerating across compliant retailers).</li>
+        <li><strong>30+ photos per PA store</strong> (Regent Square, Bridgeville, Grove City, Meadville, Clarion). Mix: exterior · interior · product shelves · new SKU drops · individual jar/vape closeups. Roughly 5 weeks of weekly cadence per store.</li>
+      </ol>
+    </div>
+    <div class="card forest">
+      <h4 style="margin-top:0;">Zach</h4>
+      <ol style="margin:0;padding-left:20px;">
+        <li><strong>Full website-fix list to Shea</strong> (looped through Darrell so we track it). Includes the 5 May 13 findings + anything else from his own list.</li>
+        <li><strong>Content seed input</strong> once Darrell sends the search-term list. Specifically: any PA-vendor-list brands Zach wants prioritized as blog topics + any in-store staff who should be spotlit (e.g., Becca at Clarion who's already getting branded search at Meadville).</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- Section 8 -->
+<section>
+  <div class="section-header"><span class="section-num">SECTION 08</span></div>
+  <h2>Evidence-tiered closure — 12 quantifiable levers</h2>
+  <p class="lede">Each lever is bound to a measurable signal. Levers are ordered by confidence × impact, not by alphabet or department.</p>
+
+  <div class="lever">
+    <div class="meta"><span class="pill high">HIGH</span><span class="pill mn">MN</span><span class="pill evidence">Winona</span></div>
+    <h4>1 · Fix the 5 Winona/PA website bugs (Shea queue)</h4>
+    <p class="why">88% of Winona's GBP actions route to website clicks. State-picker bug, MN-return bug, and Winona subheader (Hemp → Weed) directly determine whether those clicks convert.</p>
+    <div class="ev"><strong>Evidence:</strong> Cody recreated state-picker bug live on iPhone May 11. Jesse + Zach confirmed MN-return cache lock in May 13 meeting. Subheader directive direct from Jesse.</div>
+  </div>
+
+  <div class="lever">
+    <div class="meta"><span class="pill high">HIGH</span><span class="pill mn">MN</span><span class="pill evidence">Winona</span></div>
+    <h4>2 · Ship /winona/ + /shop/store-menus/winona/ pages</h4>
+    <p class="why">Both URLs currently return 404. Winona has zero web presence outside the menu hub. Greenfield work = highest expected ROI per hour of build.</p>
+    <div class="ev"><strong>Evidence:</strong> Confirmed via May 13 site audit. Footer phone is already (507) 474-0097 (Winona); the site uses Winona's number as the headline contact while giving Winona zero dedicated SEO real estate.</div>
+  </div>
+
+  <div class="lever">
+    <div class="meta"><span class="pill high">HIGH</span><span class="pill pa">PA</span><span class="pill evidence">Meadville</span></div>
+    <h4>3 · Build Meadville's vape category dominance</h4>
+    <p class="why">"Vape shop near me" in Meadville's top 10 is unprecedented. Window will close as competitors rebuild. Compounding move: blog + 4 GBP graphics + 710 campaign teed for July.</p>
+    <div class="ev"><strong>Evidence:</strong> "vape shop near me" appears in Meadville Jan–Apr top 10 queries. Jesse confirmed surrounding vape shops were raided; nicotine continued at reduced volume. Vaporizer is already a Meadville GBP subcategory.</div>
+  </div>
+
+  <div class="lever">
+    <div class="meta"><span class="pill high">HIGH</span><span class="pill pa">PA</span></div>
+    <h4>4 · Ship /meadville/ landing page (currently 404)</h4>
+    <p class="why">Meadville is the only PA store with positive YoY action growth. The store with the best momentum has no landing page to capture organic growth. Build it first; use it as the template for the 4 cosmetic-duplicate PA pages.</p>
+    <div class="ev"><strong>Evidence:</strong> May 13 audit · `/meadville/` returns 404 while `/bridgeville/`, `/regent-square/`, `/grove-city/`, `/clarion/` return 200 but share identical title/meta/H1.</div>
+  </div>
+
+  <div class="lever">
+    <div class="meta"><span class="pill high">HIGH</span><span class="pill pa">PA</span><span class="pill evidence">Bridgeville</span></div>
+    <h4>5 · Bridgeville review velocity push</h4>
+    <p class="why">Bridgeville at 35 reviews, latest ~6 weeks old. Review recency is one of three known local-algo signals. QR codes + budtender prompts + email follow-ups. Target: +10 reviews, recency &lt; 7 days at 5/31.</p>
+    <div class="ev"><strong>Evidence:</strong> Bridgeville GBP rated 5.0★ at 35 reviews. Highest review-velocity opportunity in the portfolio.</div>
+  </div>
+
+  <div class="lever">
+    <div class="meta"><span class="pill high">HIGH</span><span class="pill pa">PA</span><span class="pill mn">MN</span></div>
+    <h4>6 · Photo cadence — 3–4/store/week across all 6 stores</h4>
+    <p class="why">Google rewards listings that signal active operations. Six months of stale photos starts to weigh on the algorithm. Goal: full profile-strength on all listings within May, sustained from June forward.</p>
+    <div class="ev"><strong>Evidence:</strong> Confirmed via Darrell's portfolio observations across other clients — 3–4 weekly photo cadence is the conversion-lift accelerator. Jesse committed 30+ images per PA store on May 13.</div>
+  </div>
+
+  <div class="lever">
+    <div class="meta"><span class="pill high">HIGH</span><span class="pill pa">PA</span></div>
+    <h4>7 · /sitemap_index.xml — enable RankMath sitemap module</h4>
+    <p class="why">Currently returns 404 HTML to Googlebot even though robots.txt declares it. Google has no canonical URL inventory; internal linking is doing 100% of discovery work. RankMath is installed — this is a config flip.</p>
+    <div class="ev"><strong>Evidence:</strong> May 13 audit confirmed all sitemap variants return 404 + text/html + WordPress 404 page (with noindex). Verified to Googlebot UA.</div>
+  </div>
+
+  <div class="lever">
+    <div class="meta"><span class="pill med">MED</span><span class="pill pa">PA</span></div>
+    <h4>8 · Rewrite 4 PA cosmetic-duplicate location pages</h4>
+    <p class="why">/bridgeville/, /regent-square/, /grove-city/, /clarion/ share identical title/meta/H1. Each gets unique title (city + service intent), city-specific meta, H1 with city name, 300+ words of city-specific copy, LocalBusiness schema, image alt text with city.</p>
+    <div class="ev"><strong>Evidence:</strong> May 13 audit · curl-extracted title/meta/H1 identical across all 4 URLs despite distinct canonicals.</div>
+  </div>
+
+  <div class="lever">
+    <div class="meta"><span class="pill med">MED</span><span class="pill pa">PA</span></div>
+    <h4>9 · "Weed Dispensary" scrub on PA-facing pages</h4>
+    <p class="why">/shop/ title, /about-us/ meta description, and a Sept 2025 blog post title all contain "Weed Dispensary." Same payment-processor exposure we're managing off PA GBPs — currently live on the .com. Winona-side pages are exempt per Jesse's May 13 override.</p>
+    <div class="ev"><strong>Evidence:</strong> May 13 audit · Three confirmed instances of "Weed Dispensary" in PA-relevant surfaces. GBP descriptions on 4 of 5 PA stores also contain the phrase.</div>
+  </div>
+
+  <div class="lever">
+    <div class="meta"><span class="pill med">MED</span><span class="pill pa">PA</span></div>
+    <h4>10 · 4 content pieces targeting lost discovery</h4>
+    <p class="why">"Recreational dispensary," "medical dispensary," vape category (Meadville), and CuraLeaf-alternative (Clarion). Body copy + blog content uses "weed" terminology to recapture lost search volume without exposing H1/title to processor risk.</p>
+    <div class="ev"><strong>Evidence:</strong> Pre-name-change PA listings ranked for ~2,500 monthly "weed dispensary" Regent Square searches alone. Cumulative volume across PA stores is ~5,000–7,000 lost monthly impressions.</div>
+  </div>
+
+  <div class="lever">
+    <div class="meta"><span class="pill med">MED</span><span class="pill mn">MN</span></div>
+    <h4>11 · Winona GBP UTM parameters</h4>
+    <p class="why">Winona's GBP website URL is missing UTMs. Google Analytics can't split organic from GBP-sourced traffic. Append `?utm_campaign=Dispenza&utm_source=GMB` per the standard PA pattern.</p>
+    <div class="ev"><strong>Evidence:</strong> May 13 call · Darrell flagged live; PA stores already UTM-tagged (e.g., Bridgeville: `utm_source=gmb-bridgeville&utm_campaign=dispenza`).</div>
+  </div>
+
+  <div class="lever">
+    <div class="meta"><span class="pill med">MED</span><span class="pill mn">MN</span></div>
+    <h4>12 · Flowhub POS integration (Winona)</h4>
+    <p class="why">Jesse committed to share credentials May 13. Once integrated, enables Pearson-coefficient correlation (GBP directional requests → in-store sales). Establishes the Winona ACV needed for revenue-attributed reporting from June onward.</p>
+    <div class="ev"><strong>Evidence:</strong> Darrell's portfolio baseline · 70–90% of GBP directional requests convert to in-store visits at clients with POS-validated data.</div>
+  </div>
+</section>
+
+<!-- Footer -->
+<section style="text-align:center; color:var(--gray-500); font-size:13px; margin-bottom:0;">
+  <hr style="border:none; border-top:1px solid var(--gray-300); margin: 40px 0 24px;" />
+  <p>Black Bear Dispensary × Dispenza · May 2026 Local SEO Strategy · Drafted 2026-05-13 · Darrell Clay, Account Manager</p>
+  <p>Source data: Jan–Apr 2026 GBP Performance dashboards (all 6 locations) · May 13 strategy meeting · May 13 website audit</p>
+</section>
+
+</div>
+</body>
+</html>
