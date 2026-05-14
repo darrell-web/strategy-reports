@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>4Twenty Market — April 2026 Local SEO Performance Review</title>
+<style>
+  :root {
+    --green-900: #0d3b14;
+    --green-700: #1b5e20;
+    --green-500: #2e7d32;
+    --green-100: #e3efe6;
+    --gold: #f9a825;
+    --gold-dark: #c17900;
+    --gold-light: #fff3d3;
+    --orange: #d84315;
+    --orange-100: #fbe1d5;
+    --charcoal-900: #1a1f1c;
+    --charcoal-700: #3b4540;
+    --gray-500: #6b7280;
+    --gray-300: #d1d5db;
+    --gray-100: #f3f4f6;
+    --gray-50: #f9fafb;
+    --paper: #fafaf5;
+    --green-tag: #2ba84a;
+    --green-100b: #e6f6ea;
+    --red: #b7322b;
+    --red-100: #fbe6e5;
+    --amber: #c97a0a;
+    --amber-100: #fcebd0;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; color: var(--charcoal-900); background: var(--paper); line-height: 1.6; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 32px 80px; }
+
+  /* Cover */
+  .cover { background: linear-gradient(135deg, var(--green-900) 0%, var(--green-700) 60%, var(--gold-dark) 100%); color: #fff; padding: 80px 32px 100px; margin-bottom: 48px; border-bottom: 6px solid var(--gold); }
+  .cover-inner { max-width: 1100px; margin: 0 auto; }
+  .cover .eyebrow { text-transform: uppercase; letter-spacing: 3px; font-size: 14px; font-weight: 600; opacity: 0.85; margin-bottom: 16px; }
+  .cover h1 { font-size: 54px; line-height: 1.08; margin: 0 0 20px; font-weight: 800; }
+  .cover h1 span { color: var(--gold); }
+  .cover .subtitle { font-size: 22px; opacity: 0.92; max-width: 800px; margin: 0 0 28px; }
+  .cover .stamp { display: inline-block; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.35); color: #fff; padding: 10px 18px; border-radius: 999px; font-size: 13px; text-transform: uppercase; letter-spacing: 2px; font-weight: 700; margin-bottom: 36px; }
+  .cover .stamp .dot { color: var(--gold); margin-right: 8px; }
+  .cover-meta { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; padding-top: 28px; border-top: 1px solid rgba(255,255,255,0.25); }
+  .cover-meta div .label { font-size: 12px; text-transform: uppercase; letter-spacing: 2px; opacity: 0.7; }
+  .cover-meta div .value { font-size: 16px; font-weight: 600; margin-top: 4px; }
+
+  /* Sections */
+  section { margin-bottom: 56px; }
+  .section-header { display: flex; align-items: baseline; gap: 16px; margin-bottom: 8px; }
+  .section-num { font-size: 14px; font-weight: 700; color: var(--gold-dark); letter-spacing: 3px; }
+  h2 { font-size: 34px; line-height: 1.2; color: var(--green-900); margin: 0 0 8px; font-weight: 700; }
+  h3 { font-size: 22px; color: var(--green-700); margin: 28px 0 12px; }
+  h4 { font-size: 17px; color: var(--charcoal-900); margin: 20px 0 8px; font-weight: 700; }
+  .lede { font-size: 19px; color: var(--charcoal-700); max-width: 880px; margin-bottom: 24px; }
+
+  /* Cards */
+  .card { background: #fff; border: 1px solid var(--gray-300); border-radius: 12px; padding: 24px 28px; margin: 16px 0; }
+  .card.green { background: var(--green-100); border-color: var(--green-500); }
+  .card.gold { background: var(--gold-light); border-color: var(--gold); }
+  .card.alert { background: var(--amber-100); border-left: 5px solid var(--amber); }
+  .card.proof { background: #f5f9f6; border: 1px solid var(--green-500); border-left: 6px solid var(--green-700); }
+  .card.proof .label { font-size: 11px; font-weight: 800; color: var(--green-700); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 10px; }
+
+  /* Dispenza work hero */
+  .dispenza-hero { background: var(--green-900); color: #fff; padding: 40px 44px; border-radius: 16px; margin: 24px 0; border: 2px solid var(--gold); }
+  .dispenza-hero .label { text-transform: uppercase; letter-spacing: 4px; font-size: 13px; color: var(--gold); margin-bottom: 12px; font-weight: 700; }
+  .dispenza-hero h3 { color: #fff; margin: 0 0 14px; font-size: 26px; }
+  .dispenza-hero p { font-size: 17px; opacity: 0.92; margin: 0; }
+  .dispenza-list { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 24px; }
+  .dispenza-list .item { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.25); border-radius: 10px; padding: 16px 18px; }
+  .dispenza-list .item .num { color: var(--gold); font-weight: 800; font-size: 13px; letter-spacing: 2px; }
+  .dispenza-list .item h4 { color: #fff; margin: 4px 0 6px; font-size: 16px; }
+  .dispenza-list .item p { margin: 0; opacity: 0.85; font-size: 14px; }
+
+  /* Tables */
+  table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.05); margin: 16px 0 24px; }
+  th { background: var(--green-700); color: #fff; text-align: left; padding: 12px 14px; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; }
+  td { padding: 12px 14px; border-bottom: 1px solid var(--gray-100); font-size: 14px; vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  tr:nth-child(even) td { background: var(--gray-50); }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+
+  /* Pills */
+  .pill { display: inline-block; padding: 4px 12px; border-radius: 999px; font-size: 11px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; }
+  .pill.up { background: var(--green-100b); color: var(--green-tag); }
+  .pill.dn { background: var(--red-100); color: var(--red); }
+  .pill.flat { background: var(--gray-100); color: var(--gray-500); }
+  .pill.attn { background: var(--amber-100); color: var(--amber); }
+  .pill.win { background: var(--gold-light); color: var(--gold-dark); }
+
+  /* KPI grid */
+  .kpi-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 24px 0; }
+  .kpi-card { background: #fff; border: 1px solid var(--gray-300); border-radius: 10px; padding: 20px; text-align: center; }
+  .kpi-card.win { border-top: 4px solid var(--gold); }
+  .kpi-card.attn { border-top: 4px solid var(--amber); }
+  .kpi-card.dn { border-top: 4px solid var(--red); }
+  .kpi-card .num { font-size: 30px; font-weight: 800; color: var(--green-700); line-height: 1; }
+  .kpi-card .lbl { font-size: 12px; text-transform: uppercase; letter-spacing: 2px; color: var(--charcoal-700); margin-top: 8px; }
+  .kpi-card .delta { font-size: 13px; margin-top: 8px; color: var(--gray-500); }
+
+  /* Store block */
+  .store-block { background: #fff; border: 1px solid var(--gray-300); border-radius: 14px; padding: 0; margin: 24px 0; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .store-header { padding: 22px 28px; color: #fff; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+  .store-header.sac { background: linear-gradient(135deg, var(--green-700), var(--green-500)); }
+  .store-header.weho { background: linear-gradient(135deg, var(--gold-dark), var(--gold)); }
+  .store-header.oak { background: linear-gradient(135deg, #154734, var(--green-700)); }
+  .store-header h3 { color: #fff; margin: 0; font-size: 24px; }
+  .store-header .sub { font-size: 13px; opacity: 0.92; }
+  .store-body { padding: 28px; }
+
+  /* Two-col */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+
+  /* Quote */
+  .quote { border-left: 4px solid var(--gold); padding: 10px 18px; color: var(--charcoal-700); font-style: italic; background: #fffaf0; margin: 14px 0; }
+
+  @media (max-width: 760px) {
+    .cover h1 { font-size: 38px; }
+    .cover-meta { grid-template-columns: 1fr 1fr; }
+    .kpi-grid { grid-template-columns: 1fr 1fr; }
+    .two-col, .dispenza-list { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header class="cover">
+  <div class="cover-inner">
+    <div class="eyebrow">4Twenty Market × Dispenza · Partner Review</div>
+    <h1>April 2026 <span>Local SEO Performance Review</span></h1>
+    <p class="subtitle">Three stores. Three economic models. One integrated reporting view tying POS, GBP, and Local Falcon together for the first time.</p>
+    <div class="stamp"><span class="dot">●</span> POS + GBP + Local Falcon · Per-Store + Chain · Prepared for Partner Meeting</div>
+    <div class="cover-meta">
+      <div><div class="label">Period</div><div class="value">April 1–30, 2026</div></div>
+      <div><div class="label">Locations</div><div class="value">Oakland · Sac · WeHo</div></div>
+      <div><div class="label">Data sources</div><div class="value">Treez · GBP · Local Falcon</div></div>
+      <div><div class="label">Prepared by</div><div class="value">Darrell Clay, Dispenza</div></div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+<!-- Section 0 — Dispenza work hero -->
+<section>
+  <div class="section-header"><span class="section-num">SECTION 00</span></div>
+  <h2>What Dispenza shipped in the last 30 days</h2>
+  <p class="lede">Before the April numbers — a snapshot of the foundational work completed since onboarding. Every metric in the rest of this report rides on this layer.</p>
+
+  <div class="dispenza-hero">
+    <div class="label">DISPENZA DELIVERABLES · LAST 30 DAYS</div>
+    <h3>From "we have 3 stores" to "we have a portfolio with three distinct economic models you can manage as one"</h3>
+    <p>A clean operating picture across the chain was not in place a month ago. Today it is — entity structure resolved through CA state license records, NAP corrected to live operational reality, GBP attributes audited against POS truth, Local Falcon competitive scans baselined per store, and a 14-month POS time series cross-validated. The April numbers in this report only mean something because the foundation underneath them is now solid.</p>
+    <div class="dispenza-list">
+      <div class="item">
+        <div class="num">01 · ENTITY + LICENSING</div>
+        <h4>3 LLCs identified, 3 CA licenses verified</h4>
+        <p>Abyz LLC (Oakland · C12-0000132 microbusiness) · Migliore LLC (Sacramento · C10-0000352) · Ovest LLC (West Hollywood · C10-0000292) — all verified via CA DCC public license records. Resolved the chain-vs-portfolio framing that had been ambiguous for months.</p>
+      </div>
+      <div class="item">
+        <div class="num">02 · NAP CORRECTIONS</div>
+        <h4>Oakland phone corrected · WeHo license format fixed</h4>
+        <p>The (800) 420-3216 number listed everywhere was incorrect. Confirmed (510) 697-1566 via live website + Yelp + DCC. WeHo license # was missing a leading zero on the website (C10-000292 → C10-0000292) — minor compliance fix queued.</p>
+      </div>
+      <div class="item">
+        <div class="num">03 · GBP ATTRIBUTE AUDITS</div>
+        <h4>3 stalled-attribute conflicts identified</h4>
+        <p>Oakland + Sacramento still had "Offers delivery" set despite operationally discontinuing delivery (Oakland Aug '24, Sacramento May '25). Sacramento's description claimed "curbside pickup" while the back-end attribute said "No curbside pickup." Each of these is a CX leak driving customer 3★ reviews ("no delivery"). Each is now queued for owner-approval toggle.</p>
+      </div>
+      <div class="item">
+        <div class="num">04 · DELIVERY DECOMMISSION TIMELINE</div>
+        <h4>POS data resolved the "do we actually deliver?" question</h4>
+        <p>14-month POS time series confirmed Oakland last delivered Aug 2024 (133 orders), Sacramento last May 2025 (71 orders), WeHo never. Cleared up the GBP-vs-operational-reality gap definitively.</p>
+      </div>
+      <div class="item">
+        <div class="num">05 · LOCAL FALCON BASELINES</div>
+        <h4>11×11 grid scans on all 3 stores · 17 keywords tracked</h4>
+        <p>Per-store competitive baseline established May 1, 2026. Oakland: 100% SoLV across 5 keywords (defense mode). Sacramento: +18.18 SoLV gain on "weed dispensary" — biggest single-keyword movement in the data. WeHo: Joyleaf-pattern gap on "dispensary"/"cannabis" plain identified (Pillar 0 opportunity).</p>
+      </div>
+      <div class="item">
+        <div class="num">06 · COMPETITIVE INTEL</div>
+        <h4>Duplicate WeHo listing + 12 SAB-spam listings flagged</h4>
+        <p>A 2.9★ duplicate "4twenty Market" listing in WeHo dragging brand perception — claimed for merger. ~12 "house clearance service" cannabis-named spam listings in WeHo grid identified for Maps reports. ~6 SAB-stuffing addresses flagged in Oakland.</p>
+      </div>
+      <div class="item">
+        <div class="num">07 · POS INTEGRATION</div>
+        <h4>14-month Treez time series ingested + cross-validated</h4>
+        <p>425 days × 3 stores × 17 metrics cross-validated against 18 First Saturday single-day pulls. Anomaly detection caught a Dec 15-16 Oakland Treez COGS error (margin showed −149% — almost certainly a data entry issue worth raising with the team).</p>
+      </div>
+      <div class="item">
+        <div class="num">08 · MAY STRATEGY + PLAYBOOK</div>
+        <h4>Per-location plan shipped May 7 · partner-shareable</h4>
+        <p>Strategy doc and execution playbook covering heritage positioning (Phytologie since 2014 / Abatin Wellness since 2011 / LAPCG since 2004), brand-carry copy, GBP cadence, and the photo-program ask that's the biggest single unlock for profile strength. Already in your inbox.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 1 — At a glance -->
+<section>
+  <div class="section-header"><span class="section-num">SECTION 01</span></div>
+  <h2>April at a glance</h2>
+  <p class="lede">The chain delivered top-line growth in April — gross sales up 7.8% vs. March, units up 7.0%. Gross profit grew only 1.6%, with chain margin compressing 1.6 points to 46.3%. The headline story is per-store: WeHo held discipline; Sacramento and Oakland traded margin for volume.</p>
+
+  <div class="kpi-grid">
+    <div class="kpi-card win">
+      <div class="num">$593.7K</div>
+      <div class="lbl">Chain Gross Sales</div>
+      <div class="delta"><span class="pill up">+7.8%</span> vs March</div>
+    </div>
+    <div class="kpi-card win">
+      <div class="num">32,773</div>
+      <div class="lbl">Chain Units Sold</div>
+      <div class="delta"><span class="pill up">+7.0%</span> vs March</div>
+    </div>
+    <div class="kpi-card dn">
+      <div class="num">46.3%</div>
+      <div class="lbl">Chain Margin</div>
+      <div class="delta"><span class="pill dn">−1.6 pts</span> vs March</div>
+    </div>
+    <div class="kpi-card attn">
+      <div class="num">+21.0%</div>
+      <div class="lbl">Discount $ growth</div>
+      <div class="delta"><span class="pill attn">3× the rate of gross-sales growth</span></div>
+    </div>
+  </div>
+
+  <div class="kpi-grid">
+    <div class="kpi-card win">
+      <div class="num">100%</div>
+      <div class="lbl">Oakland SoLV · 3 keywords</div>
+      <div class="delta">"weed", "weed dispensary", "weed near me"</div>
+    </div>
+    <div class="kpi-card win">
+      <div class="num">+18.18</div>
+      <div class="lbl">Sacramento "weed dispensary" SoLV gain</div>
+      <div class="delta">Biggest movement in the data</div>
+    </div>
+    <div class="kpi-card win">
+      <div class="num">+11.57</div>
+      <div class="lbl">WeHo "weed" SoLV gain</div>
+      <div class="delta">From 49.59% — closing on #1</div>
+    </div>
+    <div class="kpi-card attn">
+      <div class="num">~$33K</div>
+      <div class="lbl">Inventory build at Sac + Oak</div>
+      <div class="delta">Sacramento +19.7% · Oakland +15.9%</div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 2 — Per-store -->
+<section>
+  <div class="section-header"><span class="section-num">SECTION 02</span></div>
+  <h2>Per-store deep dive</h2>
+  <p class="lede">Each store is a different business. We're reporting them that way going forward.</p>
+
+  <!-- SACRAMENTO -->
+  <div class="store-block">
+    <div class="store-header sac">
+      <div>
+        <h3>Sacramento — Abatin Wellness × 4TM</h3>
+        <div class="sub">2100 29th St · Migliore LLC · C10-0000352 · 4.6★ on 854 Google reviews</div>
+      </div>
+      <div><span class="pill win">VOLUME LEADER</span></div>
+    </div>
+    <div class="store-body">
+
+      <h4>POS performance · April 2026</h4>
+      <table>
+        <thead><tr><th>Metric</th><th class="num">April 2026</th><th class="num">March 2026</th><th class="num">Δ</th></tr></thead>
+        <tbody>
+          <tr><td>Units Sold</td><td class="num">17,198</td><td class="num">15,179</td><td class="num"><span class="pill up">+13.3%</span></td></tr>
+          <tr><td>Gross Sales</td><td class="num">$304,869</td><td class="num">$271,318</td><td class="num"><span class="pill up">+12.4%</span></td></tr>
+          <tr><td>Net Sales</td><td class="num">$239,700</td><td class="num">$221,433</td><td class="num"><span class="pill up">+8.2%</span></td></tr>
+          <tr><td>Discounts</td><td class="num">$64,756</td><td class="num">$49,573</td><td class="num"><span class="pill attn">+30.6%</span></td></tr>
+          <tr><td>Gross Margin</td><td class="num">43.5%</td><td class="num">45.8%</td><td class="num"><span class="pill dn">−2.3 pts</span></td></tr>
+          <tr><td>Avg unit sale price</td><td class="num">$13.94</td><td class="num">$14.59</td><td class="num"><span class="pill dn">−$0.65</span></td></tr>
+          <tr><td>Daily Avg Cost of Inventory on Hand</td><td class="num">$115,939</td><td class="num">$96,830</td><td class="num"><span class="pill attn">+19.7%</span></td></tr>
+        </tbody>
+      </table>
+
+      <h4>GBP performance · 14-month context</h4>
+      <p>Sacramento generates ~218 transactions/day on baseline. April was a heavy promotional push month — Sacramento bought +$33K of incremental gross sales by giving away ~$15K in additional discounts. The trade returned roughly $2,900 of extra gross profit. <strong>Volume was bought at price's expense.</strong></p>
+
+      <div class="card alert">
+        <strong>The 4/20 finding:</strong> Sacramento's 4/20/2026 was the biggest single sales day of the month at $13,373 — but it ran the deepest 4/20 promotion in the chain and posted a 34.2% margin (9.3 points below the April average). The same Monday holiday at WeHo held 47.2% margin and at Oakland held 41.2%. <strong>WeHo-style 4/20 discipline applied at Sacramento would have added ~$1,000+ of gross profit on the single biggest day of April.</strong>
+      </div>
+
+      <h4>Local Falcon · May 1, 2026 (11×11 grid · 2 mi radius)</h4>
+      <p>Sacramento sits in <strong>two completely different competitive positions depending on the keyword.</strong> On "weed" terms — where the GBP name "Abatin Weed Dispensary Sacramento" tokenizes perfectly — Sacramento dominates. On bare "dispensary" and "cannabis" terms, Sacramento is mid-pack. This is the same structural gap pattern we've closed at Joyleaf and Noire.</p>
+
+      <table>
+        <thead><tr><th>Keyword</th><th class="num">Rank (ARP)</th><th class="num">SoLV</th><th class="num">Δ SoLV</th><th>Read</th></tr></thead>
+        <tbody>
+          <tr><td>weed near me</td><td class="num">2.79</td><td class="num">85.95%</td><td class="num"><span class="pill up">+16.53</span></td><td>#1 — recovered dominance</td></tr>
+          <tr><td>weed dispensary</td><td class="num">3.02</td><td class="num">71.90%</td><td class="num"><span class="pill up">+18.18</span></td><td>#2 — <strong>biggest gain in the data</strong></td></tr>
+          <tr><td>weed</td><td class="num">3.57</td><td class="num">43.80%</td><td class="num"><span class="pill up">+3.30</span></td><td>#3 — solid</td></tr>
+          <tr><td>cannabis near me</td><td class="num">7.10</td><td class="num">23.14%</td><td class="num"><span class="pill up">+5.78</span></td><td>Gaining but distant</td></tr>
+          <tr><td>cannabis</td><td class="num">8.68</td><td class="num">16.53%</td><td class="num"><span class="pill up">+1.65</span></td><td>Middle of pack</td></tr>
+          <tr><td>dispensary near me</td><td class="num">8.61</td><td class="num">14.88%</td><td class="num"><span class="pill up">+4.96</span></td><td>Gaining but distant</td></tr>
+          <tr><td>dispensary</td><td class="num">8.79</td><td class="num">13.22%</td><td class="num"><span class="pill up">+3.30</span></td><td>Middle of pack — structural gap</td></tr>
+        </tbody>
+      </table>
+
+      <div class="card proof">
+        <div class="label">Strategic implication</div>
+        <p style="margin:0;">The Joyleaf-proven website structural fix (homepage + location-page H1, meta title, JSON-LD schema with <code>alternateName: ["Abatin Wellness", "Sacramento Dispensary"]</code>) is the highest-leverage move available here. <strong>Every keyword gained SoLV vs. the prior scan</strong> — unusual for a defending business and a sign that May's GBP work + website work can compound on positive momentum rather than fight a downtrend. Perfect Union Eastside (~0.5 mi away, same zip code) is the head-to-head zero-sum competitor. STIIIZY Sacramento's late-2025 entry has rewritten the "cannabis" terms competitive map.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- WEST HOLLYWOOD -->
+  <div class="store-block">
+    <div class="store-header weho">
+      <div>
+        <h3>West Hollywood — LAPCG since 2004</h3>
+        <div class="sub">7213 Santa Monica Blvd · Ovest LLC · C10-0000292 · 4.7★ on 248 Google reviews</div>
+      </div>
+      <div><span class="pill win">MARGIN LEADER</span></div>
+    </div>
+    <div class="store-body">
+
+      <h4>POS performance · April 2026</h4>
+      <table>
+        <thead><tr><th>Metric</th><th class="num">April 2026</th><th class="num">March 2026</th><th class="num">Δ</th></tr></thead>
+        <tbody>
+          <tr><td>Units Sold</td><td class="num">4,367</td><td class="num">4,380</td><td class="num"><span class="pill flat">−0.3%</span></td></tr>
+          <tr><td>Gross Sales</td><td class="num">$98,060</td><td class="num">$97,158</td><td class="num"><span class="pill up">+0.9%</span></td></tr>
+          <tr><td>Net Sales</td><td class="num">$86,346</td><td class="num">$84,176</td><td class="num"><span class="pill up">+2.6%</span></td></tr>
+          <tr><td>Discounts</td><td class="num">$11,715</td><td class="num">$12,982</td><td class="num"><span class="pill win">−9.8%</span></td></tr>
+          <tr><td>Gross Margin</td><td class="num">54.4%</td><td class="num">54.5%</td><td class="num"><span class="pill flat">−0.1 pts</span></td></tr>
+          <tr><td>Avg unit sale price</td><td class="num">$19.77</td><td class="num">$19.22</td><td class="num"><span class="pill up">+$0.55</span></td></tr>
+          <tr><td>Daily Avg Cost of Inventory on Hand</td><td class="num">$41,592</td><td class="num">$45,118</td><td class="num"><span class="pill win">−7.8%</span></td></tr>
+        </tbody>
+      </table>
+
+      <h4>The premium-positioning story</h4>
+      <p>WeHo is fundamentally a different business than the other two stores. Average unit sale price <strong>$19.77 vs. $13.91–$13.94</strong> at Oakland and Sacramento. Margin <strong>54.4% vs. ~45%.</strong> April was the cleanest operating month — WeHo <strong>cut discount dollars 9.8%, held margin flat at 54%, drew down inventory 7.8%, and grew the AOV.</strong> This is the only store of the three that delivered improved unit economics in April.</p>
+
+      <div class="card green">
+        <strong>4/20/2026 was WeHo's all-time peak day.</strong> $7,068 net sales (+146% over its $2,878 daily average) at 47.2% margin — only 7.2 points below the monthly average despite being a major promotional holiday. Compare to Sacramento, where 4/20 ran at 34.2% margin (9.3 points below the monthly average). <strong>The WeHo 4/20 playbook is the chain-wide model for 2027.</strong>
+      </div>
+
+      <h4>Local Falcon · May 1, 2026 (11×11 grid · 1 mi radius)</h4>
+      <p>WeHo sits in <strong>the most saturated dispensary market in California.</strong> Herbarium Marijuana Weed Dispensary (979 N La Brea) is the structural leader at 4.9★ on 1,184 reviews — 4.7× WeHo's review base. The story this month: <strong>WeHo posted the biggest single-keyword movement we've seen there on "weed" terms.</strong></p>
+
+      <table>
+        <thead><tr><th>Keyword</th><th class="num">Rank (ARP)</th><th class="num">SoLV</th><th class="num">Δ SoLV</th><th>Read</th></tr></thead>
+        <tbody>
+          <tr><td>weed near me</td><td class="num">3.31</td><td class="num">59.50%</td><td class="num"><span class="pill up">+6.61</span></td><td>#2 — gaining</td></tr>
+          <tr><td>weed</td><td class="num">3.78</td><td class="num">49.59%</td><td class="num"><span class="pill up">+11.57</span></td><td>#2 — <strong>biggest WeHo gain</strong></td></tr>
+          <tr><td>weed dispensary</td><td class="num">3.74</td><td class="num">46.28%</td><td class="num"><span class="pill up">+6.61</span></td><td>#3 — gaining</td></tr>
+          <tr><td>dispensary</td><td class="num">9.32</td><td class="num">13.22%</td><td class="num"><span class="pill up">+0.82</span></td><td>#10 — structural gap</td></tr>
+          <tr><td>cannabis near me</td><td class="num">10.56</td><td class="num">11.57%</td><td class="num"><span class="pill dn">−2.48</span></td><td>#12 — slipping</td></tr>
+          <tr><td>dispensary near me</td><td class="num">10.29</td><td class="num">10.74%</td><td class="num"><span class="pill dn">−1.66</span></td><td>#11 — slipping</td></tr>
+          <tr><td>cannabis</td><td class="num">12.38</td><td class="num">9.09%</td><td class="num"><span class="pill flat">↔</span></td><td>#14 — bottom of mid-pack</td></tr>
+        </tbody>
+      </table>
+
+      <div class="card proof">
+        <div class="label">Strategic implication</div>
+        <p style="margin:0;">Same structural pattern as Sacramento — strong on "weed" cluster, weak on "dispensary" plain. The Joyleaf-proven website fix (alternateName schema + revised H1 emphasizing "Dispensary in West Hollywood since 2004" rather than "Weed Dispensary") would move "dispensary" from #10 toward #6–7 within 2–4 weeks of crawl. <strong>The 22-year LAPCG tenure is the strongest brand-equity moat available — few CA dispensaries can match it.</strong> Surfacing it in heritage-led copy is the May 2026 lead lever.</p>
+      </div>
+
+      <div class="card alert">
+        <strong>Two cleanup items already in the May queue:</strong>
+        <ol style="margin:8px 0 0;padding-left:22px;">
+          <li>A duplicate "4twenty Market" GBP at 2.9★ on 7 reviews is dragging brand perception in the local pack — claimed and queued for merger.</li>
+          <li>~12 GBP listings in the WeHo grid are categorized as "House Clearance Service" with cannabis names — textbook GBP spam pattern. Submitted for Google Maps review.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <!-- OAKLAND -->
+  <div class="store-block">
+    <div class="store-header oak">
+      <div>
+        <h3>Oakland — Phytologie Wellness Center</h3>
+        <div class="sub">8440 Enterprise Way · Abyz LLC · C12-0000132 microbusiness · 4.6★ on 911 Google reviews</div>
+      </div>
+      <div><span class="pill win">SoLV LEADER</span></div>
+    </div>
+    <div class="store-body">
+
+      <h4>POS performance · April 2026</h4>
+      <table>
+        <thead><tr><th>Metric</th><th class="num">April 2026</th><th class="num">March 2026</th><th class="num">Δ</th></tr></thead>
+        <tbody>
+          <tr><td>Units Sold</td><td class="num">11,208</td><td class="num">11,061</td><td class="num"><span class="pill up">+1.3%</span></td></tr>
+          <tr><td>Gross Sales</td><td class="num">$190,751</td><td class="num">$182,150</td><td class="num"><span class="pill up">+4.7%</span></td></tr>
+          <tr><td>Net Sales</td><td class="num">$155,957</td><td class="num">$152,870</td><td class="num"><span class="pill up">+2.0%</span></td></tr>
+          <tr><td>Discounts</td><td class="num">$34,553</td><td class="num">$29,168</td><td class="num"><span class="pill attn">+18.5%</span></td></tr>
+          <tr><td>Gross Margin</td><td class="num">46.1%</td><td class="num">47.4%</td><td class="num"><span class="pill dn">−1.3 pts</span></td></tr>
+          <tr><td>Avg unit sale price</td><td class="num">$13.91</td><td class="num">$13.82</td><td class="num"><span class="pill up">+$0.09</span></td></tr>
+          <tr><td>Daily Avg Cost of Inventory on Hand</td><td class="num">$90,331</td><td class="num">$77,946</td><td class="num"><span class="pill attn">+15.9%</span></td></tr>
+        </tbody>
+      </table>
+
+      <h4>Local Falcon · May 1, 2026 (11×11 grid · 1 mi radius)</h4>
+      <p><strong>Oakland is the SoLV leader of the chain.</strong> All five core keywords sit at #1 or #2 average rank with 89%+ SoLV. This is the opposite competitive shape of Sacramento and WeHo — there is no obvious ranking gap to close.</p>
+
+      <table>
+        <thead><tr><th>Keyword</th><th class="num">Rank (ARP)</th><th class="num">SoLV</th><th class="num">Δ SoLV</th><th>Read</th></tr></thead>
+        <tbody>
+          <tr><td>weed dispensary</td><td class="num">1.00</td><td class="num">100.00%</td><td class="num"><span class="pill flat">↔</span></td><td><strong>Total dominance — defended</strong></td></tr>
+          <tr><td>weed</td><td class="num">1.00</td><td class="num">100.00%</td><td class="num"><span class="pill up">+2.48</span></td><td><strong>Total dominance — gained</strong></td></tr>
+          <tr><td>weed near me</td><td class="num">1.00</td><td class="num">99.17%</td><td class="num"><span class="pill dn">−0.83</span></td><td>Total dominance — slight dip</td></tr>
+          <tr><td>dispensary</td><td class="num">2.04</td><td class="num">95.04%</td><td class="num"><span class="pill flat">↔</span></td><td>Dominant — stable</td></tr>
+          <tr><td>dispensary near me</td><td class="num">2.15</td><td class="num">89.26%</td><td class="num"><span class="pill flat">↔</span></td><td>Dominant — improving rank</td></tr>
+        </tbody>
+      </table>
+
+      <div class="card proof">
+        <div class="label">Strategic implication</div>
+        <p style="margin:0;">Oakland is in <strong>defense mode</strong>, not offense mode. The Joyleaf-proven structural-fix playbook doesn't apply here because there's no structural gap to close. The leverage now is converting that visibility to revenue: GBP description rewrite (the three ownership identifiers — Black-owned + women-owned + Latino-owned — are set as attributes but absent from description copy, which is a clear CTR opportunity), photo program (biggest single profile-strength unlock), and resolving the stale "Offers delivery" attribute that's actively driving 3★ reviews. <strong>KANNA Weed Dispensary Oakland's +95.87 SoLV swing on "weed near me" is the largest single competitor movement in any of our scans</strong> — worth watching closely.</p>
+      </div>
+
+      <div class="card alert">
+        <strong>Two non-obvious findings flagged from POS data:</strong>
+        <ol style="margin:8px 0 0;padding-left:22px;">
+          <li><strong>Treez COGS anomaly on Dec 15–16, 2025</strong> — both days show negative gross margin (−149.7% and −96.6%) which is operationally impossible. Almost certainly a Treez data-entry / cost-attribution error that's dragging Oakland's cumulative margin reading. <strong>Worth raising with Kevin to confirm + correct.</strong> Real Oakland margin is likely 2–3 points higher than the 43.6% cumulative shows.</li>
+          <li>A 3★ Google review at Oakland explicitly cites "no delivery" as friction — direct evidence the stale "Offers delivery" GBP attribute is producing real CX harm. POS data confirms delivery decommissioned Aug 2024. Toggle now queued for owner approval.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 3 — 4/20 deep dive -->
+<section>
+  <div class="section-header"><span class="section-num">SECTION 03</span></div>
+  <h2>The 4/20 chain story</h2>
+  <p class="lede">April 20, 2026 was the biggest single sales day at WeHo and Oakland (all-time peak at WeHo) and the #1 April day at Sacramento. The same Monday holiday produced three completely different margin outcomes.</p>
+
+  <table>
+    <thead>
+      <tr><th>Store</th><th class="num">Net Sales</th><th class="num">Margin</th><th class="num">Vs daily avg</th><th class="num">Margin vs Apr avg</th><th>Read</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Sacramento</td><td class="num">$13,373</td><td class="num">34.2%</td><td class="num">+67%</td><td class="num"><span class="pill dn">−9.3 pts</span></td><td>Deepest promotion · worst margin</td></tr>
+      <tr><td>WeHo (all-time peak)</td><td class="num">$7,068</td><td class="num"><strong>47.2%</strong></td><td class="num">+146%</td><td class="num"><span class="pill attn">−7.2 pts</span></td><td><strong>Margin held</strong> · disciplined promotion</td></tr>
+      <tr><td>Oakland</td><td class="num">$9,902</td><td class="num">41.2%</td><td class="num">+91%</td><td class="num"><span class="pill attn">−4.9 pts</span></td><td>Pre-holiday Sunday took most of the discount</td></tr>
+    </tbody>
+  </table>
+
+  <div class="card gold">
+    <strong>The 4/20 finding in dollars:</strong> Sacramento's 4/20 net sales × the 9.3-point margin gap = <strong>~$1,243 of gross profit "left on the table"</strong> relative to its monthly margin baseline. A WeHo-style 4/20 playbook applied at Sacramento would have added ~$1,000+ of gross profit on the single biggest day of April. <strong>Target margin floor for 4/20/2027 across all stores: 45%.</strong> Replicate WeHo's discipline; capture Sacramento's volume.
+  </div>
+
+  <p>Also worth noting: <strong>WeHo's tighter April margin range (~11 pts)</strong> across all 30 daily readings vs. Sacramento and Oakland's 16–17 pt ranges. WeHo's pricing/discount discipline shows up at the daily level too, not just on 4/20 — it's an operational pattern, not a one-day choice.</p>
+</section>
+
+<!-- Section 4 — Cross-store -->
+<section>
+  <div class="section-header"><span class="section-num">SECTION 04</span></div>
+  <h2>Cross-store patterns</h2>
+
+  <h3>The three economic models</h3>
+  <table>
+    <thead><tr><th>Dimension</th><th>Sacramento</th><th>WeHo</th><th>Oakland</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Role</strong></td><td>Acquisition machine + value volume</td><td>Premium-positioning curated store</td><td>Mid-volume neighborhood store</td></tr>
+      <tr><td>Daily tx (14-mo)</td><td>218</td><td>73</td><td>166</td></tr>
+      <tr><td>New customer rate</td><td>7.27%</td><td><strong>19.09%</strong></td><td>9.83%</td></tr>
+      <tr><td>Cumulative margin</td><td>43.8%</td><td><strong>52.0%</strong></td><td>43.6%</td></tr>
+      <tr><td>Cumulative discount</td><td>19.4%</td><td><strong>13.4%</strong></td><td>18.7%</td></tr>
+      <tr><td>Avg unit sale price (Apr)</td><td>$13.94</td><td><strong>$19.77</strong></td><td>$13.91</td></tr>
+      <tr><td>Heritage anchor</td><td>Abatin Wellness · 2011</td><td>LAPCG · 2004</td><td>Phytologie · 2014</td></tr>
+      <tr><td>SoLV mode (Local Falcon)</td><td>Joyleaf-pattern · structural fix opportunity</td><td>Joyleaf-pattern · structural fix opportunity</td><td>Defense · convert SoLV to revenue</td></tr>
+    </tbody>
+  </table>
+
+  <h3>The April easing-up pattern — uneven across stores</h3>
+  <div class="two-col">
+    <div class="card green">
+      <h4 style="margin-top:0;">WeHo held discipline across April</h4>
+      <p style="margin:0;">Pulled discount BACK 9.8%, held margin flat at 54.4%, drew down inventory 7.8%, grew AOV 2.9%. The only store of the three that improved unit economics. Premium positioning was the playbook — and it worked.</p>
+    </div>
+    <div class="card alert">
+      <h4 style="margin-top:0;">Sacramento + Oakland traded margin for volume</h4>
+      <p style="margin:0;">Sacramento discount $ up 30.6% to drive +13.3% units; margin gave up 2.3 pts. Oakland discount $ up 18.5% to drive +1.3% units; margin gave up 1.3 pts. Inventory built up 15–20% at both stores. <strong>Combined ~$33K of extra inventory cost on hand at end of April.</strong> If May doesn't see a planned drawdown, working capital is the next question.</p>
+    </div>
+  </div>
+
+  <h3>The trade in dollars</h3>
+  <p>Chain-wide April: <strong>~$23,500 in incremental net sales bought with ~$19,300 in incremental discounts</strong>. That's a 1.2:1 ratio. Volume growth at margin cost is a marginal trade — not a great one. The May question for the team: <strong>at Sacramento and Oakland, what happens to volume if we pull back to WeHo-style discount discipline?</strong> If volume holds, the April push was unnecessary margin spend.</p>
+</section>
+
+<!-- Section 5 — Looking ahead -->
+<section>
+  <div class="section-header"><span class="section-num">SECTION 05</span></div>
+  <h2>Looking ahead — what May looks like</h2>
+  <p class="lede">May strategy + execution playbook already shipped on May 7. The April data validates the per-location framing — three economic models, three different playbooks, one integrated reporting view.</p>
+
+  <h3>What's in flight</h3>
+  <ol>
+    <li><strong>Heritage-led GBP descriptions</strong> across all 3 stores — surfacing Abatin Wellness 2011 / LAPCG 2004 / Phytologie 2014 plus the premium brand carry (Stiiizy, Wyld, Camino, Sherbinskis, Raw Garden, Khalifa Kush, Mary's Medicinals).</li>
+    <li><strong>Joyleaf-pattern website fixes</strong> at Sacramento and WeHo — homepage + per-location H1, meta title, JSON-LD schema with alternateName field. Closes the structural "dispensary"/"cannabis" plain-term gap that the GBP name doesn't tokenize for.</li>
+    <li><strong>3 Posts per week per location</strong> chain-wide GBP rhythm. WeHo gets a multi-Post First Saturday lead-up as part of the rhythm.</li>
+    <li><strong>Service-area cleanup</strong> at Oakland (8 cities) and Sacramento (15 cities) — sized for delivery zones during the historical delivery era; revisit now that delivery is decommissioned chain-wide.</li>
+    <li><strong>Photo program</strong> — the single biggest GBP profile-strength unlock. Oakland needs the most coverage; WeHo missing exterior curb shots; Sacramento needs more interior. Asks already with you.</li>
+    <li><strong>Oakland review-velocity push</strong> — first-time-visitor focus via in-store QR + bag-stuffer cards. Oakland has the largest room for review-velocity lift in the chain.</li>
+    <li><strong>Duplicate WeHo listing merger</strong> in flight via Google.</li>
+    <li><strong>SAB-spam reports</strong> filed for ~12 "House Clearance Service" listings in WeHo grid.</li>
+  </ol>
+
+  <h3>The First Saturday cadence question (separate analysis)</h3>
+  <p>The question of whether to keep First Saturday monthly, move it quarterly, or move it semi-annual is being addressed in a separate dedicated document. The First Saturday analysis is the cleanest test case we have for "is a promotional cadence still earning its keep?" — 12 events of cross-store data make it a defensible decision rather than an instinct call. See companion deliverable.</p>
+
+  <h3>What we still need from you</h3>
+  <ol>
+    <li><strong>Confirmation on April's discount push at Sacramento (+30.6% discount $) and Oakland (+18.5% discount $)</strong> when WeHo went the other direction. Was this an intentional inventory-clearance push at the volume stores? A new promotional mechanic? Loyalty-tier creep? Each possibility implies a different May action.</li>
+    <li><strong>Photos</strong> per the May 7 ask — Oakland exterior + interior, WeHo curb-view, Sacramento interior + exterior angles.</li>
+    <li><strong>Sign-off on the heritage-led GBP description drafts</strong> — going to you over the next few days.</li>
+    <li><strong>Confirmation of any planned May inventory drawdown</strong> at Sacramento and Oakland to clear the +$33K combined build-up.</li>
+  </ol>
+</section>
+
+<!-- Footer -->
+<section style="text-align:center; color:var(--gray-500); font-size:13px; margin-bottom:0;">
+  <hr style="border:none; border-top:1px solid var(--gray-300); margin: 40px 0 24px;" />
+  <p>4Twenty Market × Dispenza · April 2026 Local SEO Performance Review · Prepared 2026-05-14 · Darrell Clay, Account Manager</p>
+  <p>Sources: Treez POS Apr/Mar 2026 · GBP Performance dashboards (3 stores) · Local Falcon scans 2026-05-01 (3 stores) · CA DCC license records · POS+GBP 29-month baseline</p>
+</section>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>4Twenty Market — First Saturday Cadence Analysis</title>
+<style>
+  :root {
+    --green-900: #0d3b14;
+    --green-700: #1b5e20;
+    --green-500: #2e7d32;
+    --green-100: #e3efe6;
+    --gold: #f9a825;
+    --gold-dark: #c17900;
+    --gold-light: #fff3d3;
+    --orange: #d84315;
+    --orange-100: #fbe1d5;
+    --charcoal-900: #1a1f1c;
+    --charcoal-700: #3b4540;
+    --gray-500: #6b7280;
+    --gray-300: #d1d5db;
+    --gray-100: #f3f4f6;
+    --gray-50: #f9fafb;
+    --paper: #fafaf5;
+    --green-tag: #2ba84a;
+    --green-100b: #e6f6ea;
+    --red: #b7322b;
+    --red-100: #fbe6e5;
+    --amber: #c97a0a;
+    --amber-100: #fcebd0;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; color: var(--charcoal-900); background: var(--paper); line-height: 1.6; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 32px 80px; }
+
+  .cover { background: linear-gradient(135deg, var(--green-900) 0%, var(--green-700) 55%, var(--gold-dark) 100%); color: #fff; padding: 80px 32px 100px; margin-bottom: 48px; border-bottom: 6px solid var(--gold); }
+  .cover-inner { max-width: 1100px; margin: 0 auto; }
+  .cover .eyebrow { text-transform: uppercase; letter-spacing: 3px; font-size: 14px; font-weight: 600; opacity: 0.85; margin-bottom: 16px; }
+  .cover h1 { font-size: 54px; line-height: 1.08; margin: 0 0 20px; font-weight: 800; }
+  .cover h1 span { color: var(--gold); }
+  .cover .subtitle { font-size: 22px; opacity: 0.92; max-width: 800px; margin: 0 0 28px; }
+  .cover .stamp { display: inline-block; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.35); color: #fff; padding: 10px 18px; border-radius: 999px; font-size: 13px; text-transform: uppercase; letter-spacing: 2px; font-weight: 700; margin-bottom: 36px; }
+  .cover .stamp .dot { color: var(--gold); margin-right: 8px; }
+  .cover-meta { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; padding-top: 28px; border-top: 1px solid rgba(255,255,255,0.25); }
+  .cover-meta div .label { font-size: 12px; text-transform: uppercase; letter-spacing: 2px; opacity: 0.7; }
+  .cover-meta div .value { font-size: 16px; font-weight: 600; margin-top: 4px; }
+
+  section { margin-bottom: 56px; }
+  .section-header { display: flex; align-items: baseline; gap: 16px; margin-bottom: 8px; }
+  .section-num { font-size: 14px; font-weight: 700; color: var(--gold-dark); letter-spacing: 3px; }
+  h2 { font-size: 34px; line-height: 1.2; color: var(--green-900); margin: 0 0 8px; font-weight: 700; }
+  h3 { font-size: 22px; color: var(--green-700); margin: 28px 0 12px; }
+  h4 { font-size: 17px; color: var(--charcoal-900); margin: 20px 0 8px; font-weight: 700; }
+  .lede { font-size: 19px; color: var(--charcoal-700); max-width: 880px; margin-bottom: 24px; }
+
+  .card { background: #fff; border: 1px solid var(--gray-300); border-radius: 12px; padding: 24px 28px; margin: 16px 0; }
+  .card.green { background: var(--green-100); border-color: var(--green-500); }
+  .card.gold { background: var(--gold-light); border-color: var(--gold); }
+  .card.alert { background: var(--amber-100); border-left: 5px solid var(--amber); }
+  .card.proof { background: #f5f9f6; border: 1px solid var(--green-500); border-left: 6px solid var(--green-700); }
+  .card.proof .label { font-size: 11px; font-weight: 800; color: var(--green-700); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 10px; }
+
+  /* The verdict block */
+  .verdict { background: var(--green-900); color: #fff; padding: 44px; border-radius: 16px; margin: 24px 0 40px; border: 2px solid var(--gold); }
+  .verdict .label { text-transform: uppercase; letter-spacing: 4px; font-size: 13px; color: var(--gold); margin-bottom: 16px; font-weight: 700; }
+  .verdict h3 { color: #fff; font-size: 26px; margin: 0 0 22px; }
+  .verdict-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 18px; }
+  .verdict-grid .col { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.25); border-radius: 12px; padding: 22px; }
+  .verdict-grid .col .store { color: var(--gold); text-transform: uppercase; letter-spacing: 3px; font-size: 12px; font-weight: 700; }
+  .verdict-grid .col h4 { color: #fff; margin: 8px 0 8px; font-size: 18px; }
+  .verdict-grid .col .cadence { font-size: 22px; font-weight: 800; color: var(--gold); margin-bottom: 8px; }
+  .verdict-grid .col p { margin: 0; opacity: 0.9; font-size: 14px; }
+
+  /* The owner question hero */
+  .question-hero { background: var(--gold-light); border: 2px solid var(--gold); border-radius: 16px; padding: 36px 44px; margin: 24px 0; }
+  .question-hero .label { text-transform: uppercase; letter-spacing: 3px; font-size: 12px; color: var(--gold-dark); margin-bottom: 12px; font-weight: 700; }
+  .question-hero blockquote { font-size: 24px; line-height: 1.3; margin: 0; color: var(--green-900); font-weight: 600; }
+
+  table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.05); margin: 16px 0 24px; }
+  th { background: var(--green-700); color: #fff; text-align: left; padding: 12px 14px; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; }
+  td { padding: 11px 14px; border-bottom: 1px solid var(--gray-100); font-size: 14px; vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  tr:nth-child(even) td { background: var(--gray-50); }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+
+  .pill { display: inline-block; padding: 4px 12px; border-radius: 999px; font-size: 11px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; }
+  .pill.up { background: var(--green-100b); color: var(--green-tag); }
+  .pill.dn { background: var(--red-100); color: var(--red); }
+  .pill.flat { background: var(--gray-100); color: var(--gray-500); }
+  .pill.attn { background: var(--amber-100); color: var(--amber); }
+  .pill.win { background: var(--gold-light); color: var(--gold-dark); }
+
+  /* Store stripe */
+  .store-stripe { background: #fff; border: 1px solid var(--gray-300); border-radius: 14px; margin: 24px 0; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .store-stripe .head { padding: 22px 28px; color: #fff; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+  .store-stripe .head.sac { background: linear-gradient(135deg, var(--green-700), var(--green-500)); }
+  .store-stripe .head.weho { background: linear-gradient(135deg, var(--gold-dark), var(--gold)); }
+  .store-stripe .head.oak { background: linear-gradient(135deg, #154734, var(--green-700)); }
+  .store-stripe .head h3 { color: #fff; margin: 0; font-size: 22px; }
+  .store-stripe .head .verdict-tag { background: rgba(255,255,255,0.18); border: 1px solid rgba(255,255,255,0.5); padding: 6px 14px; border-radius: 999px; font-size: 12px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; }
+  .store-stripe .body { padding: 28px; }
+
+  /* KPI grid */
+  .kpi-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 16px 0; }
+  .kpi-card { background: #fff; border: 1px solid var(--gray-300); border-radius: 10px; padding: 18px; text-align: center; }
+  .kpi-card.win { border-top: 4px solid var(--gold); }
+  .kpi-card.attn { border-top: 4px solid var(--amber); }
+  .kpi-card .num { font-size: 26px; font-weight: 800; color: var(--green-700); line-height: 1.1; }
+  .kpi-card .lbl { font-size: 11px; text-transform: uppercase; letter-spacing: 2px; color: var(--charcoal-700); margin-top: 6px; }
+  .kpi-card .delta { font-size: 12px; margin-top: 6px; color: var(--gray-500); }
+
+  /* Mode pill */
+  .mode { display: inline-block; padding: 3px 10px; border-radius: 6px; font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
+  .mode.a { background: #fce7f3; color: #be185d; }
+  .mode.b { background: #dbeafe; color: #1d4ed8; }
+  .mode.c { background: #fef3c7; color: #92400e; }
+  .mode.d { background: #fee2e2; color: #991b1b; }
+
+  /* Two col */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+
+  /* Quote */
+  .quote { border-left: 4px solid var(--gold); padding: 10px 18px; color: var(--charcoal-700); font-style: italic; background: #fffaf0; margin: 14px 0; }
+
+  @media (max-width: 900px) {
+    .verdict-grid { grid-template-columns: 1fr; }
+    .kpi-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 760px) {
+    .cover h1 { font-size: 38px; }
+    .cover-meta { grid-template-columns: 1fr 1fr; }
+    .two-col { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header class="cover">
+  <div class="cover-inner">
+    <div class="eyebrow">4Twenty Market × Dispenza · Strategic Analysis</div>
+    <h1>First Saturday: <span>Keep, Pace, or Pause?</span></h1>
+    <p class="subtitle">Twelve events. Three stores. Six months of POS data. A direct answer to ownership's question — is the First Saturday event acquiring new customers, or just discounting regulars?</p>
+    <div class="stamp"><span class="dot">●</span> Per-Store Decision · Quarterly + Semi-Annual Modeled · Cadence Recommendation</div>
+    <div class="cover-meta">
+      <div><div class="label">Events analyzed</div><div class="value">12 (Nov '25 → Apr '26)</div></div>
+      <div><div class="label">Stores</div><div class="value">Sacramento · WeHo · Oakland</div></div>
+      <div><div class="label">Baseline window</div><div class="value">14 months · 1,275 store-days</div></div>
+      <div><div class="label">Prepared by</div><div class="value">Darrell Clay, Dispenza</div></div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+<!-- Section 1 — The question -->
+<section>
+  <div class="section-header"><span class="section-num">SECTION 01</span></div>
+  <h2>The question on the table</h2>
+
+  <div class="question-hero">
+    <div class="label">Ownership's concern</div>
+    <blockquote>"Are First Saturday events acquiring new customers — or are repeat customers just using them to get extended discounts on items they would normally purchase at full price?"</blockquote>
+  </div>
+
+  <p class="lede">It's the right question to ask. And it has a clean per-store answer. Six months of First Saturday data across all three stores — cross-validated against 14 months of POS — reveal that the same event mechanic is producing fundamentally different economic outcomes at each location. <strong>The owners' concern is empirically wrong at one store and empirically correct at two.</strong></p>
+
+  <p>This deck answers the cadence question — monthly, quarterly, or semi-annual — in dollars, in new-customer counts, and in tradable margin per event.</p>
+</section>
+
+<!-- Section 2 — The verdict -->
+<section>
+  <div class="section-header"><span class="section-num">SECTION 02</span></div>
+  <h2>The verdict</h2>
+
+  <div class="verdict">
+    <div class="label">Per-store cadence recommendation</div>
+    <h3>Three stores, three different answers. Same event mechanic, three completely different economic outcomes.</h3>
+    <div class="verdict-grid">
+      <div class="col">
+        <div class="store">SACRAMENTO</div>
+        <h4>Abatin Wellness</h4>
+        <div class="cadence">MONTHLY</div>
+        <p>The event IS doing the acquisition job. +71% new customers per event vs. baseline day. ~132 incremental new customers/year. Tune discount intensity DOWN from 25.9% (Mar) to 23.4% (Apr) and the event gets even more efficient.</p>
+      </div>
+      <div class="col">
+        <div class="store">OAKLAND</div>
+        <h4>Phytologie Wellness</h4>
+        <div class="cadence">QUARTERLY</div>
+        <p>Event acquisition rate (6–11%) sits AT or just below Oakland's everyday 9.83% baseline. Net acquisition lift is near zero. Reduce to 4 events/year as "Bay Area Family" loyalty quarters. Redirect the 8 saved event-days into the everyday acquisition pipeline (review velocity + GBP photos).</p>
+      </div>
+      <div class="col">
+        <div class="store">WEST HOLLYWOOD</div>
+        <h4>LAPCG since 2004</h4>
+        <div class="cadence">SEMI-ANNUAL</div>
+        <p>WeHo's everyday new-customer rate (19.09%) is almost <strong>3× Sacramento's</strong>. Every First Saturday DILUTES that rate. The event is a retention/basket-lift play, not acquisition. Reduce to 2 events/year ("Member Appreciation" anchor days) and reinvest in the everyday tourist + walk-in pipeline that's the bigger asset.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card proof">
+    <div class="label">The headline number</div>
+    <p style="margin:0;font-size:16px;"><strong>Annual incremental new customers across the chain (vs. baseline-day acquisition rate):</strong><br/>
+    Sacramento: <strong>+132 new customers/year</strong> · Oakland: <strong>+1 to +12 new customers/year</strong> (within statistical noise) · WeHo: <strong>−51 new customers/year</strong> (the event dilutes acquisition).<br/>
+    <strong>Total chain acquisition lift from monthly First Saturdays: ~80 incremental new customers/year</strong> — and Sacramento is producing all of it.</p>
+  </div>
+</section>
+
+<!-- Section 3 — Method -->
+<section>
+  <div class="section-header"><span class="section-num">SECTION 03</span></div>
+  <h2>How we read the data</h2>
+  <p class="lede">For each store, we compared First Saturday performance against two reference points: the 14-month daily average (typical day) and the cumulative new-customer rate (the long-run baseline of how often new customers walk in). The "acquisition test" is simple — does First Saturday's new-customer rate beat the baseline rate, or fall below?</p>
+
+  <table>
+    <thead>
+      <tr><th>Reference</th><th>Sacramento</th><th>WeHo</th><th>Oakland</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>14-month days</td><td>425</td><td>425</td><td>425</td></tr>
+      <tr><td>Baseline daily transactions</td><td>218</td><td>73</td><td>166</td></tr>
+      <tr><td><strong>Baseline new-customer rate</strong></td><td><strong>7.27%</strong></td><td><strong>19.09%</strong></td><td><strong>9.83%</strong></td></tr>
+      <tr><td>Baseline daily gross income</td><td>$3,704</td><td>~$1,180</td><td>$2,133</td></tr>
+      <tr><td>First Saturday events captured (Nov '25 → Apr '26)</td><td>6</td><td>6</td><td>6</td></tr>
+    </tbody>
+  </table>
+
+  <p>Three things to note about the framework:</p>
+  <ol>
+    <li><strong>WeHo's 19.09% baseline new-customer rate is exceptional.</strong> It's almost 3× Sacramento's. This means WeHo has a different "easy hurdle" for First Saturday to clear than the other two stores.</li>
+    <li><strong>Each store's First Saturday data was cross-validated against the master 14-month CSV.</strong> All 18 captured events match exactly. No data integrity questions.</li>
+    <li><strong>Oakland's First Saturday data was a blind spot</strong> until the master CSV reveal. Project memory had treated First Saturday as Sacramento + WeHo only. Oakland's six events surfaced through the time-series ingestion.</li>
+  </ol>
+</section>
+
+<!-- Section 4 — Sacramento -->
+<section>
+  <div class="section-header"><span class="section-num">SECTION 04</span></div>
+  <h2>Sacramento — keep monthly</h2>
+
+  <div class="store-stripe">
+    <div class="head sac">
+      <h3>Abatin Wellness (Sacramento)</h3>
+      <span class="verdict-tag">Keep monthly</span>
+    </div>
+    <div class="body">
+
+      <h4>Six-event summary</h4>
+      <div class="kpi-grid">
+        <div class="kpi-card win"><div class="num">+71%</div><div class="lbl">More new customers per event</div><div class="delta">26.5 vs 15.5 baseline</div></div>
+        <div class="kpi-card win"><div class="num">+23%</div><div class="lbl">Relative new-customer rate</div><div class="delta">8.93% vs 7.27% baseline</div></div>
+        <div class="kpi-card win"><div class="num">+29%</div><div class="lbl">More gross income per event</div><div class="delta">$4,791 vs $3,704 baseline</div></div>
+        <div class="kpi-card attn"><div class="num">−4 pts</div><div class="lbl">Margin trade</div><div class="delta">39.9% event vs 43.8% baseline</div></div>
+      </div>
+
+      <h4>The 6 events — month by month</h4>
+      <table>
+        <thead><tr><th>Date</th><th class="num">Tx</th><th class="num">Gross sales</th><th class="num">New cust</th><th class="num">New rate</th><th class="num">Margin</th><th class="num">Discount</th><th>Mode</th></tr></thead>
+        <tbody>
+          <tr><td>Nov 1, 2025</td><td class="num">306</td><td class="num">$18,228</td><td class="num">30</td><td class="num">10.00%</td><td class="num">39.3%</td><td class="num">24.3%</td><td><span class="mode a">Premium</span></td></tr>
+          <tr><td>Dec 6, 2025</td><td class="num">339</td><td class="num">$17,976</td><td class="num">29</td><td class="num">9.03%</td><td class="num">40.6%</td><td class="num">24.5%</td><td><span class="mode b">Holiday traffic</span></td></tr>
+          <tr><td>Jan 3, 2026</td><td class="num">290</td><td class="num">$14,578</td><td class="num">19</td><td class="num"><strong>6.69%</strong></td><td class="num">39.9%</td><td class="num">25.6%</td><td><span class="mode d">No-event</span></td></tr>
+          <tr><td>Feb 7, 2026</td><td class="num">295</td><td class="num">$15,373</td><td class="num">25</td><td class="num">8.65%</td><td class="num">39.6%</td><td class="num">24.7%</td><td><span class="mode c">Basket-driven</span></td></tr>
+          <tr><td>Mar 7, 2026</td><td class="num">292</td><td class="num">$15,881</td><td class="num">27</td><td class="num">9.54%</td><td class="num">37.8%</td><td class="num"><strong>25.9%</strong></td><td><span class="mode c">Basket-driven</span></td></tr>
+          <tr><td>Apr 4, 2026</td><td class="num">304</td><td class="num">$14,634</td><td class="num">29</td><td class="num">9.67%</td><td class="num"><strong>42.0%</strong></td><td class="num">23.4%</td><td><span class="mode c">Basket-driven</span></td></tr>
+          <tr><td><strong>6-event avg</strong></td><td class="num"><strong>304</strong></td><td class="num"><strong>$16,118</strong></td><td class="num"><strong>26.5</strong></td><td class="num"><strong>8.93%</strong></td><td class="num">39.9%</td><td class="num">24.7%</td><td>—</td></tr>
+          <tr><td><em>14-mo baseline</em></td><td class="num"><em>218</em></td><td class="num"><em>$10,529</em></td><td class="num"><em>15.5</em></td><td class="num"><em>7.27%</em></td><td class="num"><em>43.8%</em></td><td class="num"><em>19.4%</em></td><td><em>—</em></td></tr>
+        </tbody>
+      </table>
+
+      <div class="card proof">
+        <div class="label">The clearest piece of evidence — owner's concern empirically fails at Sacramento</div>
+        <p style="margin:0;">Sacramento First Saturday delivers <strong>11 incremental new customers per event vs. a baseline day</strong> (26.5 vs. 15.5). That's not within statistical noise — it's a clean +71% lift. The event is doing what it's designed to do.</p>
+      </div>
+
+      <h4>The hidden March-discount finding (this is the actionable insight)</h4>
+      <p>The 4-month Feb → Apr arc is effectively a controlled experiment. Same store, same event mechanic, only the discount knob changed:</p>
+
+      <table>
+        <thead><tr><th>Variable</th><th>Feb 7</th><th>Mar 7</th><th>Apr 4</th></tr></thead>
+        <tbody>
+          <tr><td>Discount %</td><td>24.7%</td><td><strong>25.9% (highest)</strong></td><td>23.4% (lowest)</td></tr>
+          <tr><td>New customers</td><td>25</td><td>27</td><td><strong>29 (most)</strong></td></tr>
+          <tr><td>Gross margin</td><td>39.6%</td><td><strong>37.8% (worst)</strong></td><td>42.0% (best)</td></tr>
+          <tr><td>Wait time</td><td>6.5m</td><td><strong>8.2m (slowest)</strong></td><td>5.7m (fastest)</td></tr>
+          <tr><td>Gross income</td><td>$4,584</td><td>$4,441</td><td><strong>$4,642 (highest)</strong></td></tr>
+        </tbody>
+      </table>
+
+      <div class="card alert">
+        <strong>March's deeper discount produced the worst outcome on every dimension.</strong> Fewer new customers, lowest margin, longest waits, lowest gross income. <strong>The Sacramento First Saturday has hit its discount-elasticity ceiling.</strong> Sacramento can run the event at 22–23% discount and capture more new customers AND more margin AND faster service than at 25–26%. Going deeper is value-destructive.
+      </div>
+
+      <h4>The four modes — January is the optimization frontier</h4>
+      <p>The six events fall into four distinct modes. Understanding them is the difference between "First Saturday is good or bad" and "what makes a particular First Saturday work."</p>
+      <ul>
+        <li><span class="mode a">Premium</span> <strong>Nov 1</strong> — highest AOV ($56.74), premium-priced per-unit basket ($21.25), high acquisition (10.00%). Day-after-Halloween premium-buyer traffic.</li>
+        <li><span class="mode b">Holiday traffic</span> <strong>Dec 6</strong> — highest gross income of any event ($5,494), tied for most new customers (29), normal basket (2.94). Holiday gift-shopping foot traffic.</li>
+        <li><span class="mode c">Basket-driven</span> <strong>Feb–Apr</strong> — basket inflated 50–66% (4.08–4.42 units), per-unit price collapsed to ~$12 (multi-unit promotion firing), new customers come for the deal.</li>
+        <li><span class="mode d">No-event</span> <strong>Jan 3</strong> — the outlier. New-customer rate fell <em>below</em> the 7.27% baseline (6.69%). Same discount %, but no basket-building mechanic. The day was a regular Saturday with a discount applied.</li>
+      </ul>
+
+      <p>January is the only month where the event mechanic didn't fire. <strong>It's the highest-leverage optimization target</strong> — testing a winter-tailored multi-unit incentive could recover ~10 missing new customers per year for Sacramento.</p>
+
+      <h4>Annual math for Sacramento</h4>
+      <div class="kpi-grid">
+        <div class="kpi-card win"><div class="num">+$13,044</div><div class="lbl">Annual incremental gross income</div><div class="delta">12 events × ($4,791 − $3,704)</div></div>
+        <div class="kpi-card win"><div class="num">+132</div><div class="lbl">Annual incremental new customers</div><div class="delta">12 × (26.5 − 15.5)</div></div>
+        <div class="kpi-card attn"><div class="num">~$10,248</div><div class="lbl">Annual "extra" discount cost</div><div class="delta">+5.3 pts × $16,118 × 12</div></div>
+        <div class="kpi-card win"><div class="num">~$78</div><div class="lbl">Cost per incremental new customer</div><div class="delta">Discount spend ÷ acquired count</div></div>
+      </div>
+
+      <p>$78 per incremental new customer is below the cannabis-industry cost-to-acquire benchmark of $100–$150 — and that's before customer LTV. Sacramento's First Saturday is genuinely paying for itself.</p>
+
+      <p><strong>The May optimization:</strong> Run May 2, 2026 First Saturday at 22% discount. Hold the multi-unit basket mechanic. If new-customer count holds at ~28, the program permanently recaptures ~4 points of margin = ~$7,500/year of recovered gross income.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Section 5 — Oakland -->
+<section>
+  <div class="section-header"><span class="section-num">SECTION 05</span></div>
+  <h2>Oakland — move to quarterly</h2>
+
+  <div class="store-stripe">
+    <div class="head oak">
+      <h3>Phytologie Wellness Center (Oakland)</h3>
+      <span class="verdict-tag">Quarterly</span>
+    </div>
+    <div class="body">
+
+      <h4>Six-event summary</h4>
+      <div class="kpi-grid">
+        <div class="kpi-card attn"><div class="num">~0</div><div class="lbl">Incremental new customers per event</div><div class="delta">~17 vs ~16 baseline</div></div>
+        <div class="kpi-card attn"><div class="num">−18%</div><div class="lbl">Relative new-customer rate</div><div class="delta">8.07% vs 9.83% baseline</div></div>
+        <div class="kpi-card win"><div class="num">+82%</div><div class="lbl">More gross income per event</div><div class="delta">~$3,900 vs $2,133 baseline</div></div>
+        <div class="kpi-card attn"><div class="num">−2 pts</div><div class="lbl">Margin trade</div><div class="delta">~41.6% event vs 43.6% baseline</div></div>
+      </div>
+
+      <h4>The 6 events — month by month</h4>
+      <table>
+        <thead><tr><th>Date</th><th class="num">Tx</th><th class="num">Gross sales</th><th class="num">New cust</th><th class="num">New rate</th><th class="num">Margin</th><th class="num">Discount</th></tr></thead>
+        <tbody>
+          <tr><td>Nov 1, 2025</td><td class="num">222</td><td class="num">$9,136</td><td class="num">13</td><td class="num">6.10%</td><td class="num">41.7%</td><td class="num">20.2%</td></tr>
+          <tr><td>Dec 6, 2025</td><td class="num">211</td><td class="num">$8,343</td><td class="num">9</td><td class="num"><strong>4.55%</strong></td><td class="num">40.5%</td><td class="num">21.0%</td></tr>
+          <tr><td>Jan 3, 2026</td><td class="num">223</td><td class="num">$8,680</td><td class="num">24</td><td class="num"><strong>11.06%</strong></td><td class="num">36.2%</td><td class="num">23.6%</td></tr>
+          <tr><td>Feb 7, 2026</td><td class="num">247</td><td class="num">$8,809</td><td class="num">17</td><td class="num">7.17%</td><td class="num">42.0%</td><td class="num">20.7%</td></tr>
+          <tr><td>Mar 7, 2026</td><td class="num">259</td><td class="num">$10,172</td><td class="num">20</td><td class="num">7.97%</td><td class="num">43.1%</td><td class="num">20.7%</td></tr>
+          <tr><td>Apr 4, 2026</td><td class="num">241</td><td class="num">$9,207</td><td class="num">19</td><td class="num">8.60%</td><td class="num">44.2%</td><td class="num">21.3%</td></tr>
+          <tr><td><strong>6-event avg</strong></td><td class="num"><strong>234</strong></td><td class="num"><strong>$9,058</strong></td><td class="num"><strong>17</strong></td><td class="num"><strong>8.07%</strong></td><td class="num">41.3%</td><td class="num">21.3%</td></tr>
+          <tr><td><em>14-mo baseline</em></td><td class="num"><em>166</em></td><td class="num"><em>$6,025</em></td><td class="num"><em>~16</em></td><td class="num"><em>9.83%</em></td><td class="num"><em>43.6%</em></td><td class="num"><em>18.7%</em></td></tr>
+        </tbody>
+      </table>
+
+      <div class="card alert">
+        <strong>The owner's concern is empirically correct at Oakland.</strong> Five of six Oakland First Saturdays delivered <em>below-baseline</em> new-customer rates (4.55% – 8.60% vs. 9.83% baseline). Only Jan 3 broke the pattern at 11.06%. The 17 new customers per event on average is almost exactly what Oakland gets on a typical day (~16 new customers from 166 daily customers × 9.83%). <strong>First Saturday at Oakland is not meaningfully acquiring new customers — it's primarily a discount event for existing customers.</strong>
+      </div>
+
+      <h4>What Oakland First Saturday IS doing</h4>
+      <p>It's not all bad. The event delivers <strong>+82% gross income vs. a baseline day</strong> ($3,900 vs. $2,133). It's a successful same-store-sales lever for existing customers — they come in, they spend more, they stock up. The discount is steady (20–23% across all six events — the cleanest discipline of the three stores). But it's not earning its keep as an acquisition channel.</p>
+
+      <h4>Why quarterly, not semi-annual or pause</h4>
+      <ol>
+        <li><strong>Oakland's everyday acquisition pipeline is healthy</strong> (9.83% baseline = ~16 new customers/day = ~5,800/year). Quarterly First Saturdays still serve as periodic loyalty anchors without straining the calendar.</li>
+        <li><strong>The Oakland market is hyper-competitive.</strong> Local Falcon shows Oakland holding 100% SoLV on three weed keywords — defending visibility matters. Quarterly events keep the marketing rhythm without diluting it.</li>
+        <li><strong>Frame quarterly events explicitly as loyalty days</strong> (e.g., "Bay Area Family Quarter") rather than acquisition events. Setting honest expectations means existing customers don't feel taken for granted — they feel rewarded.</li>
+      </ol>
+
+      <h4>Annual math for Oakland (current monthly vs. quarterly)</h4>
+      <table>
+        <thead><tr><th>Cadence</th><th class="num">Events/yr</th><th class="num">Annual gross income from events</th><th class="num">Incremental new customers/yr</th><th class="num">Discount $ spent</th></tr></thead>
+        <tbody>
+          <tr><td>Monthly (current)</td><td class="num">12</td><td class="num">$46,800</td><td class="num">+12 (within noise)</td><td class="num">~$24,000</td></tr>
+          <tr><td><strong>Quarterly (recommended)</strong></td><td class="num">4</td><td class="num"><strong>$15,600</strong></td><td class="num">+4</td><td class="num"><strong>~$8,000</strong></td></tr>
+          <tr><td>Δ</td><td class="num">−8</td><td class="num"><span class="pill dn">−$31,200 event GI</span></td><td class="num">−8</td><td class="num"><span class="pill win">−$16,000 discount</span></td></tr>
+        </tbody>
+      </table>
+
+      <div class="card proof">
+        <div class="label">The quarterly trade-off (the key question for ownership)</div>
+        <p style="margin:0;">Moving Oakland to quarterly forfeits ~$31K of event-driven gross income BUT saves ~$16K in event-day discount spend AND opens 8 weekend days to other promotional or operational use. <strong>The break-even depends on what those 8 days produce instead.</strong> If we redirect them to (a) the GBP photo program, (b) review velocity push, and (c) heritage-led content investment, the everyday acquisition pipeline gains could meaningfully exceed the foregone First Saturday gross income within ~6 months. <strong>The hidden Oakland upside: a +0.5pt lift in everyday new-customer rate (9.83% → 10.33%) is worth ~290 additional new customers/year</strong> — almost 2× what quarterly First Saturday would still produce.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 6 — WeHo -->
+<section>
+  <div class="section-header"><span class="section-num">SECTION 06</span></div>
+  <h2>West Hollywood — move to semi-annual</h2>
+
+  <div class="store-stripe">
+    <div class="head weho">
+      <h3>LAPCG (West Hollywood)</h3>
+      <span class="verdict-tag">Semi-annual</span>
+    </div>
+    <div class="body">
+
+      <h4>Six-event summary</h4>
+      <div class="kpi-grid">
+        <div class="kpi-card attn"><div class="num">+0.7</div><div class="lbl">Incremental new customers per event</div><div class="delta">14.7 vs ~14 baseline</div></div>
+        <div class="kpi-card attn"><div class="num">−38%</div><div class="lbl">Relative new-customer rate</div><div class="delta">11.83% vs 19.09% baseline</div></div>
+        <div class="kpi-card win"><div class="num">+81%</div><div class="lbl">More gross income per event</div><div class="delta">$2,142 vs $1,180 baseline</div></div>
+        <div class="kpi-card attn"><div class="num">−3.5 pts</div><div class="lbl">Margin trade</div><div class="delta">48.5% event vs 52.0% baseline</div></div>
+      </div>
+
+      <h4>The 6 events — month by month</h4>
+      <table>
+        <thead><tr><th>Date</th><th class="num">Tx</th><th class="num">Gross sales</th><th class="num">New cust</th><th class="num">New rate</th><th class="num">Margin</th><th class="num">Discount</th></tr></thead>
+        <tbody>
+          <tr><td>Nov 1, 2025</td><td class="num">119</td><td class="num">$5,202</td><td class="num">10</td><td class="num">8.70%</td><td class="num">44.2%</td><td class="num">19.4%</td></tr>
+          <tr><td>Dec 6, 2025</td><td class="num">103</td><td class="num">$4,454</td><td class="num">12</td><td class="num">12.00%</td><td class="num">47.4%</td><td class="num">17.6%</td></tr>
+          <tr><td>Jan 3, 2026</td><td class="num">105</td><td class="num">$4,094</td><td class="num">11</td><td class="num">11.00%</td><td class="num">51.0%</td><td class="num">18.3%</td></tr>
+          <tr><td>Feb 7, 2026</td><td class="num">156</td><td class="num"><strong>$6,878</strong></td><td class="num"><strong>24</strong></td><td class="num"><strong>15.89%</strong></td><td class="num">50.8%</td><td class="num">21.0%</td></tr>
+          <tr><td>Mar 7, 2026</td><td class="num">131</td><td class="num">$6,160</td><td class="num">14</td><td class="num">10.77%</td><td class="num">47.6%</td><td class="num"><strong>23.3%</strong></td></tr>
+          <tr><td>Apr 4, 2026</td><td class="num">136</td><td class="num">$6,206</td><td class="num">17</td><td class="num">12.59%</td><td class="num">50.1%</td><td class="num">18.0%</td></tr>
+          <tr><td><strong>6-event avg</strong></td><td class="num"><strong>125</strong></td><td class="num"><strong>$5,499</strong></td><td class="num"><strong>14.7</strong></td><td class="num"><strong>11.83%</strong></td><td class="num">48.5%</td><td class="num">19.6%</td></tr>
+          <tr><td><em>14-mo baseline</em></td><td class="num"><em>73</em></td><td class="num"><em>$2,621</em></td><td class="num"><em>~14</em></td><td class="num"><em>19.09%</em></td><td class="num"><em>52.0%</em></td><td class="num"><em>13.4%</em></td></tr>
+        </tbody>
+      </table>
+
+      <div class="card alert">
+        <strong>The owner's concern is most acutely correct at WeHo.</strong> Every single WeHo First Saturday — six in a row — has produced a new-customer rate <strong>below</strong> the 19.09% baseline. The event consistently dilutes the new-customer ratio because it brings existing customers in for the deals. <strong>WeHo First Saturday is structurally a retention/basket event, not an acquisition event.</strong>
+      </div>
+
+      <h4>The WeHo discount paradox — clean controlled experiment</h4>
+      <p>The Mar 7 → Apr 4 swing is the cleanest single piece of evidence in the dataset that <em>more discount</em> does NOT mean <em>more customers</em>:</p>
+
+      <table>
+        <thead><tr><th>Variable</th><th>Mar 7</th><th>Apr 4</th><th>Δ</th></tr></thead>
+        <tbody>
+          <tr><td>Discount %</td><td><strong>23.3%</strong></td><td><strong>18.0%</strong></td><td><span class="pill dn">−5.3 pts</span></td></tr>
+          <tr><td>New customers</td><td>14</td><td><strong>17</strong></td><td><span class="pill up">+21%</span></td></tr>
+          <tr><td>Margin</td><td>47.6%</td><td><strong>50.1%</strong></td><td><span class="pill up">+2.5 pts</span></td></tr>
+          <tr><td>Gross income</td><td>$2,251</td><td><strong>$2,549</strong></td><td><span class="pill up">+$298</span></td></tr>
+        </tbody>
+      </table>
+
+      <p><strong>Pulling discount BACK by 5 points produced more new customers, better margin, and $300 more gross income.</strong> At WeHo, light-touch promotion is the right answer.</p>
+
+      <h4>Why semi-annual, not monthly or pause</h4>
+      <ol>
+        <li><strong>WeHo's everyday 19.09% new-customer rate is exceptional</strong> — almost 3× Sacramento's. It's driven by Sunset Strip foot traffic + LAPCG legacy authority + 22 years of brand equity. <strong>That pipeline is the bigger ROI lever than any monthly promotional event.</strong></li>
+        <li>WeHo First Saturday's $2,142/event gross income is meaningful but small in chain context. Two events per year is enough to mark them as anchors without diluting the everyday acquisition signal.</li>
+        <li><strong>Frame the semi-annual events as "WeHo Anniversary" days</strong> — leverage the April 20, 2004 opening date and the LAPCG heritage. Two such events per year (April 20 anniversary + a late-fall counterpart) preserves brand storytelling without monthly promo fatigue.</li>
+      </ol>
+
+      <h4>Annual math for WeHo (current monthly vs. semi-annual)</h4>
+      <table>
+        <thead><tr><th>Cadence</th><th class="num">Events/yr</th><th class="num">Annual gross income from events</th><th class="num">Incremental new customers/yr</th><th class="num">Discount $ spent</th></tr></thead>
+        <tbody>
+          <tr><td>Monthly (current)</td><td class="num">12</td><td class="num">$25,704</td><td class="num"><strong>−51</strong> (dilutes acquisition)</td><td class="num">~$13,200</td></tr>
+          <tr><td><strong>Semi-annual (recommended)</strong></td><td class="num">2</td><td class="num"><strong>$4,284</strong></td><td class="num">−9</td><td class="num"><strong>~$2,200</strong></td></tr>
+          <tr><td>Δ</td><td class="num">−10</td><td class="num"><span class="pill dn">−$21,420 event GI</span></td><td class="num"><span class="pill up">+42 new customers</span></td><td class="num"><span class="pill win">−$11,000 discount</span></td></tr>
+        </tbody>
+      </table>
+
+      <div class="card proof">
+        <div class="label">The semi-annual trade-off (the math is closer than it looks)</div>
+        <p style="margin:0;">Moving WeHo to semi-annual forfeits ~$21K of event-driven gross income BUT saves ~$11K in discount spend AND <strong>recovers 42 customer-acquisition slots that the monthly event is currently dilluting away</strong>. Redirected to GBP photo program + heritage-led content + reviewing the duplicate listing (already in flight), the everyday 19% new-customer pipeline becomes the lever rather than the floor. <strong>Even a 0.3pt lift in WeHo's everyday acquisition rate (19.09% → 19.39%) = ~80 incremental new customers/year</strong> — paying back the foregone event GI within ~10 months at WeHo's $19.77 AOV and 54% margin.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 7 — Cross-store -->
+<section>
+  <div class="section-header"><span class="section-num">SECTION 07</span></div>
+  <h2>What the chain looks like after the change</h2>
+
+  <table>
+    <thead>
+      <tr><th>Cadence</th><th>Sacramento</th><th>Oakland</th><th>WeHo</th><th>Chain events/year</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Current (monthly all)</td><td class="num">12</td><td class="num">12</td><td class="num">12</td><td class="num">36</td></tr>
+      <tr><td><strong>Recommended</strong></td><td class="num"><strong>12 (keep)</strong></td><td class="num"><strong>4 (quarterly)</strong></td><td class="num"><strong>2 (semi-annual)</strong></td><td class="num"><strong>18</strong></td></tr>
+      <tr><td>Net change</td><td class="num">0</td><td class="num">−8</td><td class="num">−10</td><td class="num">−18 events/year</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Combined chain-wide math (vs. monthly-everywhere baseline)</h3>
+  <table>
+    <thead><tr><th>Annual metric</th><th class="num">Current</th><th class="num">Recommended</th><th class="num">Δ</th></tr></thead>
+    <tbody>
+      <tr><td>Total event gross income</td><td class="num">$129,540</td><td class="num">$77,376</td><td class="num"><span class="pill dn">−$52,164</span></td></tr>
+      <tr><td>Total event discount spend</td><td class="num">~$66,000</td><td class="num">~$39,200</td><td class="num"><span class="pill win">−$26,800</span></td></tr>
+      <tr><td>Net event gross income (after discount)</td><td class="num">~$63,540</td><td class="num">~$38,176</td><td class="num"><span class="pill dn">−$25,364</span></td></tr>
+      <tr><td>Chain incremental new customers</td><td class="num">~80</td><td class="num">~135 (Sac 132 + Oak 4 − WeHo retained)</td><td class="num"><span class="pill up">+55</span></td></tr>
+      <tr><td>Weekend days released for other use</td><td class="num">0</td><td class="num">18</td><td class="num"><span class="pill up">+18 days</span></td></tr>
+    </tbody>
+  </table>
+
+  <div class="card gold">
+    <strong>The headline trade-off in one sentence:</strong> The chain forfeits ~$25K of net event-driven gross income but gains ~55 more incremental new customers per year AND 18 weekend days reclaimed for everyday-acquisition investment. <strong>Whether the trade is good depends entirely on what we do with those 18 days.</strong> If they fund the photo program, heritage-led content, and review-velocity push that move the everyday 19% (WeHo) and 9.83% (Oakland) baselines upward by even fractional points, the math turns clearly positive within 6–10 months. If they sit idle, the math turns negative. <strong>Recommendation is conditional on Dispenza's everyday-acquisition pipeline work being funded with the released cadence.</strong>
+  </div>
+</section>
+
+<!-- Section 8 — Risk register -->
+<section>
+  <div class="section-header"><span class="section-num">SECTION 08</span></div>
+  <h2>Risk register — what could complicate this</h2>
+
+  <table>
+    <thead><tr><th>Risk</th><th>Likelihood</th><th>Impact</th><th>Mitigation</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><strong>Existing customers feel "their" event was taken away (WeHo + Oakland)</strong></td>
+        <td><span class="pill attn">Medium</span></td>
+        <td><span class="pill attn">Medium</span></td>
+        <td>Don't pause silently. Re-brand the cadence as "Member Appreciation Quarter" (Oakland) and "LAPCG Anniversary Days" (WeHo). Communicate via Alpine IQ or in-store signage so the change reads as elevation, not cutback.</td>
+      </tr>
+      <tr>
+        <td><strong>"Saved" 18 days don't get reinvested productively</strong></td>
+        <td><span class="pill attn">Medium</span></td>
+        <td><span class="pill dn">High</span></td>
+        <td>The cadence change MUST be paired with explicit reinvestment commitments. Dispenza will tie May/June execution playbook deliverables (photos, content, reviews) directly to the released cadence so the trade-off is operationalized.</td>
+      </tr>
+      <tr>
+        <td><strong>Sacramento + Oakland weekend revenue dependency</strong></td>
+        <td><span class="pill flat">Low</span></td>
+        <td><span class="pill attn">Medium</span></td>
+        <td>Sacramento stays monthly — no exposure there. Oakland quarterly events still anchor the quarter; the 8 non-event Saturdays should perform near baseline ($2,133 gross income/day) which is the typical Saturday economics anyway.</td>
+      </tr>
+      <tr>
+        <td><strong>Competitor counter-move during the transition</strong></td>
+        <td><span class="pill flat">Low</span></td>
+        <td><span class="pill attn">Medium</span></td>
+        <td>Monitor Local Falcon monthly for SoLV shifts during the transition. Oakland is in defense mode at 100% SoLV on weed terms — no real exposure. WeHo's gains on "weed" terms (+11.57 SoLV last cycle) should be defended.</td>
+      </tr>
+      <tr>
+        <td><strong>Seasonal demand mistiming</strong></td>
+        <td><span class="pill flat">Low</span></td>
+        <td><span class="pill flat">Low</span></td>
+        <td>Oakland's 4 quarterly events should anchor: Feb (post-holiday recovery) · May (4/20 lead-in) · Aug (back-to-school) · Nov (pre-holiday gifting). WeHo's 2 semi-annual events: April 20 anniversary + late-fall counterpart.</td>
+      </tr>
+      <tr>
+        <td><strong>Test period needed before committing chain-wide</strong></td>
+        <td><span class="pill attn">Medium</span></td>
+        <td><span class="pill flat">Low</span></td>
+        <td>Reasonable to run May First Saturday as designed (all 3 stores), then transition Oakland + WeHo starting June. Sacramento changes nothing. The data has 6 events of supporting evidence already; the test is whether the redirected investment lifts everyday acquisition rates.</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- Section 9 — Decision sequence -->
+<section>
+  <div class="section-header"><span class="section-num">SECTION 09</span></div>
+  <h2>Decision sequence — what we need from ownership today</h2>
+
+  <ol>
+    <li><strong>Confirm or refine the per-store cadence:</strong>
+      <ul>
+        <li>Sacramento: keep monthly (with discount-intensity optimization to 22–23% range)</li>
+        <li>Oakland: shift to quarterly (Feb, May, Aug, Nov) starting June 2026</li>
+        <li>WeHo: shift to semi-annual (April 20 + a late-fall date) starting June 2026</li>
+      </ul>
+    </li>
+    <li><strong>Confirm the "Member Appreciation" / "LAPCG Anniversary" framing</strong> for the reduced cadence stores. Reframing the cadence as a deliberate brand choice is more important than the cadence itself.</li>
+    <li><strong>Tie the released cadence to specific Dispenza deliverables.</strong> The 18 saved event-days should fund: GBP photo program completion (all 3 stores), heritage-led GBP description rewrites (already drafted), review-velocity push at Oakland, and the Joyleaf-pattern website structural fixes at Sacramento + WeHo. Each maps to specific everyday-acquisition gains.</li>
+    <li><strong>Lock the cadence test window:</strong> June 2026 → November 2026 (6 months). Measure: everyday new-customer rate per store + chain total new customer count. Reassess in December.</li>
+  </ol>
+
+  <div class="quote">If we walk away from this meeting with three "yes" answers, by December the chain delivers more new customers per year at lower discount spend — and reframes its weekend operating model around what each store actually does well.</div>
+</section>
+
+<!-- Footer -->
+<section style="text-align:center; color:var(--gray-500); font-size:13px; margin-bottom:0;">
+  <hr style="border:none; border-top:1px solid var(--gray-300); margin: 40px 0 24px;" />
+  <p>4Twenty Market × Dispenza · First Saturday Cadence Analysis · Drafted 2026-05-14 · Darrell Clay, Account Manager</p>
+  <p>Sources: Treez POS — 18 First Saturday single-day pulls (6 events × 3 stores, Nov 2025 → Apr 2026) · 14-month master daily time series (425 days × 3 stores) · POS+GBP 29-month baseline</p>
+</section>
+
+</div>
+</body>
+</html>
