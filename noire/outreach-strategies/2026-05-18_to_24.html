@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Noiré — Outreach Campaign 5/18–5/22, 2026 (Mon–Fri)</title>
+<title>Noiré — Outreach Campaign 5/18–5/24, 2026 (Mon–Sun)</title>
 <style>
   :root {
     --brown-900: #1f1611;
@@ -34,12 +34,11 @@
   html, body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; color: var(--charcoal); background: var(--paper); line-height: 1.6; }
   .container { max-width: 1080px; margin: 0 auto; padding: 0 32px 80px; }
 
-  /* Cover */
   .cover { background: linear-gradient(135deg, var(--brown-900) 0%, var(--brown-700) 65%, var(--gold-dark) 100%); color: #fff; padding: 70px 32px 90px; margin-bottom: 44px; border-bottom: 6px solid var(--gold); position: relative; overflow: hidden; }
   .cover::before { content: ""; position: absolute; top: 0; right: 0; bottom: 0; width: 38%; background: radial-gradient(circle at 60% 50%, rgba(193,154,75,0.18), transparent 70%); pointer-events: none; }
   .cover-inner { max-width: 1080px; margin: 0 auto; position: relative; z-index: 2; }
   .cover .eyebrow { text-transform: uppercase; letter-spacing: 4px; font-size: 13px; font-weight: 600; opacity: 0.85; margin-bottom: 16px; color: var(--gold); }
-  .cover h1 { font-size: 52px; line-height: 1.05; margin: 0 0 18px; font-weight: 800; letter-spacing: -0.5px; }
+  .cover h1 { font-size: 50px; line-height: 1.05; margin: 0 0 18px; font-weight: 800; letter-spacing: -0.5px; }
   .cover h1 span { color: var(--gold); }
   .cover .subtitle { font-size: 21px; opacity: 0.92; max-width: 800px; margin: 0 0 26px; font-weight: 300; }
   .cover .stamp { display: inline-block; background: rgba(255,255,255,0.10); border: 1px solid rgba(255,255,255,0.35); color: #fff; padding: 10px 18px; border-radius: 999px; font-size: 12px; text-transform: uppercase; letter-spacing: 3px; font-weight: 700; margin-bottom: 30px; }
@@ -48,7 +47,6 @@
   .cover-meta div .label { font-size: 11px; text-transform: uppercase; letter-spacing: 2px; opacity: 0.65; color: var(--gold); }
   .cover-meta div .value { font-size: 15px; font-weight: 600; margin-top: 4px; }
 
-  /* Sections */
   section { margin-bottom: 52px; }
   .section-num { font-size: 13px; font-weight: 700; color: var(--gold-dark); letter-spacing: 4px; }
   h2 { font-size: 32px; line-height: 1.2; color: var(--brown-900); margin: 0 0 8px; font-weight: 700; letter-spacing: -0.3px; }
@@ -56,7 +54,6 @@
   h4 { font-size: 16px; color: var(--charcoal); margin: 18px 0 8px; font-weight: 700; }
   .lede { font-size: 18px; color: var(--charcoal-light); max-width: 880px; margin-bottom: 22px; }
 
-  /* Cards */
   .card { background: #fff; border: 1px solid var(--gray-300); border-radius: 12px; padding: 22px 26px; margin: 14px 0; }
   .card.gold { background: var(--gold-light); border-color: var(--gold); border-left: 5px solid var(--gold-dark); }
   .card.brown { background: var(--brown-100); border-color: var(--brown-500); }
@@ -64,23 +61,22 @@
   .card.proof { background: #fdfaf2; border: 1px solid var(--gold); border-left: 6px solid var(--gold-dark); }
   .card.proof .label { font-size: 11px; font-weight: 800; color: var(--gold-dark); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 8px; }
 
-  /* Strategic frame hero */
   .frame-hero { background: var(--brown-900); color: #fff; padding: 38px 44px; border-radius: 14px; margin: 22px 0 30px; border: 2px solid var(--gold); }
   .frame-hero .label { text-transform: uppercase; letter-spacing: 4px; font-size: 12px; color: var(--gold); margin-bottom: 12px; font-weight: 700; }
   .frame-hero h3 { color: #fff; margin: 0 0 14px; font-size: 24px; font-weight: 700; }
   .frame-hero p { font-size: 16px; opacity: 0.92; margin: 0; }
 
-  /* Calendar strip */
-  .week-strip { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin: 24px 0; }
-  .day-pill { background: #fff; border: 1px solid var(--gray-300); border-radius: 10px; padding: 12px 14px; text-align: center; }
+  /* Calendar strip (7 days) */
+  .week-strip { display: grid; grid-template-columns: repeat(7, 1fr); gap: 8px; margin: 24px 0; }
+  .day-pill { background: #fff; border: 1px solid var(--gray-300); border-radius: 10px; padding: 12px 10px; text-align: center; }
   .day-pill.anchor { background: var(--gold-light); border-color: var(--gold); }
   .day-pill.wyld { background: var(--brown-900); color: var(--gold-light); border-color: var(--gold-dark); }
+  .day-pill.peak { background: var(--gold-dark); color: #fff; border-color: var(--gold); }
   .day-pill.closer { background: #5c0e08; color: #fde7e7; border-color: #5c0e08; }
-  .day-pill .dow { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; opacity: 0.75; }
-  .day-pill .date { font-size: 22px; font-weight: 800; margin: 4px 0; }
-  .day-pill .theme { font-size: 11px; opacity: 0.85; }
+  .day-pill .dow { font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 700; opacity: 0.75; }
+  .day-pill .date { font-size: 20px; font-weight: 800; margin: 4px 0; }
+  .day-pill .theme { font-size: 10px; opacity: 0.85; }
 
-  /* The 3 patterns block */
   .patterns { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 24px 0; }
   .pattern { background: #fff; border: 1px solid var(--gray-300); border-top: 4px solid var(--gold); border-radius: 10px; padding: 20px 22px; }
   .pattern .num { color: var(--gold-dark); font-weight: 800; letter-spacing: 3px; font-size: 11px; margin-bottom: 6px; }
@@ -99,17 +95,19 @@
   .day-head.tue { background: linear-gradient(135deg, var(--brown-800), var(--brown-700)); }
   .day-head.wed { background: linear-gradient(135deg, var(--brown-900), var(--gold-dark)); }
   .day-head.thu { background: linear-gradient(135deg, var(--brown-700), var(--brown-500)); }
-  .day-head.fri { background: linear-gradient(135deg, #5c0e08, var(--brown-700)); }
+  .day-head.fri { background: linear-gradient(135deg, var(--brown-800), #6e3d0e); }
+  .day-head.sat { background: linear-gradient(135deg, var(--gold-dark), #d4a64a); color: var(--brown-900); }
+  .day-head.sat h3, .day-head.sat .meta, .day-head.sat .tag { color: var(--brown-900); }
+  .day-head.sat .tag { background: rgba(31,22,17,0.15); border-color: rgba(31,22,17,0.35); }
+  .day-head.sun { background: linear-gradient(135deg, #5c0e08, var(--brown-700)); }
   .day-body { padding: 26px 28px; }
 
-  /* Channel send rows */
   .send-row { background: var(--cream); border-left: 4px solid var(--gold); border-radius: 0 8px 8px 0; padding: 16px 20px; margin: 12px 0; }
   .send-row .channel { font-weight: 800; letter-spacing: 2px; text-transform: uppercase; font-size: 11px; color: var(--gold-dark); margin-bottom: 6px; }
   .send-row .subject { font-size: 16px; font-weight: 700; color: var(--brown-900); margin: 4px 0 10px; }
   .send-row .copy-block { background: #fff; border-radius: 6px; padding: 12px 16px; margin: 8px 0; font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 13px; color: var(--brown-900); line-height: 1.55; }
   .send-row .why { font-size: 13px; color: var(--charcoal-light); font-style: italic; margin-top: 8px; }
 
-  /* Tables */
   table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.05); margin: 14px 0 24px; }
   th { background: var(--brown-700); color: #fff; text-align: left; padding: 11px 14px; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; }
   td { padding: 11px 14px; border-bottom: 1px solid var(--gray-100); font-size: 14px; vertical-align: top; }
@@ -117,7 +115,6 @@
   tr:nth-child(even) td { background: var(--gray-50); }
   td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 
-  /* Pills */
   .pill { display: inline-block; padding: 3px 10px; border-radius: 999px; font-size: 10px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; white-space: nowrap; }
   .pill.up { background: var(--green-100); color: var(--green); }
   .pill.dn { background: var(--red-100); color: var(--red); }
@@ -128,21 +125,18 @@
   .pill.text { background: #fce7f3; color: #be185d; }
   .pill.push { background: #d1fae5; color: #065f46; }
 
-  /* Wyld block */
   .wyld-box { background: linear-gradient(135deg, var(--gold-light), #fff); border: 2px solid var(--gold); border-radius: 12px; padding: 26px 30px; margin: 24px 0; }
   .wyld-box .label { text-transform: uppercase; letter-spacing: 3px; font-size: 11px; color: var(--gold-dark); margin-bottom: 8px; font-weight: 800; }
   .wyld-box h3 { color: var(--brown-900); margin: 4px 0 14px; font-size: 22px; }
   .wyld-box .copy-template { background: #fff; border-left: 4px solid var(--gold-dark); padding: 14px 18px; margin: 10px 0; font-size: 14px; color: var(--brown-900); line-height: 1.6; border-radius: 0 6px 6px 0; }
   .wyld-box .copy-template strong { color: var(--gold-dark); }
 
-  /* KPI grid */
   .kpi-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 18px 0; }
   .kpi-card { background: #fff; border: 1px solid var(--gray-300); border-radius: 10px; padding: 18px; text-align: center; border-top: 4px solid var(--gold); }
   .kpi-card .num { font-size: 26px; font-weight: 800; color: var(--brown-900); line-height: 1; }
   .kpi-card .lbl { font-size: 11px; text-transform: uppercase; letter-spacing: 2px; color: var(--charcoal-light); margin-top: 6px; }
   .kpi-card .delta { font-size: 12px; margin-top: 6px; color: var(--gray-500); }
 
-  /* Deal grid */
   .deal-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 18px 0; }
   .deal { background: var(--brown-900); color: var(--gold-light); border: 2px solid var(--gold); border-radius: 10px; padding: 18px; text-align: center; }
   .deal .name { font-size: 13px; letter-spacing: 1px; opacity: 0.85; min-height: 32px; }
@@ -150,13 +144,15 @@
   .deal .each { font-size: 11px; opacity: 0.75; letter-spacing: 1px; text-transform: uppercase; }
 
   @media (max-width: 900px) {
-    .patterns, .kpi-grid, .week-strip { grid-template-columns: repeat(2, 1fr); }
+    .patterns, .kpi-grid { grid-template-columns: repeat(2, 1fr); }
     .deal-grid { grid-template-columns: 1fr 1fr; }
+    .week-strip { grid-template-columns: repeat(4, 1fr); }
   }
   @media (max-width: 760px) {
-    .cover h1 { font-size: 36px; }
+    .cover h1 { font-size: 34px; }
     .cover-meta { grid-template-columns: 1fr 1fr; }
-    .patterns, .kpi-grid, .deal-grid, .week-strip { grid-template-columns: 1fr; }
+    .patterns, .kpi-grid, .deal-grid { grid-template-columns: 1fr; }
+    .week-strip { grid-template-columns: repeat(2, 1fr); }
   }
 </style>
 </head>
@@ -165,12 +161,12 @@
 <header class="cover">
   <div class="cover-inner">
     <div class="eyebrow">Noiré × Dispenza · Outreach Campaign Plan</div>
-    <h1>Mon 5/18 → Fri 5/22 · <span>Bundle, Save, Enter to Win</span></h1>
-    <p class="subtitle">Five weekdays. Six deals. One year of Wyld up for grabs. Built on the open-rate evidence from 5/1–5/14 — email leads, text reinforces, push is supplementary.</p>
-    <div class="stamp"><span class="dot">●</span> Evidence-backed · Channel-tuned · Wyld-integrated · Mon–Fri Cadence</div>
+    <h1>Mon 5/18 → Sun 5/24 · <span>Bundle, Save, Enter to Win</span></h1>
+    <p class="subtitle">Seven-day Mon–Sun cadence. Six deals. One year of Wyld up for grabs. Built on the open-rate evidence from 5/1–5/14 — email leads, text reinforces, push is supplementary.</p>
+    <div class="stamp"><span class="dot">●</span> Mon–Sun Cadence · Evidence-Backed · Wyld-Integrated</div>
     <div class="cover-meta">
-      <div><div class="label">Window</div><div class="value">Mon 5/18 → Fri 5/22</div></div>
-      <div><div class="label">Broadcasts</div><div class="value">5 email · 3 text · 3 push</div></div>
+      <div><div class="label">Window</div><div class="value">Mon 5/18 → Sun 5/24</div></div>
+      <div><div class="label">Broadcasts</div><div class="value">7 email · 3 text · 3 push</div></div>
       <div><div class="label">Contest</div><div class="value">Wyld year supply (thru 6/30)</div></div>
       <div><div class="label">Prepared by</div><div class="value">Darrell Clay, Dispenza</div></div>
     </div>
@@ -179,7 +175,7 @@
 
 <div class="container">
 
-<!-- Week at a glance strip -->
+<!-- Week at a glance strip (7 days) -->
 <section style="margin-top:-4px;">
   <div class="week-strip">
     <div class="day-pill anchor">
@@ -202,8 +198,18 @@
       <div class="date">🌿</div>
       <div class="theme">Weekend Prep</div>
     </div>
+    <div class="day-pill">
+      <div class="dow">Fri · 5/22</div>
+      <div class="date">🎉</div>
+      <div class="theme">Weekend Ready · Strain Trio</div>
+    </div>
+    <div class="day-pill peak">
+      <div class="dow" style="color:var(--brown-900);">Sat · 5/23</div>
+      <div class="date">🔥</div>
+      <div class="theme">Peak Saturday</div>
+    </div>
     <div class="day-pill closer">
-      <div class="dow" style="color:#fde7e7;">Fri · 5/22</div>
+      <div class="dow" style="color:#fde7e7;">Sun · 5/24</div>
       <div class="date">⏰</div>
       <div class="theme">Last Day Closer</div>
     </div>
@@ -241,12 +247,13 @@
   </div>
 
   <div class="card gold">
-    <strong>Why this Mon–Fri sequence matches the data:</strong>
+    <strong>Why this Mon–Sun sequence matches the data:</strong>
     <ul style="margin:8px 0 0;">
       <li><strong>Mon 5/18 = Week Launch anchor.</strong> Monday email pulled 10.38% open on 5/11 — top performer in the dataset.</li>
       <li><strong>Wed 5/20 = Wyld Wednesday.</strong> Wyld theming hit 9.80% open on Wed 5/13.</li>
       <li><strong>Thu 5/21 = high-intent pre-weekend slot.</strong> Peak Traffic Day email hit 9.27% open on Thu 5/8.</li>
-      <li><strong>Fri 5/22 = closer / last day.</strong> Urgency framing capitalizes on weekend buying intent.</li>
+      <li><strong>Sat 5/23 = Peak Saturday.</strong> Slots into Giovanni's existing "Peak Saturday Text/Push" workflow pattern (visible in 5/13 Sweed screenshot).</li>
+      <li><strong>Sun 5/24 = Closer.</strong> All deals end at close-of-business Sunday. Strongest urgency send of the week.</li>
     </ul>
   </div>
 </section>
@@ -255,7 +262,7 @@
 <section>
   <div class="section-num">SECTION 02</div>
   <h2>The 6 deals fueling the week</h2>
-  <p class="lede">Every offer is a bundle mechanic. Most push the ticket past $75 pre-tax with a single Wyld gummy add-on — which is the Wyld contest entry threshold.</p>
+  <p class="lede">Every offer is a bundle mechanic. Most push the ticket past $75 pre-tax with a single Wyld gummy add-on — which is the Wyld contest entry threshold. Deals run Mon 5/18 → close-of-business Sun 5/24 while supplies last.</p>
 
   <div class="deal-grid">
     <div class="deal"><div class="name">HIGHT 7g Flower</div><div class="price">2 for $65</div><div class="each">$32.50 each effective</div></div>
@@ -267,26 +274,26 @@
   </div>
 
   <div class="card brown">
-    <strong>HIGHT brand dominates this week — 3 of 6 deals.</strong> Lead with HIGHT in single-brand emails (Mon + Wed). Miss Grass + Jersey/Sauce Boss/Mac N' Jack carry the premium positioning (Tue). Offers not stackable; while supplies last.
+    <strong>HIGHT brand dominates this week — 3 of 6 deals.</strong> Lead with HIGHT in single-brand emails (Mon + Wed + Sat). Miss Grass + Jersey/Sauce Boss/Mac N' Jack carry the premium positioning (Tue + Fri). Offers not stackable; while supplies last.
   </div>
 </section>
 
 <!-- Channel mix -->
 <section>
   <div class="section-num">SECTION 03</div>
-  <h2>Channel mix · 5 weekdays</h2>
+  <h2>Channel mix · 7 days</h2>
 
   <table>
     <thead><tr><th>Channel</th><th class="num">Sends</th><th>List size</th><th>Why this allocation</th></tr></thead>
     <tbody>
-      <tr><td><span class="pill email">EMAIL</span></td><td class="num">5</td><td>~700</td><td>Best engagement (9.5% avg open) · biggest reachable audience · one send each weekday</td></tr>
-      <tr><td><span class="pill text">TEXT</span></td><td class="num">3</td><td>~620</td><td>Bookend strategy — Mon launch · Wed Wyld anchor · Fri closer urgency · capped at 3 to keep unsubs flat</td></tr>
+      <tr><td><span class="pill email">EMAIL</span></td><td class="num">7</td><td>~700</td><td>Best engagement (9.5% avg open) · biggest reachable audience · one send each day Mon–Sun</td></tr>
+      <tr><td><span class="pill text">TEXT</span></td><td class="num">3</td><td>~620</td><td>Bookend strategy — Wed Wyld anchor · Sat Peak Saturday · Sun closer urgency · capped at 3 to keep unsubs flat</td></tr>
       <tr><td><span class="pill push">PUSH</span></td><td class="num">3</td><td>~64</td><td>Mirror text content · push list is small so this is supplementary, not primary</td></tr>
       <tr><td>Triggered</td><td class="num">Ongoing</td><td>Variable</td><td>Welcome / Abandoned Cart / Birthday / Winback continue automatically</td></tr>
     </tbody>
   </table>
 
-  <p style="font-size:14px; color:var(--charcoal-light);">Typical recipient receives ~11 broadcast touches across the 5 days — under the unsub fatigue threshold from 5/4 data.</p>
+  <p style="font-size:14px; color:var(--charcoal-light);">Typical recipient receives ~13 broadcast touches across 7 days. Text concentrated on the 3 highest-leverage days (Wed Wyld, Sat Peak, Sun Closer) — Mon launch relies on email alone since the 5/11 data showed Monday text bombed at 0.96% while Monday email pulled 10.38%.</p>
 </section>
 
 <!-- Day-by-day -->
@@ -299,37 +306,31 @@
     <div class="day-head mon">
       <div>
         <h3>🚀 Mon 5/18 · Stock Up Monday (Week Launch)</h3>
-        <div class="meta">The big push · Monday email = highest-converting slot of the week</div>
+        <div class="meta">The big email push · Monday email = highest-converting slot of the week</div>
       </div>
-      <span class="tag">3-CHANNEL DAY</span>
+      <span class="tag">EMAIL + PUSH</span>
     </div>
     <div class="day-body">
-      <p style="margin-top:0;"><em>Monday Week Launch Email pulled <strong>10.38%</strong> open on Mon 5/11 — the top performer in the entire 5/1–5/14 dataset.</em></p>
+      <p style="margin-top:0;"><em>Monday Week Launch Email pulled <strong>10.38%</strong> open on Mon 5/11 — top performer in the entire 5/1–5/14 dataset. Monday text pulled 0.96% — we're skipping text on Monday because email alone is doing the work.</em></p>
 
       <div class="send-row">
         <div class="channel"><span class="pill email">EMAIL</span> · ~700 list · 1 send</div>
         <div class="subject">Subject: Stock Up Monday — HIGHT 7g 2 for $65, Grapple Pie 2 for $50</div>
         <div class="copy-block"><strong>Preheader:</strong> Your week starts at Noiré. Premium flower bundles inside.<br/><br/>
 <strong>Header:</strong> Stock Up. Save Big.<br/><br/>
-<strong>Body lead:</strong> "The week starts at Noiré. Two of our most-asked-about flower bundles are on the menu starting today..."<br/><br/>
+<strong>Body lead:</strong> "The week starts at Noiré. Two of our most-asked-about flower bundles are on the menu — running through Sunday..."<br/><br/>
 <strong>Featured deals:</strong><br/>
 &nbsp;&nbsp;1. <strong>HIGHT 7g Flower — 2 for $65</strong> (hero)<br/>
 &nbsp;&nbsp;2. <strong>Grapple Pie 3.5g — 2 for $50</strong> (secondary)<br/><br/>
-<strong>Wyld inline (after the deals):</strong> "Pair any bundle with a Wyld or Lost Farm gummy and you're entered to win a year supply of Wyld. Contest through 6/30 — see in-store for details."<br/><br/>
+<strong>Wyld inline:</strong> "Pair any bundle with a Wyld or Lost Farm gummy and you're entered to win a year supply of Wyld. Contest through 6/30 — see in-store for details."<br/><br/>
 <strong>CTA:</strong> Reserve Your Bundle</div>
-        <div class="why">Why these two deals: HIGHT is the dominant brand in this week's deal mix (3 of 6); Grapple Pie 3.5g is the lower-price-point entry option for value buyers. Monday is the launch — set the brand tone and the dominant SKU narrative for the week.</div>
+        <div class="why">Why these two deals: HIGHT is the dominant brand in this week's mix (3 of 6); Grapple Pie 3.5g is the lower-price-point entry option for value buyers. Monday is the launch — set the brand tone and the dominant SKU narrative for the full 7-day window.</div>
       </div>
 
       <div class="send-row">
-        <div class="channel"><span class="pill text">TEXT</span> · ~620 list · 1 send · 10–11 AM ET</div>
-        <div class="subject">Featured SKU: HIGHT 7g Flower — 2 for $65</div>
-        <div class="copy-block">Stock up at Noiré → HIGHT 7g flower 2 for $65 today. Add a Wyld gummy ($75+) — you're entered for a YEAR of Wyld. While supplies last. [link]</div>
-        <div class="why">Why this framing: "Stock up" = action verb (matched 4.99% "Reset the Week Text" winning pattern). Specific SKU + price = clear value prop (avoids "Cart Day Text" 0.48% generic-theme failure).</div>
-      </div>
-
-      <div class="send-row">
-        <div class="channel"><span class="pill push">PUSH</span> · ~64 list · 1 send</div>
-        <div class="copy-block">Mirror text body. Drop the link if Sweed shows it inline elsewhere.</div>
+        <div class="channel"><span class="pill push">PUSH</span> · ~64 list · 1 send (optional — Mon push wasn't run in the 5/4 week so no comp data)</div>
+        <div class="copy-block">Short version of email lead: "Stock Up Monday at Noiré → HIGHT 7g 2/$65, Grapple Pie 2/$50. Wyld year-supply contest on $75+ orders. [link]"</div>
+        <div class="why">Why push but no text: push targets a different opt-in audience (~64) — even if text bombs on Mondays, push can run because the audience self-selected differently. Skip if push is delivering &lt;1 open per send historically.</div>
       </div>
     </div>
   </div>
@@ -346,7 +347,7 @@
     <div class="day-body">
 
       <div class="send-row">
-        <div class="channel"><span class="pill email">EMAIL</span> · ~700 list · 1 send (consider sending to top-20% AOV segment first)</div>
+        <div class="channel"><span class="pill email">EMAIL</span> · ~700 list · send to top-20% AOV segment first, broaden to full list ~3 hrs later</div>
         <div class="subject">Subject: Premium Picks Tuesday — Miss Grass 2 for $65 + Jersey, Sauce Boss & Mac N' Jack</div>
         <div class="copy-block"><strong>Preheader:</strong> The bundle our connoisseurs ask for, plus three premium strains.<br/><br/>
 <strong>Header:</strong> Premium Picks — Better When You Bundle<br/><br/>
@@ -356,9 +357,8 @@
 &nbsp;&nbsp;2. <strong>Jersey · Sauce Boss · Mac N' Jack premium strain trio</strong> — "Three strains worth asking for by name"<br/><br/>
 <strong>Wyld footer:</strong> Standard contest paragraph.<br/><br/>
 <strong>CTA:</strong> Reserve Your Premium Bundle</div>
-        <div class="why">Why no text or push Tuesday: preserve text budget for Wed/Fri (higher-converting days historically). Tuesday is also typically a slower retail day in cannabis — use it for the premium-positioned story rather than the urgency push. The top-20% AOV segment is the right audience for Miss Grass; broaden to full list ~3 hours after the segment send.</div>
+        <div class="why">Why no text or push Tuesday: preserve text budget for Wed/Sat/Sun (highest-converting days). Tuesday is typically a slower retail day — use it for the premium-positioned story rather than urgency. Top-20% AOV segment is the right audience for Miss Grass.</div>
       </div>
-
     </div>
   </div>
 
@@ -372,10 +372,10 @@
       <span class="tag">3-CHANNEL DAY</span>
     </div>
     <div class="day-body">
-      <p style="margin-top:0;"><em>WYLD Day Email pulled <strong>9.80%</strong> on Wed 5/13 — third-highest of the entire 5/1–5/14 dataset.</em></p>
+      <p style="margin-top:0;"><em>WYLD Day Email pulled <strong>9.80%</strong> on Wed 5/13 — third-highest of the dataset. Wyld Day Text pulled 3.20% — above text average.</em></p>
 
       <div class="send-row">
-        <div class="channel"><span class="pill email">EMAIL</span> · ~700 list · 1 send · ideally to Wyld-purchaser segment first if available</div>
+        <div class="channel"><span class="pill email">EMAIL</span> · ~700 list · send to Wyld-purchaser segment first if available</div>
         <div class="subject">Subject: Wyld Wednesday — Pre-Roll Bundles + a Year of Wyld Up for Grabs</div>
         <div class="copy-block"><strong>Preheader:</strong> 3 pre-roll 2pks for $21 or $27. Plus contest entry waiting at the register.<br/><br/>
 <strong>Header:</strong> Wyld Wednesday at Noiré<br/><br/>
@@ -384,14 +384,14 @@
 &nbsp;&nbsp;1. <strong>HIGHT $8 2pk Pre-Rolls — 3 for $21</strong> (entry-tier)<br/>
 &nbsp;&nbsp;2. <strong>HIGHT $10 2pk Pre-Rolls — 3 for $27</strong> (mid-tier)<br/><br/>
 <strong>CTA:</strong> Build Your Bundle + Enter to Win</div>
-        <div class="why">Why these deals: Pre-roll multi-packs + a gummy is the most "social cannabis" pairing in the deal mix. Hits the share-pack buyer + the contest hook simultaneously. Wyld-purchaser segment send is highest-leverage — expected open lift based on "Deals Based on What Customer Has Purchased" performance (10.00% open) is meaningful.</div>
+        <div class="why">Why these deals: Pre-roll multi-packs + a gummy is the most "social cannabis" pairing in the deal mix. Hits the share-pack buyer + the contest hook simultaneously. Wyld-purchaser segment send is highest-leverage — expected open lift based on "Deals Based on What Customer Has Purchased" performance (10.00% open).</div>
       </div>
 
       <div class="send-row">
         <div class="channel"><span class="pill text">TEXT</span> · ~620 list · 1 send · 4–5 PM ET</div>
         <div class="subject">Featured SKU: HIGHT pre-roll multi-packs (both $8 + $10 2pks)</div>
         <div class="copy-block">Wyld Wednesday at Noiré → HIGHT pre-roll 2pks 3 for $21. Add a Wyld gummy + you're entered for a year supply. Contest ends 6/30. [link]</div>
-        <div class="why">Why this framing: "Wyld Wednesday" = branded day + alliteration (worked at 3.20% open on 5/13 — above text avg). Reinforces contest in body. Sent late afternoon to catch pre-dinner buyer intent.</div>
+        <div class="why">Why this framing: "Wyld Wednesday" = branded day + alliteration (3.20% open on 5/13 — above text avg). Reinforces contest in body. Sent late afternoon to catch pre-dinner buyer intent.</div>
       </div>
 
       <div class="send-row">
@@ -411,20 +411,20 @@
       <span class="tag">EMAIL ONLY</span>
     </div>
     <div class="day-body">
-      <p style="margin-top:0;"><em>Peak Traffic Day Email pulled <strong>9.27%</strong> on Thu 5/8 — Thursdays convert reliably on email. Use this slot to re-feature the flower bundles ahead of weekend shopping intent and bridge to Friday's closer.</em></p>
+      <p style="margin-top:0;"><em>Peak Traffic Day Email pulled <strong>9.27%</strong> on Thu 5/8. Use this slot to re-feature the flower bundles ahead of weekend shopping intent and bridge to Saturday's Peak push.</em></p>
 
       <div class="send-row">
         <div class="channel"><span class="pill email">EMAIL</span> · ~700 list · 1 send</div>
         <div class="subject">Subject: Stock the Weekend — HIGHT 7g 2/$65 + Miss Grass 2/$65 Still On</div>
-        <div class="copy-block"><strong>Preheader:</strong> Two days left on this week's bundles. Stock up before Friday closes the deals.<br/><br/>
+        <div class="copy-block"><strong>Preheader:</strong> Three days left on this week's bundles. Stock up before Sunday closes the deals.<br/><br/>
 <strong>Header:</strong> Weekend Prep at Noiré<br/><br/>
-<strong>Body lead:</strong> "Two days left to grab this week's bundles. Whether it's HIGHT 7g for the everyday or Miss Grass 4.2g for the weekend ritual, the bundle math is still on..."<br/><br/>
+<strong>Body lead:</strong> "Three days left to grab this week's bundles. Whether it's HIGHT 7g for the everyday or Miss Grass 4.2g for the weekend ritual, the bundle math is still on through Sunday..."<br/><br/>
 <strong>Featured deals:</strong><br/>
-&nbsp;&nbsp;1. <strong>HIGHT 7g Flower — 2 for $65</strong> (re-feature for everyday flower buyers)<br/>
-&nbsp;&nbsp;2. <strong>Miss Grass 4.2g — 2 for $65</strong> (re-feature for premium / weekend ritual buyers)<br/><br/>
-<strong>Wyld block (mid-body):</strong> "Add a Wyld or Lost Farm gummy on a $75+ order and you're in for the year supply contest. 6/30 deadline doesn't move — but Friday's bundle math does."<br/><br/>
-<strong>CTA:</strong> Reserve Before Friday</div>
-        <div class="why">Why this re-feature mix: Thursday's job is to bridge Wed's pre-roll push to Friday's closer. Flower bundles are the broadest-appeal items in the mix; cross-categorizing reminds segments who didn't react to Mon's HIGHT email or Tue's premium email. No text send — preserve text budget for Friday urgency.</div>
+&nbsp;&nbsp;1. <strong>HIGHT 7g Flower — 2 for $65</strong> (re-feature)<br/>
+&nbsp;&nbsp;2. <strong>Miss Grass 4.2g — 2 for $65</strong> (re-feature)<br/><br/>
+<strong>Wyld block (mid-body):</strong> "Add a Wyld or Lost Farm gummy on a $75+ order and you're in for the year supply contest. 6/30 deadline doesn't move — but Sunday's bundle math does."<br/><br/>
+<strong>CTA:</strong> Reserve Before Sunday</div>
+        <div class="why">Why this re-feature mix: Thursday bridges Wed's pre-roll push to Sat's Peak Saturday. Flower bundles are broadest-appeal items in the mix; cross-categorizing reminds segments who didn't react to Mon's HIGHT email or Tue's premium email. No text — preserve budget for Sat/Sun.</div>
       </div>
     </div>
   </div>
@@ -433,30 +433,95 @@
   <div class="day-block">
     <div class="day-head fri">
       <div>
-        <h3>⏰ Fri 5/22 · Last Day Closer · All 6 Deals</h3>
-        <div class="meta">Urgency day · all deals end tonight · final-call broadcast across 3 channels</div>
+        <h3>🎉 Fri 5/22 · Weekend Ready · Strain Trio Spotlight</h3>
+        <div class="meta">Pre-Saturday brand-amplification day · feature the under-promoted strain trio + premium positioning</div>
+      </div>
+      <span class="tag">EMAIL ONLY</span>
+    </div>
+    <div class="day-body">
+
+      <div class="send-row">
+        <div class="channel"><span class="pill email">EMAIL</span> · ~700 list · 1 send</div>
+        <div class="subject">Subject: Weekend Ready — Jersey, Sauce Boss & Mac N' Jack + Pre-Roll Picks</div>
+        <div class="copy-block"><strong>Preheader:</strong> Strains worth asking for by name. Plus pre-rolls for whatever's on the schedule.<br/><br/>
+<strong>Header:</strong> Weekend Ready at Noiré<br/><br/>
+<strong>Body lead:</strong> "Three premium strains we save for connoisseur conversations: Jersey, Sauce Boss, and Mac N' Jack. Available all weekend — plus our HIGHT pre-roll multi-packs for whatever your Saturday looks like..."<br/><br/>
+<strong>Featured deals:</strong><br/>
+&nbsp;&nbsp;1. <strong>Jersey · Sauce Boss · Mac N' Jack premium strain trio</strong> (hero — connoisseur framing)<br/>
+&nbsp;&nbsp;2. <strong>HIGHT $10 2pk Pre-Rolls — 3 for $27</strong> (secondary — weekend-ready pre-rolls)<br/><br/>
+<strong>Wyld footer:</strong> Standard contest paragraph.<br/><br/>
+<strong>CTA:</strong> Plan Your Weekend</div>
+        <div class="why">Why this combo: Friday is the bridge to Peak Saturday. The strain trio got a name-only mention on Tuesday's premium email — Friday is where it gets the spotlight. Cross-bundle with the mid-tier pre-roll multi-pack ($10 2pks at 3/$27) which fits weekend social occasions. No text on Friday — Saturday's Peak text needs full impact.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Saturday 5/23 -->
+  <div class="day-block">
+    <div class="day-head sat">
+      <div>
+        <h3>🔥 Sat 5/23 · Peak Saturday</h3>
+        <div class="meta">Highest single-day conversion potential · matches Giovanni's existing Peak Saturday Text/Push workflow naming</div>
+      </div>
+      <span class="tag">3-CHANNEL DAY</span>
+    </div>
+    <div class="day-body">
+      <p style="margin-top:0;"><em>Saturday is traditionally the highest-conversion day in cannabis retail. Giovanni's existing Sweed workflows include "Peak Saturday Text" and "Peak Saturday Push" — this campaign's Sat sends should slot into that naming convention so they integrate with his system rather than duplicate it.</em></p>
+
+      <div class="send-row">
+        <div class="channel"><span class="pill email">EMAIL</span> · ~700 list · 1 send · morning send (10–11 AM ET to catch pre-shop planning)</div>
+        <div class="subject">Subject: Peak Saturday — All 6 Bundles Live, 2 Days Left to Enter the Wyld Contest</div>
+        <div class="copy-block"><strong>Preheader:</strong> Stock up the right way today. Every bundle on the menu. Last weekend on the contest math.<br/><br/>
+<strong>Header:</strong> Peak Saturday at Noiré<br/><br/>
+<strong>Body lead:</strong> "It's Peak Saturday. Every bundle this week is still on, and you've got today and tomorrow to lock in your Wyld contest entry on a $75+ basket..."<br/><br/>
+<strong>Featured deals:</strong> All 6 (use the brown/gold deal graphic as the visual hero), with HIGHT 7g 2/$65 and HIGHT $8 pre-roll 2pks 3/$21 called out by name at the top as the volume-builders.<br/><br/>
+<strong>Wyld top-of-body:</strong> "Two days left on this week's bundle math. Add a Wyld or Lost Farm gummy on your $75+ order today and you're entered for a year supply. Contest closes 6/30."<br/><br/>
+<strong>CTA:</strong> Build Your Saturday Bundle</div>
+        <div class="why">Why all 6 + 2 anchor callouts: Saturday is the heaviest-converting day; the email should show breadth (all deals visible) AND give the budtenders / customer eye anchor SKUs (HIGHT flower + HIGHT pre-rolls). Morning send gives customers time to plan an in-store visit.</div>
+      </div>
+
+      <div class="send-row">
+        <div class="channel"><span class="pill text">TEXT</span> · ~620 list · 1 send · 12–1 PM ET (lunch buyer-intent window)</div>
+        <div class="subject">Featured SKUs: HIGHT 7g 2/$65 + Grapple Pie 2/$50 + pre-roll 2pks 3/$21</div>
+        <div class="copy-block">Peak Saturday at Noiré → HIGHT 7g 2/$65, Grapple Pie 2/$50, pre-roll 2pks 3/$21. Add Wyld → contest entry. Bundles end tomorrow. [link]</div>
+        <div class="why">Why Saturday text: highest single-day conversion potential. Action-verb anchor ("Peak Saturday") matches Giovanni's existing workflow naming. Specific SKUs + prices + Wyld hook + "ends tomorrow" urgency = all four winning text-pattern boxes ticked.</div>
+      </div>
+
+      <div class="send-row">
+        <div class="channel"><span class="pill push">PUSH</span> · ~64 list · 1 send</div>
+        <div class="copy-block">Mirror text body.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sunday 5/24 -->
+  <div class="day-block">
+    <div class="day-head sun">
+      <div>
+        <h3>⏰ Sun 5/24 · Last Day Closer · All 6 Deals End Tonight</h3>
+        <div class="meta">Urgency day · all deals end at close · final-call broadcast across 3 channels</div>
       </div>
       <span class="tag">3-CHANNEL DAY</span>
     </div>
     <div class="day-body">
 
       <div class="send-row">
-        <div class="channel"><span class="pill email">EMAIL</span> · ~700 list · 1 send</div>
+        <div class="channel"><span class="pill email">EMAIL</span> · ~700 list · 1 send · morning send (10 AM ET) so customers can plan a same-day visit</div>
         <div class="subject">Subject: Last Day to Save — All 6 Deals End Tonight</div>
-        <div class="copy-block"><strong>Preheader:</strong> HIGHT, Miss Grass, Grapple Pie, Jersey Trio, pre-roll 2pks. Gone after 9 PM.<br/><br/>
+        <div class="copy-block"><strong>Preheader:</strong> HIGHT, Miss Grass, Grapple Pie, Jersey Trio, pre-roll 2pks. Gone after 8 PM.<br/><br/>
 <strong>Header:</strong> Tonight at Closing — All Deals End<br/><br/>
 <strong>Body lead:</strong> "Last call. Every deal on this week's menu ends at close tonight. If you've been waiting to stock up, today's the day..."<br/><br/>
-<strong>Featured deals:</strong> All 6 — full recap grid (use the brown/gold deal graphic).<br/><br/>
-<strong>Wyld top-of-body:</strong> "Last day to add a Wyld or Lost Farm gummy to your $75+ order and lock in your contest entry. Contest itself continues through 6/30 — but this week's bundle math is gone after tonight."<br/><br/>
-<strong>CTA:</strong> Reserve Before 9 PM</div>
-        <div class="why">Why "All 6 deals" recap: Friday is the urgency day; show everything that's about to end so customers can self-select whichever bundle hasn't crossed their threshold yet during the week. This is a high-conversion send by design.</div>
+<strong>Featured deals:</strong> All 6 — full recap grid (the brown/gold deal graphic).<br/><br/>
+<strong>Wyld top-of-body:</strong> "Last day to add a Wyld or Lost Farm gummy to your $75+ order and lock in your contest entry. The contest itself continues through 6/30 — but this week's bundle math is gone after tonight."<br/><br/>
+<strong>CTA:</strong> Reserve Before Close</div>
+        <div class="why">Why "All 6 deals" recap on Sunday: this is the urgency day; show everything that's about to end so customers can self-select whichever bundle hasn't crossed their threshold yet during the week. Sunday closes the Mon–Sun cadence.</div>
       </div>
 
       <div class="send-row">
-        <div class="channel"><span class="pill text">TEXT</span> · ~620 list · 1 send · 11 AM–12 PM ET</div>
+        <div class="channel"><span class="pill text">TEXT</span> · ~620 list · 1 send · 12–1 PM ET</div>
         <div class="subject">Featured SKUs: All 6 deals — call out HIGHT 7g + Grapple Pie + pre-roll 2pks by name</div>
-        <div class="copy-block">Last day at Noiré → HIGHT 7g 2/$65, Grapple Pie 2/$50, pre-roll 2pks 3/$21. Deals end tonight at close. Add Wyld → contest entry. [link]</div>
-        <div class="why">Why this framing: Urgency anchor + specific prices + contest hook = ticks every box from the winning text-pattern checklist. Sent before noon so customers can plan a same-day visit. Friday text is the strongest urgency text of the week — front-load the value-priced anchors (HIGHT $8 pre-roll 2pks at 3/$21 is the deepest-value mention).</div>
+        <div class="copy-block">Last day at Noiré → HIGHT 7g 2/$65, Grapple Pie 2/$50, pre-roll 2pks 3/$21. All deals end tonight at close. Add Wyld → contest entry. [link]</div>
+        <div class="why">Why this framing: Urgency anchor + specific prices + contest hook = ticks every box from the winning text-pattern checklist. Sunday afternoon send catches customers planning their last-minute stops before the week reset.</div>
       </div>
 
       <div class="send-row">
@@ -471,10 +536,10 @@
 <section>
   <div class="section-num">SECTION 05</div>
   <h2>Wyld contest — the connective tissue</h2>
-  <p class="lede">Every send Mon–Fri mentions the contest. Standard copy blocks below — use the long version in emails, the short version in text/push.</p>
+  <p class="lede">Every send Mon–Sun mentions the contest. Standard copy blocks below — use the long version in emails, the short version in text/push.</p>
 
   <div class="wyld-box">
-    <div class="label">EMAIL FOOTER (or top-of-body on Wed)</div>
+    <div class="label">EMAIL FOOTER (or top-of-body on Wed + Sat + Sun)</div>
     <div class="copy-template">
 <strong>One year of Wyld is on the table.</strong> Spend $75 or more pre-tax this week with any Wyld or Lost Farm gummy in your basket and you're entered to win a full year's supply of Wyld. Contest runs through 6/30 — see in-store or ask any budtender for details. <em>Dual-brand email consent + name/likeness release applies.</em>
     </div>
@@ -506,7 +571,7 @@ Add a Wyld or Lost Farm gummy on a $75+ order = entered to win a year of Wyld. T
   <div class="kpi-grid">
     <div class="kpi-card"><div class="num">≥9.5%</div><div class="lbl">Email open rate</div><div class="delta">5/11 top hit 10.4%</div></div>
     <div class="kpi-card"><div class="num">≥3.5%</div><div class="lbl">Text open rate</div><div class="delta">Lift via action-verb + SKU framing</div></div>
-    <div class="kpi-card"><div class="num">~400</div><div class="lbl">Total broadcast opens</div><div class="delta">Across 5 days · email+text</div></div>
+    <div class="kpi-card"><div class="num">~560</div><div class="lbl">Total broadcast opens</div><div class="delta">Across 7 days · email+text</div></div>
     <div class="kpi-card"><div class="num">≤0.20%</div><div class="lbl">Unsub rate</div><div class="delta">Held by 3-text cap</div></div>
   </div>
 
@@ -523,11 +588,12 @@ Add a Wyld or Lost Farm gummy on a $75+ order = entered to win a year of Wyld. T
   <table>
     <thead><tr><th>Risk</th><th>Likelihood</th><th>Mitigation</th></tr></thead>
     <tbody>
-      <tr><td><strong>Text fatigue</strong> — 5/4 week saw 9 of 18 unsubs in a single week of 4 text sends</td><td><span class="pill attn">Medium</span></td><td>Cap at 3 text sends across 5 days (Mon, Wed, Fri); pick the highest-converting framings only</td></tr>
+      <tr><td><strong>Text fatigue</strong> — 5/4 week saw 9 of 18 unsubs in a single week of 4 text sends</td><td><span class="pill attn">Medium</span></td><td>Cap at 3 text sends across 7 days (Wed, Sat, Sun); pick the highest-converting framings only</td></tr>
+      <tr><td><strong>Email fatigue</strong> — 7 consecutive daily emails is on the high end of cadence</td><td><span class="pill attn">Medium</span></td><td>Vary the theme each day · top-20% / Wyld-segment first sends Tue + Wed to reduce broad-list saturation · monitor unsub rate after Wed and pull back Thu if it spikes</td></tr>
+      <tr><td><strong>Sat Peak push duplicates Giovanni's existing workflow</strong></td><td><span class="pill flat">Low</span></td><td>Check Sweed before scheduling — if "Peak Saturday Text - 23 May" / "Peak Saturday Push - 23 May" exist in Giovanni's workflows, defer to his and don't duplicate. If they don't exist for 5/23, this campaign provides them.</td></tr>
       <tr><td><strong>Wyld contest entry confusion</strong> (math is opaque to first-time readers)</td><td><span class="pill attn">Medium</span></td><td>Same paragraph in every send — repetition reinforces; budtenders trained on in-store explanation</td></tr>
       <tr><td><strong>Generic theme tanking text</strong> (5/11 "Cart Day Text" at 0.48%)</td><td><span class="pill flat">Low</span></td><td>Each text frames around action verb + specific SKU + price</td></tr>
-      <tr><td><strong>120 Day Winback launches mid-week</strong> and competes for attention</td><td><span class="pill flat">Low</span></td><td>Schedule Winback start date for Mon 5/26+ so it doesn't overlap with this campaign</td></tr>
-      <tr><td><strong>Weekend content vacuum</strong> (Sat 5/23 / Sun 5/24 not covered)</td><td><span class="pill flat">Low</span></td><td>Build 5/23–5/24 messaging from this week's open/click data — separate plan</td></tr>
+      <tr><td><strong>120 Day Winback launches mid-campaign</strong> and competes for attention</td><td><span class="pill flat">Low</span></td><td>Schedule Winback start date for Mon 5/26+ so it doesn't overlap with this campaign</td></tr>
     </tbody>
   </table>
 </section>
@@ -541,20 +607,23 @@ Add a Wyld or Lost Farm gummy on a $75+ order = entered to win a year of Wyld. T
     <thead><tr><th>Day</th><th>Channel</th><th>Featured deal(s)</th><th>Theme / Subject</th><th class="num">List</th></tr></thead>
     <tbody>
       <tr><td><strong>Mon 5/18</strong></td><td><span class="pill email">EMAIL</span></td><td>HIGHT 7g + Grapple Pie</td><td>Stock Up Monday — HIGHT 7g 2/$65, Grapple Pie 2/$50</td><td class="num">~700</td></tr>
-      <tr><td>Mon 5/18</td><td><span class="pill text">TEXT</span></td><td>HIGHT 7g 2/$65</td><td>"Stock up" + specific price</td><td class="num">~620</td></tr>
-      <tr><td>Mon 5/18</td><td><span class="pill push">PUSH</span></td><td>Same as text</td><td>Mirror</td><td class="num">~64</td></tr>
+      <tr><td>Mon 5/18</td><td><span class="pill push">PUSH</span></td><td>HIGHT 7g 2/$65</td><td>"Stock Up Monday" short version</td><td class="num">~64</td></tr>
       <tr><td><strong>Tue 5/19</strong></td><td><span class="pill email">EMAIL</span></td><td>Miss Grass + Jersey Trio</td><td>Premium Picks Tuesday</td><td class="num">~700 (top-20% AOV first)</td></tr>
       <tr><td><strong>Wed 5/20</strong></td><td><span class="pill email">EMAIL</span></td><td>HIGHT pre-roll 2pks (both)</td><td>Wyld Wednesday — Pre-Roll Bundles + Year of Wyld</td><td class="num">~700 (Wyld segment first)</td></tr>
       <tr><td>Wed 5/20</td><td><span class="pill text">TEXT</span></td><td>HIGHT pre-roll 2pks</td><td>"Wyld Wednesday" + 3 for $21</td><td class="num">~620</td></tr>
       <tr><td>Wed 5/20</td><td><span class="pill push">PUSH</span></td><td>Same as text</td><td>Mirror</td><td class="num">~64</td></tr>
       <tr><td><strong>Thu 5/21</strong></td><td><span class="pill email">EMAIL</span></td><td>HIGHT 7g + Miss Grass (re-feature)</td><td>Stock the Weekend — Flower Bundles Still On</td><td class="num">~700</td></tr>
-      <tr><td><strong>Fri 5/22</strong></td><td><span class="pill email">EMAIL</span></td><td>All 6 (closer)</td><td>Last Day to Save — All 6 Deals End Tonight</td><td class="num">~700</td></tr>
-      <tr><td>Fri 5/22</td><td><span class="pill text">TEXT</span></td><td>All 6 (urgency)</td><td>"Last day" + 3 SKUs</td><td class="num">~620</td></tr>
-      <tr><td>Fri 5/22</td><td><span class="pill push">PUSH</span></td><td>Same as text</td><td>Mirror</td><td class="num">~64</td></tr>
+      <tr><td><strong>Fri 5/22</strong></td><td><span class="pill email">EMAIL</span></td><td>Strain Trio + HIGHT $10 pre-roll 2pks</td><td>Weekend Ready — Jersey, Sauce Boss & Mac N' Jack</td><td class="num">~700</td></tr>
+      <tr><td><strong>Sat 5/23</strong></td><td><span class="pill email">EMAIL</span></td><td>All 6 (Peak Saturday)</td><td>Peak Saturday — All 6 Bundles Live, 2 Days Left to Enter</td><td class="num">~700</td></tr>
+      <tr><td>Sat 5/23</td><td><span class="pill text">TEXT</span></td><td>HIGHT 7g + Grapple Pie + pre-roll 2pks</td><td>"Peak Saturday" + 3 SKUs</td><td class="num">~620</td></tr>
+      <tr><td>Sat 5/23</td><td><span class="pill push">PUSH</span></td><td>Same as text</td><td>Mirror</td><td class="num">~64</td></tr>
+      <tr><td><strong>Sun 5/24</strong></td><td><span class="pill email">EMAIL</span></td><td>All 6 (closer)</td><td>Last Day to Save — All 6 Deals End Tonight</td><td class="num">~700</td></tr>
+      <tr><td>Sun 5/24</td><td><span class="pill text">TEXT</span></td><td>All 6 (urgency)</td><td>"Last day" + 3 SKUs</td><td class="num">~620</td></tr>
+      <tr><td>Sun 5/24</td><td><span class="pill push">PUSH</span></td><td>Same as text</td><td>Mirror</td><td class="num">~64</td></tr>
     </tbody>
   </table>
 
-  <p style="font-size:15px; color:var(--charcoal-light); margin-top:14px;"><strong>Total broadcasts:</strong> 5 emails + 3 texts + 3 pushes = <strong>11 sends</strong> across 5 weekdays.</p>
+  <p style="font-size:15px; color:var(--charcoal-light); margin-top:14px;"><strong>Total broadcasts:</strong> 7 emails + 3 texts + 4 pushes = <strong>14 sends</strong> across 7 days (Mon–Sun).</p>
 </section>
 
 <!-- Confirm before launch -->
@@ -566,16 +635,16 @@ Add a Wyld or Lost Farm gummy on a $75+ order = entered to win a year of Wyld. T
     <li><strong>Wyld-purchaser segment exists in Sweed</strong> (or can be built) — enables Wednesday personalization with expected open-rate lift</li>
     <li><strong>High-AOV / top-20% segment exists</strong> — enables Tuesday premium targeting</li>
     <li><strong>Confirm Wed 5/20 is the active Wyld Wednesday date</strong> for in-store promotion so the online + in-store messaging syncs</li>
-    <li><strong>Confirm all 6 deals go live Mon 5/18 with synchronized inventory</strong> so Monday's launch email doesn't oversell SKUs that aren't actually stocked yet</li>
+    <li><strong>Confirm Giovanni doesn't already have "Peak Saturday Text - 23 May" + "Peak Saturday Push - 23 May" workflows queued</strong> — if he does, defer to his sends and skip this campaign's Sat text/push to avoid duplication</li>
+    <li><strong>Confirm all 6 deals go live Mon 5/18 with synchronized inventory</strong> and that supply lasts through Sun 5/24 close-of-business</li>
     <li><strong>Set 120 Day Winback start date to Mon 5/26</strong> so it doesn't overlap with this campaign's broadcast cadence</li>
   </ol>
 </section>
 
-<!-- Footer -->
 <section style="text-align:center; color:var(--gray-500); font-size:13px; margin-bottom:0;">
   <hr style="border:none; border-top:1px solid var(--gray-300); margin: 40px 0 24px;" />
-  <p>Noiré Dispensary × Dispenza · Outreach Campaign Plan · Mon 5/18 → Fri 5/22, 2026 · Drafted 2026-05-15 · Darrell Clay, Account Manager</p>
-  <p>Sources: Sweed MarketingStat 2026-05-01 → 2026-05-14 export · 5/18–5/22 featured-deals graphic · active Noiré × Wyld contest (through 2026-06-30)</p>
+  <p>Noiré Dispensary × Dispenza · Outreach Campaign Plan · Mon 5/18 → Sun 5/24, 2026 · Drafted 2026-05-15 · Darrell Clay, Account Manager</p>
+  <p>Sources: Sweed MarketingStat 2026-05-01 → 2026-05-14 export · 5/18–5/24 featured-deals graphic · active Noiré × Wyld contest (through 2026-06-30)</p>
 </section>
 
 </div>
