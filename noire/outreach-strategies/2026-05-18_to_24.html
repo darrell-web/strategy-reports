@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Noiré — Outreach Campaign 5/18–5/24, 2026 (Mon–Sun)</title>
+<title>Noiré — Outreach Campaign 5/18–5/25, 2026 (Mon–Memorial Day) · Memorial Day pivot</title>
 <style>
   :root {
     --brown-900: #1f1611;
@@ -66,8 +66,9 @@
   .frame-hero h3 { color: #fff; margin: 0 0 14px; font-size: 24px; font-weight: 700; }
   .frame-hero p { font-size: 16px; opacity: 0.92; margin: 0; }
 
-  /* Calendar strip (7 days) */
-  .week-strip { display: grid; grid-template-columns: repeat(7, 1fr); gap: 8px; margin: 24px 0; }
+  /* Calendar strip (8 days incl. Memorial Day) */
+  .week-strip { display: grid; grid-template-columns: repeat(8, 1fr); gap: 8px; margin: 24px 0; }
+  .day-pill.memorial { background: linear-gradient(135deg, #5c0e08 0%, var(--gold-dark) 100%); color: #fff; border-color: var(--gold); }
   .day-pill { background: #fff; border: 1px solid var(--gray-300); border-radius: 10px; padding: 12px 10px; text-align: center; }
   .day-pill.anchor { background: var(--gold-light); border-color: var(--gold); }
   .day-pill.wyld { background: var(--brown-900); color: var(--gold-light); border-color: var(--gold-dark); }
@@ -154,19 +155,25 @@
     .patterns, .kpi-grid, .deal-grid { grid-template-columns: 1fr; }
     .week-strip { grid-template-columns: repeat(2, 1fr); }
   }
+
+  /* Memorial Day pivot banner */
+  .pivot-banner { background: linear-gradient(135deg, #5c0e08 0%, var(--gold-dark) 100%); color: #fff; padding: 24px 30px; border-radius: 12px; margin: 24px 0; border: 2px solid var(--gold); }
+  .pivot-banner .label { text-transform: uppercase; letter-spacing: 4px; font-size: 11px; color: var(--gold-light); font-weight: 800; margin-bottom: 8px; }
+  .pivot-banner h3 { color: #fff; margin: 0 0 10px; font-size: 22px; font-weight: 700; }
+  .pivot-banner p { margin: 0; font-size: 15px; opacity: 0.94; }
 </style>
 </head>
 <body>
 
 <header class="cover">
   <div class="cover-inner">
-    <div class="eyebrow">Noiré × Dispenza · Outreach Campaign Plan</div>
-    <h1>Mon 5/18 → Sun 5/24 · <span>Bundle, Save, Enter to Win</span></h1>
-    <p class="subtitle">Seven-day Mon–Sun cadence. Six deals. One year of Wyld up for grabs. Built on the open-rate evidence from 5/1–5/14 — email leads, text reinforces, push is supplementary.</p>
-    <div class="stamp"><span class="dot">●</span> Mon–Sun Cadence · Evidence-Backed · Wyld-Integrated</div>
+    <div class="eyebrow">Noiré × Dispenza · Outreach Campaign Plan · Memorial Day pivot</div>
+    <h1>Mon 5/18 → Mon 5/25 · <span>Bundle, Save, Holiday Weekend Pivot</span></h1>
+    <p class="subtitle">Eight-day Mon–Memorial-Day cadence. Two deal phases: Mon–Thu ran the original 6 HIGHT/Miss Grass/Strain-Trio bundles; Fri–Mon pivots to <strong>5 new Memorial Day deals</strong> (Green Joy, Noiré 28g house brand, Treeworks BOGO, Glass Meadows). Email leads, text reinforces, push is supplementary. Wyld contest still in play.</p>
+    <div class="stamp"><span class="dot">●</span> Mon–Memorial-Day · Memorial Day Pivot · Wyld-Integrated</div>
     <div class="cover-meta">
-      <div><div class="label">Window</div><div class="value">Mon 5/18 → Sun 5/24</div></div>
-      <div><div class="label">Broadcasts</div><div class="value">7 email · 3 text · 3 push</div></div>
+      <div><div class="label">Window</div><div class="value">Mon 5/18 → Mon 5/25</div></div>
+      <div><div class="label">Broadcasts</div><div class="value">8 email · 4 text · 4 push</div></div>
       <div><div class="label">Contest</div><div class="value">Wyld year supply (thru 6/30)</div></div>
       <div><div class="label">Prepared by</div><div class="value">Darrell Clay, Dispenza</div></div>
     </div>
@@ -175,13 +182,13 @@
 
 <div class="container">
 
-<!-- Week at a glance strip (7 days) -->
+<!-- Week at a glance strip (8 days incl. Memorial Day) -->
 <section style="margin-top:-4px;">
   <div class="week-strip">
     <div class="day-pill anchor">
       <div class="dow">Mon · 5/18</div>
       <div class="date">🚀</div>
-      <div class="theme">Stock Up Monday · Week Launch</div>
+      <div class="theme">Stock Up · Original 6 Deals</div>
     </div>
     <div class="day-pill">
       <div class="dow">Tue · 5/19</div>
@@ -196,23 +203,34 @@
     <div class="day-pill">
       <div class="dow">Thu · 5/21</div>
       <div class="date">🌿</div>
-      <div class="theme">Weekend Prep</div>
+      <div class="theme">Pivot Prep · Last day of original deals</div>
     </div>
-    <div class="day-pill">
-      <div class="dow">Fri · 5/22</div>
-      <div class="date">🎉</div>
-      <div class="theme">Weekend Ready · Strain Trio</div>
+    <div class="day-pill memorial">
+      <div class="dow" style="color:var(--gold-light);">Fri · 5/22</div>
+      <div class="date">🇺🇸</div>
+      <div class="theme">Memorial Day Kickoff · NEW deals begin</div>
     </div>
     <div class="day-pill peak">
       <div class="dow" style="color:var(--brown-900);">Sat · 5/23</div>
       <div class="date">🔥</div>
-      <div class="theme">Peak Saturday</div>
+      <div class="theme">Holiday Saturday · Peak day</div>
     </div>
-    <div class="day-pill closer">
-      <div class="dow" style="color:#fde7e7;">Sun · 5/24</div>
-      <div class="date">⏰</div>
-      <div class="theme">Last Day Closer</div>
+    <div class="day-pill memorial">
+      <div class="dow" style="color:var(--gold-light);">Sun · 5/24</div>
+      <div class="date">🎆</div>
+      <div class="theme">Memorial Day Eve · Deals continue</div>
     </div>
+    <div class="day-pill memorial">
+      <div class="dow" style="color:var(--gold-light);">Mon · 5/25</div>
+      <div class="date">⭐</div>
+      <div class="theme">MEMORIAL DAY · Closer + final urgency</div>
+    </div>
+  </div>
+
+  <div class="pivot-banner">
+    <div class="label">MID-WEEK PIVOT</div>
+    <h3>Memorial Day weekend brings a fresh 5-deal mix.</h3>
+    <p>Mon 5/18 → Thu 5/21 ran the original Stock Up Monday → Premium Picks → Wyld Wednesday → Weekend Prep arc on HIGHT, Miss Grass, Grapple Pie, and the Jersey/Sauce Boss/Mac N' Jack strain trio. <strong>Starting Friday 5/22, Noiré pivots to 5 new Memorial Day deals</strong> — Green Joy 3.5g 3/$45, Noiré 28g house brand $113.40, Treeworks Tinctures BOGO 50%, Glass Meadows 1g 2/$20, and Green Joy 5pk 2/$30. Deals run through close-of-business <strong>Memorial Day Monday 5/25</strong>.</p>
   </div>
 </section>
 
@@ -261,9 +279,10 @@
 <!-- Featured deals -->
 <section>
   <div class="section-num">SECTION 02</div>
-  <h2>The 6 deals fueling the week</h2>
-  <p class="lede">Every offer is a bundle mechanic. Most push the ticket past $75 pre-tax with a single Wyld gummy add-on — which is the Wyld contest entry threshold. Deals run Mon 5/18 → close-of-business Sun 5/24 while supplies last.</p>
+  <h2>The deals fueling the 8 days</h2>
+  <p class="lede">Two phases. Mon 5/18 → Thu 5/21 ran the original 6 HIGHT/Miss Grass/Strain-Trio bundles. Fri 5/22 → Mon 5/25 pivots to 5 Memorial Day deals. Both sets are bundle mechanics — the Wyld contest hook ($75+ pre-tax pre-roll with a Wyld/Lost Farm gummy) still applies through 6/30.</p>
 
+  <h3>Phase 1 — Original 6 deals (Mon 5/18 → Thu 5/21, already ran)</h3>
   <div class="deal-grid">
     <div class="deal"><div class="name">HIGHT 7g Flower</div><div class="price">2 for $65</div><div class="each">$32.50 each effective</div></div>
     <div class="deal"><div class="name">Miss Grass 4.2g · Premium Picks</div><div class="price">2 for $65</div><div class="each">$32.50 each effective</div></div>
@@ -273,27 +292,48 @@
     <div class="deal"><div class="name">HIGHT $10 2pk Pre-Rolls</div><div class="price">3 for $27</div><div class="each">$9 per 2-pack · $4.50/pre-roll</div></div>
   </div>
 
+  <h3 style="color:#5c0e08; margin-top:32px;">Phase 2 — Memorial Day Pivot (Fri 5/22 → Mon 5/25)</h3>
+  <div class="deal-grid">
+    <div class="deal"><div class="name">Green Joy 3.5g · NJ Craft Cannabis</div><div class="price">3 for $45</div><div class="each">$15 each · $4.29/g</div></div>
+    <div class="deal"><div class="name">Noiré 28g Flower · house brand bulk</div><div class="price">$113.40</div><div class="each">Was $120 · $4.05/g</div></div>
+    <div class="deal"><div class="name">Treeworks Tinctures</div><div class="price">BOGO 50%</div><div class="each">Buy one, get one half off</div></div>
+    <div class="deal"><div class="name">Glass Meadows 1g Pre-Roll</div><div class="price">2 for $20</div><div class="each">$10 each</div></div>
+    <div class="deal"><div class="name">Green Joy 5pk 2.5g Pre-Roll</div><div class="price">2 for $30</div><div class="each">$15 per 5pk · $3/pre-roll</div></div>
+  </div>
+
   <div class="card brown">
-    <strong>HIGHT brand dominates this week — 3 of 6 deals.</strong> Lead with HIGHT in single-brand emails (Mon + Wed + Sat). Miss Grass + Jersey/Sauce Boss/Mac N' Jack carry the premium positioning (Tue + Fri). Offers not stackable; while supplies last.
+    <strong>Memorial Day brand mix:</strong> Green Joy dominates (2 of 5). Noiré <strong>house-brand 28g</strong> introduces a bulk value-tier — the first time the Noiré-branded SKU is a featured deal. <strong>Treeworks Tinctures</strong> adds the tincture category (aligns with NJ Headset April 2026 trend: Tincture &amp; Sublingual <strong>+50.0% YoY</strong>). No edibles in the mix — consistent with NJ state −14.1% YoY edible decline. Offers not stackable; while supplies last.
+  </div>
+
+  <div class="card gold">
+    <strong>Wyld contest math on Memorial Day deals:</strong>
+    <ul style="margin:8px 0 0;">
+      <li><strong>Noiré 28g ($113.40)</strong> clears $75 by itself — single gummy add-on = entry, no other SKU needed</li>
+      <li><strong>Green Joy 3.5g (3 for $45) + Wyld gummy (~$30)</strong> = ~$75 — single gummy clears the threshold</li>
+      <li><strong>Treeworks BOGO 50%</strong> on typical $40–60 retail tinctures = $50/$25 = $75 → clears threshold naturally</li>
+      <li><strong>Glass Meadows 1g (2 for $20)</strong> + Wyld + extras = needs additional SKU to clear $75</li>
+      <li><strong>Green Joy 5pk (2 for $30)</strong> + Wyld + extras = needs additional SKU to clear $75</li>
+    </ul>
+    <em>Lead with Noiré 28g + Green Joy 3.5g + Treeworks BOGO in contest-emphasis sends — those three are natural threshold-clearers.</em>
   </div>
 </section>
 
 <!-- Channel mix -->
 <section>
   <div class="section-num">SECTION 03</div>
-  <h2>Channel mix · 7 days</h2>
+  <h2>Channel mix · 8 days (Mon → Memorial Day)</h2>
 
   <table>
     <thead><tr><th>Channel</th><th class="num">Sends</th><th>List size</th><th>Why this allocation</th></tr></thead>
     <tbody>
-      <tr><td><span class="pill email">EMAIL</span></td><td class="num">7</td><td>~700</td><td>Best engagement (9.5% avg open) · biggest reachable audience · one send each day Mon–Sun</td></tr>
-      <tr><td><span class="pill text">TEXT</span></td><td class="num">3</td><td>~620</td><td>Bookend strategy — Wed Wyld anchor · Sat Peak Saturday · Sun closer urgency · capped at 3 to keep unsubs flat</td></tr>
-      <tr><td><span class="pill push">PUSH</span></td><td class="num">3</td><td>~64</td><td>Mirror text content · push list is small so this is supplementary, not primary</td></tr>
+      <tr><td><span class="pill email">EMAIL</span></td><td class="num">8</td><td>~700</td><td>Best engagement (9.5% avg open) · one send each day Mon–Memorial Day · Memorial Day pivot adds 1 send vs original 7-day plan</td></tr>
+      <tr><td><span class="pill text">TEXT</span></td><td class="num">4</td><td>~620</td><td>Wed Wyld + holiday weekend Fri/Sat/Sun/Mon. Originally 3 sends across 7 days; Memorial Day pivot adds Friday + Memorial Day Monday texts because both are high-buyer-intent holiday-window days. Sunday remains a text day too (Memorial Day Eve framing, not closer urgency). Total stays under text-fatigue threshold.</td></tr>
+      <tr><td><span class="pill push">PUSH</span></td><td class="num">5</td><td>~64</td><td>Mirror text content + Monday launch push · push list is small so this is supplementary, not primary</td></tr>
       <tr><td>Triggered</td><td class="num">Ongoing</td><td>Variable</td><td>Welcome / Abandoned Cart / Birthday / Winback continue automatically</td></tr>
     </tbody>
   </table>
 
-  <p style="font-size:14px; color:var(--charcoal-light);">Typical recipient receives ~13 broadcast touches across 7 days. Text concentrated on the 3 highest-leverage days (Wed Wyld, Sat Peak, Sun Closer) — Mon launch relies on email alone since the 5/11 data showed Monday text bombed at 0.96% while Monday email pulled 10.38%.</p>
+  <p style="font-size:14px; color:var(--charcoal-light);">Typical recipient receives ~17 broadcast touches across 8 days — ~12 of which fall in the Memorial Day pivot window (Fri–Mon). Text concentrated on the highest-leverage days: <strong>Wed Wyld + Fri Memorial Day kickoff + Sat Holiday Saturday + Sun Memorial Day Eve + Mon Memorial Day closer</strong>. Monday 5/18 launch still relies on email alone (Mon 5/11 data showed Monday text at 0.96% vs Monday email at 10.38%) — but Memorial Day Monday text IS justified because holiday buying intent overrides typical Monday text underperformance.</p>
 </section>
 
 <!-- Day-by-day -->
@@ -429,62 +469,78 @@
     </div>
   </div>
 
-  <!-- Friday 5/22 -->
+  <!-- Friday 5/22 — MEMORIAL DAY KICKOFF -->
   <div class="day-block">
-    <div class="day-head fri">
+    <div class="day-head fri" style="background: linear-gradient(135deg, #5c0e08, var(--gold-dark));">
       <div>
-        <h3>🎉 Fri 5/22 · Weekend Ready · Strain Trio Spotlight</h3>
-        <div class="meta">Pre-Saturday brand-amplification day · feature the under-promoted strain trio + premium positioning</div>
+        <h3>🇺🇸 Fri 5/22 · Memorial Day Kickoff · NEW deals begin</h3>
+        <div class="meta">Pivot day · introduce the 5 Memorial Day deals · 4-day weekend buying window opens</div>
       </div>
-      <span class="tag">EMAIL ONLY</span>
+      <span class="tag">EMAIL + TEXT</span>
     </div>
     <div class="day-body">
+      <p style="margin-top:0;"><em>Friday is the pivot. The original 6 deals expired Thursday; the 5 Memorial Day deals go live today and run through Mon 5/25 close. Add Friday text (was email-only in original plan) because this is the first day of a holiday-weekend window — recipients need both the introduction email AND the reinforcement that the deals are live.</em></p>
 
       <div class="send-row">
-        <div class="channel"><span class="pill email">EMAIL</span> · ~700 list · 1 send</div>
-        <div class="subject">Subject: Weekend Ready — Jersey, Sauce Boss & Mac N' Jack + Pre-Roll Picks</div>
-        <div class="copy-block"><strong>Preheader:</strong> Strains worth asking for by name. Plus pre-rolls for whatever's on the schedule.<br/><br/>
-<strong>Header:</strong> Weekend Ready at Noiré<br/><br/>
-<strong>Body lead:</strong> "Three premium strains we save for connoisseur conversations: Jersey, Sauce Boss, and Mac N' Jack. Available all weekend — plus our HIGHT pre-roll multi-packs for whatever your Saturday looks like..."<br/><br/>
-<strong>Featured deals:</strong><br/>
-&nbsp;&nbsp;1. <strong>Jersey · Sauce Boss · Mac N' Jack premium strain trio</strong> (hero — connoisseur framing)<br/>
-&nbsp;&nbsp;2. <strong>HIGHT $10 2pk Pre-Rolls — 3 for $27</strong> (secondary — weekend-ready pre-rolls)<br/><br/>
-<strong>Wyld footer:</strong> Standard contest paragraph.<br/><br/>
-<strong>CTA:</strong> Plan Your Weekend</div>
-        <div class="why">Why this combo: Friday is the bridge to Peak Saturday. The strain trio got a name-only mention on Tuesday's premium email — Friday is where it gets the spotlight. Cross-bundle with the mid-tier pre-roll multi-pack ($10 2pks at 3/$27) which fits weekend social occasions. No text on Friday — Saturday's Peak text needs full impact.</div>
+        <div class="channel"><span class="pill email">EMAIL</span> · ~700 list · 1 send · 10–11 AM ET</div>
+        <div class="subject">Subject: Memorial Day Weekend at Noiré — Green Joy 3/$45, Noiré 28g $113.40, Treeworks BOGO</div>
+        <div class="copy-block"><strong>Preheader:</strong> Five new deals just dropped. Run through Memorial Day Monday at close.<br/><br/>
+<strong>Header:</strong> Memorial Day Weekend Starts Now<br/><br/>
+<strong>Body lead:</strong> "Five new deals just dropped at Noiré — and they run all the way through Memorial Day Monday. Whether you're hosting the cookout, hitting the road, or just stocking the porch, this is the weekend mix..."<br/><br/>
+<strong>Featured deals (all 5, with hero callouts):</strong><br/>
+&nbsp;&nbsp;1. <strong>Green Joy 3.5g — 3 for $45</strong> (hero — best per-gram value)<br/>
+&nbsp;&nbsp;2. <strong>Noiré 28g Flower — $113.40</strong> (was $120 · house-brand bulk)<br/>
+&nbsp;&nbsp;3. <strong>Treeworks Tinctures — BOGO 50% off</strong> (tincture entry — discreet for travel)<br/>
+&nbsp;&nbsp;4. <strong>Glass Meadows 1g Pre-Roll — 2 for $20</strong><br/>
+&nbsp;&nbsp;5. <strong>Green Joy 5pk 2.5g Pre-Roll — 2 for $30</strong> (share-pack)<br/><br/>
+<strong>Wyld top-of-body:</strong> "Memorial Day weekend, you're entered to win a year of Wyld on any $75+ pre-tax order with a Wyld or Lost Farm gummy in the basket. Easiest threshold-clearers this weekend: Noiré 28g ($113.40 by itself) or Green Joy 3.5g 3/$45 + one gummy."<br/><br/>
+<strong>CTA:</strong> Shop the Memorial Day Weekend Mix</div>
+        <div class="why">Why all 5 deals up front: Friday is the kickoff send — recipients need to see the full new deal mix in one place. Lead with Green Joy 3.5g + Noiré 28g + Treeworks BOGO because those three naturally clear the $75 Wyld contest threshold; the pre-rolls are pairing items, not threshold-clearers on their own. Morning send (10–11 AM) gives customers time to plan a same-day Friday stop before holiday travel.</div>
+      </div>
+
+      <div class="send-row">
+        <div class="channel"><span class="pill text">TEXT</span> · ~620 list · 1 send · 3–4 PM ET (pre-evening buyer intent)</div>
+        <div class="subject">Featured SKUs: Green Joy 3.5g 3/$45 + Noiré 28g $113.40 + Treeworks BOGO 50%</div>
+        <div class="copy-block">Memorial Day weekend at Noiré → Green Joy 3.5g 3/$45, Noiré 28g $113.40 (was $120), Treeworks Tinctures BOGO 50%. Through Mon 5/25 close. Wyld entry on $75+. [link]</div>
+        <div class="why">Why Friday text (added to original plan): Memorial Day weekend = travel weekend; customers are making last-minute Friday-afternoon stops. Specific SKUs + prices + holiday-end date + Wyld hook = all four winning text-pattern boxes ticked. We're adding this text vs the original plan's email-only Friday — the holiday context justifies the extra send.</div>
+      </div>
+
+      <div class="send-row">
+        <div class="channel"><span class="pill push">PUSH</span> · ~64 list · 1 send · mirrors text body</div>
+        <div class="copy-block">Memorial Day at Noiré → Green Joy 3.5g 3/$45, Noiré 28g $113.40, Treeworks BOGO 50%. Through Mon 5/25. [link]</div>
       </div>
     </div>
   </div>
 
-  <!-- Saturday 5/23 -->
+  <!-- Saturday 5/23 — HOLIDAY SATURDAY -->
   <div class="day-block">
     <div class="day-head sat">
       <div>
-        <h3>🔥 Sat 5/23 · Peak Saturday</h3>
-        <div class="meta">Highest single-day conversion potential · matches Giovanni's existing Peak Saturday Text/Push workflow naming</div>
+        <h3>🔥 Sat 5/23 · Holiday Saturday · Peak day of Memorial Day weekend</h3>
+        <div class="meta">Highest single-day conversion potential · Memorial Day weekend tailwind · Giovanni's "Peak Saturday Text/Push" workflow naming</div>
       </div>
       <span class="tag">3-CHANNEL DAY</span>
     </div>
     <div class="day-body">
-      <p style="margin-top:0;"><em>Saturday is traditionally the highest-conversion day in cannabis retail. Giovanni's existing Sweed workflows include "Peak Saturday Text" and "Peak Saturday Push" — this campaign's Sat sends should slot into that naming convention so they integrate with his system rather than duplicate it.</em></p>
+      <p style="margin-top:0;"><em>Saturday is traditionally the highest-conversion day in cannabis retail — and a Memorial Day weekend Saturday adds the holiday-shopping tailwind on top. Giovanni's existing Sweed workflows include "Peak Saturday Text" and "Peak Saturday Push" — slot into that naming convention rather than duplicating.</em></p>
 
       <div class="send-row">
         <div class="channel"><span class="pill email">EMAIL</span> · ~700 list · 1 send · morning send (10–11 AM ET to catch pre-shop planning)</div>
-        <div class="subject">Subject: Peak Saturday — All 6 Bundles Live, 2 Days Left to Enter the Wyld Contest</div>
-        <div class="copy-block"><strong>Preheader:</strong> Stock up the right way today. Every bundle on the menu. Last weekend on the contest math.<br/><br/>
-<strong>Header:</strong> Peak Saturday at Noiré<br/><br/>
-<strong>Body lead:</strong> "It's Peak Saturday. Every bundle this week is still on, and you've got today and tomorrow to lock in your Wyld contest entry on a $75+ basket..."<br/><br/>
-<strong>Featured deals:</strong> All 6 (use the brown/gold deal graphic as the visual hero), with HIGHT 7g 2/$65 and HIGHT $8 pre-roll 2pks 3/$21 called out by name at the top as the volume-builders.<br/><br/>
-<strong>Wyld top-of-body:</strong> "Two days left on this week's bundle math. Add a Wyld or Lost Farm gummy on your $75+ order today and you're entered for a year supply. Contest closes 6/30."<br/><br/>
-<strong>CTA:</strong> Build Your Saturday Bundle</div>
-        <div class="why">Why all 6 + 2 anchor callouts: Saturday is the heaviest-converting day; the email should show breadth (all deals visible) AND give the budtenders / customer eye anchor SKUs (HIGHT flower + HIGHT pre-rolls). Morning send gives customers time to plan an in-store visit.</div>
+        <div class="subject">Subject: Holiday Saturday — All 5 Memorial Day Deals Live · 3 Days Left</div>
+        <div class="copy-block"><strong>Preheader:</strong> Memorial Day weekend Saturday at Noiré. Every deal still on through Monday close.<br/><br/>
+<strong>Header:</strong> Holiday Saturday at Noiré<br/><br/>
+<strong>Body lead:</strong> "It's Memorial Day weekend Saturday. Whether you're heading down the shore, hosting the cookout, or just taking a long weekend, every one of our 5 holiday deals is on through Monday at close..."<br/><br/>
+<strong>Featured deals:</strong> All 5 (use the brown/gold Memorial Day deals graphic as the visual hero), with <strong>Green Joy 3.5g 3/$45</strong> and <strong>Noiré 28g $113.40</strong> called out by name at the top as the volume-builders.<br/><br/>
+<strong>Wyld top-of-body:</strong> "Three days left on Memorial Day weekend bundle math. Easiest contest entry today: grab the Noiré 28g ($113.40) or stack Green Joy 3.5g (3/$45) with a Wyld gummy — either path clears the $75 threshold and gets you in for the year-of-Wyld."<br/><br/>
+<strong>CTA:</strong> Build Your Holiday Saturday Bundle</div>
+        <div class="why">Why hero on Green Joy 3.5g + Noiré 28g: these are the two natural Wyld contest threshold-clearers in the Memorial Day mix. Saturday is the heaviest-converting day and should feature the contest-eligible heroes plus the full 5-deal visual recap. Morning send so customers have time to plan an in-store stop before evening holiday-weekend activities.</div>
       </div>
 
       <div class="send-row">
         <div class="channel"><span class="pill text">TEXT</span> · ~620 list · 1 send · 12–1 PM ET (lunch buyer-intent window)</div>
-        <div class="subject">Featured SKUs: HIGHT 7g 2/$65 + Grapple Pie 2/$50 + pre-roll 2pks 3/$21</div>
-        <div class="copy-block">Peak Saturday at Noiré → HIGHT 7g 2/$65, Grapple Pie 2/$50, pre-roll 2pks 3/$21. Add Wyld → contest entry. Bundles end tomorrow. [link]</div>
-        <div class="why">Why Saturday text: highest single-day conversion potential. Action-verb anchor ("Peak Saturday") matches Giovanni's existing workflow naming. Specific SKUs + prices + Wyld hook + "ends tomorrow" urgency = all four winning text-pattern boxes ticked.</div>
+        <div class="subject">Featured SKUs: Green Joy 3.5g 3/$45 + Noiré 28g $113.40 + Treeworks BOGO 50%</div>
+        <div class="copy-block">Holiday Saturday at Noiré → Green Joy 3.5g 3/$45, Noiré 28g $113.40, Treeworks BOGO 50%. Through Memorial Day Mon close. Add Wyld → contest entry. [link]</div>
+        <div class="why">Why this framing: "Holiday Saturday" = action-verb + holiday context. Specific SKUs + prices + holiday end date + Wyld hook = all four winning text-pattern boxes ticked. Lunch-window send catches Saturday afternoon shoppers before the holiday-weekend evening rush.</div>
       </div>
 
       <div class="send-row">
@@ -494,39 +550,82 @@
     </div>
   </div>
 
-  <!-- Sunday 5/24 -->
+  <!-- Sunday 5/24 — MEMORIAL DAY EVE -->
   <div class="day-block">
     <div class="day-head sun">
       <div>
-        <h3>⏰ Sun 5/24 · Last Day Closer · All 6 Deals End Tonight</h3>
-        <div class="meta">Urgency day · all deals end at close · final-call broadcast across 3 channels</div>
+        <h3>🎆 Sun 5/24 · Memorial Day Eve · Deals continue tomorrow</h3>
+        <div class="meta">Holiday-eve traffic day · NOT urgency-close yet (deals extend through Mon 5/25) · feature stocking + travel framing</div>
       </div>
-      <span class="tag">3-CHANNEL DAY</span>
+      <span class="tag">EMAIL + TEXT</span>
     </div>
     <div class="day-body">
+      <p style="margin-top:0;"><em>Key shift vs original plan: Sunday is no longer the closer. Memorial Day Monday is the final day. Sunday's job is to convert recipients who've been on the fence into Memorial Day Monday shoppers — and capture last-minute Sunday-evening stockers heading into the holiday.</em></p>
 
       <div class="send-row">
-        <div class="channel"><span class="pill email">EMAIL</span> · ~700 list · 1 send · morning send (10 AM ET) so customers can plan a same-day visit</div>
-        <div class="subject">Subject: Last Day to Save — All 6 Deals End Tonight</div>
-        <div class="copy-block"><strong>Preheader:</strong> HIGHT, Miss Grass, Grapple Pie, Jersey Trio, pre-roll 2pks. Gone after 8 PM.<br/><br/>
-<strong>Header:</strong> Tonight at Closing — All Deals End<br/><br/>
-<strong>Body lead:</strong> "Last call. Every deal on this week's menu ends at close tonight. If you've been waiting to stock up, today's the day..."<br/><br/>
-<strong>Featured deals:</strong> All 6 — full recap grid (the brown/gold deal graphic).<br/><br/>
-<strong>Wyld top-of-body:</strong> "Last day to add a Wyld or Lost Farm gummy to your $75+ order and lock in your contest entry. The contest itself continues through 6/30 — but this week's bundle math is gone after tonight."<br/><br/>
-<strong>CTA:</strong> Reserve Before Close</div>
-        <div class="why">Why "All 6 deals" recap on Sunday: this is the urgency day; show everything that's about to end so customers can self-select whichever bundle hasn't crossed their threshold yet during the week. Sunday closes the Mon–Sun cadence.</div>
+        <div class="channel"><span class="pill email">EMAIL</span> · ~700 list · 1 send · morning send (10 AM ET)</div>
+        <div class="subject">Subject: Memorial Day Eve at Noiré — All 5 Deals Live Through Tomorrow</div>
+        <div class="copy-block"><strong>Preheader:</strong> Green Joy, Noiré 28g, Treeworks BOGO, Glass Meadows, Green Joy 5pk. Through Monday close.<br/><br/>
+<strong>Header:</strong> Memorial Day Eve at Noiré<br/><br/>
+<strong>Body lead:</strong> "One more day on Memorial Day weekend deals. Whether you're stocking up for Monday's cookout, finishing your weekend with one more roll, or grabbing a tincture for the road home, all 5 deals are live through Memorial Day Monday at close..."<br/><br/>
+<strong>Featured deals:</strong> All 5 — full recap grid (the brown/gold Memorial Day deals graphic).<br/><br/>
+<strong>Wyld top-of-body:</strong> "Two days left to add a Wyld or Lost Farm gummy to your $75+ order and lock in your year-of-Wyld contest entry. Easiest threshold-clearers: Noiré 28g ($113.40 by itself) or Green Joy 3.5g 3/$45 + a single gummy."<br/><br/>
+<strong>CTA:</strong> Plan Your Memorial Day Run</div>
+        <div class="why">Why Memorial Day Eve framing: Sunday is the bridge to Memorial Day — recipients are split between "wrap up the weekend" and "plan tomorrow's holiday." Email speaks to both. Don't use "last day" urgency yet — that's reserved for Monday's send. Show all 5 in the recap grid because the audience may have skipped Friday/Saturday emails and needs the full re-introduction.</div>
       </div>
 
       <div class="send-row">
-        <div class="channel"><span class="pill text">TEXT</span> · ~620 list · 1 send · 12–1 PM ET</div>
-        <div class="subject">Featured SKUs: All 6 deals — call out HIGHT 7g + Grapple Pie + pre-roll 2pks by name</div>
-        <div class="copy-block">Last day at Noiré → HIGHT 7g 2/$65, Grapple Pie 2/$50, pre-roll 2pks 3/$21. All deals end tonight at close. Add Wyld → contest entry. [link]</div>
-        <div class="why">Why this framing: Urgency anchor + specific prices + contest hook = ticks every box from the winning text-pattern checklist. Sunday afternoon send catches customers planning their last-minute stops before the week reset.</div>
+        <div class="channel"><span class="pill text">TEXT</span> · ~620 list · 1 send · 4–5 PM ET (Sunday late-afternoon planning window)</div>
+        <div class="subject">Featured SKUs: Green Joy 5pk 2/$30 + Glass Meadows 2/$20 (Sunday evening pre-roll lean)</div>
+        <div class="copy-block">Memorial Day Eve at Noiré → Green Joy 5pk 2/$30, Glass Meadows 2/$20. Plus Noiré 28g $113.40, Green Joy 3.5g 3/$45. All 5 deals through Mon close. [link]</div>
+        <div class="why">Why pre-roll lead on Sunday text: Sunday evening is a casual-cannabis occasion — pre-roll multi-packs match the use case. Then the wider deal context for breadth. "Memorial Day Eve" framing creates anticipation for Monday without burning the urgency anchor.</div>
       </div>
 
       <div class="send-row">
         <div class="channel"><span class="pill push">PUSH</span> · ~64 list · 1 send</div>
         <div class="copy-block">Mirror text body.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Monday 5/25 — MEMORIAL DAY CLOSER -->
+  <div class="day-block">
+    <div class="day-head" style="background: linear-gradient(135deg, #5c0e08 0%, var(--gold-dark) 100%); color: #fff;">
+      <div>
+        <h3 style="color:#fff;">⭐ Mon 5/25 · MEMORIAL DAY · All 5 deals end tonight</h3>
+        <div class="meta" style="color:var(--gold-light);">Holiday Monday · final urgency day · all-deals-end-tonight closer</div>
+      </div>
+      <span class="tag" style="background: rgba(255,255,255,0.2); border-color: rgba(255,255,255,0.5); color:#fff;">3-CHANNEL DAY</span>
+    </div>
+    <div class="day-body">
+      <p style="margin-top:0;"><em>Memorial Day Monday is the closer. Customers shopping today fall into three modes: (1) last-minute Memorial Day cookout stockers, (2) Monday-off recreational shoppers, (3) deal-deadline urgency converters. The send sequence speaks to all three.</em></p>
+
+      <div class="send-row">
+        <div class="channel"><span class="pill email">EMAIL</span> · ~700 list · 1 send · morning send (10 AM ET so customers can plan a same-day visit)</div>
+        <div class="subject">Subject: Memorial Day at Noiré — All 5 Deals End Tonight at Close</div>
+        <div class="copy-block"><strong>Preheader:</strong> Green Joy, Noiré 28g, Treeworks BOGO, Glass Meadows, Green Joy 5pk. Gone after close tonight.<br/><br/>
+<strong>Header:</strong> Memorial Day · Last Call<br/><br/>
+<strong>Body lead:</strong> "It's Memorial Day. Every deal on this weekend's menu ends at close tonight. Whether you're hosting one more cookout, taking the day to yourself, or just stocking up before the week resumes, today is the day..."<br/><br/>
+<strong>Featured deals:</strong> All 5 — full recap grid (the brown/gold Memorial Day deals graphic).<br/><br/>
+<strong>Wyld top-of-body:</strong> "Last day to add a Wyld or Lost Farm gummy to your $75+ Memorial Day order and lock in your year-of-Wyld contest entry. The contest itself continues through 6/30 — but this weekend's bundle math is gone after tonight's close."<br/><br/>
+<strong>CTA:</strong> Shop Memorial Day Before Close</div>
+        <div class="why">Why the closer is the strongest urgency send of the 8-day campaign: Memorial Day Monday is both a holiday-shopping day AND the deal-deadline — double conversion pressure. All 5 deals in the recap so customers can self-select whichever bundle hadn't crossed their threshold over the weekend. Morning send so the recipient has the whole holiday Monday to act.</div>
+      </div>
+
+      <div class="send-row">
+        <div class="channel"><span class="pill text">TEXT</span> · ~620 list · 1 send · 12–1 PM ET (Memorial Day midday window)</div>
+        <div class="subject">Featured SKUs: All 5 — Noiré 28g $113.40 + Green Joy 3.5g 3/$45 + Treeworks BOGO 50% by name</div>
+        <div class="copy-block">Memorial Day at Noiré → Noiré 28g $113.40, Green Joy 3.5g 3/$45, Treeworks Tinctures BOGO 50%. All 5 deals end tonight at close. Add Wyld → contest entry. [link]</div>
+        <div class="why">Why this framing: Urgency anchor ("ends tonight") + Memorial Day holiday context + specific prices + Wyld hook = all four winning text-pattern boxes ticked. Midday send catches Memorial Day cookout-stockers AND Monday-off recreational shoppers planning afternoon visits.</div>
+      </div>
+
+      <div class="send-row">
+        <div class="channel"><span class="pill push">PUSH</span> · ~64 list · 1 send</div>
+        <div class="copy-block">Mirror text body.</div>
+      </div>
+
+      <div class="card alert">
+        <strong>Operational note:</strong> Confirm store hours for Memorial Day. If Noiré is closing earlier than usual for the holiday (e.g. 6 PM instead of 8 PM), update the "ends tonight at close" framing in both email and text to a specific time so customers don't show up to a locked door.
       </div>
     </div>
   </div>
@@ -613,17 +712,23 @@ Add a Wyld or Lost Farm gummy on a $75+ order = entered to win a year of Wyld. T
       <tr><td>Wed 5/20</td><td><span class="pill text">TEXT</span></td><td>HIGHT pre-roll 2pks</td><td>"Wyld Wednesday" + 3 for $21</td><td class="num">~620</td></tr>
       <tr><td>Wed 5/20</td><td><span class="pill push">PUSH</span></td><td>Same as text</td><td>Mirror</td><td class="num">~64</td></tr>
       <tr><td><strong>Thu 5/21</strong></td><td><span class="pill email">EMAIL</span></td><td>HIGHT 7g + Miss Grass (re-feature)</td><td>Stock the Weekend — Flower Bundles Still On</td><td class="num">~700</td></tr>
-      <tr><td><strong>Fri 5/22</strong></td><td><span class="pill email">EMAIL</span></td><td>Strain Trio + HIGHT $10 pre-roll 2pks</td><td>Weekend Ready — Jersey, Sauce Boss & Mac N' Jack</td><td class="num">~700</td></tr>
-      <tr><td><strong>Sat 5/23</strong></td><td><span class="pill email">EMAIL</span></td><td>All 6 (Peak Saturday)</td><td>Peak Saturday — All 6 Bundles Live, 2 Days Left to Enter</td><td class="num">~700</td></tr>
-      <tr><td>Sat 5/23</td><td><span class="pill text">TEXT</span></td><td>HIGHT 7g + Grapple Pie + pre-roll 2pks</td><td>"Peak Saturday" + 3 SKUs</td><td class="num">~620</td></tr>
+      <tr style="background: #fdf0ed;"><td colspan="5" style="text-align:center; font-weight:800; color:#5c0e08; letter-spacing:2px; text-transform:uppercase; font-size:12px;">↓ Memorial Day pivot — new 5-deal mix begins ↓</td></tr>
+      <tr><td><strong>Fri 5/22</strong></td><td><span class="pill email">EMAIL</span></td><td>All 5 Memorial Day deals</td><td>Memorial Day Weekend at Noiré — Kickoff</td><td class="num">~700</td></tr>
+      <tr><td>Fri 5/22</td><td><span class="pill text">TEXT</span></td><td>Green Joy 3.5g + Noiré 28g + Treeworks BOGO</td><td>"Memorial Day weekend" + 3 SKUs</td><td class="num">~620</td></tr>
+      <tr><td>Fri 5/22</td><td><span class="pill push">PUSH</span></td><td>Same as text</td><td>Mirror</td><td class="num">~64</td></tr>
+      <tr><td><strong>Sat 5/23</strong></td><td><span class="pill email">EMAIL</span></td><td>All 5 (Holiday Saturday)</td><td>Holiday Saturday — All 5 Memorial Day Deals Live</td><td class="num">~700</td></tr>
+      <tr><td>Sat 5/23</td><td><span class="pill text">TEXT</span></td><td>Green Joy 3.5g + Noiré 28g + Treeworks BOGO</td><td>"Holiday Saturday" + 3 SKUs</td><td class="num">~620</td></tr>
       <tr><td>Sat 5/23</td><td><span class="pill push">PUSH</span></td><td>Same as text</td><td>Mirror</td><td class="num">~64</td></tr>
-      <tr><td><strong>Sun 5/24</strong></td><td><span class="pill email">EMAIL</span></td><td>All 6 (closer)</td><td>Last Day to Save — All 6 Deals End Tonight</td><td class="num">~700</td></tr>
-      <tr><td>Sun 5/24</td><td><span class="pill text">TEXT</span></td><td>All 6 (urgency)</td><td>"Last day" + 3 SKUs</td><td class="num">~620</td></tr>
+      <tr><td><strong>Sun 5/24</strong></td><td><span class="pill email">EMAIL</span></td><td>All 5 (Memorial Day Eve)</td><td>Memorial Day Eve — All 5 Deals Live Through Tomorrow</td><td class="num">~700</td></tr>
+      <tr><td>Sun 5/24</td><td><span class="pill text">TEXT</span></td><td>Green Joy 5pk + Glass Meadows pre-roll lead</td><td>"Memorial Day Eve" + pre-roll SKUs</td><td class="num">~620</td></tr>
       <tr><td>Sun 5/24</td><td><span class="pill push">PUSH</span></td><td>Same as text</td><td>Mirror</td><td class="num">~64</td></tr>
+      <tr><td><strong>Mon 5/25 · MEMORIAL DAY</strong></td><td><span class="pill email">EMAIL</span></td><td>All 5 (closer)</td><td>Memorial Day — All 5 Deals End Tonight at Close</td><td class="num">~700</td></tr>
+      <tr><td>Mon 5/25</td><td><span class="pill text">TEXT</span></td><td>Noiré 28g + Green Joy 3.5g + Treeworks BOGO</td><td>"Memorial Day" + ends-tonight + 3 SKUs</td><td class="num">~620</td></tr>
+      <tr><td>Mon 5/25</td><td><span class="pill push">PUSH</span></td><td>Same as text</td><td>Mirror</td><td class="num">~64</td></tr>
     </tbody>
   </table>
 
-  <p style="font-size:15px; color:var(--charcoal-light); margin-top:14px;"><strong>Total broadcasts:</strong> 7 emails + 3 texts + 4 pushes = <strong>14 sends</strong> across 7 days (Mon–Sun).</p>
+  <p style="font-size:15px; color:var(--charcoal-light); margin-top:14px;"><strong>Total broadcasts:</strong> 8 emails + 4 texts + 5 pushes = <strong>17 sends</strong> across 8 days (Mon 5/18 → Memorial Day Mon 5/25). Pivot phase (Fri–Mon, 4 days): 4 emails + 4 texts + 4 pushes = <strong>12 sends</strong> of the 17 are in the Memorial Day window.</p>
 </section>
 
 <!-- Confirm before launch -->
@@ -643,8 +748,8 @@ Add a Wyld or Lost Farm gummy on a $75+ order = entered to win a year of Wyld. T
 
 <section style="text-align:center; color:var(--gray-500); font-size:13px; margin-bottom:0;">
   <hr style="border:none; border-top:1px solid var(--gray-300); margin: 40px 0 24px;" />
-  <p>Noiré Dispensary × Dispenza · Outreach Campaign Plan · Mon 5/18 → Sun 5/24, 2026 · Drafted 2026-05-15 · Darrell Clay, Account Manager</p>
-  <p>Sources: Sweed MarketingStat 2026-05-01 → 2026-05-14 export · 5/18–5/24 featured-deals graphic · active Noiré × Wyld contest (through 2026-06-30)</p>
+  <p>Noiré Dispensary × Dispenza · Outreach Campaign Plan · Mon 5/18 → Memorial Day Mon 5/25, 2026 · Drafted 2026-05-15 · Memorial Day pivot added 2026-05-22 · Darrell Clay, Account Manager</p>
+  <p>Sources: Sweed MarketingStat 2026-05-01 → 2026-05-14 export · 5/18–5/24 original featured-deals graphic · 5/22–5/25 Memorial Day deals graphics (6 images, 1920×1080 px) · active Noiré × Wyld contest (through 2026-06-30)</p>
 </section>
 
 </div>
